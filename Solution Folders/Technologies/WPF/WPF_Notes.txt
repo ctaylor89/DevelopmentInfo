@@ -1,0 +1,450 @@
+290301001090439	7798	Enumerations example
+Key binding
+ObjectDataProvider
+ObservableCollection
+Styles
+TabControl
+User and Custom controls
+
+http://www.codeproject.com/Articles/18303/A-Guided-Tour-of-WPF-Part-Data-templates-and-tri
+http://www.codeproject.com/Articles/140611/WPF-Tutorial-Beginning
+http://wpf.2000things.com/tag/width/  - 2,000 Things You Should Know About WPF
+http://blog.scottlogic.com/2012/02/06/a-simple-pattern-for-creating-re-useable-usercontrols-in-wpf-silverlight.html
+ http://www.codeproject.com/Articles/36545/WPF-MVVM-Model-View-View-Model-Simplified
+
+XAML is generally used to define layout of UI, its elements and objects for static and visual aspect. We cannot define flow 
+of a program using XAML. So even though there are large capabilities of XAML, it is actually not a programming language, 
+rather it is used to design UI of the application. Thus XAML employs other programming languages like C#, VB.NET, etc. 
+to define the logic in code behind.
+
+ExpressionBuilder is the best tool to generate XAML.
+
+In case of traditional windows applications, defining styles is very hectic. So if you have 1000 buttons, and you want 
+to apply Color to each Buttons to Gold, you need to create 1000 objects of Color and assign each to one individual elements.
+
+In WPF, you can store styles, controls, animations, and even any object as a resource. Thus each resource will be declared 
+once when the form loads itself, and you may associate them to the controls. You can maintain a full hierarchy of styles 
+in a separate file called ResourceDictionary, from which styles for the whole application will be applied. Thus WPF 
+application could be themed very easily.
+
+Controls in WPF are separated into logic, that defines the states, events and properties and ControlTemplate, that define the 
+visual appearance of the control. The wireup between the logic and the template is done by DataBinding.
+
+A ControlTemplate contains the visual tree of that control. 
+
+You can set the height/width of rows/columns in a Grid using the Height and Width properties of the RowDefinition and 
+ColumnDefinition elements.  You can specify these values in one of three different ways:
+  Auto – set height/width to fit the size of the contained element.
+  Numeric value – explicitly set height/width to specified number of device independent units (1/96th in).
+  * or n* – distribute remaining space proportionately across all rows/columns that set their height/width.
+__________________________________________________________________________________________________________
+
+What is Thread Affinity?
+
+All WPF applications start out with two important threads, one for rendering and one for managing the user interface. The rendering thread is a hidden 
+thread that runs in the background, so the only thread that you ordinarily deal with is the UI thread. WPF requires that most of its objects be tied 
+to the UI thread. This is known as thread affinity, meaning you can only use a WPF object on the thread on which it was created. Using it on other 
+threads will cause a runtime exception to be thrown.
+
+The thread affinity is handled by the Dispatcher class, a prioritized message loop for WPF applications. Typically your WPF projects have a single 
+Dispatcher object (and therefore a single UI thread) that all user interface work is channeled through.
+__________________________
+
+Two way data to individual object models(versus collections of objects) binding example:
+
+// In the model
+public class Employee : INotifyPropertyChanged
+{
+    private string name;
+    public string Name 
+    { 
+        get{return name;}
+        set
+        {
+            name = value;
+            OnPropertyChanged();
+        }
+    }
+	
+	// The WPF framework subscribes to this event. 
+    public event PropertyChangedEventHandler PropertyChanged_EventHandler;
+    
+	// Called every time a property is changed. Controls in the xaml are bound to the properties 
+    // of this class. The MainWindow has it's Data Context set to this class.    
+    private void OnPropertyChanged([CallerMemberName] string caller = "")
+    {
+        if(PropertyChanged_EventHandler != null)
+        {
+            PropertyChanged_EventHandler(this, new PropertyChangedEventArgs(caller));
+        }
+    }
+}
+
+// In the window constructor
+DataContext = new Employee();
+
+// In the XAML set the Mode property to two way. One way is the default.
+<TextBox Margin="5,0,0,0" Text="{Binding Name, Mode=TwoWay}"/>
+__________________________________________________________________________________________________________
+
+Model binding fields in a stack panel
+
+<StackPanel Name="TaskPanel" DataContext="{Binding this.TaskConfigurationsBox.SelectedItem}">
+	<Label Margin="25,0,25,0" Foreground="AntiqueWhite">Task Name</Label>
+    <TextBox Name="TaskNameBox" Text="{Binding Name}" LostFocus="TaskNameBox_LostFocus"/>
+	<telerik:RadComboBox Name="TaskTargetEnvironmentBox" SelectedItem="{Binding TargetPlatform}" ItemsSource="{Binding Source={StaticResource TargetEnvironments}}"  
+					Height="25" SelectionChanged="TaskTargetEnvironmentBox_SelectionChanged"/>
+</StackPanel>
+__________________________________________________________________________________________________________
+
+ObservableCollection - Binding to a collection of objects
+
+The ObservableCollection class is a built in implementation of a data collection that implements INotifyPropertyChanged.  
+The point of this is that if we create an instance of ObservableCollection<T>, it will automatically be able to provide 
+notifications for updates to the collection for data binding.  If we instead used a simple List, we would have to do the 
+notification part manually.  However, keep in mind that ObservableCollection itself only notifies for changes to the 
+collection, not for property changes of the individual objects in the collection. 
+ 
+// In the model create an observable collection that will notify the presentation of any changes.
+public static ObservableCollection<Employee> GetEmployees()
+{
+    var employees = new ObservableCollection<Employee>();
+    employees.Add(new Employee() { Name = "employee1", Title = "ManagerLevel1" });
+    employees.Add(new Employee() { Name = "employee2", Title = "ManagerLevel2" });
+    employees.Add(new Employee() { Name = "employee3", Title = "ManagerLevel3" });
+    return employees;
+}
+
+// In the window contructor
+DataContext = Employee.GetEmployees();
+
+// In the window
+<ComboBox Name="Employees"
+            ItemsSource="{Binding}"		// Bind to what is set as the data context
+            FontSize="30"
+            Height="50"
+            Width="450">
+    <ComboBox.ItemTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal"         // The combobox will contain templates with stackpanels that contain text blocks.
+                        Margin="2">
+                <TextBlock Text="Name"
+                            Margin="2"/>
+                <TextBlock Text="{Binding Name}"
+                            Margin="2"/>
+                <TextBlock Text="Title"
+                            Margin="10,2,0,2"/>
+                <TextBlock Text="{Binding Title}"
+                            Margin="2"/>
+            </StackPanel>
+        </DataTemplate>
+    </ComboBox.ItemTemplate>
+</ComboBox>
+
+A common misconception is that data binding requires ObservableCollection. This is not true. Data binding works against 
+anything that implements IEnumerable. You can data bind a list box directly to a List, if you want.
+
+The advantage of ObservableCollection over List is that it implements INotifyCollectionChanged. This interface raises an 
+event whenever the collection is modified by insertion, removal, or replacement. A List does not implement this interface, 
+so anything data bound to it will not be notified when it changes.
+
+Not all collections change while the user is looking at them. Some collections are fixed. Others are loaded from a database 
+or server once, and then simply displayed. If the collection doesn’t change, don’t make it an ObservableCollection. Just 
+make it a List.
+
+ObservableCollection<T> implements INotifyCollectionChanged which provides notification when the collection is changed. It 
+allows the binding engine to update the UI when the ObservableCollection is updated.
+
+However, BindingList<T> implements IBindingList.
+
+IBindingList also provides notification on collection changes, but not only that, it provides a whole bunch of functionality 
+which can be used by the UI to provide a lot more things than only UI updates according to changes, like:
+	Sorting
+	Searching
+	Add through factory (AddNew member function).
+	Readonly list (CanEdit property)
+All these functionalities are not available in ObservableCollection<T>
+
+Another difference is that BindingList relays item change notifications when its items implement INotifyPropertyChanged. 
+If an item raises a PropertyChanged event, the BindingList will receive it an raises a ListChangedEvent with 
+ListChangedType.ItemChanged and OldIndex=NewIndex (if an item was replaced, OldIndex=-1). ObservableCollection doesn't 
+relay item change notifications.
+
+BindingList does not scale, it is slow and it performs terribly with larger lists. If your element type supports 
+INotifyPropertyChanged, every time one of those elements raises the property changed event the entire list is walked to work 
+out the index in the list of the item which raised the event!
+__________________________________________________________________________________________________________
+
+http://msdn.microsoft.com/en-us/magazine/dd419663.aspx - MVVM pattern in WPF
+The above link has links to other good articles
+
+A ViewModel does not need a reference to a view. The view binds to properties on a ViewModel, which, in turn, exposes data contained in 
+model objects and other state specific to the view. The bindings between view and ViewModel are simple to construct because a ViewModel 
+object is set as the DataContext of a view. If property values in the ViewModel change, those new values automatically propagate to the 
+view via data binding. When the user clicks a button in the View, a command on the ViewModel executes to perform the requested action. 
+The ViewModel, never the View, performs all modifications made to the model data.
+
+The view classes have no idea that the model classes exist, while the ViewModel and model are unaware of the view. In fact, the model is 
+completely oblivious to the fact that the ViewModel and view exist. This is a very loosely coupled design, which pays dividends in many ways.
+
+WPF was designed to make it easy to build applications using the MVVM pattern (amongst others). 
+
+By binding properties of a view to a ViewModel, you get loose coupling between the two and entirely remove the need for writing code in a 
+ViewModel that directly updates a view. The data binding system also supports input validation, which provides a standardized way of 
+transmitting validation errors to a view.
+
+In addition to the WPF (and Silverlight 2) features that make MVVM a natural way to structure an application, the pattern is also popular 
+because ViewModel classes are easy to unit test. When an application's interaction logic lives in a set of ViewModel classes, you can easily 
+write code that tests it. In a sense, Views and unit tests are just two different types of ViewModel consumers.
+
+**Left off at "The Demo Application"
+
+__________________________________________________________________________________________________________
+
+http://blogs.msdn.com/b/mikehillberg/archive/2009/03/20/icommand-is-like-a-chocolate-cake.aspx
+
+In summary
+ 
+So the key points to remember here:
+· ICommand is a simple definition with Execute, CanExecute, and CanExecuteChanged.
+· You can point a Button  or MenuItem at any ICommand with the Command property.  The Button/MouseItem will then Execute that command if you 
+  click it, will disable itself if CanExecute is false, and will automatically listen for CanExecuteChanged.
+· Routed commands are an ICommand implementation that searches the tree (usually starting with the focused element) for a CommandBinding that 
+  provides Execute/CanExecute handlers.
+· You can also invoke an ICommand from input, e.g. using a KeyBinding.
+· WPF pre-defines a set of routed commands in ApplicationCommands, EditingCommands, NavigationCommands, and MediaCommands.
+· Be aware that routed commands can impact perf if you use a lot of them and/or your CanExecute handlers do non-trivial work.
+__________________________________________________________________________________________________________
+
+Controls:
+The WPF Textblock inherits from FrameworkElement instead of deriving from System.Windows.Control like the Label Control. This means that the 
+Textblock is much more lightweight. The downside of using a textblock is no support for Access/Accerelator Keys and there is no link to other 
+controls as target.
+
+When you want to display text by itself use the TextBlock. The benefit is a light, performant way to display text. When you want to associate 
+text with another control like a TextBox use the Label control. The benefits are access keys and references to target control.
+__________________________________________________________________________________________________________
+
+Styles are used to give a uniform appearance to a set of controls. Implicit styles are used to apply a uniform appearance to all controls of 
+a given type. Set the window resource element just before the Grid element.
+
+<Window.Resources>
+    <!--Explicit Style. Controls reference this style by key -->
+    <Style x:Key="PromptSyle" TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="Margin"
+                Value="5" />
+        <Setter Property="FontWeight"
+                Value="Bold" />                   
+    </Style>
+    <!--Implicit Style. The key is removed and the TargetType is specified-->
+    <Style TargetType="TextBox">
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="Margin"
+                Value="5" />
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+        <Setter Property="Width"
+                Value="80" />
+        <Setter Property="Height"
+                Value="40" />
+    </Style>
+</Window.Resources>
+__________________________________________________________________________________________________________
+
+TabControl example
+
+<Grid>
+    <TabControl>
+        <TabItem Header="Tab 1">This tab One</TabItem>
+        <TabItem Header="Tab 2">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Name"/>
+                    <TextBox Width="80"
+                                Height="30"
+                                Margin="10,0,0,0"/>
+                </StackPanel>
+                    
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Tab 3"></TabItem>
+    </TabControl>    
+</Grid>
+__________________________________________________________________________________________________________
+
+ObjectDataProvider
+There are many ways to create an object to use as a binding source. For example, you can create your object in the resources section of 
+your Extensible Application Markup Language (XAML) page, or you can create your object in code and set it as the DataContext of your window.
+
+ObjectDataProvider enables you to create your object in XAML and make it available as a binding source. It provides the following properties 
+that enable you to execute a query on your object and bind to the results.
+
+WPF Binding ItemsSource to Enum
+http://weblogs.asp.net/monikadyrda/wpf-binding-itemssource-to-enum
+
+To add a combo box column with a backing enum to a DataGrid (Full Example: _samples\WPF\DataGrid2\DataGrid2\MainWindow.xaml)
+
+// Add a namespace to the main window that references the core library. Here we are referencing the namespace(System) and the assembly(mscorlib).
+xmlns:xxcore="clr-namespace:System;assembly=mscorlib"
+
+// Add a namespace to the main window that references the backing assembly. This assembly has a class Employee that has properties: Name, Title, Party etc.
+xmlns:local="clr-namespace:Concrete;assembly=Concrete"
+
+// In MainWindow constructor in MainWindow.xaml.cs
+DataGrid.ItemsSource = Employee.GetEmployees();					// Bind the DataGrid to this list
+
+// Add an ObjectDataProvider to the windows resource
+<Window.Resources>
+    <ObjectDataProvider x:Key="MyEnum"
+                        MethodName="GetValues"					 // Method of the Enum class that take a type enum as a parameter.
+                        ObjectType="{x:Type xxcore:Enum}">       // Data type from the core library
+        <ObjectDataProvider.MethodParameters>
+            <x:Type Type="local:Party" />	// This type is the param passed to the GetValues method. This is an enum in the Concrete Namespace, in the Concrete assembly
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+</Window.Resources>
+
+// Add the combo box to the data grid
+<DataGridComboBoxColumn Header="Party"
+                        SelectedItemBinding="{Binding Affiliation}"	// Binding to property in Employee class in the Concrete Namespace, in the Concrete assembly.
+                        ItemsSource="{Binding Source={StaticResource MyEnum}}" /> // Binding to the ObjectDataProvider
+
+
+// Example from Admin Tool
+// Add a namespace to the main window that references the namespace(Preprocessor2.Job) and the assembly(Preprocessor2.Job)
+xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:job="clr-namespace:Preprocessor2.Job;assembly=Preprocessor2.Job"
+
+<ObjectDataProvider MethodName="GetValues"				// Method of the Enum class
+                ObjectType="{x:Type sys:Enum}"			// Data type from the core library
+                x:Key="ProcessLocations">				// Name of this data provider
+    <ObjectDataProvider.MethodParameters>
+        <x:Type TypeName="job:ProcessLocations" />		// This type is the param passed to the GetValues method.  namespace = Preprocessor2.Job; assembly = Preprocessor2.Job
+    </ObjectDataProvider.MethodParameters>
+</ObjectDataProvider>
+
+<telerik:RadComboBox Name="JobFileSourceLocationBox" SelectedItem="{Binding SourceLocation}" 
+			ItemsSource="{Binding Source={StaticResource ProcessLocations}}"  Height="25" 
+			SelectionChanged="JobFileSourceLocationBox_SelectionChanged"/>
+-------------
+
+Funky WPF - Enumerations and Combo Boxes - Looks like a good article to read and work through
+http://www.codeproject.com/Articles/316146/Funky-WPF-Enumerations-and-Combo-Boxes
+
+------------
+Enumerations example:
+public enum SampleEnum
+{
+     Dog,
+     Cat
+}
+
+<Window.Resources>
+     <ObjectDataProvider x:Key="dataFromEnum"			// Key assigned to this provider
+					MethodName="GetValues"				// Method of the enum class
+					ObjectType="{x:Type System:Enum}">	// Data type
+          <ObjectDataProvider.MethodParameters>
+               <x:Type TypeName="local:SampleEnum"/>
+          </ObjectDataProvider.MethodParameters>
+     </ObjectDataProvider>
+</Window.Resources>
+
+Having this resource we can bind it as an ItemsSource to a ListView, Combobox or any other ItemsControl by setting items source:
+ItemsSource="{Binding Source={StaticResource dataFromEnum}}"
+__________________________________________________________________________________________________________
+
+User and Custom controls
+
+https://www.youtube.com/watch?v=s49G6ph4XXA - Videos on creating user controls and other wpf stuff
+http://www.codeproject.com/Articles/179442/So-what-s-the-difference-between-a-Custom-Control
+
+A "Custom Control is a loosely coupled control defined in a class, which derives from Control. The UI of the custom control is 
+generally defined in a Resource Dictionary inside the resource file. We can create themes for a custom control and reuse it in 
+various projects very easily.
+
+Button, CheckBox, TextBox etc., even a UserControl is nothing but a Custom Control. You can easily load them inside a XAML page.
+A Custom Control generally inherits from the System.Windows.Controls.Control class. You may derive from a different custom control 
+depending on your requirement.
+
+Custom Controls are compiled into a DLL assembly and can be reused in multiple places very easily. You have total control over the 
+code, thus gives you more flexibility to extend the behaviour. Once you build and add a reference of the custom control in your 
+project, you can find it in the toolbox. Thus, you will be able to drag and drop the control in your Design view and start 
+working with it very easily.
+
+The base "UserControl" is nothing but a Custom Control that you derive to create a control UI specific to your project. Generally, 
+we create a UserControl which is placed inside a XAML page with tight bonding to the code behind. You can directly access its UI 
+elements from the code-behind and do some specific operations.
+
+A custom UserControl inherits from the System.Windows.Controls.UserControls class, which inherits from the base "Control" class.
+
+You can't create theming support for UserControls but can style them by creating themes for the child Custom Controls because 
+they represent a collection of controls. Once you create a UserControl UI in one project, you can't change it in other projects.
+
+	
+In practice custom controls are something you implement on the code level while you can use XAML for user controls. The custom controls extend one of the WPF control base classes and provide additional functionality through code so all the added logic and representation must be implemented inside the code.
+
+A user control is technically a normal content control which you can extend in some parts in the code but usually it is extended by placing other controls inside it. So as Kent mentioned a UserControl is an aggregation of other controls. This limits what you can do with a user control considerably. It's easier to use but more limited than a full custom control.
+
+These controls have a small difference from a runtime point of view. When building an application and placing an UserControl into it, the control tree will have a concrete UserControl template inside of it. So if we consider a lame example of a specialized button. If you were using a user control you'd add a button inside the <UserControl> element. When using a custom control you'd derive the control itself from a button most likely. The difference would be visible in the logical tree.
+
+"When to use a User Control?"
+When you have a rapid and fixed content in your UI, use UserControl.
+When you want to separate some basic functionality of your main view to some smaller pieces with reusability, use UserControl.
+"When to use a Custom Control?"
+When you want to use your control in different projects and each project may want to change the look of the control, use CustomControl.
+When you want to implement some additional functionality for a control, create a CustomControl derived from the base control.
+When you want to apply themes to your controls, use CustomControl.
+When you want to add toolbox support for your control, so that your user will be able to do drag and drop to the designer, use CustomControl.
+
+Example adding a user control to an XAML page:
+
+// Put this in the header of the page you are adding the control to. Assign a name for the namespace and assembly of the user control library.
+xmlns:myUserControls="clr-namespace:AdminToolUserControls;assembly=AdminToolUserControls"
+
+// Inserting the control into the containing xaml page and assigning it a name. 
+<adminToolUserControls:PhaseParameterControl x:Name="phaseParameterControl" Loaded="phaseParameterControl_Loaded" />        
+
+// Add a property to the user control code page to allow access to the control declared in the user control xaml. This property returns
+// a reference to the PhaseInputParametersBox control.
+public RadComboBox PhaseInputParameterComboBox
+{
+    get{return PhaseInputParametersBox;}
+    set{PhaseInputParametersBox = value;}
+}
+
+// Access elements in the user control from the containing page through the above property.
+phaseParameterControl.PhaseInputParameterComboBox.ItemsSource = _JobFiles;
+__________________________________________________________________________________________________________
+
+Key binding
+http://wpf.2000things.com/tag/keybinding/
+http://tech.pro/tutorial/839/wpf-tutorial-command-bindings-and-custom-commands
+
+Example:
+// Place in code behind class
+public static RoutedCommand SetFocusOnTaskConfigCmd = new RoutedCommand();
+// Place in constructor
+this.CommandBindings.Add(new CommandBinding(SetFocusOnTaskConfigCmd, SetFocusOnTaskConfigExecute, CanExecute));
+
+// Place in code behind class
+private void SetFocusOnTaskConfigExecute(object sender, ExecutedRoutedEventArgs e)
+{
+    TaskConfigurationsBox.Focus();
+    e.Handled = true;
+}
+
+private void CanExecute(object sender, CanExecuteRoutedEventArgs e)
+{
+    e.CanExecute = true;
+    e.Handled = true;
+}
+__________________________________________________________________________________________________________
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+General support to search for answer
+http://www.axosoft.com/support
+
+why can't i find the item i'm looking for?
+http://www.axosoft.com/support/faq/workspace-filters
+
+Good video overview for Axosoft OnTime
+https://www.youtube.com/watch?v=UeMRwcCME8Y
+
+To filter by a team member - All Items should be displayed\enabled in the upper left side. Mouse over the Assigned to
+column(7th column) and a little filter icon will appear. Click it to see a list of names or clear to reset.
+
+Those two tasks do not show up for me under archive.
+
+I think I might see why
+on the Organize > Projects tab (by default it's on the left side of the screen) - it's got the folder with your name and the Europe, Implementation, and Stateside subfolders under it
+I'm guessing that you have the Stateside subfolder selected
+instead
+select the Craig Taylor folder
+it will display the contents of that folder and all of it's subfolders
+at least one of those two tasks was in the Craig Taylor folder and not the Craig Taylor > Stateside folder - the testers manually move them back when they close the tickets - they probably miss-clicked

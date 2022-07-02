@@ -1,0 +1,100 @@
+// CSharp Fiddle 
+//https://dotnetfiddle.net/srx9kM
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Main Starting");
+		var pw = new PodWorks();
+		pw.RunQuerys();
+	}
+	
+	public class PodWorks
+	{
+		const int PodCount = 11;
+		List<Pod> Podlist = new List<Pod>();
+        List<PodInfoItem> PodInfolist = new List<PodInfoItem>();
+		public void RunQuerys()
+		{
+			Console.WriteLine("RunQuerys");
+
+			// var pods = Podlist.Select(p => p);
+			var pods = Podlist.Where(p => p.Name.StartsWith("A"));
+
+			foreach(var p in pods)
+			{
+				Console.WriteLine("Id: {0}  Name: {1}   StartDate: {2}", p.Id, p.Name, p.StartDate.ToShortDateString());
+			}
+		}
+		
+		#region Constructor
+        public PodWorks()
+        {            
+			var podNames = new List<string>()
+            {
+                "Mercury3", "AtomX", "Baskar", "Triton", "Alamo", "Caltrax", "Heron", "Rover", "Rifter3", "Evinrude", "Johnson"
+            };
+            
+            for(int i = 0; i < PodCount; i++)
+            {
+                Podlist.Add(
+                    new Pod {
+                        Id = i,
+                        Name = podNames[i],
+                        StartDate = DateTime.Now.AddDays(- new Random().Next(0, 365))
+                    }
+                );
+
+                PodInfolist.Add(new PodInfoItem 
+                { 
+                    Id = 300 + i,
+                    PodId = Podlist[i].Id,
+                    ManufactoringDate = DateTime.Now.AddDays(-1)
+                });                
+            }
+        }
+		#endregion Constructor
+
+		private class Pod
+		{
+			public int Id { get; set; }
+			public string Name { get; set; }
+			public virtual DateTime StartDate { get; set; }
+		}
+		
+		private class PodInfoItem
+		{
+			public int Id { get; set; }
+			public int PodId { get; set; }
+			public DateTime ManufactoringDate { get; set; }
+		}
+	}
+}
+
+// ---------------------------------------------------------------
+
+// ---------------------------------------------------------------
+using System;
+using System.Linq;					
+public class Program
+{
+	public static void Main()
+	{
+		var nameData = new string[] { "SteveX", "Jimmy", "Celine", "Arnold" };
+		var names = nameData.Where(n => n != "Celine").Select( a => new 
+		{
+			Name = a,
+			Length = a.Length,
+			ShortName = a.Substring(2),
+			Apples = a.Length -10, 
+			DTime = DateTime.Now
+		}).ToList();
+		
+		names.ForEach(s => Console.WriteLine("Name: {0}  Apples: {1}  Time: {2}", s.Name, s.Apples, s.DTime));
+	}	
+}	

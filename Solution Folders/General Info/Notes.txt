@@ -1,0 +1,552 @@
+Event_Log
+IIS_7_Notes
+Log4Net
+MVC
+Passwords
+Problem_Solutions
+Services: Developing\Installing Windows Services 
+SQLite
+WebServiceDebug
+
+//********************************************  
+LinkedIn Qwerz23Aztec7389^@!27T45600G^ 
+
+//********************************************  
+// Event_Log
+//********************************************
+Good article to write to the event log
+http://www.themamakcorner.com/2011/06/27/c-write-to-windows-event-log/
+
+//********************************************  
+// MVC
+//********************************************
+Domain-Driven Design and MVC Architectures
+http://blog.fedecarg.com/2009/03/11/domain-driven-design-and-mvc-architectures/
+
+// MVC conference video tutorials
+http://channel9.msdn.com/Series/mvcConf#tab_sortBy_sequential
+//********************************************  
+// WebServiceDebug
+//********************************************
+Error: Unknown error: The requested service, 
+'http://localhost/EnterpriseSecurity/EnterpriseSecurity.svc/EnterpriseSecurity' could not be activated.
+
+Solution:
+This means that an error occurred that is causing the service to not start up and be available.
+
+Error: Parser Error Message: Could not load type 'MvcApplication'
+Solution:  1)MVC Framework is installed (unlikely but possible! the installation could've been corrupted somehow)
+2)Clean the solution and rebuild. (this is always part of the problem, the build output is just not getting referenced correctly even if it is being rebuilt correctly)
+3)Ensure your \bin directory is in it's default location if you are trying to run your project in debug mode. ASP.NET Debugger expects your DLLS in \bin. Anywhere else will throw it off. (this is PROBABLY what your problem is.)
+
+Error:
+Solution:
+
+//********************************************  
+// Log4Net
+//********************************************
+// Once-per-application setup information
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
+
+//********************************************  
+// Educational Resources and Tools
+//********************************************
+Design Pattern Framework  $80 http://www.dofactory.com/Framework/Framework.aspx
+
+The SC command-line tool in Windows XP/Vista which can be used to create, edit or delete Services. 
+To delete a service, use the following command-line syntax from a Command Prompt window:
+SC DELETE <Servicename>
+
+//********************************************  
+// Visual Studio Notes and links
+//********************************************
+http://www.dofactory.com/ShortCutKeys/ShortCutKeys.aspx
+Ctrl-Shift-L
+	Deletes all selected lines or the current line if no selection has been made
+Ctrl-Enter
+	Inserts a blank line above the cursor
+Ctrl-Shift-Enter
+	Inserts a blank line below the cursor
+Ctrl-W
+	Selects the word containing the cursor or the word to the right of the cursor
+Ctrl-=
+	Selects from the current location in the editor back to the previous location in the navigation history	
+//********************************************  
+// IIS_7_Notes
+//********************************************	
+How to Create an Intranet Site Using ASP.NET MVC
+http://msdn.microsoft.com/en-us/library/gg703322%28VS.98%29.aspx
+
+How to create a wcf service and host it in IIS7.5
+http://beyondrelational.com/blogs/dhananjaykumar/archive/2011/02/11/walkthrough-on-creating-wcf-4-0-service-and-hosting-in-iis-7-5.aspx
+
+How to create a session state database. Run from the visual studio cmd line
+c:\Windows\Microsoft.NET\Framework\v4.0.30319>
+aspnet_regsql -S localhost\SQLEXPRESS -U sa -P !Password1 -ssadd
+http://blogs.msdn.com/b/akshayns/archive/2008/10/04/how-to-configure-sql-server-to-store-a-session-state.aspx
+
+
+//********************************************  
+// Passwords
+//********************************************
+
+
+//********************************************  
+// Install Shield Notes
+//********************************************
+// Build a dll file that install script can call
+// Create a class library
+using System.Runtime.InteropServices;
+namespace TestLibrary
+{
+   [ComVisible(true)]
+   public class Class1
+   {
+      public int ShowMsg(string Msg)
+      {
+         if(string.Compare(Msg, "TestA") == 0)
+            return 6;
+         
+         return 5;
+      }
+      
+      public string GetMsg()
+      {
+         string Msg = "Return this";
+         return Msg;
+      }
+   }
+}
+
+// Code in install script to call into this dll
+// STRING szTestDllPath, szClassName, szResult;    
+// object dotnetclassobj;
+
+//szTestDllPath = SUPPORTDIR ^ "TestLibrary.dll";
+//szClassName = "TestLibrary.Class1";
+//set dotnetclassobj = DotNetCoCreateObject(szTestDllPath,szClassName,"");
+//nResult = dotnetclassobj.ShowMsg("TestA");
+//szResult = dotnetclassobj.GetMsg();
+
+//if(nResult == 6) then
+//   MessageBox("result = 6", INFORMATION);
+//else
+//   MessageBox("result  != 6", INFORMATION);	
+//endif;	
+
+//MessageBox(szResult, INFORMATION);		
+
+//********************************************  
+// Data to Excel format conversion Notes
+//********************************************
+// This link is to the .net source for an XML transformation
+http://www.xmlfiles.com/articles/cynthia/xslt/default.asp
+
+// Load the XML document that will be transformed
+XPathDocument myXPathDocument = new XPathDocument(sourceDoc);
+
+// Create transformation class that will do the transformation
+XslTransform myXslTransform = new XslTransform();
+
+XmlTextWriter ResultWriter = new XmlTextWriter(resultDoc, null);
+
+// Load the desired XSLT Stylesheet document
+myXslTransform.Load(xsltDoc);
+
+// Do the transformation
+myXslTransform.Transform(myXPathDocument, null, ResultWriter);
+
+ResultWriter.Close();
+StreamReader stream = new StreamReader (resultDoc);
+Console.Write("**This is result document**\n\n");
+Console.Write(stream.ReadToEnd());
+
+//********************************************  
+// Conversion to 64 bit notes and links
+//********************************************
+http://msdn.microsoft.com/en-us/library/ms973190.aspx
+
+//********************************************  
+// Host Windows Forms controls as views
+//********************************************
+http://msdn.microsoft.com/en-us/magazine/cc163605.aspx
+http://msdn.microsoft.com/en-us/library/ahdd1h97%28VS.80%29.aspx
+
+//********************************************  
+// Services: Developing\Installing Windows Services 
+//********************************************
+// Good articles on developing\installing windows services 
+http://www.c-sharpcorner.com/uploadfile/naresh.avari/develop-and-install-a-windows-service-in-c-sharp/
+http://blog.themobilebrand.com/technology/tutorial-building-a-windows-service-application/
+http://devblog.grinn.net/2008/02/windows-services-in-c-part-2-adding.html
+Punch hole in firewall
+http://airbornesurfer.com/2015/04/how-to-punch-a-hole-through-windows-firewall/
+Hosting Service choices
+https://msdn.microsoft.com/en-us/library/ms730158(v=vs.110).aspx
+---
+// Install/unistall a windows service(Must use Visual Studio cmd window)
+installutil yourproject.exe   installutil /u yourproject.exe
+
+Navigate to the installutil.exe in your .net folder (for .net 4 it's C:\Windows\Microsoft.NET\Framework\v4.0.30319 for example) and use it to install your service, like this:
+
+"C:\Windows\Microsoft.NET\Framework\v4.0.30319\installutil.exe" "c:\myservice.exe"
+---
+Eample bat file: Note - use call <name of bat file>. Must be in dir where bat file is located.
+@echo off
+cd C:\Windows\Microsoft.NET\Framework\v4.0.30319
+installutil.exe "C:\_CC\Projects\POC_Project\NetTcpInvestigate\WcfTcpWinService\TcpWinServiceHost\bin\Debug\TcpWinServiceHost.exe"
+
+if ERRORLEVEL 1 goto error
+exit
+:error
+echo There was a problem
+pause
+---
+
+Yes, installing a service isn't particularly complicated. It just takes writing a handful of registry keys. You can have a look-see with Regedit.exe, navigate to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services.
+Sc.exe can write these keys too, using the supplied command line arguments. Nevertheless, this is not the right way to do it. The point of InstallUtil.exe is that it can activate custom installation code. Code that the service author wrote. Which is not that uncommon, services tend to stuff config info in their registration keys for their own use. You'll see plenty of evidence for that when you have a look with Regedit.
+
+To install windows service using sc.exe in windows command prompt follow the below steps
+
+To create service:
+Open windows command prompt as run as administrator
+Type sc.exe create SERVICE NAME binpath= "SERVICE FULL PATH"
+don't give space in SERVICE NAME
+After binpath= and before " space should be there.
+in SERVICE FULL PATH give the service exe file full path.
+Example:
+sc.exe create ExampleService binPath= "F:\Delete\SampleSolution\Sample\WindowsServiceExample\bin\Debug\WindowsServiceExample.exe"
+*Note that you may need to run the above in the .net framework directory
+
+To delete service:
+Open windows command prompt and run as administrator
+Type sc.exe delete SERVICE NAME
+Example:
+sc.exe delete ExampleService	
+//********************************************  
+// SQLite
+//********************************************
+http://www.sqlite.org/
+
+select * from sqlite_master; // To get list of tables
+
+//********************************************  
+// Business Plan     
+//********************************************
+Practice staying focused and working well the first hour of the work day. Do not check personal email.
+
+Practice making decisions with out going into explanations of how I came to that conclusion. Keep 
+the thought process internal when possible.
+
+When the brain is sluggish and has trouble keeping focused, use a check list to help keep on track.
+
+Keep a positive picture. Avoid negative images. Keep the mind more focused and attentive to all that 
+I am doing. Picture working in a good company that has high quality employees and it is a good fit for me. 
+Picture working on a project that challenges me and allows me to grow more towards what I want to be.
+
+I do not know how much time I have or how much I have to learn. I need to not worry about this and instead 
+focus my efforts and trust that things will turn out alright. Learn to work comfortably and confidently in 
+the moment.
+
+//********************************************  
+// Business Philosophy
+//********************************************
+Managing the tension. A constant tension to achieve probably contributes to sleep problems, allergies and 
+an overall feeling of being over-welmed or fatigued. It is important when not working, to not think  
+about work. Live in the other activities. It is best to practice and develop an ability to focus 
+and work with patience. Avoid thoughts that cause time related stress.
+
+It's about freedom. When you’re doing things you want to do, for yourself, and you feel confident, it goes 
+into every aspect of your life, including how you feel about yourself. You feel more comfortable in your skin."
+
+Practice and develop my ability to keep focused on the work\learning and less on what is going on around me.
+
+Be more tolerant of other peoples short comings. Learn to let things roll off of me.
+
+Do not become too involved in other people's lives or opinions. Resist the feeling of a need to correct.
+
+Validation comes from God and from within. Control the associated thinking process. The less I value what other 
+people do and think, the easier it is to work and associate with them.
+
+If validation were to come from others, how many will it take? You will never complete the process.
+
+Eliminate the need to be understood. There is a freedom in being able to do that. 
+
+Keep positive any conversation about the customer's business. Do not criticise the customer's business even if 
+someone else starts it. Customer's business activities should not be a major part of my focus. Focus on my own 
+business and growing\improving it.
+
+When I screw up from my ideals, and I know I will, regroup and get back on plan.
+
+People often care more about attitude than facts. Opinions that people form are not purely intellectual.
+
+Trying to impress people with intellectual intelligence is futility and self deceiving. It's not what people 
+care about.
+
+Maintain and nurture the intrinsic quality to better myself.
+
+Through hard work I feel better about my job, myself and my future.
+
+Do not under estimate the power of good discipline.
+
+If you live more fully in the moment, the future will take care of itself and do a better job. It takes courage 
+and faith to live in the moment and trust that which I have so little control over, to God.
+
+Remember to focus: It's just me against the machine. No schedules, no irritations, no politics. Hard work and 
+concentration will yield the rewards of success.
+
+Do not let drama lead you a stray. It lies and tries to seduce you to engage in it. The reality is that what ever
+the situation, it matters less than you think it does. Probably not at all. It is poison to the soul and undermines 
+progress in my life(big time). Stay focused on what really matters or in a few years all the drama and it's players 
+will have moved on and I will still be in the same place emotionally, academically and financially.       
+
+Do not strive for success. Instead learn to work in the moment.
+
+Accept working with a difficult person. If I can learn to manage the situation now, then I can have more confidence 
+in my future and feel a stronger sense of control over my work life.
+
+Stop holding on to emotions that are not worth the cost. Learn to let go and forgive. Stop trying to win battles 
+that have no benefit and in most cases cannot be won. Stop wasting your life with these things. The people that 
+start these battles often have nothing to gain from them other than a false sense of accomplishment or power.
+
+Picture future jobs and interviews in a more realistic way. There are few real genuises in the world. All people have a 
+mixture of knowledge and ignorance, strengths and weakness, good habits and bad habits just like myself. An accurate 
+assessment is important to keep stress down and my self esteem up.
+
+Hang tough; the recession won’t last forever. The knowledgeable, agile, and hard working can survive, even thrive, in 
+today’s ever-changing workplace and tough economic climate. Definition for agile: marked by ready ability to move with 
+quick easy grace, having a quick, resourceful and adaptable character <an agile mind> 
+
+It's not the work that tires a person out. It's the constant wondering-worrying-medaling mind. Work when done from a 
+proper mind set, will be uplifting and restful. The challenge is to keep my focus on study and work, not imaginary 
+circumstances and on-going dramas.
+
+Instead of having a plan for the future and often focusing on this plan, strive instead to learn in the present and 
+trust where it will take me. Be able to do so without constant self evaluation.
+
+There is never a reason to react in anger at work. An outburst of anger is not professional, it makes me look less 
+competent, weak and such an occurrence causes me more stress in it's aftermath. Respond carefully.
+
+When the stressor acts, don't get caught up in his world. Be focused, calm, strategic and reasonable. Otherwise I 
+become less efficient and weaker.
+
+Let it be. Don't waste effort trying to control what people think and do. Don't take seriously what people say. 
+Observe the reality of what is happening. Be free from the opinions of others, both real and imagined. Don't take 
+this concept lightly. This is hard to do and takes deliberate and continuous effort to change my ways. 
+
+When I handle situations from within it strengthens my feeling of control over my life. When I complain about it to 
+another, I feel more frustrated and less in control of my life. This is dangerously common.
+
+Practice acceptance of both the good and bad in any situation. Look for and capitalize on the opportunities instead 
+of dwelling on the perceived short comings. Leverage the context.
+
+It is a false idea that there is peace in idle time and that work and study is to be 
+minimized. Idle time produces fear, doubt, anxiety, exaggerations, distortions, complacency. 
+The real peace comes when one is fully involved in a purpose, task or study. From this involvement 
+one builds capability and confidence. These in turn build into satisfaction and peace of 
+mind.
+
+Harness and nurture a drive rather than a fear or self concern. Better to be striving towards a goal 
+pursuing my objective to better myself than to be worried about things that will mostly take care of
+themselves and who's relevance is mostly exaggerated. Stop playing so much defense and just have an 
+almost unaware confidence as I do my life.
+
+Spend more time being in the moment doing something rather than worrying, planning and contemplating future events.
+
+When things are going well, do not overdrive my thoughts on the matter. Don't exaggerate what it will actually 
+do for me.
+
+If I focus on something that I am concerned about, it weakens me. If I keep my focus off of it, my comfort in 
+dealing with it increases. When this comfort increases I feel more confident to face up to my concern. When I 
+then return to focus on the concern, rejoicing over it, I repeat the cycle. So don't over think it. Only 
+occasionally refer to it.
+
+Practice not being distracted from the imaginary deadline. Work and focus in the moment and be satisfied with a 
+good effort and a new understanding. Trying to live up to someone else's unreal expectations creates a soul sucking 
+feeling that will under cut my progress and I will accomplish less than I am capable of.
+
+Support and appreciation come from within and is not dependant on a nurturing human leader.
+
+Panic starts with false pictures and a narrow view of the whole situation that is hard to estimate to begin with.
+An effort to stay focused and trust in God will yield better results and will increase my knowledge. Knowledge is
+helpful in reducing panic. But at any stage of knowledge, doubt is still available.
+
+When given a boring task I can at a minimum, practice and strengthen my concentration ability. Best to mix mundane 
+tasks with research. It will produce more in the long run.
+
+Boring tasks are at some level always going to be something I will have to deal with. So it makes sense that learning 
+to work through these tasks quickly and efficiently is worth striving for.
+
+New philosophy -- from now on, innocent till proven guilty. Don't assume what other's expectations are. I'm wrong far 
+more than I am right. This just leads to self incrimination and feelings of despair. Lower the bar and your expectations. 
+Stop over striving to live up to some imagined ideal.
+
+Why not work in parrallel. What point in comparisons? Sizing up only leads to a roller coaster ride through life. The 
+ups will always become downs when the context changes. Pursue freedom from the need to compare, rate or control situations 
+that are now or in the future. Be free to learn, grow and enjoy the experience. To parrallel means to experience life without 
+concerning myself with the judgements of others and wories about future events.
+
+The email I read today hi-lites some important points. Other developers are getting help. Other developers are not
+finished with their part of the project either. Documentation has been provided and needed to be all along(I was correct). 
+Once again I continue to under estimate myself and over estimate others.
+
+Idea: Consider doing something artistic that is relaxing, non-goal oriented and satisfying before going to bed or sometime 
+in the evening. It could be painting, drawing(original and copying), reading meditation books. Investing an hour into this 
+each night could benefit me by allowing me to sleep better. In my line of work and study I may need a mind destressor.
+
+Realizaation: As a young man i would get incredibly angry when I saw someone's falability. My expectations were for them 
+to be near perfect in performing their service. At the same time there was a fear of a seemingly high standard society that 
+caused in me an uncomfortable fear that I could not be excepted to conform to in to this culture. My false impressions of 
+people made me feel intimidated and more comfortable being alone.
+
+Instead of living in the future mind set, I should embrace what is before me as a gift from God and see what God will give 
+me through this. Knowing it is from God, I should boldly and calmly embrace it.
+
+When doing the job find the best way to do it and create it that way. Don't get too locked up in trying to fit it right. It 
+will take less time and energy, even if it has to be redone.
+
+Try not to analyze\quantify the work\learning. Instead mentally engage. Study what you work on.
+
+Work on a different level(engaged and learning). Think on a different level with indifference to what I cannot control.
+
+Do not focus on measuring up. It leads to no where. Instead focus on the task and the joy that comes from learning new things. 
+As much as possible practice not focusing on what can be obtained or where it may lead. There is no lasting security or joy 
+in this. Only God can provide true joy and security.
+
+Do not live in the distorted opinions of others(real or imagined).
+
+When it comes to company schedules, the difficult thing to except is that you have to not care so much. It is a conflict 
+in the mind that feels like irresponsibility or failure. This conflict needs to be resolved in the mind. There is no 
+getting around it. The goal is to find the correct attitude and mind set that will best get the job done.
+
+There is a feeling of responsibility to carry out to completion what the boss expects. When that is not possible, 
+feelings of failure, displacement, future anxiety come in.
+
+Practice failing gracefully. That is without fear, condemnation, self analysis, worry and stress.
+
+It is great to be motivated, but make sure the source of the motivation is correct. Loyalty to God, a desire to be 
+involved and make a significant contribution, to enjoy my work and a desire to help others are the best sources.
+
+Avoid being distracted by other people,s short comings. The more I think on them, the less confident I become and the less 
+I accomplish. These soap opera thoughts take me off the path towards professional independence and the goal of more 
+control over my free time. These people are not reference points to build myself up on, but rather a drain on my limited
+resources.
+
+When I learn of the short commings of those who try to intimidate me, do not think of them as oportunities towards self vindication. 
+Look at them as further reasons to be quiet in mind and focused. Be less concerned about the thinkings, doings and sayings of 
+others even when they are in a place of authority. 
+
+If it bothers me once, don't let it bother me 50 times.
+
+//********************************************  
+// Stess Management Techniques that empower myself to be successfull, happy and live a more meaningfull life.
+//********************************************
+The practice is to produce in the moment without thoughts of conflict, concerns or anticipation of a negative encounter.
+Be able to practice without a need to plan. No thinking in the future.
+Be free from an internal argument to change the opinion of anyone.
+Block out fearfull thoughts of failure. Failure is part of life and cannot be prevented. Freedom to fail is essential.
+The body and mind heals and is strengthened when at peace and not burdoned by conflict or concern.
+Do not dwell or cling to past experience whether good or bad. Simply be. Trust only in God.
+Be free from the need to prove myself. This only robs me of my inner peace and personal freedom.
+Try not to think or speak judgements of others.
+Show compassion to those who hurt or anger me. This is obediance to God.
+When I screw up and allow myself to get stressed, be quick to ask for forgiveness and block out the cycle of thoughts.
+
+Patience is key to survival. Tasks go the way they ought to go. This is determined by God's sovereignty, not my will.
+No matter what the outcome of my efforts, things will go much better if I accept the outcome as God's will. Learn 
+through practice and prayer to be at peace and not let that peace be determined by how things are progressing. 
+
+Stop the professional self analysis. There are no fixed comaparison points. Just do and learn and things will turn
+out as they will turn out, only better. That's the freedom to be me.
+
+Accept that life will always have unresolved issues in atleast one or more areas. All areas of my life do not have to 
+suffer while these issues are still open. It's OK to have open issues. Accept and not obsess about them. Learn through 
+practice to be at peace with them and the reslult will turn out for the better. What ever happens is OK and God will 
+provide a way for me to deal with the outcome. This will save me much suffering and allow me to have a better life experience.
+
+Observation: When I worry about unresovled issues in my life, my ability to concentrate and function is hindered. I 
+             become less efficient in life.
+Observation: The brain is incredible in what it remembers and processes if unhindered.
+Observation: When I accomplish something, I feel I need to show it. I have something to prove(self vindication).
+             This causes stress via anxiousness and frustration with no tangible result. Give
+             thanks to God for anything I am able to accomplish. Glorify him.
+Observation: When I accomplish something, I feel excited inside and somehow attempt to use
+             it as a security blanket for the future. A false sort of comfort over that which
+             I have so little control and many concerns.
+Observation: When I discover something someone else did wrong, I feel I need to share this
+             information. This causes stress via anxiousness with no tangible result.
+Observation: When I imagine a stressfull conversation with someone, talking with the person
+             will often quench the illusion.
+Observation: When I am calm and confident I generally enjoy my work. It is the negative 
+             thoughts that ruin my peace.
+Observation: The mind has a restless desire for attention, either negative or positive. This 
+             desire is fishing for trouble.
+Observation: It is a major problem that internally I am very argumentive on almost any topic.
+Observation: The mind will tend to panic on a past stress pattern that seems to be occurring.
+             The trigger mechanism seems to be something that triggered it the first time around.
+             Hence, the current stressfull expectation is mostly a distortion of what is actually going to happen.
+Observation: 09/19/13 Reminded again today of how difficult this job is when I depend on others to help me out. I also
+             am aware that I often find out late that there was some little trick to make something work. I have 
+             to keep in mind that all the other projects are struggling the same as mine. For my part, yes I could 
+             have done a better job and some responsibility falls on me, but poor leadership, faulty projects and 
+             lack of good communication were huge contributors. The only person I need to convince is myself. With 
+             God's help may I give myself an honest evaluation and not feel guilty about putting blame where it belongs.
+Observation: Much of my time and energy goes to worrying about how others think of me and judge the things I do. So 
+             much to the point that it has a great impact on my ability to accomplish tasks. Then I end up assisting 
+             the very thing I fear to actually happen.
+Observation: I have a strong sensitivity to being humiliated or found to be weak. This causes anxiety and over reaction
+             to what people say and may think. There are parallels here to my past feelings of being physically weak and
+             trying to hide it. I have an under lying feeling that in some way I am defective, so I try ruthlessly to 
+             over come and refute it.
+
+Thoughts that lead to panic:
+Expecting high reslults from myself or thinking that others do.
+I may be humiliated or thought of as a fool or fake.
+//********************************************  
+// Study Notes and Techniques
+//********************************************
+Study in a quiet environment.
+
+Avoid daydreaming by asking yourself questions about the material as you study it.
+
+Make yourself do the studying. Fight back and work to regain control of your life. Your emotional 
+health and academic success go hand in hand. Keep a handle on both.
+
+Work with the material I am studying. Take notes, ask questions, mentally step through a process 
+using what I have learned. Turn it into a picture as much as possible.
+
+//********************************************  
+// Security Clearance Info
+//********************************************
+You can check on your clearance three ways: 1) Joint Personnel Adjudication System (JPAS), 2) Security Investigations Index (SII) or call DoD at 1-888-282-7682.
+Law Dictionary: How Do I Check On My Security Clearance Status? 
+How to check on you clearance investigation
+https://news.clearancejobs.com/2013/08/20/how-to-request-a-copy-of-your-security-clearance-investigation/
+
+//********************************************  
+// Scratch
+//********************************************
+<a href="/AddToCart.aspx?productID=<%#:Item.ProductID %>">
+
+            string rawId = Request.QueryString["ProductID"];
+            int productId;
+
+            if (!String.IsNullOrEmpty(rawId) && int.TryParse(rawId, out productId))
+            {
+                using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
+                {
+                    usersShoppingCart.AddToCart(Convert.ToInt16(rawId));
+                }
+            }
+            else
+            {
+                Debug.Fail("ERROR : We should never get to AddToCart.aspx without a ProductId.");
+                throw new Exception("ERROR : It is illegal to load AddToCart.aspx without setting a ProductId.");
+            }
+
+            Response.Redirect("ShoppingCart.aspx");
+
+
+
+
+	

@@ -1,0 +1,135 @@
+Client Endpoints-basicHttpBindings 
+Service Endpoints-basicHttpBindings 
+
+--------------------------------------------------------------------
+Client Endpoints-basicHttpBindings  (Taken from FileTransport service client)
+
+<system.serviceModel>
+        <bindings>
+              <basicHttpBinding>
+                    <binding name="basicHttpBinding_FileTransport" sendTimeout="00:10:00"
+                          maxBufferPoolSize="20000000" maxBufferSize="20000000" maxReceivedMessageSize="20000000">
+                          <readerQuotas maxStringContentLength="20000000" maxArrayLength="20000000"
+                                maxBytesPerRead="20000000" />
+                    </binding>
+                    <binding name="basicHttp_EndPoint" />
+                    <binding name="BasicHttpBinding_SecurityService" sendTimeout="00:10:00"
+                          maxBufferPoolSize="20000000" maxBufferSize="20000000" maxReceivedMessageSize="20000000">
+                          <readerQuotas maxStringContentLength="20000000" maxArrayLength="20000000"
+                                maxBytesPerRead="20000000" />
+                          <security mode="Transport">
+                                <transport clientCredentialType="None" />
+                          </security>
+                    </binding>
+              </basicHttpBinding>
+        </bindings>
+        <client>
+          <!--Cassini-->
+          
+            <endpoint address="http://localhost:8732/Design_Time_Addresses/FileTransportService/Service1/"
+                    binding="basicHttpBinding" bindingConfiguration="basicHttpBinding_FileTransport"
+                    contract="FileTransportServiceRef.IFileTransport" name="BasicHttpBinding_IFileTransport" />
+          
+          <!--Http Local IIS-->
+          <!--
+            <endpoint address="http://localhost:680/FileTransportService.FileTransport.svc"
+                  binding="basicHttpBinding" bindingConfiguration="basicHttpBinding_FileTransport"
+                  contract="FileTransportServiceRef.IFileTransport" name="BasicHttpBinding_EndPoint" />
+          -->
+
+          <!--Https local IIS-->
+          <!--
+            <endpoint address="https://localhost:685/FileTransportService.FileTransport.svc"
+                            binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_SecurityService"
+                            contract="FileTransportServiceRef.IFileTransport" name="BasicHttpBinding_EndPoint" />
+          -->
+          <!--Https FileWebDev IIS-->
+          <!--
+          <endpoint address="https://FileWebDev.CommunityCentric.com/FileTransportService.FileTransport.svc"
+                        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_SecurityService"
+                        contract="FileTransportServiceRef.IFileTransport" name="BasicHttpBinding_EndPoint" />
+          -->
+        </client>
+ </system.serviceModel>
+
+ --------------------------------------------------------------------
+Service Endpoints-basicHttpBindings  (Taken from FileTransport service)
+
+<system.serviceModel>
+    <client> 
+      <!--Connection from this service to JobWebDev on Cassini-->
+      <!--
+      <endpoint address="http://localhost:8732/Design_Time_Addresses/JobsDatabaseService/Service1/"
+        binding="basicHttpBinding" bindingConfiguration="basicHttpBinding_FileTransport"
+        contract="JobsDBServiceReference.ServiceContract" name="BasicHttpBinding_EndPoint" />    
+      -->
+      
+      <!--Connection from this service to JobWeb on cloud server-->
+      
+      <endpoint address="https://jobweb.communitycentric.com/JobsDatabaseService.ServiceAPI.svc"
+        binding="basicHttpBinding" contract="JobsDBServiceReference.ServiceContract" name="BasicHttpBinding_EndPoint"
+        bindingConfiguration="BasicHttpBinding_SecurityService" />
+      
+    </client>
+    <bindings>
+      <basicHttpBinding>
+        <!--Used for local connection-->
+        <binding name="basicHttpBinding_FileTransport" sendTimeout="00:10:00"
+          maxBufferPoolSize="20000000" maxBufferSize="20000000" maxReceivedMessageSize="20000000">
+          <readerQuotas maxStringContentLength="20000000" maxArrayLength="20000000"
+            maxBytesPerRead="20000000" />
+        </binding>
+        
+        <binding name="BasicHttpBinding_Cassini" />
+      
+        <binding name="BasicHttpBinding_SecurityService">
+          <security mode="Transport">
+            <transport clientCredentialType="None" />
+          </security>
+        
+        </binding>
+      </basicHttpBinding>      
+    </bindings>
+    <services>
+      <service name="FileTransportService.FileTransport">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration="basicHttpBinding_FileTransport" name="basicHttp_EndPoint" 
+                            contract="FileTransportService.IFileTransport">
+          <identity>
+            <dns/>
+          </identity>
+        </endpoint>
+        
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <!-- Cassini -->        
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:8732/Design_Time_Addresses/FileTransportService/Service1/" />
+          </baseAddresses>
+        </host>
+        
+        <!--IIS-->
+        <!--
+        <host>
+          <baseAddresses>
+            <add baseAddress=" " />
+          </baseAddresses>
+        </host>
+        -->
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, 
+          set the value below to false and remove the metadata endpoint above before deployment -->
+          <serviceMetadata httpGetEnabled="True"/>
+          <serviceDebug includeExceptionDetailInFaults="True"/>
+          <!--  
+          <serviceCredentials>
+            <serviceCertificate findValue="Farm" storeLocation="LocalMachine" storeName="TrustedPeople"  x509FindType="FindBySubjectName"/>
+          </serviceCredentials>            
+          -->
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>

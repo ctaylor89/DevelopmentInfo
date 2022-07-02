@@ -1,0 +1,17 @@
+290301001090439	7798	LinqToXML Notes
+https://msdn.microsoft.com/en-us/library/bb943906.aspx
+
+http://www.codeproject.com/Tips/57304/Use-wildcard-characters-and-to-compare-strings
+http://www.geeksforgeeks.org/wildcard-character-matching/
+http://www.drdobbs.com/architecture-and-design/matching-wildcards-an-algorithm/210200888
+http://blogs.msdn.com/b/dboyle/archive/2013/02/18/comparing-strings-with-a-wildcard-character.aspx
+
+Querying an XDocument vs. Querying an XElement
+
+When you load a document via XDocument.Load, you will notice that you have to write queries slightly differently than when you load via XElement.Load.
+
+When you load an XML document into an XElement via XElement.Load, the XElement at the root of the XML tree contains the root element of the loaded 
+document. 
+
+When you load the same XML document into an XDocument via XDocument.Load, the root of the tree is an XDocument node, and the root 
+element of the loaded document is the one allowed child XElement node of the XDocument. The LINQ to XML axes operate relative to the root node.

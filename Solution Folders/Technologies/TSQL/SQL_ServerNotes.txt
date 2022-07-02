@@ -1,0 +1,26 @@
+Download links for sql server express and management studio
+http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx
+
+Install AdventureWorks 2014
+https://www.youtube.com/watch?v=JhuDtvbpses
+
+An AdventureWorksDW database can be installed by attaching the database, or using the CREATE DATABASE statement.
+
+To attach an AdventureWorks database
+Download a database for your SQL Server version.
+Unzip the database (mdf) file and log (ldf) file.
+From Microsoft SQL Server Management Studio, connect to a SQL Server instance.
+Right click Databases.
+Click Attach.
+Click the Add button.
+Locate the AdventureWorksDW database mdf file. For instance, AdventureWorksDW2012_Data.mdf.
+Click the OK button on the Locate Database Files dialog window.
+Click the OK button on the Attach Databases dialog window to attach the database.
+
+CREATE DATABASE statement
+From SQL Server Management Studio, execute the following T-SQL:
+
+Example T-SQL
+
+CREATE DATABASE AdventureWorksDW2012 ON (FILENAME = 'M:\Data\AdventureWorksDW2012_Data.mdf'), 
+(FILENAME = 'L:\Tlogs\AdventureWorksDW2012_Log.ldf') FOR ATTACH;

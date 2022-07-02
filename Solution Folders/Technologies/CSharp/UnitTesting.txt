@@ -1,0 +1,214 @@
+UnitTestExample
+
+-----
+Test-driven development has been enhanced with Visual Studio 2012
+
+[TestClass] attribute - marks this class as a test class containing test methods, which allows the unit testing framework to pick it up.
+
+[TestMethod] - allows the testing framework to identify this method as a potential test that needs to be run. 
+
+// You can use the following additional attributes as you write your tests:
+ Use ClassInitialize to run code before running the first test in the class
+ [ClassInitialize()]
+ public static void MyClassInitialize(TestContext testContext) { }
+
+ Use ClassCleanup to run code after all tests in a class have run
+ [ClassCleanup()]
+ public static void MyClassCleanup() { }
+
+ Use TestInitialize to run code before running each test 
+ [TestInitialize()]
+ public void MyTestInitialize() { }
+
+ Use TestCleanup to run code after each test has run
+ [TestCleanup()]
+ public void MyTestCleanup() { }
+
+ // Test categories let you run groups of tests based on their assigned categories without the requirement to maintain test lists.
+ [TestCategory("Debit")]
+ 
+ [Priority(1)]
+ [TestCategory("Nightly"), TestCategory("Weekly"), TestCategory("ShoppingCart"), TestMethod()]
+ 
+ // Test for the existence of a DivideByZeroException
+ [ExpectedException(typeof(System.DivideByZeroException))]
+ 
+ // Test for the existence of a NullReferenceException
+ [ExpectedException(typeof(NullReferenceException))]
+
+ // Disable a test from running
+ [Ignore]
+
+[TestInitialize] vs. [ClassInitialize]
+One common oversight we have encountered while working with developers is the mix up of the [TestInitialize] and [ClassInitialize] 
+Attributes. When using these methods, be conscience of their differences. The Class Initialize attribute executes the decorated 
+method once before the first test in the class is run, while the Test Initialize attribute executes before each test is run. There 
+are different scenarios for when to use each, and putting code incorrectly in one or the other can cause unexpected behavior.
+
+[ClassInitialize] used to setup the state of the test class. This includes variables that are shared in all tests, but the values 
+of which either does not change or the changing of their values will not impact a test.
+
+[TestInitialize] used to revert the state of variables in which every test depends upon.   
+
+When using these attributes, always make sure to run the entire set of unit tests as a group and not just individually. This will 
+make sure that the test class has been setup properly.  
+---------------------------------------------------------------------
+Links
+
+Set of tutorials on Unit Testing
+http://www.c-sharpcorner.com/UploadFile/dacca2/fundamental-of-unit-testing-understand-expectedexception-in/
+
+---------------------------------------------------------------------
+Notes
+
+How to unit test a class that consumes a web service?
+Create a wrapper interface around your webservice, and make your class under test take a dependency on that interface, 
+rather than directly on the webservice; you can then mock the interface. Only make that interface expose the methods 
+of the webservice that you find interesting. 
+---
+Mock objects are instances of test-provided classes that simulate the behavior of external components. Mock objects 
+isolate the application code under test. They create conditions that are otherwise difficult to produce, such as a disk 
+full exception.
+---
+In Visual Studio 2008 I added the app.config file to the test project as an existing item and selected copy as link in 
+order to make sure it's not duplicated. That way I only have one copy in my solution. With several test projects it comes 
+in really handy!
+
+---------------------------------------------------------------------
+UnitTestExample
+
+namespace TestFileTransportService
+{
+    [TestClass]
+    public class UnitTestService
+    {
+        static string inputFilePath = string.Empty;    // @"C:\_A\TransportInputFiles\Clients\Amco\AmcoFundShares.xml";
+        static string logInName = string.Empty;        // "DatumPipes";
+        static string password = string.Empty;         // "p@nth3rs";
+        static string nonClientTestFileName = string.Empty;
+        static string clientTestFileName = string.Empty;
+        static Guid fileKeyGuid = Guid.Empty; //new Guid("ffffff88-0000-4444-bbbb-000000000000");
+        static Guid clientKey = new Guid("ca03fc7c-bcb4-4b1c-bf60-73113c2ad156");
+        static FileTransportClient client = null;
+        
+        [ClassInitialize()]
+        public static void InitializeTestClass(TestContext testContext)
+        {
+            var appSettings = ConfigurationManager.AppSettings;
+            logInName = appSettings["user"];
+            password = appSettings["password"];
+            inputFilePath = appSettings["inputFilePath"];
+            nonClientTestFileName = appSettings["nonClientTestFileName"];
+            clientTestFileName = appSettings["clientTestFileName"];
+        }
+
+        [TestMethod]
+        public void Test_Ping()
+        {
+            bool isServiceAccessable = false;
+
+            client = new FileTransportClient();
+            client.Open();
+            isServiceAccessable = client.Ping();
+            client.Close();
+            Assert.IsTrue(isServiceAccessable, "Test_Ping() - Service not accessable");
+        }
+
+        [TestMethod]
+        public void Group_Test_Save_File_To_S3()
+        {
+            Test_Save_File_To_S3();
+            Test_Get_File_Name_From_Key();
+            Test_Get_File_Contents();
+        }
+
+        public void Test_Save_File_To_S3()
+        {
+            bool exceptionOccurred = false;
+            Guid fileKeyResult = Guid.Empty;
+            Guid clientKey = new Guid("ca03fc7c-bcb4-4b1c-bf60-73113c2ad156");
+            byte[] fileData = FileUtility.GetFileBytes(inputFilePath);
+
+            try
+            {
+                client = new FileTransportClient();
+                client.Open();
+                fileKeyResult = client.SaveFileToS3(clientKey, nonClientTestFileName, fileData, DateTime.Now, logInName, password);
+                client.Close();
+            }
+            catch
+            {
+                exceptionOccurred = true;
+                client.Abort();
+            }
+
+            Assert.AreEqual(exceptionOccurred, false, "Test_Save_File_To_S3 - Exception Occurred");
+            Assert.AreNotEqual(fileKeyResult, Guid.Empty, "Test_Save_File_To_S3 - Did not recieve a file key result");
+
+            fileKeyGuid = fileKeyResult;
+        }
+                
+        public void Test_Get_File_Name_From_Key()
+        {
+            bool exceptionOccurred = false;
+            string fileNameResult = string.Empty;
+
+            try
+            {
+                client = new FileTransportClient();
+                client.Open();
+                fileNameResult = client.GetFileNameFromKey(fileKeyGuid, logInName, password);
+                client.Close();
+            }
+            catch
+            {
+                exceptionOccurred = true;
+                client.Abort();
+            }
+
+            Assert.AreEqual(exceptionOccurred, false, "Test_Get_File_Name_From_Key - Exception Occurred");
+            Assert.IsTrue(fileNameResult != string.Empty, "Test_Get_File_Name_From_Key - File name not retrieved");
+        }
+
+        public void Test_Get_File_Contents()
+        {
+            bool exceptionOccurred = false;
+            byte[] fileContentsResult = new byte[1];
+            
+            try
+            {
+                client = new FileTransportClient();
+                client.Open();
+                fileContentsResult = client.GetFileContents(fileKeyGuid, logInName, password);
+                client.Close();
+            }
+            catch
+            {
+                exceptionOccurred = true;
+                client.Abort();
+            }
+
+            Assert.AreEqual(exceptionOccurred, false, "Test_Get_File_Contents - Exception Occurred");
+            Assert.IsTrue(fileContentsResult.Length > 1, "Test_Get_File_Contents - Exception Occurred");
+        }
+
+        // Test for expected exceptions
+
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<LoginFault>))]
+        public void Test_Save_File_To_S3_with_bad_credentials()
+        {
+            byte[] fileData = FileUtility.GetFileBytes(inputFilePath);
+
+            client = new FileTransportClient();
+            client.Open();
+            Guid fileKey = client.SaveFileToS3(clientKey, "S3FileTest.xml", fileData, DateTime.Now, "badUserName", password);
+            client.Close();
+        }
+    }
+
+
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------

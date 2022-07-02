@@ -1,0 +1,500 @@
+
+"TPL"
+"Recorded to here"
+"*Needs Recording"
+http://www.codeproject.com/Articles/71285/Introducing-NET-Parallel-Programming
+http://www.codeproject.com/Articles/152765/Task-Parallel-Library-of-n - Task Parallel Library article
+http://www.codeproject.com/Articles/189374/The-Basics-of-Task-Parallelism-via-C
+http://dotnetcodr.com/2014/03/18/continuation-tasks-in-net-tpl-many-tasks-continued-by-a-single-task/ - Continuation tasks
+http://mark-dot-net.blogspot.com/2014/07/six-ways-to-initiate-tasks-on-another.html - article about tasks, async and await, threads w/ pluralsight resources.
+
+The Task Parallel Library was introduced in .NET 4 as the new preferred way to initiate background tasks. It is a powerful model, supporting chaining tasks 
+together, executing them in parallel, waiting on one or many tasks to complete, passing cancellation tokens around, and even controlling what thread they 
+will run on. Unlike the ThreadPool though, we get back a Task object, allowing you to wait for completion, or specify another task to be run when this one 
+completes.
+
+A task represents an asynchronous unit of work, and as you can see, you only need an Action in order to construct one. Another thing you should keep in 
+mind is that a task has a certain life cycle. Conceptually, a task can be either idle (not started), running, pending, cancelled, faulted, and successfully 
+completed. Each task has a Status property which defines the current state of the task. You can examine this enum to get a better understanding of the 
+task’s life cycle.
+
+A TPL Task actually uses the ThreadPool internally, if you use the default scheduler, which you use most of the time. The scheduler can be swapped out.
+If we assume we are using the default scheduler, Tasks will be allocated threads by the the use of a ThreadPool, which handles the creation of Threads 
+to carry out Tasks. Tasks are merely wrappers for passing a delegate of work to be done. Tasks also storing state, exceptions, and continuations amongst others.
+
+You can use the Task.Run methods to create and start a task in one operation. To manage the task, the Run methods use the default task scheduler, regardless of 
+which task scheduler is associated with the current thread. The Run methods are the preferred way to create and start tasks when more control over the 
+creation and scheduling of the task is not needed.
+
+It is worth mentioning that Tasks are merely wrappers for passing a delegate of work to be done, also storing state, exceptions, and continuations amongst 
+others. That work may or may not be done by the threadpool, and as already stated, that will depend upon the scheduler used.
+
+The other great thing about TPL is that it is aimed at using each core of your CPU, which may have been otherwise idle. It obviously does this using 
+Threads behind the scenes, but you do not have to get involved with spinning up new Threads except in advanced scenarios such as custom Schedulers.
+
+You can chain tasks together to execute one after the other.
+
+C# 5 async await
+The async and await keywords were introduced with C# 5 and .NET 4.5 and allow you to write synchronous looking code that actually runs asynchronously. 
+It’s not actually an alternative to the TPL, it augments it and provides an easier programming model. You can call await on any method that returns a 
+task, or if you need to call an existing synchronous method you can do that by using the TPL to turn it into a task:
+
+// Control is returned to the calling method when await is called within an async task
+await Task.Run(() => xdoc.Load("http://feeds.feedburner.com/soundcode"));
+
+The all new ‘async’ and ‘await’ keywords use Tasks extensively.
+ 
+// Example of async - wait keywords
+private async Task ComputeStuffAsync()
+{
+    for(;;)
+    {
+        var sum = 0.0;
+        Message.Text = "Computing now...";
+        await Task.Run(() => 
+        {
+            for (int i = 0; i < 900000000; i++)
+            {
+			    sum += Math.Sqrt(i);
+            }
+        });
+    }
+	Message.Text = "Sum1 = " + sum;
+}
+
+// The await operator is applied to a task in an asynchronous method to suspend the execution of the method until the awaited task completes. 
+// The task represents ongoing work. Asynchrony is essential for activities that are potentially blocking.
+// The asynchronous method in which await is used must be modified by the async keyword. A method defined by using the async modifier, and 
+// usually containing one or more await expressions, is referred to as an async method. The marked async method can itself be awaited by 
+// methods that call it.
+
+// The task to which the await operator is applied typically is the return value from a call to a method that implements the Task-Based Asynchronous 
+// Pattern. Examples include values of type Task or Task<TResult>.
+----------
+
+// Use the TaskFactory.StartNew method to create and start a task in one operation. Use this method when creation and scheduling do not have to be separated 
+// and you require additional task creation options or the use of a specific scheduler, or when you need to pass additional state into the task through its 
+// AsyncState property.
+	
+	Task taskA = Task.Factory.StartNew(() => Console.WriteLine("Hello from taskA."));
+	...
+	taskA.Wait();	// Wait for taskA to complete
+
+// A Task is only ever executed once, and that means we need to ensure that multiple calls to a task's Start method from multiple threads concurrently will 
+// only result in the task being scheduled once. This requires synchronization, and synchronization has a cost.  If you construct a task using the task's 
+// constructor, you then pay this synchronization cost when calling the Start method, because we need to protect against the chance that another thread is 
+// concurrently calling Start.  However, if you use Task.Factory.StartNew, we know that the task will have already been scheduled by the time we hand the 
+// task reference back to your code, which means it's no longer possible for threads to race to call Start, because every call to Start will fail.
+// Prefer TaskFactory.StartNew to taskInstance.Start(). 
+
+*Needs Recording
+Avoid Async Void. There are three possible return types you can use for async methods: Task, Task<T> and void.
+The main return types for async methods are just Task and Task<T>. When you are converting from synchronous to asynchronous code, any method returning a 
+type becomes an async method returning Task<T>, and any method returning void becomes an async method returning Task.
+
+Async methods that return void have a specific purpose and that is to make asynchronous error handlers possible, but async void methods have different 
+error handling semantics. When an exception is thrown in an async Task or async Task<T> method, that exception is captured and placed directly on the 
+Task object. With an async void method, there is no Task object involved, so any exceptions thrown out in an async void method will be raised directly on 
+the SynchronizationContext that was active when the async void method started. For more information I recommend reading the following MSDN article that 
+has some good examples: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx - Async/Await - Best Practices in Asynchronous Programming
+
+// To convert this method to an async method:
+void MyMethod()
+{
+  // Do synchronous work.
+  Thread.Sleep(1000);
+}
+// Do this
+async Task MyMethodAsync()
+{
+  // Do asynchronous work.
+  await Task.Delay(1000);
+}
+
+.NET framework also provides many async compatible API’s that you can also use with async await. You can recognize these members by the “Async” suffix 
+that’s attached to the member name and a return type of Task or Task. For example, the System.IO.Stream class contains methods such as CopyToAsync, 
+ReadAsync, and WriteAsync
+__________________________
+
+http://www.codeproject.com/Articles/189374/The-Basics-of-Task-Parallelism-via-C
+// Task example: Use an Action delegate and named method
+Task task1 = new Task(new Action(printMessage));
+// Use an anonymous delegate
+Task task2 = new Task(delegate { printMessage() });
+// Use a lambda expression and a named method
+Task task3 = new Task(() => printMessage());
+// Use a lambda expression and an anonymous method
+Task task4 = new Task(() => { printMessage() });
+
+task1.Start();	// Better to call TaskFactory.StartNew
+task2.Start();
+task3.Start();
+task4.Start();
+-----------
+
+// A task may only be started and run once. Any attempts to schedule a task a second time will result in an exception.
+// Tasks executed with RunSynchronously will be associated with the current TaskScheduler.
+// If the target scheduler does not support running this task on the current thread, the task will be scheduled for execution 
+// on the scheduler, and the current thread will block until the task has completed execution.
+
+Task t3 = new Task(action, "gamma");
+// Run it synchronously
+t3.RunSynchronously();
+__________________________
+
+Concurrency is about executing multiple un-related tasks in a concurrent mode.
+Parallelism is taking a certain task and dividing it into a set of related tasks to be executed concurrently. It makes use of multiple cpu`s.
+
+// The Parallel.Invoke method provides a convenient way to run any number of arbitrary statements concurrently
+Parallel.Invoke(() => DoSomeWork(), () => DoSomeOtherWork());
+__________________________
+
+TaskCreationOptions Enumeration
+https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcreationoptions(v=vs.110).aspx
+
+You should be careful with using the LongRunning option - with the default scheduler, this causes each task to get its own dedicated thread 
+instead of using the ThreadPool. If you're creating many tasks, this is likely to have a negative impact as you won't get the advantages of 
+the ThreadPool. It's typically geared for a single, long running task (hence its name), not something that would be implemented to work on 
+an item of a collection, etc.
+
+Attached and Detached Child Tasks
+https://msdn.microsoft.com/en-us/library/dd997417(v=vs.110).aspx
+__________________________
+
+A task can raise an aggregate exception which inherently can contain multiple inner exceptions. This means that you should always consider 
+an aggregate exception with multiple inner exceptions when working with tasks. Even if you're not using Task.WaitAll, the task you're waiting 
+on might internally wait for multiple subtasks. Alternatively, the task your waiting on might return multiple exceptions. You simply can't know 
+as a caller. Its always a good practice to call the Flatten method over the AggregateException in order to get all exceptions and handle them 
+as a collection
+
+try{...}
+catch (AggregateException aex)
+{
+    var errors = aex.Flatten();
+    foreach(var error in errors.InnerExceptions)
+    {
+        Console.WriteLine("Exception Occurred: {0}", error.Message);
+    }
+}
+
+try{...}
+catch (AggregateException aex)
+{
+    // Handle throws a new AggregateException containing the exceptions for which the predicate failed(not a FormatException in this example).
+    aex.Handle(e => e is FormatException);
+}
+_________________________
+
+Continuations:
+
+// Get a copy of the UI-thread task scheduler up front that can be passed as an argument to a continuation.
+var uiScheduler = TaskScheduler.FromCurrentSynchronizationContext();
+__________________________
+
+http://tipsandtricks.runicsoft.com/CSharp/ParallelClass.html - worth recording. Recorded through most of Parallel.For
+
+Parallel.Invoke accepts an array of action delegates (you can construct the array yourself, or just pass a number of delegates to Invoke), which 
+it then executes in parallel. In its easiest form, you use it like this:
+    static void F1() { Console.WriteLine("F1()"); }
+    static void F2() { Console.WriteLine("F2()"); }
+    static void F3() { Console.WriteLine("F3()"); }
+ 
+    static void TestInvoke ()
+    {
+        Parallel.Invoke(F1,F2,F3);
+    }
+
+Invoke also handles a large input array well, since it will spawn a number of threads and reuse them, and not create a new thread for each 
+delegate, which would result in very high overhead costs for thread creation and deletion. You can supply an array with thousands of delegates, 
+and Invoke will execute them all, parallelizing as best as it can.
+
+Invoke itself is a synchronous method, it will only return when it has executed all delegates. When one of the delegates throws an exception, 
+Invoke will still execute all other delegates in its array. All the exceptions thrown by the delegates are bundled in an AggregateException, 
+which Invoke will throw when it finishes.
+
+ParallelOptions allows you to do three things:
+1. You can set its MaxDegreeOfParallelism property to set the maximum number of threads that Invoke will use
+2. You can set its TaskScheduler property, if you have written your own scheduler, which will then be used to decide which delegate to run 
+   when and on which thread
+3. You can set a CancellationToken
+
+Setting a cancellation token allows you to abort Invoke (remember that when a delegate throws an exception, the exception is swallowed and only 
+rethrown by Invoke after all other delegates have been executed).
+
+*********  Recorded to here 05/07/15
+The simplest version of the Invoke method is defined as follows:
+public static void Invoke (params Action[] actions);
+
+Here’s how we can use Parallel.Invoke to download two web pages at once:
+Parallel.Invoke (() => new WebClient().DownloadFile ("http://www.linqpad.net", "lp.html"),
+				 () => new WebClient().DownloadFile ("http://www.jaoo.dk", "jaoo.html"));
+
+On the surface, this seems like a convenient shortcut for creating and waiting on two Task objects (or asynchronous delegates). But there’s an 
+important difference: Parallel.Invoke still works efficiently if you pass in an array of a million delegates. This is because it partitions large 
+numbers of elements into batches which it assigns to a handful of underlying Tasks — rather than creating a separate Task for each delegate.
+
+As with all of Parallel’s methods, you’re on your own when it comes to collating the results. This means you need to keep thread safety in mind. 
+The following, for instance, is thread-unsafe:
+
+var data = new List<string>();
+Parallel.Invoke (() => data.Add (new WebClient().DownloadString ("http://www.foo.com")),
+                 () => data.Add (new WebClient().DownloadString ("http://www.far.com")));
+Locking around adding to the list would resolve this, although locking would create a bottleneck if you had a much larger array of quickly executing 
+delegates. A better solution is to use a thread-safe collection such as ConcurrentBag would be ideal in this case.
+
+Parallel.Invoke is also overloaded to accept a ParallelOptions object:
+public static void Invoke (ParallelOptions options, params Action[] actions);
+With ParallelOptions, you can insert a cancellation token, limit the maximum concurrency, and specify a custom task scheduler. A cancellation token 
+is relevant when you’re executing (roughly) more tasks than you have cores: upon cancellation, any unstarted delegates will be abandoned. Any 
+already-executing delegates will, however, continue to completion. See Cancellation for an example of how to use cancellation tokens.
+__________________________
+
+Parallelism in .NET – Part 1, Decomposition
+http://reedcopsey.com/2010/01/19/parallelism-in-net-part-1-decomposition/
+__________________________
+
+Parallelism in .NET – Part 3, Imperative Data Parallelism: Early Termination
+http://reedcopsey.com/2010/01/22/parallelism-in-net-part-3-imperative-data-parallelism-early-termination/
+A normal break statement is only valid when enclosed within an iteration statement, such as foreach.  When we use a Parallel.ForEach, 
+we’re no longer within an iteration statement – we’re a delegate running in a method. This needs to be handled slightly differently when 
+parallelized.  Instead of using the break statement, we need to utilize a new class in the Task Parallel Library: ParallelLoopState.  The 
+ParallelLoopState class is intended to allow concurrently running loop bodies a way to interact with each other, and provides us with a way to 
+break out of a loop.
+
+You do this by calling the overload of Parallel.For or Parallel.ForEach which passes in a loop state, then calling ParallelLoopState.Break 
+or ParallelLoopState.Stop. The main difference is in how quickly things break - with Break(), the loop will process all items with an earlier 
+"index" than the current. With Stop(), it will exit as quickly as possible.
+
+Early termination in parallel routines is not immediate.  Code will continue to run after you request a termination.
+This may seem problematic at first, but it is something you just need to keep in mind while designing your routine.  ParallelLoopState.Break() 
+should be thought of as a request.  We are telling the runtime that no elements that were in the collection past the element we’re currently 
+processing need to be processed, and leaving it up to the runtime to decide how to handle this as gracefully as possible.  Although this may 
+seem problematic at first, it is a good thing.  If the runtime tried to immediately stop processing, many of our elements would be partially 
+processed.  It would be like putting a return statement in a random location throughout our loop body – which could have horrific consequences 
+to our code’s maintainability.
+
+
+__________________________
+
+#For recording use http://reedcopsey.com/2010/01/22/parallelism-in-net-part-3-imperative-data-parallelism-early-termination/
+
+Data Parallelism is the main technique we use to parallelize a routine which can be decomposed based off data.  Data Parallelism refers to 
+taking a single collection of data, and having a single operation be performed concurrently on elements in the collection. Data Parallelism is 
+also sometimes referred to as the Loop Parallelism Pattern or Loop-level Parallelism.
+
+There is a balance to be struck when writing parallel code.  We want to have enough work items to keep all of our processors busy, but the 
+more we partition our data, the more overhead we introduce. Partition your problem into enough tasks to keep each processor busy throughout 
+the operation, but not more than necessary to keep each processor busy.
+
+Partition your problem in a way to place the most work possible into each task. This typically means, in practice, that you will want to 
+parallelize the routine at the “highest” point possible in the routine, typically the outermost loop.  If you’re looking at parallelizing 
+methods which call other methods, you’ll want to try to partition your work high up in the stack – as you get into lower level methods, the 
+performance impact of parallelizing your routines may not overcome the overhead introduced.
+
+Any time your program operates on a collection, and does a set of work on each item in the collection where that work is not dependent on 
+other information, you very likely have an opportunity to parallelize your routine.
+
+When we switch from a foreach loop to a Parallel.ForEach, we’re no longer within an iteration statement – we’re a delegate running in a method.
+This needs to be handled slightly differently when parallelized.  Instead of using the break statement, we need to utilize a new class in the 
+Task Parallel Library: ParallelLoopState. The ParallelLoopState class is intended to allow concurrently running loop bodies a way to interact 
+with each other, and provides us with a way to break out of a loop. 
+
+In order to use this, we use an overload of Parallel.ForEach which takes an IEnumerable<T> and an Action<T, ParallelLoopState> instead of 
+an Action<T>. We don’t actually instantiate the ParallelLoopState instance. It is provided directly to us via the Parallel class.
+
+Parallel.ForEach(customers, (customer, parallelLoopState) =>
+{
+    // Run some process that takes some time...
+    DateTime lastContact = theStore.GetLastContact(customer);
+    TimeSpan timeSinceContact = DateTime.Now - lastContact;
+
+    // If it's been more than two weeks, send an email, and update...
+    if (timeSinceContact.Days > 14)
+    {
+         // Exit gracefully if we fail to email
+         if (theStore.EmailCustomer(customer) == false)
+             parallelLoopState.Break();						// This is a request
+         else
+             customer.LastEmailContact = DateTime.Now;		// Only set the customer property when we succeed
+    }
+});
+
+Early termination in parallel routines is not immediate.  Code will continue to run after you request a termination. ParallelLoopState.Break() 
+should be thought of as a request. We are telling the runtime that no elements that were in the collection past the element we’re currently 
+processing need to be processed(but some elements past the desired collection may still be processed), and leaving it up to the runtime to 
+decide how to handle this as gracefully as possible.
+
+var collection = Enumerable.Range(0, 20);
+var pResult = Parallel.ForEach(collection, (element, state) =>
+{
+    if (element > 10) 
+    {
+        Console.WriteLine("Breaking on {0}", element);
+        state.Break();
+    }
+    Console.WriteLine(element);
+});
+
+__________________________
+
+Imperative Data Parallelism: Aggregation
+http://reedcopsey.com/2010/01/22/parallelism-in-net-part-4-imperative-data-parallelism-aggregation/
+https://msdn.microsoft.com/en-us/library/dd460703(VS.100).aspx
+
+The main issue with aggregation when parallelizing a routine is that you need to handle synchronization of data.  Since multiple threads 
+will need to write to a shared portion of data.
+
+// This is the generic function declaration to handle synchronization of data:
+public static ParallelLoopResult ForEach<TSource, TLocal>(			// <TSource, TLocal> - types used in the aruments and method body.
+    IEnumerable<TSource> source,
+    Func<TLocal> localInit,
+    Func<TSource, ParallelLoopState, TLocal, TLocal> body,
+    Action<TLocal> localFinally
+)
+
+double min = double.MaxValue;
+// Make a "lock" object
+object syncObject = new object(); 
+
+Parallel.ForEach(
+    collection, 
+    // First, we provide a local state initialization delegate.
+    () => double.MaxValue,
+    // Next, we supply the body, which takes the original item, loop state and local state, and returns a new local state
+    (item, loopState, localState) =>
+    {
+        double value = item.PerformComputation();
+        return System.Math.Min(localState, value);
+    },
+    // Finally, we provide an Action<TLocal>, to "merge" results together
+    localState =>
+    {
+        // This requires locking, but it's only once per used thread
+        lock(syncObj)
+            min = System.Math.Min(min, localState);
+    }
+);
+
+int[] nums = Enumerable.Range(0, 1000000).ToArray();
+long total = 0;
+
+// Use type parameter to make subtotal a long, not an int
+Parallel.For<long>(0, nums.Length, () => 0, (j, loop, subtotal) =>
+{
+    subtotal += nums[j];
+    return subtotal;
+},
+    (x) => Interlocked.Add(ref total, x)
+);
+
+Console.WriteLine("The total is {0}", total);
+Console.WriteLine("Press any key to exit");
+Console.ReadKey();
+__________________________
+
+PLINQ
+
+int[] intArray = Enumerable.Range(0, short.MaxValue).ToArray();
+int sum = intArray.AsParallel().Sum();
+
+AsParallel will not have great results on all kinds of queries. For small collections, AsParallel will be slower because 
+of the extra method call.
+
+__________________________
+
+TAP - Task-based Asynchronous Pattern
+
+The Task-based Asynchronous Pattern (TAP) is based on the System.Threading.Tasks.Task and System.Threading.Tasks.Task<TResult> types 
+in the System.Threading.Tasks namespace, which are used to represent arbitrary asynchronous operations. TAP is the recommended 
+asynchronous design pattern for new development.
+
+TAP uses a single method to represent the initiation and completion of an asynchronous operation. This is in contrast to the 
+Asynchronous Programming Model (APM or IAsyncResult) pattern, which requires Begin and End methods, and in contrast to the 
+Event-based Asynchronous Pattern (EAP), which requires a method that has the Async suffix and also requires one or more events, 
+event handler delegate types, and EventArg-derived types. Asynchronous methods in TAP include the Async suffix after the operation 
+name; for example, GetAsync for a get operation. If you're adding a TAP method to a class that already contains that method name 
+with the Async suffix, use the suffix TaskAsync instead. For example, if the class already has a GetAsync method, use the name 
+GetTaskAsync.
+
+Any data that would have been returned through an out or ref parameter if it were a synchronous method, should in an asynchronous be 
+returned as part of the TResult returned by Task<TResult>, and should use a tuple or a custom data structure to accommodate multiple 
+values.
+
+An asynchronous method that is based on TAP can do a small amount of work synchronously, such as validating arguments and initiating 
+the asynchronous operation, before it returns the resulting task. Synchronous work should be kept to the minimum so the asynchronous 
+method can return quickly.
+
+Exceptions
+An asynchronous method should raise an exception to be thrown out of the asynchronous method call only in response to a usage error. 
+Usage errors should never occur in production code. For example, if passing a null reference as one of the method’s arguments causes 
+an error state (usually represented by an ArgumentNullException exception), you can modify the calling code to ensure that a null 
+reference is never passed. For all other errors, exceptions that occur when an asynchronous method is running should be assigned to 
+the returned task, even if the asynchronous method happens to complete synchronously before the task is returned. Typically, a task 
+contains at most one exception. However, if the task represents multiple operations (for example, WhenAll), multiple exceptions may 
+be associated with a single task.
+
+Consumers of a TAP method may safely assume that the returned task is active and should not try to call Start on any Task that is 
+returned from a TAP method. Calling Start on an active task results in an InvalidOperationException exception.
+
+The TAP method returns either a System.Threading.Tasks.Task or a System.Threading.Tasks.Task<TResult>, based on whether the 
+corresponding synchronous method returns void or a type TResult.
+
+Cancellation
+In TAP, cancellation is optional for both asynchronous method implementers and asynchronous method consumers. If an operation allows 
+cancellation, it exposes an overload of the asynchronous method that accepts a cancellation token (CancellationToken instance). By 
+convention, the parameter is named cancellationToken.
+
+The asynchronous operation monitors this token for cancellation requests. 
+
+// Poll on this property if you have to do other cleanup before throwing.
+if (cancelToken.IsCancellationRequested)
+{
+    // Clean up here, then...
+    cancelToken.ThrowIfCancellationRequested();
+}
+
+How to: Cancel a Task and Its Children
+https://msdn.microsoft.com/en-us/library/dd537607(v=vs.110).aspx
+
+If it receives a cancellation request, it may choose to 
+honor that request and cancel the operation. If the cancellation request results in work being ended prematurely, the TAP method 
+returns a task that ends in the Canceled state; there is no available result and no exception is thrown. The Canceled state is 
+considered to be a final (completed) state for a task, along with the Faulted and RanToCompletion states. Therefore, if a task is 
+in the Canceled state, its IsCompleted property returns true. 
+
+When a task completes in the Canceled state, any continuations registered with the task are scheduled or executed, unless a 
+continuation option such as NotOnCanceled was specified to opt out of continuation. Any code that is asynchronously waiting for a 
+canceled task through use of language features continues to run but receives an OperationCanceledException or an exception derived 
+from it. Code that is blocked synchronously waiting on the task through methods such as Wait and WaitAll also continue to run with 
+an exception.
+
+If a cancellation token has requested cancellation before the TAP method that accepts that token is called, the TAP method should 
+return a Canceled task. However, if cancellation is requested while the asynchronous operation is running, the asynchronous operation 
+need not accept the cancellation request. The returned task should end in the Canceled state only if the operation ends as a result of 
+the cancellation request. If cancellation is requested but a result or an exception is still produced, the task should end in the 
+RanToCompletion or Faulted state. 
+
+Consumer code that does not desire cancellation may call a method that accepts a CancellationToken and provide None as the argument 
+value. None is functionally equivalent to the default CancellationToken. CancellationToken.None property returns an empty 
+CancellationToken value. The cancellation token returned by this property cannot be canceled; that is, its CanBeCanceled property is 
+false.
+
+A successful cancellation involves the requesting code calling the CancellationTokenSource.Cancel method, and the user delegate 
+terminating the operation in a timely manner. You can terminate the operation by using one of these options: By simply returning from 
+the delegate. In many scenarios this is sufficient; however, a task instance that is canceled in this way transitions to the 
+TaskStatus.RanToCompletion state, not to the TaskStatus.Canceled state. By throwing a OperationCanceledException and passing it the 
+token on which cancellation was requested. The preferred way to do this is to use the ThrowIfCancellationRequested method. A task that 
+is canceled in this way transitions to the Canceled state, which the calling code can use to verify that the task responded to its 
+cancellation request.
+
+Progress Reporting
+
+https://msdn.microsoft.com/en-us/library/hh873175.aspx
+
+
+
+
+
+
+
+

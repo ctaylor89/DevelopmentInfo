@@ -1,0 +1,200 @@
+
+Code examples: ThreadExamples 
+http://www.codeproject.com/Articles/26148/Beginners-Guide-to-Threading-in-NET-Part-of-n
+http://www.codeproject.com/Articles/28485/Beginners-Guide-to-Threading-in-NET-Part-of-n - worth studying
+
+The volatile keyword indicates that a field might be modified by multiple threads that are executing at the same time. 
+Fields that are declared volatile are not subject to compiler optimizations that assume access by a single thread. 
+This ensures that the most up-to-date value is present in the field at all times. The volatile modifier is usually 
+used for a field that is accessed by multiple threads without using the lock statement to serialize access.
+
+The volatile keyword can be applied to fields of these types:
+	Reference types.
+	Pointer types (in an unsafe context). Note that although the pointer itself can be volatile, the object that it 
+	  points to cannot. In other words, you cannot declare a "pointer to volatile."
+	Types such as sbyte, byte, short, ushort, int, uint, char, float, and bool.
+	An enum type with one of the following base types: byte, sbyte, short, ushort, int, or uint.
+	Generic type parameters known to be reference types.
+__________________________
+
+ManualResetEvent class represents a local wait handle event that must be reset manually after it is signaled. This 
+class represents a special case of its base class, System.Threading.EventWaitHandle. A ManualResetEvent object 
+remains signaled until its EventWaitHandle Reset() method is called. Any number of waiting threads, or threads that 
+wait on the event after it has been signaled, can be released while the object's state is signaled. 
+
+In .NET Framework 4, you can use the System.Threading.ManualResetEventSlim class for better performance when wait 
+times are expected to be very short, and when the event does not cross a process boundary. ManualResetEventSlim uses 
+busy spinning for a short time while it waits for the event to become signaled. When wait times are short, spinning 
+can be much less expensive than waiting by using wait handles. However, if the event does not become signaled within 
+a certain period of time, ManualResetEventSlim resorts to a regular event handle wait. It's good form to Dispose() a 
+ManualResetEventSlim when you're done with it
+
+Set() - Sets the state of the event to signaled, which allows one or more threads waiting on the event to proceed.
+Reset() - Sets the state of the event to nonsignaled, which causes threads to block.
+Wait() - Blocks the current thread until the current ManualResetEventSlim is set.
+
+Event wait handles allow threads to synchronize activities by signaling each other and by waiting on each other's 
+signals. These synchronization events are based on Win32 wait handles and can be divided into two types: those that 
+reset automatically when signaled and those that are reset manually.
+
+Event wait handles are useful in many of the same synchronization scenarios as the Monitor class. Event wait handles 
+are often easier to use than the Monitor.Wait and Monitor.Pulse methods, and they offer more control over signaling. 
+Named event wait handles can also be used to synchronize activities across application domains and processes, whereas 
+monitors are local to an application domain.
+
+CountdownEvent
+The CountdownEvent class provides a simplified way to implement fork/join parallelism patterns in code that uses wait handles.
+
+System.Threading.CountdownEvent is a synchronization primitive that unblocks its waiting threads after it has been signaled a 
+certain number of times. CountdownEvent is designed for scenarios in which you would otherwise have to use a ManualResetEvent 
+or ManualResetEventSlim and manually decrement a variable before signaling the event. For example, in a fork/join scenario, you 
+can just create a CountdownEvent that has a signal count of 5, and then start five work items on the thread pool and have each 
+work item call Signal when it completes. Each call to Signal decrements the signal count by 1. On the main thread, the call to 
+Wait will block until the signal count is zero.
+
+When you use registered wait handles, a system thread monitors the status of the wait handles. When a wait operation completes, 
+a worker thread from the thread pool executes the corresponding callback function.
+
+A Monitor class synchronizes access to objects. It controls access to objects by granting a lock for an object to a single thread.
+
+The threads in the managed thread pool are background threads. That is, their IsBackground properties are true. This means 
+that a ThreadPool thread will not keep an application running after all foreground threads have exited.
+
+
+__________________________
+
+static Random randomGenerator = new Random();
+
+// Set different data in each thread's data slot.
+Thread.SetData(
+	Thread.GetNamedDataSlot("Random"),
+	randomGenerator.Next(1, 200));
+
+// Write the data from each thread's data slot.
+Console.WriteLine("Data in thread_{0}'s data slot: {1,3}",
+	AppDomain.GetCurrentThreadId().ToString(),
+	Thread.GetData(
+        Thread.GetNamedDataSlot("Random")).ToString());
+__________________________
+
+Threads can execute across application domains without the overhead of inter process communication. 
+__________________________
+Threadpool - Articles to record
+http://theburningmonk.com/2010/03/threading-using-the-threadpool-vs-creating-your-own-threads/
+http://blog-narasimha.blogspot.com/2008/07/advantages-and-disadvantages-of-thread.html
+__________________________
+
+The Dispatcher maintains a prioritized queue of work items for a specific thread.
+When a Dispatcher is created on a thread, it becomes the only Dispatcher that can be associated with the thread, even if the Dispatcher is shut down.
+If you attempt to get the CurrentDispatcher for the current thread and a Dispatcher is not associated with the thread, a Dispatcher will be created. 
+A Dispatcher is also created when you create a DispatcherObject. If you create a Dispatcher on a background thread, be sure to shut down the dispatcher 
+before exiting the thread. If a Dispatcher is shut down, it cannot be restarted.
+
+In WPF, a DispatcherObject can only be accessed by the Dispatcher it is associated with.  For example, a background thread cannot update the contents 
+of a Button that is associated with the Dispatcher on the UI thread. In order for the background thread to access the Content property of the Button, 
+the background thread must delegate the work to the Dispatcher associated with the UI thread. This is accomplished by using either Invoke or BeginInvoke. 
+Invoke is synchronous and BeginInvoke is asynchronous. The operation is added to the queue of the Dispatcher at the specified DispatcherPriority.
+If BeginInvoke is called on a Dispatcher that has shut down, the status property of the returned DispatcherOperation is set to Aborted.
+__________________________
+
+What is Thread Affinity?
+
+Posted by Kishore Kumar on July 18, 2011
+All WPF applications start out with two important threads, one for rendering and one for managing the user interface. The rendering thread is a hidden 
+thread that runs in the background, so the only thread that you ordinarily deal with is the UI thread. WPF requires that most of its objects be tied 
+to the UI thread. This is known as thread affinity, meaning you can only use a WPF object on the thread on which it was created. Using it on other 
+threads will cause a runtime exception to be thrown.
+
+The thread affinity is handled by the Dispatcher class, a prioritized message loop for WPF applications. Typically your WPF projects have a single 
+Dispatcher object (and therefore a single UI thread) that all user interface work is channeled through.
+__________________________
+
+namespace Threading.UI.WPF
+{
+    /// <summary>
+    /// Interaction logic for BackGroundWorker.xaml
+    /// </summary>
+    public partial class BackGroundWorkerWindow : Window
+    {
+        private BackgroundWorker worker = new BackgroundWorker();
+
+        public BackGroundWorkerWindow()
+        {
+            InitializeComponent();
+
+            //Do some work with the Background Worker that 
+            //needs to update the UI. 
+            //In this example we are using the System.Action delegate.
+            //Which encapsulates a method that takes no params and 
+            //returns no value.
+
+            // Action is new in .NET 3.5
+            worker.DoWork += (s, e) =>
+            {
+                try
+                {
+                    for (int i = 0; i < (int)e.Argument; i++)
+                    {
+                        if (!txtResults.CheckAccess())
+                        {
+                            Dispatcher.Invoke(DispatcherPriority.Send,
+                            (Action)delegate
+                            {
+                                txtResults.Text += string.Format(
+                                    "processing {0}\r\n", i.ToString());
+                            });
+                        }
+                        else
+                            txtResults.Text += string.Format(
+                                "processing {0}\r\n", i.ToString());
+                    }
+                }
+                catch (InvalidOperationException oex)
+                {
+                    MessageBox.Show(oex.Message);
+                }
+            };
+
+        }
+
+        private void btnGo_Click(object sender, RoutedEventArgs e)
+        {
+            worker.RunWorkerAsync(100);
+        }
+    }
+}
+
+This is very similar to the WinForms example I showed earlier, but this time we must use a WPF class, which is the Dispatcher. Let's look at that 
+in a bit more detail; the important part is this section. The things to note here are the use of CheckAccess() wich can be thought of as the 
+equivalent to the WinForms InvokeRequired. The other thing of note is the use of the cast to a System.Action; this encapsulates a 
+parameterless/returnless method. Other than these subtle differences, these code snippets look the same in my humble opinion.
+
+// WPF Example
+if (!txtResults.CheckAccess())
+{
+    Dispatcher.Invoke(DispatcherPriority.Send,
+    (Action)delegate
+    {
+        txtResults.Text += string.Format(
+            "processing {0}\r\n", i.ToString());
+    });
+}
+else
+    txtResults.Text += string.Format(
+        "processing {0}\r\n", i.ToString());
+
+// WinForms Example
+// If we now compare that with the first option I gave you when working with WinForms:
+if (this.InvokeRequired)
+{
+    this.Invoke(new EventHandler(delegate
+    {
+        txtResults.Text += string.Format(
+            "processing {0}\r\n", i.ToString());
+    }));
+}
+else
+    txtResults.Text += string.Format(
+        "processing {0}\r\n", i.ToString());
+
+

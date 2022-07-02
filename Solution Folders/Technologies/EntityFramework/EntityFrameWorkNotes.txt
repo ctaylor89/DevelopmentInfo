@@ -1,0 +1,482 @@
+﻿Async_Query
+Code_First
+Code_First_Migrations
+Code_Migrations
+Database_First
+Fluent_Api
+Local_DB
+Model_First
+Navigation_Properties
+Random_Notes
+Tutorials_
+
+------------------------------------------------
+Async_Query
+http://www.codeguru.com/csharp/.net/net_framework/performing-asynchronous-operations-using-entity-framework.htm
+https://msdn.microsoft.com/en-us/library/jj819165(v=vs.113).aspx
+
+------------------------------------------------
+Database_First
+
+EF Database First with ASP.NET MVC: Creating the Web Application and Data Models
+https://www.asp.net/mvc/overview/getting-started/database-first-development/creating-the-web-application
+
+------------------------------------------------
+Code_First
+
+* Entity Framework Code First to a New Database - Quick Walk Through
+ https://msdn.microsoft.com/en-us/data/jj193542
+---
+
+Code First is sort of a misnomer. What it should really be called is "Code Based Model" vs "XML Based Model".
+Code First creates an in-memory model based on attributes on classes and/or fluent mappings in code.
+Database First and Model First create an in-memory model based on an .EDMX file, which is then used to generate classes.
+
+Code First uses the code as its model. Database and Model first use the EDMX file as it's model. Code First To Existing Database 
+just generates code first classes (attributes and/or fluent mapping), while Database First generates an EDMX file which then 
+generates classes via T4 templates.
+
+------------------------------------------------
+Code_First_Migrations
+
+Entity Framework Code First Migrations
+https://msdn.microsoft.com/en-us/library/jj591621(v=vs.113).aspx
+
+---
+Code First Migrations has two primary commands that you are going to become very familiar with.
+Add-Migration will scaffold the next migration based on changes you have made to your model since the last migration was created
+Update-Database will apply any pending migrations to the database
+
+Run the Update-Database –Verbose command in Package Manager Console so that you can see the SQL that Code First Migrations is running.
+
+Run the Update-Database command specifying the –Script flag so that changes are written to a script rather than applied to a database. 
+Also specify a source and target migration to generate the script for. We want a script to go from an empty database ($InitialDatabase) 
+to the latest version (migration AddPostAbstract). If you don’t specify a target migration, Migrations will use the latest migration 
+as the target. If you don't specify a source migrations, Migrations will use the current state of the database.
+Example: Update-Database -Script -SourceMigration: $InitialDatabase -TargetMigration: MyMigrationName
+---
+YouTube Code First Example using the .Net Framework: https://www.youtube.com/watch?v=22BJVr1D2-A
+Steps for Code First Demo:
+1) Create a new Console Application
+2) Open Package Manager Console. Type install-package EntityFramework
+3) Go into Program.cs file. Create a new class named Post.
+4) In the Program.cs file Create a new class that implements DbContext and exposes one or more DB sets.
+   public class BlogDbContext : DbContext
+   {
+      public DbSet<Post> Posts { get; set; }
+   }
+5) Specify the connection string to the database. In the app.config file, create a new <connectionStrings> element.
+   Add the name of the context to it and the connection string.
+6) Enable Migrations. In the Package Manager Console type enable-migrations. This will also check the db connection.
+7) Create a starting migration: Enter add-migration <migration name>
+8) Enter update-database -Verbose
+
+   
+
+
+------------------------------------------------
+Fluent_Api
+
+https://www.tutorialspoint.com/entity_framework/entity_framework_fluent_api.htm  - Lots of EF topics
+To access Fluent API you need to override the OnModelCreating method in DbContext.
+
+------------------------------------------------
+Local_DB
+
+Example Connection String. Loactes the localdb under App_Data(From ContosoUniversity).
+<add name="DefaultConnection"
+    providerName="System.Data.SqlClient"
+    connectionString="Data Source=(LocalDb)\MSSQLLocalDB;
+    Initial Catalog=ContosoUniversity2;
+    Integrated Security=True; 
+    AttachDBFilename=|DataDirectory|\ContosoUniversity2.mdf"/>
+
+Setting Up a LocalDB in Visual Studio 2012 and 2013
+http://vbcity.com/blogs/xtab/archive/2013/12/03/setting-up-a-localdb-in-visual-studio-2012-and-2013.aspx
+
+ASP.NET Data Access - Recommended Resources. Lots of good how-to tutorials and articles
+https://docs.microsoft.com/en-us/aspnet/whitepapers/aspnet-data-access-content-map#sslocaldb
+
+------------------------------------------------
+Model_First
+
+In the Model First approach, you create Entities, relationships, and inheritance hierarchies directly on the design surface of EDMX 
+and then generate the database from your model.
+
+------------------------------------------------
+Navigation_Properties
+
+http://blog.staticvoid.co.nz/2012/7/17/entity_framework-navigation_property_basics_with_code_first
+http://www.entityframeworktutorial.net/entity-relationships.aspx - Good article and pic showing how relationships are constructed in classes.
+
+Navigation properties are Entity Frameworks way of representing Foreign Key relationships inside the database. Navigation properties 
+allow you to define relationships between entities (rows in your database) in a way that makes sense in an object oriented language. 
+Navigation properties are not loaded by default, so its important to know how and when you need to load navigation properties. 
+
+Entity Framework creates a proxy around the virtual property so that the property can support lazy loading and more efficient change 
+tracking. The Entity Framework uses inheritance to support this functionality, which is why it requires certain properties to be marked 
+virtual in your base class POCOs. It literally creates new types that derive from your POCO types. So your POCO is acting as a base 
+type for the Entity Framework's dynamically created subclasses. That's what I meant by "create a proxy around".
+
+It’s quite common to define navigational properties in a model to be virtual. When a navigation property is defined as virtual, it can 
+take advantage of certain Entity Framework functionality. The most common one is lazy loading. Lazy loading is a nice feature of many 
+ORMs because it allows you to dynamically access related data from a model. It will not unnecessarily fetch the related data until it 
+is actually accessed, thus reducing the up-front querying of data from the database.
+
+Lazy loading is the equivalent of prepping something for future execution. 
+
+In Entity Framework, using a virtual navigation property allows you to denote it as the equivalent of a nullable Foreign Key in SQL. 
+You do not HAVE to eagerly join every keyed table when performing a query, but when you need the information -- it becomes demand-driven.
+
+I also mentioned nullable because many navigation properties are not relevant at first. i.e. In a customer/Orders scenario, you do not 
+have to wait until the moment an order is processed to create a customer. You can, but if you had a multi-stage process to achieve this, 
+you might find the need to persist the customer data for later completion or for deployment to future orders. If all navigation properties 
+were implemented, you'd have to establish every Foreign Key and relational field on the save. That really just sets the data back into 
+memory, which defeats the role of persistence.
+
+So while it may seem cryptic in the actual execution at run time, I have found the best rule of thumb would be: if you are 
+outputting data (reading into a View Model or Serializable Model) and need values before references, do not use virtual; If your scope is 
+collecting data that may be incomplete or a need to search and not require every search parameter completed for a search, the code will make 
+good use of reference, similar to using nullable value properties int? long?. Also, abstracting your business logic from your data collection 
+until the need to inject it has many performance benefits, similar to instantiating an object and starting it at null. Entity Framework uses 
+a lot of reflection and dynamics, which can degrade performance, and the need to have a flexible model that can scale to demand is critical 
+to managing performance.
+
+---
+Note, that when working with 1-to-1 or 1-to-0..1 relationships, there is no separate foreign key column, the primary key property acts as 
+the foreign key and is always included in the model.
+
+A one-to-many relationship is the most common type of relationship. The foreign key is defined in the table that represents the many end of 
+the relationship.
+---
+One-to-One Relationship:
+In a one-to-one relationship, a row in table A can have no more than one matching row in table B, and vice versa.
+A one-to-one relationship is created if both of the related columns are primary keys or have unique constraints.
+In a one-to-one relationship, the primary key acts additionally as a foreign key and there is no separate foreign key column for either table.
+Each class has a single navigation property for the class it refers to.
+
+This type of relationship is not common because most information related in this way would be all in one table. You might use a one-to-one 
+relationship to −
+	Divide a table with many columns.
+	Isolate part of a table for security reasons.
+	Store data that is short-lived and could be easily deleted by simply deleting the table.
+	Store information that applies only to a subset of the main table.
+---
+Many-to-Many Relationship
+In a many-to-many relationship, a row in table A can have many matching rows in table B, and vice versa. You can create such a relationship by 
+defining a third table, called a junction table, whose primary key consists of the foreign keys from both table A and table B.
+
+For example, the Student and Course tables have a many-to-many relationship that is defined by one-to-many relationship from each of these tables 
+to the Enrollment table.
+
+The following code contains the Course class and the above two classes, i.e., Student and Enrollment.
+
+public class Student {
+   public int ID { get; set; }
+   public string LastName { get; set; }
+   public string FirstMidName { get; set; }
+   public DateTime EnrollmentDate { get; set; }
+	
+   // Navigation property 
+   public virtual ICollection<Enrollment> Enrollments { get; set; }
+}
+
+public class Enrollment {					// Junction Class for the many to many relationship between Students and Courses
+
+   public int EnrollmentID { get; set; }
+   public Grade? Grade { get; set; }
+
+   // Foreign Keys
+   public int CourseID { get; set; }
+   public int StudentID { get; set; }	
+
+   // Navigation properties 
+   public virtual Course Course { get; set; }
+   public virtual Student Student { get; set; }
+}
+
+public class Course {
+   [DatabaseGenerated(DatabaseGeneratedOption.None)]	
+   public int CourseID { get; set; }
+   public string Title { get; set; }
+	
+   public int Credits { get; set; } 
+
+   // Navigation property 
+   public virtual ICollection<Enrollment> Enrollments { get; set; }
+}
+You can see that both Course class and Student class have collections of Enrollment objects which makes many-to-many relationship via junction class Enrollment.
+------------------------------------------------
+Random_Notes
+
+Install-Package EntityFramework
+get-help EntityFramework
+
+http://www.itworld.com/article/2700195/development/3-reasons-to-use-code-first-design-with-entity-framework.html
+The EF workflows you have to choose from are:
+- Code first creating a new database	*Preferred
+- Code first to an existing database	*Preferred
+- Model designer creating a new database
+- Existing database to generated model
+
+By default, the Entity Framework interprets a property that's named ID or classnameID as the primary key.
+Using ID without a classname makes it easier to implement inheritance in the data model.
+
+If you don't specify a connection string or the name of one explicitly for the constructor of the base DbContext class, Entity Framework 
+assumes that the connection string name is the same as the context class name.
+
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
+{
+    // This removes the default pluralizing of table names if you would like to do that.
+	modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+}
+
+---
+The Entity Framework can automatically create (or drop and re-create) a database for you when the application runs. You can specify that this 
+be done every time your application runs or only when the model is out of sync with the existing database. You can also write a Seed 
+method that the Entity Framework automatically calls after creating the database in order to populate it with test data. 
+
+The default behavior is to create a database only if it doesn't exist (and throw an exception if the model has changed and the database already 
+exists). In this section you'll specify that the database should be dropped and re-created whenever the model changes. Dropping the database 
+causes the loss of all your data. This is generally OK during development, because the Seed method will run when the database is re-created and 
+will re-create your test data. But in production you generally don't want to lose all your data every time you need to change the database schema. 
+Later you'll see how to handle model changes by using Code First Migrations to change the database schema instead of dropping and re-creating the database.
+---
+An alternative to setting the initializer in the Web.config file is to do it in code by adding a Database.SetInitializer statement to the 
+Application_Start method in the Global.asax.cs file. For more information, see Understanding Database Initializers in Entity Framework Code First.
+http://www.codeguru.com/csharp/article.php/c19999/Understanding-Database-Initializers-in-Entity-Framework-Code-First.htm
+http://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx
+
+In Application_Start() set your initializer:
+Database.SetInitializer(new MyContextInitializer());
+---
+In many cases you can call the same method, such as Contains, either on an Entity Framework entity set or as an extension method on an in-memory collection. 
+
+The results are normally the same but in some cases may be different. The .NET Framework implementation of the Contains method returns all rows when you pass 
+an empty string to it, but the Entity Framework provider for SQL Server Compact 4.0 returns zero rows for empty strings. 
+
+Therefore the code in the example 
+(putting the Where statement inside an if statement) makes sure that you get the same results for all versions of SQL Server.  
+
+******************************** Recorded to here ****************************************************
+Also, the .NET Framework 
+implementation of the Contains method performs a case-sensitive comparison by default, but Entity Framework SQL Server providers perform case-insensitive 
+comparisons by default. Therefore, calling the ToUpper method to make the test explicitly case-insensitive ensures that results do not change when you change 
+the code later to use a repository, which will return an IEnumerable collection instead of an IQueryable object. 
+
+When you call the Contains method on an IEnumerable collection, you get the .NET Framework implementation; when you call it on an IQueryable object, you get 
+the database provider implementation.
+---
+Why are entity framework entities partial classes?
+
+Back when EF didn't have code-first model generation it was nice to be able to create another partial class with the same name to have [NotMapped] properties 
+and not have them be blown away by database update changes causing your class to be updated and blow your changes away. In Code-First, the code-generation 
+aspect of EF has largely become obsolete so any EF model classes you create do not need partial.
+
+---
+An Entity Framework Core model is a conceptual model of an application's domain. The domain includes all topics relevant to the problem solving areas of 
+interest to the application users. Models are expressed as a collection of classes written in C#. Each class represents an entity (a.k.a. business object, 
+domain object) within the application domain.
+
+Multiple Models Targeting the Same Database
+When using versions prior to EF6, only one Code First model could be used to generate/manage the schema of a database. This is the result of a single 
+__MigrationsHistory table per database with no way to identify which entries belong to which model.
+
+Starting with EF6, the Configuration class includes a ContextKey property. This acts as a unique identifier for each Code First model. A corresponding 
+column in the __MigrationsHistory table allows entries from multiple models to share the table. By default, this property is set to the fully qualified 
+name of your context.
+------------------------------------------------
+Tutorials_
+
+Fluent API
+https://www.tutorialspoint.com/entity_framework/entity_framework_fluent_api.htm
+
+PluralSight - Entity fundamentals
+https://app.pluralsight.com/player?author=scott-allen&name=aspdotnet-mvc5-fundamentals-m6-ef6&mode=live&clip=0&course=aspdotnet-mvc5-fundamentals
+
+ASP.NET Data Access - Recommended Resources
+https://www.asp.net/whitepapers/aspnet-data-access-content-map
+
+I followed some of this course and created the ContosoUniversity MVC site with EF
+https://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
+
+Good Video. Other videos available.
+https://channel9.msdn.com/blogs/ef/migrations-existing-databases
+
+Entity Framework Config File Settings
+https://msdn.microsoft.com/en-us/data/jj556606
+
+Several topics about Entity Framework
+https://www.tutorialspoint.com/entity_framework
+
+Entity Framework Tutorial - has many EF topics and github demos to download.
+https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx
+
+* Entity Framework forums
+------------------------------------------------
+Code_Migrations
+
+EF Migrations Command Reference
+https://coding.abel.nu/2012/03/ef-migrations-command-reference/
+Enable-Migrations: Enables Code First Migrations in a project.
+Add-Migration: Scaffolds a migration script for any pending model changes.
+Update-Database: Applies any pending migrations to the database.
+Get-Migrations: Displays the migrations that have been applied to the target database.
+
+https://www.asp.net/mvc/overview/getting-started/introduction/adding-a-new-field
+
+*************************************************************************
+Example: Setting up Migrations for my Pod class:
+*************************************************************************
+PM> enable-migrations -ContextTypeName PodDB -MigrationsDirectory DataContexts\PodMigrations  -ProjectName PodViewerWeb
+	This causes creation of the Configuration class and the PodMigrations directory
+
+PM> add-migration -ConfigurationTypeName PodViewerWeb.DataContexts.PodMigrations.Configuration "InitialCreate"
+	First param is the namespace and class name of the Configuration.
+	This creates a csharp file that will create the table.
+
+PM> add-migration -ConfigurationTypeName PodViewerWeb.DataContexts.PodMigrations.Configuration "Added Book"
+	Adds a Book table to the database for the added Book class
+
+PM> update-database -ConfigurationTypeName PodViewerWeb.DataContexts.PodMigrations.Configuration -verbose
+connectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=ContosoUniversity1;Integrated Security=SSPI; AttachDBFilename=|DataDirectory|\ContosoUniversity1.mdf;" 
+
+---
+PM> Update-Database -TargetMigration $InitialDatabase    *Tested with EF6
+	This will undo the migrations on the database side, removing the tables but leaving the database. Still need to delete the 
+	database and the migration files in the solution.
+
+PM> Update-Database -TargetMigration "InitCreateYeah" -ProjectName PodConsole -Verbose
+	This will undo migrations after the target migration. If migration is file 201507031735200_AddColumn2.cs, use AddColumn2 for the target.
+	This will also apply migrations to the database before and up through the target migration.
+---
+- For the context class
+using System.Data.Entity;
+
+Enable-Migrations: Enables Code First Migrations in a project.
+  Enables Migrations by scaffolding a migrations configuration class in the project. If the target database was created by an initializer, 
+  an initial migration will be created (unless automatic migrations are enabled via the EnableAutomaticMigrations parameter).
+
+- Sets the db context to be used and the folder to hold the migrations
+Enable-Migrations -ContextTypeName IdentityDb -MigrationDirectory DataContexts\IdentityMigrations
+
+Add-Migration: Scaffolds a migration script for any pending model changes.
+
+Update-Database: Applies any pending migrations to the database and calls the seed method.
+
+Get-Migrations: Displays the migrations that have been applied to the target database.
+---
+PM> Add-Migration MissionStatement
+Scaffolds a new migration named MissionStatement. It will detect the change in the model and scaffold the new migration.
+
+PM> Add-Migration -IgnoreChanges
+This will scaffold an empty migration even if changes are detectable. This will be used to base other migrations on in the migration sequence.
+We then apply the migration to the database. It will make no changes. It will just just bootstrap the database up to use migrations.
+
+PM> Enable-Migrations -ContextTypeName AdventureWorksContext
+Use this when their is another context in the solution, like Identity.
+---
+------------------------------------------------------------------
+Scratch:
+PM> get-help EntityFramework
+TOPIC
+    about_EntityFramework
+
+SHORT DESCRIPTION
+    Provides information about Entity Framework commands.
+
+LONG DESCRIPTION
+    This topic describes the Entity Framework commands. Entity Framework is
+    Microsoft's recommended data access technology for new applications.
+
+    The following Entity Framework cmdlets are used with Entity Framework
+    Migrations.
+
+        Cmdlet              Description
+        -----------------   ---------------------------------------------------
+        Enable-Migrations   Enables Code First Migrations in a project.
+
+        Add-Migration       Scaffolds a migration script for any pending model
+                            changes.
+
+        Update-Database     Applies any pending migrations to the database.
+
+        Get-Migrations      Displays the migrations that have been applied to
+                            the target database.
+
+    The following Entity Framework cmdlets are used by NuGet packages that
+    install Entity Framework providers. These commands are not usually used as
+    part of normal application development.
+
+        Cmdlet                          Description
+        ------------------------------  ---------------------------------------
+        Add-EFProvider                  Adds or updates an Entity Framework
+                                        provider entry in the project config
+                                        file.
+
+        Add-EFDefaultConnectionFactory  Adds or updates an Entity Framework
+                                        default connection factory in the
+                                        project config file.
+
+        Initialize-EFConfiguration      Initializes the Entity Framework
+                                        section in the project config file and
+                                        sets defaults.
+---
+An alternative is to let scaffolding automatically install the EF NuGet package, create the database context class, 
+and create the connection string. When you're ready to do it that way, all you have to do is skip those steps and 
+scaffold your MVC controller after you create your entity classes.
+---
+Entity Framework Connections and Models - shows the options for connecting the EF to the database.
+https://msdn.microsoft.com/en-us/data/jj592674
+---
+The Entity Framework can automatically create (or drop and re-create) a database for you when the application runs. You can specify that this should be done every time your application runs or only when the model is out of sync with the existing database. You can also write a Seed method that the Entity Framework automatically calls after creating the database in order to populate it with test data.
+The default behavior is to create a database only if it doesn't exist (and throw an exception if the model has changed and the database already exists).
+
+Later you'll see how to handle model changes by using Code First Migrations to change the database schema instead of dropping and re-creating the database.
+---
+To tell Entity Framework to use your initializer class, add an element to the entityFramework element in the application Web.config file: 
+<contexts>
+    <context type="ContosoUniversity.DAL.SchoolContext, ContosoUniversity">
+      <databaseInitializer type="ContosoUniversity.DAL.SchoolInitializer, ContosoUniversity" />
+    </context>
+  </contexts>
+When you don't want EF to use the initializer, you can set an attribute on the context element: disableDatabaseInitialization="true".) 
+For more information, see https://msdn.microsoft.com/en-us/data/jj556606
+
+As an alternative to setting the initializer in the Web.config file is to do it in code by adding a Database.SetInitializer 
+statement to the Application_Start method in the Global.asax.cs file. For more information, see
+http://www.codeguru.com/csharp/article.php/c19999/Understanding-Database-Initializers-in-Entity-Framework-Code-First.htm
+---
+When you deploy an application to a production web server, you must remove or disable code that drops and re-creates the database. You'll do that in a later tutorial in this series.
+---
+SQL Server Connection Strings for ASP.NET Web Applications
+https://msdn.microsoft.com/en-us/library/jj653752.aspx
+---
+
+In the future when you create projects that use Entity Framework you can also take advantage of some additional functionality of the 
+scaffolder: just create your first model class, don't create a connection string, and then in the Add Controller box specify new 
+context class. The scaffolder will create your DbContext class and your connection string as well as the controller and views.
+---
+Because you're using the DropCreateDatabaseIfModelChanges initializer, you could now make a change to the Student class, run the application again, and the database would automatically be re-created to match your change.
+public class SchoolInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<SchoolContext>
+---
+Entity properties that are named ID or classname ID are recognized as primary key properties.
+---
+// The initializer is specified in the entityFramework element in the application Web.config file.
+Examples:
+    public class SchoolInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<SchoolContext>
+    public class SchoolInitializer : System.Data.Entity.CreateDatabaseIfNotExists<SchoolContext>
+    public class SchoolInitializer : System.Data.Entity.DropCreateDatabaseAlways<SchoolContext>
+    public class SchoolInitializer : System.Data.Entity.MigrateDatabaseToLatestVersion<SchoolContext, MyMigrationConfig>
+---
+Set db initializer in the configuration file:
+You can also set db initializer in the configuration file. For example, to set default initializer in app.config:
+
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <appSettings>
+    <add key="DatabaseInitializerForType SchoolDataLayer.SchoolDBContext, SchoolDataLayer"         
+        value="System.Data.Entity.DropCreateDatabaseAlways`1[[SchoolDataLayer.SchoolDBContext, SchoolDataLayer]], EntityFramework" />
+    </appSettings>
+</configuration>
+---

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{E0D9EE23-8320-4B72-8702-2D76EF2F0D69}"
+	ProjectSection(SolutionItems) = preProject
+		..\Examples\AttachAdeventureWorks2012DB.sql = ..\Examples\AttachAdeventureWorks2012DB.sql
+		..\Examples\Constraints.sql = ..\Examples\Constraints.sql
+		..\Examples\Create_ModTable.sql = ..\Examples\Create_ModTable.sql
+		..\Examples\CreateTableSampleTrina.sql = ..\Examples\CreateTableSampleTrina.sql
+		..\Examples\DatesTimes.sql = ..\Examples\DatesTimes.sql
+		..\Examples\Debugging.sql = ..\Examples\Debugging.sql
+		..\Examples\MergeStatement.sql = ..\Examples\MergeStatement.sql
+		..\Examples\PerformanceQuerys.sql = ..\Examples\PerformanceQuerys.sql
+		..\Examples\PracticeFunctions.sql = ..\Examples\PracticeFunctions.sql
+		..\Examples\PracticeIndexes.sql = ..\Examples\PracticeIndexes.sql
+		..\Examples\PracticeMultiTableSelects.sql = ..\Examples\PracticeMultiTableSelects.sql
+		..\Examples\PracticeQuerys.sql = ..\Examples\PracticeQuerys.sql
+		..\Examples\PracticeTriggers.sql = ..\Examples\PracticeTriggers.sql
+		..\Examples\SQL_Practice1.sql = ..\Examples\SQL_Practice1.sql
+		..\Examples\SQL_Practice2.sql = ..\Examples\SQL_Practice2.sql
+		..\Examples\SQLNotes.txt = ..\Examples\SQLNotes.txt
+		..\Examples\StoredProcedures.sql = ..\Examples\StoredProcedures.sql
+		..\Examples\StoredProcExample01.sql = ..\Examples\StoredProcExample01.sql
+		..\Examples\TableOperations.sql = ..\Examples\TableOperations.sql
+		..\Examples\UtlityStatements.sql = ..\Examples\UtlityStatements.sql
+		..\Examples\VideoCourses.sql = ..\Examples\VideoCourses.sql
+		..\Examples\VideoWriteFastQueries.sql = ..\Examples\VideoWriteFastQueries.sql
+		..\Examples\ViewsPractice.sql = ..\Examples\ViewsPractice.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDB140F8-FEDC-46C1-9813-62FFB4E707D7}
+	EndGlobalSection
+EndGlobal

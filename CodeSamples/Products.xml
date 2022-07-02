@@ -1,0 +1,38 @@
+<Products>
+  <Product id="1">
+    <Name>Desktop Computer</Name>
+    <Stock>12</Stock>
+    <ModelNo>DC001</ModelNo>
+    <Price>20000</Price>
+  </Product>
+  <Product id="2">
+    <Name>Computer Mouse</Name>
+    <Stock>100</Stock>
+    <ModelNo>CM001</ModelNo>
+    <Price>800</Price>
+  </Product>
+  <Product id="3">
+    <Name>Printer</Name>
+    <Stock>10</Stock>
+    <ModelNo>PR001</ModelNo>
+    <Price>5900</Price>
+  </Product>
+    <Product id="4">
+    <Name>PrinterController</Name>
+    <Stock>98</Stock>
+    <ModelNo>PR007</ModelNo>
+    <Price>8900</Price>
+  </Product>
+    <Product id="5">
+    <Name>PrinterCartridge</Name>
+    <Stock>103</Stock>
+    <ModelNo>KX031</ModelNo>
+    <Price>15900</Price>
+  </Product>
+    <Product id="6">
+    <Name>PrinterStand</Name>
+    <Stock>RZ235</Stock>
+    <ModelNo>PR001</ModelNo>
+    <Price>7900</Price>
+  </Product>
+</Products>

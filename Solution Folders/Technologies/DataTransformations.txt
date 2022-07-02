@@ -1,0 +1,541 @@
+"LINQ to XML"
+"Running XSLT in Visual Studio"
+"XPATH"
+"XSLT"
+
+http://lenzconsulting.com/how-xslt-works/
+
+----------------------------------------------------------------------------------------
+"LINQ to XML"
+
+XMLSource
+XDocument x = xmlsource.x;
+XmlNamespaceManager ns = xmlsource.ns;
+XPathCustomFunctionResolver
+
+---------------------
+XDocument
+You only have to create XDocument objects if you require the specific functionality provided by the XDocument class. In many circumstances, 
+you can work directly with XElement. Working directly with XElement is a simpler programming model.
+
+XDocument objects can have only one child XElement node. This reflects the XML standard that there can be only one root element in an XML document.
+
+An XDocument can contain the following elements:
+One XDeclaration object. It enables you to specify the pertinent parts of an XML declaration: the XML version, the encoding of the document, and 
+whether the XML document is stand-alone.
+
+One XElement object. This is the root node of the XML document.
+
+Any number of XProcessingInstruction objects. A processing instruction communicates information to an application that processes the XML.
+
+Any number of XComment objects. The comments will be siblings to the root element. The XComment object cannot be the first argument in the list, 
+because it is not valid for an XML document to start with a comment.
+
+One XDocumentType for the DTD.
+
+Xml document parsing example using XDocument
+http://www.codeproject.com/Articles/169598/Parse-XML-Documents-by-XMLDocument-and-XDocument
+
+// Parse the XML using XDocument class.
+public static StudentsInformation ParseByXDocument()
+{
+    var students = new StudentsInformation();
+ 
+    XDocument doc = XDocument.Load(xmlUrl);
+    XElement generalElement = doc	
+            .Element("StudentsInformation")
+            .Element("GeneralInformation");						// Chaining node selection
+    students.School = generalElement.Element("School").Value;
+    students.Department = generalElement.Element("Department").Value;
+ 
+    students.Studentlist = (from c in doc.Descendants("Student")
+                    select new Student()
+                    {
+                        id = Convert.ToInt16(c.Attribute("id").Value),
+                        name = c.Value,
+                        score = Convert.ToInt16(c.Attribute("score").Value),
+                        enrollment = c.Attribute("enrollment").Value,
+                        comment = c.Attribute("comment").Value
+                    }).ToList<Student>();
+ 
+    return students;
+}
+
+-----------
+XElement
+The XElement class is the main class in the LINQ to XML programming interface. In many cases, your 
+application will not require that you create a document. By using the XElement class, you can create 
+an XML tree, add other XML trees to it, modify the XML tree, and save it.
+
+private void LoadDirectoryNode(XElement xElem)
+{
+	XElement xElemDirectories = ManifestDocumentElement.Element("directories");
+
+	foreach (XElement directory in xElem.Elements("directory"))
+	{
+		string id = directory.Attribute("id").Value;
+		XElement xElemDirectory = xElemDirectories.Elements("directory")
+			.Where(elem => elem.Attribute("id").Value == id)
+			.FirstOrDefault();
+
+		if (xElemDirectory == null)
+		{
+			xElemDirectories.Add(directory);
+		}
+	}
+}
+
+XElement xElement = new XElement("Products",
+                new XElement("Product", "computer", new XAttribute("ID", "1")),
+                new XElement("Product", "laptop", new XAttribute("ID", "2")),
+                new XElement("Product", "mouse", new XAttribute("ID", "3")),
+                new XElement("Product", "keyboard", new XAttribute("ID", "4"))
+                );
+
+xElement.Descendants().Where(s => s.Attribute("ID").Value == "2").Remove();
+------------------------------------------------------------------------
+"Running XSLT in Visual Studio"
+Set the xslt as active document. Select View->Properties Window. Here you can add input, output and schema files.
+Run under XML->
+
+Error:
+Attempt by method 'System.Xml.Xsl.XslCompiledTransform.Load(System.Type)' to access field 'System.Xml.Xsl.CompiledQuery.Query.staticData' failed.
+Fix:
+Xslt File properties -> unblock
+------------------------------------------------------------------------
+"XPATH"
+The most important kind of expression in XPath is a location path. A location path consists of a sequence of location steps. Each location step has three components :
+an axis, a node test, zero or more predicates.
+
+A context node is the node the XPath processor is currently looking at. The context node changes as the XPath processor evaluates a query. If you 
+pass a document to the XPath processor, the root node is the initial context node.
+
+Current node is the node that the XPath processor is looking at when it begins evaluation of a query. In other words, the current node is the first 
+context node that the XPath processor uses when it starts to execute the query. During evaluation of a query, the current node does not change.
+
+An XPath expression is evaluated with respect to a context node. An Axis Specifier such as 'child' or 'descendant' specifies the direction to navigate 
+from the context node. The node test and the predicate are used to filter the nodes specified by the axis specifier : For example the node test 'A' 
+requires that all nodes navigated to must have label 'A'. A predicate can be used to specify that the selected nodes have certain properties, which 
+are specified by XPath expressions themselves.
+
+In XPath, there are seven kinds of nodes: element, attribute, text, namespace, processing-instruction, comment, and document nodes.
+
+The XPath syntax comes in two flavours : the abbreviated syntax, is more compact and allows XPaths to be written and read easily using intuitive and, 
+in many cases, familiar characters and constructs. The full syntax is more verbose, but allows for more options to be specified, and is more 
+descriptive if read carefully.
+
+Abbreviated syntax: /A /B /C
+Unabbreviated syntax: /child::A/child::B/child::C  // The axis is explicitly specified, followed by :: and then the node test
+The simplest XPath takes a form such as that selects C elements that are children of B elements that are children of the A element that forms the 
+outermost element of the XML document.
+
+More complex expressions can be constructed by specifying an axis other than the default 'child' axis, a node test other than a simple name, or 
+predicates, which can be written in square brackets after any step. 
+
+Abbreviated syntax: A//B/*[1] 
+Unabbreviated syntax: child::A/descendant-or-self::node()/child::B/child::*[position()=1]
+These select the first child('*[1]'), whatever its name, of every B element that itself is a child or other, deeper descendant('//') of an A 
+element that is a child of the current context node(the expression does not begin with a '/').
+
+//@lang	Selects all attributes that are named lang
+
+"Axis specifiers" indicate navigation direction within the tree representation of the XML document.
+
+Full Syntax			Abbreviated Syntax		Notes
+ancestor		
+ancestor-or-self		
+attribute				@					@abc is short for attribute::abc
+child										xyz is short for child::xyz
+descendant		
+descendant-or-self		//					// is short for /descendant-or-self::node()/
+											Selects nodes from the current node that itself is a child or deeper descendant.
+following		
+following-sibling		
+namespace		
+parent					..					.. is short for parent::node()  Selects the parent of the current node.
+preceding		
+preceding-sibling		
+self					.					. is short for self::node()   Ex: self::Node() and self::* and . are equivalent in 1.0   
+											Selects the Current node
+
+An example using the attribute axis in abbreviated syntax, //A/@href selects the attribute called href in A elements anywhere in the document tree. 
+
+The expression . (an abbreviation for self::node()) is most commonly used within a predicate to refer to the currently selected node. For example, 
+h3[.='See also'] selects an element called h3 in the current context, whose text content is See also.
+
+* or child::* Matches all child nodes along a particular Axes. 
+attribute::* matches all attributes of a node.
+
+*	Matches any element node
+@*	Matches any attribute node
+node()	Matches any node of any kind
+text()  Finds a node of type text
+processing-instruction()  Finds XML processing instructions
+/bookstore/*	Selects all the child nodes of the bookstore element
+//*	Selects all elements in the document
+//title[@*]	Selects all title elements which have any attribute
+
+By using the | operator in an XPath expression you can select several paths.
+//book/title | //book/price	Selects all the title AND price elements of all book elements
+//title | //price	Selects all the title AND price elements in the document
+/bookstore/book/title | //price	  Selects all the title elements of the book element of the bookstore element AND all the price elements in the document.
+
+An absolute location path starts with a slash ( / ) and a relative location path does not. In both cases the location path consists of one or more steps,
+each separated by a slash.
+	An absolute location path:  /step/step/...
+	A relative location path:   step/step/...
+
+"Node Tests"
+They may consist of specific node names or more general expressions. In the case of an XML document in which the namespace prefix gs has been 
+defined, //gs:enquiry will find all the enquiry elements in that namespace, and //gs:* will find all elements, regardless of local name, in that namespace.
+
+Other node test formats are:
+comment() - finds an XML comment node, e.g. <!-- Comment -->
+text() - finds a node of type text, e.g. the hello world in <k>hello<m> world</m></k>
+processing-instruction() - finds XML processing instructions such as <?php echo $a; ?>. In this case, processing-instruction('php') would match.
+node() - finds any node at all.
+
+"Predicates"
+Predicates, written as expressions in square brackets, can be used to restrict a node-set to select only those nodes for which some condition is 
+true. For example a[@href='help.php'] will select those a elements (among the children of the context node) having an href attribute whose value 
+is help.php.
+
+Predicates are used to find a specific node or a node that contains a specific value.
+Predicates are always embedded in square brackets.
+
+/bookstore/book[1]	Selects the first book element that is the child of the bookstore element.
+/bookstore/book[last()]	Selects the last book element that is the child of the bookstore element
+//title[@lang]	Selects all the title elements that have an attribute named lang
+/bookstore/book[price>35.00] Selects all the book elements of the bookstore element that have a price element with a value greater than 35.00.
+bookstore/book[price>35.00]/title	Selects all the title elements of the book elements of the bookstore element that have a price element 
+									with a value greater than 35.00.
+
+Each step is evaluated against the nodes in the current node-set.
+A step consists of:
+- an axis (defines the tree-relationship between the selected nodes and the current node)
+- a node-test (identifies a node within an axis)
+- zero or more predicates (to further refine the selected node-set)
+
+The syntax for a location step is:  axisname::nodetest[predicate]
+Examples:
+child::book	Selects all book nodes that are children of the current node
+attribute::lang	Selects the lang attribute of the current node
+child::*	Selects all element children of the current node
+attribute::*	Selects all attributes of the current node
+child::text()	Selects all text node children of the current node
+child::node()	Selects all children of the current node
+descendant::book	Selects all book descendants of the current node
+ancestor::book	Selects all book ancestors of the current node
+ancestor-or-self::book	Selects all book ancestors of the current node - and the current as well if it is a book node
+child::*/child::price	Selects all price grandchildren of the current node
+
+A//B/*[1]  Selects the first child ('*[1]'), whatever its name, of every B element that itself is a child or other, deeper 
+descendant ('//') of an A element that is a child of the current context node (the expression does not begin with a '/')
+
+from: http://en.wikipedia.org/wiki/XPath
+XPath 1.0 defines four data types: node-sets (sets of nodes with no intrinsic order), strings, numbers and booleans.
+The available operators are:
+The "/", "//" and "[...]" operators, used in path expressions, as described above.
+A union operator, "|", which forms the union of two node-sets.
+Boolean operators "and" and "or", and a function "not()"
+Arithmetic operators "+", "-", "*", "div" (divide), and "mod"
+Comparison operators "=", "!=", "<", ">", "<=", ">="
+The function library includes:
+Functions to manipulate strings: concat(), substring(), contains(), substring-before(), substring-after(), translate(), normalize-space(), string-length()
+Functions to manipulate numbers: sum(), round(), floor(), ceiling()
+Functions to get properties of nodes: name(), local-name(), namespace-uri()
+Functions to get information about the processing context: position(), last()
+Type conversion functions: string(), number(), boolean()
+
+Node set functions[edit]
+position() 
+returns a number representing the position of this node in the sequence of nodes currently being processed (for example, the nodes selected by an xsl:for-each instruction in XSLT).
+count(node-set) 
+returns the number of nodes in the node-set supplied as its argument.
+String functions[edit]
+string(object?) 
+converts any of the four XPath data types into a string according to built-in rules. If the value of the argument is a node-set, the function returns the string-value of the first node in document order, ignoring any further nodes.
+
+concat(string, string, string*) 
+concatenates two or more strings
+
+starts-with(s1, s2) 
+returns true if s1 starts with s2
+
+contains(s1, s2) 
+returns true if s1 contains s2
+
+substring(string, start, length?) 
+example: substring("ABCDEF",2,3) returns "BCD".
+substring-before(s1, s2) 
+example: substring-before("1999/04/01","/") returns 1999
+substring-after(s1, s2) 
+example: substring-after("1999/04/01","/") returns 04/01
+string-length(string?) 
+returns number of characters in string
+normalize-space(string?) 
+all leading and trailing whitespace is removed and any sequences of whitespace characters are replaced by a single space. This is very useful when the original XML may have been prettyprint formatted, which could make further string processing unreliable.
+Boolean functions[edit]
+not(boolean) 
+negates any boolean expression.
+true() 
+evaluates to true.
+false() 
+evaluates to false.
+Number functions[edit]
+sum(node-set) 
+converts the string values of all the nodes found by the XPath argument into numbers, according to the built-in casting rules, then returns the sum of these numbers.
+
+-----
+XPath Operators
+Below is a list of the operators that can be used in XPath expressions:
+
+Operator	Description				Example
+|			Computes two node-sets	//book | //cd
++			Addition				6 + 4
+-			Subtraction				6 - 4
+*			Multiplication			6 * 4
+div			Division				8 div 4
+=			Equal					price=9.80
+!=			Not equal				price!=9.80
+<			Less than				price<9.80
+<=			Less than or equal to	price<=9.80
+>			Greater than			price>9.80
+>=			Greater or equal to		price>=9.80
+or			or						price=9.80 or price=9.70
+and			and						price>9.00 and price<9.90
+mod			Modulus					5 mod 2
+
+A filter in a query specifies a restriction on the set of nodes to be returned. For example, the filter in the following query restricts the result set 
+to book elements that contain at least one excerpt element:   book[excerpt] 
+
+The match attribute is used to associate the template with an XML element. The match attribute can also be used to define a template for a whole 
+branch of the XML document (i.e. match="/" defines the whole document).
+
+------------------------------------------------------------------------
+"XSLT"
+- Conditional test xsl:if
+- Display text
+- Display the value of a variable for debug
+- For each loop xsl:for-each
+- Parameter example
+- Test for an empty string in a node
+- Variables example
+- Whitespace in the XSLT stylesheet
+- XSLT elements
+
+// Data types for XSLT 1.0
+String which is the default
+Number which are doubles
+Boolean
+Node-set is a set of nodes. 
+Result - Tree Fragment(RTF)
+
+The <xsl:template> element contains rules to apply when a specified node is matched.
+
+The match attribute is used to associate a template with an XML element. The match attribute can also be used 
+to define a template for the entire XML document. The value of the match attribute is an XPath expression 
+(i.e. match="/" defines the whole document).
+
+The <xsl:value-of> element can be used to extract the value of an XML element and add it to the output stream of the transformation:
+<xsl:value-of select="catalog/cd/title"/>
+Note: The select attribute, in the example above, contains an XPath expression. An XPath expression works like navigating a file system; 
+a forward slash (/) selects subdirectories.
+
+The XSL <xsl:for-each> element can be used to select every XML element of a specified node-set:
+	<xsl:for-each select="catalog/cd">
+		<tr>
+		  <td><xsl:value-of select="title"/></td>
+		  <td><xsl:value-of select="artist"/></td>
+		</tr>
+	</xsl:for-each>
+
+We can also filter the output from the XML file by adding a criterion to the select attribute in the <xsl:for-each> element.
+<xsl:for-each select="catalog/cd[artist='Bob Dylan']">
+
+Legal filter operators are:
+=  (equal)
+!= (not equal)
+&lt; less than
+&gt; greater than
+
+To sort the output, simply add an <xsl:sort> element inside the <xsl:for-each> element in the XSL file:
+<xsl:for-each select="catalog/cd">
+  <xsl:sort select="artist"/>
+  <tr>
+    <td><xsl:value-of select="title"/></td>
+    <td><xsl:value-of select="artist"/></td>
+  </tr>
+</xsl:for-each>
+
+- Conditional test xsl:if
+- For each loop xsl:for-each
+To add a conditional test, add the <xsl:if> element inside the <xsl:for-each> element in the XSL file:
+<xsl:for-each select="catalog/cd">
+  <xsl:if test="price &gt; 10">
+    <tr>
+		<td><xsl:value-of select="title"/></td>
+		<td><xsl:value-of select="artist"/></td>
+		<td><xsl:value-of select="price"/></td>
+    </tr>
+  </xsl:if>
+</xsl:for-each>
+
+- Test for an empty string in a node
+<xsl:if test="isin != ''">
+	<xsl:value-of select="isin"/>
+	<xsl:text>&#10;</xsl:text>		<!-- Insert a newline -->
+</xsl:if>
+To test for an attribute value.
+<xsl:if test="publication-country/reg-country[@language='FR']">
+
+The <xsl:choose> element is used in conjunction with <xsl:when> and <xsl:otherwise> to express multiple conditional tests.
+<xsl:for-each select="catalog/cd">
+	<tr>
+		<td><xsl:value-of select="title"/></td>
+		<xsl:choose>
+		<xsl:when test="price &gt; 10">
+			<td bgcolor="#ff00ff">                -- add a pink background-color to the "Artist" column WHEN the price of the CD is higher than 10
+			<xsl:value-of select="artist"/></td>
+		</xsl:when>
+		<xsl:otherwise>
+			<td><xsl:value-of select="artist"/></td>
+		</xsl:otherwise>
+		</xsl:choose>
+	</tr>
+</xsl:for-each>
+
+- Display text
+<xsl:text>ClientFundKey|ClientShareKey|Share_List_Item_Date1|Share_List_Item_Int1|Share_List_Item_Int2</xsl:text>
+
+- Display the value of a variable for debug
+<xsl:text>shareAttrib: </xsl:text>
+<xsl:value-of select="$shareAttrib" />
+
+- Variables example
+<xsl:variable name="cr" select="'&#10;'"/>
+<xsl:variable name="Exclude" select="'476294780,86276X848,86276X814'"/>
+<xsl:variable name="EXCLUDE-74440W409">74440W409</xsl:variable>
+
+- Parameter example. Parameters included in the call-template to template MountainChartData, where the paramaters are declared.
+<xsl:call-template name="MountainChartData">
+	<xsl:with-param name="FundID" select="@id"/>
+	<xsl:with-param name="ClassA" select="fund_facts/details[(@class = 'A**') and (@CUSIP != $EXCLUDE-74440W409)]/@CUSIP"/>
+</xsl:call-template>
+<xsl:template name="MountainChartData">
+    <xsl:param name="FundID" />
+    <xsl:param name="ClassA" />
+	...
+</xsl:template>
+
+The <xsl:apply-templates> element applies a template to the current element or to the current element's child nodes. If we add a select attribute to the 
+<xsl:apply-templates> element it will process only the child element that matches the value of the attribute. We can use the select attribute to specify 
+the order in which the child nodes are processed.
+
+<xsl:template match="/">
+  <html>
+  <body>
+  <h2>My CD Collection</h2>
+  <xsl:apply-templates/>
+  </body>
+  </html>
+</xsl:template>
+
+<xsl:template match="cd">
+  <p>
+  <xsl:apply-templates select="title"/>
+  <xsl:apply-templates select="artist"/>
+  </p>
+</xsl:template>
+
+<xsl:template match="title">
+  Title: <span style="color:#ff0000">
+  <xsl:value-of select="."/></span>
+  <br />
+</xsl:template>
+
+<xsl:template match="artist">
+  Artist: <span style="color:#00ff00">
+  <xsl:value-of select="."/></span>
+  <br />
+</xsl:template>
+
+- XSLT elements from the W3C Recommendation (XSLT Version 1.0).
+http://www.w3schools.com/xsl/xsl_w3celementref.asp
+
+
+<?xml-stylesheet type="text/xsl" href="Order.xsl"?>
+
+The <xsl:copy-of> element creates a copy of the current node.
+Note: Namespace nodes, child nodes, and attributes of the current node are automatically copied as well!
+Tip: This element can be used to insert multiple copies of the same node into different places in the output.
+
+Syntax
+<xsl:copy-of select="expression"/>
+--------------
+XSLT Layout
+
+http://www.xmlplease.com/whitespace
+- Whitespace in the XSLT stylesheet
+In the following example the xsl:text element is necessary to get a space between firstname and lastname.
+<xsl:value-of select="firstname"/>
+<xsl:text> </xsl:text>
+<xsl:value-of select="lastname"/>
+ 
+In the following example each value will be on a new line because the invisible newline character is honored standing next to the comma.
+<xsl:for-each select="item">
+  <xsl:value-of select="."/>,
+</xsl:for-each>
+
+- Prevent the newline character
+The xsl:text element can be necessary at the end of lines to prevent the newline character from being stripped as a whitespace-only text node.
+In the following example output will be one long line.
+<xsl:for-each select="item">
+  <xsl:value-of select="."/>, <xsl:text/>
+</xsl:for-each>
+--------------
+
+Xpath Functions in XSLT
+
+The current() function returns a node-set that contains only the current node. Usually the current node and the context node are the same.
+<xsl:value-of select="current()"/>  is equal to  <xsl:value-of select="."/>
+
+The contains() function returns either true or false depending on whether string1 contains string2.
+<IsBillable>
+	<xsl:if test='contains("TtYy1", /CustomerRecord/IsBillable)'>YES</xsl:if>
+	<xsl:if test='contains("FfNn0", /CustomerRecord/IsBillable)'>NO</xsl:if>
+</IsBillable>
+
+Substring(string1, number1, number2)
+The substring() function lets you extract a smaller substring from an existing string. The substring is the value of string1, starting at the 
+character at number1 and going for a length of number2. The number2 argument is optional. If omitted, the length goes to the end of string1. 
+
+<CustomerNumber>
+	<xsl:value-of select='substring(/CustomerRecord/CustomerId, 6, 5)'/>
+</CustomerNumber>
+
+The string-length() function returns the number of characters in the provided string.
+This function will allow you to extract the correct substring based on the length of the customer ID:
+<CustomerNumber>
+	<xsl:if test='string-length(/CustomerRecord/CustomerId)=10'>
+		<xsl:value-of select='substring(/CustomerRecord/CustomerId, 6, 5)'/>
+	</xsl:if>
+	<xsl:if test='not(string-length(/CustomerRecord/CustomerId)=10)'>
+		<xsl:value-of select='substring(/CustomerRecord/CustomerId, 1, 5)'/>
+	</xsl:if>
+</CustomerNumber>
+
+Translate(string1, string2, string3)
+The translate() function provides a method for finding and replacing characters in a string. The result of this function is that for each character 
+in string2, its respective character in string3 is replaced in string1. For example, suppose you wanted to replace all of the spaces in string1 with 
+underscores and all of the colons with commas:
+<CustomerFileName>
+	<xsl:value-of select='translate(/CustomerRecord/RecordType, " ", "_")'/>
+</CustomerFileName>
+<CustomerData>
+	<xsl:value-of select='translate(/CustomerRecord/RecordData, ":", ",")'/>
+</CustomerData>
+
+
+
+

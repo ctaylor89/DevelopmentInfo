@@ -1,0 +1,20 @@
+
+Track active file in Solution Explorer setup  Tools -> Options -> Projects and Solutions. 
+Check Track Active item in Solution Explorer.
+https://mattferderer.com/show-current-active-file-in-vs-studio-explorer
+
+When running project always triggers a build.
+Go to Tools -> Options -> Project and Solutions -> Build and Run. Look at the options there. 'Only build startup projects 
+and dependencies on Run' should be checked.
+
+Lecture on debugging in VS 2013
+https://www.youtube.com/watch?v=3rOT-H_3WGQ&ebc=ANyPxKo6b8c2z_Rxbim6WAO6qD1gXu5Da70OaE0M62ow6-EQ-rKbt6vRG6epi9f8XoVGBXuVPkCPUtZMkbg8Yt7KIaWONK9aNA
+
+Good blog on Symbol files (pdb) used for debugging
+https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/
+
+// Copy files *.cmd to the bin folder if you place this in the post build window on the properties page.
+copy "$(SolutionDir)*.cmd" "$(TargetDir)*.cmd"
+
+What’s New in Visual Studio 2022 – IntelliCode Code Completions
+https://dailydotnettips.com/whats-new-in-visual-studio-2022-intellicode-code-completions/

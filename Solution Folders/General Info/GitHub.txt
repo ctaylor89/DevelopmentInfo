@@ -1,0 +1,326 @@
+Bash
+Configuration
+Create_Access_Token
+Forking
+Git_Cmd_line_commands
+Github_Desktop
+Git_Errors
+Ignoring_files
+Misc_Info
+MyRepositories
+Publish_To_Git_Hub_From_Visual_Studio
+Steps_To_Get_Started
+Steps_To_Setup_Authentication_with_GitHub
+Tutorials
+Visual_Studio
+-------------------------------------
+Steps_To_Get_Started	(All file names are case sensitive)
+
+Download Git
+Download GitHub for windows.
+
+Cmd Line: Navigate to local repo dir
+git init								// Create a git repository from that directory
+git status								// Will display any uncommitted changes to local repo and other info
+git status -uno							// Parameter will prevent the display of untracked files 
+git add <filename.ext> or <folder name>/ or * // This will stage changes for files that are added or modified. Must stage before commit.
+git commit -m "<message>"				// Commit to local repo
+git push -u origin master				// Push up to GitHub. No longer an option since 8/13/2021.
+
+git push --set-upstream GitTestOne master
+
+git clone https://github.com/ctaylor89/MyRepo.git
+--------------------------------------------------------
+Create_Access_Token
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+Token Name: Ctaylor89_Git_Token
+Personal Token Name: CTaylorPersonalAccessToken
+         Token : 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
+
+*Incomplete. Still need to know how to access it from cmd line. Able to push it using Git Extensions.
+--------------------------------------------------------
+Login_for_GIT_Push
+Name: ctaylor89		pwd: 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
+
+Repositories: https://github.com/ctaylor89/TodoApi
+--------------------------------------------------------
+how-to-install-git-windows - Some useful info but a little out dated.
+https://phoenixnap.com/kb/how-to-install-git-windows
+
+https://stackoverflow.com/questions/8775850/how-do-i-add-files-and-folders-into-github-repos
+Publish_To_Git_Hub_From_Visual_Studio
+https://github.com/github/VisualStudio/blob/master/docs/contributing/publishing-an-existing-project-to-github.md
+
+On GitHub main pg - Add new repository
+File - Add to source control
+View - Team Explorer
+Sync
+Publish to remote repository (This is the name of new repsoitory. *Add .git extension. Ex: https://github.com/ctaylor89/WebAppDev.git)
+Commit local changes
+---
+Error may occur:
+fatal: LF would be replaced by CRLF in Web/Scripts/Bootstrap/bootstrap.js or .css
+Answer: 
+git config --global core.autocrlf true
+git config --global core.safecrlf true
+
+or edit git config file
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	safecrlf = false
+	safecrlf = warn
+ 
+ Try commit again
+-------------------------------------
+Configuration
+
+git config --global user.name "Myname"
+git config --global user.email "Myemail@yahoo.com"
+-------------------------------------
+To remove a file from the local repository, use git to delete the physical file.
+git rm -r directoryName					// Remove a directory and it's contents
+git rm file1.txt						// Remove file and record it in the local repository tracker
+git rm -f file1.txt						// Use -f to force removal if file has been modified
+git commit -m "remove file1.txt"		// Commit changes to local repository
+git rm --cached file1.txt				// Delete the file from the local repository and not from the directory
+---
+git remote add origin https://github.com/ctaylor89/GitTestOne.git
+git push -u origin master				// Push up to GitHub
+---
+
+-------------------------------------
+Git_Errors
+
+Attempting git add DevelopmentInfo
+Error: fatal: LF would be replaced by CRLF in DevelopmentInfo/FormSmp1/bin/Debug/MapData.txt
+Ans: Add autocrlf = false to the git config file
+	 (not proven)You can do this by entering on the cmd line in the project dir: git config core.autocrlf false
+
+Edit in notepad++ -> EOL Conversion under edit
+https://stackoverflow.com/questions/15467507/trying-to-commit-git-files-but-getting-fatal-lf-would-be-replaced-by-crlf-in
+---
+Attempting git add notes.txt
+Error: git status still shows file as modified. Did not commit.
+Ans: git add Notes.txt	// Is case sensitive.
+---
+Attempting to stage GitHub.txt from the root dir that is located in a subdirectory below the root.
+	git add "\DevelopmentInfo\Solution Folders\General Info\GitHub.txt"
+Error: 
+	fatal: Invalid path '/DevelopmentInfo': No such file or directory
+Ans:
+	Leave out the 1st forward slash. Make sure case is correct on all words. Use quotes when dir names have a space.
+	git add "DevelopmentInfo\Solution Folders\General Info\GitHub.txt"
+---
+
+-------------------------------------
+Github_Desktop
+
+Commit - committing is the process which records changes in the local repository. Think of it as a snapshot of the current status of the project.
+Push - pushing sends the recent commit history from your local repository to GitHub. If you’re the only one working on a repository, pushing is 
+	   fairly simple. If there are others accessing the repository, you may need to pull before you can push.
+Pull - a pull grabs any changes from the GitHub repository and merges them into your local repository.
+Sync - syncing is like pulling, but instead of connecting to your GitHub copy of the forked repository, it goes back to the original repository 
+       and brings in any changes. Once you’ve synced your repository, you need to push those changes back to your GitHub account.
+	   Syncing is the process of getting changes from the original remote repository, the one you forked from in the first place, and bringing 
+	   them into your local repository so that you can ensure that you’re making changes on the most up-to-date version of the original.
+-------------------------------------
+Forking
+https://gist.github.com/Chaser324/ce0505fbed06b947d962
+
+-------------------------------------
+Git_Cmd_line_commands
+
+git init - this command will create a new .git subdirectory in your current working directory. This will also create a new master branch.
+
+git clone - used to target an existing repository and create a clone, or copy of the target repository.
+			If a project has already been set up in a central repository, the git clone command is the most common way for users to obtain a 
+			development copy. Like git init, cloning is generally a one-time operation. Once a developer has obtained a working copy, all version 
+			control operations and collaborations are managed through their local repository.
+			git clone https://github.com/ctaylor89/MyRepo.git
+-------------------------------------
+Ignoring_files
+
+Ignoring files so that they are not committed.	(All file names are case sensitive)
+Most common entries to the .gitignore file are:
+
+# ignore a single file
+mycode.class
+
+# ignore an entire directory
+/mydebugdir/
+
+# ignore a file type
+*.json
+
+# add an exception (using !) to the preceding rule to track(not ignore) a specific file.
+!package.json
+
+If you create a file in your repository named .gitignore, Git uses it to determine which files and directories to ignore, before you make a commit.
+A .gitignore file should be committed into your repository, in order to share the ignore rules with any other users that clone the repository.
+
+* Best to add .gitignore file before committing any files. *
+https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/
+https://stackoverflow.com/questions/19663093/apply-gitignore-on-an-existing-repository-already-tracking-large-number-of-file
+
+If you already have a file checked in, and you want to ignore it, Git will not ignore the file if you add a rule later. In those cases, you must 
+untrack the file first, by running the following command in your terminal: 
+	git rm --cached <FILENAME>
+	git rm  -r --cached <DirName>
+The removal of the file from the head revision will happen on the next commit.
+
+GitHub maintains an official list of recommended .gitignore files for many popular operating systems, environments, and languages in the 
+github/gitignore public repository.
+.gitignore
+https://help.github.com/articles/ignoring-files/
+-------------------------------------
+ Z
+
+As far as Git is concerned, every other repository is just a remote. Generally speaking, upstream is where you cloned from (the origin). 
+Downstream is any project that integrates your work with other works. The terms are not restricted to Git repositories.
+---
+Tracking branches are local branches that have a direct relationship to a remote branch. If you're on a tracking branch and type git pull , 
+Git automatically knows which server to fetch from and branch to merge into. Now, your local branch sf will automatically pull from origin/serverfix.
+---
+What is a remote repository in Git?
+A remote URL is Git's fancy way of saying "the place where your code is stored." That URL could be your repository on GitHub, or another user's 
+fork, or even on a completely different server. You can only push to two types of URL addresses: An HTTPS URL like https://github.com/user/repo.git.
+---
+When you push to a remote and you use the --set-upstream flag git sets the branch you are pushing to as the remote tracking branch of the branch 
+you are pushing. Adding a remote tracking branch means that git then knows what you want to do when you git fetch , git pull or git push in future.
+---
+	(All file names are case sensitive)
+---
+-------------------------------------
+MyRepositories
+
+https://github.com/ctaylor89/WebAppDevelopment/
+-------------------------------------
+Tutorials
+
+GitHub help
+https://help.github.com/
+
+GIT IMMERSION IS A GUIDED TOUR THAT WALKS THROUGH THE FUNDAMENTALS OF GIT
+http://gitimmersion.com/
+
+Best tutorial so far.
+https://www.youtube.com/watch?v=ozI34hW-JME&index=2&list=PLHzZNM2AcKx4aKIv-CyzipEGu944AIJQu
+
+This was somewhat useful
+https://www.pluralsight.com/blog/software-development/github-tutorial
+
+Ignore file changes with Git. 
+https://docs.microsoft.com/en-us/vsts/git/tutorial/ignore-files?tabs=visual-studio
+
+Getting Started with GitHub Desktop
+https://help.github.com/desktop/guides/getting-started-with-github-desktop/
+
+Sparkfun - Has some good info
+https://learn.sparkfun.com/tutorials/using-github-to-share-with-sparkfun/syncing-with-the-original-repository
+
+Setting up a repository
+git init git clone git config
+https://www.atlassian.com/git/tutorials/setting-up-a-repository
+
+git clone
+https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone
+
+Git on the command line
+https://docs.gitlab.com/ce/gitlab-basics/start-using-git.html
+
+10 things I hate about Git
+https://stevebennett.me/2012/02/24/10-things-i-hate-about-git/
+
+Configuring line endings
+https://help.github.com/articles/dealing-with-line-endings/
+
+Pull Request Tutorial
+https://yangsu.github.io/pull-request-tutorial/
+
+Cloning a repository from the github website
+https://help.github.com/articles/cloning-a-repository/
+
+Visual Studio Git channel 9  Great Video!
+https://channel9.msdn.com/Events/Build/2015/3-746
+-------------------------------------
+Note: Changes put into staging will be added to repository when you run commit.	(All file names are case sensitive)
+
+git add .								// Stages all local changes/additions to the files in the current directory and below. 
+git add -A								// Stages all local changes/additions/deletions
+git reset HEAD <filename.ext>			// To unstage a file.
+
+-------------------------------------
+git log									// List all changes that have been comitted. Then enter q to exit the log function.
+git log --pretty=oneline				// To view the comments for each change.
+log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short	// View the date and the comment for each change.
+-------------------------------------
+Visual_Studio
+
+Visual Studio Git channel 9  Great Video!
+https://channel9.msdn.com/Events/Build/2015/3-746
+
+Create a new Git repo
+https://docs.microsoft.com/en-us/vsts/git/tutorial/creatingrepo?tabs=visual-studio
+
+Just right click on your solution and select add to source control. then select git.
+-------------------------------------
+But you only need a few basic commands to get by. That hasn’t been my experience at all. You can just barely survive for a 
+while with clone, add, commit, and checkout. But very soon you need rebase, push, pull, fetch , merge, status, log, and the 
+annoyingly-commandless “pull request”. And before long, cherry-pick, reflog, etc. 
+
+-------------------------------------
+git status, git add, git commit, and git checkout are such common commands that it is useful to have abbreviations for them.
+Add the following to the .gitconfig file in your $HOME directory.
+FILE: .gitconfig
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+
+-------------------------------------
+Bash
+
+Basic Git Command Line Reference for Windows Users
+http://johnatten.com/2012/09/08/basic-git-command-line-reference-for-windows-users/
+
+
+-------------------------------------
+Steps_To_Setup_Authentication_with_GitHub
+
+# for authentication with github.
+ssh-keygen -t rsa -b 4096
+
+# You will be promted for a location to save the key pair to just
+# hit [enter] when prompted
+
+# When prompted for a passphrase for the key file just hit [enter]
+# so as to avoid setting one. The windows encrypted file system
+# feature can be used to protect the key so you don't have to add
+# any additional encryption. Speak with John Schmitt if you want to
+# do this and do not know how.
+
+# Now that you have setup a key pair add the public key to your
+# Github enterprise account by following this guide:
+# https://help.github.com/enterprise/2.8/user/articles/adding-a-new-ssh-key-to-your-github-account
+
+Once you added your key to your github account continue set up:
+
+# Configure git to use your JCI email address
+# Replace <your jci email address> with your jci email address
+# resulting in a command similar to:
+# git config --global user.email "John.J.Schmitt@jci.com"
+
+git config --global user.email "<your jci email address>"
+
+# Configure git to use your name
+git config --global user.name "Firstname Lastname"

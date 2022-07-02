@@ -1,0 +1,101 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Technologies", "Technologies", "{13632AAF-CF51-4C27-B968-601A952B1317}"
+	ProjectSection(SolutionItems) = preProject
+		AdapterProject.txt = AdapterProject.txt
+		ASP.Net_WebAPI.txt = ASP.Net_WebAPI.txt
+		ComputerScience.txt = ComputerScience.txt
+		..\Project1\CutPasteAsp.cpp = ..\Project1\CutPasteAsp.cpp
+		..\Project1\CutPasteCPP1.cpp = ..\Project1\CutPasteCPP1.cpp
+		CutPasteCSS.cpp = CutPasteCSS.cpp
+		..\Project1\CutPasteDB.cpp = ..\Project1\CutPasteDB.cpp
+		..\Project1\CutPasteJScript.cpp = ..\Project1\CutPasteJScript.cpp
+		CutPasteXSLT.cs = CutPasteXSLT.cs
+		DeveloperUtilitys.cpp = DeveloperUtilitys.cpp
+		..\Project1\LessonSamplesC#.cpp = ..\Project1\LessonSamplesC#.cpp
+		LogActivities.txt = LogActivities.txt
+		MVC_WebAPI .cpp = MVC_WebAPI .cpp
+		Notes.txt = Notes.txt
+		ProfessinalAdvice.cpp = ProfessinalAdvice.cpp
+		ZOLLProjects.txt = ZOLLProjects.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormSmp1", "FormSmp1.csproj", "{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project Descriptions", "Project Descriptions", "{7EB97451-9FE3-40E4-A9D8-1B08EDB024A5}"
+	ProjectSection(SolutionItems) = preProject
+		AF.Application.txt = AF.Application.txt
+		RS3000CommunicationAdapter.txt = RS3000CommunicationAdapter.txt
+		SampleProjects.txt = SampleProjects.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeConsole", "..\PracticeConsole\PracticeConsole.csproj", "{18506E71-8004-43D4-8A0A-26C2D7EAC216}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TSQL", "TSQL", "{5E4C95BF-DF4E-4B43-93B0-DFF77339D6A6}"
+	ProjectSection(SolutionItems) = preProject
+		TSQL.cpp = TSQL.cpp
+		TSQL_Notes.txt = TSQL_Notes.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{E721A3B8-D502-4565-96D1-609DC32EBFC0}"
+	ProjectSection(SolutionItems) = preProject
+		CSharp_Notes.txt = CSharp_Notes.txt
+		..\Project1\CutPasteC#.cpp = ..\Project1\CutPasteC#.cpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AFEX Engineering", "AFEX Engineering", "{1B530519-8872-4EAA-8FA8-02335264485C}"
+	ProjectSection(SolutionItems) = preProject
+		FX.Application.txt = FX.Application.txt
+		GeneralInfo.txt = GeneralInfo.txt
+		SendEmail.txt = SendEmail.txt
+		SendMsgProject.txt = SendMsgProject.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IIS 7", "IIS 7", "{F22D877B-64DB-4B0F-B6D5-FE1378E367F6}"
+	ProjectSection(SolutionItems) = preProject
+		IIS_Configuration.txt = IIS_Configuration.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|x86.ActiveCfg = Release|Any CPU
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|Mixed Platforms.ActiveCfg = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|Mixed Platforms.Build.0 = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|x86.ActiveCfg = Debug|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|x86.Build.0 = Debug|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|Any CPU.ActiveCfg = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|Mixed Platforms.Build.0 = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|x86.ActiveCfg = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E4C95BF-DF4E-4B43-93B0-DFF77339D6A6} = {13632AAF-CF51-4C27-B968-601A952B1317}
+		{E721A3B8-D502-4565-96D1-609DC32EBFC0} = {13632AAF-CF51-4C27-B968-601A952B1317}
+		{F22D877B-64DB-4B0F-B6D5-FE1378E367F6} = {13632AAF-CF51-4C27-B968-601A952B1317}
+	EndGlobalSection
+EndGlobal

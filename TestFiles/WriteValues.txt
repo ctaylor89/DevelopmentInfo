@@ -1,0 +1,7 @@
+﻿Here are some values:
+4096.87
+5000.896
+567
+1208
+False
+House Rat

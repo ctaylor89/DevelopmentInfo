@@ -1,0 +1,185 @@
+Links_
+Most_Common_Patterns
+Object_Oriented_Concepts
+UML_Concepts
+
+
+----------------------------------------------------
+Links_
+
+https://www.c-sharpcorner.com/UploadFile/bd5be5/design-patterns-in-net/
+----------------------------------------------------
+
+Design patterns provide solutions to common software design problems. In the case of object-oriented programming, 
+design patterns are generally aimed at solving the problems of object generation and interaction, rather than 
+the larger scale problems of overall software architecture. They give generalised solutions in the form of templates 
+that may be applied to real-world problems.
+
+The Gang of Four are the authors of the book, "Design Patterns: Elements of Reusable Object-Oriented Software". This 
+important book describes various development techniques and pitfalls in addition to providing twenty-three object-oriented 
+programming design patterns. These patterns work well in any project that uses C# but especially in 
+WPF, WCF, WinForms, ASP.NET projects.
+
+-------------------------------
+Creational Patterns
+Creational patterns provide ways to instantiate single objects or groups of related objects. There are five such patterns:
+
+1) Abstract Factory pattern is used to provide a client with a set of related or dependant objects. The "family" of objects 
+created by the factory are determined at run-time.
+
+2) Builder pattern is used to create complex objects with constituent(def: being a part of something) parts that must be created in 
+the same order or using a specific algorithm.  An external class, known as the director, controls the construction algorithm.
+
+3) Factory Method pattern is used to replace class constructors, abstracting the process of object generation so that the type 
+of the object instantiated can be determined at run-time.
+
+Prototype pattern is used to instantiate a new object by copying all of the properties of an existing object, creating an 
+independent clone which is an exact copy of the prototype but permits modification without altering the original. 
+This practise is particularly useful when the construction of a new object is inefficient. In general, when an object is cloned, 
+the new object is either a shallow or deep copy. A shallow copy duplicates all of the object's properties. If any property contains 
+a reference type, the reference is copied. This means that changes to the referenced object are visible in both the clone and the 
+original object. A deep copy clones the main object and all child objects. Any properties of reference types are also cloned, 
+giving a truly independent copy. The prototype pattern usually generates deep copies, though this is dependant upon the situation.
+
+Singleton pattern ensures that only one object of a particular class is ever created. All further references to objects of 
+the singleton class refer to the same underlying instance.
+-------------------------------
+Structural Patterns
+Structural patterns provide a manner to define relationships between classes or objects.
+
+Adapter pattern is a design pattern that is used to allow two incompatible types to communicate. Where one class relies upon a 
+specific interface that is not implemented by another class, the adapter acts as a translator between the two types by wrapping
+the adaptee class(That is the adaptor contains a reference to the adaptee).
+
+Bridge pattern is used to separate the abstract elements of a class from the implementation details, providing the means to replace the implementation details without modifying the abstraction.
+Composite. The composite pattern is used to create hierarchical, recursive tree structures of related objects where any element of the structure may be accessed and utilised in a standard manner.
+Decorator. The decorator pattern is used to extend or alter the functionality of objects at run-time by wrapping them in an object of a decorator class. This provides a flexible alternative to using inheritance to modify behaviour.
+
+Facade pattern is used to define a simplified interface to a more complex subsystem.
+
+Flyweight. The flyweight pattern is used to reduce the memory and resource usage for complex models containing many hundreds, thousands or hundreds of thousands of similar objects.
+Proxy. The proxy pattern is used to provide a surrogate or placeholder object, which references an underlying object. The proxy provides the same public interface as the underlying subject class, adding a level of indirection by accepting requests from a client object and passing these to the real subject object as necessary.
+-------------------------------
+Behavioural Patterns
+The final type of design pattern is the behavioural pattern. Behavioural patterns define manners of communication between classes and objects.
+
+Chain of Responsibility. The chain of responsibility pattern is used to process varied requests, each of which may be dealt with by 
+a different handler.
+
+Command. The command pattern is used to express a request, including the call to be made and all of its required parameters, in a 
+command object. The command may then be executed immediately or held for later use.
+
+Interpreter. The interpreter pattern is used to define the grammar for instructions that form part of a language or notation, whilst allowing the grammar to be easily extended.
+Iterator. The iterator pattern is used to provide a standard interface for traversing a collection of items in an aggregate object without the need to understand its underlying structure.
+Mediator. The mediator pattern is used to reduce coupling between classes that communicate with each other. Instead of classes communicating directly, and thus requiring knowledge of their implementation, the classes send messages via a mediator object.
+Memento. The memento pattern is used to capture the current state of an object and store it in such a manner that it can be restored at a later time without breaking the rules of encapsulation.
+Observer. The observer pattern is used to allow an object to publish changes to its state. Other objects subscribe to be immediately notified of any changes.
+State. The state pattern is used to alter the behaviour of an object as its internal state changes. The pattern allows the class for an object to apparently change at run-time.
+Strategy. The strategy pattern is used to create an interchangeable family of algorithms from which the required process is chosen at run-time.
+Template Method. The template method pattern is used to define the basic steps of an algorithm and allow the implementation of the individual steps to be changed.
+Visitor. The visitor pattern is used to separate a relatively complex set of structured data classes from the functionality that may be performed upon the data that they hold.
+---------------------------------------------------------------------
+Most_Common_Patterns
+
+Singleton - ensures that only one object gets created.
+
+Factory Pattern - determine at run time which subclass will be created to implement the abstract base class
+
+Observer - allows objects to subscribe to the events of a particular object so that they are notified when an event occurs.
+
+Adapter - acts as a bridge between two incompatible interfaces. This pattern involves a single class called adapter which is responsible 
+for communication between two independent or incompatible interfaces.
+---------------------------------------------------------------------
+Object_Oriented_Concepts
+
+Association - defines a relationship between classes of objects that allows one object instance to cause another to perform an 
+action on its behalf. This relationship is structural, because it specifies that objects of one kind are connected to objects of 
+another and does not represent behaviour. In generic terms, the causation is usually called "sending a message", "invoking a method" 
+or "calling a member function" to the controlled object. An association relationship between two classes is a “has a” relationship.
+Aggregation and Composition are subsets of association meaning they are specific cases of association. In both aggregation and 
+composition object of one class "owns" object of another class. But there is a subtle difference.
+
+There are two sub-types of Association relationships — Aggregation and Composition. Composition implies that the contained class cannot 
+exist independently of the container. If the container is destroyed, the child is also destroyed. In code, this usually refers to the 
+child instance being created inside the container class. With an aggregation, the child can exist independently of the parent.
+---
+Causality (also referred to as causation, or cause and effect) is influence by which one event, process, state or object (a cause) 
+contributes to the production of another event, process, state or object (an effect) where the cause is partly responsible for the 
+effect, and the effect is partly dependent on the cause.
+---------------------------------------------------------------------
+Singleton_Pattern
+
+Singleton design pattern and private constructors
+https://www.c-sharpcorner.com/UploadFile/8911c4/singleton-design-pattern-in-C-Sharp/
+http://www.dotnetperls.com/singleton - more info to look at including further optimization.
+
+You can use a private constructor to ensure that external code never incorrectly creates a singleton instance.
+Note:
+A private constructor restricts access to the constructor. It ensures the object can only be created by a member in the type.
+When using a private constructor, patterns such as the factory pattern or the singleton pattern can return instances.
+
+Therefore:
+The private constructor is a desirable part of the singleton pattern implementation in the C# language. The private constructor 
+can only be called from within the class.
+
+// C# program that uses singleton
+
+class Program
+{
+    static void Main()
+    {
+	   SiteStructure s = SiteStructure.GetInstance;  // Class does not have to be static to call a static method.
+    }
+}
+
+public sealed class SiteStructure
+{
+    static readonly SiteStructure siteStructureInstance = new SiteStructure();
+    
+	public static SiteStructure GetInstance
+    {
+		get
+		{
+			return siteStructureInstance;   // Calling GetInstance property somehow causes siteStructureInstance to initialize
+		}
+    }
+    
+	private SiteStructure()
+    {
+		// Initialize class here.
+    }
+}
+
+Look at where the new SiteStructure() is initialized. The readonly and static keywords are critical here. Readonly allows 
+thread-safety, and that means it can be only allocated once. It has a public static getter. The public Instance property is 
+used by callers to get the singleton instance.
+
+// Both of these calls get references to the same instance.
+SiteStructure siteStructure01 = SiteStructure.GetInstance;
+SiteStructure siteStructure02 = SiteStructure.GetInstance;
+---
+This code creates a non-thread safe instance.
+
+public sealed class Singleton1 {  
+    private Singleton1() { /* Initialize class here */}  
+    private static Singleton1 instance = null;  
+    public static Singleton1 Instance {  
+        get {
+            if (instance == null) {
+                instance = new Singleton1();  
+            }
+            return instance;
+        }
+    }
+}
+---
+Advantages of a Singleton Pattern are:
+ Singleton pattern can implement interfaces.
+ Can be lazy-loaded and has Static Initialization. (compared to static classes that get loaded at runtime)
+ It helps to hide dependencies.
+ It provides a single point of access to a particular instance, so it is easy to maintain.
+---------------------------------------------------------------------
+UML_Concepts
+
+Aggregation uses an open(hollow) diamond.
+Composition uses a closed(solid) diamond.

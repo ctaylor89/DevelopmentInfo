@@ -1,0 +1,69 @@
+
+How To Work with Environment Variables in PowerShell
+https://mcpmag.com/articles/2019/03/28/environment-variables-in-powershell.aspx
+
+How to create PowerShell script file on Windows 10
+https://www.windowscentral.com/how-create-and-run-your-first-powershell-script-file-windows-10
+
+How to enable execution of PowerShell scripts?
+https://superuser.com/questions/106360/how-to-enable-execution-of-powershell-scripts
+  set-executionpolicy unrestricted
+
+--------------------------------------------------------------------------------
+How to run PowerShell script
+Open Start.
+
+Open PowerShell as Administrator option.
+
+Type the following command to allow scripts to run and press Enter:
+c:\SomeFolder\Set-ExecutionPolicy unrestricted
+
+Type A and press Enter (if applicable).
+
+Example to excute at cmd line: (prefix it with .\)
+c:\SomeDir>.\TestScript.ps1
+--------------------------------------------------------------------------------
+POWERSHELL SCRIPT ENVIRONMENT
+
+PowerShell is the preferred method of performing Windows administration tasks (docs.microsoft.com/en-us/powershell/scripting/
+overview?view=powershell-7). It has also become the Windows hacker's go-to toolkit. PowerShell statements can be executed at 
+a PowerShell prompt, or run as a script (.ps1) on any PowerShell-enabled host.
+
+The Get-Help cmdlet shows help on different elements of the PowerShell environment.
+
+Cmdlets and Functions
+Most PowerShell usage is founded on cmdlets. A cmdlet is a compiled library that exposes some configuration or administrative 
+task, such as starting a VM in Hyper-V. Cmdlets use a Verb-Noun naming convention. Cmdlets always return an object. Typically, 
+the return from a cmdlet will be piped to some other cmdlet or function. For example:
+
+Get-Process | Where { $_.name -eq 'nmap' } | Format-List
+
+Cmdlets such as Invoke-Expression, Invoke-Command, Invoke-WMIMethod, New-Service, Create-Thread, Start-Process, and New-Object 
+can indicate an attempt to run some type of binary shellcode. cmdlets can be shortened. For example, Invoke-Expression can be 
+run using IEX.
+---
+You can also define simple functions for use within your scripts. Custom functions are declared within curly brackets:
+
+function Cat-Name {
+  param ($name,$surname)
+  return $name + ' ' + $surname
+}
+
+#This ends the function declaration; the next statement calls it
+
+$greeting = 'Hello ' + $(Cat-Name('World',''))
+Write-Host $greeting
+
+Note that a variable is declared by prefixing a label with $. 
+
+Logic and Looping Statements
+PowerShell supports a wider range of branching and looping structures than Python, including the switch and do statements. 
+Curly braces are used to structure the statements. PowerShell uses textual operators (-eq, -ne, -lt, -gt, -le, and -ge).
+
+Modules
+PowerShell can also be used with a large number of modules, which are added to a script using the Import-Module cmdlet.
+
+Varonis' blog series illustrates uses of PowerShell as a security administration platform 
+(varonis.com/blog/practical-powershell-for-it-security-part-i-file-event-monitoring).
+
+

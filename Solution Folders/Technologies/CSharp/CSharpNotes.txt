@@ -1,0 +1,1131 @@
+_Access_Levels
+_Attributes
+_Classes
+_CodeSnippets
+_DataTypes
+_Dependency
+_DisposePattern
+_Exceptions
+_Expression
+_ExpressionBodied
+_Interfaces
+_Keywords
+_List Extension methods
+_JSON
+_Loops
+_MethodImplOptions
+_Optimization
+_Properties
+_RandomNotes
+_String_Methods
+
+
+Casting is the action of changing an entity of one data type into another.
+
+It's little bit generic and it's somehow equivalent to a conversion because actually a cast is a conversion 
+so the question should be when a cast (implicit or explicit) is allowed by the Language and when you have 
+to use a (more) explicit conversion?
+
+These below casts are implicit because during the conversion you won't lose any information (you just make the type wider). 
+Vice versa implicit cast isn't allowed because, regardless their actual values (because they can be checked only at run-time), 
+during conversion you may lose some information.
+
+	int tinyInteger = 10;
+	long bigInteger = tinyInteger;
+
+	float tinyReal = 10.0f;
+	double bigReal = tinyReal;
+
+Explicit casts
+A cast is explicit when the conversion isn't done implicitly by the compiler and then you must use the cast operator. Usually it means that:
+
+You may lose information or data so you have to be aware of it.
+Conversion may fail (because you can't convert one type to the other) so, again, you must be aware of what you're doing.
+
+This code will compile but it may fail at run-time (it depends on the effective type of casted objects) with an InvalidCastException:
+
+	object obj = GetNextObjectFromInput();
+	string text = (string)obj;
+
+	obj = GetNextObjectFromInput();
+	Exception exception = (Exception)obj;
+
+---------------------------------------------------------------
+typeof takes a type name (which you specify at compile time).
+GetType gets the runtime type of an instance.
+It returns true if an instance is in the inheritance tree.
+Example:
+	class Animal { } 
+	class Dog : Animal { }
+
+	Dog spot = new Dog(); 
+	PrintTypes(spot);
+
+	void PrintTypes(Animal a) { 
+		print(a.GetType() == typeof(Animal)) // false 
+		print(a is Animal)                   // true 
+		print(a.GetType() == typeof(Dog))    // true
+	}
+
+What about typeof(T)? Is it also resolved at compile time?
+Yes. T is always what the type of the expression is. Remember, a generic method is basically a whole bunch of methods 
+with the appropriate type. 
+Example:
+	string Foo<T>(T object) { return typeof(T).Name; }
+
+	Animal probably_a_dog = new Dog();
+	Dog    definitely_a_dog = new Dog();
+
+	Foo(probably_a_dog);			// this calls Foo<Animal> and returns "Animal"
+	Foo<Animal>(probably_a_dog);	// this is exactly the same as above
+	Foo<Dog>(probably_a_dog);		// !!! This will not compile. The parameter expects a Dog, you cannot pass in an Animal.
+
+	Foo(definitely_a_dog);			// this calls Foo<Dog> and returns "Dog"
+	Foo<Dog>(definitely_a_dog);		// this is exactly the same as above.
+	Foo<Animal>(definitely_a_dog);	// this calls Foo<Animal> and returns "Animal". 
+	Foo((Animal)definitely_a_dog);	// this does the same as above, returns "Animal"
+
+---------------------------------------------------------------
+_Access_Levels
+
+virtual: By default, methods are non-virtual. You cannot override a non-virtual method.
+You cannot use the virtual modifier with the static, abstract, private, or override modifiers.
+It is an error to use the virtual modifier on a static property.
+A virtual inherited property can be overridden in a derived class by including a property declaration that 
+uses the override modifier.
+
+protected: A protected member is accessible within its class and by derived class instances. Using protected means you can have 
+functionality in a class that's available to derived classes, but not to classes that just instantiate the base class.
+
+internal: The internal keyword is an access modifier for types and type members. Internal types or members are accessible only 
+within files in the same assembly.
+
+protected internal: Access is limited to types derived from the containing class(protected) or the current assembly(internal).
+Note that: protected internal means "protected OR internal" (any class in the same assembly, or any derived class - even if it 
+is in a different assembly).
+
+private protected: Access is limited to the containing class or types derived from the containing class within the current assembly. 
+Available since C# 7.2.
+---
+Classes and structs that are declared directly within a namespace (that are not nested within other classes or structs) 
+can be either public or internal. Internal is the default if no access modifier is specified.
+
+The access level for class members and struct members, including nested classes and structs, is private by default.
+
+Interfaces default to internal access.
+---------------------------------------------------------------
+_Attributes
+
+[Obsolete]
+[Obsolete("Will cause a compiler error", true)]  // set to true will cause a compiler error
+[Obsolete("Will cause a compiler Warning")]
+
+The Conditional attribute is often used with the DEBUG identifier to enable trace and logging features for debug builds but not in 
+release builds, like this:
+
+	[Conditional("DEBUG")]
+	public void DoSomething() { }
+
+	public void Foo()
+	{
+		DoSomething(); //Code compiles and is cleaner, DoSomething always
+					   //exists, however this is only called during DEBUG.
+	}
+
+#define TRACE_ON  [Conditional("TRACE_ON")]
+
+If a method has multiple Conditional attributes, a call to the method is included if at least one of the conditional symbols is defined.
+	[Conditional("A"), Conditional("B")]
+
+[Serializable]
+
+The following example sets the default value of MyProperty to false.
+private bool myVal=false;
+
+	[DefaultValue(false)]
+	public bool MyProperty {
+		get {
+		   return myVal;
+		}
+		set {
+		   myVal=value;
+		}
+	 }
+
+This allows you to ignore (in any xml serialisation) 'parent' objects that would otherwise cause exceptions when saving.
+[XmlIgnore]
+
+[XmlRoot]
+
+[XmlElement]
+
+[XmlAttribute]
+
+Being a middle tier developer I like
+
+System.ComponentModel.EditorBrowsableAttribute Allows me to hide properties so that the UI developer is not overwhelmed with properties 
+that they don't need to see.
+
+System.ComponentModel.BindableAttribute Some things don't need to be databound. Again, lessens the work the UI developers need to do.
+The only purpose of the BindableAttribute is to support the Visual Studio IDE (as does most attributes in ComponentModel namespace). 
+It doesn't affect how your code executes at all. The purpose of it is the tell Visual Studio that the particular property supports 
+Binding through the designer.
+
+I use  System.STAThreadAttribute
+      System.ThreadStaticAttribute when needed.
+
+Off the top of my head, here is a quick list, roughly sorted by frequency of use, of predefined attributes I actually use in a big 
+project (~500k LoCs):Flags, Serializable, WebMethod, COMVisible, TypeConverter, Conditional, ThreadStatic, Obsolete, 
+InternalsVisibleTo, DebuggerStepThrough.
+---
+The [Flags] attribute should be used whenever the enumerable represents a collection of possible values, rather than a single value. 
+Such collections are often used with bitwise operators. The [Flags] attribute enables a nice representation by the .ToString() method
+to show multiple values by the value name:
+    Ex: Using the flags attribute on an enum:
+    enum Suits { Spades = 1, Clubs = 2, Diamonds = 4, Hearts = 8 }
+    [Flags] enum SuitsWithFlags { Spades = 1, Clubs = 2, Diamonds = 4, Hearts = 8 }
+
+    var str1 = (Suits.Spades | Suits.Diamonds).ToString();
+               // "5"
+    var str2 = (SuitsWithFlags.Spades | SuitsFlags.Diamonds).ToString();
+               // "Spades, Diamonds"
+---
+For MVC [ActionName("Name")] allows you to have a Get action and Post action with the same method signature, or to use dashes in the action name, 
+which otherwise would not be possible without creating a route for it.
+
+// Attaching the WebMethod attribute to a Public method indicates that you want the method exposed as part of the XML Web service. You can also 
+// use the properties of this attribute to further configure the behavior of the XML Web service method. You can optionally set cache duration 
+// and buffer response.
+[WebMethod]
+
+// On configuration sections
+[ConfigurationProperty] 
+
+// Indicates that the value of a static field is unique for each thread.
+[ThreadStatic] static double previous = 0.0;
+
+// In asp.net
+[NotifyParentProperty(true)]
+---------------------------------------------------------------
+
+Action objects return no values. The Action type is similar to a void method. It must never return a value onto the evaluation stack. 
+This generic type is found in the System namespace.
+
+Action<int> example1 = (int x) => Console.WriteLine("Write {0}", x);
+Action<int, int> example2 = (x, y) => Console.WriteLine("Write {0} and {1}", x, y);
+Action example3 = () => Console.WriteLine("Done");
+
+// Call the anonymous methods with a number of arguments equal to the specific type of Action
+example1.Invoke(1);
+example2.Invoke(2, 3);
+example3.Invoke();
+
+Action<int> action = new Action<int>(Method1)
+
+---------------------------------------------------------------
+The Func type provides a way to store anonymous methods in a generalized and simple way.
+
+// Create a Func instance that has one parameter and one return value.
+// Parameter is an integer, result value is a string.
+Func<int, string> func1 = (x) => string.Format("string = {0}", x);
+
+// Func instance with two parameters and one result.
+// Receives bool and int, returns string.
+Func<bool, int, string> func2 = (b, x) => string.Format("string = {0} and {1}", b, x);
+
+// Func instance that has no parameters and one result value.
+Func<double> func3 = () => Math.PI / 2;
+
+// Call the Invoke instance method on the anonymous functions.
+Console.WriteLine(func1.Invoke(5));
+Console.WriteLine(func2.Invoke(true, 10));
+Console.WriteLine(func3.Invoke());
+---------------------------------------------------------------
+If you want to examine an item in a generic list to determine whether it is valid or to compare it to some other item, 
+the compiler must have some guarantee that the operator or method it has to call will be supported by any type argument 
+that might be specified by client code. This guarantee is obtained by applying one or more constraints to your generic 
+class definition. 
+
+// The type must be of Employee or a sub class of it. This allows the class to access members of the Employee class.
+public class GenericList<T> where T : Employee
+{...}
+
+// Multiple constraints can be applied to the same type parameter, and the constraints themselves can be generic types, as follows:
+class EmployeeList<T> where T : Employee, IEmployee, System.IComparable<T>, new()
+ 
+By constraining the type parameter, you increase the number of allowable operations and method calls to those supported by the 
+constraining type and all types in its inheritance hierarchy. Therefore, when you design generic classes or methods, if you will be 
+performing any operation on the generic members beyond simple assignment or calling any methods not supported by System.Object, you 
+will have to apply constraints to the type parameter.
+
+// You can apply constraints to multiple parameters, and multiple constraints to a single parameter, as shown in the following example:
+class Base { }
+class Test<T, U>
+    where U : struct 
+    where T : Base, new() {...}
+
+Constraint			Description
+where T: struct		Type argument must be a value type. Any value type except Nullable can be specified.
+where T : class		Type argument must be a reference type; this applies also to any class, interface, delegate, or array type.
+where T : new()		Type argument must have a public parameterless constructor. When used together with other constraints, the 
+					new() constraint must be specified last.
+where T : <base class name>
+The type argument must be or derive from the specified base class.
+where T : <interface name>
+The type argument must be or implement the specified interface. Multiple interface constraints can be specified. The constraining 
+interface can also be generic.
+where T : U
+The type argument supplied for T must be or derive from the argument supplied for U.
+
+---------------------------------------------------------------
+_Classes
+
+C# abstract class explained
+An abstract class is a special type of class that cannot be instantiated. An abstract class is designed to be inherited by subclasses 
+that either implement or override its methods. In other words, abstract classes are either partially implemented or not implemented 
+at all. You can have functionality in your abstract class. The methods in an abstract class can be both abstract and concrete. An 
+abstract class can have constructors and this is one major difference between an abstract class and an interface. You can't 
+instantiate the abstract class itself but the derived class still has all the pieces of the base class. Its not only valid to do it, 
+its one of the primary reasons why you would do it. You can take advantage of abstract classes to design components and specify some 
+level of common functionality that must be implemented by derived classes.
+
+Differences between an abstract class and an interface
+An abstract class allows you to create functionality that subclasses can access or override. An interface only allows you to 
+define functionality, not implement it. A class can extend only one abstract class, but it can take advantage of multiple 
+interfaces.
+
+public abstract class A 
+{
+    private string data;
+
+    protected A(string myString){
+      data = myString;
+    }
+}
+
+public class B : A 
+{
+     B(string myString) : base(myString){}
+}
+---
+A static class cannot be instantiated. You cannot use the new operator to create a variable of the class type. Because there is no 
+instance variable, you access the members of a static class by using the class name itself. 
+
+A static class is loaded by the .NET runtime when the program that references the class is loaded. The program cannot specify exactly 
+when the class is loaded. However, it is guaranteed to be loaded and to have its fields initialized and its static constructor called 
+before the class is referenced for the first time in your program. A static constructor is only called one time, and a static class 
+remains in memory for the lifetime of the application domain in which your program resides.
+
+The main features of a static class:
+ Contains only static members, cannot be instantiated, is sealed, cannot contain Instance Constructors, constructor only called once.
+---------------------------------------------------------------
+_CodeSnippets
+https://msdn.microsoft.com/en-us/library/z41h7fat.aspx  - Visual C# Code Snippets
+
+---------------------------------------------------------------
+_DataTypes
+
+Value Types: integer, float, double, decimal, char, booleon, enum, struct, nullable
+Reference Types: object, class, interface, array, delegate 
+
+uint, long, ulong, DateTime
+https://www.tutorialsteacher.com/csharp/csharp-data-types#:~:text=C%23%20mainly%20categorized%20data%20types,types%2C%20and%20Nullable%20value%20types.
+---------------------------------------------------------------
+_Dependency
+
+http://tutorials.jenkov.com/ood/understanding-dependencies.html
+Understanding dependencies is important when doing object oriented design of API's and applications. 
+Whenever a class A uses another class or interface B, then A depends on B. A cannot carry out it's work without B, and A cannot 
+be reused without also reusing B. In such a situation the class A is called the "dependant" and the class or interface B is called 
+the "dependency". A dependant depends on its dependencies.
+
+Two classes that uses each other are called "coupled". The coupling between classes can be loose or tight, or somewhere in between. 
+The tightness of a coupling is not binary. It is not either "loose" or "tight". The degrees of tightness are continuous, not discrete. 
+You can also characterize dependencies as "strong" or "weak". A tight coupling leads to strong dependencies, and a loose coupling leads 
+to weak dependencies, or even no dependencies in some situations.
+
+Dependencies, or couplings, are directional. That A depends on B doesn't mean that B also depends on A.
+
+---------------------------------------------------------------
+_DisposePattern  Dispose Pattern
+
+http://www.informit.com/articles/article.aspx?p=2756468&seqNum=7
+
+The standard dispose pattern frees your unmanaged resources using the IDisposable interface when clients remember, and it uses the 
+finalizer defensively when clients forget. Your class must have a finalizer if and only if it directly contains unmanaged resources.
+
+The implementation of your IDisposable.Dispose() method is responsible for four tasks:
+  Freeing all unmanaged resources.
+  Freeing all managed resources that implement IDisposable (this includes unhooking events).
+  Setting a state flag to indicate that the object has been disposed of. You may need to check this state and throw ObjectDisposed 
+  exceptions in your public members if any get called after disposing of an object.
+
+Suppressing finalization. You call GC.SuppressFinalize(this) to accomplish this task.
+To begin, your class must have a finalizer if and only if it directly contains unmanaged resources. You should not rely on clients 
+to always call the Dispose() method. In a managed environment, you do not need to write a finalizer for every type you create; you 
+do it only for types that store unmanaged types or when your type contains members that implement IDisposable. 
+
+Even if you need only the IDisposable interface, not a finalizer, implement the entire pattern. Otherwise, you limit your derived 
+classes by complicating their implementation of the standard dispose idiom.
+
+The Object class provides no implementation for the Finalize method, and the garbage collector does not mark types derived from 
+Object for finalization unless they override the Finalize method.
+
+When a finalizable object is discovered to be no longer used, its finalizer is put in a queue so that its cleanup actions are executed, 
+but the object itself is promoted to the next generation. Therefore, you have to wait until the next garbage collection that occurs on 
+that generation (which is not necessarily the next garbage collection) to determine whether the object has been reclaimed.
+
+public class MyGarbage : IDisposable
+{
+    public String name = String.Empty;              // A managed type
+    public SqlConnection con = null;                // An unmanaged type
+    
+	public MyGarbage()
+    {
+        name = "This property (name) is managable resource";
+        con = new SqlConnection();
+    }
+    ~MyGarbage()					// Finalizer is called only by the GC
+    {
+        Dispose(false);             // false param indicates that object is being deleted by the GC. Dispose not being called by code.
+    }
+    
+	protected virtual void Dispose(bool disposing)
+    {  
+        if (disposing)             // If Dispose() called by code and not GC
+        {
+            // Free managed resource here
+            name = null;
+        }
+        
+        // Free unmanaged resource here
+        con = null;
+        Console.WriteLine("Unmanaged object has been disposed");
+    }
+ 
+    public void Dispose()           // This method will only be called from code
+    {
+        Dispose(true);						// Pass in true to free managed resources
+        GC.SuppressFinalize(this);
+    }
+
+    public void ExampleMethod()
+    {
+        if (alreadyDisposed)
+            throw new ObjectDisposedException("MyGarbage", "Called Example Method on Disposed object");
+    }
+}
+---
+The public Dispose method is never automatically called by the CLR, it is only called explicitly by the owner of the object, 
+which in some cases may be another framework, such as ASP.NET.
+---
+Managed objects are created, managed and under scope of CLR, pure .NET code managed by runtime, Anything that lies within .NET scope 
+and under .NET framework classes such as string, int, bool variables are referred to as managed code.
+
+UnManaged objects are created outside the control of .NET libraries and are not managed by CLR, example of such unmanaged code is 
+COM objects, file streams, connection objects, Interop objects. (Basically, third party libraries that are referred in .NET code.)
+---------------------------------------------------------------
+_Exceptions
+
+In a UI app such as Winforms or WPF, a "cross thread exception" occurs if you are accessing UI components from a background thread.
+---------------------------------------------------------------
+_Expression
+
+Use Expressions when you want to treat lambda expressions as expression trees and look inside them instead of executing them. For example, 
+LINQ to SQL gets the expression and converts it to the equivalent SQL statement and submits it to server (rather than executing the lambda).
+
+The following code example demonstrates how to represent a lambda expression both as executable code in the form of a delegate and as data 
+in the form of an expression tree. It also demonstrates how to turn the expression tree back into executable code by using the Compile method.
+
+For example, AsQueryable() is used when an expression tree is to be constructed.
+
+Conceptually, Expression<Func<T>> is completely different from Func<T>. Func<T> denotes a delegate which is pretty much a pointer to a method 
+and Expression<Func<T>> denotes a tree data structure for a lambda expression. This tree structure describes what a lambda expression does 
+rather than doing the actual thing.
+
+// Lambda expression as executable code.
+Func<int, bool> deleg = i => i < 5;
+// Invoke the delegate and display the output.
+Console.WriteLine("deleg(4) = {0}", deleg(4));
+
+// Lambda expression as data in the form of an expression tree.
+System.Linq.Expressions.Expression<Func<int, bool>> expr = i => i < 5;
+// Compile the expression tree into executable code.
+Func<int, bool> deleg2 = expr.Compile();
+// Invoke the method and print the output.
+Console.WriteLine("deleg2(4) = {0}", deleg2(4));
+
+/*  This code produces the following output:
+    deleg(4) = True
+    deleg2(4) = True
+*/
+---------------------------------------------------------------
+_ExpressionBodied
+
+// This creates a new YearMonth class passing the DateTime value to it's constructor, then accessing the Value property of the class.
+public string DefaultValue => new YearMonth(DateTime.Now).Value;
+---------------------------------------------------------------
+_Interfaces
+
+An interface contains definitions for a group of related functionalities that a non-abstract class or a struct must implement. An interface 
+may define static methods(since C#8), which must have an implementation. Beginning with C# 8.0, an interface may define a default implementation for 
+members. An interface may not declare instance data such as fields, auto-implemented properties, or property-like events.
+
+By using interfaces, you can, for example, include behavior from multiple sources in a class. That capability is important in C# because 
+the language doesn't support multiple inheritance of classes. In addition, you must use an interface if you want to simulate inheritance 
+for structs, because structs can't actually inherit from another struct or class.
+
+Interfaces can contain instance methods, properties, events, indexers, or any combination of those four member types. 
+Interfaces may contain static constructors, fields, constants, or operators. 
+Beginning with C# 11, interface members that aren't fields may be static abstract. 
+An interface can't contain instance fields, instance constructors, or finalizers. 
+Interface members are public by default, and you can explicitly specify accessibility modifiers, such as public, protected, internal, 
+private, protected internal, or private protected. A private member must have a default implementation.
+
+To implement an interface member, the corresponding member of the implementing class must be public, non-static, and have the same 
+name and signature as the interface member.
+
+A class or struct that implements an interface must provide an implementation for all declared members without a default implementation 
+provided by the interface.
+
+Properties and indexers of a class can define extra accessors for a property or indexer that's defined in an interface. For example, 
+an interface might declare a property that has a get accessor. The class that implements the interface can declare the same property with 
+both a get and set accessor. However, if the property or indexer uses explicit implementation, the accessors must match.
+---
+Explicit Interface Implementation Example
+
+public IControl
+{
+    void paint();
+}
+
+public ISurface
+{
+    void paint();
+}
+
+public SampleClass : IControl, ISurface
+{
+    public void IControl.paint()                // Explicit implementation
+    {
+        Console.Writeline("This method implements IControl interface");
+    }
+
+    public void ISurface.paint()
+    {
+        Console.Writeline("This method implements ISurface interface");
+    }
+}
+
+IControl cntrl = new SampleClass();
+ISurface service = new SampleClass();
+cntrl.paint();          // Will print line "This method implements IControl interface"
+surface.paint();        // Will print line "This method implements ISurface interface"
+---
+If a class or struct implements two interfaces that contain a member with the same signature without an explict interface implementation, 
+then implementing that member on the class will cause both interfaces to use that member as their implementation.
+interface IControl
+{
+    void Paint();
+}
+
+interface ISurface
+{
+    void Paint();
+}
+
+class SampleClass : IControl, ISurface
+{
+    // Both ISurface.Paint and IControl.Paint call this method.  
+    public void Paint()
+    {
+        Console.WriteLine("Paint method in SampleClass");
+    }
+}
+
+You can implement an interface member explicitly by creating a class member that is only called through the interface, and is specific 
+to that interface. This is accomplished by naming the class member with the name of the interface and a period.
+
+public class SampleClass : IControl, ISurface
+{
+    void IControl.Paint()
+    {
+        System.Console.WriteLine("IControl.Paint");
+    }
+    void ISurface.Paint()
+    {
+        System.Console.WriteLine("ISurface.Paint");
+    }
+}
+
+// Call the Paint methods from Main.
+
+SampleClass obj = new SampleClass();
+//obj.Paint();  // Compiler error. Can only be called through an interface.
+
+IControl c = (IControl)obj;
+c.Paint();  // Calls IControl.Paint on SampleClass.
+
+ISurface s = (ISurface)obj;
+s.Paint(); // Calls ISurface.Paint on SampleClass. 
+-----
+
+---------------------------------------------------------------
+_Keywords
+
+const  Use the const keyword to declare a constant field or a constant local. Constant fields and locals aren't variables and may 
+not be modified. Constants can be numbers, Boolean values, strings, or a null reference. The readonly keyword differs from the 
+const keyword. A const field can only be initialized at the declaration of the field. A readonly field can be initialized either 
+at the declaration or in a constructor(at runtime).
+---
+Properties are not variables and therefore cannot be passed as out parameters.
+You can't use the in, ref, and out keywords for the following kinds of methods:
+* Async methods, which you define by using the async modifier.
+* Iterator methods, which include a yield return or yield break statement.
+
+The out keyword causes arguments to be passed by reference. It makes the formal parameter an alias for the argument, which must 
+be a variable. In other words, any operation on the parameter is made on the argument. It is like the ref keyword, except that 
+ref requires the variable be initialized before it is passed. It is also like the 'in' keyword, except that 'in' does not allow 
+the called method to modify the argument value. To use an out parameter, both the method definition and the calling method must 
+explicitly use the out keyword. 
+
+Variables passed as out arguments do not have to be initialized before being passed in a method call. However, the called method 
+is required to assign a value before the method returns. The in, ref, and out keywords are not considered part of the method 
+signature for the purpose of overload resolution. Therefore, methods cannot be overloaded if the only difference is 
+that one method takes a ref or in argument and the other takes an out argument.
+
+Extension methods have the following restrictions:
+The out keyword cannot be used on the first argument of an extension method.
+The ref keyword cannot be used on the first argument of an extension method when the argument is not a struct, or a generic type 
+not constrained to be a struct.
+The in keyword cannot be used unless the first argument is a struct. The in keyword cannot be used on any generic type, even when 
+constrained to be a struct.
+---
+---------------------------------------------------------------
+Configuration
+http://www.codeproject.com/Articles/19675/Cracking-the-Mysteries-of-NET-Configuration#t2_1
+
+---------------------------------------------------------------
+Directory and DirectoryInfo Class - Exposes static methods for creating, moving, and enumerating through directories and 
+subdirectories. This class cannot be inherited.
+
+Directory is a static class that provides static methods for working with directories. DirectoryInfo is an instance of a class that 
+provides information about a specific directory. So for example if you wanted the information about C:\Temp:
+
+var dirInfo = new DirectoryInfo("C:\\Temp");
+if (dirInfo.Exists) {
+    FileInfo[] files = dirInfo.GetFiles("*.*", SearchOption.AllDirectories);
+    ...
+}
+
+If you just wanted the names as strings it might be quicker and easier to avoid creating an instance of DirectoryInfo by using the 
+static methods of Directory.
+
+if (Directory.Exists("C:\\Temp")) {
+    string[] files = Directory.GetFiles("C:\\Temp", "*.*", SearchOption.AllDirectories);
+    ...
+}
+
+If you are going to be making many calls to the FileSystem, especially when its the same folder or in subdirectory of said folder, 
+MSDN suggests using DirectoryInfo.
+
+---------------------------------------------------------------
+Generally if you are performing a single operation on a file, use the File class. If you are performing multiple operations on the 
+same file, use FileInfo.
+
+The reason to do it this way is because of the security checking done when accessing a file. When you create an instance of FileInfo, 
+the check is only performed once. However, each time you use a static File method the check is performed.
+
+When using DirectoryInfo.Exists and FileInfo.Exists, they do not represent the current state, only the state at the time the info 
+objects were created. You may need to call Refresh() to get the current state.
+---------------------------------------------------------------
+
+This is what System.IO.Path.Combine(string, string) does for you:
+
+It validates both paths. They can be null or empty, but if they contain invalid path chars, an argument exception is thrown.
+It uses Path.DirectorySeparatorChar to combine, but will never end up having two separators or none.
+It takes only the second path if it is absolute, so you never get paths like "c:\data\d:\data\logs\myfile.xml"
+If one of the paths is null or empty, the other one is returned.
+Simple combinations
+If the second path is relative, it will get combined with the first path.
+
+Path.Combine("abc", "file.xml") => "abc\file.xml"
+Path.Combine("abc\", "file.xml") => "abc\file.xml"
+Path.Combine("c:\abc\", "file.xml") => "c:\abc\file.xml"
+Path.Combine("c:\abc\", "data\file.xml") => "c:\abc\data\file.xml"
+Path.Combine("", "data\file.xml") => "data\file.xml"
+Path.Combine("c:\abc", "") => "c:\abc"
+Absolute second path
+If the second path is absolute, the first one will be ignored. (See also Path.IsPathRooted(string))
+
+Path.Combine("c:\abc", "\file.xml") => "\file.xml"
+
+(if the second path starts with the DirectorySeparatorChar it is also treated as absolute!)
+Path.Combine("c:\abc", "c:\file.xml") => "c:\file.xml"
+---------------------------------------------------------------
+A Stopwatch instance calculates and retains the cumulative elapsed time across multiple time intervals, until the instance 
+is reset. Use Stop to stop the current interval measurement and retain the cumulative elapsed time value. Use Reset to stop 
+any interval measurement in progress and clear the elapsed time value.
+
+Use the Stopwatch.Restart Method to stops time interval measurement, resets the elapsed time to zero, and starts measuring elapsed time.
+
+Stopwatch.ElapsedMilliseconds Property is a read-only long integer representing the total number of milliseconds measured by the current 
+instance. You can query the properties Elapsed, ElapsedMilliseconds, and ElapsedTicks while the Stopwatch instance is running or stopped. 
+The elapsed time properties steadily increase while the Stopwatch is running; they remain constant when the instance is stopped.
+
+By default, the elapsed time value of a Stopwatch instance equals the total of all measured time intervals. Each call to Start begins 
+counting at the cumulative elapsed time; each call to Stop ends the current interval measurement and freezes the cumulative elapsed time 
+value. Use the Reset method to clear the cumulative elapsed time in an existing Stopwatch instance.
+
+
+The Stopwatch.Start Method starts, or resumes, measuring elapsed time for an interval.
+
+---
+Timers allow you to control the execution of your application by being able to define when an action takes place.
+
+	public static void Main()
+	{
+		System.Timers.Timer aTimer = new System.Timers.Timer();
+		aTimer.Elapsed+=new ElapsedEventHandler(OnTimedEvent);
+		aTimer.Interval=5000;
+		aTimer.Enabled=true;
+
+		Console.WriteLine("Press \'q\' to quit the sample.");
+		while(Console.Read()!='q');
+	}
+
+	 // Specify what you want to happen when the Elapsed event is raised.
+	 private static void OnTimedEvent(object source, ElapsedEventArgs e)
+	 {
+		 Console.WriteLine("Hello World!");
+	 }
+
+ ---
+If you're developing Windows.Forms application, use the System.Windows.Forms.Timer class. The benefit of this is that it runs on a 
+UI thread, so it's simple to just define it and subscribe to its Tick event.
+---------------------------------------------------------------
+The ?? operator is called the null-coalescing operator. It returns the left-hand operand if the operand 
+is not null; otherwise it returns the right hand operand.
+
+// If x is null set y to -1. 
+int y = x ?? -1;
+
+// Assign i to return value of the method if the method's result is NOT null; otherwise, if the result 
+// is null, set i to the default value of int. 
+int i = GetMyNullableInt() ?? default(int);
+
+// Display the value of s if s is NOT null; otherwise,  
+// display the string "Unspecified".
+string s = GetStringValue();
+Console.WriteLine(s ?? "Unspecified");
+---------------------------------------------------------------
+The null conditional operator
+
+// Call MethodA if someObject is not null. Return null to bar if someObject is null.
+string bar = someObject?.MethodA();
+
+long? length = someOject?.Length;
+---------------------------------------------------------------
+// Without the suffix m, the number is treated as a double and generates a compiler error.
+decimal myMoney = 300.5m;
+
+// There is no implicit conversion between floating-point types and the decimal types in either direction.
+// A cast must be used to convert between these two types. For example:
+decimal myMoney = 99.9m;
+double x = (double)myMoney;
+myMoney = (decimal)x;
+
+---------------------------------------------------------------
+_RandomNotes
+
+Automatic memory management is only a small part of what makes a language managed. The most important distinction is that native code will 
+compile to a binary executable, and managed code will compile to byte code that must be interpreted at runtime by a Just In Time compiler.
+
+Native code's memory is not "managed", as in, memory isn't freed for you (Ex: C++'s delete), no reference counting, 
+no garbage collection. Managed code is code whose memory is free and allocated for you, garbage collection and other goodies.
+
+Mixed code is when you have managed code that calls onto an unmanaged layer. Normally, when you access a pure unmanaged C++ DLL from
+managed code you call it from .NET using P/invoke.
+---
+P/Invoke is a technology that allows you to access structs, callbacks and functions in unmanaged libraries from your managed code. 
+Most of the P/Invoke API is contained in two namespaces: System and System.Runtime.InteropServices. Using these two namespaces gives 
+you the tools to describe how you want to communicate with the native component. 
+https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke
+---
+Value types hold a value and are stored on the stack. Reference types hold a reference to where the value is located on the managed heap.
+DateTime is a value type - a structure. With value types, when you do something like: DateTime a2 = a1;
+a2 gets a copy of the values of a1. It is not the same reference to the same memory location, but a complete, separate copy.
+
+On the other hand, Person is a reference type - a class. When you do: Person p2 = p1;
+With a reference type, the reference that p2 points to is the same one that p1 points to. So changes in one are changes to both.
+---
+// C# Date Time Formats including single character formats.
+https://www.dotnetperls.com/datetime-format
+---
+// Shallow and Deep copy example
+public class IdInfo
+{
+    public int IdNumber;
+    public IdInfo(int IdNumber)
+    {
+        this.IdNumber = IdNumber;
+    }
+}
+
+public class Person
+{
+    public int Age;
+    public string Name;                                 // A ref type variable
+    public IdInfo IdInfo;								// A ref type variable
+
+    public Person ShallowCopy()
+    {
+       return (Person) this.MemberwiseClone();			// Creates an independent copy except for the ref type variable - IDInfo
+    }
+
+    public Person DeepCopy()
+    {
+       Person other = (Person) this.MemberwiseClone();	// Creates an independent copy except for the ref type variable
+       other.IdInfo = new IdInfo(IdInfo.IdNumber);		// Create a new instance of the ref type variable
+       other.Name = String.Copy(Name);					// Copies same data but is a different object reference
+       return other;
+    }
+}
+
+* Note that copying manually performs faster than using MemberwiseClone().
+
+MemberwiseClone() creates a new object and then copies the value type fields of the current object to the new object. But when 
+there are reference type fields, the reference value is copied so that the clone will refer to the original referenced object.
+---
+A field is a member of a class or an object. A field can be of static or instance type.
+Local variables are declared within a method or a specific block of statements.
+---
+Use null-coalescing assignment operator ??= to assign the value of right-hand side operand to left-hand side operand only if the 
+left-hand side operand evaluates to null.
+
+List<int> numbers = null;  
+int? a = null;  
+  
+(numbers ??= new List<int>()).Add(5);  
+Console.WriteLine(string.Join(" ", numbers));   // output: 5  
+  
+numbers.Add(a ??= 0);  
+Console.WriteLine(string.Join(" ", numbers));   // output: 5 0  
+Console.WriteLine(a);                           // output: 0 
+---------------------------------------------------------------
+_String_Methods
+
+Clone
+Returns a reference to the this instance of String. The return value is not an independent copy of this instance; 
+it is simply another view of the same data. 
+
+CompareOrdinal
+Compares two String objects by evaluating the numeric values of the corresponding Char objects in each string.
+-----
+Contains
+Returns a booleon value indicating whether a specified substring occurs within this string. Performs an ordinal 
+(case-sensitive and culture-insensitive) comparison. int result = String.CompareOrdinal(str1, str2);
+-----
+Copy
+The Copy method returns a String object that has the same value as the original string but represents a different object reference. It 
+differs from an assignment operation, which assigns an existing string reference to an additional object variable. 
+str2 = String.Copy(str1);
+-----
+CopyTo
+Copies a specified number of characters from a specified position in this instance to a specified position in an -ARRAY- of Unicode characters.
+-----
+EndsWith
+EndsWith(String)
+-----
+Substring
+// Get first three characters.
+string sub = input.Substring(0, 3)    Returns substring of first 3 chars.
+string sub = input.Substring(3, 3)    Returns substring of 3 chars starting at index 3.
+string sub = input.Substring(6)       Returns substring of all chars after first 6.
+-----
+Equals
+Determines whether two String objects have the same value. Performs an ordinal (case-sensitive and culture-insensitive) comparison.
+Equals(String)
+Equals(String, String) // Static method
+-----
+Format
+Converts the value of objects to strings based on the formats specified and inserts them into another string.
+-----
+LastIndexOfAny searches for an array of strings. There are nine versions of the LastIndexOf method on the string type. 
+They have different implementations. It returns -1 if no string is found.
+-----
+LastIndexOf
+LastIndexOf searches strings from the right. It finds the location of the last occurrence of a letter or substring. 
+int index1 = value.LastIndexOf('N');
+int index2 = value.LastIndexOf("Perls");
+int index4 = value.LastIndexOf("PERL", StringComparison.OrdinalIgnoreCase);
+-----
+IndexOf 
+Returns the first index of a letter in a string. It can also find a substring. It returns negative one when nothing is found.
+We often use IndexOf in loops. We keep track of several values at once to prevent us from searching the same parts over and over again.
+
+Often strings have leading characters that we know cannot contain the searched-for value. We can skip these chars. This will give 
+a performance boost because less searching is needed.
+
+// Skip the first character with a startIndex of 1.
+int comma = value.IndexOf(',', 1);
+-----
+LastIndexOfAny searches for multiple characters in reverse. It returns the final position of any of a set of characters.
+// Search for last of any of these characters.
+int index = value.LastIndexOfAny(new char[] { 'd', 'b' });
+
+The performance of LastIndexOfAny is not ideal. If you want to improve it, one thing you can do is store the character array argument 
+in a field—static or instance—and then use a reference to that cache as the argument. This will avoid an object creation on every call. 
+And reducing object creations reduces memory pressure and garbage collections.
+-----
+StartsWith
+Determines whether the beginning of this string instance matches a specified string.
+
+Split
+Splits a string into substrings that are based on the characters in an array. Called on a string instance.
+Split(Char[])   Split(Char[], StringSplitOptions)
+---------------------------------------------------------------
+_JSON
+
+// Example
+{
+  "id": "110355660738", 
+  "picture": {
+    "data": {
+      "url": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1027085_12033235063_5234302342947_n.jpg", 
+      "is_silhouette": false
+    }
+  }
+}
+
+// To read the field "url" use dynamic (using Json.Net)
+dynamic obj = JObject.Parse(json);
+Console.WriteLine((string)obj.picture.data.url);
+---------------------------------------------------------------
+_Loops
+Using a foreach loop demonstrates to anyone using your code that you are planning to do something to each member of a collection 
+irrespective of its place in the collection. It also shows you aren't modifying the original collection (and throws an exception 
+if you try to).
+
+The other advantage of foreach is that it works on any IEnumerable, where as for only makes sense for IList, where each element 
+actually has an index. However, if you need to use the index of an element, then of course you should be allowed to use a for 
+loop. But if you don't need to use an index, having one is just cluttering your code.
+
+IEnumerable methods
+
+---------------------------------------------------------------
+_MethodImplOptions
+This enumeration has a FlagsAttribute attribute that allows a bitwise combination of its member values.
+
+AggressiveInlining	The method should be inlined if possible.
+ForwardRef      The method is declared, but its implementation is provided elsewhere.
+InternalCall    The call is internal, that is, it calls a method that is implemented within the common language runtime.
+NoInlining	    The method cannot be inlined. Inlining is an optimization by which a method call is replaced with the method body.
+NoOptimization	The method is not optimized by the just-in-time (JIT) compiler or by native code generation (see ) when debugging 
+                possible code generation problems.
+PreserveSig	    The method signature is exported exactly as declared.
+Synchronized    The method can be executed by only one thread at a time.
+Unmanaged       The method is implemented in unmanaged code.
+
+[MethodImplAttribute(MethodImplOptions.NoInlining)] 
+public static string GetCalendarName(Calendar cal)
+{
+    return cal.ToString().Replace("System.Globalization.", "").Replace("Calendar", "");
+}
+
+---------------------------------------------------------------
+_Optimization
+http://www.dotnetperls.com/optimization
+---------------------------------------------------------------
+_Properties
+
+Good article to read  03/2020
+https://www.c-sharpcorner.com/article/understanding-properties-in-C-Sharp/
+
+// Auto-implemented properties. When no additional calculation is needed. 
+public string Name { get; set; }
+
+// Initialization of a property    
+public double AuthorCount {  
+    get;  
+    private set;  
+} = 99;  
+
+public class MyClass
+{
+    private string member1;
+    public string Member1 { get => member1; set => member1 = value; }
+}
+
+// This is a property get accessor with an Expression Body Definition, as introduced in C# 7. 
+// It is just syntactic sugar equivalent to get { return member1; }.
+get => member1 
+
+// This is a property set accessor with an Expression Body Definition. This syntax was introduced for setters in C# 7. 
+// It is syntactic sugar for set { member1 = value; }
+set => member1 = value; 
+---------------------------------------------------------------
+List Extension methods
+
+// Using the LINQ Extension method on a list class
+List<string> dayValues = new List<string>()  { "4", "7", "3", "8", "2", "5" };
+int total = dayValues.Sum(x => Convert.ToInt32(x));
+----
+// Declare two collections of int elements.
+int[] array1 = { 1, 3, 5, 7 };
+List<int> list1 = new List<int>() { 1, 3, 5, 7 };
+
+// Use Sum extension on their elements.
+int sum1 = array1.Sum();
+int sum2 = list1.Sum();
+----
+There are drawbacks associated with the Sum extension method. The Sum method has some overhead that will make it slower than a simple 
+for-loop in the C# language. It inserts a null check at the start of its method body. Also it uses a foreach-loop, which can produce 
+slower execution on value types.
+
+By using Sum, you avoid copying code into your program source and instead exploit code inside the Framework that is more tested. This 
+will reduce the assembly's code size and number of lines of C# code. This could be preferable.
+
+It provides a way for you to write less code that requires less thought to maintain, at the price of runtime performance.
+
+List<T> has a GetEnumerator() method, separate from its implementation of IEnumerable<T>, which returns a mutable structure 
+type List<T>.Enumerator. In most contexts, that type will yield slightly better performance than would a standalone heap object. 
+Compilers which duck-type enumerators (as both C# and vb.net do) can take advantage of this when generating foreach code. If the List<T> 
+is cast to IEnumrable<T> before the foreach, the IEnumerable<T>.GetEnumerator() method will return a heap-allocated object, rendering 
+the optimization impossible.
+----
+The First extention method locates the first matching object. We access the First extension method in the System.Linq namespace. The 
+argument to First is a Predicate instance and it can be specified in the lambda syntax. The predicate instance is run until an instance 
+returns true.
+
+customers.First(x => x.ID == 5);  or  customers.First(new Func<Customer, bool>((Customer x) => x.ID == 5));
+
+FirstOrDefault is almost the same as First. The difference is how it handles empty collections. If a collection is empty, it returns 
+the default value for the type.
+
+	var list = new List<string>() { "Cat", "Rat", "Mouse" };
+	Console.WriteLine(list.FirstOrDefault());
+
+	// This query produces no results so FirstOrDefault is null.
+	var query1 = from element in list
+		    where element.Length > 10
+		    select element;
+	Console.WriteLine(query1.FirstOrDefault() == null);
+
+	// This query produces one result, so FirstOrDefault returns a string.
+	var query2 = from element in list
+		     where element.Length > 3
+		     select element;
+	Console.WriteLine(query2.FirstOrDefault());
+
+	// This array has no elements, so FirstOrDefault is zero.
+	int[] array = new int[0];
+	Console.WriteLine(array.FirstOrDefault());
+    }
+}
+---------------------------------------------------------------
+Events
+
+using System;
+
+namespace Event_Example
+{
+    //First we have to define a delegate that acts as a signature for the
+    //function that is ultimately called when the event is triggered.
+    //You will notice that the second parameter is of MyEventArgs type.
+    //This object will contain information about the triggered event.
+    public delegate void MyEventHandler(object source, MyEventArgs e);
+
+    //This is a class which describes the event to the class that recieves it.
+    //An EventArgs class must always derive from System.EventArgs.
+    public class MyEventArgs : EventArgs
+    {
+    	private string EventInfo;
+    	public MyEventArgs(string Text)
+    	{
+    		EventInfo = Text;
+    	}
+    	public string GetInfo()
+    	{
+    		return EventInfo;
+    	}
+    }
+
+    //This next class is the one which contains an event and triggers it
+    //once an action is performed. For example, lets trigger this event
+    //once a variable is incremented over a particular value. Notice the
+    //event uses the MyEventHandler delegate to create a signature
+    //for the called function.
+    public class MyClass
+    {
+    	public event MyEventHandler OnMaximum;
+    	private int i;
+    	private int Maximum = 10;
+    	public int MyValue
+    	{
+    		get
+    		{
+    			return i;
+    		}
+    		set
+    		{
+    			if(value <= Maximum)
+    			{
+    				i = value;
+    			}
+    			else
+    			{
+    				//To make sure we only trigger the event if a handler is present
+    				//we check the event to make sure it's not null.
+    				if(OnMaximum != null)
+    				{
+    					OnMaximum(this, new MyEventArgs("You've entered " +
+    						value.ToString() +
+    						", but the maximum is " +
+    						Maximum.ToString()));
+    				}
+    			}
+    		}
+    	}
+    }
+
+    class Program
+    {
+    	//This is the actual method that will be assigned to the event handler
+    	//within the above class. This is where we perform an action once the
+    	//event has been triggered.
+    	static void MaximumReached(object source, MyEventArgs e)
+    	{
+    		Console.WriteLine(e.GetInfo());
+    	}
+
+    	static void Main(string[] args)
+    	{
+    		//Now lets test the event contained in the above class.
+    		MyClass MyObject = new MyClass();
+    		MyObject.OnMaximum += new MyEventHandler(MaximumReached);
+
+    		for(int x = 0; x <= 15; x++)
+    		{
+    			MyObject.MyValue = x;
+    		}
+
+    		Console.ReadLine();
+    	}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

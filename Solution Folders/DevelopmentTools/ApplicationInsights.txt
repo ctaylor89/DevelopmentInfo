@@ -1,0 +1,2 @@
+Application Insights is a REST API that is located in Azure. Data is stored in a NOSQL database.
+It allows you to collect telemetry related to your applications 

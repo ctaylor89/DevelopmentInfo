@@ -1,0 +1,42 @@
+//********************************************  
+// Computer Science Definitions and terms
+//********************************************
+In computer programming, Cohesion is a measure of how strongly-related or focused the responsibilities of a 
+single module are. In object-oriented programming, if the methods that serve the given class tend to be 
+similar in many aspects the class is said to have high cohesion. In a highly-cohesive system, code readability
+and the likelihood of reuse is increased, while complexity is kept manageable.
+
+Cohesion is decreased if:
+* The responsibilities (methods) of a class have little in common.
+* Methods carry out many varied activities, often using coarsely-grained or unrelated sets of data.
+
+Disadvantages of low cohesion (or "weak cohesion") are:
+* Increased difficulty in understanding modules.
+* Increased difficulty in maintaining a system, because logical changes in the domain affect multiple modules, 
+  and because changes in one module require changes in related modules.
+* Increased difficulty in reusing a module because most applications won’t need the random set of operations 
+  provided by a module.
+
+Coupling is usually contrasted with cohesion. Low coupling often correlates with high cohesion, and vice versa.
+
+Coupling can be low (also loose and weak) or high (also tight and strong). Low coupling refers to a 
+relationship in which one module interacts with another module through a stable interface and does not need to 
+be concerned with the other module's internal implementation. With low coupling, a change in one module will 
+not require a change in the implementation of another module. Low coupling is often a sign of a well-structured 
+computer system, and when combined with high cohesion, supports the general goals of high readability and 
+maintainability.
+
+Systems that do not exhibit low coupling might experience the following developmental difficulties:
+* Change in one module forces a ripple of changes in other modules.
+* Modules are difficult to understand in isolation.
+* Modules are difficult to reuse or test because dependent modules must be included.
+Low coupling may also reduce performance, and a highly-coupled system is sometimes desirable to achieve 
+maximum efficiency.
+
+Data migration is the process of transferring data between storage types, formats, or computer systems. It 
+is a key consideration for any system implementation, upgrade, or consolidation.
+------------------------------------------------
+
+//********************************************  
+// Definitions and terms
+//********************************************

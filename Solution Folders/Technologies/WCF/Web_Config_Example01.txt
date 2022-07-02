@@ -1,0 +1,144 @@
+Configuring Services Using Configuration Files
+https://docs.microsoft.com/en-us/dotnet/framework/wcf/configuring-services-using-configuration-files
+
+
+<?xml version="1.0"?>
+<configuration>
+  <!--configSections must be the first element in the root-->	
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net"/>
+  </configSections>
+
+  <log4net>
+    <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+      <!-- Path to log to. Example:${ALLUSERSPROFILE}\ZOLL\RS3000 Communications Adapter\logs\RS3000CommunicationLog.txt-->
+      <file value="FileTransportServiceLog.txt" />
+      <appendToFile value="true" />
+      <rollingStyle value="Size" />
+      <maxSizeRollBackups value="10" />
+      <maximumFileSize value="6MB" />
+      <staticLogFileName value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n" />
+      </layout>
+    </appender>
+    <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender" >
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="Header" value="[Header]\r\n" />
+        <param name="Footer" value="[Footer]\r\n" />
+        <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n" />
+      </layout>
+    </appender>
+    <root>
+      <!--Minimum value to log-->
+      <level value="DEBUG" />
+      <appender-ref ref="RollingFileAppender" />
+      <appender-ref ref="ConsoleAppender" />
+    </root>
+  </log4net>
+
+  <system.web>
+    <compilation debug="true"/>
+  </system.web>
+
+  <appSettings>
+    <add key="user" value="DatumPipes" />
+    <add key="password" value="p@nth3rs" />
+    <add key="localFilePath" value="C:\_A\TransportInputFiles\TempFiles" />
+    <add key="genericClientKey" value="dfadee3a-f5b6-48c0-a46b-ab44a3851bc4" />
+    <add key="s3Repository" value="data.communitycentric.com" />
+    <add key="s3Path" value="TestDPInputFiles/" />
+    <add key="s3Key" value="AKIAJNKDMORFMJE46SPA" />
+    <add key="s3Secret" value="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" />
+  </appSettings>
+  
+  <!-- When deploying the service library project, the content of the config file must be added to the host's 
+  app.config file. System.Configuration does not support config files for libraries. -->
+  <system.serviceModel>
+    <client>
+      <!--Connection from this service to JobWebDev on Cassini-->
+      <!--
+      <endpoint address="http://localhost:8732/Design_Time_Addresses/JobsDatabaseService/Service1/"
+        binding="basicHttpBinding" bindingConfiguration="basicHttpBinding_FileTransport"
+        contract="JobsDBServiceReference.ServiceContract" name="BasicHttpBinding_EndPoint" />    
+      -->
+      
+      <!--Connection from this service to JobWeb on cloud server-->
+      
+      <endpoint address="https://jobweb.communitycentric.com/JobsDatabaseService.ServiceAPI.svc"
+        binding="basicHttpBinding" contract="JobsDBServiceReference.ServiceContract" name="BasicHttpBinding_EndPoint"
+        bindingConfiguration="BasicHttpBinding_SecurityService" />
+      
+    </client>
+    <bindings>
+      <basicHttpBinding>
+        <!--Used for local connection-->
+        <binding name="basicHttpBinding_FileTransport" sendTimeout="00:10:00"
+          maxBufferPoolSize="20000000" maxBufferSize="20000000" maxReceivedMessageSize="20000000">
+          <readerQuotas maxStringContentLength="20000000" maxArrayLength="20000000"
+            maxBytesPerRead="20000000" />
+        </binding>
+        
+        <binding name="BasicHttpBinding_Cassini" />
+      
+        <binding name="BasicHttpBinding_SecurityService">
+          <security mode="Transport">
+            <transport clientCredentialType="None" />
+          </security>        
+        </binding>
+      </basicHttpBinding>      
+    </bindings>
+  
+    <!—- Define the service endpoints. This section is optional in the new default configuration model in .NET Framework 4. --> 
+	<services>
+      <service name="FileTransportService.FileTransport">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration="basicHttpBinding_FileTransport" name="basicHttp_EndPoint" 
+                            contract="FileTransportService.IFileTransport">
+          <identity>
+            <dns/>
+          </identity>
+        </endpoint>
+        
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <!-- Cassini -->        
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:8732/Design_Time_Addresses/FileTransportService/Service1/" />
+          </baseAddresses>
+        </host>
+        
+        <!--IIS-->
+        <!--
+        <host>
+          <baseAddresses>
+            <add baseAddress=" " />
+          </baseAddresses>
+        </host>
+        -->
+      </service>
+    </services>
+  
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, 
+          set the value below to false and remove the metadata endpoint above before deployment -->
+          <serviceMetadata httpGetEnabled="True"/>
+          <serviceDebug includeExceptionDetailInFaults="True"/>
+          <!--  
+          <serviceCredentials>
+            <serviceCertificate findValue="Farm" storeLocation="LocalMachine" storeName="TrustedPeople"  x509FindType="FindBySubjectName"/>
+          </serviceCredentials>            
+          -->
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <protocolMapping>
+        <add binding="basicHttpsBinding" scheme="https" />
+    </protocolMapping>
+
+    <!-- Multiple Base Addresses>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+  </system.serviceModel>
+
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>

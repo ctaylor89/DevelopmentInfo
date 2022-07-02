@@ -1,0 +1,34 @@
+These are sample projects that I am practicing on to learn various technologies
+
+//********************************************  
+// Vehicle Management  C:\_samples\WebPractice\MVC\VehicleManagement
+//********************************************
+MVC 4, Entity Framework 6.01
+Did not save link to tutorial for Entity Framework that is used in this project. 
+No JS or css has been written for this project.
+12-18-2013 Project works on home desktop.
+
+//********************************************  
+// AsyncJavascript
+//********************************************
+MVC, Javascript
+Tutorial souce:   pluralsight-Recursive setTimeout pattern
+
+Three script files are referenced from Index.cshtml
+UtilityMine.js Implements the Recursive setTimeout Pattern. Makes async call to home controller to get JSON data.
+ListItems.js   Demonstrates the use of $.noConflict which causes jquery to not use the $ symbol.
+               Calls the buffer function in Buffer.js
+Buffer.js      Defines the buffer function.
+
+//********************************************  
+// EvalServiceLibrary C:\_samples\WCF\EvalServiceLibrary
+//********************************************
+WCF
+Tutorial souce: Pluralsight - WCF by example - Creating your first service\client
+
+//********************************************  
+// MvcpracticeHtml - C:\_samples\WebPractice\MvcPracticeHtml
+//********************************************
+HTML, CSS, MVC
+An application to practice page layout and css scripting.
+

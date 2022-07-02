@@ -1,0 +1,235 @@
+IN_AND_EXISTS_Keywords
+Key_Words
+Random_Notes
+Set_Logic
+Subqueries_
+Windowed_functions
+
+
+Using correlated subqueries
+https://www.geeksengine.com/database/subquery/correlated-subquery.php
+------------------------------------------------------------------------------
+characters_
+--------------- nvarchar vs varchar and N before a string ---------------------
+varchar: Variable-length, non-Unicode character data. The database collation determines which code page the data is stored on.
+
+nvarchar: Variable-length Unicode character data. Dependent on the database collation for comparisons.
+
+An nvarchar column can store any Unicode data. A varchar column is restricted to an 8-bit codepage. Some people think that varchar 
+should be used because it takes up less space. I believe this is not the correct answer. Codepage incompatabilities are a pain, and 
+Unicode is the cure for codepage problems. With cheap disk and memory nowadays, there is really no reason to waste time mucking 
+around with code pages anymore.
+
+All modern operating systems and development platforms use Unicode internally. By using nvarchar rather than varchar, you can avoid 
+doing encoding conversions every time you read from or write to the database. Conversions take time, and are prone to errors. And 
+recovery from conversion errors is a non-trivial problem.
+
+If you are interfacing with an application that uses only ASCII, I would still recommend using Unicode in the database. The OS and 
+database collation algorithms will work better with Unicode. Unicode avoids conversion problems when interfacing with other systems. 
+And you will be preparing for the future. And you can always validate that your data is restricted to 7-bit ASCII for whatever legacy 
+system you're having to maintain, even while enjoying some of the benefits of full Unicode storage.
+
+When passing a string in TSQL code, prefix it with an N to indicate string is in Unicode. This means that you are passing an NCHAR, 
+NVARCHAR or NTEXT value opposed to CHAR, VARCHAR or TEXT.
+Note that text, ntext, etc., are being deprecated (http://msdn.microsoft.com/en-us/library/ms187993.aspx)
+--------------------------------------------------------------------------------
+Numbers_
+https://academy.vertabelo.com/blog/understanding-numerical-data-types-sql/
+
+The exact numeric data types are TINYINT(0 - 255), SMALLINT(+/-32767), INT(+/-2.147m), BIGINT(+/- A Lot), NUMERIC(p,s)(+/-), 
+and DECIMAL(p,s)(+/-). 
+There is a small difference between NUMERIC(p,s) and DECIMAL(p,s) types. NUMERIC determines the exact precision and 
+scale. DECIMAL specifies only the exact scale; the precision can be equal or greater than what is specified by the coder.
+
+Also, be aware that many top database management systems have vendor-specific representations of numeric types (e.g. Oracle’s 
+NUMBER data type). These implementations usually do not differentiate between NUMERIC and DECIMAL types. (In Oracle, both 
+are the NUMBER type).
+
+The approximate numeric data types are FLOAT(p), REAL, and DOUBLE PRECISION. These represent real numbers, but they 
+are not represented as exact numbers in the database.
+--------------------------------------------------------------------------------
+IN_AND_EXISTS_Keywords
+
+Using EXISTS and NOT EXISTS in correlated subqueries
+EXISTS and NOT EXISTS are used with a subquery in a WHERE clause to examine if the result of the subquery is TRUE or 
+FALSE. The true or false value is then used to restrict the rows from the outer query result. Because EXISTS and NOT EXISTS 
+only return TRUE or FALSE in the subquery, the SELECT list in the subquery does not need to contain actual column name(s). 
+Normally use SELECT * (asterisk) is sufficient but you can use SELECT column1, column2, ... or anything else. It does 
+not make any difference.
+
+Because EXISTS and NOT EXISTS are used with correlated subqueries, the subquery executes once for every row in the outer 
+query. In other words, for each row in outer query, by using information from the outer query, the subquery checks if it 
+returns TRUE or FALSE.
+
+The EXISTS condition in SQL is used to check whether the result of a correlated nested query is empty (contains no tuples(rows))
+or not. The result of EXISTS is a boolean value True or False. It can be used in a SELECT, UPDATE, INSERT or DELETE statement.
+---
+EXISTS Is Faster in Performance than IN. If most of the filter criteria is in a subquery then better to use IN and If 
+most of the filter criteria is in main query then better to use EXISTS. If you are using the IN operator, the SQL 
+engine will scan all records fetched from the inner query.
+
+“Exists” lets you compare more values between the tables than just seeing if a key matches.
+
+“Not In” has a nasty gotcha, where it will always exclude everything if there’s a null in the subquery results. 
+If you write one, or see it in code you’re reviewing, make sure the contents are something like “select <primary key> 
+from…”, where you’re positive it will never include a null. Or just stick to “not exists”.
+
+When you have a table in an IN statement it makes more sense to use a join, but mostly it shouldn't matter. The query 
+optimiser should return the same plan either way. In some implementations (mostly older, such as Microsoft SQL Server 
+2000) in queries will always get a nested join plan, while join queries will use nested, merge or hash as appropriate. 
+More modern implementations are smarter and can adjust the plan even when IN is used.
+---
+IN:
+	Works on a List result set
+	Doesn’t work on subqueries resulting in Virtual tables with multiple columns
+	Compares every value in the result list
+	Performance is comparatively SLOW for larger resultset of subquery
+EXISTS:
+	Works on Virtual tables
+	Is used with correlated queries
+	Exits comparison when match is found
+	Performance is comparatively FAST for larger resultset of subquery
+---
+EXISTS will tell you whether a query returned any results. e.g.:
+	SELECT * 
+	FROM Orders o 
+	WHERE EXISTS (
+		SELECT * 
+		FROM Products p 
+		WHERE p.ProductNumber = o.ProductNumber)
+
+IN is used to compare one value to several, and can use literal values, like this:
+	SELECT * 
+	FROM Orders 
+	WHERE ProductNumber IN (1, 10, 100)
+
+You can also use query results with the IN clause, like this:
+	SELECT * 
+	FROM Orders 
+	WHERE ProductNumber IN (
+		SELECT ProductNumber 
+		FROM Products 
+		WHERE ProductInventoryQuantity > 0)
+--------------------------------------------------------------------------------
+Key_Words
+
+EXCEPT - This operator is used to return all rows in the first SELECT statement that are not returned by the second SELECT 
+statement. Each SELECT statement will define a dataset. The EXCEPT operator will retrieve all records from the first 
+dataset and then remove from the results all records from the second dataset. Note: There is no difference between Oracle 
+MINUS and SQL Server EXCEPT.
+
+SELECT contact_id, last_name, first_name
+FROM contacts
+WHERE last_name = 'Johnson'
+EXCEPT
+SELECT customer_id, last_name, first_name
+FROM customers
+WHERE customer_id > 45;
+--------------------------------------------------------------------------------
+Random_Notes
+This select statement creates a Cross Walk based on the ID fields where the same people fields reside in both 
+tables but the id's are different. Notice that AND is used in the join clause
+    SELECT Table1.ID AS Table1ID, Table2.ID AS Table2ID
+    FROM Table1
+    INNER JOIN Table2 ON Table1.Name = Table2.Name 
+      AND Table1.Address = Table2.Address 
+      AND Table1.Zip = Table2.Zip 
+      AND Table1.Phone = Table2.Phone
+---
+Running the below queries causes the below error messages:
+	SELECT empid, orderdate, orderid, custid
+	FROM Sales.Orders o2
+	where MAX(orderdate) = orderdate
+	order by empid desc;
+
+"An aggregate may not appear in the WHERE clause unless it is in a subquery contained in a HAVING clause or a select list, 
+and the column being aggregated is an outer reference."
+---
+	SELECT empid, orderdate, orderid, custid
+	FROM Sales.Orders o2
+	group by empid
+	having  MAX(orderdate) = orderdate
+	order by empid desc;
+
+"Column 'Sales.Orders.orderdate' is invalid in the HAVING clause because it is not contained in either an aggregate function or the GROUP BY clause."
+---
+The WHERE clause can contain an IF or CASE statement:
+
+WHERE
+    IF IsNumeric(@OrderNumber) = 1
+        OrderNumber = @OrderNumber					// Result: WHERE OrderNumber = @OrderNumber
+    ELSE
+        OrderNumber LIKE '%' + @OrderNumber + '%'   // Result: WHERE OrderNumber LIKE '%' + @OrderNumber + '%'
+
+WHERE OrderNumber LIKE
+  CASE WHEN IsNumeric(@OrderNumber) = 1 THEN 
+    @OrderNumber 
+  ELSE
+    '%' + @OrderNumber
+  END
+---
+cross join	https://www.sqlservertutorial.net/sql-server-basics/sql-server-cross-join/
+--------------------------------------------------------------------------------
+Set_Logic
+
+EXCEPT filters the DISTINCT values from the left-hand table that do not appear in the right-hand table. It's essentially the same as 
+doing a NOT EXISTS with a DISTINCT clause. It also expects the two tables (or subset of columns from the tables) to have the same 
+number of columns in the left and right hand side of the query. Set operators treat NULLs as equal.
+
+Compared to NOT IN: NOT IN does not filter for DISTINCT values and returns all values from the left-hand table that do not appear in 
+the right-hand table. If the right-hand table contains a NULL in the values being filtered by NOT IN, an empty result set is returned, 
+potentially giving unexpected results.
+
+EXAMPLE
+
+NOT IN requires you compare a single column from one table with a single column from another table or subquery.
+
+--------------------------------------------------------------------------------
+Subqueries_
+
+A correlated subquery is a subquery that uses the values of the outer query. In other words, the correlated subquery depends on the 
+outer query for its values. Because of this dependency, a correlated subquery cannot be executed independently as a simple subquery.
+A correlated subquery is executed repeatedly, once for each row evaluated by the outer query.
+
+SELECT product_name, list_price, category_id
+FROM production.products p1
+WHERE list_price IN (
+        SELECT MAX (p2.list_price)
+        FROM production.products p2
+        WHERE p2.category_id = p1.category_id
+        GROUP BY p2.category_id
+    )
+ORDER BY category_id, product_name;
+
+A correlated subquery is one way of reading every row in a table and comparing values in each row against related data. 
+It is used whenever a subquery must return a different result or set of results for each candidate row considered by the 
+main query. In other words, you can use a correlated subquery to answer a multipart question whose answer depends on the 
+value in each row processed by the parent statement. Note: A candidate row is a row from a table or subquery that could 
+potentially be returned in the result set. 
+
+Nested Subqueries Versus Correlated Subqueries :
+With a normal nested subquery, the inner SELECT query runs first and executes once, returning values to be used by the 
+main query. A correlated subquery, however, executes once for each candidate row considered by the outer query. In other 
+words, the inner query is driven by the outer query.
+NOTE : You can also use the ANY and ALL operator in a correlated subquery.
+--------------------------------------------------------------------------------
+Windowed_functions
+
+Windowed functions can only appear in the SELECT or ORDER BY clauses.
+
+-- ROW_NUMBER
+select orderid, orderdate, custid, empid, 
+  row_number() over (order by orderid, orderdate) as rownum
+from Sales.Orders;
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------

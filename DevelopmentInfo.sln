@@ -1,0 +1,353 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSamplesRun", "RunCodeSamples\CodeSamplesRun.csproj", "{06ED85EA-D8F7-4458-8C04-F43634482746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSamples", "CodeSamples\CodeSamples.csproj", "{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormSmp1", "FormSmp1\FormSmp1.csproj", "{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeConsole", "PracticeConsole\PracticeConsole.csproj", "{18506E71-8004-43D4-8A0A-26C2D7EAC216}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fiddle", "Fiddle", "{AFCB6355-9420-4B91-A4B9-B7E36AC40F4F}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Fiddle\csharpLinq.txt = Solution Folders\Fiddle\csharpLinq.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General Info", "General Info", "{297EDBB7-AC5F-432E-A1FB-2B9A5A5E170E}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\General Info\AxoSoftOnTime.txt = Solution Folders\General Info\AxoSoftOnTime.txt
+		Solution Folders\General Info\Definitions.txt = Solution Folders\General Info\Definitions.txt
+		Solution Folders\General Info\DesignPatterns.txt = Solution Folders\General Info\DesignPatterns.txt
+		Solution Folders\General Info\GitHub.txt = Solution Folders\General Info\GitHub.txt
+		Solution Folders\General Info\Notes.txt = Solution Folders\General Info\Notes.txt
+		Solution Folders\General Info\ProfessinalAdvice.cpp = Solution Folders\General Info\ProfessinalAdvice.cpp
+		Solution Folders\General Info\VisualStudioNotes.txt = Solution Folders\General Info\VisualStudioNotes.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Home Project Notes", "Home Project Notes", "{77B1B0EB-EEBF-4923-B24E-327405D3E1A5}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Project Notes\HomeProjects.txt = Solution Folders\Project Notes\HomeProjects.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Technologies", "Technologies", "{96AF24B0-902C-48DE-B3F0-38328FCB6192}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\AWS_Development.txt = Solution Folders\Technologies\AWS_Development.txt
+		Solution Folders\Technologies\DataTransformations.txt = Solution Folders\Technologies\DataTransformations.txt
+		Solution Folders\Technologies\DeveloperUtilitys.cpp = Solution Folders\Technologies\DeveloperUtilitys.cpp
+		Solution Folders\Technologies\EntityFramework.cpp = Solution Folders\Technologies\EntityFramework.cpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{FD6AC3A8-9CC2-40DC-937C-F892315FEB74}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\CSharp\CSharpFiddle.txt = Solution Folders\Technologies\CSharp\CSharpFiddle.txt
+		Solution Folders\Technologies\CSharp\CSharpNotes.txt = Solution Folders\Technologies\CSharp\CSharpNotes.txt
+		Solution Folders\Technologies\CSharp\CutPasteC#.cpp = Solution Folders\Technologies\CSharp\CutPasteC#.cpp
+		Solution Folders\Technologies\CSharp\DesignPatterns.docx = Solution Folders\Technologies\CSharp\DesignPatterns.docx
+		Solution Folders\Technologies\CSharp\ExamplesC#.cpp = Solution Folders\Technologies\CSharp\ExamplesC#.cpp
+		Solution Folders\Technologies\CSharp\LinqNotes.txt = Solution Folders\Technologies\CSharp\LinqNotes.txt
+		Solution Folders\Technologies\CSharp\LinqToXML.txt = Solution Folders\Technologies\CSharp\LinqToXML.txt
+		Solution Folders\Technologies\CSharp\Threading.txt = Solution Folders\Technologies\CSharp\Threading.txt
+		Solution Folders\Technologies\CSharp\TPL.txt = Solution Folders\Technologies\CSharp\TPL.txt
+		Solution Folders\Technologies\CSharp\UnitTesting.txt = Solution Folders\Technologies\CSharp\UnitTesting.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TSQL", "TSQL", "{F90F7A87-C403-468D-8C3D-E08A01DFC21B}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\TSQL\SQL_ServerNotes.txt = Solution Folders\Technologies\TSQL\SQL_ServerNotes.txt
+		Solution Folders\Technologies\TSQL\TSQL.cpp = Solution Folders\Technologies\TSQL\TSQL.cpp
+		Solution Folders\Technologies\TSQL\TSQL_DataTypes.docx = Solution Folders\Technologies\TSQL\TSQL_DataTypes.docx
+		Solution Folders\Technologies\TSQL\TSQL_Notes.txt = Solution Folders\Technologies\TSQL\TSQL_Notes.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C++", "C++", "{6F1691E6-3D9C-4E64-9F06-8A942AC832B0}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\C++\CutPasteCPP1.cpp = Solution Folders\Technologies\C++\CutPasteCPP1.cpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{72114B71-BE75-4D96-BE95-C579FD9BB845}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\Database\CutPasteDB.cpp = Solution Folders\Technologies\Database\CutPasteDB.cpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{DA3AA080-B8ED-435D-A656-91AE5A3B2C82}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\WCF\WCFInfo.txt = Solution Folders\Technologies\WCF\WCFInfo.txt
+		Solution Folders\Technologies\WCF\WCF_Examples.txt = Solution Folders\Technologies\WCF\WCF_Examples.txt
+		Solution Folders\Technologies\WCF\Web_Config_Example01.txt = Solution Folders\Technologies\WCF\Web_Config_Example01.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormAppDemo", "WebFormAppDemo\WebFormAppDemo.csproj", "{4850F6E2-6CDE-44CA-A269-EE273028BE18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{45BEEC6B-D7B0-4646-A07F-D646ACA0A0EC}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\WPF\CutPasteXAML.cpp = Solution Folders\Technologies\WPF\CutPasteXAML.cpp
+		Solution Folders\Technologies\WPF\WPF_Notes.txt = Solution Folders\Technologies\WPF\WPF_Notes.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScreenCaptures", "ScreenCaptures", "{B6260B40-0237-4214-AA65-E1D9A23E7DAD}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\ScreenCaptures\PluralSightWCF.doc = Solution Folders\ScreenCaptures\PluralSightWCF.doc
+		Solution Folders\ScreenCaptures\PuralSightWPF.doc = Solution Folders\ScreenCaptures\PuralSightWPF.doc
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstract.csproj", "{4577B6BC-258C-42CA-A932-75FCC56667ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfPodServiceLibrary", "WcfPodServiceLibrary\WcfPodServiceLibrary.csproj", "{C0294726-1DB3-42F8-B81D-94158F8F3F58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfPodServiceApp", "WcfPodServiceApp\WcfPodServiceApp.csproj", "{E3077D8C-E829-4E53-AC91-3E11B415C9BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FlashCardsKindle", "FlashCardsKindle", "{523C3FD5-E424-48AE-A4ED-DF748483D0E2}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Project Notes\FlashCardsKindle\FlashCard_.txt = Solution Folders\Project Notes\FlashCardsKindle\FlashCard_.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{9538679D-88B3-41F1-BFBF-C1605EAC8784}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFramework", "{59229D1D-76E3-4CF8-B7FC-AC8F5C960E23}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\EntityFramework\EntityFrameWorkNotes.txt = Solution Folders\Technologies\EntityFramework\EntityFrameWorkNotes.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{F5DB7C06-E8C7-4FBC-B45F-3807C35B0E61}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\TSQL\Examples\AttachAdeventureWorks2012DB.sql = Solution Folders\Technologies\TSQL\Examples\AttachAdeventureWorks2012DB.sql
+		Solution Folders\Technologies\TSQL\Examples\Constraints.sql = Solution Folders\Technologies\TSQL\Examples\Constraints.sql
+		Solution Folders\Technologies\TSQL\Examples\CopyTableToTable.sql = Solution Folders\Technologies\TSQL\Examples\CopyTableToTable.sql
+		Solution Folders\Technologies\TSQL\Examples\CreateTableSampleTrina.sql = Solution Folders\Technologies\TSQL\Examples\CreateTableSampleTrina.sql
+		Solution Folders\Technologies\TSQL\Examples\Create_ModTable.sql = Solution Folders\Technologies\TSQL\Examples\Create_ModTable.sql
+		Solution Folders\Technologies\TSQL\Examples\DatesTimes.sql = Solution Folders\Technologies\TSQL\Examples\DatesTimes.sql
+		Solution Folders\Technologies\TSQL\Examples\Debugging.sql = Solution Folders\Technologies\TSQL\Examples\Debugging.sql
+		Solution Folders\Technologies\TSQL\Examples\MergeStatement.sql = Solution Folders\Technologies\TSQL\Examples\MergeStatement.sql
+		Solution Folders\Technologies\TSQL\Examples\PerformanceQuerys.sql = Solution Folders\Technologies\TSQL\Examples\PerformanceQuerys.sql
+		Solution Folders\Technologies\TSQL\Examples\PracticeFunctions.sql = Solution Folders\Technologies\TSQL\Examples\PracticeFunctions.sql
+		Solution Folders\Technologies\TSQL\Examples\PracticeIndexes.sql = Solution Folders\Technologies\TSQL\Examples\PracticeIndexes.sql
+		Solution Folders\Technologies\TSQL\Examples\PracticeMultiTableSelects.sql = Solution Folders\Technologies\TSQL\Examples\PracticeMultiTableSelects.sql
+		Solution Folders\Technologies\TSQL\Examples\PracticeQuerys.sql = Solution Folders\Technologies\TSQL\Examples\PracticeQuerys.sql
+		Solution Folders\Technologies\TSQL\Examples\PracticeTriggers.sql = Solution Folders\Technologies\TSQL\Examples\PracticeTriggers.sql
+		Solution Folders\Technologies\TSQL\Examples\SQLNotes.txt = Solution Folders\Technologies\TSQL\Examples\SQLNotes.txt
+		Solution Folders\Technologies\TSQL\Examples\SQL_Practice1.sql = Solution Folders\Technologies\TSQL\Examples\SQL_Practice1.sql
+		Solution Folders\Technologies\TSQL\Examples\SQL_Practice2.sql = Solution Folders\Technologies\TSQL\Examples\SQL_Practice2.sql
+		Solution Folders\Technologies\TSQL\Examples\StoredProcedures.sql = Solution Folders\Technologies\TSQL\Examples\StoredProcedures.sql
+		Solution Folders\Technologies\TSQL\Examples\StoredProcExample01.sql = Solution Folders\Technologies\TSQL\Examples\StoredProcExample01.sql
+		Solution Folders\Technologies\TSQL\Examples\TableOperations.sql = Solution Folders\Technologies\TSQL\Examples\TableOperations.sql
+		Solution Folders\Technologies\TSQL\Examples\UtlityStatements.sql = Solution Folders\Technologies\TSQL\Examples\UtlityStatements.sql
+		Solution Folders\Technologies\TSQL\Examples\VideoCourses.sql = Solution Folders\Technologies\TSQL\Examples\VideoCourses.sql
+		Solution Folders\Technologies\TSQL\Examples\VideoWriteFastQueries.sql = Solution Folders\Technologies\TSQL\Examples\VideoWriteFastQueries.sql
+		Solution Folders\Technologies\TSQL\Examples\ViewsPractice.sql = Solution Folders\Technologies\TSQL\Examples\ViewsPractice.sql
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreWebApp", "CoreWebApp\CoreWebApp.csproj", "{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Development Tools", "Development Tools", "{9693650C-57CF-4E81-A8B2-03D683FC5817}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\DevelopmentTools\ApplicationInsights.txt = Solution Folders\DevelopmentTools\ApplicationInsights.txt
+		Solution Folders\DevelopmentTools\PowerShell.txt = Solution Folders\DevelopmentTools\PowerShell.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TSQLFundamentals2012", "TSQLFundamentals2012", "{C70DA016-F8C2-4462-9F07-ADBF7BD5DD5B}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch01 Querying and Programming.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch01 Querying and Programming.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch05 Solutions Table Expressions.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch05 Solutions Table Expressions.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch05Table Expressions.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch05Table Expressions.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch06 Exercises Set Operators.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch06 Exercises Set Operators.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch06 Set Operators.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch06 Set Operators.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch06 Solutions Set Operators.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Ch06 Solutions Set Operators.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 02 - Single-Table Queries - Exercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 02 - Single-Table Queries - Exercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 02 - Single-Table Queries - Solutions.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 02 - Single-Table Queries - Solutions.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 02 - Single-Table Queries.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 02 - Single-Table Queries.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 03 - Joins - Exercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 03 - Joins - Exercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 03 - Joins - Solutions.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 03 - Joins - Solutions.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 03 - Joins.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 03 - Joins.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 04 - Subqueries - Exercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 04 - Subqueries - Exercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 04 - Subqueries - Solutions.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 04 - Subqueries - Solutions.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 04 - Subqueries.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 04 - Subqueries.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 05 - Table Expressions - Exercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 05 - Table Expressions - Exercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 07 - Beyond the Fundamentals of Querying - Exercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 07 - Beyond the Fundamentals of Querying - Exercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 07 - Beyond the Fundamentals of Querying - Solutions.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 07 - Beyond the Fundamentals of Querying - Solutions.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 07 - Beyond the Fundamentals of Querying.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 07 - Beyond the Fundamentals of Querying.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 08 - Data Modification - Exercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 08 - Data Modification - Exercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 08 - Data Modification - Solutions.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 08 - Data Modification - Solutions.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 08 - Data Modification.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 08 - Data Modification.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 09 - Transactions and Concurrency - Exercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 09 - Transactions and Concurrency - Exercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 09 - Transactions and Concurrency.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 09 - Transactions and Concurrency.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 10 - Programmable Objects.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 10 - Programmable Objects.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\orders.txt = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\orders.txt
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\TSQL2012.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\TSQL2012.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyExercises", "MyExercises", "{CCFFF22D-2611-4580-90F5-A1695F0F3957}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch02MyExercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch02MyExercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch03MyExercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch03MyExercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch04MyExercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch04MyExercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch04MySubqueries.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch04MySubqueries.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch05MyExercisesTable Expressions.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch05MyExercisesTable Expressions.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch06MyExercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\Ch06MyExercises.sql
+		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\scratch.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\MyExercises\scratch.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFrameworkProjects", "EntityFrameworkProjects", "{E4F01E6A-3244-4E7A-8107-A548CC6FABF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstPractice", "CodeFirstPractice\CodeFirstPractice.csproj", "{3B85970F-B145-48E5-873F-A6D9897FF4A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Debug|x86.ActiveCfg = Debug|x86
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Debug|x86.Build.0 = Debug|x86
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Release|Any CPU.ActiveCfg = Release|x86
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Release|Mixed Platforms.Build.0 = Release|x86
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Release|x86.ActiveCfg = Release|x86
+		{06ED85EA-D8F7-4458-8C04-F43634482746}.Release|x86.Build.0 = Release|x86
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{09EF09A3-15AC-464C-82E7-4BF0B6E9C684}.Release|x86.ActiveCfg = Release|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{888B6AE3-74F3-4A01-9FC1-7FE0B04432C7}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C9D94B64-5729-4CEC-B77F-CDEEC9DE341E}.Release|x86.ActiveCfg = Release|Any CPU
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|x86.ActiveCfg = Debug|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Debug|x86.Build.0 = Debug|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|Any CPU.ActiveCfg = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|Mixed Platforms.Build.0 = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|x86.ActiveCfg = Release|x86
+		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|x86.Build.0 = Release|x86
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|x86.ActiveCfg = Release|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C0294726-1DB3-42F8-B81D-94158F8F3F58}.Release|x86.ActiveCfg = Release|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E3077D8C-E829-4E53-AC91-3E11B415C9BA}.Release|x86.ActiveCfg = Release|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9538679D-88B3-41F1-BFBF-C1605EAC8784}.Release|x86.ActiveCfg = Release|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Debug|x86.Build.0 = Debug|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Release|x86.ActiveCfg = Release|Any CPU
+		{EB712BA7-2851-4EF2-AB5E-F7C21B57C617}.Release|x86.Build.0 = Release|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Debug|x86.Build.0 = Debug|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Release|x86.ActiveCfg = Release|Any CPU
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FD6AC3A8-9CC2-40DC-937C-F892315FEB74} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
+		{F90F7A87-C403-468D-8C3D-E08A01DFC21B} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
+		{6F1691E6-3D9C-4E64-9F06-8A942AC832B0} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
+		{72114B71-BE75-4D96-BE95-C579FD9BB845} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
+		{DA3AA080-B8ED-435D-A656-91AE5A3B2C82} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
+		{45BEEC6B-D7B0-4646-A07F-D646ACA0A0EC} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
+		{523C3FD5-E424-48AE-A4ED-DF748483D0E2} = {77B1B0EB-EEBF-4923-B24E-327405D3E1A5}
+		{59229D1D-76E3-4CF8-B7FC-AC8F5C960E23} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
+		{F5DB7C06-E8C7-4FBC-B45F-3807C35B0E61} = {F90F7A87-C403-468D-8C3D-E08A01DFC21B}
+		{C70DA016-F8C2-4462-9F07-ADBF7BD5DD5B} = {F90F7A87-C403-468D-8C3D-E08A01DFC21B}
+		{CCFFF22D-2611-4580-90F5-A1695F0F3957} = {C70DA016-F8C2-4462-9F07-ADBF7BD5DD5B}
+		{3B85970F-B145-48E5-873F-A6D9897FF4A4} = {E4F01E6A-3244-4E7A-8107-A548CC6FABF6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F826286-BB0E-4C31-B721-7DBAA2852733}
+	EndGlobalSection
+EndGlobal

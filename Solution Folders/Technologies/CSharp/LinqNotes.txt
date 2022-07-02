@@ -1,0 +1,259 @@
+
+Looks like a good tutorial
+https://www.codeproject.com/Articles/286255/Using-LINQ-Queries
+
+Write LINQ queries in C#
+
+Locating_duplicate_values
+https://docs.microsoft.com/en-us/dotnet/csharp/linq/write-linq-queries
+
+----------------------------------------------------------------------------------
+Three ways in which you can write a LINQ query in C#:
+    Use query syntax. Use method syntax(chaining methods together). Use a combination of query syntax and method syntax.
+The recommended way to write most queries is to use query syntax to create query expressions.
+
+// Using a query expression with method syntax
+int numCount1 =
+    (from num in numbers1
+     where num < 3 || num > 7
+     select num).Count();               // .Count() is the method sytax
+
+----------------------------------------------------------------------------------
+Comprehension and Lambda queries. 
+The select operator is optional in lambda when not doing a projection.
+Many lambda queries have no comprehension equivalent.
+Comprehension queries must end in a select or group clause.
+----------------------------------------------------------------------------------
+
+When "into" is used after either a "group x by y" or "select x" clause, it’s called a query continuation. (Note that "join … into" 
+clauses are not query continuations; they’re very different.) A query continuation effectively says, "I’ve finished one query, 
+and I want to do another one with the results… but all in one expression." This query:
+
+var query = from x in y 
+            // other query clauses here 
+            select x.SomeProperty into z 
+            // other query clauses here (involving z) 
+            select z.Result;
+
+Has *exactly* the same behaviour as this (leaving aside the visible local variable):
+
+var tmp = from x in y 
+          // other query clauses here 
+          select x.SomeProperty;
+var query = from z in tmp 
+            // other query clauses here (involving z) 
+            select z.Result;
+
+Note that the query continuation starts a clean slate in terms of range variables after the "into z" part, x is not in scope.
+
+http://www.codeproject.com/Articles/231164/Into-and-let-in-LINQ-Let-vs-Into
+The into keyword allows creating a temporary variable to store the results of a group, join, or select clause into a new variable.
+var em = from e in emp
+	group e by new{ e.DeptId }
+	into gEmp
+	where gEmp.Count() > 1
+	select new
+	{ 
+		gEmp.Key.DeptId, 
+		salary = gEmp.Sum(t = > t.Salary) 
+	};
+
+In the above query, after applying into on grouping, it creates an IGrouping type gEmp variable, which is used to apply the next filter.
+
+Note: into is used when you want to perform an operation on grouped data.
+
+The Let keyword allows storing the results of a query which can be used in a subsequent query. It creates a new variable and initializes 
+it with the result of the expression.
+	  var em = from e in emp
+			group e by new{ e.Salary, e.Id }
+			into gEmp
+			let avgsal = (gEmp.Sum(t => t.Salary) / gEmp.Count())
+			where gEmp.Key.Salary == avgsal
+			select new{ gEmp.Key.Salary, gEmp.Key.Id };
+
+The above query is used to find out employee(s) having salary more than avgSalary.The Let keyword allows to create a new variable avgsal that 
+is used in further operations.
+
+Let vs.Into - Most people find it difficult to decide which one to use when designing a LINQ query.
+into – Hides the previous variable when used in a query, as you see in the above example. Which means its hides the previous range variable and 
+	   creates a temporary range variable which you can use in further operations. Most commonly used in grouping.
+
+let – Doesn’t hide the previous variable and creates a new variable. Which means you create a new variable and you can also use the previous 
+      variable, so you can use both in further operations.
+
+Grouping transforms a sequence into a sequence of groups based on some criteria.
+Grouping in LINQ is different than in SQL. In SQL you get a flat recordset with one record for each field you are grouping on. All the
+other fields that are specific to a single entity must be aggregated somehow.
+
+The key to understanding the C# query syntax is that you don’t get back a flat structure from group by, as you would with SQL. You actually 
+get an “IEnumerable” of “IGrouping” objects.
+
+The IGrouping interface has only one property, “Key”, and implements IEnumerable<TElement>. Again, TElement is usually inferred. “Key” is typed 
+as the generic type you define for TKey.
+----------------------------------------------------------------------------------
+Extension methods are a feature who's main purpose is to be used with LINQ, although they can also be useful in hundreds of different scenarios.
+Extension methods are special methods that can extend the data type they are applied to.The most important thing is that you can
+extend existing types even if you do not have the source code and without the need to rebuild class libraries.You can extend.NET built - in types.
+
+.NET Built-in extension methods accomplish three main objectives : converting types into other types, data filtering and parsing.The most common
+built-in.NET extension methods are provided by the System.Linq.Enumerable class.
+
+------------
+Aggregate – performs an operation on each element of the list taking into account the operations that have gone before.That is to say it performs
+the action on the first and second element and carries the result forward.Then it operates on the previous result and the third element and carries
+forward.etc.You can also start with a seed value by using one of the overloads.The first element is applied first to the seed value.
+
+Example 1. Summing numbers
+
+var nums = new[]{1, 2, 3, 4};
+var sum = nums.Aggregate((a, b) = > a + b);
+Console.WriteLine(sum); // output: 10 (1+2+3+4)
+------------
+
+// Where we have two collections - singers and concerts
+var singerConcerts = singers.SelectMany(s => concerts
+							.Where(c => c.SingerId == s.Id)
+							.Select(c => new { Year = c.Year, ConcertCount = c.ConcertCount, Name = string.Concat(s.FirstName, " ", s.LastName) }));
+ 
+------------
+
+LINQ to Objects is mainly built upon a single class: Enumerable.  The Enumerable class is a static class that defines a large set of extension methods, 
+nearly all of which work upon an IEnumerable<T>.  Many of these methods return a new IEnumerable<T>, allowing the methods to be chained together into 
+a fluent style interface.  This is what allows us to write statements that chain together, and lead to the nice declarative programming model of LINQ.
+
+Most data-oriented LINQ providers are built upon an implementation of IQueryable<T>, which allows the database provider to turn a LINQ statement into 
+an underlying SQL query, to be performed directly on the remote database.
+
+PLINQ is similar, but instead of being built upon the Enumerable class, most of PLINQ is built upon a new static class: ParallelEnumerable.  When using 
+PLINQ, you typically begin with any collection which implements IEnumerable<T>, and convert it to a new type using an extension method defined on 
+ParallelEnumerable: AsParallel().  This method takes any IEnumerable<T>, and converts it into a ParallelQuery<T>, the core class for PLINQ.  There is a 
+similar ParallelQuery class for working with non-generic IEnumerable implementations.
+
+double min = collection
+                .AsParallel()
+                .Select(item => item.SomeOperation())
+                .Where(item => item.SomeProperty > 6 && item.SomeProperty < 24)
+                .Min(item => item.PerformComputation());
+
+// If SomeOperation() is not thread safe, we could just as easily do:
+
+double min = collection
+                .Select(item => item.SomeOperation())
+                .AsParallel()
+                .Where(item => item.SomeProperty > 6 && item.SomeProperty < 24)
+                .Min(item => item.PerformComputation());
+
+http://reedcopsey.com/2010/01/28/parallelism-in-net-part-7-some-differences-between-plinq-and-linq-to-objects/
+------------
+Linq Extension Methods of the Enumerable class
+https://msdn.microsoft.com/en-us/library/system.linq.enumerable(v=vs.100).aspx
+
+The most common extension methods are the LINQ standard query operators that add query functionality to the existing System.Collections.IEnumerable 
+and System.Collections.Generic.IEnumerable<T> types. To use the standard query operators, first bring them into scope with a using System.Linq 
+directive. Then any type that implements IEnumerable<T> appears to have instance methods such as GroupBy, OrderBy, Average, and so on.
+
+These work on Lists and arrays.
+Using System.Linq;
+
+All – Checks if all elements within a sequence satisfy a condition
+Any – Checks if any elements within a sequence satisfy a condition
+AsEnumerable – Converts a sequence of elements into an IEnumerable(Of T).
+Average – Retrieves the result of the average calculation from the members of a sequence.
+
+Cast – Performs the conversion from an IEnnumerable(Of T)into the specified type.It is generally used 
+       explicitly when the compiler cannot infer the appropriate type.
+Concat – Returns the concatenation of two sequences.
+Contains – Checks if a sequence contains the specified item.
+Count – Returns the number of items in a sequence.
+
+DefaultIfEmpty – Returns the elements of the specified sequence or the type parameters default value in a singleton collection if the sequence is empty.
+Distinct – Ensures that no duplicates are retrieved from a sequence or removes duplicates from the sequence.
+
+ElementAt – Obtains the object in the sequence at the specified index.
+ElementAtOrDefault – Like ElementAt but returns a default value if the index is wrong.
+Except – Given to sequences, creates a new sequence with elements from the first sequence that are not also in the second one.
+
+First - Gets the first element of a sequence.
+FirstOrDefault - Like first but returns a default value if the first element is not what you are searching for.
+GroupBy - Given a criteria, groups elements of a sequence into another sequence.
+GroupJoin - Given a criteria, joins elements from two sequences into one sequence.
+
+Intersect - Creates a sequence with common elements from two sequences.
+Join - Join elements from two sequences based on specific criteria, such as equality.
+
+Last - Retrieves the last item in a sequence.
+LastOrDefault - Like last but returns a default value if the specified instance is not found.
+Long Count - Returns the number of items in a sequence under the form of long type.
+
+Max - Retrieves the highest value in a sequence.
+Min - Retrieves the minimum value in a sequence.
+
+OfType - Folders an IEnumerable collection according to the specified type.
+OrderBy - Orders elements in a sequence using the specified criteria.
+OrderByDescending - Orders elements in a sequence using the specified criteria in a descending order.
+
+Reverse - Reverses the order of items in a sequence.
+Select - Puts an item into a sequence for Aquarius.
+SelectMany - puts more than one item into a sequence for queries.
+SequenceEquals - Determines whether two sequences are equal by comparing the elements by using the default equality comparer for their type or using a specified comparer.
+
+Single - Returns the only item from a sequence that matches the specified criteria.
+SingleOrDefault - Like single but returns a default value if the specified item could not be found.
+
+Skip - When creating a new sequence, skips the specified number of items and returns the remaining items from the starting sequence.
+SkipWhile - Like Skip but only while the specified condition is satisfied.
+
+Sum - In a sequence of numeric values, returns the sum of numbers. The method can be used on objects that implement IEnumerable with a 
+      type of decimal, double, int or long. The Sum method has some overhead that will make it slower than a simple for-loop. It uses 
+	  a foreach-loop, which can produce slower execution on value types.
+
+Take - Returns the specified number of items starting from the beginning of a sequence.
+Take While - Like take but only while the specified condition is satisfied.
+Then By - After invoking OrderBy, provides the ability of a subsequent ordering operation.
+Then By Descending - After invoking order by, provides the ability of a subsequence ordering operation in a descending way.
+
+// Convert from an IEnumerable to another type.
+ToArray - Converts an IEnumerable(Of T) into an array.
+ToDictionary - Converts an IEnumerable(Of T) into a Dictionary(Of T, T).
+ToList - Converts an IEnumerable(Of T) into a List(Of T).
+ToLookup - Converts an IEnumerable(Of T) into a Lookup(Of TSource, TKey).
+
+Union - Creates a new sequence with unique elements from two sequences.
+Where - Filters a sequence according to the specified criteria.
+
+// Enable parallelization and then sum.
+int result = MyArray.AsParallel().Sum();
+
+----------------------------------------------------------------------------------
+Locating_duplicate_values
+
+Q: How do I retrieve a list of integer values that are repeated more than once in a List<int>?
+
+A: 
+Group the elements based on their value, and then pick a representative of the group if there are more than one element in the group.
+var query = lst.GroupBy(x=>x)
+              .Where(g=>g.Count()>1)
+              .Select(y=>y.Key)
+              .ToList();
+	
+If you want to know how many times the elements are repeated, you can use:
+
+var query = lst.GroupBy(x=>x)
+              .Where(g=>g.Count()>1)
+              .Select(y=> new { Element = y.Key, Counter = y.Count()})
+              .ToList();
+This will return a List of an anonymous type, and each element will have the properties Element and Counter, to retrieve the informations you need.
+
+And lastly, if it's a dictionary you are looking for, you can use
+
+var query = lst.GroupBy(x=>x)
+              .Where(g=>g.Count()>1)
+              .ToDictionary(x=>x.Key,y=>y.Count());
+
+This will return a dictionary, with your element as key, and the number of times it's repeated as value.
+---
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------

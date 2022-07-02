@@ -1,0 +1,609 @@
+Authentication_
+Behaviors
+Bindings
+ClientCode
+Configuration_
+Connection_Trouble_Shooting
+Hosting_
+Implementation Steps
+Message Contract
+NetTcp_ 
+Notes
+Questions
+Security
+TraceListener
+TroubleShooting
+WCF Service Library
+Error_handling
+
+A Developer's Introduction to Windows Communication Foundation 4
+https://msdn.microsoft.com/en-us/library/ee354381.aspx
+Seven simple steps to enable HTTPS on WCF WsHttp bindings
+http://www.codeproject.com/Articles/36705/simple-steps-to-enable-HTTPS-on-WCF-WsHttp-binding
+Deploying an Internet Information Services-Hosted WCF Service
+http://msdn.microsoft.com/en-us/library/aa751792.aspx
+How to: Host a WCF Service in IIS
+http://msdn.microsoft.com/en-us/library/ms733766.aspx
+A Beginner's Tutorial on How to Host a WCF Service (IIS Hosting and Self Hosting)
+http://www.codeproject.com/Articles/550796/A-Beginners-Tutorial-on-How-to-Host-a-WCF-Service
+Understanding Contracts in WCF
+http://www.codeproject.com/Articles/664238/Understanding-Contracts-in-WCF
+Things to Consider When Designing a WCF Contract - good read!
+https://msdn.microsoft.com/en-us/library/vstudio/hh273127(v=vs.100).aspx
+Interview questions and answers - good review
+http://www.codeproject.com/Articles/759331/Interview-Questions-Answers-Windows-Communication
+Simplified-configuration-for-wcf-services
+https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/simplified-configuration-for-wcf-services
+-------------------------------------------------------------------------------------------
+Authentication_
+
+Desc and link on how to set up authentication
+	
+Recommended
+www.questpond.com and look other .net articles and video
+http://www.questpond.com/SampleDotNetInterviewQuestionBook.zip 
+----
+Good article to read and follow. Check out the sequel link at the end for more info.
+http://codebetter.com/petervanooijen/2010/03/22/a-simple-wcf-service-with-username-password-authentication-the-things-they-don-t-tell-you/
+
+x.509 Certificate generator
+https://www.pluralsight.com/blog/software-development/selfcert-create-a-self-signed-certificate-interactively-gui-or-programmatically-in-net
+
+http://www.codeproject.com/Articles/98950/ASP-NET-authentication-and-authorization
+
+
+https://blogs.msdn.microsoft.com/wsdevsol/2014/02/07/adding-custom-messageheader-and-http-header-to-a-wcf-method-call-in-a-windows-store-app-or-windows-phone-app/
+
+http://www.nullskull.com/a/10475154/token-based-authentication-in-wcf-service.aspx
+----
+Authentication and Authorization in WCF Services - Part 1
+https://msdn.microsoft.com/en-us/library/ff405740.aspx
+
+-------------------------------------------------------------------------------------------
+Behaviors
+http://www.codeproject.com/Articles/443576/Implementing-WCF-Service-Behaviors
+
+
+Every behavior has a class behind it.
+-------------------------------------------------------------------------------------------
+Bindings
+
+Every binding has a class behind it.
+WCF binding is a set of binding elements and each element specify, how the service and client will communicates with each other's. 
+Each binding must have at least one transport element and one message encoding element.
+
+If an endpoint does not specify a binding configuration and there is a binding configuration that is the same type of transport and 
+is unnamed, it will be used by default. When you make changes to a binding configuration you must make changes on both ends, client 
+and server. If you have a different timeout setting between the client and server or a different message size setting, the smaller 
+setting will generally be used.
+
+WCF Reliable Sessions Bindings: service and client side receiveTimeout and inactivityTimeout
+http://www.codeproject.com/Articles/749527/WCF-Reliable-Sessions-Bindings-service-and-client
+
+If you are using a non-reliable binding you only need to worry about the receive time. If you are using a reliable binding you need 
+to worry about inactivity timeout as well as receive time.
+
+-------------------------------------------------------------------------------------------
+Golden rule: one .svc = one service (or more specifically: one service implementation class).
+You can have one service implementation class that implements multiple service contracts.
+
+svc files are used when you host your WCF service in IIS. There's a module within IIS that handles the .svc file. Actually, it 
+is the ASPNET ISAPI Module, which hands off the request for the .svc file to one of the handler factory types that has been 
+configured for ASPNET.
+
+In the svc file:
+Service = <Namespace>.<contract implementation class>
+
+// Example svc file contents:
+<%@ ServiceHost Language="C#" Debug="true" Service="FX.BusinessService.Services.ConfirmationReportService" 
+    CodeBehind="~/Services/Reports/ConfirmationReportService.cs" %>
+
+
+If you use WCF 4.0(Visual Studio 2010) you don't have to create configuration (default will be used) and you even don't need to define .svc file. 
+WCF 4.0 supports configuration based activation. Asp.net will add a reference to System.ServiceModelActivation for you. You can now "simulate" 
+the .svc via config creating a virtual svc file with the following:
+
+<system.serviceModel>
+   <!-- bindings, endpoints, behaviors -->
+   <serviceHostingEnvironment >
+      <serviceActivations>
+         <add relativeAddress="MyService.svc" service="MyAssembly.MyService"/>
+      </serviceActivations>
+   </serviceHostingEnvironment>
+</system.serviceModel>
+
+Then you don't need a physical .svc file nor a global.asax
+-------------------------------------------------------------------------------------------
+Error_handling
+
+http://www.codeproject.com/Articles/799258/WCF-Exception-FaultException-FaultContract
+
+FaultException and Exception
+
+Exception and FaultException are not the same. If we throw a normal exception from a WCF service then the client who consumes that service 
+will be receiving a generic error which will not give any details regarding the issue. Instead we should use FaultException which will 
+give a formatted exception to the client as it is serialized.
+
+MSDN suggests that no unexpected exceptions (like OutOfMemoryException, ArgumentNullException or InvalidOperationException) should be 
+caught when using a service client.  Typically on the client there is no useful way to handle unexpected errors, so typically you should not catch 
+them when calling a WCF client communication method.
+
+Use Close always for a clean path of code execution. Use Abort in case of a faulted channel, or if your code threw an error. As you 
+might know, if you call Close on a faulted channel, it will throw another error, Close is a graceful shutdown of channel, whereas Abort 
+is an instant shut down of the channel. 
+
+---
+// Details of using FaultException
+
+// In the service contract:
+[OperationContract]
+[FaultContract(typeof(LoginFault))]
+[FaultContract(typeof(ServiceFault))]
+Guid SaveFileToS3(string fileName, byte[] fileContents, DateTime fileReceivedTime, string logInName, string password);
+
+// Throw FaultException from service
+catch (AuthenticationException authEx)
+{
+    var fault = new LoginFault
+    {
+        ServiceMethod = MethodBase.GetCurrentMethod().Name,
+        Message = string.Format("Invalid Credentials - Service failed to authenticate client"),
+        LoginName = logInName,
+        Reason = authEx.ToString()
+    };
+
+    log.ErrorFormat("ServiceMethod: {0} {1} Name: {2} ", fault.ServiceMethod, fault.Message, fault.Reason);                
+    throw new FaultException<LoginFault>(fault, new FaultReason("Service failed to authenticate client"));
+}
+
+// Handle FaultException on client side
+catch (FaultException<LoginFault> fex)
+{
+    log.ErrorFormat("{0}: Login to service by client failed. {1}", MethodBase.GetCurrentMethod().Name, fex.Detail.Reason);
+    Console.WriteLine("Error: {0}", fex.Message);	// fex.Message will contain the FaultReason
+	Console.WriteLine("Service Method Name: {0}", fex.Detail.ServiceMethod);
+    Console.WriteLine("Attempted Login Name: {0}", fex.Detail.LoginName);
+    client.Abort();									// Do not call close on a faulted channel
+}
+
+Disabling the error "System.ServiceModel.FaultException`1 was unhandled by user code"
+https://social.technet.microsoft.com/wiki/contents/articles/17418.the-famous-system-servicemodel-faultexception1-was-unhandled-by-user-code.aspx
+
+---
+//Example of a client catching service exceptions
+MyServiceClient myServiceClient = new MyServiceClient();
+
+try
+{
+    documents = myServiceClient.GetDocuments();
+    ...
+    myServiceClient.Close();
+}
+catch (TimeoutException exception)
+{
+    MessageBox.Show(exception.Message, "Timeout error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    myServiceClient.Abort();
+}
+catch (FaultException<ServiceErrorDetails> error)
+{
+    MessageBox.Show(error.Detail.Message, "Service error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    myServiceClient.Abort();
+}
+catch (CommunicationException exception)
+{
+    MessageBox.Show(exception.Message, "Communication error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    myServiceClient.Abort();
+}
+
+-------------------------------------------------------------------------------------------
+Hosting
+
+http://www.codeproject.com/Articles/550796/A-Beginners-Tutorial-on-How-to-Host-a-WCF-Service
+
+creating and deploying wcf service on aws
+
+
+What host should I use to deploy a wcf service to aws?
+-------------------------------------------------------------------------------------------
+Implementation Steps
+
+Question:
+I have created a new "WCF service library" type project. I have created a file for my contract and a file which implements the interface.
+How do I consume it and where should I put my .svc file?
+
+You have to create another project - Web application or WCF Service application (generally it is same as Web application with some added 
+references). Then you have to reference your service library in the new project and add the .svc file. Delete code behind file from newly 
+created .svc file and open markup of that file. Modify Service attribute of @ServiceHost directive. The attribute has to point to your 
+service implemented in library (full name with namespace). Then add configuration to web config.
+
+If you use WCF 4.0 you don't have to create configuration (default will be used) and you even don't need to define .svc file. WCF 4.0 
+supports configuration based activation
+-------------------------------------------------------------------------------------------
+Message Contract
+WCF uses SOAP message for communication. Most of the time the developer concentrates more on developing the DataContract, Serializing the 
+data, etc. Some times the developer will also need control over the SOAP message format. In that case WCF provides Message Contract to 
+customize the message as per requirement. 
+
+A Message Contract is used to control the structure of a message body and serialization process. It is also used to send / access 
+information in SOAP headers. By default WCF takes care of creating SOAP messages according to service DataContracts and OperationContracts. 
+
+A SOAP message is an ordinary XML document containing the following elements:
+Envelope	Identifies the XML document as a SOAP message.									Required
+Header		Contains header information.													Not Required
+Body		Contains call, and response information.										Required
+Fault		Provides information about errors that occurred while processing the message.	Not Required
+
+// Example message
+POST /InStock HTTP/1.1
+Host: www.example.org
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: 299
+SOAPAction: "http://www.w3.org/2003/05/soap-envelope"
+ 
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  </soap:Header>
+  <soap:Body>
+    <m:GetStockPrice xmlns:m="http://www.example.org/stock">
+      <m:StockName>IBM</m:StockName>
+    </m:GetStockPrice>
+  </soap:Body>
+</soap:Envelope>
+--------------------------------------------------------------
+NetTcp_
+
+Is WCF service actively listening on a port? Should be able to tell by running this from the cmd line:
+netstat -a -n -p TCP
+
+Tutorials to host service in IIS:
+Show which windows services to turn on for tcp communication
+http://stackoverflow.com/questions/22562596/unable-to-access-wcf-service-using-net-tcp-binding/22566139
+
+Install and Configure WCF Activation Components - run this from cmd line
+https://msdn.microsoft.com/en-us/library/ms731053%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396
+
+Went through this link. I'm doing all the steps.
+http://dotnetmentors.com/hosting-wcf-service-with-nettcpbinding-or-netnamedpipebinding-in-iis.aspx
+
+http://www.codeproject.com/Articles/667618/Hosting-WCF-Service-with-netTcpBinding-on-IIS
+
+// Attempting instructions from this page. Error: Missing required attributes.
+https://blogs.msdn.microsoft.com/prathul/2011/11/28/hosting-wcf-nettcp-on-iis-was/
+// Attempting instructions from this page.
+http://www.codeproject.com/Articles/30828/Host-your-WCF-service-with-multiple-host-environme
+// I think this is about the solution from the sdk
+https://msdn.microsoft.com/en-us/library/ms752218%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396
+
+Tutorials to Host WCF in a Windows Service Using TCP
+This one I have worked through.
+http://www.c-sharpcorner.com/UploadFile/ff2f08/host-wcf-in-a-windows-service-using-tcp/
+
+https://msdn.microsoft.com/en-us/library/ff649818.aspx?f=255&MSPPError=-2147217396
+
+Punch hole in firewall
+http://airbornesurfer.com/2015/04/how-to-punch-a-hole-through-windows-firewall/
+---
+You can't use net.tcp with cassini, so there is no change you can make to allow it to work. You'll have to use IIS on your machine.
+For anyone that stumbles accross this, my guide to trouble-shooting net.tcp WCF issues like this:
+
+You can do it using a self-hosted service. If you build most of your service in a library, it's pretty easy to be able to build two 
+versions - one self-hosted (for debugging), and one hosted using WAS/IIS.
+---
+Check that net.tcp is an enabled protocol for the web site (in IIS, right-click the site, goto advanced settings, and ensure that 
+Enabled Protocols includes "net.tcp". I'm not sure if this is a paranoia thing, I also have always needed to enable net.tcp for the 
+Site via the command line as well as step 1. Open a command prompt, and from c:\windows\system32\inetsrv, enter appcmd.exe set app 
+"NameOfWebsite/" /enabledProtocols:http,net.tcp.
+Check that the bindings for the website in IIS have an entry for net.tcp, and that you've bound it to the correct port number.
+Also check that no other websites in IIS are using the same net.tcp binding to that port
+Check that the "Net.TCP Listener Adapter" service is running.
+---
+net.tcp://localhost:808/CalculatorService.svc
+
+Use this from the cmd line to see if a certain port number is being listened to:
+	netstat -ona | find "9050"
+This will return some stats if there is a port at that number.
+
+--------------------------------------------------------------
+Notes
+
+// Use this when running service in VS host.
+Configuration rootConfig = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+// Use this when running service in IIS. It only opens the Web.Config file that is deployed.
+Configuration rootConfig = WebConfigurationManager.OpenWebConfiguration("/");
+
+	
+This doesn't work, this code opens config in %systemdisk%/inetpub/wwwroot/web.config, and it is not the config that I need. When I do it with parameter HttpContext.Current.Request.ApplicationPath it returns another web.config. – Lubochkn Andrew Nov 9 '11 at 8:48 
+ 		
+I replace "/" with "~" and it works! Configuration config = WebConfigurationManager.OpenWebConfiguration("~"); – Lubochkn Andrew Nov 9 '11 at 11:15 
+ 		
+Yes "/" gets the root web.config, not the current application's web.config, whereas "~" seems to work. –
+--------------------------------------------------------------
+Security
+
+Token based authentication. Easy example. Source code at bottom of page.
+http://www.nullskull.com/a/10475154/token-based-authentication-in-wcf-service.aspx
+
+An Introduction to Claims
+https://msdn.microsoft.com/en-us/library/ff359101.aspx
+https://www.future-processing.pl/blog/introduction-to-claims-based-authentication-and-authorization-in-net/
+---
+WCF's built-in custom token or federation security is designed for SOAP based services. You can find some samples about using WCF federation or 
+custom token in the .NET Framework WCF & WCF samples. I would recommend you also take a look at the WIF (windows identity foundation) which as 
+encapsulated part of the WCF federation and identity based authorization features and provide a more generic and unified identity based 
+authorization solution:
+
+#Claims-Based Authorization with WIF 
+http://msdn.microsoft.com/en-us/magazine/ee335707.aspx
+
+#WIF Workshop 1: Introduction to Claims-Based Identity and WIF 
+http://channel9.msdn.com/shows/Identity/WIF-Workshop-1-Introduction-to-Claims-Based-Identity-and-WIF/
+
+#All Will Be Revealed: ~7 Hours Recordings from the WIF Workshops 
+http://www.cloudidentity.com/blog/2010/06/23/ALL-WILL-BE-REVEALED-7-HOURS-RECORDINGS-FROM-THE-WIF-WORKSHOPS/
+---
+Authentication and Authorization with ASP.NET Identity 2.0 for WCF Services
+http://www.codeproject.com/Articles/802435/Authentication-and-Authorization-with-ASP-NET-Iden
+---
+Intranet Security
+
+In this example:
+ <security mode="Transport">
+    <transport clientCredentialType="Windows" protectionLevel="EncryptAndSign" />
+    <message clientCredentialType="Windows" />
+</security>
+
+clientCredentialType - How the client will authenticate to the service: None, Certificate and Windows.
+protectionLevel - How the message is protected: EncryptAndSign, Signed and None.
+
+Security is applied at the endpoint level. The endpoint relates the binding to the contract. Security is specified in the binding.
+Security on tcp bindings is set to transport by default.
+-------------------------------------------------------------------------------------------
+TraceListener
+
+You should use system.diagnostics section. Here's example from MSDN for text file
+<configuration>
+  <system.diagnostics>
+    <trace autoflush="false" indentsize="4">
+      <listeners>
+        <add name="myListener" 
+          type="System.Diagnostics.TextWriterTraceListener" 
+          initializeData="TextWriterOutput.log" />
+        <remove name="Default" />
+      </listeners>
+    </trace>
+
+This is for system events log: http://msdn.microsoft.com/en-us/library/system.diagnostics.eventlogtracelistener.aspx
+	
+I still got no log file output until I turned off custom errors. <system.web><customErrors mode="Off"/>
+---
+
+  </system.diagnostics>
+</configuration>
+
+-------------------------------------------------------------------------------------------
+TroubleShooting
+(405) Method Not Allowed. Attempting to connect to IIS server using wsHttpBinding.
+
+netstat -a -n -p TCP
+portquery from Microsoft
+
+How to can ports on remote system.
+http://www.gfi.com/blog/scan-open-ports-in-windows-a-quick-guide/
+
+How to punch hole in fire wall.
+http://airbornesurfer.com/2015/04/how-to-punch-a-hole-through-windows-firewall/
+
+
+-------------------------------------------------------------------------------------------
+WCF Service Library
+
+What is the main difference between a WCF service library and WCF service application?
+A Service Application includes a website host already setup for you. A service library is a library of services that a host can reference and startup. 
+A WCF Service Library is a project for creating a host-independent service class library (.dll) that can run within a variety hosts.
+A WCF Service Application is a project for creating a service application that is hosted in IIS/WAS.
+
+http://www.codeproject.com/Articles/154870/WCF-Service-Library-A-Good-Approach-for-WCF-Servic
+Using WCF library is a good approach for any WCF project because doing so makes the WCF service implementation code easily reused flexibly 
+under different practical scenarios. Also using WCF library in a WCF web service application is doable and easy.
+
+There is a misconception that WCF library can only be consumed by WCF service application projects. This isn't true. WCF library can be 
+used in the same way as using a regular .NET library by any other type of .NET project. 
+
+If you start with a service library (recommended) you can then choose any host you wish (a windows service, IIS/ASP.NET, or even a console application) 
+and you'd just reference your library from your new host. Choosing a Service Application limits your host to just IIS/ASP.NET. 
+
+A WCF Service Library has to be hosted in order to be used - you can host it in IIS, a Windows Service or some self-hosted option 
+(like a console app, WinForm, WPF, etc).
+
+This article explains the difference between a Service Application and a Service Library. It also explains where we should use Service Applications 
+and where to use a Service Library
+http://www.c-sharpcorner.com/uploadfile/db2972/wcf-difference-between-service-application-and-service-lib/
+
+The major difference is that the WCF Service Application has a .svc file, whereas the Service Library does not have a .svc file.
+Suppose we want to host this service application in IIS, then you need to specify for IIS the execution runtime environment requirements. 
+In a web application we set an .aspx, similarly for a Service Application we need to set a .svc.
+
+A WCF Service Library is not hosted by the ASP.Net development server. It is hosted by the Test Client, since a Service Library does not have an .svc file. 
+
+The WCF Service Application template can be used to create WCF services with a hosting website created within the project
+
+The WCF Service Library template can be used to create WCF services that are hosted by the WCF Service Host, and these can be tested using the WCF service 
+Test Client.
+
+For a more detailed answer explaining the difference between a WCF Service Library and WCF Service Application check out the following link:
+http://blogs.msdn.com/b/echarran/archive/2007/09/18/how-to-arrange-a-solution-using-the-wcf-service-library-and-wcf-service-application-templates.aspx
+
+For an explanation of other options other than using templates to host the WCF Service Library then check out this link:
+http://stackoverflow.com/questions/19944606/combining-wcf-service-library-and-wcf-service-application
+
+For an explanation of how to host it and publish the WCF Service, check out this link: 
+http://www.c-sharpcorner.com/UploadFile/dhananjaycoder/walkthrough-on-creating-wcf-4-0-service-and-hosting-in-iis-7-5/
+
+You should be able to follow these links pretty much step-by-step. I was able to skip the second method and use both the WCF Service Libary and the WCF 
+Service Application and then follow the steps in the last link. I hope this information helps someone speed up there research. It took me several days 
+to figure all his out and I have two books I've read on the subject.
+
+http://msdn.microsoft.com/en-us/library/bb924405(v=vs.110).aspx
+
+The WCF service library project provids an App.config file for the library during development. However, the 
+App.config file is not recognized after deployment. You have to move your configuration code into the configuration 
+file recognized by your hosting environment. For self-hosting, you should copy the contents of the App.config file 
+into the App.config file of the hosting executable. If you use IIS to host your service, you should copy the contents 
+of the App.config file into the Web.config file of the virtual directory.
+-------------------------------------------------------------------------------------------
+
+Unit Testing WCF
+
+Golden rule of testability - Do not instantiate dependencies. Dependencies need to be injected in.
+
+-------------------------------------------------------------------------------------------
+ClientCode
+
+using JobsDBService.Client.JobsDBServiceReference;
+using System.ServiceModel;
+
+namespace JobsDBService.Client
+{
+    public class JobsDBServiceClient
+    {
+        ServiceContractClient JobsDbService = new JobsDBServiceReference.ServiceContractClient();   // Get type name from service ref in object browser.
+    }
+}
+
+-------------------------------------------------------------------------------------------
+Configuration_
+
+If you are using IIS to host your service, use a Web.config file. If you are using any other hosting environment, use an App.config file.
+
+In a hosting environment, it is the host's config that we are most concerned about. For example when the Host's
+service calls into the data repository, the data repository will need a connection string. The connection string
+will be stored in the host config file. The config file in the host is for the host application and the services 
+it uses. 
+
+Web Service Configuration
+You need a reference to System.ServiceModel and System.ServiceModel.Activation. The latter to add a virtual svc file.
+ <serviceHostingEnvironment>
+    <serviceActivations>
+       <add service="GeoLib.Services.GeoManager" relativeAddress="GeoService.svc"/>
+    </serviceActivations>
+ </serviceHostingEnvironment>
+---
+IIS Configuration
+Most commonly, XML elements are added to the Web.config file for an Internet Information Services (IIS) site that hosts a WCF service.
+
+When hosted in IIS, endpoint addresses are always considered to be relative to the address of the .svc file that represents the service. 
+For example, if the base address of a WCF service is http://localhost/Application1/MyService.svc with the following endpoint configuration:
+    <endpoint address="anotherEndpoint" /> then the endpoint can be reached at http://localhost/Application1/MyService.svc/anotherEndpoint
+
+Similarly, the endpoint configuration element that uses an empty string as the relative address provides an endpoint reachable at 
+http://localhost/Application1/MyService.svc, which is the base address. Ex: <endpoint address="" />
+
+You must always use relative endpoint addresses for IIS-hosted service endpoints. Supplying a fully-qualified endpoint address (for example, 
+http://localhost/MyService.svc) can lead to errors in the deployment of the service if the endpoint address does not point to the IIS-application 
+that hosts the service exposing the endpoint.
+
+ Unmatched combinations of IIS settings and WCF endpoint settings result in an error during service activation.
+
+-------------------------------------------------------------------------------------------
+Connection_Trouble_Shooting
+
+Client and service run together on same machine
+
+Check these items in configurations:
+
+client endpoint address
+service base address (same as client endpoint address)
+Endpoint references correct binding
+
+binding
+ Same on both client and service
+ Security tag
+
+-------------------------------------------------------------------------------------------
+Extend the ClientBase<TChannel> class to create a custom WCF client object that can be used to connect to a service. 
+Typically, the WCF client base class is extended by using a tool such as the ServiceModel Metadata Utility Tool (Svcutil.exe)
+-------------------------------------------------------------------------------------------
+
+If we are using IIS6 or previous version then the major drawback of IIS6.0 hosting is that only HTTP/HTTPS protocol 
+can be used to communicate with the service. Which actually is sufficient for most of the projects, but if the project 
+needs to communicate to the service using other protocols then this IIS6.0 hosting will not suffice.
+
+Now the point to notice in the above text is that I specifically mentioned IIS 6.0 or previous. The reason for this is 
+that IIS 7.0 comes with a feature/component called Windows Activation Service(WAS). So hosting a WCF service in WAS and 
+IIS 7.0 are actually not exclusive. TO host a WCF service using WAS, we need to still host the service in IIS 7.0 and 
+then enable the support for protocols other than HTTP/HTTPS. Hosting in WAS comes with all the benefits of hosting in 
+IIS and on top of that it supports all the protocols too.
+
+Self hosting has the major benefits of providing us full control. All the 
+control of starting the service, stopping the service and error handling/logging can be done in a host application. 
+The amount of code that needs to be written to self host a WCF service is very small and it is very easy too. Now the 
+decision for chooing self hosting is purely on the requirements of whether or not you want so much control on the service.
+
+Hosting the service in a windows service is same as self hosting but the service creation and disposing will be 
+abstracted in form of a Windows service. It provides the same capabilities as a self hosted service provides and the 
+decision of whether to use this method or not will rely on the same factors of whether or not you want so much control 
+on the service.
+
+Creating the Service Library
+
+We can always keep the service code in the host application (in case of self hosting) or inside an ASP.NET 
+website(IIS hosting) but it is always a good idea to have the WCF service in a class library. That way we decouple the 
+service implementation from its host application. Also, we can have a single WCF service and multiple host applications 
+hosting that service.
+
+When we create a WCF service library some default configuration with endpoints, address and Bindings get created in the 
+library's App.config file.
+
+<service name="SampleServiceNamespace.SampleService">
+    <endpoint address="" binding="wsHttpBinding" contract="SampleServiceNamespace.ISampleService"> 
+</endpoint>
+
+Now this configuration will be used when we try to run a service library and Visual studio will take care of hosting this 
+service for us for testing purpose. The important point here is that when we host this service ourselves then this App.config 
+configuration will be of no use. The host application will have to define its own endpoints and specify the Address, Binding 
+and Contracts separately. 
+
+To host a service in IIS, create a new WCF Service website. Select WCF Service. Now this web service comes with its own 
+predefined service template but we are not going to use them so we will delete all of them and then add a reference to our 
+service library project in this website.
+
+Once we have the reference to our service library added, its time to create a service and configure endpoints with required 
+address, binding and contracts. Since we will host this website in the IIS, the address of the .SVC file will become the 
+address of the Service. Now the binding used by default when we try to host a service in IIS is basicHttpBinding. And for 
+the contract part, we need to specify the contract that should be used from our service library. This can be done by changing 
+the SVC file and pointing the SVC file to the right service implementation.
+
+<%@ ServiceHost Language="C#" Debug="true" Service="SampleServiceNamespace.SampleService"%>
+
+And this will suffice for the service to run within IIS. If we configure this website in IIS and run the .svc file the service 
+will start running hosted in the IIS. 
+
+
+-------------------------------------------------------------------------------------------
+Test Client
+To set up your own client, run the service in non-debug. Open the running host dialog and copy the Metadata address. Paste the address 
+into the service reference that you are adding to the client project.
+
+To enable VS to use your client and stop using the WcfTestClient.exe do the following:
+Go to service properties - debug tab - Command line arguments. Replace /client:"WcfTestClient.exe" 
+with /client:"..\..\..\ClientName\bin\debug\ClientName.exe". Take client out of the start up projects.
+-------------------------------------------------------------------------------------------
+/client:"..\..\..\DatumPipe.Job.Client\bin\DebugDatumPipe.Job.ServiceClient.exe"
+
+-------------------------------------------------------------------------------------------
+Questions
+
+How do deal with the 405 Error - Method not allowed.
+I get this error with basic or ws http connections. Same if using service or library.
+
+How to configure IIS site to use certificate.
+
+Need to better understand wcf library versus wcf service. Why would I deploy a wcf rather than a wcf library? What are the advantages?
+
+Why is there no svc file in my wcf service? I know one is no longer needed.
+
+How to publish in 2010 and 2013.
+
+Keys are stored here:
+C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys
