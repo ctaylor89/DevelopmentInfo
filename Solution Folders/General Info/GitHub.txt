@@ -25,7 +25,10 @@ git status								// Will display any uncommitted changes to local repo and othe
 git status -uno							// Parameter will prevent the display of untracked files 
 git add <filename.ext> or <folder name>/ or * // This will stage changes for files that are added or modified. Must stage before commit.
 git commit -m "<message>"				// Commit to local repo
-git push -u origin master				// Push up to GitHub. No longer an option since 8/13/2021.
+git push -u origin master				// Push up to GitHub. No longer an option since 8/13/2021. Use a peronal access token instead.
+
+// Try this:
+git remote add origin https://github.com/ctaylor89/DevelopmentInfo.git
 
 git push --set-upstream GitTestOne master
 
@@ -36,12 +39,12 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/c
 
 Token Name: Ctaylor89_Git_Token
 Personal Token Name: CTaylorPersonalAccessToken
-         Token : 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
+         Token : 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		Created 060322
 
 *Incomplete. Still need to know how to access it from cmd line. Able to push it using Git Extensions.
 --------------------------------------------------------
 Login_for_GIT_Push
-Name: ctaylor89		pwd: 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
+Name: ctaylor89		pwd: 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		Created 060322
 
 Repositories: https://github.com/ctaylor89/TodoApi
 --------------------------------------------------------
