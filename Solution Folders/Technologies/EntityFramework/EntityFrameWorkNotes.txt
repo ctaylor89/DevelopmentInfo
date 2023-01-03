@@ -8,6 +8,7 @@ Local_DB
 Model_First
 Navigation_Properties
 Random_Notes
+Stored_Procedure
 Tutorials_
 
 ------------------------------------------------
@@ -285,6 +286,30 @@ __MigrationsHistory table per database with no way to identify which entries bel
 Starting with EF6, the Configuration class includes a ContextKey property. This acts as a unique identifier for each Code First model. A corresponding 
 column in the __MigrationsHistory table allows entries from multiple models to share the table. By default, this property is set to the fully qualified 
 name of your context.
+------------------------------------------------
+Stored_Procedure
+
+Calling a stored procedure that takes multiple parameters:
+
+using System.Data.Entity;
+using System.Data;
+using System.Data.SqlClient;
+
+public List<StaffingRow> GetReport(IList<int> allowedResourceTypeIds, DateTime? startDate)
+{
+	// Convert resource type id's to data table to pass to stored procedure
+	DataTable resTypeIdsTable = new DataTable();
+	resTypeIdsTable.Columns.Add(new DataColumn("Id", typeof(int)));
+	
+	foreach(var id in allowedResourceTypeIds)
+		resTypeIdsTable.Rows.Add(id);
+		
+	startDate = startDate ?? DateTime.UtcNow;
+
+
+	
+	
+}
 ------------------------------------------------
 Tutorials_
 

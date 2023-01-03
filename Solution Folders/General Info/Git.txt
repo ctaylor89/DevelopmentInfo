@@ -1,0 +1,66 @@
+git clone -b "<branch>" "<git repo url>"
+git add .
+git status
+git commit -m "message"
+git restore <file path and file name>            to restore an unstaged file
+git restore --staged <file path and file name>   to unstage a file
+
+git push -u  - return the repository after modifying it.
+git push origin <Branch Name>
+git push -u origin <branch name> - Pushing a new branch to repository.
+git push --all   Push all branches to repository.
+
+git pull - refresh the local repository including all tracking branches. You are fetching the last modified repository.
+           *Run git status before a git pull. Changes that are not committed can be overwritten during a git pull.
+Branching_
+git branch <branch name> -creates a new branch off of the current branch.
+git branch - lists all branches in local repository. Current selected branch is in green letters.
+git branch -a  - lists all branches in origin repository.
+git checkout <branch name> - lets you navigate between the branches created by git branch. Checking out a branch updates the files
+in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that
+branch. Think of it as a way to select which line of development you’re working on.
+
+git fork  - Means you are copying the repository to your Github account.
+
+git branch --set-upstream-to=origin/<branch> Dev
+git branch --set-upstream-to=origin/<branch> Dev
+-----------------------------------------------------------
+how to pull down a specific branch in git
+https://www.google.com/search?q=how+to+pull+down+a+specific+branch+in+git&rlz=1C1CHZN_enUS1007US1007&oq=how+to+pull+down+a+particular+branch+&aqs=chrome.1.69i57j0i22i30j0i390l2.13684j1j7&sourceid=chrome&ie=UTF-8
+
+Branching_
+git branch <branch name> -creates a new branch off of the current branch.
+git branch - lists all branches in local repository. Current selected branch is in green letters.
+git branch -a  - lists all branches in origin repository.
+git checkout <branch name> - lets you navigate between the branches created by git branch. Checking out a branch updates the files 
+in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that 
+branch. Think of it as a way to select which line of development you’re working on.
+
+git push -u origin <branch name> - Pushing a new branch to repository.
+git push --all   Push all branches to repository.
+
+git fork  - Means you are copying the repository to your Github account.
+
+-----------------------------------------------------------
+Notes_
+
+git pull origin master      -- status: 3 files changed, 33 insertions, 17 deletions
+git status                  -- you branch is ahead of origin/Boss by 28 commits
+git push -u             
+git status                  -- Your branch is up to date with 'origin/Boss-1614'
+---
+Tracking branches are local branches that have a direct relationship to a remote branch. If you're on a tracking branch 
+and type git pull , Git automatically knows which server to fetch from and which branch to merge in.
+---
+Detail info about git pull and git fetch
+https://github.com/git-guides/git-pull
+---
+How to create a new branch in Git
+https://www.freecodecamp.org/news/git-switch-branch/
+---
+A successful Git branching model (got this link from Chris)
+https://nvie.com/posts/a-successful-git-branching-model/
+---
+How to Merge in Git: Remote and Local Git Repositories Tutorial
+https://www.varonis.com/blog/how-to-merge-in-git
+---

@@ -27,8 +27,8 @@ once when the form loads itself, and you may associate them to the controls. You
 in a separate file called ResourceDictionary, from which styles for the whole application will be applied. Thus WPF 
 application could be themed very easily.
 
-Controls in WPF are separated into logic, that defines the states, events and properties and ControlTemplate, that define the 
-visual appearance of the control. The wireup between the logic and the template is done by DataBinding.
+Controls in WPF are separated into (logic that defines the states and events) and (properties and ControlTemplate that define the 
+visual appearance of the control). The wireup between the logic and the ControlTemplate is done by DataBinding.
 
 A ControlTemplate contains the visual tree of that control. 
 
@@ -41,13 +41,13 @@ ________________________________________________________________________________
 
 What is Thread Affinity?
 
-All WPF applications start out with two important threads, one for rendering and one for managing the user interface. The rendering thread is a hidden 
-thread that runs in the background, so the only thread that you ordinarily deal with is the UI thread. WPF requires that most of its objects be tied 
-to the UI thread. This is known as thread affinity, meaning you can only use a WPF object on the thread on which it was created. Using it on other 
-threads will cause a runtime exception to be thrown.
+All WPF applications start out with two important threads, one for rendering and one for managing the user interface. The 
+rendering thread is a hidden thread that runs in the background, so the only thread that you ordinarily deal with is the UI thread. 
+WPF requires that most of its objects be tied to the UI thread. This is known as thread affinity, meaning you can only use a WPF 
+object on the thread on which it was created. Using it on other threads will cause a runtime exception to be thrown.
 
-The thread affinity is handled by the Dispatcher class, a prioritized message loop for WPF applications. Typically your WPF projects have a single 
-Dispatcher object (and therefore a single UI thread) that all user interface work is channeled through.
+The thread affinity is handled by the Dispatcher class, a prioritized message loop for WPF applications. Typically your WPF 
+projects have a single Dispatcher object (and therefore a single UI thread) that all user interface work is channeled through.
 __________________________
 
 Two way data to individual object models(versus collections of objects) binding example:

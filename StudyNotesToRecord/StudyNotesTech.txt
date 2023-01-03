@@ -1,0 +1,107 @@
+virtual: By default, methods are non-virtual. You cannot override a non-virtual method.
+You cannot use the virtual modifier with the static, abstract, private, or override modifiers.
+
+virtual: By default, methods are non-virtual. You cannot override a non-virtual method.
+You cannot use the virtual modifier with the static, abstract, private, or override modifiers.
+
+internal: The internal keyword is an access modifier for types and type members.
+
+protected internal: Access is limited to types derived from the containing class(protected) or the current assembly(internal).
+Note that: protected internal means "protected OR internal" (any class in the same assembly, or any derived class - even if it 
+is in a different assembly).
+
+private protected: Access is limited to the containing class or types derived from the containing class within the current assembly. 
+Available since C# 7.2
+
+The access level for class members and struct members, including nested classes and structs, is private by default.
+
+Interfaces default to internal access.
+
+Serialization is the process of converting an object into a stream of bytes to store the object or transmit it to memory, a database, or a file.
+
+// Action objects return no values. The Action type is similar to a void method.
+Action<int, int> example2 = (x, y) => Console.WriteLine("Write {0} and {1}", x, y);
+// Call the anonymous methods with a number of arguments equal to the specific type of Action
+   example2.Invoke(2, 3);
+
+// The Func type provides a way to store anonymous methods in a generalized and simple way.
+// Parameters bool and int, returns string.
+Func<bool, int, string> func2 = (b, x) => string.Format("string = {0} and {1}", b, x);
+Console.WriteLine(func2.Invoke(true, 10));
+
+---
+// Adding contstraints to a Generic class definition. The type must be of Employee or a sub class of Employee. This allows the class 
+to access members of the Employee class.
+public class GenericList<T> where T : Employee
+{...}
+
+// You can apply constraints to multiple parameters, and multiple constraints to a single parameter, as shown in the following example:
+class Base { }
+class Test<T, U>
+    where U : struct 
+    where T : Base, new() {...}     //Ex: Multiple constraints to a single parameter
+
+Constraint			Description
+where T: struct		Type argument must be a value type. Any value type except Nullable can be specified.
+where T : class		Type argument must be a reference type; this applies also to any class, interface, delegate, or array type.
+where T : new()		Type argument must have a public parameterless constructor. When used together with other constraints, the 
+					new() constraint must be specified last.
+where T : <base class name>
+The type argument must be or derive from the specified base class.
+where T : <interface name>
+The type argument must be or implement the specified interface. Multiple interface constraints can be specified. The constraining 
+interface can also be generic.
+where T : U
+The type argument supplied for T must be or derive from the argument supplied for U.
+---
+An abstract class is a special type of class that cannot be instantiated. An abstract class is designed to be inherited by subclasses 
+that either implement or override its methods. You can have functionality in your abstract class. The methods in an abstract class can be both abstract and concrete. An abstract class can have constructors and this is one major difference between an abstract class and an interface. You can take advantage of abstract classes to design components and specify some level of common functionality that must be implemented by derived classes.
+	public class MyMain : MyBase 
+	{
+		 MyMain(string myString) : base(myString){}
+	}
+---	
+The main features of a static class:
+Static classes contain only static members, cannot be instantiated, is sealed, constructor only called once.
+
+//DataTypes
+Value Types: integer, float, double, decimal, char, booleon, enum, struct, nullable
+Reference Types: object, class, interface, array, delegate, uint, long, ulong, DateTime
+---
+A dependant class depends on its dependencies.
+Two classes that uses each other are called "coupled". The coupling between classes can be loose or tight, or somewhere in between. 
+The tightness of a coupling is not binary. It is not either "loose" or "tight". The degrees of tightness are continuous, not discrete. 
+You can also characterize dependencies as "strong" or "weak". A tight coupling leads to strong dependencies, and a loose coupling leads 
+to weak dependencies, or even no dependencies in some situations.
+
+Dependencies, or couplings, are directional. That A depends on B doesn't mean that B also depends on A.
+---
+Managed objects are created, managed and under scope of CLR, pure .NET code is managed by the .Net runtime, Anything that lies 
+within .NET scope and under .NET framework classes such as string, int, bool variables are referred to as managed code.
+
+UnManaged objects are created outside the control of .NET libraries and are not managed by CLR, example of such unmanaged code is 
+COM objects, file streams, connection objects, Interop objects. (Basically, third party libraries that are referred in .NET code.)
+---
+In a UI app such as Winforms or WPF, a "cross thread exception" occurs if you are accessing UI components from a background thread.
+---
+Thread represents an actual OS-level thread, with its own stack and kernel resources. Thread allows the highest degree of control; you can Abort() or Suspend() or Resume() a thread, you can observe its state, and you can set thread-level properties like the stack size, apartment state, or culture. ThreadPool is a wrapper around a pool of threads maintained by the CLR.
+
+The Task class from the Task Parallel Library offers the best of both worlds. Like the ThreadPool, a task does not create its own OS thread. Instead, tasks are executed by a TaskScheduler; the default scheduler simply runs on the ThreadPool. Unlike the ThreadPool, Task also allows you to find out when it finishes, and (via the generic Task) to return a result.
+---
+
+Left off 432:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

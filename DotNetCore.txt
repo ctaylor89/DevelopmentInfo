@@ -1,0 +1,161 @@
+
+
+-------------------------------------------------------------------
+Tutorials
+
+ASP.Net Core Tutorials
+https://dotnettutorials.net/course/asp-net-core-tutorials/
+
+-------------------------------------------------------------------
+.Net_Core_Notes
+https://www.fullstack.cafe/blog/dot-net-core-interview-questions-and-answers
+
+It’s a cross-platform framework that works with Windows, Mac OS X, and Linux.The.NET Core Framework may be used to create a 
+variety of apps, including mobile, desktop, online, cloud, IoT, machine learning, microservices, games, and more.
+
+The key difference between .NET Core and .NET Framework is that .NET Framework is a platform for .NET applications on Windows whereas 
+NET Core is the latest version of the .NET Framework which is a cross-platform and open-source framework optimized for modern app needs 
+and developer workflows.
+
+When we talk about .NET Core it is defined as the platform on which frameworks like ASP.NET Core and the Universal Windows Platform 
+rely and extend the .NET Core platform’s functionalities. Note that Universal Windows Platform (UWP) apps are applications that can be 
+used across all compatible Microsoft Windows devices, including personal computers (PCs), tablets, smartphones, Xbox One, 
+Microsoft HoloLens, and Internet of Things. These are primarily purchased and downloaded via the Microsoft Store.
+
+The Application Model of .Net Core includes ASP.NET and windows universal apps.
+
+.NET Core has support for microservices. , NET Core allows a mix of technologies that can be minimalized for each microservice.	
+The .NET Framework does not allow for the construction and deployment of microservices in multiple languages.
+
+NET Core has no support for WCF( Windows Communication Foundation ) services. In .Net Core you always need to create a REST API.
+
+.NET core provides high scalability and performance compared to .NET Framework because of its architecture.
+
+Feature such as Code Access Security is not present in .NET core so .NET Framework does have the edge in that case.
+
+.NET Core focuses to develop apps in a variety of domains like gaming, mobile, IoT, AI, etc. .NET Framework is limited to Windows OS.
+
+Mobile.NET Core is compatible with various operating systems-Windows, Linux, and Mac OS. 
+
+For all platforms,.NET Core provides a very lightweight CLI( Command Line Interface). There’s always the option of switching to an IDE.
+
+Deployment Model - When a new version of.NET Core is installed, it is updated on one computer at a time, resulting in new 
+directories/folders being created in the existing program without affecting it. As a result,.NET Core provides a solid and adaptable 
+deployment model.
+
+Prefer .NET Core if: 
+	The project demands cross-platform integration.
+	The project requires the development of microservices.
+	The project relies heavily on CLI( Command Line Interface) as .NET Core is suitable for CLI.
+Or
+Prefer .NET Framework if: 
+	Applications are already running on .NET Framework.
+	The Applications require technologies like workflow, webforms, or WCF that are not present in .NET Core.
+	Applications are built to run on Windows alone.
+
+If you’re maintaining and upgrading existing .NET apps, .NET Framework is your choice. Porting an existing .NET app to a 
+.NET Core app requires some work. .NET Core does have a learning curve.
+
+.NET 3.0 now supports WPF and Windows Forms. .NET Core 3.0 also supports cross-development between UWP, WPF, and Windows Forms. 
+This provides developers the flexibility to bring modern interfaces of UWP into Windows Forms and WPF.
+
+Visual Studio Code, is supported on Windows, Linux, and macOS.
+
+.NET Core versions play well together. You can easily run multiple versions and apps side by side on the same machine.
+
+.NET Core has two major components. It includes a small runtime that is built from the same codebase as the .NET Framework CLR. 
+The .NET Core runtime includes the same GC and JIT (RyuJIT), but doesn’t include features like Application Domains or Code Access 
+Security. The runtime is delivered via NuGet, as part of the ASP.NET Core package.
+
+.NET Core also includes the base class libraries. These libraries are largely the same code as the .NET Framework class libraries, 
+but have been factored (removal of dependencies) to enable to ship a smaller set of libraries. These libraries are shipped as 
+System.* NuGet packages on NuGet.org.
+
+Some characteristics of .NET Core
+Flexible deployment: Can be included in your app or installed side-by-side user- or machine-wide.
+Command-line tools: All product scenarios can be exercised at the command-line.
+Compatible: .NET Core is compatible with .NET Framework, Xamarin and Mono, via the .NET Standard Library.
+
+What is the difference between .NET Core and Mono?
+Mono is third party implementation of .Net Framework for Linux/Android/iOs
+.Net Core is Microsoft's own implementation for same.
+
+What's the difference between SDK and Runtime in .NET Core?
+The SDK is all of the things that are needed to create a .NET Core application, such as the CLI, a set of libraries and a compiler.
+The runtime hosts/runs the application and abstracts all the interaction with the base operating system.
+
+What is the .NET SDK?
+The .NET SDK is a set of libraries and tools that allow developers to create .NET applications and libraries. It contains the 
+following components that are used to build and run applications:
+	The .NET CLI.
+	The .NET runtime and libraries.
+	The dotnet driver.
+
+What is included in .NET Core?
+A .NET runtime, which provides a type system, assembly loading, a garbage collector, native interop and other basic services.
+A set of framework libraries, which provide primitive data types, app composition types and fundamental utilities.
+A set of SDK tools and language compilers that enable the base developer experience, available in the .NET Core SDK.
+The 'dotnet' app host, which is used to launch .NET Core apps. It selects the runtime and hosts the runtime, provides an assembly 
+loading policy and launches the app. The same host is also used to launch SDK tools in much the same way.
+
+The .NET SDK is a set of libraries and tools that allow developers to create .NET applications and libraries. It contains the 
+following components that are used to build and run applications:
+
+The .NET CLI.
+The .NET runtime and libraries.
+The dotnet driver.
+-----------------------------------------------------------
+NetCore_Components
+
+Runtime package store
+Starting with .NET Core 2.0, it's possible to package and deploy apps against a known set of packages that exist in the target 
+environment. The benefits are faster deployments, lower disk space usage, and improved startup performance in some cases.
+
+This feature is implemented as a runtime package store, which is a directory on disk where packages are stored 
+(typically at /usr/local/share/dotnet/store on macOS/Linux and C:/Program Files/dotnet/store on Windows). Under this directory, 
+there are subdirectories for architectures and target frameworks. The file layout is similar to the way that NuGet assets are laid 
+out on disk:
+https://learn.microsoft.com/en-us/dotnet/core/deploying/runtime-store
+---
+-----------------------------------------------------------
+ASP.Net_Core
+
+.NET Core vs .NET Framework - What's the difference?  This is a good video demo.
+https://www.youtube.com/watch?v=79UWvR734wI
+
+The .csproj file format has been simplified in ASP.NET Core. Some notable changes include:
+
+Explicit inclusion of files isn't necessary for them to be considered part of the project. This reduces the risk of XML merge conflicts when working on large teams.
+
+There are no GUID-based references to other projects, which improves file readability.
+
+The file can be edited without unloading it in Visual Studio:
+---
+ASP.NET Core projects offer developers the flexibility of targeting .NET Core, .NET Framework, or both. When targeting .NET Framework, projects need to reference individual NuGet packages.
+Targeting .NET Core allows you to eliminate numerous explicit package references, thanks to the ASP.NET Core metapackage. Install the Microsoft.AspNetCore.App metapackage in your project:
+	<ItemGroup>
+	   <PackageReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+	When the metapackage is used, no packages referenced in the metapackage are deployed with the app. The .NET Core Runtime Store includes these assets, and they're precompiled to improve performance.
+	https://learn.microsoft.com/en-us/aspnet/core/fundamentals/metapackage-app?view=aspnetcore-3.1
+---
+https://learn.microsoft.com/en-us/aspnet/core/migration/proper-to-2x/?view=aspnetcore-7.0
+Migrate from ASP.NET to ASP.NET Core
+---
+Asp.net Core MVC project has Dependencies instead of References.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General Info", "General Inf
 		Solution Folders\General Info\AxoSoftOnTime.txt = Solution Folders\General Info\AxoSoftOnTime.txt
 		Solution Folders\General Info\Definitions.txt = Solution Folders\General Info\Definitions.txt
 		Solution Folders\General Info\DesignPatterns.txt = Solution Folders\General Info\DesignPatterns.txt
+		Solution Folders\General Info\Git.txt = Solution Folders\General Info\Git.txt
 		Solution Folders\General Info\GitHub.txt = Solution Folders\General Info\GitHub.txt
 		Solution Folders\General Info\Notes.txt = Solution Folders\General Info\Notes.txt
 		Solution Folders\General Info\ProfessinalAdvice.cpp = Solution Folders\General Info\ProfessinalAdvice.cpp
@@ -193,7 +194,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyExercises", "MyExercises"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFrameworkProjects", "EntityFrameworkProjects", "{E4F01E6A-3244-4E7A-8107-A548CC6FABF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstPractice", "CodeFirstPractice\CodeFirstPractice.csproj", "{3B85970F-B145-48E5-873F-A6D9897FF4A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeFirstPractice", "CodeFirstPractice\CodeFirstPractice.csproj", "{3B85970F-B145-48E5-873F-A6D9897FF4A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -340,6 +341,7 @@ Global
 		{72114B71-BE75-4D96-BE95-C579FD9BB845} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
 		{DA3AA080-B8ED-435D-A656-91AE5A3B2C82} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
 		{45BEEC6B-D7B0-4646-A07F-D646ACA0A0EC} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
+		{B6260B40-0237-4214-AA65-E1D9A23E7DAD} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
 		{523C3FD5-E424-48AE-A4ED-DF748483D0E2} = {77B1B0EB-EEBF-4923-B24E-327405D3E1A5}
 		{59229D1D-76E3-4CF8-B7FC-AC8F5C960E23} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
 		{F5DB7C06-E8C7-4FBC-B45F-3807C35B0E61} = {F90F7A87-C403-468D-8C3D-E08A01DFC21B}

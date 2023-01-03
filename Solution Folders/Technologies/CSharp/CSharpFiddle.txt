@@ -147,3 +147,81 @@ public static class DataManipulate
 		return string[];
 	}
 }
+
+-----------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Hello World");		
+		
+		var scores = new [] { 90, 97, 78, 68, 85 };
+		IEnumerable<int> highScoresQuery = 
+			from score in scores
+			where score > 80
+			orderby score descending
+			select score;
+		
+		Console.WriteLine(string.Join(" ", highScoresQuery));
+		bool isPalamode = IsPalamode("dododx");
+		if(isPalamode)
+			Console.WriteLine("Success! It is a match");
+		else
+			Console.WriteLine("No Success! Not a match");
+	}
+	
+	private static bool IsPalamode(string inputWord)
+	{
+		bool isPalomode = false;
+		var revWord = new StringBuilder();
+		
+		for(int i = inputWord.Length - 1, r = 0; i >= 0; i--, r++) 
+		{
+			revWord.Append(inputWord[i]);
+		}
+		
+		isPalomode = inputWord.CompareTo(revWord.ToString()) == 0;
+		
+		return isPalomode;
+	}
+}
+
+------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Hello World");		
+		
+		// string which is to be copied
+        string strA = "GreeksforFreeks";
+   
+        // Copy the data of strA string
+        // into strB string
+        // using Copy() method
+        string strB = String.Copy(strA);
+          
+        Console.WriteLine("Original String strA: {0}", strA);
+        Console.WriteLine("Copied String strB: {0}", strB);
+		
+		strA = "Go daddy!";
+		Console.WriteLine("String : {0}", strA);
+		Console.WriteLine("Copied String : {0}", strB);
+		
+		strB="Your Mamma";
+		Console.WriteLine("String : {0}", strA);
+		Console.WriteLine("Copied String : {0}", strB);
+	}
+	
+	
+}

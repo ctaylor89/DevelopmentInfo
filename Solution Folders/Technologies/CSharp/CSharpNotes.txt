@@ -1,4 +1,5 @@
 _Access_Levels
+_Arrays
 _Attributes
 _Classes
 _CodeSnippets
@@ -114,6 +115,16 @@ The access level for class members and struct members, including nested classes 
 
 Interfaces default to internal access.
 ---------------------------------------------------------------
+_Arrays
+
+var students = new string[] {"John", "Doe"};
+string[] teachers = {"Peter", "John"};       int[] Requests = {22, 33, 44};
+var parents = new[] {"Mary", "Martha"};
+var grades = new int[0];
+
+var students = studentList.ToArray(); // In situations where we are not sure of the number of elements, start with a list.
+
+---------------------------------------------------------------
 _Attributes
 
 [Obsolete]
@@ -190,22 +201,22 @@ to show multiple values by the value name:
     var str2 = (SuitsWithFlags.Spades | SuitsFlags.Diamonds).ToString();
                // "Spades, Diamonds"
 ---
-For MVC [ActionName("Name")] allows you to have a Get action and Post action with the same method signature, or to use dashes in the action name, 
-which otherwise would not be possible without creating a route for it.
+For MVC [ActionName("Name")] allows you to have a Get action and Post action with the same method signature, or to use dashes in 
+the action name, which otherwise would not be possible without creating a route for it.
 
-// Attaching the WebMethod attribute to a Public method indicates that you want the method exposed as part of the XML Web service. You can also 
-// use the properties of this attribute to further configure the behavior of the XML Web service method. You can optionally set cache duration 
-// and buffer response.
-[WebMethod]
+Attaching the WebMethod attribute to a Public method indicates that you want the method exposed as part of the XML Web service. 
+You can also use the properties of this attribute to further configure the behavior of the XML Web service method. You can 
+optionally set cache duration and buffer response.
+    [WebMethod]
 
-// On configuration sections
-[ConfigurationProperty] 
+On configuration sections
+    [ConfigurationProperty] 
 
-// Indicates that the value of a static field is unique for each thread.
-[ThreadStatic] static double previous = 0.0;
+Indicates that the value of a static field is unique for each thread.
+    [ThreadStatic] static double previous = 0.0;
 
-// In asp.net
-[NotifyParentProperty(true)]
+In asp.net
+    [NotifyParentProperty(true)]
 ---------------------------------------------------------------
 
 Action objects return no values. The Action type is similar to a void method. It must never return a value onto the evaluation stack. 
@@ -230,7 +241,7 @@ The Func type provides a way to store anonymous methods in a generalized and sim
 Func<int, string> func1 = (x) => string.Format("string = {0}", x);
 
 // Func instance with two parameters and one result.
-// Receives bool and int, returns string.
+// Parameters bool and int, returns string.
 Func<bool, int, string> func2 = (b, x) => string.Format("string = {0} and {1}", b, x);
 
 // Func instance that has no parameters and one result value.
@@ -242,15 +253,16 @@ Console.WriteLine(func2.Invoke(true, 10));
 Console.WriteLine(func3.Invoke());
 ---------------------------------------------------------------
 If you want to examine an item in a generic list to determine whether it is valid or to compare it to some other item, 
-the compiler must have some guarantee that the operator or method it has to call will be supported by any type argument 
+the compiler must have some guarantee that the operator or method the compiler has to call will be supported by any type argument 
 that might be specified by client code. This guarantee is obtained by applying one or more constraints to your generic 
 class definition. 
 
-// The type must be of Employee or a sub class of it. This allows the class to access members of the Employee class.
+// The type must be of Employee or a sub class of Employee. This allows the class to access members of the Employee class.
 public class GenericList<T> where T : Employee
 {...}
 
-// Multiple constraints can be applied to the same type parameter, and the constraints themselves can be generic types, as follows:
+// In a generic list, multiple constraints can be applied to the same type parameter, and the constraints themselves can be generic 
+types, as follows:
 class EmployeeList<T> where T : Employee, IEmployee, System.IComparable<T>, new()
  
 By constraining the type parameter, you increase the number of allowable operations and method calls to those supported by the 
@@ -262,7 +274,7 @@ will have to apply constraints to the type parameter.
 class Base { }
 class Test<T, U>
     where U : struct 
-    where T : Base, new() {...}
+    where T : Base, new() {...}     //Ex: Multiple constraints to a single parameter
 
 Constraint			Description
 where T: struct		Type argument must be a value type. Any value type except Nullable can be specified.
@@ -270,17 +282,19 @@ where T : class		Type argument must be a reference type; this applies also to an
 where T : new()		Type argument must have a public parameterless constructor. When used together with other constraints, the 
 					new() constraint must be specified last.
 where T : <base class name>
-The type argument must be or derive from the specified base class.
+ The type argument must be or derive from the specified base class.
 where T : <interface name>
-The type argument must be or implement the specified interface. Multiple interface constraints can be specified. The constraining 
+ The type argument must be or implement the specified interface. Multiple interface constraints can be specified. The constraining 
 interface can also be generic.
 where T : U
-The type argument supplied for T must be or derive from the argument supplied for U.
+ The type argument supplied for T must be or derive from the argument supplied for U.
 
 ---------------------------------------------------------------
 _Classes
 
 C# abstract class explained
+Abstraction in C# is the process to hide the internal details and show only the functionality. The abstract modifier indicates 
+the incomplete implementation. 
 An abstract class is a special type of class that cannot be instantiated. An abstract class is designed to be inherited by subclasses 
 that either implement or override its methods. In other words, abstract classes are either partially implemented or not implemented 
 at all. You can have functionality in your abstract class. The methods in an abstract class can be both abstract and concrete. An 
@@ -294,19 +308,39 @@ An abstract class allows you to create functionality that subclasses can access 
 define functionality, not implement it. A class can extend only one abstract class, but it can take advantage of multiple 
 interfaces.
 
-public abstract class A 
+public abstract class Animal 
 {
     private string data;
 
-    protected A(string myString){
+    protected Animal(string myString){      *Note that the constructor is protected to limit it being called only by the sub class.
       data = myString;
+    }
+
+    public abstract void FeedIt();      
+
+    public virtual void CombAnimal()        *This method does not need to be overriden.    
+    {...}
+}
+
+public class B : A
+{
+    B(string myString) : base(myString){}
+
+    public override void FeedIt()           * Mandatory to override the abstract method.
+    {
+        Console.WriteLine("class Geek1");
     }
 }
 
-public class B : A 
-{
-     B(string myString) : base(myString){}
-}
+A user must use the override keyword before the method is declared as abstract in the child class, the abstract class is used to 
+inherit in the child class.
+An abstract class cannot be inherited by structures.
+An abstract class can contain constructors or destructors.
+An abstract class can implement functions with non-Abstract methods.
+An abstract class cannot support multiple inheritances.
+An abstract class can’t be static.
+
+If you have to implement an abstract method that you do not need, you can just over write it and throw new NonImplementedException();
 ---
 A static class cannot be instantiated. You cannot use the new operator to create a variable of the class type. Because there is no 
 instance variable, you access the members of a static class by using the class name itself. 
@@ -326,10 +360,11 @@ https://msdn.microsoft.com/en-us/library/z41h7fat.aspx  - Visual C# Code Snippet
 _DataTypes
 
 Value Types: integer, float, double, decimal, char, booleon, enum, struct, nullable
-Reference Types: object, class, interface, array, delegate 
-
+Reference Types: object, class, interface, array, delegate,
 uint, long, ulong, DateTime
 https://www.tutorialsteacher.com/csharp/csharp-data-types#:~:text=C%23%20mainly%20categorized%20data%20types,types%2C%20and%20Nullable%20value%20types.
+
+The best data type to use for money is decimal.
 ---------------------------------------------------------------
 _Dependency
 
@@ -337,7 +372,7 @@ http://tutorials.jenkov.com/ood/understanding-dependencies.html
 Understanding dependencies is important when doing object oriented design of API's and applications. 
 Whenever a class A uses another class or interface B, then A depends on B. A cannot carry out it's work without B, and A cannot 
 be reused without also reusing B. In such a situation the class A is called the "dependant" and the class or interface B is called 
-the "dependency". A dependant depends on its dependencies.
+the "dependency". A dependant class depends on its dependencies.
 
 Two classes that uses each other are called "coupled". The coupling between classes can be loose or tight, or somewhere in between. 
 The tightness of a coupling is not binary. It is not either "loose" or "tight". The degrees of tightness are continuous, not discrete. 
@@ -363,7 +398,7 @@ The implementation of your IDisposable.Dispose() method is responsible for four 
 Suppressing finalization. You call GC.SuppressFinalize(this) to accomplish this task.
 To begin, your class must have a finalizer if and only if it directly contains unmanaged resources. You should not rely on clients 
 to always call the Dispose() method. In a managed environment, you do not need to write a finalizer for every type you create; you 
-do it only for types that store unmanaged types or when your type contains members that implement IDisposable. 
+do it only for types that store unmanaged types or store types that contain members that implement IDisposable. 
 
 Even if you need only the IDisposable interface, not a finalizer, implement the entire pattern. Otherwise, you limit your derived 
 classes by complicating their implementation of the standard dispose idiom.
@@ -378,20 +413,24 @@ that generation (which is not necessarily the next garbage collection) to determ
 public class MyGarbage : IDisposable
 {
     public String name = String.Empty;              // A managed type
-    public SqlConnection con = null;                // An unmanaged type
+    public SqlConnection con = null;                // An unmanaged type        
+    private bool alreadyDisposed = false;           // Flag for already disposed
     
 	public MyGarbage()
     {
         name = "This property (name) is managable resource";
-        con = new SqlConnection();
+        sqlConnection = new SqlConnection();
     }
     ~MyGarbage()					// Finalizer is called only by the GC
     {
-        Dispose(false);             // false param indicates that object is being deleted by the GC. Dispose not being called by code.
+        Dispose(false);             // False param indicates that object is being deleted by the GC. Dispose not being called by code.
     }
     
 	protected virtual void Dispose(bool disposing)
     {  
+        if(alreadyDisposed)
+            return;
+
         if (disposing)             // If Dispose() called by code and not GC
         {
             // Free managed resource here
@@ -399,7 +438,7 @@ public class MyGarbage : IDisposable
         }
         
         // Free unmanaged resource here
-        con = null;
+        sqlConnection = null;
         Console.WriteLine("Unmanaged object has been disposed");
     }
  
@@ -413,14 +452,15 @@ public class MyGarbage : IDisposable
     {
         if (alreadyDisposed)
             throw new ObjectDisposedException("MyGarbage", "Called Example Method on Disposed object");
+        ...
     }
 }
 ---
 The public Dispose method is never automatically called by the CLR, it is only called explicitly by the owner of the object, 
 which in some cases may be another framework, such as ASP.NET.
 ---
-Managed objects are created, managed and under scope of CLR, pure .NET code managed by runtime, Anything that lies within .NET scope 
-and under .NET framework classes such as string, int, bool variables are referred to as managed code.
+Managed objects are created, managed and under scope of CLR, pure .NET code is managed by the .Net runtime, Anything that lies 
+within .NET scope and under .NET framework classes such as string, int, bool variables are referred to as managed code.
 
 UnManaged objects are created outside the control of .NET libraries and are not managed by CLR, example of such unmanaged code is 
 COM objects, file streams, connection objects, Interop objects. (Basically, third party libraries that are referred in .NET code.)
@@ -431,8 +471,53 @@ In a UI app such as Winforms or WPF, a "cross thread exception" occurs if you ar
 ---------------------------------------------------------------
 _Expression
 
-Use Expressions when you want to treat lambda expressions as expression trees and look inside them instead of executing them. For example, 
-LINQ to SQL gets the expression and converts it to the equivalent SQL statement and submits it to server (rather than executing the lambda).
+The simplest C# expressions are literals (for example, integer and real numbers) and names of variables. You can combine them into 
+complex expressions by using operators. Typically, an expression produces a result and can be included in another expression. A 
+void method call is an example of an expression that doesn't produce a result. It can be used only as a statement.
+
+The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, 
+calling methods, looping through collections, and branching to one or another block of code, depending on a given condition. 
+
+In the following code, examples of expressions are at the right-hand side of assignments:
+    int a, b, c;
+    a = 7;
+    b = a;
+    c = b++;
+    b = a + b * c;
+    c = a >= 100 ? b : c / 10;
+    a = (int)Math.Sqrt(b * b + c * c);
+
+    string s = "String literal";
+    char l = s[s.Length - 1];
+
+    var numbers = new List<int>(new[] { 1, 2, 3 });
+    b = numbers.FindLast(n => n > 1);
+
+Interpolated string expressions that provide convenient syntax to create formatted strings:
+    var r = 2.3;
+    var message = $"The area of a circle with radius {r} is {Math.PI * r * r:F3}.";
+
+Lambda expressions that allow you to create anonymous functions(In this case the lambda expression is the parameter):
+    int[] numbers = { 2, 3, 4, 5 };
+    var maximumSquare = numbers.Max(x => x * x);  // Output = 25;
+
+Query expressions that allow you to use query capabilities directly in C#:
+    var scores = new[] { 90, 97, 78, 68, 85 };    
+    IEnumerable<int> highScoresQuery =
+        from score in scores
+        where score > 80
+        orderby score descending
+        select score;
+    Console.WriteLine(string.Join(" ", highScoresQuery));   // Output is: 97 90 85
+
+An expression-bodied method consists of a single expression that returns a value whose type matches the method's return type, or, 
+for methods that return void, that performs some operation. For example, types that override the ToString method typically include 
+a single expression that returns the string representation of the current object.
+    private string fname;
+    private string lname;
+
+    public override string ToString() => $"{fname} {lname}".Trim();
+    public void DisplayName() => Console.WriteLine(ToString());    
 
 The following code example demonstrates how to represent a lambda expression both as executable code in the form of a delegate and as data 
 in the form of an expression tree. It also demonstrates how to turn the expression tree back into executable code by using the Compile method.
@@ -444,16 +529,16 @@ and Expression<Func<T>> denotes a tree data structure for a lambda expression. T
 rather than doing the actual thing.
 
 // Lambda expression as executable code.
-Func<int, bool> deleg = i => i < 5;
+    Func<int, bool> deleg = i => i < 5;
 // Invoke the delegate and display the output.
-Console.WriteLine("deleg(4) = {0}", deleg(4));
+    Console.WriteLine("deleg(4) = {0}", deleg(4));
 
 // Lambda expression as data in the form of an expression tree.
-System.Linq.Expressions.Expression<Func<int, bool>> expr = i => i < 5;
+    System.Linq.Expressions.Expression<Func<int, bool>> expr = i => i < 5;
 // Compile the expression tree into executable code.
-Func<int, bool> deleg2 = expr.Compile();
+    Func<int, bool> deleg2 = expr.Compile();
 // Invoke the method and print the output.
-Console.WriteLine("deleg2(4) = {0}", deleg2(4));
+    Console.WriteLine("deleg2(4) = {0}", deleg2(4));
 
 /*  This code produces the following output:
     deleg(4) = True
@@ -816,15 +901,17 @@ Console.WriteLine(a);                           // output: 0
 _String_Methods
 
 Clone
-Returns a reference to the this instance of String. The return value is not an independent copy of this instance; 
+When you clone a string, the new string will have the same characters but have it's own instance.
 it is simply another view of the same data. 
+
+string s1 = "GeeksForgeeks";  
+// Without explicit conversion you get error "Cannot implicitly convert type object to the string".
+string s2 = (String)s1.Clone();  
+
+
 
 CompareOrdinal
 Compares two String objects by evaluating the numeric values of the corresponding Char objects in each string.
------
-Contains
-Returns a booleon value indicating whether a specified substring occurs within this string. Performs an ordinal 
-(case-sensitive and culture-insensitive) comparison. int result = String.CompareOrdinal(str1, str2);
 -----
 Copy
 The Copy method returns a String object that has the same value as the original string but represents a different object reference. It 
@@ -834,6 +921,11 @@ str2 = String.Copy(str1);
 CopyTo
 Copies a specified number of characters from a specified position in this instance to a specified position in an -ARRAY- of Unicode characters.
 -----
+Contains
+Returns a booleon value indicating whether a specified substring occurs within this string. Performs an ordinal 
+(case-sensitive and culture-insensitive) comparison. int result = String.CompareOrdinal(str1, str2);
+-----
+
 EndsWith
 EndsWith(String)
 -----
