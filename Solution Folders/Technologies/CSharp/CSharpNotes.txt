@@ -471,7 +471,7 @@ In a UI app such as Winforms or WPF, a "cross thread exception" occurs if you ar
 ---------------------------------------------------------------
 _Expression
 
-The simplest C# expressions are literals (for example, integer and real numbers) and names of variables. You can combine them into 
+The simplest C# expressions are literals and names of variables. You can combine them into 
 complex expressions by using operators. Typically, an expression produces a result and can be included in another expression. A 
 void method call is an example of an expression that doesn't produce a result. It can be used only as a statement.
 
@@ -802,7 +802,7 @@ int i = GetMyNullableInt() ?? default(int);
 // Display the value of s if s is NOT null; otherwise,  
 // display the string "Unspecified".
 string s = GetStringValue();
-Console.WriteLine(s ?? "Unspecified");
+Console.WriteLine(s ?? "Unspecified");      // You see null-coalescing operator can be used as a func parameter.
 ---------------------------------------------------------------
 The null conditional operator
 

@@ -64,23 +64,26 @@ Steps for Code First Demo:
 4) In the Program.cs file Create a new class that implements DbContext and exposes one or more DB sets.
    public class BlogDbContext : DbContext
    {
-      public DbSet<Post> Posts { get; set; }
+      public DbSet<Post> Posts { get; set; }        // One per table
    }
 5) Specify the connection string to the database. In the app.config file, create a new <connectionStrings> element.
    Add the name of the context to it and the connection string.
 6) Enable Migrations. In the Package Manager Console type enable-migrations. This will also check the db connection.
 7) Create a starting migration: Enter add-migration <migration name>
 8) Enter update-database -Verbose
-
-   
-
-
 ------------------------------------------------
 Fluent_Api
 
 https://www.tutorialspoint.com/entity_framework/entity_framework_fluent_api.htm  - Lots of EF topics
 To access Fluent API you need to override the OnModelCreating method in DbContext.
 
+Fluent API is an advanced way of specifying model configuration that covers everything that data annotations can do in addition to 
+some more advanced configuration not possible with data annotations. Data annotations and the fluent API can be used together, but 
+Code First gives precedence to Fluent API > data annotations > default conventions.
+
+Fluent API is another way to configure your domain classes.
+The Code First Fluent API is most commonly accessed by overriding the OnModelCreating method on your derived DbContext.
+Fluent API provides more functionality for configuration than DataAnnotations.
 ------------------------------------------------
 Local_DB
 
@@ -103,7 +106,6 @@ Model_First
 
 In the Model First approach, you create Entities, relationships, and inheritance hierarchies directly on the design surface of EDMX 
 and then generate the database from your model.
-
 ------------------------------------------------
 Navigation_Properties
 
@@ -260,10 +262,18 @@ Therefore the code in the example
 (putting the Where statement inside an if statement) makes sure that you get the same results for all versions of SQL Server.  
 
 ******************************** Recorded to here ****************************************************
+******************************** Recorded to here ****************************************************
+******************************** Recorded to here ****************************************************
+
+Normalization is the process of organizing tables in a database to eliminate redundancy.
+This includes creating tables and establishing relationships between those tables according to rules designed both to protect the 
+data and to make the database more flexible by eliminating redundancy and inconsistent dependency.
+
 Also, the .NET Framework 
-implementation of the Contains method performs a case-sensitive comparison by default, but Entity Framework SQL Server providers perform case-insensitive 
-comparisons by default. Therefore, calling the ToUpper method to make the test explicitly case-insensitive ensures that results do not change when you change 
-the code later to use a repository, which will return an IEnumerable collection instead of an IQueryable object. 
+implementation of the Contains method performs a case-sensitive comparison by default, but Entity Framework SQL Server providers 
+perform case-insensitive comparisons by default. Therefore, calling the ToUpper method to make the test explicitly case-insensitive 
+ensures that results do not change when you change the code later to use a repository, which will return an IEnumerable collection 
+instead of an IQueryable object. 
 
 When you call the Contains method on an IEnumerable collection, you get the .NET Framework implementation; when you call it on an IQueryable object, you get 
 the database provider implementation.

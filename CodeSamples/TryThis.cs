@@ -79,6 +79,55 @@ namespace DevelopmentInfo.CodeSamples
 
             return;
         }
+
+        public string CapitalizeFirstLetterOfEveryWord(string phrase)
+        {            
+            var sb = new StringBuilder();
+
+            foreach(string word in phrase.Split(' '))
+            {
+                string firstChar = word[0].ToString().ToUpper();
+                string capWord = firstChar + word.Substring(1) + " ";
+                sb.Append(capWord);
+            }
+                        
+            return sb.ToString().TrimEnd();
+        }
+        // Another way:
+        // return String.Join(" ", phrase.Split().Select(i => Char.ToUpper(i[0]) + i.Substring(1)))
+
+        public bool IsSquare(int n)
+        {
+            int val = 0;
+
+            for(int i = 0; val < n; i++)
+            {
+                val = i * i;
+            }
+
+            return val == n;
+        }
+        // Another way:
+        // return Math.Sqrt(n) % 1 == 0;  or  => (Math.Sqrt(n) % 1 == 0);
+
+        /// <summary>
+        /// To be a senior, a member must be at least 55 years old and have a handicap greater than 7. 
+        /// In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+        /// </summary>
+        /// Parameters: Age, Handicap
+        /// <returns>Array of "Senior" or "Open"</returns>
+        public static IEnumerable<string> OpenOrSenior(int[][] data)
+        {
+            
+            for(int i = 0; i < data.Length; i++)
+            {
+                for (int j = 0; j < data[i].Length; j++)
+                {
+                    // Age  Handicap
+                    if ((data[i][j] > 55)) && ((data[i][j] > 55)
+                }
+            }
+        }
     }
 }
 

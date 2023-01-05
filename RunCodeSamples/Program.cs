@@ -82,6 +82,12 @@ namespace DevelopmentInfo.RunCodeSamples
                     case 13:
                         new TryThis().GenerateFibonacciSeries();
                         break;
+                    case 14:
+                        var attempt = new TryThis();
+                        string phrase = "How can mirrors be real if our eyes aren't real";
+                        string result = attempt.CapitalizeFirstLetterOfEveryWord(phrase);
+                        bool isSquare = attempt.IsSquare(-23);   // 25 = true  5*5
+                        break;
                     case 22:
                         // Environment.Exit(0);
                         keepRunning = false;
