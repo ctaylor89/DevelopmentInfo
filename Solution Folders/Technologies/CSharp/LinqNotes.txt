@@ -229,26 +229,29 @@ Locating_duplicate_values
 
 Q: How do I retrieve a list of integer values that are repeated more than once in a List<int>?
 
-A: 
-Group the elements based on their value, and then pick a representative of the group if there are more than one element in the group.
-var query = lst.GroupBy(x=>x)
-              .Where(g=>g.Count()>1)
-              .Select(y=>y.Key)
-              .ToList();
+A: Group the elements based on their value, and then pick a representative of the group if there are more than one element in the group.
+    var query = lst.GroupBy(x=>x)
+                  .Where(g=>g.Count()>1)
+                  .Select(y=>y.Key)
+                  .ToList();
 	
 If you want to know how many times the elements are repeated, you can use:
+    var intList = new List<int>() {1,2,3,4,2,5,6,2,5,2};
+	var query = intList.GroupBy(x => x)
+					.Where(g=>g.Count() > 1)
+					.Select(y=> new { Element = y.Key, Counter = y.Count()})
+					.ToList();
+		
+	foreach(var q in query)	Console.WriteLine($"Count in group: {q}");
 
-var query = lst.GroupBy(x=>x)
-              .Where(g=>g.Count()>1)
-              .Select(y=> new { Element = y.Key, Counter = y.Count()})
-              .ToList();
-This will return a List of an anonymous type, and each element will have the properties Element and Counter, to retrieve the informations you need.
-
-And lastly, if it's a dictionary you are looking for, you can use
-
-var query = lst.GroupBy(x=>x)
-              .Where(g=>g.Count()>1)
-              .ToDictionary(x=>x.Key,y=>y.Count());
+Result is a List of an anonymous types:
+    Count in group: { Element = 2, Counter = 4 }
+    Count in group: { Element = 5, Counter = 2 }
+---
+If it's a dictionary you are looking for you can use:
+    var query = lst.GroupBy(x=>x)
+                  .Where(g=>g.Count()>1)
+                  .ToDictionary(x=>x.Key,y=>y.Count());
 
 This will return a dictionary, with your element as key, and the number of times it's repeated as value.
 ---

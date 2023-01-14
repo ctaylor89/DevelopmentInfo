@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using DevelopmentInfo.CodeSamples;
 
 namespace DevelopmentInfo.RunCodeSamples
@@ -87,6 +88,10 @@ namespace DevelopmentInfo.RunCodeSamples
                         string phrase = "How can mirrors be real if our eyes aren't real";
                         string result = attempt.CapitalizeFirstLetterOfEveryWord(phrase);
                         bool isSquare = attempt.IsSquare(-23);   // 25 = true  5*5
+                        List<string> catagories = attempt.OpenOrSenior2(new[] {new[] { 18,20}, new[] { 45,2}, new[] {61,12}, new[] {37,6}, new[] { 21,21}, new[] {78,9} }) as List<string>;
+                        string result2 = attempt.ToWeirdCase2("Weird string case");
+                        int consonantCount = attempt.ConsonantCount("BbbCaeudXZ&*@3");
+                        string result3 = attempt.ReverseWords("battle no requires which that is victory greatest The");
                         break;
                     case 22:
                         // Environment.Exit(0);
@@ -100,3 +105,4 @@ namespace DevelopmentInfo.RunCodeSamples
         }
     }
 }
+//h^$&^#$&^elLo world

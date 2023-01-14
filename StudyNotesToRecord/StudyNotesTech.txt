@@ -88,6 +88,7 @@ Thread represents an actual OS-level thread, with its own stack and kernel resou
 
 The Task class from the Task Parallel Library offers the best of both worlds. Like the ThreadPool, a task does not create its own OS thread. Instead, tasks are executed by a TaskScheduler; the default scheduler simply runs on the ThreadPool. Unlike the ThreadPool, Task also allows you to find out when it finishes, and (via the generic Task) to return a result.
 ---
+Normalization is the process of organizing tables in a database to eliminate redundancy. This includes creating tables and establishing relationships between those tables according to rules designed both to protect the data and to make the database more flexible by eliminating redundancy and inconsistent dependency.
 
 Left off 432:
 

@@ -9,9 +9,9 @@ _DisposePattern
 _Exceptions
 _Expression
 _ExpressionBodied
+_ExtensionMethods
 _Interfaces
 _Keywords
-_List Extension methods
 _JSON
 _Loops
 _MethodImplOptions
@@ -95,6 +95,9 @@ It is an error to use the virtual modifier on a static property.
 A virtual inherited property can be overridden in a derived class by including a property declaration that 
 uses the override modifier.
 
+Virtual methods can have both out and ref type parameters.
+A virtual method can be overridden to sealed also in the derived class.
+---
 protected: A protected member is accessible within its class and by derived class instances. Using protected means you can have 
 functionality in a class that's available to derived classes, but not to classes that just instantiate the base class.
 
@@ -549,6 +552,39 @@ _ExpressionBodied
 
 // This creates a new YearMonth class passing the DateTime value to it's constructor, then accessing the Value property of the class.
 public string DefaultValue => new YearMonth(DateTime.Now).Value;
+---------------------------------------------------------------
+_ExtensionMethods
+
+The LINQ’s standard query operators such as select, where, etc. are implemented in the Enumerable class. These methods are implemented 
+as extension methods of the type IEnumerable<T> interface.
+
+Extension methods allow us to add methods to existing types without creating a new derived type, recompiling, or otherwise modifying 
+the original type. In simple words, we can say that the Extension methods can be used as an approach to extending the functionality of 
+a class by adding new methods in the future if the source code of the class is not available or if we don’t have any permission in making 
+changes to the class.
+
+The most important point that you need to keep in mind is, extension methods are the special kind of static methods of a static class, 
+but they are going to be called as if they were instance methods on the extended type. 
+
+public class Program
+{
+	public static void Main()
+	{		
+		string sentence = "Welcome to Dotnet Tutorials dude buddy";
+		Console.WriteLine("Count : {0}", sentence.GetWordCount());            
+	}
+}
+
+public static class ExtensionHelper                         // Class can be any name. Must be static
+{
+	public static int GetWordCount(this string str)         // Method must be static and param an instance of the target class
+	{			
+		return !String.IsNullOrEmpty(str) ? str.Split(' ').Length : 0;         
+	}
+}
+---
+
+
 ---------------------------------------------------------------
 _Interfaces
 
