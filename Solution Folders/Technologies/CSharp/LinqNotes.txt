@@ -9,20 +9,39 @@ https://docs.microsoft.com/en-us/dotnet/csharp/linq/write-linq-queries
 
 ----------------------------------------------------------------------------------
 Three ways in which you can write a LINQ query in C#:
-    Use query syntax. Use method syntax(chaining methods together). Use a combination of query syntax and method syntax.
+1) Use Comprehension query syntax. 2) Use Lambda syntax(chaining methods together). 3) Use a combination of both.
+
 The recommended way to write most queries is to use query syntax to create query expressions.
 
-// Using a query expression with method syntax
+// Using a query expression with Comprehension and Lambda syntax(Mixed Syntax).
 int numCount1 =
     (from num in numbers1
      where num < 3 || num > 7
-     select num).Count();               // .Count() is the method sytax
+     select num).Count();       // Adding Count() is the Lambda systax.
 
 ----------------------------------------------------------------------------------
 Comprehension and Lambda queries. 
 The select operator is optional in lambda when not doing a projection.
 Many lambda queries have no comprehension equivalent.
-Comprehension queries must end in a select or group clause.
+Lambda query methods are applied on a sequence or a collection of elements.
+Comprehension queries start with the from clause and must end in a select or group clause.
+
+Lambda query extension methods are present under the Enumerable class in System.Linq and System.Linq.Expression 
+namespace in System.Core assembly.
+---
+Lambda expressions in C# are used like anonymous functions, with the difference that in Lambda expressions you don’t need to 
+specify the type of the value that you input thus making it more flexible to use. 
+
+The ‘=>’ is the lambda operator which is used in all lambda expressions. The Lambda expression is divided into two parts, the 
+left side is the input and the right is the expression.
+
+Two types of Lambda Expressions: Expression Lambda  input => expression and Statement Lambda  input => { statements };
+---
+var results = numbers.Select(x => x > 25);      // This will return true for each number > 25
+var results = numbers.Where(x => x > 25);       // This will return each number > 25
+var results = numbers.Select(x => x * x);       // Returns the square of each number
+List<int> divBy3 = numbers.FindAll(x => (x % 3) == 0);      // Returns numbers divisible by 3
+var filteredNames = names.Where(a => a.StartsWith("V"));    // Returns names that start with 'V'
 ----------------------------------------------------------------------------------
 
 When "into" is used after either a "group x by y" or "select x" clause, it’s called a query continuation. (Note that "join … into" 
@@ -92,8 +111,10 @@ The IGrouping interface has only one property, “Key”, and implements IEnumerable
 as the generic type you define for TKey.
 ----------------------------------------------------------------------------------
 Extension methods are a feature who's main purpose is to be used with LINQ, although they can also be useful in hundreds of different scenarios.
-Extension methods are special methods that can extend the data type they are applied to.The most important thing is that you can
-extend existing types even if you do not have the source code and without the need to rebuild class libraries.You can extend.NET built - in types.
+Extension methods are special methods that can extend the data type they are applied to. The most important thing is that you can
+extend existing types even if you do not have the source code and without the need to rebuild class libraries.You can extend.NET built-in types.
+
+LINQ Query Extension methods are under the Enumerable class in System.Linq and System.Linq.Expression namespace in System.Core assembly.
 
 .NET Built-in extension methods accomplish three main objectives : converting types into other types, data filtering and parsing.The most common
 built-in.NET extension methods are provided by the System.Linq.Enumerable class.

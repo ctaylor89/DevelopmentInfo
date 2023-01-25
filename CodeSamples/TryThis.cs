@@ -204,8 +204,6 @@ namespace DevelopmentInfo.CodeSamples
             return sb.ToString().TrimEnd();
         }
         //---------------------------------------------------------------------
-        // Given a positive integral number n, return a strictly increasing sequence
-        // of numbers, so that the sum of the squares is equal to n².
         public int ConsonantCount(string str)
         {
             int countOut = 0;
@@ -259,12 +257,37 @@ namespace DevelopmentInfo.CodeSamples
             //    return false;
         }
 
+        //---------------------------------------------------------------------
         public string ReverseWords(string str)
         {
             string[] words = str.Split(' ');
-            string[] revWords = Array.Reverse(words);  // words.Reverse().ToArray();
-            string result = string.Join(" ", revWords);
-            return result;
+            Array.Reverse(words);
+            return string.Join(" ", words);            
+        }
+                
+        public string ReverseWords2(string str)
+        {
+            return string.Join(" ", str.Split(' ').Reverse());
+        }
+        //---------------------------------------------------------------------
+        // Consider an array/list of sheep where some sheep may be missing from their place.We need a function that counts the
+        // number of sheep present in the array (true means present).
+        public int CountSheeps(bool[] sheeps)
+        {
+            int sheepsPresent = 0;
+
+            sheepsPresent = sheeps.Where(s => s == true).Count();
+
+            //sheepsPresent = (from s in sheeps
+            //                 where s == true
+            //                 select s).Count();
+
+            //foreach(bool s in sheeps)
+            //{
+            //    if(s == true) sheepsPresent++;
+            //}
+
+            return sheepsPresent;
         }
     }
 }

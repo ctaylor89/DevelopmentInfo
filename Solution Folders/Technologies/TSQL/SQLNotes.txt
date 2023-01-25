@@ -1,4 +1,5 @@
 IN_AND_EXISTS_Keywords
+Joins_
 Key_Words
 Random_Notes
 Set_Logic
@@ -111,6 +112,11 @@ You can also use query results with the IN clause, like this:
 		FROM Products 
 		WHERE ProductInventoryQuantity > 0)
 --------------------------------------------------------------------------------
+Joins_
+
+
+
+--------------------------------------------------------------------------------
 Key_Words
 
 EXCEPT - This operator is used to return all rows in the first SELECT statement that are not returned by the second SELECT 
@@ -217,7 +223,8 @@ Windowed_functions
 
 Windowed functions can only appear in the SELECT or ORDER BY clauses.
 
--- ROW_NUMBER
+--- 
+ROW_NUMBER
 select orderid, orderdate, custid, empid, 
   row_number() over (order by orderid, orderdate) as rownum
 from Sales.Orders;

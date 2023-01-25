@@ -59,6 +59,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{FD6AC3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TSQL", "TSQL", "{F90F7A87-C403-468D-8C3D-E08A01DFC21B}"
 	ProjectSection(SolutionItems) = preProject
+		Solution Folders\Technologies\TSQL\SQLNotes.txt = Solution Folders\Technologies\TSQL\SQLNotes.txt
 		Solution Folders\Technologies\TSQL\SQL_ServerNotes.txt = Solution Folders\Technologies\TSQL\SQL_ServerNotes.txt
 		Solution Folders\Technologies\TSQL\TSQL.cpp = Solution Folders\Technologies\TSQL\TSQL.cpp
 		Solution Folders\Technologies\TSQL\TSQL_DataTypes.docx = Solution Folders\Technologies\TSQL\TSQL_DataTypes.docx
@@ -130,7 +131,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{F5
 		Solution Folders\Technologies\TSQL\Examples\PracticeMultiTableSelects.sql = Solution Folders\Technologies\TSQL\Examples\PracticeMultiTableSelects.sql
 		Solution Folders\Technologies\TSQL\Examples\PracticeQuerys.sql = Solution Folders\Technologies\TSQL\Examples\PracticeQuerys.sql
 		Solution Folders\Technologies\TSQL\Examples\PracticeTriggers.sql = Solution Folders\Technologies\TSQL\Examples\PracticeTriggers.sql
-		Solution Folders\Technologies\TSQL\Examples\SQLNotes.txt = Solution Folders\Technologies\TSQL\Examples\SQLNotes.txt
 		Solution Folders\Technologies\TSQL\Examples\SQL_Practice1.sql = Solution Folders\Technologies\TSQL\Examples\SQL_Practice1.sql
 		Solution Folders\Technologies\TSQL\Examples\SQL_Practice2.sql = Solution Folders\Technologies\TSQL\Examples\SQL_Practice2.sql
 		Solution Folders\Technologies\TSQL\Examples\StoredProcedures.sql = Solution Folders\Technologies\TSQL\Examples\StoredProcedures.sql

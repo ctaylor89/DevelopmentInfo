@@ -139,14 +139,12 @@ To DROP a UNIQUE Constraint:
 	ALTER TABLE Persons
 	DROP CONSTRAINT uc_PersonID
 _______________
-
 Explanation of ON [PRIMARY]
 When you create a database in Microsoft SQL Server you can have multiple file groups, where storage is created in 
 multiple places, directories or disks. Each file group can be named. The PRIMARY file group is the default one, 
 which is always created, and so the SQL you've written creates your table ON the PRIMARY file group. This also 
 means it's usually useless and can be safely removed from the script".
 ______________
-
 The following statement:
 CONSTRAINT pk_UserID PRIMARY KEY (U_Id)
 
@@ -162,7 +160,6 @@ CONSTRAINT pk_UserID PRIMARY KEY NONCLUSTERED (U_Id)
 And then create the clustered index with:
 CREATE CLUSTERED INDEX ix_Email ON Users (Email); 
 _______________
-
 UDF - User Defined Functions
 Functions are computed values and cannot perform permanent environmental changes to SQL Server (i.e. no INSERT 
 or UPDATE statements allowed). A Function can be used inline in SQL Statements if it returns a scalar value or 
@@ -176,10 +173,11 @@ select * from dbo.TablevaluedfunctionName(@param1..)
 
 SELECT a, LookupValue(b), c FROM customers;
 
-Functions follow the computer-sciency definition in that they MUST return a value and cannot alter the data they 
-receive as parameters. Functions are not allowed to change anything, must have at least one parameter(input only), 
-and they must return a value. Stored procs do not require a parameter, can change database objects, and do not 
-have to return a value.
+Functions MUST return a value and cannot alter the data they receive as parameters. 
+Functions are not allowed to change anything, must have at least one parameter(input only), 
+and they must return a value. 
+
+Stored procs do not require a parameter, can change database objects, and do not have to return a value.
 
 You cannot call a SP from a function. Functions can be used in SELECT/WHERE/HAVING statements. Functions cannot 
 use try-catch block or transactions. Functions are not DML.
@@ -961,7 +959,7 @@ In Using Common Table Expressions, Microsoft offers the following four advantage
 
 Using a CTE offers the advantages of improved readability and ease in maintenance of complex queries. The query 
 can be divided into separate, simple, logical building blocks. These simple blocks can then be used to build 
-more complex, interim CTEs until the final result set is generated.
+more complex, interim CTEs until the final result set is generated. 
 
 Say, for instance, you have a query like this:
 SELECT * FROM  (
@@ -971,19 +969,23 @@ SELECT * FROM  (
 WHERE T.Age > 50
 ORDER BY T.NAME
 
-CTE allows you to generate Tables beforehand and use it later when we actually bind the data into the output.
+CTE's allow you to generate a temp result set beforehand and use it later when we actually bind the data into the output.
 Rewriting the query using CTE expressions would look like:
 
 With T(Address, Name, Age)  --Column names for Temporary table
 AS
 (
-SELECT A.Address, E.Name, E.Age 
-FROM Address A
-INNER JOIN EMP E ON E.EID = A.EID
+	SELECT A.Address, E.Name, E.Age 
+	FROM Address A
+	INNER JOIN EMP E ON E.EID = A.EID
 )
-SELECT * FROM T  --SELECT or USE CTE temporary Table
+SELECT * FROM T  --SELECT or USE CTE temporary result set
 WHERE T.Age > 50
 ORDER BY T.NAME
+
+After you define your WITH clause with the CTEs, you can then reference the CTEs as you would refer any other table. 
+However, you can refer a CTE only within the execution scope of the statement that immediately follows the WITH clause. 
+After you’ve run your statement, the CTE result set is not available to other statements.
 _______________
 
 Using triggers is quite valid when their use is justified. For example, they have good value in auditing (keeping 

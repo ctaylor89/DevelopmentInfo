@@ -64,7 +64,7 @@ namespace DevelopmentInfo.RunCodeSamples
                         new Threading().RunThreadExercises();
                     break;
                     case 8:
-                       new LINQPractice().RunQuerys();
+                       new LINQPractice().RunLinkQuerys();
                        new LINQPractice().LinkQueryXML();
                     break;
                     case 9:
@@ -91,7 +91,16 @@ namespace DevelopmentInfo.RunCodeSamples
                         List<string> catagories = attempt.OpenOrSenior2(new[] {new[] { 18,20}, new[] { 45,2}, new[] {61,12}, new[] {37,6}, new[] { 21,21}, new[] {78,9} }) as List<string>;
                         string result2 = attempt.ToWeirdCase2("Weird string case");
                         int consonantCount = attempt.ConsonantCount("BbbCaeudXZ&*@3");
-                        string result3 = attempt.ReverseWords("battle no requires which that is victory greatest The");
+                        string result3 = attempt.ReverseWords2("battle no requires which that is victory greatest The");
+
+                        bool[] sheeps = new bool[] {true, true, true, false,
+                          true, true, true, true,
+                          true, false, true, false,
+                          true, false, false, true,
+                          true, true, true, true,
+                          false, false, true, true};
+
+                        int sheepInPlace = attempt.CountSheeps(sheeps);
                         break;
                     case 22:
                         // Environment.Exit(0);

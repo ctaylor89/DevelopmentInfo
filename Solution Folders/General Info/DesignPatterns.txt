@@ -83,7 +83,15 @@ Most_Common_Patterns
 
 Singleton - ensures that only one object gets created.
 
-Factory Pattern - determine at run time which subclass will be created to implement the abstract base class
+---
+https://www.dotnettricks.com/learn/designpatterns/abstract-factory-design-pattern-dotnet
+Abstract Factory patterns act a super-factory which creates other factories. This pattern is also called a Factory of 
+factories. In Abstract Factory pattern an interface is responsible for creating a set of related objects, or dependent 
+objects without specifying their concrete classes. This is an interface which is used to create abstract products.
+
+ConcreteFactory - This is a class which implements the AbstractFactory interface to create concrete products.
+
+*Needs a better explanation.Factory Pattern - determine at run time which subclass will be created to implement the abstract base class
 
 Observer - allows objects to subscribe to the events of a particular object so that they are notified when an event occurs.
 
@@ -120,7 +128,8 @@ When using a private constructor, patterns such as the factory pattern or the si
 
 Therefore:
 The private constructor is a desirable part of the singleton pattern implementation in the C# language. The private constructor 
-can only be called from within the class.
+can only be called from within the class. The private constructor is called by a public static method called outside of the 
+singleton class.
 
 // C# program that uses singleton
 

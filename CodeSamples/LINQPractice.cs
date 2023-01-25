@@ -20,7 +20,7 @@ namespace DevelopmentInfo.CodeSamples
             GeneratePodlist();
         }
         
-        public void RunQuerys()
+        public void RunLinkQuerys()
         {
             // --------------------------------------
             // Create a list of annonymous objects
@@ -36,7 +36,7 @@ namespace DevelopmentInfo.CodeSamples
                             }).ToList();
             // --------------------------------------
             var XpodSubset = from p in Podlist
-                            where p.Price > 0.5m
+                            where p.Price > 0.5m && p.Name.StartsWith("A")
                             orderby p.Price
                             select new
                             {

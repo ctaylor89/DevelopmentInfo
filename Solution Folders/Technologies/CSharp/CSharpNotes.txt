@@ -119,13 +119,90 @@ The access level for class members and struct members, including nested classes 
 Interfaces default to internal access.
 ---------------------------------------------------------------
 _Arrays
-
+----------
+https://learn.microsoft.com/en-us/dotnet/api/system.array.copyto?view=netframework-4.8.1
+Examples:
 var students = new string[] {"John", "Doe"};
 string[] teachers = {"Peter", "John"};       int[] Requests = {22, 33, 44};
 var parents = new[] {"Mary", "Martha"};
 var grades = new int[0];
 
 var students = studentList.ToArray(); // In situations where we are not sure of the number of elements, start with a list.
+
+String[] arrayId = {"zero", "one", "two"}  // Rank is 1, length is 3. The 'S' for String can be upper or lower case.
+
+String[,] array2d = { { "zero", "0" }, { "one", "1" },      // Rank is 2, Length is 12
+                      { "two", "2" }, { "three", "3"},
+                      { "four", "4" }, { "five", "5" } };
+
+string[,] array2d = new string[6,2];                        // Rank is 2, Length is 12
+
+Lock an array during the entire enumeration by using the SyncRoot property.
+    Array myArray = new int[] { 1, 2, 4 };
+    lock(myArray.SyncRoot)
+    {
+        foreach (Object item in myArray)
+            Console.WriteLine(item);
+    }
+---
+int[] backInts = new int[]{101, 102, 103};
+int[] clonedInts = (int[])backInts.Clone();
+
+A change in one element of the array in either the master or the clone will not affect the other.		
+    Console.WriteLine("backInts[1] {0}  clonedInts[1] {1}", backInts[1], clonedInts[1]);
+    backInts[1] = 201;
+    Console.WriteLine("backInts[1] {0}  clonedInts[1] {1}", backInts[1], clonedInts[1]);
+
+----------
+Array Properties .Net Framework 4.8.1
+Rank - The number of dimensions of the Array. A one-dimensional array returns 1, a two-dimensional array returns 2, and so on.
+    int[] array1 = new int[10];
+    int[,] array2= new int[10,3];       // 2 dimensions
+    int[][] array3 = new int[10][];     // 1 dimension
+
+Length, LongLength, SyncRoot
+----------
+Array Methods .Net Framework 4.8.1
+
+// Sets a range of elements in an array to the default value of each element type.
+public static void Clear (Array array, int index, int length);
+    Ex: Array.Clear(numbers1, 2, 5);
+---
+Clone - creates a shallow copy of an array. Copies the element values, not the array reference.
+A change in one element of the array in either the master or the clone will not affect the other.
+Need more info: https://www.c-sharpcorner.com/UploadFile/56fb14/shallow-copy-and-deep-copy-of-instance-using-C-Sharp/
+---
+Copy - Copies a 'range' of elements in one Array to another Array and performs type casting and boxing as required.
+---
+CopyTo - Copies all the elements of the current one-dimensional array to the specified one-dimensional array.
+Ex: Copies the source Array to the target Array, starting at index 6.
+    mySourceArray.CopyTo(myTargetArray, 6);
+---
+Exists - Determines whether the specified array contains elements that match the conditions defined by the specified predicate.
+    string[] planets = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" };
+
+    Console.WriteLine("One or more planets begin with 'M': {0}",
+        Array.Exists(planets, element => element.StartsWith("M")));     // Returns true
+
+    Console.WriteLine("One or more planets begin with 'T': {0}",
+        Array.Exists(planets, element => element.StartsWith("T")));     // Returns false
+
+    Console.WriteLine("Is Pluto one of the planets? {0}",           
+        Array.Exists(planets, element => element == "Pluto"));          // Returns false
+---
+Find - Searches for an element that matches the result of the specified predicate, and returns the first occurrence within the Array.
+    Point[] points = { new Point(100, 200), new Point(150, 250), new Point(250, 375), new Point(275, 395), new Point(295, 450) };
+
+    // Find the first Point structure for which X times Y is greater than 100000.
+    Point first = Array.Find(points, p => p.X * p.Y > 100000);
+    Console.WriteLine("Found: X = {0}, Y = {1}", first.X, first.Y);
+---
+FindAll - Retrieves all the elements that match the conditions defined by the specified predicate.
+    // MatchedItems contains elements between upper and lower bound
+    int lBound = 300; int uBound = 600;
+    int[] matchedItems = Array.FindAll(arrayValues, x => x >= lBound && x <= uBound);  
+
+---
 
 ---------------------------------------------------------------
 _Attributes
@@ -933,18 +1010,80 @@ Console.WriteLine(string.Join(" ", numbers));   // output: 5
 numbers.Add(a ??= 0);  
 Console.WriteLine(string.Join(" ", numbers));   // output: 5 0  
 Console.WriteLine(a);                           // output: 0 
+---
+'as' keyword versus casting
+    object x = "foo"; 
+    string cast = (string) x; 
+    string asOperator = x as string;
+    if(x is string) {...}
+
+The major differences between these are:
+Casting is also used for other conversions (e.g. between value types); "as" is only valid for reference type expressions 
+(although the target type can be a nullable value type)
+
+Casting can invoke user-defined conversions (if they’re applicable at compile-time); "as" only ever performs a reference conversion.
+
+If the actual value of the expression is a non-null reference to an incompatible type, casting will throw an InvalidCastException 
+whereas the "as" operator will result in a null value instead.
+
+    void HandleUsingAs(object sender, EventArgs e) 
+    { 
+        Button button = sender as Button; 
+        if (button != null) 
+        { 
+            button.Text = "Clicked"; 
+        } 
+    }
+---
+The 'is' keyword
+    void HandleUsingCast(object sender, EventArgs e) 
+    { 
+        if (sender is Button) 
+        { 
+            Button button = (Button) sender; 
+            button.Text = "Clicked"; 
+        } 
+    }
+---
+Boxing is the process of converting a value(primitive) type to an object type or to any interface type implemented by this value type. 
+When the common language runtime (CLR) boxes a value type, it wraps the value inside a System.Object instance and stores 
+it on the managed heap. Unboxing extracts the value type from the object. Boxing enables a primitive type of data to be handled as an 
+object, and vice versa.
+---
+Example: Generate Random Integers
+    Random rnd = new Random();
+    int num = rnd.Next();
+
+Method	        Description
+Next()	        Returns a positive random integer within the default range -2,147,483,648 to 2,147,483, 647.
+Next(int)	    Returns a positive random integer that is less than the specified maximum value.
+Next(int, int)	Returns a positive random integer within the specified minimum and maximum range (includes min and excludes max).
+NextDouble()	Generates random floating-point number that is greater than or equal to 0.0 and less than 1.0.
+NextByte()	    Fills the specified array with the random bytes.
+---
+Most script languages use late binding and most compiled languages use early binding; C#, although a compiled language and thus 
+an early binding one, has reflection for late binding. 
+
+A binding is called an early binding, compiler time binding or static type binding when the target method is found during compile 
+time (the code that will call the method is also created during compile time). If the required method doesn’t exist, an error is 
+issued during compilation.
+
+Late bound means the target method is looked up at run time. Often the textual name of the method is used to look it up. If the 
+method isn’t there, the program will crash or go into some exception handling scheme during run time.
+
+
+
+*** EndOf_RandomNotes ***
 ---------------------------------------------------------------
 _String_Methods
 
 Clone
 When you clone a string, the new string will have the same characters but have it's own instance.
-it is simply another view of the same data. 
+It copies the element values, not the reference. 
 
 string s1 = "GeeksForgeeks";  
 // Without explicit conversion you get error "Cannot implicitly convert type object to the string".
 string s2 = (String)s1.Clone();  
-
-
 
 CompareOrdinal
 Compares two String objects by evaluating the numeric values of the corresponding Char objects in each string.

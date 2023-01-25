@@ -1,5 +1,5 @@
 USE AdventureWorks2012;
-
+---------------------------------------------------------
 -- Compare results from both NEWID() and NEWSEQUENTIALID()
 IF OBJECT_ID('NEWID_TEST', 'U') IS NOT NULL
 	DROP TABLE NEWID_TEST;
@@ -7,8 +7,8 @@ GO
 
 CREATE TABLE NEWID_TEST
 (
-ID UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
-TESTCOLUMN CHAR(2000) DEFAULT REPLICATE('X',2000)
+    ID UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
+    TESTCOLUMN CHAR(2000) DEFAULT REPLICATE('X',2000)
 )
 GO
 
@@ -38,15 +38,15 @@ GO
 SELECT TOP 3 ID FROM NEWID_TEST
 SELECT TOP 3 ID FROM NEWSEQUENTIALID_TEST
 GO
---------------------------------------------------
-
+---------------------------------------------------------
+-- Working with money
 DECLARE @mymoney_sm smallmoney = 3148.29,
         @mymoney    money = 3148.29;
 SELECT  CAST(@mymoney_sm AS varchar) AS SM_MONEY,
         CAST(@mymoney AS decimal)    AS 'MONEY DECIMAL';
 GO
---------------------------------------------------
-
+---------------------------------------------------------
+-- Assign a string to a variable.
 DECLARE @myvar char(20) = 'This is a test';
 --SET @myvar = 'This is a test';
 SELECT @myvar;
@@ -56,12 +56,12 @@ GO
 WITH ShowMessage(STATEMENT, LENGTH)
 AS
 (
-SELECT STATEMENT = CAST('I Like ' AS VARCHAR(300)), LEN('I Like ')
-UNION ALL
-SELECT
-      CAST(STATEMENT + 'CodeProject! ' AS VARCHAR(300))
-      , LEN(STATEMENT) FROM ShowMessage
-WHERE LENGTH < 300
+    SELECT STATEMENT = CAST('I Like ' AS VARCHAR(300)), LEN('I Like ')
+    UNION ALL
+    SELECT
+          CAST(STATEMENT + 'CodeProject! ' AS VARCHAR(300))
+          , LEN(STATEMENT) FROM ShowMessage
+    WHERE LENGTH < 300
 )
 SELECT STATEMENT, LENGTH FROM ShowMessage
 --------------------------------------------------
