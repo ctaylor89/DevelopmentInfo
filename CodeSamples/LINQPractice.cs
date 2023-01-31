@@ -12,16 +12,83 @@ namespace DevelopmentInfo.CodeSamples
     {
         List<Pod> Podlist = new List<Pod>();
         List<PodInfoItem> PodInfolist = new List<PodInfoItem>();
+        List<string> UserNames = new List<string>();
 
         private const int PodCount = 5;
 
         public LINQPractice()
         {
             GeneratePodlist();
+            GenerateStringList();
         }
-        
+
+        private void GenerateStringList()
+        {
+            UserNames = new List<string>
+            {
+                "Zipper",
+                "Lions Mouth",
+                "Target",
+                "BedPan",
+                "SlamHead",
+                "CartWheel",
+                "AtHere",
+                "ShipBuilder",
+                "ShipCaptain"
+            };
+        }
+
         public void RunLinkQuerys()
         {
+            Console.WriteLine("\nPractice Area");
+
+            //---------------- Start Practice ---------------------------------------
+            // Select annonymous object for each pod that has a values count > 3
+            var podSet = (from p in Podlist
+                         where p.Values.Count > 3
+                         select new
+                         {
+                             Name = p.Name,
+                             ValCount = p.Values.Count
+                         }).ToList();
+
+            var podSet2x = Podlist.Where(p => p.Values.Count > 3).Select(p => new {Name = p.Name, ValCount = p.Values.Count});
+
+            podSet.ForEach(p => Console.WriteLine("\nPod Name: " + p.Name + " Val Count: " + p.ValCount));
+            podSet2x.ForEach(p => Console.WriteLine("\nPod Name: " + p.Name + " Val Count: " + p.ValCount));
+
+            // Select an array of integers
+            int[] podIds = (from p in Podlist
+                            where p.Id < 3
+                            select p.Id).ToArray<int>();
+            
+            // Select the Pod values collection items using comprehension query
+            List<int> intValues = (from p in Podlist
+                                   from v in p.Values
+                                   where v < 80
+                                   select(v)).ToList();
+            
+            // Select the Pod values collection items using lambda query
+            var intValues2 = (Podlist.SelectMany((p) => p.Values).Where(v => v < 80)).ToList();
+
+
+            ;
+            //---------------- End Practice ---------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // --------------------------------------
             // Create a list of annonymous objects
             var XpodList = (from p in Podlist
@@ -41,17 +108,19 @@ namespace DevelopmentInfo.CodeSamples
                             select new
                             {
                                 PodName = p.Name,
-                                Quantity = p.Qty.DoubleIt(),
+                                Quantity = p.Qty,
                                 MyPrice = p.Price,
-                                DuckWad = p.Name
+                                DoubleQty = p.Qty.DoubleIt()
                             };
 
+            Console.WriteLine("\nResults from XpodSubset");
             XpodSubset.ForEach(xps => Console.WriteLine($"PodName: {xps.PodName}  Quantity: {xps.Quantity}  MyPrice: {xps.MyPrice}"));
             
             var podSubset = Podlist.Where(p => p.Price > 0.05M)
                                     .OrderBy(p => p.Name)
                                     .Select(n => new { PodName = n.Name, Quantity = n.Qty.DoubleIt(), MyPrice = n.Price });
 
+            Console.WriteLine("\nResults from podSubset");
             podSubset.ForEach(p => Console.WriteLine("Pod Name = {0}  Qty = {1}  Price = {2:0.00}", p.PodName, p.Quantity, p.MyPrice));
 
             // --------------------------------------
@@ -63,6 +132,7 @@ namespace DevelopmentInfo.CodeSamples
                                                         Quantity = t.Qty.DoubleIt()
                                                      });
 
+            Console.WriteLine("\nResults from PodsStartWithR");
             PodsStartWithR.ForEach(p => Console.WriteLine($"+\tName: {p.PName}\tQuantity: {p.Quantity}"));
             
             // --------------------------------------
@@ -70,6 +140,7 @@ namespace DevelopmentInfo.CodeSamples
                 // .Where(f => Path.GetFileName(f).StartsWith("D", StringComparison.OrdinalIgnoreCase));
                                .Where(f => Path.GetFileName(f)[0] == 'D');
 
+            Console.WriteLine("\nResults from Directory.GetFiles");
             windowFilePaths.ForEach(f => Console.WriteLine("FileName: {0}", f)); 
 
             // --------------------------------------
@@ -88,7 +159,7 @@ namespace DevelopmentInfo.CodeSamples
                                 Value = v
                               };
            
-            Console.WriteLine("Results from compound from clause");
+            Console.WriteLine("\nResults from compound from clause");
             XpodSubset2.ForEach(p => Console.WriteLine("Pod Name = {0}   Qty = {1}   Price = {2:0.00}  Value = {3}", p.PodName, p.Quantity, p.MyPrice, p.Value));
 
             // ---- Same as above method but as a lambda. Projection is done before the where method
@@ -97,14 +168,14 @@ namespace DevelopmentInfo.CodeSamples
                                        .Where(pv => pv.Value < 55)
                                        .OrderByDescending(p => p.PodName);
 
-            Console.WriteLine("Results from SelectMany projection clause");
+            Console.WriteLine("\nResults from SelectMany projection clause");
             XpodSubset400.ForEach(ap => Console.WriteLine("Pod Name = {0}   Qty = {1}   Price = {2:0.00}  Value = {3}", ap.PodName, ap.Quantity, ap.MyPrice, ap.Value));
 
             // --------------------------------------
             // Returns the inner sequence of values that is in each pod.
             var XpodValues = Podlist.SelectMany(p => p.Values);
 
-            Console.WriteLine("Results from SelectMany clause");
+            Console.WriteLine("\nResults from SelectMany clause");
             XpodValues.ForEach(v => Console.WriteLine("Pod Value = {0}", v));
 
             // --------------------------------------
@@ -168,12 +239,21 @@ namespace DevelopmentInfo.CodeSamples
             // --------------------------------------
             Pod XpodFirstOrDefault = (from p in Podlist
                                       where p.Id > 5
-                                      select p).FirstOrDefault();   
-                                   // select p).SingleOrDefault();   // Throws an exception because there are more than one result.
+                                      select p).FirstOrDefault();
+            // select p).SingleOrDefault();   // Throws a System.InvalidOperationException because there are more than one result.
 
-            Pod XpodFirstOrDefault2 = Podlist.Where(p => p.Id > 5).FirstOrDefault();
-            
-            Console.WriteLine("XpodFirstOrDefault.Id = {0}\n", XpodFirstOrDefault2.Id);
+            //Pod XpodFirstOrDefault2 = Podlist.Where(p => p.Id > 5).FirstOrDefault();  // Where method is not necassary
+               //Or
+            Pod XpodFirstOrDefault2 = Podlist.FirstOrDefault(p => p.Id > 5);
+
+            Console.WriteLine(XpodFirstOrDefault2 != null ? $"XpodFirstOrDefault2.Id = {XpodFirstOrDefault2.Id}\n" : $"Result is null");
+
+            var nums = new int[] { 100, 200, 300 };
+            int firstResult = nums.FirstOrDefault(n => n > 300);    // Returns a default value of 0
+            Console.WriteLine($"firstResult: {firstResult}");
+
+            var users = UserNames.FirstOrDefault(u => u.StartsWith("Ship")); // Return first one found out of two possibilities
+                                                                             // Returns null if no result. String is an object
 
             // --------------------------------------
             IEnumerable<Pod> pods = from p in Podlist
@@ -341,7 +421,7 @@ DefaultIfEmpty – Returns the elements of the specified sequence or the type pa
  * Select Many - puts more than one item into a sequence for queries.
  * Sequence Equals - Determines whether two sequences are equal by comparing the elements by using the default equality comparer for their type or using a specified comparer.
  * Single - Returns the only item from a sequence that matches the specified criteria.
- * Single Or Default - Like single but returns a default value if the specified item could not be found.
+ * SingleOrDefault - Like single but returns a default value if the specified item could not be found.
  * Skip - When creating a new sequence, skips the specified number of items and returns the remaining items from the starting sequence.
  * Skip While - Like Skip but only while the specified condition is satisfied.
  * Sum - In a sequence of numeric values, returns the sum of numbers.

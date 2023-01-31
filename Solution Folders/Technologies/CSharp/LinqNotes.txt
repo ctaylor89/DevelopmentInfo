@@ -48,34 +48,34 @@ When "into" is used after either a "group x by y" or "select x" clause, it’s cal
 clauses are not query continuations; they’re very different.) A query continuation effectively says, "I’ve finished one query, 
 and I want to do another one with the results… but all in one expression." This query:
 
-var query = from x in y 
-            // other query clauses here 
-            select x.SomeProperty into z 
-            // other query clauses here (involving z) 
-            select z.Result;
+    var query = from x in y 
+                // other query clauses here 
+                select x.SomeProperty into z 
+                // other query clauses here (involving z) 
+                select z.Result;
 
 Has *exactly* the same behaviour as this (leaving aside the visible local variable):
 
-var tmp = from x in y 
-          // other query clauses here 
-          select x.SomeProperty;
-var query = from z in tmp 
-            // other query clauses here (involving z) 
-            select z.Result;
+    var tmp = from x in y 
+              // other query clauses here 
+              select x.SomeProperty;
+    var query = from z in tmp 
+                // other query clauses here (involving z) 
+                select z.Result;
 
 Note that the query continuation starts a clean slate in terms of range variables after the "into z" part, x is not in scope.
 
 http://www.codeproject.com/Articles/231164/Into-and-let-in-LINQ-Let-vs-Into
 The into keyword allows creating a temporary variable to store the results of a group, join, or select clause into a new variable.
-var em = from e in emp
-	group e by new{ e.DeptId }
-	into gEmp
-	where gEmp.Count() > 1
-	select new
-	{ 
-		gEmp.Key.DeptId, 
-		salary = gEmp.Sum(t = > t.Salary) 
-	};
+    var em = from e in emp
+	    group e by new{ e.DeptId }
+	    into gEmp
+	    where gEmp.Count() > 1
+	    select new
+	    { 
+		    gEmp.Key.DeptId, 
+		    salary = gEmp.Sum(t = > t.Salary) 
+	    };
 
 In the above query, after applying into on grouping, it creates an IGrouping type gEmp variable, which is used to apply the next filter.
 

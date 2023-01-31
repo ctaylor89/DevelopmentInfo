@@ -289,6 +289,29 @@ namespace DevelopmentInfo.CodeSamples
 
             return sheepsPresent;
         }
+
+        // Write a public static method "greet" that returns "hello world!"
+        public static string Greet()
+        {
+            var statement = "hello world!";
+            var reversedArray = new char[statement.Length];
+            var sb = new StringBuilder();
+
+            for (int st = statement.Length -1, ra = 0; st >= 0; st--, ra++)
+            {
+                reversedArray[ra] = statement[st];
+            }
+
+            for (int i = statement.Length -1; i >= 0; i--)
+            {
+                sb.Append(statement[i]);
+            }
+
+            var place = "My mouse on the aill next to yours";
+            int loc = place.IndexOf("h");
+
+            return statement;
+        }
     }
 }
 

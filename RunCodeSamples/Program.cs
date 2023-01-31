@@ -101,6 +101,7 @@ namespace DevelopmentInfo.RunCodeSamples
                           false, false, true, true};
 
                         int sheepInPlace = attempt.CountSheeps(sheeps);
+                        string result4 = TryThis.Greet();                       // Calling static method from what could be an instance class.
                         break;
                     case 22:
                         // Environment.Exit(0);

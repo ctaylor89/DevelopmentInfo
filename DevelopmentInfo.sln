@@ -148,6 +148,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Development Tools", "Develo
 	ProjectSection(SolutionItems) = preProject
 		Solution Folders\DevelopmentTools\ApplicationInsights.txt = Solution Folders\DevelopmentTools\ApplicationInsights.txt
 		Solution Folders\DevelopmentTools\PowerShell.txt = Solution Folders\DevelopmentTools\PowerShell.txt
+		Solution Folders\DevelopmentTools\VisualStudio.txt = Solution Folders\DevelopmentTools\VisualStudio.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TSQLFundamentals2012", "TSQLFundamentals2012", "{C70DA016-F8C2-4462-9F07-ADBF7BD5DD5B}"

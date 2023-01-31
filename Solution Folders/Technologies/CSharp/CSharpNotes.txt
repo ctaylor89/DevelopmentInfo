@@ -1076,6 +1076,7 @@ method isn’t there, the program will crash or go into some exception handling sc
 *** EndOf_RandomNotes ***
 ---------------------------------------------------------------
 _String_Methods
+https://www.programiz.com/csharp-programming/library/string   - Good reference
 
 Clone
 When you clone a string, the new string will have the same characters but have it's own instance.
@@ -1100,42 +1101,64 @@ Contains
 Returns a booleon value indicating whether a specified substring occurs within this string. Performs an ordinal 
 (case-sensitive and culture-insensitive) comparison. int result = String.CompareOrdinal(str1, str2);
 -----
-
 EndsWith
 EndsWith(String)
 -----
 Substring
-// Get first three characters.
+Get first three characters.
 string sub = input.Substring(0, 3)    Returns substring of first 3 chars.
 string sub = input.Substring(3, 3)    Returns substring of 3 chars starting at index 3.
 string sub = input.Substring(6)       Returns substring of all chars after first 6.
 -----
 Equals
 Determines whether two String objects have the same value. Performs an ordinal (case-sensitive and culture-insensitive) comparison.
-Equals(String)
-Equals(String, String) // Static method
+    string sp1 = "Superman";
+	string sp2 = "Supermanxxxx";
+	bool bs = sp1.Equals(sp2);              // Instance method. Returns false
+    bool result = String.Equals(sp1, sp2);  // Static method
 -----
 Format
 Converts the value of objects to strings based on the formats specified and inserts them into another string.
+    string strFormated = String.Format($"Hello {name}");
+
+20 specifies the width of the string and since 20 is a positive number, "Programiz" is right-aligned
+    string strFormated = String.Format("{0, 20}", "Program It");
+
+String is left aligned by using a negative width value
+    string strFormated = String.Format("{0, -20} Now!", "Program It");
 -----
 LastIndexOfAny searches for an array of strings. There are nine versions of the LastIndexOf method on the string type. 
 They have different implementations. It returns -1 if no string is found.
 -----
 LastIndexOf
-LastIndexOf searches strings from the right. It finds the location of the last occurrence of a letter or substring. 
-int index1 = value.LastIndexOf('N');
-int index2 = value.LastIndexOf("Perls");
-int index4 = value.LastIndexOf("PERL", StringComparison.OrdinalIgnoreCase);
+LastIndexOf searches strings from the right. It finds the location of the last occurrence of a substring and returns the index value. 
+The LastIndexOf() method takes the following parameters:
+    value - substring to seek
+    startIndex - starting position of the search. The search proceeds from startIndex toward the beginning of the given string.
+    count - number of character positions to examine.
+    comparisonType - enumeration values that specifies the rules for the search
+Example:
+    string address = "2299 Coldwood, Orange, CA 93022-9900";
+	int result3 = address.LastIndexOf("CA", address.Length - 1, address.Length, StringComparison.OrdinalIgnoreCase);
 -----
 IndexOf 
-Returns the first index of a letter in a string. It can also find a substring. It returns negative one when nothing is found.
+Returns the index of the first occurrence of the specified character/substring within the string. It returns negative one when nothing is found.
 We often use IndexOf in loops. We keep track of several values at once to prevent us from searching the same parts over and over again.
+The IndexOf() method takes the following parameters:
+    value - string to search
+    startIndex - starting position of the search
+    count - number of character positions to examine
+        string str = "Ice cream";
+		int result2 = str.IndexOf("c", 3);
 
-Often strings have leading characters that we know cannot contain the searched-for value. We can skip these chars. This will give 
-a performance boost because less searching is needed.
+Return the first occurance of 'c' skipping the first 3 location
 
-// Skip the first character with a startIndex of 1.
-int comma = value.IndexOf(',', 1);
+    var place = "My house on the hill next to yours";
+    int loc = place.IndexOf('h');
+
+Often strings have leading characters that we know cannot contain the searched-for value. We can skip these chars to gain a performance boost.
+    string str = "Ice cream";
+	int result2 = str.IndexOf("c", 3);                  // Returns 4, skips the first 3 locations
 -----
 LastIndexOfAny searches for multiple characters in reverse. It returns the final position of any of a set of characters.
 // Search for last of any of these characters.
