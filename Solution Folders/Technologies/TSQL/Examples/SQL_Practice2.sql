@@ -79,13 +79,14 @@ Declare @dsql as nvarchar(2000),
  @Seed as int,
  @databasename as varchar(50)
  
---The @seed value gives us a starting point for our loop. The @countloop value gives us the number of times we will need to iterate through the loop.
+--The @seed value gives us a starting point for our loop. 
+--The @countloop value gives us the number of times we will need to iterate through the loop.
  Select @Seed = 1; 
  
  WITH c(Total)
  AS
  (
- Select count(*) from sysdatabases
+    Select count(*) from sysdatabases
  )
  select @CountLoop = (select Total from c);
 -- OR 
@@ -96,18 +97,18 @@ Declare @dsql as nvarchar(2000),
  
  Begin
  
---Select the individual database associated with the current @countloop
- Select @Databasename = (Select name from sysdatabases where [dbid] = @Seed)
+    --Select the individual database associated with the current @countloop
+     Select @Databasename = (Select name from sysdatabases where [dbid] = @Seed)
  
---Define the dynamic SQL statement to be executed. @Databasename is the name of the database associated with the current @countloop
- Select @dsql = ('select '''+@databasename+'''')
+    --Define the dynamic SQL statement to be executed. @Databasename is the name of the database associated with the current @countloop
+     Select @dsql = ('select '''+@databasename+'''')
  
---Execute the the genereated dynamic sql statement and populate each @Databasename into the temp table.
- Insert into #temp
- Exec sp_executesql @dsql
+    --Execute the the genereated dynamic sql statement and populate each @Databasename into the temp table.
+     Insert into #tempTable    -- creates the temporary table
+     Exec sp_executesql @dsql
  
---Increment the count
- select @seed = (@seed +1)
+    --Increment the count
+     select @seed = (@seed +1)
  
  END
  
@@ -115,8 +116,23 @@ Declare @dsql as nvarchar(2000),
  Select * from #temp
  drop table #temp
 --------------------------------------------------
---------------------------------------------------
+-- Dropping a local Temporary Table if it exists. Remember underscores and numbers appended to the name of the table in the tempdb.
+IF OBJECT_ID(N'tempdb..#temp_Drivers') IS NOT NULL
+	DROP TABLE dbo.#temp_Drivers;
 
+Create table dbo.#temp_Drivers
+(
+	driverName nvarchar(max)
+)
+--------------------------------------------------
+Select custid, region INTO dbo.#tempRegion    -- creates the temporary table
+from Sales.Customers
+where region is not null
+order by region;
+
+Select * from dbo.#tempRegion;
+
+DROP TABLE #tempRegion;
 
 
 

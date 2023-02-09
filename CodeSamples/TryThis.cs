@@ -35,7 +35,7 @@ namespace DevelopmentInfo.CodeSamples
 
             return;
         }
-        
+
         public void GenerateFibonacciSeries()
         {
             GetFibonacciSeries(0);
@@ -124,7 +124,7 @@ namespace DevelopmentInfo.CodeSamples
         public IEnumerable<string> OpenOrSenior(int[][] data)
         {
             var result = new List<string>();
-            
+
 
             for (int i = 0; i < data.Length; i++)
             {
@@ -170,12 +170,12 @@ namespace DevelopmentInfo.CodeSamples
         public string ToWeirdCase(string s)
         {
             var sb = new StringBuilder();
-                        
-            foreach(var word in s.Split(' '))
+
+            foreach (var word in s.Split(' '))
             {
-                for(int i = 0; i < word.Length; i++)
+                for (int i = 0; i < word.Length; i++)
                 {
-                    if(i % 2 == 0)
+                    if (i % 2 == 0)
                         sb.Append(char.ToUpper(word[i]));
                     else
                         sb.Append(word[i]);
@@ -195,7 +195,7 @@ namespace DevelopmentInfo.CodeSamples
             {
                 for (int i = 0; i < word.Length; i++)
                 {
-                  _ =  i % 2 == 0 ? sb.Append(char.ToUpper(word[i])) : sb.Append(word[i]);
+                    _ = i % 2 == 0 ? sb.Append(char.ToUpper(word[i])) : sb.Append(word[i]);
                 }
 
                 sb.Append(' ');
@@ -209,22 +209,22 @@ namespace DevelopmentInfo.CodeSamples
             int countOut = 0;
             str = str.ToUpper().Trim();
 
-            for(int i = 0; i < str.Length; i++)
+            for (int i = 0; i < str.Length; i++)
             {
                 int countCons = (from c in new char[] { 'A', 'E', 'I', 'O', 'U' }
-                                where c == str[i]
-                                select c).Count();
-                                
-                if(countCons == 0)
+                                 where c == str[i]
+                                 select c).Count();
+
+                if (countCons == 0)
                 {
                     if (str[i] > (char)64 && str[i] < 91)
                         countOut++;
-                }   
+                }
             }
 
             return countOut;
         }
-        
+
         public static int ConsonantCount2(string str)
         {
             return str.ToLower()
@@ -235,22 +235,22 @@ namespace DevelopmentInfo.CodeSamples
 
         public static void MainCaller()
         {
-            Console.WriteLine("Hello World");            
+            Console.WriteLine("Hello World");
             string result = IsPalindrome("Mom") ? "Is a PD" : "Is NOT PD";
             Console.WriteLine(result);
         }
 
         public static bool IsPalindrome(string word)
         {
-            var sb = new StringBuilder(word.Length);            
+            var sb = new StringBuilder(word.Length);
 
-            for(int i = word.Length - 1; i >= 0; i--)
+            for (int i = word.Length - 1; i >= 0; i--)
             {
                 sb.Append(word[i]);
             }
 
             return word.Equals(sb.ToString());
-            
+
             //if (String.Compare(word, sb.ToString(), StringComparison.OrdinalIgnoreCase) == 0)
             //    return true;
             //else
@@ -262,9 +262,9 @@ namespace DevelopmentInfo.CodeSamples
         {
             string[] words = str.Split(' ');
             Array.Reverse(words);
-            return string.Join(" ", words);            
+            return string.Join(" ", words);
         }
-                
+
         public string ReverseWords2(string str)
         {
             return string.Join(" ", str.Split(' ').Reverse());
@@ -297,23 +297,128 @@ namespace DevelopmentInfo.CodeSamples
             var reversedArray = new char[statement.Length];
             var sb = new StringBuilder();
 
-            for (int st = statement.Length -1, ra = 0; st >= 0; st--, ra++)
+            for (int st = statement.Length - 1, ra = 0; st >= 0; st--, ra++)
             {
                 reversedArray[ra] = statement[st];
             }
 
-            for (int i = statement.Length -1; i >= 0; i--)
+            for (int i = statement.Length - 1; i >= 0; i--)
             {
                 sb.Append(statement[i]);
             }
 
-            var place = "My mouse on the aill next to yours";
+            // Why does this not work as expected. Nothing to do with this solution.
+            var place = "My mouse on the hill next to yours";
             int loc = place.IndexOf("h");
 
             return statement;
         }
+
+        // Write a function that will take the number of petals of each flower and return
+        // true if one flower only has an odd count of pedals or false if not the case.
+        public static bool IsInLove(int flower1, int flower2)
+        {
+            // My answer
+            return (flower1 % 2 == 0 && flower2 % 2 != 0) || (flower1 % 2 != 0 && flower2 % 2 == 0) ? true : false;
+
+            // Better Answer
+            // return flower1 % 2 != flower2 % 2;
+        }
+
+        // Rearrange the digits to create the highest possible number.
+        public static int DescendingOrder(int num)
+        {
+            var numStr = num.ToString();
+            var numArray = new int[numStr.ToString().Length];
+
+            for (int i = 0; i < numStr.Length; i++)
+                numArray[i] = int.Parse(numStr[i].ToString());
+
+            Array.Sort(numArray);
+            Array.Reverse(numArray);
+
+            var sb = new StringBuilder();
+            Array.ForEach(numArray, n => sb.Append(n.ToString()));           
+                        
+            return int.Parse(sb.ToString());
+
+            // Better, Uses OrderByDescending extension method on a string.
+            // Converts input num to a string. A single string param to Concat will return a string. 
+            // return int.Parse( string.Concat(num.ToString().OrderByDescending(x => x)) );
+        }
+
+        public int GetSum(int a, int b)
+        {
+            int sum = 0;
+
+            if (b > a)
+                for (int i = a; i <= b; i++)
+                    sum += i;
+            else
+                for (int i = a; i >= b; i--)
+                    sum += i;
+            return sum;
+        }
+
+        public bool ValidatePin(string pin)
+        {
+            bool isValidPin = true;
+
+            if (pin.Length == 4 || pin.Length == 6)
+            {                
+                for (int i = 0; i < pin.Length; i++)
+                {
+                    if (!Char.IsDigit(pin[i]))
+                    {
+                        isValidPin = false;
+                        break;
+                    }                    
+                }
+            }
+            else
+                isValidPin = false;
+
+            return isValidPin;
+
+            // Better using the 'All' extension method. Pin type is a stringl.            // return pin.All(n => Char.IsDigit(n)) && (pin.Length == 4 || pin.Length == 6);
+        }
+
+        public int MsSinceMidnight(int h, int m, int s)
+        {
+            int msTotal = -1;
+
+            if (h >=0 && h <= 23 && m >= 0 && m <= 59 && s >= 0 && s <= 59)
+                msTotal = Convert.ToInt32(new TimeSpan(h, m, s).TotalMilliseconds);                
+
+            return msTotal;
+        }
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

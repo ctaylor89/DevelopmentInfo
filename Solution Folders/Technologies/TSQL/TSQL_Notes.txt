@@ -1,11 +1,7 @@
-"Aggregates"
-"Currency"
+Currency_
 Error_Handling
-finished recording here 
-* Record Section   -- Sections marked need to be recorded.
-"SELECTS"
-"Tables"
-"TSQL_Performance"
+Temporary_Tables_Variables
+TSQL_Performance_Tunning
 
 http://msftdbprodsamples.codeplex.com/ - To get sample databases.
 http://msdn.microsoft.com/en-us/library/ms124894(v=sql.100).aspx - about the AdventureWorks schemas
@@ -87,10 +83,6 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());
 Articles on the reasons to use different types of keys:
 http://databases.aspfaq.com/database/what-should-i-choose-for-my-primary-key.html
 http://blog.codinghorror.com/primary-keys-ids-versus-guids/
-
-
-
-*** Record Section End
 
 Default constraints are a special case of column defaults. A column default is some value or function that the 
 column will take when an INSERT statement doesn't explicitly assign a particular value. In other words, the column 
@@ -372,7 +364,7 @@ V = View
 X = Extended stored procedure
 IT = Internal table
 _______________
-Temporary Tables
+Temporary_Tables_Variables
 
 There are two types of temporary tables: local and global. Local temporary tables are visible only to their 
 creators during the same connection to an instance of SQL Server as when the tables were first created or 
@@ -533,12 +525,6 @@ over-indexing. Additionally, indexes should be narrow, that is, with as few colu
 Large numbers of indexes on a table affect the performance of INSERT, UPDATE, DELETE, and MERGE statements because 
 all indexes must be adjusted appropriately as data in the table changes.
 
- 
- 
- ***********************************************
-***************** finished recording here ***********************************************
-Need to record above sections marked: * Record Section
-***********************************************
 Query Considerations
 Before you create nonclustered indexes, you should understand how your data will be accessed. Consider using a 
 nonclustered index for queries that:
@@ -552,7 +538,6 @@ Queries that do not return large result sets.
 Create filtered indexes to cover queries that return a well-defined subset of rows from a large table.
 
 Contain columns frequently involved in search conditions of a query, such as WHERE clause, that return exact matches.
-
 _______________
 
 Create Indexes with Included Columns
@@ -746,8 +731,7 @@ OBJECTPROPERTY(object_id, ‘is_schema_bound’).
 If you reference a view or function in a schemabound view or function then that view or function must also be schemabound.
 Objects that are bound (tables/views) can not be dropped while a schemabound object references them.
 _______________
-
-"TSQL_Performance"
+TSQL_Performance_Tunning
 
 Things that hurt TSQL performance
 * Using the wrong data types
@@ -842,8 +826,7 @@ Engine Tuning Advisor recommends that you create multicolumn statistics based on
 provides T-SQL scripts to quickly implement the recommendation and summary reports on the effects of implementing those 
 recommendations for the provided workload.
 _______________
-
-Currency
+Currency_
 smallmoney has a range of - 214,748.3648 to 214,748.3647 (4bytes). money uses 8 bytes of storage.
 The money and smallmoney data types are accurate to a ten-thousandth of the monetary units that they represent.
 

@@ -94,7 +94,7 @@ empid       firstname  lastname
 
 -- 4 
 -- Return orders with total value(qty*unitprice) greater than 10000
--- sorted by total value
+-- sorted by total value descending
 -- Tables involved: Sales.OrderDetails table
 
 -- Desired output:

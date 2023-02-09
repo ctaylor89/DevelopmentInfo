@@ -7,17 +7,23 @@ Write LINQ queries in C#
 Locating_duplicate_values
 https://docs.microsoft.com/en-us/dotnet/csharp/linq/write-linq-queries
 
+Examples of the more popular LINQ methods
+https://canro91.github.io/2021/01/18/LinqGuide/
+
 ----------------------------------------------------------------------------------
 Three ways in which you can write a LINQ query in C#:
 1) Use Comprehension query syntax. 2) Use Lambda syntax(chaining methods together). 3) Use a combination of both.
+*Not: Also known as Query Syntax and LINQ Method Syntax.
 
-The recommended way to write most queries is to use query syntax to create query expressions.
+The recommended way to write most queries is to use query syntax to create query expressions. There is one advantage 
+of using query syntax over extension methods. We can create intermediate variables with the let keyword.
 
-// Using a query expression with Comprehension and Lambda syntax(Mixed Syntax).
-int numCount1 =
-    (from num in numbers1
-     where num < 3 || num > 7
-     select num).Count();       // Adding Count() is the Lambda systax.
+Using a query expression with Comprehension and Lambda syntax(Mixed Syntax).
+    int numCount1 =
+         (from num in numbers1
+         where num < 3 || num > 7
+         select num).Count();       // Adding Count() is the Lambda systax.
+
 
 ----------------------------------------------------------------------------------
 Comprehension and Lambda queries. 
@@ -177,6 +183,8 @@ These work on Lists and arrays.
 Using System.Linq;
 
 All – Checks if all elements within a sequence satisfy a condition
+    bool isAllDigits = pin.All(n => Char.IsDigit(n)) && (pin.Length == 4 || pin.Length == 6);
+
 Any – Checks if any elements within a sequence satisfy a condition
 AsEnumerable – Converts a sequence of elements into an IEnumerable(Of T).
 Average – Retrieves the result of the average calculation from the members of a sequence.
@@ -184,6 +192,10 @@ Average – Retrieves the result of the average calculation from the members of a 
 Cast – Performs the conversion from an IEnnumerable(Of T)into the specified type.It is generally used 
        explicitly when the compiler cannot infer the appropriate type.
 Concat – Returns the concatenation of two sequences.
+    Pet[] cats = GetCats();
+    Pet[] dogs = GetDogs();    
+    IEnumerable<string> query =
+        cats.Select(cat => cat.Name).Concat(dogs.Select(dog => dog.Name));
 Contains – Checks if a sequence contains the specified item.
 Count – Returns the number of items in a sequence.
 

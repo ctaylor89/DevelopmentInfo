@@ -101,7 +101,14 @@ namespace DevelopmentInfo.RunCodeSamples
                           false, false, true, true};
 
                         int sheepInPlace = attempt.CountSheeps(sheeps);
-                        string result4 = TryThis.Greet();                       // Calling static method from what could be an instance class.
+                        string res4 = TryThis.Greet(); // Calling static method from what could be an instance class.
+                        int res5 = TryThis.DescendingOrder(42145);
+                        int res6 = attempt.GetSum(3, -2);
+                        bool isValidPin = attempt.ValidatePin("1234");
+                        int res7 = attempt.MsSinceMidnight(1, 1, 1);
+                        int res8 = attempt.MsSinceMidnight(29, 1, 1);
+                        int res9 = attempt.MsSinceMidnight(2, 88, 1);
+                        int res10 = attempt.MsSinceMidnight(2, 2, 88);
                         break;
                     case 22:
                         // Environment.Exit(0);
@@ -115,4 +122,4 @@ namespace DevelopmentInfo.RunCodeSamples
         }
     }
 }
-//h^$&^#$&^elLo world
+

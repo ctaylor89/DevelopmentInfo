@@ -1,3 +1,4 @@
+DatesAndTimes_
 IN_AND_EXISTS_Keywords
 Joins_
 Key_Words
@@ -9,11 +10,34 @@ Windowed_functions
 
 Using correlated subqueries
 https://www.geeksengine.com/database/subquery/correlated-subquery.php
-------------------------------------------------------------------------------
-characters_
---------------- nvarchar vs varchar and N before a string ---------------------
-varchar: Variable-length, non-Unicode character data. The database collation determines which code page the data is stored on.
 
+------------------------------------------------------------------------------
+DatesAndTimes_
+
+https://tableplus.com/blog/2018/09/ms-sql-server-how-to-get-date-only-from-datetime-value.html
+Convert a datetime to a Date only string
+	Select CONVERT( VARCHAR(10), o.orderdate, 111) 'Order Date' ... Result: 2006/03/10
+Convert a datetime to a date
+	CONVERT( date, o.orderdate) 'Order Date'						Result: 2006-03-10
+	CAST(o.orderdate as date) 'Order Date'							Result: 2006-03-10
+---
+DATEADD(day, 1, DATEDIFF(day, 0, '20070212'))
+---
+Use DATEDIFF to get the number of days to the given date. Can also use months, years, weeks, hours, minutes, seconds etc.
+	Declare @dayCount int = DATEDIFF(day, 0, '20070212');
+
+Use DATEADD to add 2 days to @dayCount. day is the date part being the unit of measurement.
+	Declare @datePlusTwoDays DateTime2 = DATEADD(day, 2, @dayCount);
+
+Use DATEDIFF to get the number of days to the given date. Then add those days to 1 day.
+	Declare @datePlusOneDay DateTime2 = DATEADD(day, 1, DATEDIFF(day, 0, '20070212'));
+
+Select CONVERT(date, @datePlusOneDay) 'datePlusOneDay', 
+	@dayCount 'dateCount', CONVERT(date, @datePlusTwoDays) 'datePlusTwoDays';
+------------------------------------------------------------------------------
+strings_
+
+varchar: Variable-length, non-Unicode character data. The database collation determines which code page the data is stored on.
 nvarchar: Variable-length Unicode character data. Dependent on the database collation for comparisons.
 
 An nvarchar column can store any Unicode data. A varchar column is restricted to an 8-bit codepage. Some people think that varchar 
@@ -65,7 +89,7 @@ returns TRUE or FALSE.
 The EXISTS condition in SQL is used to check whether the result of a correlated nested query is empty (contains no tuples(rows))
 or not. The result of EXISTS is a boolean value True or False. It can be used in a SELECT, UPDATE, INSERT or DELETE statement.
 ---
-EXISTS Is Faster in Performance than IN. If most of the filter criteria is in a subquery then better to use IN and If 
+EXISTS Is Faster in Performance than IN. If most of the filter criteria is in a subquery then better to use IN and If. When
 most of the filter criteria is in main query then better to use EXISTS. If you are using the IN operator, the SQL 
 engine will scan all records fetched from the inner query.
 
@@ -77,7 +101,7 @@ from…”, where you’re positive it will never include a null. Or just stick to “no
 
 When you have a table in an IN statement it makes more sense to use a join, but mostly it shouldn't matter. The query 
 optimiser should return the same plan either way. In some implementations (mostly older, such as Microsoft SQL Server 
-2000) in queries will always get a nested join plan, while join queries will use nested, merge or hash as appropriate. 
+2000) IN queries will always get a nested join plan, while join queries will use nested, merge or hash as appropriate. 
 More modern implementations are smarter and can adjust the plan even when IN is used.
 ---
 IN:
@@ -173,7 +197,43 @@ WHERE OrderNumber LIKE
   ELSE
     '%' + @OrderNumber
   END
+* You cannot use an IF statement in the SELECT clause.
 ---
+select 
+case
+	when Title = 'Mr.' then 'Mister' 
+	when Title = 'Ms.' then 'Miss' 
+	else 'Dude' 
+end as TitleText, p.FirstName
+from Person.Person as p
+where Title is not null;
+---
+SELECT CustomerName, City, Country
+FROM Customers
+ORDER BY
+(CASE											-- Parenthesis are optional here
+    WHEN City IS NULL THEN Country
+    ELSE City
+END);
+---
+The IIF function is just the shorthand version of a CASE expression introduced in SQL Server 2012. It does the same 
+thing as the statement below it:
+	SELECT *, IIF(OrderDate >= '2022-03-01', 'Current Order', 'Old Order')
+	FROM MTB_Sample;
+
+SELECT *, 
+    CASE
+        WHEN OrderDate >= '2022-03-01'
+            THEN 'Current Order'
+            ELSE 'Old Order'
+    END as OrderType
+FROM MTB_Sample;
+---
+SQL Server DAY() function
+The DAY() function returns an integer value which represents the day of a month (1-31) of a specified date.
+
+------------------------- End Random_Notes -------------------------------------
+--------------------------------------------------------------------------------
 cross join	https://www.sqlservertutorial.net/sql-server-basics/sql-server-cross-join/
 --------------------------------------------------------------------------------
 Set_Logic

@@ -238,7 +238,7 @@ select c.custid, c.companyname, o.orderid
 from Sales.Customers c
 left join Sales.Orders o		-- have to left join this
 on c.custid = o.custid
-where o.custid is null;			-- use is null not = null
+where o.custid is null;			-- use 'is null' not '= null'
 
 -- Desired output
 custid      companyname

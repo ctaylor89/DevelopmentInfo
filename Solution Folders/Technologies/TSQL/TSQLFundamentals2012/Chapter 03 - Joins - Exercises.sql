@@ -118,7 +118,7 @@ empid       dt
 (45 row(s) affected)
 
 -- 2
--- Return US customers, and for each customer the total number of orders 
+-- Return USA customers, and for each customer the total number of orders 
 -- and total quantities.
 -- Tables involved: TSQL2012 database, Customers, Orders and OrderDetails tables
 
