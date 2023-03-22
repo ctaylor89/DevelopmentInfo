@@ -57,6 +57,14 @@ namespace DevelopmentInfo.CodeSamples
             podSet.ForEach(p => Console.WriteLine("\nPod Name: " + p.Name + " Val Count: " + p.ValCount));
             podSet2x.ForEach(p => Console.WriteLine("\nPod Name: " + p.Name + " Val Count: " + p.ValCount));
 
+            Pod podz = (from p in Podlist
+                      where p.Name == "Baskar"
+                       select new Pod
+                      {
+                          Name = p.Name,
+                          Size = p.Values.Count
+                      }).SingleOrDefault();
+
             // Select an array of integers
             int[] podIds = (from p in Podlist
                             where p.Id < 3

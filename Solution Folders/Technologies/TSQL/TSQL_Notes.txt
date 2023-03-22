@@ -1,5 +1,7 @@
 Currency_
 Error_Handling
+OBJECT_ID()_Parmeters
+SQL_Injection_Attacks
 Temporary_Tables_Variables
 TSQL_Performance_Tunning
 
@@ -11,6 +13,7 @@ http://www.codeproject.com/Articles/690340/Querying-SQL-Server-2012-Part-I - A g
 http://www.codeproject.com/Articles/29312/Grouping-Sets-in-T-SQL-SQL-Server - A good tutorial from code project
 http://www.codeproject.com/Articles/566542/Date-and-Time-Data-Types-and-Functions-SQL-Server - A good tutorial from code project
 http://www.infoworld.com/article/2604472/database/10-more-dos-and-donts-for-faster-sql-queries.html
+
 
 
 TOOLS
@@ -56,7 +59,11 @@ GO
 _______________
 
 The Primary key, Foreign Key and Default constraint are the 3 main constraints that need to be considered while 
-creating tables or even after creating them. 
+creating tables or even after creating them. The DEFAULT constraint provides a default value to a column when 
+the INSERT INTO statement does not provide a specific value.
+
+The DEFAULT constraint is used to set a default value for a column. The default value will be added to all new 
+records, if no other value is specified.
 
 Primary Key Constraint: Primary Keys constraints prevents duplicate values for columns and provides unique 
 identifier to each column, as well it creates a clustered index on the columns.
@@ -193,7 +200,6 @@ two for the day (yyyyMMdd). This format is not specific for any country, or cult
 The format 2013-12-31 (or yyyy-MM-dd) is an ISO standard and might seem to work well, but for historic reasons 
 this format is NOT independent of culture for the DateTime and SmallDateTime data types.
 
-* Record Section
 Instead of datetime, use the time, date, datetime2 and datetimeoffset data types for new work(2008 or later). These 
 types align with the SQL Standard and are more portable. time, datetime2 and datetimeoffset provide more seconds precision. 
 
@@ -336,9 +342,9 @@ _______________
 The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table 
 expressions, unless TOP, OFFSET or FOR XML is also specified.
 _______________
-
+OBJECT_ID()
 http://sql-mentor.blogspot.com/2008/11/using-t-sql-function-objectid.html
-Here is a list of object types that you can pass to OBJECT_ID() function./*
+Here is a list of object types that you can pass to OBJECT_ID() function.
 AF = Aggregate function (CLR)
 C = CHECK constraint
 D = DEFAULT (constraint or stand-alone)
@@ -363,6 +369,28 @@ UQ = UNIQUE constraint
 V = View
 X = Extended stored procedure
 IT = Internal table
+_______________
+SQL_Injection_Attacks
+
+How to Prevent an SQL Injection
+The only sure way to prevent SQL Injection attacks is input validation and parametrized queries including 
+prepared statements. The application code should never use the input directly. The developer must sanitize 
+all input, not only web form inputs such as login forms. They must remove potential malicious code elements 
+such as single quotes. It is also a good idea to turn off the visibility of database errors on your production 
+sites. Database errors can be used with SQL Injection to gain information about your database.
+
+A prepared statement is a parameterized and reusable SQL query which forces the developer to write the SQL 
+command and the user-provided data separately. The SQL command is executed safely, preventing SQL Injection 
+vulnerabilities. The most important advantage of prepared statements is that they help prevent SQL injection 
+attacks.
+
+If you discover an SQL Injection vulnerability, for example using an Acunetix scan, you may be unable to fix 
+it immediately. For example, the vulnerability may be in open source code. In such cases, you can use a web 
+application firewall to sanitize your input temporarily.
+
+SQL Injections may be introduced by your developers or through external libraries/modules/software. You should 
+regularly scan your web applications using a web vulnerability scanner such as Acunetix. If you use Jenkins, 
+you should install the Acunetix plugin to automatically scan every build.
 _______________
 Temporary_Tables_Variables
 
@@ -1039,7 +1067,6 @@ this reason, you should try to create unique clustered indexes whenever possible
 a high percentage of unique values.
 
 _______________
-
 Round() method
 http://www.mssqltips.com/sqlservertip/1589/sql-server-rounding-functions--round-ceiling-and-floor/
 
@@ -1088,8 +1115,8 @@ Storing a one-way hash instead of the real password is more secure. You can chec
 select * from @t where pwd = HashBytes('sha1', 'secret')
 But there is no way you can retrieve the password by looking at the table. So only the end user knows his password, and not even the DBA can retrieve it.
 _______________
-
-
+sp_executesql - is a built-in stored procedure in SQL Server that enables to execute of the dynamically constructed SQL statements 
+or batches.
 _______________
 
 

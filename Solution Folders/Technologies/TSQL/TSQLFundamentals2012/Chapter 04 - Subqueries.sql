@@ -1,4 +1,5 @@
 ---------------------------------------------------------------------
+
 -- Microsoft SQL Server 2012 T-SQL Fundamentals
 -- Chapter 04 - Subqueries used in book
 -- © Itzik Ben-Gan ---------------------------------------------------------------------
@@ -23,20 +24,13 @@ FROM Sales.Orders
 WHERE orderid = (SELECT MAX(O.orderid)
                  FROM Sales.Orders AS O);
 
--- Scalar subquery expected to return one value
+-- Scalar subquery expected to return one value because in this case their is only one record that begins with 'B' in the table
 SELECT orderid
 FROM Sales.Orders
 WHERE empid = 
   (SELECT E.empid
    FROM HR.Employees AS E
    WHERE E.lastname LIKE N'B%');
-
-SELECT orderid
-FROM Sales.Orders
-WHERE empid = 
-  (SELECT E.empid
-   FROM HR.Employees AS E
-   WHERE E.lastname LIKE N'D%');
 
 SELECT orderid
 FROM Sales.Orders
@@ -75,7 +69,7 @@ SELECT custid, companyname
 FROM Sales.Customers
 WHERE custid NOT IN
   (SELECT O.custid
-   FROM Sales.Orders AS O);
+   FROM Sales.Orders AS O);     -- The alias is not necassary
 
 -- Missing order IDs
 USE TSQL2012;

@@ -393,6 +393,91 @@ namespace DevelopmentInfo.CodeSamples
             return msTotal;
         }
 
+        // Given a list of integers, determine whether the sum of its elements is odd or even.
+        // Give your answer as a string matching "odd" or "even".
+        // If the input array is empty consider it as: [0] (array with a zero)
+        public string OddOrEvenSum01(int[] array)
+        {
+            int sumVal = 0;
+
+            if (array.Length != 0)
+            {
+                sumVal = array.Sum();
+
+                if (sumVal % 2 == 0)
+                    return "even";
+                else
+                    return "odd";
+            }
+            else
+                return "even";
+        }
+        // Or
+        public string OddOrEvenSum(int[] array)
+        {
+            return array.Sum() % 2 == 0 ? "even" : "odd";
+        }
+        // Another way though not better
+        public static string OddOrEven(int[] a) => a.Sum() % 2 == 0 ? "even" : "odd";
+
+        // Input a string of words. Reversed the letters in each word, but keep the words in the same order.
+        public string ReplaceWords(string str)
+        {
+            var sb = new StringBuilder();
+            var arr = str.Split(' ').ToArray();
+
+            foreach (string s in arr)
+            {
+                for(int n = s.Length -1; n >= 0; n--)
+                {
+                    sb.Append(s[n]);
+                }
+
+                sb.Append(' ');
+            }
+
+            var result = sb.ToString().TrimEnd();
+            return result;
+        }
+        // Or
+        // return string.Join(" ", str.Split(' ').Select(i => new string (i.Reverse().ToArray())));
+
+        // You are provided with a list of integer pairs. Each pair represent the number of people that get on the
+        // bus(the first item) and the number of people that get off the bus(the second item) at a bus stop.
+        // Your task is to return the number of people who are still on the bus after the last bus stop (after the last array)
+        public static int NumberOfPeopleOnBus(List<int[]> peopleListInOut)
+        {
+            int total = 0;
+            peopleListInOut.ForEach((x) => total += x[0] - x[1]);
+            return total;
+        }
+        // Or                                  On Bus - Off Buss
+        // return peopleListInOut.Sum(Item => Item[0] - Item[1]);
+
+        // Given an integer or a floating-point number, find its opposite.
+        public int Opposite(int number)
+        {
+            //if (Math.Sign(number) < 0)
+            //    return Math.Abs(number);
+            //else
+            //    return number - (number * 2);
+
+            return Math.Sign(number) < 0 ? Math.Abs(number) : number - (number * 2);
+        }
+
+        public string Smash(string[] words)
+        {
+            var sb = new StringBuilder();
+
+            Array.ForEach(words, w => sb.Append(w + " "));
+            var result = sb.ToString().TrimEnd();
+
+            
+
+            return result;
+
+            // Better: return
+        }
     }
 }
 

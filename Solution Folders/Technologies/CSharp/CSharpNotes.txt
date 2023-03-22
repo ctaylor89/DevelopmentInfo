@@ -20,7 +20,6 @@ _Properties
 _RandomNotes
 _String_Methods
 
-
 Casting is the action of changing an entity of one data type into another.
 
 It's little bit generic and it's somehow equivalent to a conversion because actually a cast is a conversion 
@@ -104,7 +103,7 @@ functionality in a class that's available to derived classes, but not to classes
 internal: The internal keyword is an access modifier for types and type members. Internal types or members are accessible only 
 within files in the same assembly.
 
-protected internal: Access is limited to types derived from the containing class(protected) or the current assembly(internal).
+protected internal: Access is limited to types derived from the containing class(protected) or within the current assembly(internal).
 Note that: protected internal means "protected OR internal" (any class in the same assembly, or any derived class - even if it 
 is in a different assembly).
 
@@ -113,6 +112,7 @@ Available since C# 7.2.
 ---
 Classes and structs that are declared directly within a namespace (that are not nested within other classes or structs) 
 can be either public or internal. Internal is the default if no access modifier is specified.
+Q: I think that there can be private classes if they are used by other public classes. Need to test this.
 
 The access level for class members and struct members, including nested classes and structs, is private by default.
 
@@ -125,7 +125,8 @@ All arrays implement IList, and IEnumerable. Array types are derived from the ab
 https://learn.microsoft.com/en-us/dotnet/api/system.array.copyto?view=netframework-4.8.1
 Examples:
 var students = new string[] {"John", "Doe"};
-string[] teachers = {"Peter", "John"};       int[] Requests = {22, 33, 44};
+string[] teachers = {"Peter", "John"};       
+int[] Requests = {22, 33, 44};
 var parents = new[] {"Mary", "Martha"};
 var grades = new int[0];
 
@@ -172,11 +173,31 @@ public static void Clear (Array array, int index, int length);
 ---
 Clone - creates a shallow copy of an array. Copies the element values, not the array reference.
 A change in one element of the array in either the master or the clone will not affect the other.
-Need more info: https://www.c-sharpcorner.com/UploadFile/56fb14/shallow-copy-and-deep-copy-of-instance-using-C-Sharp/
+    var masterLetters = new char[] {'B', 'E', 'S', 'T'};		
+	foreach(var x in masterLetters) {Console.WriteLine("Master Letter is: {0}", x);}
+		
+	var clonedLetters = masterLetters.Clone() as char[];        // If use '=' instead of Clone(), both variables share the same reference.
+	foreach(var y in clonedLetters) {Console.WriteLine("Cloned Letter is: {0}", y);}
+		
+	masterLetters[1] = 'U';
+	foreach(var x in masterLetters) {Console.WriteLine("Master Letter is: {0}", x);}
+	foreach(var y in clonedLetters) {Console.WriteLine("Cloned Letter is: {0}", y);}  // Each letter will not be affected by change in master
 ---
 Copy - Copies a 'range' of elements in one Array to another Array and performs type casting and boxing as required.
+The Array.Copy method is fast for most uses. It is simpler than manually copying all the elements.
+    var masterLetters = new char[] {'B', 'E', 'S', 'T'};
+	foreach(var x in masterLetters) {Console.WriteLine("Master Letter is: {0}", x);}
+		
+	var copiedLetters = new char[] {'X', 'X', 'X', 'X', 'X','X', 'X'};
+	Array.Copy(masterLetters, copiedLetters, 3);
+	foreach(var y in copiedLetters) {Console.WriteLine("Copied Letter is: {0}", y);}  // Verify copy. Result should be B,E,S,X,X,X,X
+		
+	masterLetters[1] = 'U';
+	foreach(var x in masterLetters) {Console.WriteLine("Master Letter is: {0}", x);}
+	foreach(var y in copiedLetters) {Console.WriteLine("Copied Letter is: {0}", y);}  // Each letter will not be affected by change in master
 ---
 CopyTo - Copies all the elements of the current one-dimensional array to the specified one-dimensional array.
+You can set the starting index from where you want to copy from the source array.
 Ex: Copies the source Array to the target Array, starting at index 6.
     mySourceArray.CopyTo(myTargetArray, 6);
 ---
@@ -203,16 +224,24 @@ FindAll - Retrieves all the elements that match the conditions defined by the sp
     // MatchedItems contains elements between upper and lower bound
     int lBound = 300; int uBound = 600;
     int[] matchedItems = Array.FindAll(arrayValues, x => x >= lBound && x <= uBound);  
+---
+IndexOf - Get the index of the searched for item
+    // Search for the first occurrence of the duplicated value in the last section of the array.
+    index = Array.IndexOf( strings, searchString, 4 );
+    int startPosition = sentence.IndexOf( "is " ) + 1;
+    string age = authorInfo.Substring( startPosition + 2, 2 );
 
+
+---
+Reverse - public static void Reverse (Array array, int index, int length);
+    Array.Reverse(stringArray);
 ---
 Sort - The Sort static method of the Array class can be used to sort array items.
     Array.Sort(stringArray);    Sorts the passed in array
 Alternatively, the Sort method takes the starting index and the number of items after that index. For example, the following 
 code snippet sorts three items starting at the 2nd position.
     Array.Sort(stringArray, 2, 3);
----
-Reverse - public static void Reverse (Array array, int index, int length);
-    Array.Reverse(stringArray);
+
 ---------------------------------------------------------------
 _Attributes
 
@@ -423,11 +452,12 @@ public class B : A
 
 A user must use the override keyword before the method is declared as abstract in the child class, the abstract class is used to 
 inherit in the child class.
-An abstract class cannot be inherited by structures.
+
 An abstract class can contain constructors or destructors.
 An abstract class can implement functions with non-Abstract methods.
+An abstract class cannot be a static class.
+An abstract class cannot be inherited by structures.
 An abstract class cannot support multiple inheritances.
-An abstract class can’t be static.
 
 If you have to implement an abstract method that you do not need, you can just over write it and throw new NonImplementedException();
 ---
@@ -440,7 +470,7 @@ before the class is referenced for the first time in your program. A static cons
 remains in memory for the lifetime of the application domain in which your program resides.
 
 The main features of a static class:
- Contains only static members, cannot be instantiated, is sealed, cannot contain Instance Constructors, constructor only called once.
+Contains only static members, cannot be instantiated, is sealed, cannot contain Instance Constructors, constructor is only called once.
 ---------------------------------------------------------------
 _CodeSnippets
 https://msdn.microsoft.com/en-us/library/z41h7fat.aspx  - Visual C# Code Snippets
@@ -674,13 +704,15 @@ public static class ExtensionHelper                         // Class can be any 
 ---------------------------------------------------------------
 _Interfaces
 
-An interface contains definitions for a group of related functionalities that a non-abstract class or a struct must implement. An interface 
-may define static methods(since C#8), which must have an implementation. Beginning with C# 8.0, an interface may define a default implementation for 
-members. An interface may not declare instance data such as fields, auto-implemented properties, or property-like events.
+An interface contains definitions for a group of related functionalities that a non-abstract class or a struct must implement. 
+An interface may define static methods(since C#8), which must have an implementation. Beginning with C# 8.0, an interface may 
+define a default implementation for members.
 
-By using interfaces, you can, for example, include behavior from multiple sources in a class. That capability is important in C# because 
-the language doesn't support multiple inheritance of classes. In addition, you must use an interface if you want to simulate inheritance 
-for structs, because structs can't actually inherit from another struct or class.
+An interface may not declare instance data such as fields, auto-implemented properties, or property-like events.
+
+You can include behavior from multiple interfaces in a class. That capability is important in C# because the language doesn't 
+support multiple inheritance of classes. In addition, you must use an interface if you want to simulate inheritance for structs, 
+because structs can't actually inherit from another struct or class.
 
 Interfaces can contain instance methods, properties, events, indexers, or any combination of those four member types. 
 Interfaces may contain static constructors, fields, constants, or operators. 
@@ -699,38 +731,78 @@ Properties and indexers of a class can define extra accessors for a property or 
 an interface might declare a property that has a get accessor. The class that implements the interface can declare the same property with 
 both a get and set accessor. However, if the property or indexer uses explicit implementation, the accessors must match.
 ---
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Hello World");
+		var pod = new Pod();		
+		pod.PodName = "CatFish";
+		string podInfo = pod.GetPodSizeAndName();
+		Console.WriteLine("Pod Info is: " + podInfo);
+	}
+}
+
+public interface IPod
+{
+	string PodName {get; set;}
+	int PodCode {get; set;}
+	string GetPodSizeAndName();
+    //void Screw();                     All methods in an IF must be implemented in the derived class.
+}
+
+public class Pod : IPod 
+{
+	public string PodName {get; set;}
+	public int PodCode {get; set;}
+	
+	public string GetPodSizeAndName()
+	{		
+		return String.Format("Pod Name is {0} and size is {1}", PodName, 6);
+	}
+}
+---
 Explicit Interface Implementation Example
+You can implement an interface member explicitly by creating a class member that is only called through the interface, and is specific 
+to that interface. This is accomplished by naming the class member with the name of the interface and a period.
 
-public IControl
-{
-    void paint();
-}
-
-public ISurface
-{
-    void paint();
-}
-
-public SampleClass : IControl, ISurface
-{
-    public void IControl.paint()                // Explicit implementation
+    public class Program
     {
-        Console.Writeline("This method implements IControl interface");
-    }
+	    public static void Main()
+	    {
+		    SampleClass sample = new SampleClass();
+		    IControl cntrl = sample;
+		    ISurface surface = sample;
+		    cntrl.Paint();          // Will print line "This method implements IControl interface"
+		    surface.Paint();        // Will print line "This method implements ISurface interface"
+	    }
+	
+	    public interface IControl
+	    {
+		    void Paint();
+	    }
+	    public interface ISurface
+	    {
+		    void Paint();
+	    }
 
-    public void ISurface.paint()
-    {
-        Console.Writeline("This method implements ISurface interface");
+	    public class SampleClass : IControl, ISurface
+	    {
+		    void IControl.Paint()                // Explicit implementation. Cannot use an access modifier
+		    {
+			    Console.WriteLine("This method implements IControl interface");
+		    }
+		
+		    void ISurface.Paint()                // Explicit implementation. Cannot use an access modifier
+		    {
+			    Console.WriteLine("This method implements ISurface interface");
+		    }		
+	    }
     }
-}
-
-IControl cntrl = new SampleClass();
-ISurface service = new SampleClass();
-cntrl.paint();          // Will print line "This method implements IControl interface"
-surface.paint();        // Will print line "This method implements ISurface interface"
 ---
 If a class or struct implements two interfaces that contain a member with the same signature without an explict interface implementation, 
 then implementing that member on the class will cause both interfaces to use that member as their implementation.
+
 interface IControl
 {
     void Paint();
@@ -749,34 +821,6 @@ class SampleClass : IControl, ISurface
         Console.WriteLine("Paint method in SampleClass");
     }
 }
-
-You can implement an interface member explicitly by creating a class member that is only called through the interface, and is specific 
-to that interface. This is accomplished by naming the class member with the name of the interface and a period.
-
-public class SampleClass : IControl, ISurface
-{
-    void IControl.Paint()
-    {
-        System.Console.WriteLine("IControl.Paint");
-    }
-    void ISurface.Paint()
-    {
-        System.Console.WriteLine("ISurface.Paint");
-    }
-}
-
-// Call the Paint methods from Main.
-
-SampleClass obj = new SampleClass();
-//obj.Paint();  // Compiler error. Can only be called through an interface.
-
-IControl c = (IControl)obj;
-c.Paint();  // Calls IControl.Paint on SampleClass.
-
-ISurface s = (ISurface)obj;
-s.Paint(); // Calls ISurface.Paint on SampleClass. 
------
-
 ---------------------------------------------------------------
 _Keywords
 
@@ -1117,12 +1161,6 @@ Contains
 Returns a booleon value indicating whether a specified substring occurs within this string. Performs an ordinal 
 (case-sensitive and culture-insensitive) comparison. int result = String.CompareOrdinal(str1, str2);
 -----
-Substring
-Get first three characters.
-string sub = input.Substring(0, 3)    Returns substring of first 3 chars.
-string sub = input.Substring(3, 3)    Returns substring of 3 chars starting at index 3.
-string sub = input.Substring(6)       Returns substring of all chars after first 6.
------
 Equals
 Determines whether two String objects have the same value. Performs an ordinal (case-sensitive and culture-insensitive) comparison.
     string sp1 = "Superman";
@@ -1139,20 +1177,7 @@ Converts the value of objects to strings based on the formats specified and inse
 
 String is left aligned by using a negative width value
     string strFormated = String.Format("{0, -20} Now!", "Program It");
------
-LastIndexOfAny searches for an array of strings. There are nine versions of the LastIndexOf method on the string type. 
-They have different implementations. It returns -1 if no string is found.
------
-LastIndexOf
-LastIndexOf searches strings from the right. It finds the location of the last occurrence of a substring and returns the index value. 
-The LastIndexOf() method takes the following parameters:
-    value - substring to seek
-    startIndex - starting position of the search. The search proceeds from startIndex toward the beginning of the given string.
-    count - number of character positions to examine.
-    comparisonType - enumeration values that specifies the rules for the search
-Example:
-    string address = "2299 Coldwood, Orange, CA 93022-9900";
-	int result3 = address.LastIndexOf("CA", address.Length - 1, address.Length, StringComparison.OrdinalIgnoreCase);
+
 -----
 IndexOf 
 Returns the index of the first occurrence of the specified character/substring within the string. It returns negative one when nothing is found.
@@ -1173,6 +1198,26 @@ Often strings have leading characters that we know cannot contain the searched-f
     string str = "Ice cream";
 	int result2 = str.IndexOf("c", 3);                  // Returns 4, skips the first 3 locations
 -----
+Join
+The string.Join method combines many strings into one. It receives 2 arguments: an array (or IEnumerable) and a separator string.
+This method is static and places the separator between every element of the collection in the returned string.
+The syntax is: String.Join(String separator, String[] value, Int32 startIndex, Int32 count)
+    Console.WriteLine(string.Join(",", words));     string s1 = String.Join("-", text, 1, 2);    
+----
+LastIndexOfAny searches for an array of strings. There are nine versions of the LastIndexOf method on the string type. 
+They have different implementations. It returns -1 if no string is found.
+-----
+LastIndexOf
+LastIndexOf searches strings from the right. It finds the location of the last occurrence of a substring and returns the index value. 
+The LastIndexOf() method takes the following parameters:
+    value - substring to seek
+    startIndex - starting position of the search. The search proceeds from startIndex toward the beginning of the given string.
+    count - number of character positions to examine.
+    comparisonType - enumeration values that specifies the rules for the search
+Example:
+    string address = "2299 Coldwood, Orange, CA 93022-9900";
+	int result3 = address.LastIndexOf("CA", address.Length - 1, address.Length, StringComparison.OrdinalIgnoreCase);
+-----
 LastIndexOfAny searches for multiple characters in reverse. It returns the final position of any of a set of characters.
 // Search for last of any of these characters.
 int index = value.LastIndexOfAny(new char[] { 'd', 'b' });
@@ -1181,15 +1226,43 @@ The performance of LastIndexOfAny is not ideal. If you want to improve it, one t
 in a field—static or instance—and then use a reference to that cache as the argument. This will avoid an object creation on every call. 
 And reducing object creations reduces memory pressure and garbage collections.
 -----
-StartsWith and EndsWith
-Determines whether the beginning of this string instance matches a specified string.
-    if (name.Trim().StartsWith("<")) {...}
+PadLeft() and PadRight()  Returns a new string with left\right padding.
+    string result = str.PadLeft(9);
+----
+Remove()  Instance method. Does not affect the original string. Copies the string with the targeted chars removed.
+    // Copies the first 5 characters to the new string.
+    string resultx = str.Remove(5);     // Result: Choco
+
+    // Copies the string with 5 characters removed starting at index 2 to the new string.
+    string result1 = str.Remove(2, 5);  // Result: Chte
 -----
-Split
+Replace()  Replace chars or words in a new string.
+    string str = "Programming is fun";
+    // replaces "Programming" with "C#"
+    string result = str.Replace("Programming", 'C#');  // result = "C# is fun"
+
+    string str = "Programming is fun";
+    // replaces "Programming" with "C#" 
+    string result = str.Replace('m', 'B');  // result = "PrograBBing" with "C#"
+
+    If the targeted sub string does not exist, the initial sub string will be returned.
+-----
+Split   Instance method. 
 Splits a string into substrings that are based on the characters in an array. Called on a string instance.
 Split(Char[])  public String[]  Split(String[] separator, int count, StringSplitOptions options)   Split(Char[], StringSplitOptions)
     String[] strlist = str.Split(spearator, count,
                         StringSplitOptions.RemoveEmptyEntries);
+-----
+StartsWith and EndsWith
+Determines whether the beginning of this string instance matches a specified string.
+    if (name.Trim().StartsWith("<")) {...}
+-----
+Substring
+Get first three characters.
+string sub = input.Substring(0, 3)    Returns substring of first 3 chars.
+string sub = input.Substring(3, 3)    Returns substring of 3 chars starting at index 3.
+string sub = input.Substring(6)       Returns substring of all chars after first 6.
+
 ---------------------------------------------------------------
 _JSON
 

@@ -188,7 +188,7 @@ custid      companyname     orderid     orderdate
 
 -- 6 (Optional, Advanced)
 -- Return customers with orders placed on Feb 12, 2007 along with their orders
--- Also return customers who didn't place orders on Feb 12, 2007 
+-- Also return customers who didn't place orders on Feb 12, 2007 that of course do not have orders to display. 
 -- Tables involved: TSQL2012 database, Customers and Orders tables
 
 -- Desired output

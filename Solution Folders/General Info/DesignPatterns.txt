@@ -35,7 +35,8 @@ of the object instantiated can be determined at run-time.
 
 Prototype pattern is used to instantiate a new object by copying all of the properties of an existing object, creating an 
 independent clone which is an exact copy of the prototype but permits modification without altering the original. 
-This practise is particularly useful when the construction of a new object is inefficient. In general, when an object is cloned, 
+This practise is particularly useful when the construction of a new object is inefficient. 
+In general, when an object is cloned, 
 the new object is either a shallow or deep copy. A shallow copy duplicates all of the object's properties. If any property contains 
 a reference type, the reference is copied. This means that changes to the referenced object are visible in both the clone and the 
 original object. A deep copy clones the main object and all child objects. Any properties of reference types are also cloned, 

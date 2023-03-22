@@ -1,10 +1,12 @@
 DatesAndTimes_
+Dynamic_SQL
 IN_AND_EXISTS_Keywords
 Joins_
 Key_Words
 Random_Notes
 Set_Logic
 Subqueries_
+Temp_Tables
 Windowed_functions
 
 
@@ -34,6 +36,49 @@ Use DATEDIFF to get the number of days to the given date. Then add those days to
 
 Select CONVERT(date, @datePlusOneDay) 'datePlusOneDay', 
 	@dayCount 'dateCount', CONVERT(date, @datePlusTwoDays) 'datePlusTwoDays';
+------------------------------------------------------------------------------
+Dynamic_SQL
+
+Dynamic SQL is a SQL statement that is constructed and executed at runtime based on input parameters passed. Dynamic SQL can be 
+used to increase the flexibility of a program and make it easier to customize SQL statements for different situations. You 
+can construct SQL statements on the fly, based on user input or other conditions, and then execute those statements immediately.
+
+If you are building a search feature for a website, you may not know what keywords the user will enter. In this case, you could 
+use dynamic SQL to construct the SQL query on the fly based on the user’s input. 
+
+Static SQL is SQL that is hard-coded and does not change based on user input. Dynamic SQL is SQL that is generated at runtime 
+based on user input. Static SQL is typically more efficient because the database can optimize the query before it is executed. 
+However, dynamic SQL can be more flexible because it can be customized for each user.
+
+What are some common problems with dynamic SQL?  One common problem with dynamic SQL is that it can be difficult to debug because 
+the code is not always visible. Additionally, dynamic SQL can be less efficient than static SQL because it often requires more 
+parsing and compilation. Finally, dynamic SQL can be more susceptible to SQL injection attacks.
+
+Four different ways that you can execute dynamic SQL statements: EXECUTE statement, sp_executesql, OPENQUERY or OPENROWSET.
+
+There are some limitations on the kind of SQL statements that can be executed using Dynamic SQL. For example, you cannot use 
+Dynamic SQL to execute a DDL statement, such as CREATE TABLE. Additionally, Dynamic SQL does not support the use of certain 
+SQL keywords, such as the WITH clause.
+
+EXEC command executes a stored procedure or string passed to it.
+
+	Declare @Pid varchar(50) = '75';
+	Declare @SQL nvarchar(1000);
+	SET @SQL = 'Select productid, productname From Production.Products Where productid = ' + @Pid;
+	EXEC (@SQL);
+
+sp_executesql is an extended stored procedure that can be used to execute dynamic SQL statements in SQL Server. we need to pass 
+the SQL statement and definition of the parameters used in the SQL statement and finally set the values to the parameters used in 
+the query. Following is the syntax of executing dynamic SQL statements using sp_executesql extended stored procedure.
+
+	sp_executesql @stmt, N'@parameter_name data_type' , @param1 = 'value1'
+
+Example: EXECUTE sp_executesql   
+          N'SELECT ProductID,Name,ProductNumber										-- SQL Statement
+          FROM SalesLT.Product where ProductID = @Pid and ProductNumber=@PNumber',  
+          N'@Pid varchar(50),@PNumber varchar(50)',									-- Declare Parameters
+          @pid = '680',@PNumber='FR-R92B-58';										-- Set values to the parameters
+
 ------------------------------------------------------------------------------
 strings_
 
@@ -231,6 +276,23 @@ FROM MTB_Sample;
 ---
 SQL Server DAY() function
 The DAY() function returns an integer value which represents the day of a month (1-31) of a specified date.
+---
+Select @dsql = ('select ''' + @databasename + '''')
+ 
+    --Execute the the genereated dynamic sql statement and populate each @Databasename into the temp table.
+     Insert into #tempTable    -- creates the temporary table
+     Exec sp_executesql @dsql
+---
+Between statement Example
+	Select empid, SUM(freight) 'Freight Weight' 
+	from Sales.Orders
+	Where orderdate Between '20060101' And '20070801' And empid % 2 = 0
+	Group By empid
+	Order By 'Freight Weight' desc;
+---
+A cursor is a temporary work area created in the system memory when a SQL statement is executed. A cursor contains information on 
+a select statement and the rows of data accessed by it. This allows the rows to be retrieved one at a time. In dynamic SQL, cursors 
+are used to fetch data from the database one row at a time and process it as required.
 
 ------------------------- End Random_Notes -------------------------------------
 --------------------------------------------------------------------------------
@@ -273,11 +335,38 @@ main query. In other words, you can use a correlated subquery to answer a multip
 value in each row processed by the parent statement. Note: A candidate row is a row from a table or subquery that could 
 potentially be returned in the result set. 
 
-Nested Subqueries Versus Correlated Subqueries :
+Nested Subqueries Versus Correlated Subqueries:
 With a normal nested subquery, the inner SELECT query runs first and executes once, returning values to be used by the 
 main query. A correlated subquery, however, executes once for each candidate row considered by the outer query. In other 
 words, the inner query is driven by the outer query.
 NOTE : You can also use the ANY and ALL operator in a correlated subquery.
+--------------------------------------------------------------------------------
+Temp_Tables
+
+Good article. Info on performance analysis
+https://www.sqlshack.com/select-into-temp-table-statement-in-sql-server/#:~:text=INSERT%20INTO%20SELECT%20statement%20reads,and%20then%20insert%20the%20data.
+
+Create a temp table and insert data from a query. Temp table must be created or Insert will generate an error.
+This allows the flexibility to change column data types and to create indexes. 
+	Create Table #TempX2 (
+		supplierid int, 
+		companyname nvarchar(40)
+	)
+
+	Insert into #TempX2
+	Select supplierid, companyname from Production.Suppliers;
+
+	Select * from #TempX2;
+	Drop Table #TempX2;
+---
+Select data into a newly created temp table. The temp table cannot already exist.
+	Select supplierid as SupID, companyname as compName 
+	into #TempX3
+	from Production.Suppliers;
+
+	Select * from #TempX3;
+	Drop Table #TempX4;
+---
 --------------------------------------------------------------------------------
 Windowed_functions
 

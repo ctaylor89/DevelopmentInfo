@@ -92,29 +92,25 @@ Declare @dsql as nvarchar(2000),
 -- OR 
 --Select @CountLoop = (Select count(*) from sysdatabases)
  
- --Begin the loop
  While (@Seed < @CountLoop)
- 
- Begin
- 
+ Begin 
     --Select the individual database associated with the current @countloop
      Select @Databasename = (Select name from sysdatabases where [dbid] = @Seed)
  
     --Define the dynamic SQL statement to be executed. @Databasename is the name of the database associated with the current @countloop
-     Select @dsql = ('select '''+@databasename+'''')
+     Select @dsql = ('select ''' + @databasename + '''')
  
     --Execute the the genereated dynamic sql statement and populate each @Databasename into the temp table.
      Insert into #tempTable    -- creates the temporary table
      Exec sp_executesql @dsql
  
     --Increment the count
-     select @seed = (@seed +1)
- 
+     select @seed = (@seed +1) 
  END
  
 --When the loop completes we can then query our temp table
- Select * from #temp
- drop table #temp
+ Select * from #tempTable
+ drop table #tempTable
 --------------------------------------------------
 -- Dropping a local Temporary Table if it exists. Remember underscores and numbers appended to the name of the table in the tempdb.
 IF OBJECT_ID(N'tempdb..#temp_Drivers') IS NOT NULL

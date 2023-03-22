@@ -1,0 +1,66 @@
+Azure_SDK
+Azure_Services
+Hosting_Platforms
+Serverless_Architecture
+
+What is NoSQL?  A good article that explains a lot.
+https://www.mongodb.com/nosql-explained
+
+Azure for .NET developers
+https://learn.microsoft.com/en-us/dotnet/azure/
+
+Configure Visual Studio for Azure development with .NET
+https://learn.microsoft.com/en-us/dotnet/azure/configure-visual-studio?source=recommendations
+
+
+-------------------------------------------------------------
+Azure_SDK
+
+-------------------------------------------------------------
+Azure_Services
+Access from .NET applications - access to most Azure services is provided through the Azure SDK for .NET. The Azure SDK for .NET 
+is provided as a series of NuGet packages and can be used in both .NET Core and .NET Framework applications. The Azure SDK for 
+.NET makes incorporating Azure services into your application as easy as installing the correct NuGet package, instantiating a 
+client object and calling the appropriate methods. More information on the Azure SDK for .NET can be found in the Azure SDK for 
+.NET Overview.
+---
+While Azure contains over 100 services, the following Azure services are the services you will use most frequently as a .NET developer.
+
+Service	Descriptions
+Azure App Service is a fully managed platform for hosting web applications and APIs in Azure. It features automatic load balancing 
+and auto-scaling in a highly available environment. You pay only for the compute resources you use and free tiers are available.
+
+Azure Functions is a serverless compute service that lets you write small, discrete segments of code that can be executed in a 
+scalable and cost-effective manner, all without managing any servers or runtimes. Functions can be invoked by a variety of different 
+events and easily integrate with other Azure services through the use of input and output bindings.
+
+Azure SQL is a fully managed cloud based version of SQL Server. Azure automatically performs traditional administrative tasks like 
+patching and backups for you and features built-in high availability.
+
+Azure Cosmos DB is a fully managed NoSQL database with single digit response times, automatic scaling, and a MongoDB compatible API.
+*NoSQL databases store data in a format other than relational tables.
+
+Azure Blob Storage allows your applications to store and retrieve files in the cloud. Azure Storage is highly scalable to store 
+massive amounts of data and data is stored redundantly to ensure high availability.
+
+Azure Service Bus is a fully managed enterprise message broker supporting both point to point and publish-subscribe integrations. 
+It is ideal for building decoupled applications, queue based load leveling, or facilitating communication between microservices.
+
+Azure Key Vault	- Every application has application secrets like connection strings and API keys it must store. Azure Key Vault 
+helps you store and access those secrets securely, in an encrypted vault with restricted access to make sure your secrets and 
+your application are not compromised.
+
+Azure Cognitive Services are a collection of cloud-based services that allow you to add AI based capabilities to your application. 
+Examples include computer vision, speech recognition, language understanding, and anomaly detection.
+
+For the full list of Azure products and services, visit the Azure documentation home page
+-------------------------------------------------------------
+Hosting_Platforms
+
+-------------------------------------------------------------
+Serverless_Architecture - Azure Functions simplify building solutions to handle event-driven workflows, whether responding to HTTP 
+requests, handling file uploads in Blob storage, or processing events in a queue. You write only the code necessary to handle your 
+event without worrying about servers or framework code. Further, you can take advantage of over 250 connectors to other Azure and 
+third-party services to tackle your toughest integration problems.
+
+

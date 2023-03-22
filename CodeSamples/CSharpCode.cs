@@ -195,6 +195,7 @@ namespace DevelopmentInfo.CodeSamples
 
             int valueToBox  = 100;
             object valueBoxed = valueToBox;
+
             if(valueBoxed.GetType() == typeof(int))
             {
                 int valueUnboxed = (int)valueBoxed;

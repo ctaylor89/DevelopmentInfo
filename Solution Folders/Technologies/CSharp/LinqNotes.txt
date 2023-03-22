@@ -136,14 +136,12 @@ var nums = new[]{1, 2, 3, 4};
 var sum = nums.Aggregate((a, b) = > a + b);
 Console.WriteLine(sum); // output: 10 (1+2+3+4)
 ------------
-
 // Where we have two collections - singers and concerts
 var singerConcerts = singers.SelectMany(s => concerts
 							.Where(c => c.SingerId == s.Id)
 							.Select(c => new { Year = c.Year, ConcertCount = c.ConcertCount, Name = string.Concat(s.FirstName, " ", s.LastName) }));
  
 ------------
-
 LINQ to Objects is mainly built upon a single class: Enumerable.  The Enumerable class is a static class that defines a large set of extension methods, 
 nearly all of which work upon an IEnumerable<T>.  Many of these methods return a new IEnumerable<T>, allowing the methods to be chained together into 
 a fluent style interface.  This is what allows us to write statements that chain together, and lead to the nice declarative programming model of LINQ.

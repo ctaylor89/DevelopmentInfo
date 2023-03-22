@@ -131,12 +131,14 @@ There are no GUID-based references to other projects, which improves file readab
 
 The file can be edited without unloading it in Visual Studio:
 ---
-ASP.NET Core projects offer developers the flexibility of targeting .NET Core, .NET Framework, or both. When targeting .NET Framework, projects need to reference individual NuGet packages.
-Targeting .NET Core allows you to eliminate numerous explicit package references, thanks to the ASP.NET Core metapackage. Install the Microsoft.AspNetCore.App metapackage in your project:
+ASP.NET Core projects offer developers the flexibility of targeting .NET Core, .NET Framework, or both. When targeting .NET Framework, 
+projects need to reference individual NuGet packages. Targeting .NET Core allows you to eliminate numerous explicit package references, 
+thanks to the ASP.NET Core metapackage. Install the Microsoft.AspNetCore.App metapackage in your project:
 	<ItemGroup>
 	   <PackageReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
-	When the metapackage is used, no packages referenced in the metapackage are deployed with the app. The .NET Core Runtime Store includes these assets, and they're precompiled to improve performance.
+	When the metapackage is used, no packages referenced in the metapackage are deployed with the app. The .NET Core Runtime Store includes
+	these assets, and they're precompiled to improve performance.
 	https://learn.microsoft.com/en-us/aspnet/core/fundamentals/metapackage-app?view=aspnetcore-3.1
 ---
 https://learn.microsoft.com/en-us/aspnet/core/migration/proper-to-2x/?view=aspnetcore-7.0

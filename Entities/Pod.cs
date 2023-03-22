@@ -12,7 +12,7 @@ namespace DevelopmentInfo.Entities
         private Phases mode;
         
         public Phases PodState { get; set; } = Phases.OnHold;   // Only auto-implemented properties can have initializers
-        public Phases PodMode
+        public Phases PodMode                       // Expression Bodied Property
         {
             get => mode;
             set => mode = value;

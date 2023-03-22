@@ -265,7 +265,18 @@ custid      companyname     orderid     orderdate
 66          Customer LHANT  10443       2007-02-12 00:00:00.000
 5           Customer HGVLZ  10444       2007-02-12 00:00:00.000
 (2 row(s) affected)
+-- Additional Notes. Some examples inspired by this solution.
+Use DATEDIFF to get the number of days to the given date. Can also use months, years, weeks, hours, minutes, seconds etc.
+	Declare @dayCount int = DATEDIFF(day, 0, '20070212');
 
+Use DATEADD to add 2 days to @dayCount. day is the date part being the unit of measurement.
+	Declare @datePlusTwoDays DateTime2 = DATEADD(day, 2, @dayCount);
+
+Use DATEDIFF to get the number of days to the given date. Then add those days to 1 day.
+	Declare @datePlusOneDay DateTime2 = DATEADD(day, 1, DATEDIFF(day, 0, '20070212'));
+
+Select CONVERT(date, @datePlusOneDay) 'datePlusOneDay', 
+	@dayCount 'dateCount', CONVERT(date, @datePlusTwoDays) 'datePlusTwoDays';
 
 -- 6 (Optional, Advanced)
 -- Return customers and company name, with orders placed on Feb 12, 2007 along with their orders
@@ -329,6 +340,11 @@ from Sales.Customers c
 left join Sales.Orders o
 on c.custid = o.custid and o.orderdate = '2007-02-12'
 order by c.custid;
+-- Notes
+-- There are only 2 records that are 'Yes'. If you make the join an inner join, only 2 records will be returned.
+-- The left join returns all custid's and null values for the right table rows that do not have a '20070212' date.
+-- If you put the date condition in a Where clause instead of the On clause, the return records will be filtered
+-- down to 2 records that contain the desired date.
 
 -- Solution
 SELECT DISTINCT C.custid, C.companyname, 
@@ -337,6 +353,15 @@ FROM Sales.Customers AS C
   LEFT OUTER JOIN Sales.Orders AS O
     ON O.custid = C.custid
     AND O.orderdate = '20070212';
+
+-- My solution
+Select c.custid, c.companyname, 
+	case
+		when exists (Select * from Sales.Orders os where os.orderdate = '20070212' 
+														  and os.custid = c.custid)
+		then 'Yes' else 'No'
+		end as HasOrderOn20070212
+from Sales.Customers c;
 
 -- Desired output
 custid      companyname     HasOrderOn20070212

@@ -1,5 +1,29 @@
 USE TSQL2012;
 
+-- My way to duplicate a row in the HR.Employees table but change the last name
+Select * Into #TempEmployee
+from HR.Employees
+Where lastname Like 'B%';
+
+Select * From #TempEmployee;
+
+Update #TempEmployee
+SET lastname = 'Buster'
+Where empid = 5;
+
+Insert Into HR.Employees
+Select lastname, firstname, title, titleofcourtesy, birthdate, hiredate, address,
+       city, region, postalcode, country, phone, mgrid From #TempEmployee
+Where lastname = 'Buster';
+
+drop table #TempEmployee
+-- Note that an explicit value for the identity column in table 'HR.Employees' can only be specified 
+-- when a column list is used and IDENTITY_INSERT is ON.
+-- Example:
+-- Set Identity insert on so that value can be inserted into this column
+-- SET IDENTITY_INSERT YourTable ON
+-- https://stackoverflow.com/questions/19155775/how-to-update-identity-column-in-sql-server
+----------------------------------------------------
 IF OBJECT_ID('dbo.SourceRecords', 'U') IS NOT NULL
 DROP TABLE dbo.SourceRecords;
 

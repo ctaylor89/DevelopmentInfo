@@ -109,6 +109,16 @@ namespace DevelopmentInfo.RunCodeSamples
                         int res8 = attempt.MsSinceMidnight(29, 1, 1);
                         int res9 = attempt.MsSinceMidnight(2, 88, 1);
                         int res10 = attempt.MsSinceMidnight(2, 2, 88);
+
+                        var oddOrEvenVals = new int[] {100,88,-1};
+                        string res11 = attempt.OddOrEvenSum(oddOrEvenVals);
+                        //string rw = attempt.ReplaceWords("This is an example!");
+                        string rw = attempt.ReplaceWords("Dog Bird Cat Fish!");
+                        // Return the number of people still on the bus.
+                        List<int[]> peopleList = new List<int[]>() { new int[] {10,0},new int[] {3,5},new int[] {5,8} };
+                        int res12 = (TryThis.NumberOfPeopleOnBus(peopleList) > 0) ? TryThis.NumberOfPeopleOnBus(peopleList) : 0; 
+                        string res13 = attempt.Smash(new string[] {"hello", "world", "this", "is", "great" });
+
                         break;
                     case 22:
                         // Environment.Exit(0);
