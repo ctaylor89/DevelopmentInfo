@@ -38,8 +38,8 @@ Create_Access_Token
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
 Token Name: Ctaylor89_Git_Token
-Personal Token Name: CTaylorPersonalAccessToken
-         Token : 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		Created 060322
+Personal Token Name: CTaylorPersonalAccessToken2
+         Token : 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		Created 032223
 
 *Incomplete. Still need to know how to access it from cmd line. Able to push it using Git Extensions.
 --------------------------------------------------------
@@ -47,6 +47,9 @@ Login_for_GIT_Push
 Name: ctaylor89		pwd: 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		Created 060322
 
 Repositories: https://github.com/ctaylor89/TodoApi
+
+
+
 --------------------------------------------------------
 how-to-install-git-windows - Some useful info but a little out dated.
 https://phoenixnap.com/kb/how-to-install-git-windows
