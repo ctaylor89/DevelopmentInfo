@@ -37,39 +37,22 @@ git clone https://github.com/ctaylor89/MyRepo.git
 Create_Access_Token
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
-Token Name: Ctaylor89_Git_Token
-
-
 Personal Token Name: CTaylorPersonalAccessToken2
          Token : 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		Created 032223
 
+Use GIT Extensions. 
+When I select Push from menu item 'Commands', enter User Name: ctaylor89 Pwd: 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.
 
+*Problem using cmd line. Still Issue with login error: when attempting to do a git push.  "Passwords no longer supported" 
+even though I am using the user name ctaylor89 and token for a password. Cannot cut-paste into cmd line or cannot see it.
+Search: how to sign into github with personal access token.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-*Incomplete. Still need to know how to access it from cmd line. Able to push it using Git Extensions.
+Able to push it using Git Extensions.
 --------------------------------------------------------
 Login_for_GIT_Push
-Name: ctaylor89		pwd: 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		Created 060322
+Name: ctaylor89		pwd: See GitHub_ in MainNotes2020.txt		Created 060322
 
 Repositories: https://github.com/ctaylor89/TodoApi
-
-
-
 --------------------------------------------------------
 how-to-install-git-windows - Some useful info but a little out dated.
 https://phoenixnap.com/kb/how-to-install-git-windows
