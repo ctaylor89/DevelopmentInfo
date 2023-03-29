@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevelopmentInfo.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -467,16 +468,31 @@ namespace DevelopmentInfo.CodeSamples
 
         public string Smash(string[] words)
         {
-            var sb = new StringBuilder();
+            // This works:
+            //var sb = new StringBuilder();
+            //Array.ForEach(words, w => sb.Append(w + " "));
+            //var result = sb.ToString().TrimEnd();
 
-            Array.ForEach(words, w => sb.Append(w + " "));
-            var result = sb.ToString().TrimEnd();
-
-            
+            var result = String.Join(" ", words);
 
             return result;
 
             // Better: return
+        }
+
+        // Return the number(count) of vowels in the given string. Test for letters a, e, i, o, u as vowels for this
+        // Kata(but not y). The input string will only consist of lower case letters and/or spaces.
+        public int GetVowelCount(string str)
+        {
+            int vowelCount = 0;           
+            
+            for (int i = 0; i < str.Length; i++)
+                if ("aeiou".Contains(str[i])) vowelCount++;
+
+            return vowelCount;
+            
+            // Better: Count is an ext method that returns how many elements match the condition.
+            //return str.Count(i => "aeiou".Contains(i));
         }
     }
 }

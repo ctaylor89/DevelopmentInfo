@@ -1,6 +1,7 @@
 Azure_SDK
 Azure_Services
 Hosting_Platforms
+Random_Notes
 Serverless_Architecture
 
 What is NoSQL?  A good article that explains a lot.
@@ -12,18 +13,36 @@ https://learn.microsoft.com/en-us/dotnet/azure/
 Configure Visual Studio for Azure development with .NET
 https://learn.microsoft.com/en-us/dotnet/azure/configure-visual-studio?source=recommendations
 
-
 -------------------------------------------------------------
 Azure_SDK
 
--------------------------------------------------------------
-Azure_Services
+https://learn.microsoft.com/en-us/dotnet/azure/sdk/azure-sdk-for-dotnet
+
+The Azure SDK for . NET is designed to make it easy to use Azure services from your . NET applications. Whether it is uploading 
+and downloading files to Blob Storage, retrieving application secrets from Azure Key Vault, or processing notifications from 
+Azure Event Hubs, the Azure SDK for .NET provides a consistent and familiar interface to access
+
 Access from .NET applications - access to most Azure services is provided through the Azure SDK for .NET. The Azure SDK for .NET 
 is provided as a series of NuGet packages and can be used in both .NET Core and .NET Framework applications. The Azure SDK for 
 .NET makes incorporating Azure services into your application as easy as installing the correct NuGet package, instantiating a 
 client object and calling the appropriate methods. More information on the Azure SDK for .NET can be found in the Azure SDK for 
 .NET Overview.
+
+Azure SDK client libraries typically expose one or more service client types that are the main starting points for calling 
+corresponding Azure services. These client types names end with the word 'Client'e.g. BlockBlobClient can be used to call blob 
+storage service, and KeyClient can be used to access Key Vault service cryptographic keys.
+
+
 ---
+Azure Core shared client library for .NET
+https://www.nuget.org/packages/Azure.Core/1.30.0
+Azure.Core provides shared primitives, abstractions, and helpers for modern .NET Azure SDK client libraries. Azure.Core allows 
+client libraries to expose common functionality in a consistent fashion, so that once you learn how to use these APIs in one 
+client library, you will know how to use them in other client libraries. These libraries have package and namespace names 
+starting with 'Azure' e.g. Azure.Storage.Blobs, Azure.Messaging.ServiceBus, Azure.Storage.Files.Shares.
+-------------------------------------------------------------
+Azure_Services
+
 While Azure contains over 100 services, the following Azure services are the services you will use most frequently as a .NET developer.
 
 Service	Descriptions
@@ -57,6 +76,33 @@ For the full list of Azure products and services, visit the Azure documentation 
 -------------------------------------------------------------
 Hosting_Platforms
 
+Azure App Service is a fully managed platform as a service (PaaS) offering for developers. App Service is a Managed production 
+environment that automatically patches and maintains the OS and language frameworks for you. It supports multiple language and 
+frameworks. You can also run PowerShell and other scripts or executables as background services. Manage your apps in App Service 
+by using Azure PowerShell or the cross-platform command-line interface (CLI). Scale up or out manually or automatically. Supports 
+Serverless Code.
+
+Connections to SaaS platforms and on-premises data. Authenticate users with Azure Active Directory, Google, Facebook, Twitter, 
+or Microsoft account. Create IP address restrictions and manage service identities. Prevent subdomain takeovers.
+For most scenarios, App Service is the best choice.
+https://learn.microsoft.com/en-us/azure/app-service/overview
+---
+Software as a service (SaaS) allows users to connect to and use cloud-based apps over the Internet. Common examples are email, 
+calendaring, and office tools (such as Microsoft Office 365). SaaS provides a complete software solution that you purchase on 
+a pay-as-you-go basis from a cloud service provider.
+
+-------------------------------------------------------------
+Random_Notes
+
+What is meant by continuous deployment?
+Continuous deployment is a strategy in software development where code changes to an application are released automatically into 
+the production environment. This automation is driven by a series of predefined tests. Once new updates pass those tests, the 
+system pushes the updates directly to the software's users
+---
+Besides App Service, Azure offers other services that can be used for hosting websites and web applications. For most scenarios, 
+App Service is the best choice. For microservice architecture, consider Azure Spring Apps or Service Fabric. If you need more 
+control over the VMs on which your code runs, consider Azure Virtual Machines. For more information about how to choose between 
+these Azure services, see https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
 -------------------------------------------------------------
 Serverless_Architecture - Azure Functions simplify building solutions to handle event-driven workflows, whether responding to HTTP 
 requests, handling file uploads in Blob storage, or processing events in a queue. You write only the code necessary to handle your 

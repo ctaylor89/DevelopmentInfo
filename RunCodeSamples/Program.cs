@@ -118,7 +118,7 @@ namespace DevelopmentInfo.RunCodeSamples
                         List<int[]> peopleList = new List<int[]>() { new int[] {10,0},new int[] {3,5},new int[] {5,8} };
                         int res12 = (TryThis.NumberOfPeopleOnBus(peopleList) > 0) ? TryThis.NumberOfPeopleOnBus(peopleList) : 0; 
                         string res13 = attempt.Smash(new string[] {"hello", "world", "this", "is", "great" });
-
+                        int res14 = attempt.GetVowelCount("xbracxdabrau");
                         break;
                     case 22:
                         // Environment.Exit(0);

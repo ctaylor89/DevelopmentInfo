@@ -123,6 +123,9 @@ ASP.Net_Core
 .NET Core vs .NET Framework - What's the difference?  This is a good video demo.
 https://www.youtube.com/watch?v=79UWvR734wI
 
+Introduction to Razor Pages in ASP.NET Core. Looks like a good read. 52 minutes.
+https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-7.0&tabs=visual-studio
+
 The .csproj file format has been simplified in ASP.NET Core. Some notable changes include:
 
 Explicit inclusion of files isn't necessary for them to be considered part of the project. This reduces the risk of XML merge conflicts when working on large teams.

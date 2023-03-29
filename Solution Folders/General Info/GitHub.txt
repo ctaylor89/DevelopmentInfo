@@ -13,7 +13,22 @@ Steps_To_Get_Started
 Steps_To_Setup_Authentication_with_GitHub
 Tutorials
 Visual_Studio
--------------------------------------
+
+--------------------------------------------------------
+--------------------------------------------------------
+Login_for_GIT_Push
+Name: ctaylor89		Pwd: See GitHub_ in MainNotes2020.txt		Created 032223
+
+Repositories: https://github.com/ctaylor89/TodoApi
+Use GIT Extensions. 
+When I select Push from menu item 'Commands', enter User Name: ctaylor89 Pwd: See GitHub_ in MainNotes2020.txt.
+
+*Problem using cmd line. Still Issue with login error: when attempting to do a git push.  "Passwords no longer supported" 
+even though I am using the user name ctaylor89 and token for a password. Cannot cut-paste into cmd line or cannot see it.
+Search: how to sign into github with personal access token.
+
+Able to push it using Git Extensions.
+--------------------------------------------------------
 Steps_To_Get_Started	(All file names are case sensitive)
 
 Download Git
@@ -37,23 +52,9 @@ git clone https://github.com/ctaylor89/MyRepo.git
 Create_Access_Token
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
-Personal Token Name: CTaylorPersonalAccessToken2
-         Token : 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		Created 032223
+How to Use GitHub Personal Access Tokens  *Use GIT Extensions to push repository on my system.
+https://www.itprotoday.com/devops/how-use-github-personal-access-tokens
 
-Use GIT Extensions. 
-When I select Push from menu item 'Commands', enter User Name: ctaylor89 Pwd: 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.
-
-*Problem using cmd line. Still Issue with login error: when attempting to do a git push.  "Passwords no longer supported" 
-even though I am using the user name ctaylor89 and token for a password. Cannot cut-paste into cmd line or cannot see it.
-Search: how to sign into github with personal access token.
-
-Able to push it using Git Extensions.
---------------------------------------------------------
-Login_for_GIT_Push
-Name: ctaylor89		pwd: See GitHub_ in MainNotes2020.txt		Created 060322
-
-Repositories: https://github.com/ctaylor89/TodoApi
---------------------------------------------------------
 how-to-install-git-windows - Some useful info but a little out dated.
 https://phoenixnap.com/kb/how-to-install-git-windows
 
