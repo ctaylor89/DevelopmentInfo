@@ -230,8 +230,6 @@ IndexOf - Get the index of the searched for item
     index = Array.IndexOf( strings, searchString, 4 );
     int startPosition = sentence.IndexOf( "is " ) + 1;
     string age = authorInfo.Substring( startPosition + 2, 2 );
-
-
 ---
 Reverse - public static void Reverse (Array array, int index, int length);
     Array.Reverse(stringArray);
@@ -583,6 +581,8 @@ within .NET scope and under .NET framework classes such as string, int, bool var
 
 UnManaged objects are created outside the control of .NET libraries and are not managed by CLR, example of such unmanaged code is 
 COM objects, file streams, connection objects, Interop objects. (Basically, third party libraries that are referred in .NET code.)
+
+System.IO.FileStream is a .net class, but the actual filestream itself isn't, it is something supplied by the operating system as an abstracted way of interacting with the hardware of the hard drive.  Likewise the actual connection to your database is being provided by non .net database drivers and libraries, and ultimately comes down to a TCP socket, named pipe or some other operating system provided cross-process communication channel.  As none of these low level things are under the control of .net, they live outside of the .net framework so need to be disposed of using their own individual native methods.
 ---------------------------------------------------------------
 _Exceptions
 
@@ -996,7 +996,9 @@ Native code's memory is not "managed", as in, memory isn't freed for you (Ex: C+
 no garbage collection. Managed code is code whose memory is free and allocated for you, garbage collection and other goodies.
 
 Mixed code is when you have managed code that calls onto an unmanaged layer. Normally, when you access a pure unmanaged C++ DLL from
-managed code you call it from .NET using P/invoke.
+managed code you call it from .NET using P/invoke. You will most commonly use it to access C-style functions in Win32 DLLs, and C and C++ 
+code in in-house and 3rd party libraries. Considering the magical things it does, it is often surprisingly easy to implement P/Invoke in 
+order to call some specific bit of native functionality that your application needs.
 ---
 P/Invoke is a technology that allows you to access structs, callbacks and functions in unmanaged libraries from your managed code. 
 Most of the P/Invoke API is contained in two namespaces: System and System.Runtime.InteropServices. Using these two namespaces gives 
@@ -1013,6 +1015,10 @@ With a reference type, the reference that p2 points to is the same one that p1 p
 // C# Date Time Formats including single character formats.
 https://www.dotnetperls.com/datetime-format
 ---
+Deep copy VS Shallow copy
+While in shallow copy the reference type members of the copied object refer to the same object as the original object, in a deep 
+copy, separate instances of each of the reference type members in the original instance is created in the new or cloned instance.
+
 // Shallow and Deep copy example
 public class IdInfo
 {

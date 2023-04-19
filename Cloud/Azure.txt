@@ -13,12 +13,23 @@ https://learn.microsoft.com/en-us/dotnet/azure/
 Configure Visual Studio for Azure development with .NET
 https://learn.microsoft.com/en-us/dotnet/azure/configure-visual-studio?source=recommendations
 
+Quickstart: Deploy an ASP.NET web app
+https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore?tabs=netframework48&pivots=development-environment-vs
+
+Managing Azure Services in a VS project
+https://www.youtube.com/watch?v=SIBqRVJyQF0
+
+Configure Visual Studio for Azure development with .NET
+https://learn.microsoft.com/en-us/dotnet/azure/configure-visual-studio
+
+App Authentication client library for .NET - version 1.6.0
+https://learn.microsoft.com/en-us/dotnet/api/overview/azure/service-to-service-authentication?view=azure-dotnet
 -------------------------------------------------------------
 Azure_SDK
 
 https://learn.microsoft.com/en-us/dotnet/azure/sdk/azure-sdk-for-dotnet
 
-The Azure SDK for . NET is designed to make it easy to use Azure services from your . NET applications. Whether it is uploading 
+The Azure SDK for .NET is designed to make it easy to use Azure services from your .NET applications. Whether it is uploading 
 and downloading files to Blob Storage, retrieving application secrets from Azure Key Vault, or processing notifications from 
 Azure Event Hubs, the Azure SDK for .NET provides a consistent and familiar interface to access
 
@@ -51,7 +62,11 @@ and auto-scaling in a highly available environment. You pay only for the compute
 
 Azure Functions is a serverless compute service that lets you write small, discrete segments of code that can be executed in a 
 scalable and cost-effective manner, all without managing any servers or runtimes. Functions can be invoked by a variety of different 
-events and easily integrate with other Azure services through the use of input and output bindings.
+events and easily integrate with other Azure services through the use of input and output bindings. You do not have to explicitly 
+provision or manage infrastructure, and you pay only for the compute time your code actually uses.
+
+Azure Functions documentation: https://learn.microsoft.com/en-us/azure/azure-functions/
+---
 
 Azure SQL is a fully managed cloud based version of SQL Server. Azure automatically performs traditional administrative tasks like 
 patching and backups for you and features built-in high availability.
@@ -79,9 +94,22 @@ Hosting_Platforms
 Azure App Service is a fully managed platform as a service (PaaS) offering for developers. App Service is a Managed production 
 environment that automatically patches and maintains the OS and language frameworks for you. It supports multiple language and 
 frameworks. You can also run PowerShell and other scripts or executables as background services. Manage your apps in App Service 
-by using Azure PowerShell or the cross-platform command-line interface (CLI). Scale up or out manually or automatically. Supports 
-Serverless Code.
+by using Azure PowerShell or the cross-platform command-line interface (CLI). Scale up or out manually or automatically. Azure 
+App Service supports Serverless Code.
 
+When you want the quickest path to publish your web-based projects, consider Azure App Service. App Service makes it easy to 
+extend your web apps to support your mobile clients and publish easily consumed REST APIs. This platform provides authentication 
+by using social providers, traffic-based autoscaling, testing in production, and continuous and container-based deployments.
+
+You can create web apps, mobile app back ends, and API apps.
+
+Because all three app types share the App Service runtime, you can host a website, support mobile clients, and expose your APIs 
+in Azure, all from the same project or solution.
+
+App Service overview
+https://learn.microsoft.com/en-us/azure/app-service/overview
+
+---
 Connections to SaaS platforms and on-premises data. Authenticate users with Azure Active Directory, Google, Facebook, Twitter, 
 or Microsoft account. Create IP address restrictions and manage service identities. Prevent subdomain takeovers.
 For most scenarios, App Service is the best choice.
@@ -90,6 +118,12 @@ https://learn.microsoft.com/en-us/azure/app-service/overview
 Software as a service (SaaS) allows users to connect to and use cloud-based apps over the Internet. Common examples are email, 
 calendaring, and office tools (such as Microsoft Office 365). SaaS provides a complete software solution that you purchase on 
 a pay-as-you-go basis from a cloud service provider.
+---
+Iaas(Infrastructure as a Service)
+---
+Besides App Service, Azure offers other services that can be used for hosting websites and web applications. For most scenarios, 
+App Service is the best choice. For microservice architecture, consider Azure Spring Apps or Service Fabric. If you need more 
+control over the VMs on which your code runs, consider Azure Virtual Machines.
 
 -------------------------------------------------------------
 Random_Notes
@@ -108,5 +142,19 @@ Serverless_Architecture - Azure Functions simplify building solutions to handle 
 requests, handling file uploads in Blob storage, or processing events in a queue. You write only the code necessary to handle your 
 event without worrying about servers or framework code. Further, you can take advantage of over 250 connectors to other Azure and 
 third-party services to tackle your toughest integration problems.
+---
+Pluralsight course: Developing for Azure with Visual Studio 2022 by Matthew Soucoup
+https://www.pluralsight.com/courses/visual-studio-2022-azure-developing
+
+This course will teach you how to use the tools and features available in Visual Studio 2022 that will increase your inner 
+development loop productivity when building Azure applications.
+
+What you'll learn:
+Visual Studio 2022 contains a wealth of tooling to help you develop Azure applications. In this course, Developing for Azure 
+with Visual Studio 2022, you値l learn to use Visual Studio to its fullest when building Azure applications. First, you値l 
+explore the tooling provided that will help you create applications and manage dependencies to other Azure services. Next, 
+you値l discover several methods to deploy your applications to Azure with VS 2022. Finally, you値l learn how to attach to and 
+debug an app running on Azure with Visual Studio 2022 and monitor its logs and performance. When you池e finished with this 
+course, you値l have the skills and knowledge of the Azure tooling in Visual Studio 2022 needed to build Azure applications fast.
 
 
