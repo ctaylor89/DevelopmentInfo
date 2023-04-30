@@ -1,5 +1,5 @@
 Login_for_GIT_Push
-
+Name: ctaylor89		Pwd: REMOVETHISghp_REMOVETHISZIzVTzZtGxigKqXmvwUez1A3V8YHcX3jQBul or See GitHub_ in MainNotes2020.txt		Created 032223
 
 git clone -b "<branch>" "<git repo url>"
 git add .

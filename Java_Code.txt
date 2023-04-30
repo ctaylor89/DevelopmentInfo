@@ -6,3 +6,30 @@ Links_
 Java for C# Developers  *Good review of the major differences from C#. Starts out with setup instructions
 https://www.youtube.com/watch?v=heZJ3iGj3KA
 
+Getting Started With JAVA (for .NET Developers)		*Includes download and install instructions.
+https://dzone.com/articles/getting-started-with-java-for-net-developers
+
+----------------------------------------------------------------
+Building blocks of JAVA Platform:
+
+1) Java Programming Language.
+2) Java Standard Edition(Java SE) APIs (aka Standard Library)
+3) Java runtime environment(aka Java Virtual Machine)
+  * JVM knows how to run byte-code that’s compiled from java source files and executed on the underlying hardware.
+
+The three parts of the Java platform are bundled together in what’s called Java Development Kit (JDK).
+
+JDK is always starting point when you start developing java applications and it contains all the tools you need to create 
+and run java applications.
+----------------------------------------------------------------
+
+JAVA offers following capabilities out of the box:
+ Automatic memory management, Garbage collection and Multi threading
+
+Following are few points towards performance characthersitics of JAVA:
+ Just-in-time compilation.
+ JVM specialized for underlying hardware.
+   Pplatform-independent byte-code and a platform-specific JVM, giving both the benefit of portability and the benefit of 
+   performing highly specific optimization towards the actual CPU that the JVM is running on with just-in-time compilation.
+
+

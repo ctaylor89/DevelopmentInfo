@@ -213,11 +213,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cloud", "Cloud", "{87315A71
 		Cloud\Azure.txt = Cloud\Azure.txt
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Java", "Java", "{C2129FFA-A605-454C-B9A0-0CB8A293FB2A}"
-	ProjectSection(SolutionItems) = preProject
-		Java_Code.txt = Java_Code.txt
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -371,7 +366,6 @@ Global
 		{CCFFF22D-2611-4580-90F5-A1695F0F3957} = {C70DA016-F8C2-4462-9F07-ADBF7BD5DD5B}
 		{3B85970F-B145-48E5-873F-A6D9897FF4A4} = {E4F01E6A-3244-4E7A-8107-A548CC6FABF6}
 		{5F8C8377-6EEB-4E62-A6F1-920FB0C0492E} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
-		{C2129FFA-A605-454C-B9A0-0CB8A293FB2A} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F826286-BB0E-4C31-B721-7DBAA2852733}
