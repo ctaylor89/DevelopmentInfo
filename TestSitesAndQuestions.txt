@@ -1,0 +1,18 @@
+------------------------------------------------------------
+Practice_And_Learn_Sites
+https://www.geeksforgeeks.org/commonly-asked-data-structure-interview-questions-set-1/
+
+------------------------------------------------------------
+Questions_Random
+
+What is the correct JavaScript syntax for opening a new window called "w2" ?
+A: To open a new window in JavaScript with a specific name, such as "w2", you can use the window.open() method. 
+
+What is the purpose of eval in javascript
+A: The eval() function in JavaScript is used to evaluate or execute a string of JavaScript code that is passed to it as 
+an argument. Its primary purpose is to dynamically evaluate code during runtime
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------

@@ -1,17 +1,20 @@
 Login_for_GIT_Push
 Name: ctaylor89		Pwd: REMOVETHISghp_REMOVETHISZIzVTzZtGxigKqXmvwUez1A3V8YHcX3jQBul or See GitHub_ in MainNotes2020.txt		Created 032223
 
+git init								         Create a git repository from that directory
+git restore <file path and file name>            To restore an unstaged file
+git rest
 git clone -b "<branch>" "<git repo url>"
 git add .
 git status
-git commit -m "message"
-git restore <file path and file name>            to restore an unstaged file
-git restore --staged <file path and file name>   to unstage a file
+git commit -m "message"ore --staged <file path and file name>   to unstage a file
 
 git push -u  - return the repository after modifying it.
 git push origin <Branch Name>
 git push -u origin <branch name> - Pushing a new branch to repository.
 git push --all   Push all branches to repository.
+*In summary, git push -u is helpful when publishing a local branch for the first time on a remote server. 
+It ensures that the tracking connection is established between your local branch and the newly created remote branch.
 
 git pull - refresh the local repository including all tracking branches. You are fetching the last modified repository.
            *Run git status before a git pull. Changes that are not committed can be overwritten during a git pull.

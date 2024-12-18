@@ -11,6 +11,7 @@ _Expression
 _ExpressionBodied
 _ExtensionMethods
 _Interfaces
+_Interpolated
 _Keywords
 _JSON
 _Loops
@@ -71,7 +72,7 @@ What about typeof(T)? Is it also resolved at compile time?
 Yes. T is always what the type of the expression is. Remember, a generic method is basically a whole bunch of methods 
 with the appropriate type. 
 Example:
-	string Foo<T>(T object) { return typeof(T).Name; }
+	string Foo<T>(T object) { return typeof(T).Name; }      // A function definition
 
 	Animal probably_a_dog = new Dog();
 	Dog    definitely_a_dog = new Dog();
@@ -83,7 +84,7 @@ Example:
 	Foo(definitely_a_dog);			// this calls Foo<Dog> and returns "Dog"
 	Foo<Dog>(definitely_a_dog);		// this is exactly the same as above.
 	Foo<Animal>(definitely_a_dog);	// this calls Foo<Animal> and returns "Animal". 
-	Foo((Animal)definitely_a_dog);	// this does the same as above, returns "Animal"
+	Foo((Animal)definitely_a_dog);	// this does the same as above, returns "Animal". Passing in a dog, but casting it to an animal.
 
 ---------------------------------------------------------------
 _Access_Levels
@@ -411,6 +412,7 @@ _Classes
 C# abstract class explained
 Abstraction in C# is the process to hide the internal details and show only the functionality. The abstract modifier indicates 
 the incomplete implementation. 
+
 An abstract class is a special type of class that cannot be instantiated. An abstract class is designed to be inherited by subclasses 
 that either implement or override its methods. In other words, abstract classes are either partially implemented or not implemented 
 at all. You can have functionality in your abstract class. The methods in an abstract class can be both abstract and concrete. An 
@@ -504,7 +506,8 @@ _DisposePattern  Dispose Pattern
 http://www.informit.com/articles/article.aspx?p=2756468&seqNum=7
 
 The standard dispose pattern frees your unmanaged resources using the IDisposable interface when clients remember, and it uses the 
-finalizer defensively when clients forget. Your class must have a finalizer if and only if it directly contains unmanaged resources.
+finalizer defensively when clients forget. Your class must have a finalizer if and only if it directly contains unmanaged resources
+or contains manageged resources that implement IDispose.
 
 The implementation of your IDisposable.Dispose() method is responsible for four tasks:
   Freeing all unmanaged resources.
@@ -543,26 +546,27 @@ public class MyGarbage : IDisposable
         Dispose(false);             // False param indicates that object is being deleted by the GC. Dispose not being called by code.
     }
     
-	protected virtual void Dispose(bool disposing)
+	protected virtual void Dispose(bool disposingByCode)
     {  
         if(alreadyDisposed)
             return;
 
-        if (disposing)             // If Dispose() called by code and not GC
+        if (disposingByCode)             // If Dispose() called by code and not GC
         {
-            // Free managed resource here
+            // Free managed resource here that are implementing IDispose
             name = null;
         }
         
         // Free unmanaged resource here
         sqlConnection = null;
         Console.WriteLine("Unmanaged object has been disposed");
+        alreadyDisposed = true;
     }
  
-    public void Dispose()           // This method will only be called from code
+    public void Dispose()               // This method will only be called from code
     {
-        Dispose(true);						// Pass in true to free managed resources
-        GC.SuppressFinalize(this);
+        Dispose(true);					// Pass in true to free managed resources
+        GC.SuppressFinalize(this);      // Let the garbage collector know that the finalizer has already been called      
     }
 
     public void ExampleMethod()
@@ -573,6 +577,12 @@ public class MyGarbage : IDisposable
     }
 }
 ---
+Unsubscribing from Events in the Dispose method:
+When an object subscribes to an event, it holds a reference to the event handler. If not properly unsubscribed, this can lead to 
+memory leaks. To prevent resource leaks, you should unsubscribe from events before disposing of an object.
+    // Unhook the'the event handler
+    _myButton.Click -= MyButtonClickHandler;
+---
 The public Dispose method is never automatically called by the CLR, it is only called explicitly by the owner of the object, 
 which in some cases may be another framework, such as ASP.NET.
 ---
@@ -582,7 +592,11 @@ within .NET scope and under .NET framework classes such as string, int, bool var
 UnManaged objects are created outside the control of .NET libraries and are not managed by CLR, example of such unmanaged code is 
 COM objects, file streams, connection objects, Interop objects. (Basically, third party libraries that are referred in .NET code.)
 
-System.IO.FileStream is a .net class, but the actual filestream itself isn't, it is something supplied by the operating system as an abstracted way of interacting with the hardware of the hard drive.  Likewise the actual connection to your database is being provided by non .net database drivers and libraries, and ultimately comes down to a TCP socket, named pipe or some other operating system provided cross-process communication channel.  As none of these low level things are under the control of .net, they live outside of the .net framework so need to be disposed of using their own individual native methods.
+System.IO.FileStream is a .net class, but the actual filestream itself isn't, it is something supplied by the operating system as 
+an abstracted way of interacting with the hardware of the hard drive.  Likewise the actual connection to your database is being 
+provided by non .net database drivers and libraries, and ultimately comes down to a TCP socket, named pipe or some other operating 
+system provided cross-process communication channel.  As none of these low level things are under the control of .net, they live 
+outside of the .net framework so need to be disposed of using their own individual native methods.
 ---------------------------------------------------------------
 _Exceptions
 
@@ -612,9 +626,10 @@ In the following code, examples of expressions are at the right-hand side of ass
     var numbers = new List<int>(new[] { 1, 2, 3 });
     b = numbers.FindLast(n => n > 1);
 
-Interpolated string expressions that provide convenient syntax to create formatted strings:
+_Interpolated string expressions that provide convenient syntax to create formatted strings:
     var r = 2.3;
     var message = $"The area of a circle with radius {r} is {Math.PI * r * r:F3}.";
+    Console.WriteLine($"Pod level = {(pod01.Id == 77009 ? "100" : "30")}");
 
 Lambda expressions that allow you to create anonymous functions(In this case the lambda expression is the parameter):
     int[] numbers = { 2, 3, 4, 5 };
@@ -647,8 +662,10 @@ Conceptually, Expression<Func<T>> is completely different from Func<T>. Func<T> 
 and Expression<Func<T>> denotes a tree data structure for a lambda expression. This tree structure describes what a lambda expression does 
 rather than doing the actual thing.
 
+A lambda expression is a concise way to define an anonymous method (a method without a name).
+It allows you to create small, inline functions.
 // Lambda expression as executable code.
-    Func<int, bool> deleg = i => i < 5;
+    Func<int, bool> deleg = i => i < 5;             // Represents a method that takes an int parameter and returns a bool
 // Invoke the delegate and display the output.
     Console.WriteLine("deleg(4) = {0}", deleg(4));
 
@@ -706,7 +723,20 @@ _Interfaces
 
 An interface contains definitions for a group of related functionalities that a non-abstract class or a struct must implement. 
 An interface may define static methods(since C#8), which must have an implementation. Beginning with C# 8.0, an interface may 
-define a default implementation for members.
+define a default implementation for members. The default implementation in the interface is callable from the class using the 
+interface by code that is calling into the class. Basically the default implementation in the interface is like a public method 
+in a parent class.
+    public interface IExample
+    {
+        // Abstract method that must be implemented by any class implementing this interface
+        void InstanceMethod();
+
+        // Default method with an implementation. May or may not be implemented in the class that is using this interface.
+        void DefaultMethod()
+        {
+            Console.WriteLine("Default method implementation in interface.");
+        }
+    }
 
 An interface may not declare instance data such as fields, auto-implemented properties, or property-like events.
 
@@ -716,8 +746,10 @@ because structs can't actually inherit from another struct or class.
 
 Interfaces can contain instance methods, properties, events, indexers, or any combination of those four member types. 
 Interfaces may contain static constructors, fields, constants, or operators. 
+
 Beginning with C# 11, interface members that aren't fields may be static abstract. 
 An interface can't contain instance fields, instance constructors, or finalizers. 
+
 Interface members are public by default, and you can explicitly specify accessibility modifiers, such as public, protected, internal, 
 private, protected internal, or private protected. A private member must have a default implementation.
 
@@ -885,7 +917,7 @@ Generally if you are performing a single operation on a file, use the File class
 same file, use FileInfo.
 
 The reason to do it this way is because of the security checking done when accessing a file. When you create an instance of FileInfo, 
-the check is only performed once. However, each time you use a static File method the check is performed.
+the check is only performed once. However, each time you use a static File method the check is performed each time.
 
 When using DirectoryInfo.Exists and FileInfo.Exists, they do not represent the current state, only the state at the time the info 
 objects were created. You may need to call Refresh() to get the current state.
@@ -968,7 +1000,7 @@ int i = GetMyNullableInt() ?? default(int);
 // Display the value of s if s is NOT null; otherwise,  
 // display the string "Unspecified".
 string s = GetStringValue();
-Console.WriteLine(s ?? "Unspecified");      // You see null-coalescing operator can be used as a func parameter.
+Console.WriteLine(s ?? "Unspecified");      // You see that null-coalescing operator can be used as a func parameter.
 ---------------------------------------------------------------
 The null conditional operator
 
@@ -977,7 +1009,7 @@ string bar = someObject?.MethodA();
 
 long? length = someOject?.Length;
 ---------------------------------------------------------------
-// Without the suffix m, the number is treated as a double and generates a compiler error.
+// Without the suffix m, the number is treated as a double instead of a decimal and generates a compiler error.
 decimal myMoney = 300.5m;
 
 // There is no implicit conversion between floating-point types and the decimal types in either direction.
@@ -1133,6 +1165,24 @@ method isn’t there, the program will crash or go into some exception handling sc
 In C#, all collections (eg lists, dictionaries, stacks, queues, etc) are enumerable because they implement the IEnumerable interface. 
 So are strings. You can iterate over a string using a foreach block to get every character in the string.
 
+GetMyPartialView
+
+The C# method Url.Action() generates a URL for a specified action method in an ASP.NET MVC application. It is commonly used to 
+create URLs for links, redirects, or AJAX requests within views or controllers.
+********** Suspect I recorded up to here.
+
+The checked and unchecked keywords are used to control overflow checking in arithmetic operations.
+When arithmetic operations are performed in an unchecked context, C# will not throw an exception for overflow. Instead, it will 
+discard the most significant bits of the result, effectively wrapping around the value within the range of the data type.
+    int maxValue = int.MaxValue;
+    int result;
+    result = unchecked(maxValue + 1); // This will not throw an exception, result will be -2147483648 (wrap around)
+    Console.WriteLine("Result in unchecked context: " + result);
+
+Unchecked Context:
+Does not check for overflow in arithmetic operations and conversions.
+Wraps around the value if overflow occurs.
+Use the unchecked keyword to explicitly ignore overflow checks.
 
 *** EndOf_RandomNotes ***
 ---------------------------------------------------------------
@@ -1385,8 +1435,8 @@ returns true.
 
 customers.First(x => x.ID == 5);  or  customers.First(new Func<Customer, bool>((Customer x) => x.ID == 5));
 
-FirstOrDefault is almost the same as First. The difference is how it handles empty collections. If a collection is empty, it returns 
-the default value for the type.
+FirstOrDefault is almost the same as First. The difference is how it handles empty collections. If a collection is empty, FirstOrDefault
+returns the default value for the type.
 
 	var list = new List<string>() { "Cat", "Rat", "Mouse" };
 	Console.WriteLine(list.FirstOrDefault());

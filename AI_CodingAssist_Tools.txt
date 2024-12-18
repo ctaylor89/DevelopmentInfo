@@ -1,0 +1,121 @@
+Coding Assistance tools
+Github_Copilot_VisualStudio_2022
+Prompt_
+Prompt_Using
+
+https://dev.to/eekayonline/a-list-of-ai-powered-tools-for-c-developers-3p1k
+
+IntelliCode: Developed by Microsoft, IntelliCode is an AI-powered extension for Visual Studio that provides intelligent code 
+completion suggestions. IntelliCode provides AI-assisted code completion suggestions, which can help C# developers write code 
+faster and with fewer errors. It can also detect code smells and suggest refactoring options, making it a valuable tool for code 
+maintenance.
+Pricing: It is available for free in the Visual Studio Marketplace
+Where to find it: here’s the link to the marketplace page https://dev.to/eekayonline/a-list-of-ai-powered-tools-for-c-developers-3p1k
+
+DeepCode
+DeepCode uses AI to analyze C# code and identify potential bugs and vulnerabilities. It can also suggest code improvements and 
+highlight areas of the code that could benefit from refactoring.
+Pricing:
+It offers a free plan as well as paid plans with additional features. More information can be found on the official website.
+Where to find it:
+DeepCode: Semantic static code analysis for better software — powered by AI
+
+Codota
+
+Tabnine VS extension
+
+13 Best AI Coding Assistant Tools in 2024 (Most Are Free)
+https://www.elegantthemes.com/blog/wordpress/best-ai-coding-assistant#:~:text=Tabnine%20is%20an%20AI%2Ddriven,most%20robust%20AI%20coding%20assistants.
+GitHub Copilot
+Divi AI	- HTML/JS Generator, Divi Cloud Integration
+Tabnine VS extension - Code Completions, User Style Adaptation, Code Refactoring Assistance
++ more in this article
+----------------------------------------
+How I use AI for coding in C#
+https://www.linkedin.com/pulse/how-i-use-ai-coding-c-daniel-nagy-eh9jc/
+	Prompt engineering
+You probaly heard this term before. It basically means the process of structuring text for text-based Generative AI models in 
+order to make them more efficient and accurate. I spent a night experimenting and made a prompt that is good enough to generate 
+code by itself with only a little guidence. 
+----------------------------------------
+Yes, you can use C# for AI programming. In fact, Microsoft has developed a free, open-source, cross-platform machine learning 
+framework called ML.NET specifically for .NET developers 1. With ML.NET, you can develop and integrate custom machine learning 
+models into your .NET applications, without needing prior machine learning experience 
+----------------------------------------
+.NET Machine learning & AI
+----------------------------------------
+Prompt_
+
+https://learnprompting.org/docs/intro
+https://www.freecodecamp.org/news/how-to-communicate-with-ai-tools-prompt-engineering/
+----------------------------------------
+Github_Copilot_VisualStudio_2022
+
+Intro to GitHub Copilot in Visual Studio - Good 15 minute overview
+https://www.youtube.com/watch?v=z1ycDvspv8U
+
+Incorporating Caching into a Web API using GitHub Copilot and Visual Studio 2022 - Jon Galloway
+https://www.youtube.com/watch?v=hwcHBSL8lK4
+
+Intro to C# with GitHub Copilot in Visual Studio 2022
+https://www.youtube.com/watch?v=35DWTrMeseo
+
+Tips & Tricks: Get the Most Out of GitHub CoPilot | DevReach 2023
+https://www.youtube.com/watch?v=rvJF5tb8cdk
+
+Prompt_Using
+GitHub Copilot just got exponentially smarter
+https://www.youtube.com/watch?v=SZVCJRUADc4
+
+GitHub Copilot and AI for Developers: Potential and Pitfalls with Scott Hanselman | BRK231H
+https://www.youtube.com/watch?v=5pbPLHYB6-0
+----------------------------------------
+
+Can pass it study notes and ask it to generate questions
+ "Study Notes"Turn my notes into 15 paractice questions.
+
+Can break down a log hard explanation
+ "Text notes" Explain in simple terms
+
+Can optimize a resume for the skill and experience that I am applying to. You can input a resume and a job description into chatgpt.
+ Generate a resume for a Software Developer with the following information:"Work History"
+
+Can be a mock interviewer.
+ I am preparing for a tech interview. Roleplay as an interviewer at a tech company hiring a frontend engineer, I am an applicant 
+ for the position. Ask me a question, wait for my response, evaluate my response, then ask me the next question.
+ ChatGPT will respond with suggestions to improve your answers.
+
+Can act as a coding assistant by analyzing error msgs, suggesting optimizations or helping with syntax.  
+
+Prompt Engineering is structuring a prompt to get the most specific answer that I am looking for. 
+The components of a prompt:
+	Context: I'm planning a trip to San Antonio, Texas, and need some recommendations.
+	Question: What are the top attractions to visit in San Antonio?
+	Details: I prefer to walk and sightsee.
+
+Can summarize information into a markdown table.
+ Summarize the above information by putting important information into a markdown table.
+---
+Few-shot prompting is a technique used in natural language processing and AI, particularly in models like GPT (Generative Pre-trained Transformer). Here's what it involves:
+
+Few-shot learning: This is a machine learning approach where a model is trained on a small amount of data (few shots) to perform a specific task. The idea is to generalize from a few examples provided during training to new, unseen examples during inference.
+
+Prompting: In the context of GPT and similar models, prompting refers to providing specific instructions or examples to guide the model in generating text that meets certain criteria or answers particular questions.
+
+Few-shot prompting: Combines these concepts by training a model on a small number of examples (few shots) provided in the form of prompts. These prompts are designed to teach the model how to perform a specific task or answer a specific type of question. The model then uses this knowledge to generalize and generate responses to similar tasks or questions it encounters later, even if they were not explicitly included in the training data.
+
+For example, if you want a model to summarize news articles, you might provide a few examples of news articles along with their summaries during training. The model learns to generalize from these examples and can then summarize new articles it hasn't seen before based on that learning.
+
+Few-shot prompting is valuable because it allows models like GPT to adapt quickly to new tasks or domains with minimal additional training, making them more flexible and applicable to a wider range of applications.
+---
+Conversational Prompt Engineering
+
+
+
+
+
+----------------------------------------
+
+----------------------------------------
+
+----------------------------------------

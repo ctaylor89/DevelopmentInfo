@@ -1,0 +1,1 @@
+﻿This is a .Net Core project using .Net 8.0

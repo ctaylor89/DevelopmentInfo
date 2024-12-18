@@ -10,7 +10,7 @@ https://dotnettutorials.net/course/asp-net-core-tutorials/
 .Net_Core_Notes
 https://www.fullstack.cafe/blog/dot-net-core-interview-questions-and-answers
 
-It’s a cross-platform framework that works with Windows, Mac OS X, and Linux.The.NET Core Framework may be used to create a 
+It’s a cross-platform framework that works with Windows, Mac OS X, and Linux. The .NET Core Framework may be used to create a 
 variety of apps, including mobile, desktop, online, cloud, IoT, machine learning, microservices, games, and more.
 
 The key difference between .NET Core and .NET Framework is that .NET Framework is a platform for .NET applications on Windows whereas 

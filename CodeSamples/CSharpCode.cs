@@ -15,7 +15,7 @@ namespace DevelopmentInfo.CodeSamples
         delegate int DelegateGetNewNumber(int val);
         delegate int DelegateMakeNumber(int val);
         delegate bool DelegateBiggerThan(int n, string s);
-        enum cars { Mustang = 1, Corvette = 2, F150 = 3 };
+        enum Cars { Mustang = 1, Corvette = 2, F150 = 3 };
 
         public void CSharpCoding()
         {

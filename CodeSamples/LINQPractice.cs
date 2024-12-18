@@ -48,7 +48,7 @@ namespace DevelopmentInfo.CodeSamples
                          where p.Values.Count > 3
                          select new
                          {
-                             Name = p.Name,
+                             p.Name,
                              ValCount = p.Values.Count
                          }).ToList();
 
@@ -79,8 +79,21 @@ namespace DevelopmentInfo.CodeSamples
             // Select the Pod values collection items using lambda query
             var intValues2 = (Podlist.SelectMany((p) => p.Values).Where(v => v < 80)).ToList();
 
+            // 
+            var numbers = new[] { 1.1, 2.1, 3.1, 4.1, 5.1 };
+            //var results = from num in numbers
+            //              where num % 2 == 0
+            //              select num * 2 into doubled
+            //              from doubledNum in doubled
+            //              select doubledNum * 2;
 
-            ;
+            
+            // *Not sure why this gets compile error.
+            //var doubledEvenNumbers = from number in numbers
+            //                         where number % 2 == 0
+            //                         select number * 2 into doubledNums
+            //                         from doubledNumber in doubledNums
+            //                         select doubledNumber * 2;
             //---------------- End Practice ---------------------------------------
 
 
@@ -410,7 +423,7 @@ DefaultIfEmpty – Returns the elements of the specified sequence or the type pa
  * ElementAt – Obtains the object in the sequence at the specified index.
  * ElementAtOrDefault – Like ElementAt but returns a default value if the index is wrong.
  * Except – Given to sequences, creates a new sequence with elements from the first sequence that are not also in the second one.
- * First - Gets the first element of a sequence.
+ * First - Gets the first element of a sequence. Throws InvalidOperationException if no result found.
  * FirstOrDefault - Like first but returns a default value if the first element is not what you are searching for.
  * GroupBy - Given a criteria, groups elements of a sequence into another sequence.
  * GroupJoin - Given a criteria, joins elements from two sequences into one sequence.
@@ -428,7 +441,7 @@ DefaultIfEmpty – Returns the elements of the specified sequence or the type pa
  * Select - Puts an item into a sequence for Aquarius.
  * Select Many - puts more than one item into a sequence for queries.
  * Sequence Equals - Determines whether two sequences are equal by comparing the elements by using the default equality comparer for their type or using a specified comparer.
- * Single - Returns the only item from a sequence that matches the specified criteria.
+ * Single - Returns the only item from a sequence that matches the specified criteria. Throws InvalidOperationException if other than a single result.
  * SingleOrDefault - Like single but returns a default value if the specified item could not be found.
  * Skip - When creating a new sequence, skips the specified number of items and returns the remaining items from the starting sequence.
  * Skip While - Like Skip but only while the specified condition is satisfied.

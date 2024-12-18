@@ -125,8 +125,8 @@ will be receiving a generic error which will not give any details regarding the 
 give a formatted exception to the client as it is serialized.
 
 MSDN suggests that no unexpected exceptions (like OutOfMemoryException, ArgumentNullException or InvalidOperationException) should be 
-caught when using a service client.  Typically on the client there is no useful way to handle unexpected errors, so typically you should not catch 
-them when calling a WCF client communication method.
+caught when using a service client.  Typically on the client there is no useful way to handle unexpected errors, so typically you should 
+not catch them when calling a WCF client communication method.
 
 Use Close always for a clean path of code execution. Use Abort in case of a faulted channel, or if your code threw an error. As you 
 might know, if you call Close on a faulted channel, it will throw another error, Close is a graceful shutdown of channel, whereas Abort 
@@ -399,7 +399,9 @@ http://airbornesurfer.com/2015/04/how-to-punch-a-hole-through-windows-firewall/
 WCF Service Library
 
 What is the main difference between a WCF service library and WCF service application?
-A Service Application includes a website host already setup for you. A service library is a library of services that a host can reference and startup. 
+A Service Application includes a website host already setup for you. A service library is a library of services that a host can 
+reference and startup. 
+
 A WCF Service Library is a project for creating a host-independent service class library (.dll) that can run within a variety hosts.
 A WCF Service Application is a project for creating a service application that is hosted in IIS/WAS.
 
@@ -410,14 +412,15 @@ under different practical scenarios. Also using WCF library in a WCF web service
 There is a misconception that WCF library can only be consumed by WCF service application projects. This isn't true. WCF library can be 
 used in the same way as using a regular .NET library by any other type of .NET project. 
 
-If you start with a service library (recommended) you can then choose any host you wish (a windows service, IIS/ASP.NET, or even a console application) 
-and you'd just reference your library from your new host. Choosing a Service Application limits your host to just IIS/ASP.NET. 
+If you start with a service library (recommended) you can then choose any host you wish (a windows service, IIS/ASP.NET, or even 
+a console application) and you'd just reference your library from your new host. Choosing a Service Application limits your host 
+to just IIS/ASP.NET. 
 
 A WCF Service Library has to be hosted in order to be used - you can host it in IIS, a Windows Service or some self-hosted option 
 (like a console app, WinForm, WPF, etc).
 
-This article explains the difference between a Service Application and a Service Library. It also explains where we should use Service Applications 
-and where to use a Service Library
+This article explains the difference between a Service Application and a Service Library. It also explains where we should use Service 
+Applications and where to use a Service Library
 http://www.c-sharpcorner.com/uploadfile/db2972/wcf-difference-between-service-application-and-service-lib/
 
 The major difference is that the WCF Service Application has a .svc file, whereas the Service Library does not have a .svc file.
@@ -607,3 +610,9 @@ How to publish in 2010 and 2013.
 
 Keys are stored here:
 C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys
+--------------------------------------------------------------------------------------------
+WSDL
+In the context of a Windows Communication Foundation (WCF) service, a WSDL (Web Services Description Language) document plays a crucial role. Here’s what you need to know:
+
+WSDL: It’s an XML-based language used to define interfaces for web services. Essentially, WSDL describes the operations offered by a service, including input/output parameters, data types, and communication protocols. Think of it as a machine-readable blueprint for your service12.
+When you work with WCF, it automatically generates WSDL documents for your service. These documents provide essential information about your service’s contracts, endpoints, and data types. Clients can use this metadata to connect to and interact with your WCF service.

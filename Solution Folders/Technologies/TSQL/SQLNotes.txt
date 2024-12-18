@@ -106,16 +106,21 @@ Note that text, ntext, etc., are being deprecated (http://msdn.microsoft.com/en-
 Numbers_
 https://academy.vertabelo.com/blog/understanding-numerical-data-types-sql/
 
-The exact numeric data types are TINYINT(0 - 255), SMALLINT(+/-32767), INT(+/-2.147m), BIGINT(+/- A Lot), NUMERIC(p,s)(+/-), 
-and DECIMAL(p,s)(+/-). 
-There is a small difference between NUMERIC(p,s) and DECIMAL(p,s) types. NUMERIC determines the exact precision and 
-scale. DECIMAL specifies only the exact scale; the precision can be equal or greater than what is specified by the coder.
+The "exact numeric" data types are TINYINT(0 - 255), SMALLINT(+/-32767), INT(+/-2.147m), BIGINT(+/- A Lot), NUMERIC(p,s)(+/-), 
+and DECIMAL(p,s)(+/-).
+
+NUMERIC is an alias for DECIMAL in T-SQL. They are functionally identical and can be used interchangeably. DECIMAL is more common in 
+the context of Microsoft SQL Server. The syntax for both types is NUMERIC(precision, scale) or DECIMAL(precision, scale). 
+
+Both NUMERIC and DECIMAL allow you to specify the precision (total number of digits) and scale (number of digits to the right of 
+the decimal point).
 
 Also, be aware that many top database management systems have vendor-specific representations of numeric types (e.g. Oracle’s 
 NUMBER data type). These implementations usually do not differentiate between NUMERIC and DECIMAL types. (In Oracle, both 
-are the NUMBER type).
+are the NUMBER type). Example, DECIMAL(10, 2) can store numbers with up to 10 digits, where 2 digits are after the decimal point.
+Storage size is based on the precision, with additional bytes for storing scale and sign information.
 
-The approximate numeric data types are FLOAT(p), REAL, and DOUBLE PRECISION. These represent real numbers, but they 
+The "approximate numeric" data types are FLOAT(p), REAL, and DOUBLE PRECISION. These represent real numbers, but they 
 are not represented as exact numbers in the database.
 --------------------------------------------------------------------------------
 IN_AND_EXISTS_Keywords
@@ -226,7 +231,8 @@ and the column being aggregated is an outer reference."
 	having  MAX(orderdate) = orderdate
 	order by empid desc;
 
-"Column 'Sales.Orders.orderdate' is invalid in the HAVING clause because it is not contained in either an aggregate function or the GROUP BY clause."
+"Column 'Sales.Orders.orderdate' is invalid in the HAVING clause because it is not contained in either an aggregate function 
+or the GROUP BY clause."
 ---
 The WHERE clause can contain an IF or CASE statement:
 
@@ -319,12 +325,12 @@ A correlated subquery is a subquery that uses the values of the outer query. In 
 outer query for its values. Because of this dependency, a correlated subquery cannot be executed independently as a simple subquery.
 A correlated subquery is executed repeatedly, once for each row evaluated by the outer query.
 
-SELECT product_name, list_price, category_id
-FROM production.products p1
+SELECT product_name, list_price, category_id		// A correlated subquery. The sub query relies on the outer query.
+FROM production.products p1							
 WHERE list_price IN (
-        SELECT MAX (p2.list_price)
+        SELECT MAX (p2.list_price)					// Return the max list price for each category
         FROM production.products p2
-        WHERE p2.category_id = p1.category_id
+        WHERE p2.category_id = p1.category_id		// Returns results for each candidate row considered by the main query.
         GROUP BY p2.category_id
     )
 ORDER BY category_id, product_name;
@@ -346,6 +352,18 @@ Temp_Tables
 Good article. Info on performance analysis
 https://www.sqlshack.com/select-into-temp-table-statement-in-sql-server/#:~:text=INSERT%20INTO%20SELECT%20statement%20reads,and%20then%20insert%20the%20data.
 
+For a local temporary table, we use a single hash (#) sign and for the global temporary table we use a double hash (##) sign.
+
+Local Temporary Table (Local Temp Table):
+Scope: Exists only within the current session/connection where it was created.
+Lifespan: Persists as long as the connection remains open.
+Visibility: Accessible only from the same session/connection.
+
+Global Temporary Table (Global Temp Table):
+Scope: Visible across multiple sessions/connections.
+Lifespan: Persists until all connections that referenced it are closed.
+Visibility: Accessible from other connection contexts
+
 Create a temp table and insert data from a query. Temp table must be created or Insert will generate an error.
 This allows the flexibility to change column data types and to create indexes. 
 	Create Table #TempX2 (
@@ -359,7 +377,7 @@ This allows the flexibility to change column data types and to create indexes.
 	Select * from #TempX2;
 	Drop Table #TempX2;
 ---
-Select data into a newly created temp table. The temp table cannot already exist.
+Select data into a newly created temp table to create the temp table and populate it. The temp table cannot already exist.
 	Select supplierid as SupID, companyname as compName 
 	into #TempX3
 	from Production.Suppliers;
@@ -367,6 +385,10 @@ Select data into a newly created temp table. The temp table cannot already exist
 	Select * from #TempX3;
 	Drop Table #TempX4;
 ---
+Example showing that the temp table can contain ordered results.
+	SELECT SalesOrderID,CarrierTrackingNumber,ModifiedDate
+	INTO #TempsSalesDetail FROM Sales.SalesOrderDetail
+	ORDER BY SalesOrderID
 --------------------------------------------------------------------------------
 Windowed_functions
 

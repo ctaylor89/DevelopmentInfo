@@ -261,31 +261,73 @@ namespace DevelopmentInfo.CodeSamples
         //---------------------------------------------------------------------
         public string ReverseWords(string str)
         {
-            string[] words = str.Split(' ');
-            Array.Reverse(words);
-            return string.Join(" ", words);
+            //string[] words = str.Split(' ').ToList<string>().Reverse();  // Cannot call str.Split(' ').Reverse() on the instance here but can below.
+            List<string> wordList = str.Split(' ').ToList<string>();
+            var result = String.Join(' ', wordList);
+
+            //Array.Reverse(words);
+            //return string.Join(" ", words);
+            return result;
         }
 
         public string ReverseWords2(string str)
         {
-            return string.Join(" ", str.Split(' ').Reverse());
+            return string.Join(" ", str.Split(' ').Reverse());  // Not sure why I can call reverse on the Split here but not above.
+        }
+
+        public string ReverseLetters(string input)
+        {
+            char[] charArray = input.ToCharArray();
+
+            int left = 0;
+            int right = charArray.Length - 1;
+
+            while (left < right)
+            {
+                char testChar = charArray[right];
+                
+                if (!char.IsDigit(charArray[right]))
+                    //if (char.IsLetter(charArray[left]) && char.IsLetter(charArray[right]))
+                {
+                    // Swap letters
+                    char temp = charArray[left];
+                    charArray[left] = charArray[right];
+                    charArray[right] = temp;
+
+                    // Move pointers
+                    left++;
+                    right--;
+                }
+                else
+                {
+                    // Move pointers without swapping if not letters
+                    //if (!char.IsLetter(charArray[left]))
+                        left++;
+                    //if (!char.IsLetter(charArray[right]))
+                        right--;
+                }
+            }
+
+            return new string(charArray);
         }
         //---------------------------------------------------------------------
         // Consider an array/list of sheep where some sheep may be missing from their place.We need a function that counts the
         // number of sheep present in the array (true means present).
         public int CountSheeps(bool[] sheeps)
         {
-            int sheepsPresent = 0;
-
-            sheepsPresent = sheeps.Where(s => s == true).Count();
-
+            
+            //int sheepsPresent = sheepsPresent = sheeps.Where(s => s == true).Count();
+            
+            // AI
+            int sheepsPresent = sheeps.Count(s => s == true);
+            
             //sheepsPresent = (from s in sheeps
             //                 where s == true
             //                 select s).Count();
 
-            //foreach(bool s in sheeps)
+            //foreach (bool s in sheeps)
             //{
-            //    if(s == true) sheepsPresent++;
+            //    if (s == true) sheepsPresent++;
             //}
 
             return sheepsPresent;
@@ -388,7 +430,7 @@ namespace DevelopmentInfo.CodeSamples
         {
             int msTotal = -1;
 
-            if (h >=0 && h <= 23 && m >= 0 && m <= 59 && s >= 0 && s <= 59)
+            if (h >= 0 && h <= 23 && m >= 0 && m <= 59 && s >= 0 && s <= 59)
                 msTotal = Convert.ToInt32(new TimeSpan(h, m, s).TotalMilliseconds);                
 
             return msTotal;
@@ -493,6 +535,42 @@ namespace DevelopmentInfo.CodeSamples
             
             // Better: Count is an ext method that returns how many elements match the condition.
             //return str.Count(i => "aeiou".Contains(i));
+        }
+
+        // Find items in new list that are not in old list
+        public string[] GetItemsNotInOriginalList(string[] newList, string[] oldList)
+        {
+            var newItems = new List<string>();
+                                               
+            for(int i = 0; i < newList.Length; i++)
+            {
+                if (!oldList.Contains(newList[i]))
+                {
+                    newItems.Add(newList[i]);
+                }
+            }
+
+            return newItems.ToArray();
+        }
+
+        //for(int o = 0; o < oldList.Length; o++)
+        //{
+        //    if (newList[i] == oldList[o])
+        //    {
+        //        break;  
+        //    }
+
+        //    foundNewItem = true;
+        //}
+
+        //newItems.Add(newList[i]);
+
+        public int TestThis() 
+        {
+            int[] numbers = { 1, 3, 5, 7, 9, 11 };
+            
+
+            return 0; 
         }
     }
 }

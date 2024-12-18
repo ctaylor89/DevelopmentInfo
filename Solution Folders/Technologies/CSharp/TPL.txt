@@ -35,8 +35,8 @@ Threads behind the scenes, but you do not have to get involved with spinning up 
 You can chain tasks together to execute one after the other.
 
 C# 5 async await
-The async and await keywords were introduced with C# 5 and .NET 4.5 and allow you to write synchronous looking code that actually runs asynchronously. 
-It’s not actually an alternative to the TPL, it augments it and provides an easier programming model. You can call await on any method that returns a 
+The async and await keywords allow you to write synchronous looking code that actually runs asynchronously. It’s not actually an 
+alternative to the TPL, it augments it and provides an easier programming model. You can call await on any method that returns a 
 task, or if you need to call an existing synchronous method you can do that by using the TPL to turn it into a task:
 
 // Control is returned to the calling method when await is called within an async task
@@ -68,8 +68,8 @@ private async Task ComputeStuffAsync()
 // usually containing one or more await expressions, is referred to as an async method. The marked async method can itself be awaited by 
 // methods that call it.
 
-// The task to which the await operator is applied typically is the return value from a call to a method that implements the Task-Based Asynchronous 
-// Pattern. Examples include values of type Task or Task<TResult>.
+// The task to which the await operator is applied typically is the return value from a call to a method that implements the 
+Task-Based Asynchronous Pattern. Examples include values of type Task or Task<TResult>.
 ----------
 
 // Use the TaskFactory.StartNew method to create and start a task in one operation. Use this method when creation and scheduling do not have to be separated 
@@ -80,22 +80,25 @@ private async Task ComputeStuffAsync()
 	...
 	taskA.Wait();	// Wait for taskA to complete
 
-// A Task is only ever executed once, and that means we need to ensure that multiple calls to a task's Start method from multiple threads concurrently will 
-// only result in the task being scheduled once. This requires synchronization, and synchronization has a cost.  If you construct a task using the task's 
-// constructor, you then pay this synchronization cost when calling the Start method, because we need to protect against the chance that another thread is 
-// concurrently calling Start.  However, if you use Task.Factory.StartNew, we know that the task will have already been scheduled by the time we hand the 
-// task reference back to your code, which means it's no longer possible for threads to race to call Start, because every call to Start will fail.
+// A Task is only ever executed once, and that means we need to ensure that multiple calls to a task's Start method from multiple 
+// threads concurrently will only result in the task being scheduled once. This requires synchronization, and synchronization has a 
+// cost.  If you construct a task using the task's constructor, you then pay this synchronization cost when calling the Start method, 
+// because we need to protect against the chance that another thread is concurrently calling Start.  However, if you use 
+// Task.Factory.StartNew, we know that the task will have already been scheduled by the time we hand the task reference back to your 
+// code, which means it's no longer possible for threads to race to call Start, because every call to Start will fail.
 // Prefer TaskFactory.StartNew to taskInstance.Start(). 
 
 *Needs Recording
 Avoid Async Void. There are three possible return types you can use for async methods: Task, Task<T> and void.
-The main return types for async methods are just Task and Task<T>. When you are converting from synchronous to asynchronous code, any method returning a 
-type becomes an async method returning Task<T>, and any method returning void becomes an async method returning Task.
+The main return types for async methods are just Task and Task<T>. When you are converting from synchronous to asynchronous code, 
+any method returning a type becomes an async method returning Task<T>, and any method returning void becomes an async method 
+returning Task.
 
-Async methods that return void have a specific purpose and that is to make asynchronous error handlers possible, but async void methods have different 
-error handling semantics. When an exception is thrown in an async Task or async Task<T> method, that exception is captured and placed directly on the 
-Task object. With an async void method, there is no Task object involved, so any exceptions thrown out in an async void method will be raised directly on 
-the SynchronizationContext that was active when the async void method started. For more information I recommend reading the following MSDN article that 
+Async methods that return void have a specific purpose and that is to make asynchronous error handlers possible, but async void 
+methods have different error handling semantics. When an exception is thrown in an async Task or async Task<T> method, that 
+exception is captured and placed directly on the Task object. With an async void method, there is no Task object involved, 
+so any exceptions thrown out in an async void method will be raised directly on the SynchronizationContext that was active when 
+the async void method started. For more information I recommend reading the following MSDN article that 
 has some good examples: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx - Async/Await - Best Practices in Asynchronous Programming
 
 // To convert this method to an async method:

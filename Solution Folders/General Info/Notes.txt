@@ -85,12 +85,6 @@ c:\Windows\Microsoft.NET\Framework\v4.0.30319>
 aspnet_regsql -S localhost\SQLEXPRESS -U sa -P !Password1 -ssadd
 http://blogs.msdn.com/b/akshayns/archive/2008/10/04/how-to-configure-sql-server-to-store-a-session-state.aspx
 
-
-//********************************************  
-// Passwords
-//********************************************
-
-
 //********************************************  
 // Install Shield Notes
 //********************************************
@@ -246,7 +240,7 @@ Picture working on a project that challenges me and allows me to grow more towar
 
 I do not know how much time I have or how much I have to learn. I need to not worry about this and instead 
 focus my efforts and trust that things will turn out alright. Learn to work comfortably and confidently in 
-the moment.
+the moment. Stay on point!
 
 //********************************************  
 // Business Philosophy
@@ -269,7 +263,6 @@ Validation comes from God and from within. Control the associated thinking proce
 people do and think, the easier it is to work and associate with them.
 
 If validation were to come from others, how many will it take? You will never complete the process.
-
 Eliminate the need to be understood. There is a freedom in being able to do that. 
 
 Keep positive any conversation about the customer's business. Do not criticise the customer's business even if 

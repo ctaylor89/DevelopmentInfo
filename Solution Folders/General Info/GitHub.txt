@@ -22,11 +22,13 @@ Repositories: https://github.com/ctaylor89/TodoApi
 Use GIT Extensions. 
 When I select Push from menu item 'Commands', enter User Name: ctaylor89 Pwd: See GitHub_ in MainNotes2020.txt.
 
+*********************************************************************
+IMPORTANT !!!
 *Problem using cmd line. Still Issue with login error: when attempting to do a git push.  "Passwords no longer supported" 
 even though I am using the user name ctaylor89 and token for a password. Cannot cut-paste into cmd line or cannot see it.
 Search: how to sign into github with personal access token.
-
 Able to push it using Git Extensions.
+*********************************************************************
 --------------------------------------------------------
 Steps_To_Get_Started	(All file names are case sensitive)
 

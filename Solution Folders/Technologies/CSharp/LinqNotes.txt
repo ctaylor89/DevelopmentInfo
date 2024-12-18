@@ -1,3 +1,5 @@
+Comprehension_and_Lambda_queries
+
 
 Looks like a good tutorial
 https://www.codeproject.com/Articles/286255/Using-LINQ-Queries
@@ -23,10 +25,8 @@ Using a query expression with Comprehension and Lambda syntax(Mixed Syntax).
          (from num in numbers1
          where num < 3 || num > 7
          select num).Count();       // Adding Count() is the Lambda systax.
-
-
 ----------------------------------------------------------------------------------
-Comprehension and Lambda queries. 
+Comprehension_and_Lambda_queries 
 The select operator is optional in lambda when not doing a projection.
 Many lambda queries have no comprehension equivalent.
 Lambda query methods are applied on a sequence or a collection of elements.

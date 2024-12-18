@@ -1,17 +1,59 @@
+Azure_App_Service
+Azure_Functions
 Azure_SDK
-Azure_Services
-Hosting_Platforms
+Azure_Services__
+Azure_Services_Most_Commonly_Used_By_Developers
+Certification_Info
+Cloud_Service_Models	PaaS, IaaS, SaaS
+Developer_Skills_To_Know
 Random_Notes
 Serverless_Architecture
+
+"Do you desire the end result or do you desire to do the work to get to the end result. The first option is just wishfull thinking. 
+The second option is effort that results in personal growth"
+-------------------------------------------------------------
+Tutorials_Article
+
+
+-------------------------------------------------------------
+Tutorials_Videos_PluralSight
+
+Pluralsight course: Developing for Azure with Visual Studio 2022 by Matthew Soucoup  *Saw the Free overview
+https://www.pluralsight.com/courses/visual-studio-2022-azure-developing
+---
+Kitchen version by Amy Coughlin
+AZ-204: Developing Solutions for Microsoft Azure
+https://app.pluralsight.com/ilx/video-courses/clips/e2ef884c-5b8d-4a78-beb5-dafd683af9f0
+---
+Certification exam preparation for: Exam AZ-204: Developing Solutions for Microsoft Azure
+https://app.pluralsight.com/explore/certifications/topics/azure?trackId=670a6dc5-deec-40ff-a0f0-f41d900a38a6&examPrepId=06d2533c-d8b0-4f3b-9610-52f520045571
+---
+Microsoft Azure Certification Prep -> Microsoft Azure Developer Associate -> Certification exam preparation for:
+Exam AZ-204: Developing Solutions for Microsoft Azure
+https://app.pluralsight.com/explore/certifications/topics/azure?trackId=670a6dc5-deec-40ff-a0f0-f41d900a38a6&examPrepId=06d2533c-d8b0-4f3b-9610-52f520045571
+---
+Microsoft Azure Developer: Implement Azure Functions by Mark Heath
+https://app.pluralsight.com/library/courses/microsoft-azure-developer-implement-azure-functions/table-of-contents
+---
+Serverless Computing with Azure Functions by A Cloud Guru
+Left off: 1:09 https://app.pluralsight.com/ilx/video-courses/2cec6041-aded-4f19-819e-83adfc86e0bd/0799e1dd-e0be-47d5-80ca-404ee0d3f986/a1fc0a2e-917c-4edf-9f2e-960a7aca0b02
+---
+
+Pluralsight AZ-204 Certification list of some courses
+https://app.pluralsight.com/search/?q=az-204%20certification%20&type=conference%2Cvideo-course%2Cinteractive-course%2Clab%2Cpath%2Cproject%2Cskilliq&m_sort=relevance&query_id=a7c040aa-f088-4000-9348-a05c33ca96b6&source=user_typed
+-------------------------------------------------------------
+Tutorials_Videos_Youtube
+
+-------------------------------------------------------------
+Tutorials_Videos_Other
+
+------------------------------------------------------------
 
 What is NoSQL?  A good article that explains a lot.
 https://www.mongodb.com/nosql-explained
 
 Azure for .NET developers
 https://learn.microsoft.com/en-us/dotnet/azure/
-
-Configure Visual Studio for Azure development with .NET
-https://learn.microsoft.com/en-us/dotnet/azure/configure-visual-studio?source=recommendations
 
 Quickstart: Deploy an ASP.NET web app
 https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore?tabs=netframework48&pivots=development-environment-vs
@@ -22,8 +64,143 @@ https://www.youtube.com/watch?v=SIBqRVJyQF0
 Configure Visual Studio for Azure development with .NET
 https://learn.microsoft.com/en-us/dotnet/azure/configure-visual-studio
 
+---
+This course will teach you how to use the tools and features available in Visual Studio 2022 that will increase your inner 
+development loop productivity when building Azure applications.
+
+What you'll learn:
+Visual Studio 2022 contains a wealth of tooling to help you develop Azure applications. In this course, Developing for Azure 
+with Visual Studio 2022, you’ll learn to use Visual Studio to its fullest when building Azure applications. First, you’ll 
+explore the tooling provided that will help you create applications and manage dependencies to other Azure services. Next, 
+you’ll discover several methods to deploy your applications to Azure with VS 2022. Finally, you’ll learn how to attach to and 
+debug an app running on Azure with Visual Studio 2022 and monitor its logs and performance. When you’re finished with this 
+course, you’ll have the skills and knowledge of the Azure tooling in Visual Studio 2022 needed to build Azure applications fast.
+---
+A study guide for Exam AZ-204. what to expect on the exam: 
+https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-204
+
+Good starting point - Azure Functions: 
+https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview?pivots=programming-language-csharp
+
+-------------------------------------------------------------
 App Authentication client library for .NET - version 1.6.0
 https://learn.microsoft.com/en-us/dotnet/api/overview/azure/service-to-service-authentication?view=azure-dotnet
+-------------------------------------------------------------
+Certification_Info
+
+To become a Microsoft Certified: Azure Developer Associate, follow these steps:
+
+Training and Skill Development:
+Start by acquiring the relevant skills. You can find Azure courses and training online from various providers.
+Familiarize yourself with Azure development tools, technologies, and processes.
+Meet Prerequisites:
+Each Azure certification lists recommended skills to obtain before attempting the exam. Ensure you meet these prerequisites.
+Certification Exam:
+Take the Exam AZ-204: Developing Solutions for Microsoft Azure.
+This exam assesses your ability to:
+Develop Azure compute solutions.
+Develop for Azure storage.
+Implement Azure security.
+Monitor, troubleshoot, and optimize Azure solutions.
+Connect to and consume Azure services and third-party services.
+You can choose either C# or Python as the code language during the exam.
+Prepare for the Exam:
+Use resources like Microsoft Learn, Udemy, and Whizlabs to study and prepare.
+Take advantage of the new open book policy for the exam.
+Exam Fee and Scheduling:
+Pay the exam fee and schedule the exam at a test center partnered with Microsoft Azure (such as Pearson Vue or PSI Online).
+
+Maintain Your Credentials:
+Remember that Microsoft role-based and specialty certifications expire unless renewed.
+Stay updated with the latest technology for your job role and renew your certification by passing an online assessment on Microsoft Learn.
+---
+Certainly! If you’re aiming to prepare for the AZ-204: Developing Solutions for Microsoft Azure exam, there are several excellent 
+resources available. Let’s explore some options:
+
+Microsoft Learn Study Guide:
+The official Microsoft Learn study guide provides a comprehensive overview of the topics covered in the exam. It includes links to 
+additional resources and helps you focus your studies effectively.
+
+Online Training Courses:
+Udemy, Pluralsight, and edX offer online training courses specifically designed to help you pass the AZ-204 exam. These courses cover 
+essential concepts and practical skills required for the certification1.
+
+Coursera Professional Certificate:
+The Microsoft Azure Developer Associate (AZ-204) program on Coursera consists of eight courses that align with the exam objectives. 
+By completing this program, you’ll be well-prepared to take the AZ-204 certification exam.
+---
+The duration for completing the AZ-204 certification can vary based on several factors, including your existing knowledge, study 
+habits, and availability. However, here are some general guidelines:
+
+Preparation Time:
+If you’re already familiar with Azure services and have hands-on experience, you might need 4 to 6 weeks of focused preparation.
+For those new to Azure, it could take 8 to 12 weeks or more, depending on your learning pace.
+
+Study Materials:
+Allocate time to study the official Microsoft Learn study guide, which covers the exam objectives in detail.
+
+Consider taking online training courses or enrolling in a Coursera professional certificate program to reinforce your understanding.
+
+Hands-On Practice:
+Spend time working with Azure services. Set up sandbox environments, build sample applications, and practice deploying solutions.
+Hands-on labs and practical exercises are crucial for reinforcing concepts.
+
+Practice Tests:
+Take practice exams to assess your readiness. These simulate the actual exam environment and help you identify areas where you need improvement.
+Exam Day:
+The actual exam is a 2-hour test with around 40-60 questions.
+Aim to complete the exam within the allotted time.
+Remember that everyone’s learning pace is different, so adjust your study plan accordingly. Stay consistent, practice regularly, and you’ll be 
+well-prepared to earn your AZ-204 certification! 
+-------------------------------------------------------------
+Azure_Services_Most_Commonly_Used_By_Developers
+
+There are several Azure services particularly useful for building and deploying applications. Let’s explore some of the key ones:
+
+Azure App Service: This fully managed service allows you to host .NET, Java, Node.js, and Python web applications and APIs. Azure 
+takes care of infrastructure management, including high availability, load balancing, and autoscaling.
+
+Azure Functions: A serverless compute platform for creating small, event-triggered code segments. Use it for building serverless 
+APIs or orchestrating event-driven architectures.
+
+Azure Static Web Apps: Ideal for hosting static web apps built using frameworks like Gatsby, Hugo, or VuePress, or modern web apps 
+created with Angular, React, Svelte, or Vue. It automatically builds and deploys based on code changes and integrates with Azure Functions.
+
+Azure Container Instances: Run Docker containers on-demand in a managed, serverless Azure environment. It’s suitable for scenarios 
+that operate in isolated containers without orchestration.
+
+Azure Kubernetes Service (AKS): Quickly deploy a production-ready Kubernetes cluster to the cloud. Azure handles critical tasks 
+like health monitoring, while you manage agent nodes.
+
+Azure Spring Apps: Host Spring Boot microservice applications in Azure without any code changes. It provides monitoring, 
+configuration management, service discovery, CI/CD integration, and more.
+
+Azure Virtual Machines: When you need more control over your computing environment, use virtual machines in Azure. They offer 
+flexibility and scalability for both Linux and Windows VMs.
+
+For artificial intelligence (AI) capabilities, consider these Azure services:
+
+Azure OpenAI: Utilize powerful language models like GPT-3, Codex, and Embeddings for content generation, summarization, 
+semantic search, and natural language to code translation.
+
+Azure AI Speech: Transcribe audible speech into readable, searchable text or convert text to lifelike speech for more 
+natural interfaces.
+
+Azure AI Language: Use natural language processing (NLP) to identify key phrases and conduct sentiment analysis from text.
+
+Azure AI Translator: Translate more than 100 languages and dialects.
+
+This is just a glimpse of the services available. For a comprehensive list, explore the Azure documentation hub page at: 
+  https://learn.microsoft.com/en-us/azure/developer/intro/azure-developer-key-services
+-------------------------------------------------------------
+Azure_Functions
+
+Each Azure function should execute in a reasonable amount of time and be single responsibility. Each Azure Function should 
+calculate some values, read or write some external data, or call an external service, then be done with it. 
+
+Every function is deployed in the context of a function application. A Function App provides a uniform set of criteria on which
+the functions are run. Two of those criteria operations are the run stack and the sharing of environment variables. A function 
+app is a unit of deployment.
 -------------------------------------------------------------
 Azure_SDK
 
@@ -42,8 +219,6 @@ client object and calling the appropriate methods. More information on the Azure
 Azure SDK client libraries typically expose one or more service client types that are the main starting points for calling 
 corresponding Azure services. These client types names end with the word 'Client'e.g. BlockBlobClient can be used to call blob 
 storage service, and KeyClient can be used to access Key Vault service cryptographic keys.
-
-
 ---
 Azure Core shared client library for .NET
 https://www.nuget.org/packages/Azure.Core/1.30.0
@@ -52,7 +227,7 @@ client libraries to expose common functionality in a consistent fashion, so that
 client library, you will know how to use them in other client libraries. These libraries have package and namespace names 
 starting with 'Azure' e.g. Azure.Storage.Blobs, Azure.Messaging.ServiceBus, Azure.Storage.Files.Shares.
 -------------------------------------------------------------
-Azure_Services
+Azure_Services__
 
 While Azure contains over 100 services, the following Azure services are the services you will use most frequently as a .NET developer.
 
@@ -67,7 +242,6 @@ provision or manage infrastructure, and you pay only for the compute time your c
 
 Azure Functions documentation: https://learn.microsoft.com/en-us/azure/azure-functions/
 ---
-
 Azure SQL is a fully managed cloud based version of SQL Server. Azure automatically performs traditional administrative tasks like 
 patching and backups for you and features built-in high availability.
 
@@ -89,7 +263,7 @@ Examples include computer vision, speech recognition, language understanding, an
 
 For the full list of Azure products and services, visit the Azure documentation home page
 -------------------------------------------------------------
-Hosting_Platforms
+Azure_App_Service
 
 Azure App Service is a fully managed platform as a service (PaaS) offering for developers. App Service is a Managed production 
 environment that automatically patches and maintains the OS and language frameworks for you. It supports multiple language and 
@@ -105,56 +279,121 @@ You can create web apps, mobile app back ends, and API apps.
 
 Because all three app types share the App Service runtime, you can host a website, support mobile clients, and expose your APIs 
 in Azure, all from the same project or solution.
+---
+AI
+Azure App Service is an HTTP-based service provided by Microsoft Azure for hosting web applications, REST APIs, and mobile back
+ends. Here are some key features and benefits of Azure App Service:
+
+Multiple Languages and Frameworks:
+You can develop applications in your favorite language, including .NET, .NET Core, Java, Node.js, PHP, and Python.
+Run and scale applications with ease on both Windows and Linux-based environments.
+Managed Production Environment:
+App Service automatically patches and maintains the OS and language frameworks for you.
+Focus on writing great apps while Azure handles the platform maintenance.
+Containerization and Docker Support:
+Dockerize your app and host custom Windows or Linux containers in App Service.
+Run multi-container apps using Docker Compose.
+DevOps Optimization:
+Set up continuous integration and deployment with tools like Azure DevOps, GitHub, BitBucket, or Docker Hub.
+Promote updates through test and staging environments.
+Global Scale with High Availability:
+Scale up or out manually or automatically based on demand.
+Host your apps across Microsoft’s global datacenter infrastructure with a high availability promise.
+Security and Compliance:
+App Service is ISO, SOC, and PCI compliant.
+Configure IP address restrictions and manage service identities.
+Prevent subdomain takeovers.
+Authentication and Application Templates:
+Authenticate users using built-in components (e.g., Microsoft, Google, Facebook, Twitter).
+Choose from an extensive list of application templates in the Azure Marketplace (e.g., WordPress, Joomla, Drupal).
+In summary, Azure App Service provides a fully managed platform-as-a-service (PaaS) offering that allows developers to build, deploy, and scale web and API applications without worrying about the underlying infrastructure
+
 
 App Service overview
 https://learn.microsoft.com/en-us/azure/app-service/overview
+-------------------------------------------------------------
+Cloud_Service_Models  *Also referred to as Cloud Service Types
 
----
 Connections to SaaS platforms and on-premises data. Authenticate users with Azure Active Directory, Google, Facebook, Twitter, 
 or Microsoft account. Create IP address restrictions and manage service identities. Prevent subdomain takeovers.
 For most scenarios, App Service is the best choice.
 https://learn.microsoft.com/en-us/azure/app-service/overview
 ---
-Software as a service (SaaS) allows users to connect to and use cloud-based apps over the Internet. Common examples are email, 
-calendaring, and office tools (such as Microsoft Office 365). SaaS provides a complete software solution that you purchase on 
-a pay-as-you-go basis from a cloud service provider.
+Software as a service (SaaS)
+SaaS allows users to connect to and use cloud-based apps over the Internet. Common examples are email, 
+calendaring, Dynamics365, and office tools (such as Microsoft Office 365). SaaS provides a complete software solution that you 
+purchase on a pay-as-you-go basis from a cloud service provider.
 ---
-Iaas(Infrastructure as a Service)
+Platform as a service (PaaS)
+Contains prebuilt services such as Azure SQL Database, Azure Cosmos DB, Azure Search, Azure Cognitive Search(AI), Azure Cache 
+for Redis, Azure Service Bus for messaging and Azure App Service for hosting web applications, APIs, Mobil Applications and 
+serverless functions. It also contains Azure NetApp Files which is a file storage service that integrates with Azure Virtual 
+Machines. It’s suitable for enterprise workloads that require shared file storage.
+
+Remember that PaaS abstracts infrastructure management, allowing you to focus on development and innovation. Using Paas, the 
+infrastuctor is managed for you. PaaS has a pay per use model. Has autoscaling based on configured rules.
+
+When it's possible, use PaaS instead of IaaS. IaaS is like having a box of parts. You can build anything, but you have to 
+assemble it yourself. PaaS options are easier to configure and administer. You don't need to set up virtual machines (VMs) 
+or virtual networks. You also don't have to handle maintenance tasks, such as installing patches and updates. There are many 
+ways that you can exchange IaaS technologies for related PaaS solutions. A few examples include caches, queues, and data 
+storage. See: https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/managed-services
+---
+Infrastructure as a Service(IaaS)
+Using Iaas you have to manage the infrastuctor. Each resource (compute, storage, networking) is offered as a separate service 
+component, and you pay only for the specific resources you use. With Azure Virtual Machines you can create and manage virtual 
+machines (VMs) on demand. You can scale compute capacity as needed. With Azure Kubernetes Service (AKS) you can Deploy and 
+manage containerized applications using Kubernetes.
 ---
 Besides App Service, Azure offers other services that can be used for hosting websites and web applications. For most scenarios, 
 App Service is the best choice. For microservice architecture, consider Azure Spring Apps or Service Fabric. If you need more 
 control over the VMs on which your code runs, consider Azure Virtual Machines.
-
--------------------------------------------------------------
-Random_Notes
-
-What is meant by continuous deployment?
-Continuous deployment is a strategy in software development where code changes to an application are released automatically into 
-the production environment. This automation is driven by a series of predefined tests. Once new updates pass those tests, the 
-system pushes the updates directly to the software's users
----
-Besides App Service, Azure offers other services that can be used for hosting websites and web applications. For most scenarios, 
-App Service is the best choice. For microservice architecture, consider Azure Spring Apps or Service Fabric. If you need more 
-control over the VMs on which your code runs, consider Azure Virtual Machines. For more information about how to choose between 
-these Azure services, see https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
 -------------------------------------------------------------
 Serverless_Architecture - Azure Functions simplify building solutions to handle event-driven workflows, whether responding to HTTP 
 requests, handling file uploads in Blob storage, or processing events in a queue. You write only the code necessary to handle your 
 event without worrying about servers or framework code. Further, you can take advantage of over 250 connectors to other Azure and 
 third-party services to tackle your toughest integration problems.
----
-Pluralsight course: Developing for Azure with Visual Studio 2022 by Matthew Soucoup
-https://www.pluralsight.com/courses/visual-studio-2022-azure-developing
+-------------------------------------------------------------
+Developer_Skills_To_Know
 
-This course will teach you how to use the tools and features available in Visual Studio 2022 that will increase your inner 
-development loop productivity when building Azure applications.
+As a .NET software developer working with Azure, you’ll delve into cloud-native architecture and development. Here are some key areas:
 
-What you'll learn:
-Visual Studio 2022 contains a wealth of tooling to help you develop Azure applications. In this course, Developing for Azure 
-with Visual Studio 2022, you’ll learn to use Visual Studio to its fullest when building Azure applications. First, you’ll 
-explore the tooling provided that will help you create applications and manage dependencies to other Azure services. Next, 
-you’ll discover several methods to deploy your applications to Azure with VS 2022. Finally, you’ll learn how to attach to and 
-debug an app running on Azure with Visual Studio 2022 and monitor its logs and performance. When you’re finished with this 
-course, you’ll have the skills and knowledge of the Azure tooling in Visual Studio 2022 needed to build Azure applications fast.
+Cloud-Native Principles: Understand cloud-native concepts like microservices, containers, and serverless.
+Design applications that scale dynamically and handle failures gracefully.
+
+Containers and Kubernetes: Leverage Docker containers to package and deploy your .NET applications.
+
+Azure Kubernetes Service (AKS) for orchestrating containerized workloads.
+
+Microservices: Break down monolithic apps into smaller, independent services.
+Use Azure Service Fabric or Azure Functions for microservices architecture.
+
+Serverless Computing: Develop event-driven functions using Azure Functions.
+
+Data and Databases: Use Azure SQL Database, Cosmos DB, or other Azure data services.
+
+Implement data access patterns suitable for cloud environments.
+
+Security and Identity: Integrate Azure Active Directory for authentication and authorization.
+
+Implement security best practices, including role-based access control (RBAC).
+
+Monitoring and Logging:
+
+Set up Azure Monitor and Application Insights. 
+
+Monitor performance, diagnose issues, and optimize your applications.
+-------------------------------------------------------------
+Random_Notes
+
+Besides App Service, Azure offers other services that can be used for hosting websites and web applications. For most scenarios, 
+App Service is the best choice. For microservice architecture, consider Azure Spring Apps or Service Fabric. If you need more 
+control over the VMs on which your code runs, consider Azure Virtual Machines. For more information about how to choose between 
+these Azure services, see https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+ 
+ Describe Azure compute and networking services
+ Several pages. Start Here:
+ https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/5-containers
+
 
 

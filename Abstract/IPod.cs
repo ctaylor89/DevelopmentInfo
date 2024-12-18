@@ -16,6 +16,7 @@ namespace DevelopmentInfo.Abstract
         Guid FamilyKey { get; set; }
         // Method must have public access to properly implement interface
         void PrintPodName();
-        event EventHandler<IPropertyChangedResultEventArgs> PodPropertyChangedEvent; 
+        event EventHandler<IPropertyChangedResultEventArgs> PodPropertyChangedEvent;
+        
     }
 }

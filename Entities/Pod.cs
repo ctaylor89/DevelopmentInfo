@@ -9,10 +9,11 @@ namespace DevelopmentInfo.Entities
     public class Pod : IPod
     {
         private int weight = 0;
+        private double? level;
         private Phases mode;
         
         public Phases PodState { get; set; } = Phases.OnHold;   // Only auto-implemented properties can have initializers
-        public Phases PodMode                       // Expression Bodied Property
+        public Phases PodMode                        // Expression Bodied Property
         {
             get => mode;
             set => mode = value;
@@ -22,6 +23,7 @@ namespace DevelopmentInfo.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string Color { get; set; } = "Black";
+        public int? Level { get; set; }
         public virtual DateTime StartDate { get; set; } = DateTime.Now;
         public int Size { get; set; } = 0;          // Set a default size on a property
         public double PodTemp { get; set; } = 0.0;
@@ -36,13 +38,13 @@ namespace DevelopmentInfo.Entities
             set => weight = value;
         }
 
-        // Expression Bodied Property
+        // Expression Bodied Property(read only)
         public decimal TotalValue => (Qty * Price);
 
-        // Expression Bodied Property
+        // Expression Bodied Property(read only)
         public string Description => $"Name: {Name}  Identifier: {Id}";
 
-        // Expression Bodied Method
+        // Expression Bodied Method(read only)
         public string GetDescription() => $"Name: {Name}  Identifier: {Id}";
 
         // Expression Bodied method

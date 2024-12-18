@@ -286,7 +286,7 @@ INSERT INTO TABLE2 (<column_list>) SELECT <column_list> FROM TABLE1 WHERE COL1 =
 INSERT INTO Table2 SELECT * FROM Table1 WHERE [Conditions];
 // Insert into table a single value
 INSERT INTO VEHICLE_LOOKUP (VehicleIdentifierKey) VALUES('8F043018-ADE9-E211-AC62-005056AF0048');
-INSERT INTO VEHICE_LOOKUP (VehicleIdentifierKey) VALUES('8F043018-ADE9-E211-AC62-005056AF0048');
+
 INSERT INTO Driver_LookUp VALUES(NULL, "C6000000EAD40F08", "36AD13E1-F1DC-E211-AC62-005056AF0048", "2013-07-11");
 
 // Updates columns in existing table rows with new values. SET clause indicates columns to modify
@@ -348,7 +348,7 @@ TRUNCATE TABLE tbl_name;
 ALTER TABLE db_rs2100.TBL_VEH_CLASSES DROP COLUMN GPS_ON
 // Add a column
 ALTER TABLE db_rs2100.tbl_veh_classes ADD COLUMN RF_ON TINYINT(0);
-Update db_rs2100.tbl_veh_classes Set RF_ON = '0';
+Update db_rs2100.tbl_veh_classes Set RF_ON = '0' WHERE name = 'Chevy2';
 // OR
 ALTER TABLE db_rs2100.tbl_veh_classes ADD COLUMN RF_ON TINYINT DEFAULT 0;
 // Add a column with a default value that contains a string
@@ -366,6 +366,7 @@ DROP TABLE IF EXISTS db_rs2100.tbl_logmsgs;
 
 // Get the name of all columns in a table
 SHOW COLUMNS FROM TBL_VEH_CLASSES;
+
 // UNION is used to combine the result from many SELECT statements into one result set.
 SELECT ...
 UNION [ALL | DISTINCT] // DISTINCT is the default

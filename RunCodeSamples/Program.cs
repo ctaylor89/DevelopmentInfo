@@ -91,8 +91,9 @@ namespace DevelopmentInfo.RunCodeSamples
                         List<string> catagories = attempt.OpenOrSenior2(new[] {new[] { 18,20}, new[] { 45,2}, new[] {61,12}, new[] {37,6}, new[] { 21,21}, new[] {78,9} }) as List<string>;
                         string result2 = attempt.ToWeirdCase2("Weird string case");
                         int consonantCount = attempt.ConsonantCount("BbbCaeudXZ&*@3");
+                        string result22 = attempt.ReverseWords("battle no requires which that is victory greatest The");
                         string result3 = attempt.ReverseWords2("battle no requires which that is victory greatest The");
-
+                        result = attempt.ReverseLetters("chowDog98Down");
                         bool[] sheeps = new bool[] {true, true, true, false,
                           true, true, true, true,
                           true, false, true, false,
@@ -119,6 +120,14 @@ namespace DevelopmentInfo.RunCodeSamples
                         int res12 = (TryThis.NumberOfPeopleOnBus(peopleList) > 0) ? TryThis.NumberOfPeopleOnBus(peopleList) : 0; 
                         string res13 = attempt.Smash(new string[] {"hello", "world", "this", "is", "great" });
                         int res14 = attempt.GetVowelCount("xbracxdabrau");
+
+                        int resValue = attempt.TestThis();
+
+                        break;
+                    case 15:
+                        var newItems = new string[] { "itemB", "itemA", "itemC", "itemE", "itemD" };
+                        var oldItems = new string[] { "itemA", "itemB", "itemC", "itemD", "itemE", "itemF" };
+                        string[] itemsAdded = new TryThis().GetItemsNotInOriginalList(newItems, oldItems);
                         break;
                     case 22:
                         // Environment.Exit(0);
