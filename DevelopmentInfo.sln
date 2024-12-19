@@ -210,6 +210,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StudyNotesToRecord", "Study
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cloud", "Cloud", "{87315A71-98D3-4E18-A60E-13798903C186}"
 	ProjectSection(SolutionItems) = preProject
+		AZ900_Notes.txt = AZ900_Notes.txt
 		Cloud\Azure.txt = Cloud\Azure.txt
 		AzureToAWS.txt = AzureToAWS.txt
 	EndProjectSection

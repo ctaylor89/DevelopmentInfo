@@ -1,0 +1,90 @@
+Compute_Networking_Services
+Technical_Terms
+
+---------------------------------------------------------------
+Compute_Networking_Services
+
+VMs provide infrastructure as a service (IaaS). You can create and provision a VM in minutes when you select a preconfigured VM image.
+
+You can group VMs together to provide high availability, scalability, and redundancy. Azure can also manage the grouping of VMs 
+for you with features such as scale sets and availability sets. An application might need to handle fluctuations in demand. Shutting 
+down VMs when you don't need them or quickly starting them up to meet a sudden increase in demand means you pay only for the 
+resources you use.
+
+Virtual machine scale sets let you create and manage a group of identical, load-balanced VMs. Scale sets allow you to centrally 
+manage, configure, and update a large number of VMs in minutes. The number of VM instances can automatically increase or decrease 
+in response to demand, or you can set it to scale based on a defined schedule. Virtual machine scale sets also automatically deploy 
+a load balancer to make sure that your resources are being used efficiently. With virtual machine scale sets, you can build 
+large-scale services for areas such as compute, big data, and container workloads.
+---
+Virtual machine availability sets are another tool to help you build a more resilient, highly available environment. Availability 
+sets are designed to ensure that VMs stagger updates and have varied power and network connectivity, preventing you from losing 
+all your VMs with a single network or power failure.
+
+Availability Sets accomplish these objectives by grouping VMs in two ways: Update Domain and Fault Domain.
+
+Update domain: The update domain groups VMs that can be rebooted at the same time. This setup allows you to apply updates while 
+knowing that only one update domain grouping is offline at a time. All of the machines in one update domain update at the same time. 
+An update group going through the update process is given a 30-minute time to recover before maintenance on the next update domain 
+starts.
+
+Fault domain: The fault domain groups your VMs by common power source and network switch. By default, an Availability Set splits 
+your VMs across up to three fault domains. This helps protect against a physical power or networking failure by having VMs in 
+different fault domains (thus being connected to different power and networking resources). There’s no additional cost for 
+configuring an availability set. You only pay for the VM instances you create.
+---
+An organization can extend the capabilities of its own on-premises network by creating a virtual network in Azure and adding VMs 
+to that virtual network. As with running certain types of applications in the cloud and extending an on-premises network to the 
+cloud, you can get significant cost savings by using an IaaS-based approach to disaster recovery. If a primary datacenter fails, 
+you can create VMs running on Azure to run your critical applications and then shut them down when the primary datacenter becomes 
+operational again.
+
+VMs are also an excellent choice when you move from a physical server to the cloud (also known as lift and shift). You can create 
+an image of the physical server and host it within a VM with little or no changes. Just like a physical on-premises server, you 
+must maintain the VM: you’re responsible for maintaining the installed OS and software.
+
+When you provision a VM, you’ll also have the chance to pick the resources that are associated with that VM, including:
+	Size (purpose, number of processor cores, and amount of RAM)
+	Storage disks (hard disk drives, solid state drives, etc.)
+	Networking (virtual network, public IP address, and port configuration)
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Technical_Terms
+
+Big data refers to extremely large and complex datasets that are difficult to process, analyze, and manage using traditional data 
+processing techniques or software tools. Big data typically requires advanced technologies and methods for efficient storage, 
+analysis, and extraction of meaningful insights.
+
+
+
