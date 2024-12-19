@@ -1,3 +1,4 @@
+Authentication_To_Azure
 Azure_App_Service
 Azure_Functions
 Azure_SDK
@@ -6,6 +7,7 @@ Azure_Services_Most_Commonly_Used_By_Developers
 Certification_Info
 Cloud_Service_Models	PaaS, IaaS, SaaS
 Developer_Skills_To_Know
+Job_Requirements
 Random_Notes
 Serverless_Architecture
 
@@ -38,12 +40,16 @@ https://app.pluralsight.com/library/courses/microsoft-azure-developer-implement-
 Serverless Computing with Azure Functions by A Cloud Guru
 Left off: 1:09 https://app.pluralsight.com/ilx/video-courses/2cec6041-aded-4f19-819e-83adfc86e0bd/0799e1dd-e0be-47d5-80ca-404ee0d3f986/a1fc0a2e-917c-4edf-9f2e-960a7aca0b02
 ---
-
 Pluralsight AZ-204 Certification list of some courses
 https://app.pluralsight.com/search/?q=az-204%20certification%20&type=conference%2Cvideo-course%2Cinteractive-course%2Clab%2Cpath%2Cproject%2Cskilliq&m_sort=relevance&query_id=a7c040aa-f088-4000-9348-a05c33ca96b6&source=user_typed
 -------------------------------------------------------------
 Tutorials_Videos_Youtube
+---
+Getting Started (1 of 8) .Net on Azure for Beginners - *Good starting out overview.
+https://www.youtube.com/watch?v=EzdqO6jX8u4&t=1247s
 
+Deploying Web Apps and APIs to Azure [2 of 8] | .NET on Azure for Beginners
+---
 -------------------------------------------------------------
 Tutorials_Videos_Other
 
@@ -219,6 +225,9 @@ client object and calling the appropriate methods. More information on the Azure
 Azure SDK client libraries typically expose one or more service client types that are the main starting points for calling 
 corresponding Azure services. These client types names end with the word 'Client'e.g. BlockBlobClient can be used to call blob 
 storage service, and KeyClient can be used to access Key Vault service cryptographic keys.
+
+If you need to diagnose issues between your application and Azure, you can enable logging in the Azure SDK for .NET
+
 ---
 Azure Core shared client library for .NET
 https://www.nuget.org/packages/Azure.Core/1.30.0
@@ -308,7 +317,6 @@ Authenticate users using built-in components (e.g., Microsoft, Google, Facebook,
 Choose from an extensive list of application templates in the Azure Marketplace (e.g., WordPress, Joomla, Drupal).
 In summary, Azure App Service provides a fully managed platform-as-a-service (PaaS) offering that allows developers to build, deploy, and scale web and API applications without worrying about the underlying infrastructure
 
-
 App Service overview
 https://learn.microsoft.com/en-us/azure/app-service/overview
 -------------------------------------------------------------
@@ -360,29 +368,79 @@ As a .NET software developer working with Azure, you’ll delve into cloud-native 
 
 Cloud-Native Principles: Understand cloud-native concepts like microservices, containers, and serverless.
 Design applications that scale dynamically and handle failures gracefully.
-
 Containers and Kubernetes: Leverage Docker containers to package and deploy your .NET applications.
-
 Azure Kubernetes Service (AKS) for orchestrating containerized workloads.
 
 Microservices: Break down monolithic apps into smaller, independent services.
 Use Azure Service Fabric or Azure Functions for microservices architecture.
 
 Serverless Computing: Develop event-driven functions using Azure Functions.
-
 Data and Databases: Use Azure SQL Database, Cosmos DB, or other Azure data services.
-
 Implement data access patterns suitable for cloud environments.
 
 Security and Identity: Integrate Azure Active Directory for authentication and authorization.
-
 Implement security best practices, including role-based access control (RBAC).
-
 Monitoring and Logging:
 
 Set up Azure Monitor and Application Insights. 
-
 Monitor performance, diagnose issues, and optimize your applications.
+-------------------------------------------------------------
+Authentication_To_Azure
+
+How to authenticate .NET apps to Azure services using the Azure Identity library
+https://learn.microsoft.com/en-us/dotnet/azure/sdk/authentication/?tabs=command-line
+
+Use of connection strings should be limited to initial proof-of-concept apps or development prototypes that don't access production 
+or sensitive data. Otherwise, the token-based authentication classes available in the Azure Identity library should always be 
+preferred when authenticating to Azure resources.
+
+When an app is running locally during development, the app can authenticate to Azure using either an application service principal 
+for local development or by using the developer's Azure credentials. More detail at Authentication During Local Development.
+
+A Service Principal is essentially an identity in Azure Active Directory (Azure AD) that applications use to authenticate and gain 
+access to Azure resources. The Service Principle serves as a way for these entities (such as apps, scripts, or virtual machines) 
+to authenticate to Azure without the need for human intervention (e.g., usernames or passwords). In other words, it allows 
+applications to securely interact with Azure resources while providing granular control over what resources they can access and 
+how they can interact with those resources. A Service Principal is essentially an identity in Azure Active Directory (Azure AD)
+and is used specifically for non-human authentication.
+---
+Service Principal Use Cases:
+Automated deployments: A service principal can be used by deployment pipelines (like Azure DevOps or GitHub Actions) to authenticate 
+and deploy applications without human interaction.
+
+App-to-Resource access: An app might need to access Azure resources on behalf of a user or a process. For example, an app could use 
+a service principal to read from Azure Key Vault or write logs to Azure Monitor. 
+
+Security and Least Privilege: By assigning specific roles to a service principal, you can limit the app's access to only the 
+resources it needs, following the principle of least privilege.
+
+Authentication Flow Example:
+Here’s how the typical authentication flow works when using a service principal:
+
+Register an Application in Azure AD and create a Service Principal.
+Assign permissions (e.g., using RBAC) to the service principal, defining which Azure resources it can access.
+Obtain a client ID, tenant ID, and client secret (or certificate) for the service principal.
+The app requests an authentication token from Azure AD using the client ID, tenant ID, and client secret/certificate.
+Azure AD validates the credentials and, if successful, returns a token.
+The app uses the token to authenticate requests to Azure resources.
+---
+When an application is hosted on Azure, the application should authenticate to Azure resources using a managed identity.
+A managed identity in Azure is a feature of Azure Active Directory (AAD) that provides an automatically managed identity for 
+applications or services running on Azure, eliminating the need for hardcoding credentials or secrets in the application code. 
+With managed identities, the authentication process becomes more secure and straightforward.
+
+
+-------------------------------------------------------------
+Job_Requirements
+
+1) Architect and implement microservices-based applications deployed on Azure, ensuring modularity and scalability.
+2) Integrate and utilize Azure backend services such as Azure API Management, Azure Service Bus, Azure Event Grid, Azure Logic 
+   Apps, and Azure Function
+3) Deploy and manage applications on Azure platforms, including Azure Virtual Machines, Azure App Service, and Azure Kubernetes 
+   Service (AKS).
+4) Work with databases including Azure SQL Database and Azure Cosmos DB to ensure efficient data management.
+5) Optimize cloud-based deployments with a focus on security, scalability, and performance.
+
 -------------------------------------------------------------
 Random_Notes
 

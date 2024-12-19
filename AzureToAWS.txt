@@ -1,0 +1,70 @@
+Our department currently uses an Azure pipeline to deliver files to an Azure service. We would like to have our Azure pipeline 
+deliver files to an AWS server. What are the steps to follow have our Azure pipeline deliver files to an AWS production server 
+instead of the Azure server we are currently using?
+
+Memory updated
+To transition your Azure pipeline to deliver files to an AWS production server, follow these steps:
+
+1. Prepare the AWS Environment
+Set Up AWS Server: Ensure the AWS production server is configured to receive files (e.g., S3 bucket, EC2 instance, or other services).
+Create Access Credentials: Generate AWS access keys (Access Key ID and Secret Access Key) for a user with appropriate permissions to upload files.
+2. Install AWS Tools in Azure DevOps
+Go to your Azure DevOps organization and navigate to your project.
+Install the AWS Toolkit for Azure DevOps from the Visual Studio Marketplace.
+This toolkit provides tasks to interact with AWS services directly from your Azure pipelines.
+3. Configure AWS Service Connection
+In Azure DevOps:
+Go to Project Settings > Service Connections > New Service Connection.
+Choose AWS and provide your Access Key ID, Secret Access Key, and AWS region.
+Save the service connection for use in your pipeline.
+4. Modify the Azure Pipeline
+Edit your pipeline YAML file or Classic UI pipeline configuration to include tasks for uploading files to AWS.
+
+Example for an S3 Bucket using yaml:
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+
+- script: |
+    echo "Building files..."
+    # Your build steps here
+  displayName: 'Build Files'
+
+- task: AmazonWebServices.aws-cli@1
+  inputs:
+    awsCredentials: '<YourAWSServiceConnection>'
+    regionName: 'us-east-1'
+    command: 's3'
+    arguments: 'cp ./output-file.txt s3://your-s3-bucket-name/path-to-folder/'
+---
+Example for an EC2 Instance:
+You can use SSH or other tools like SCP:
+
+yaml
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: '<YourAWSInstanceServiceConnection>'
+    runOptions: 'inline'
+    inline: |
+      echo "Copying files to EC2..."
+      scp output-file.txt user@your-ec2-instance:/path/to/destination
+
+5. Test the Pipeline
+Run the pipeline and ensure the files are correctly delivered to the AWS server.
+Check logs for errors and validate delivery on the AWS side.
+6. Update Notifications and Documentation
+Notify your team of the changes.
+Update documentation to reflect the new AWS configuration and delivery workflow.
+By following these steps, you can smoothly transition your Azure pipeline to deliver files to an AWS production server.

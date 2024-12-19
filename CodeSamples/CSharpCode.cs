@@ -254,10 +254,10 @@ namespace DevelopmentInfo.CodeSamples
             //-----------------------------
             // enums
 
-            // Declared in class: enum cars{Mustang = 1, Corvette = 2, F150 = 3};
+            // Already defined in this class: enum Cars{Mustang = 1, Corvette = 2, F150 = 3};
             int selectedCar = 1;
-            string firstCar = Enum.GetName(typeof(cars), selectedCar);
-            string secondCar = Enum.GetName(typeof(cars), 2);
+            string firstCar = Enum.GetName(typeof(Cars), selectedCar);
+            string secondCar = Enum.GetName(typeof(Cars), 2);
         }
 
         private static void CombinePaths(string p1, string p2)
