@@ -198,13 +198,13 @@ Portability: Docker container images are platform-independent. They can run on a
 Linux and Windows-based systems.
 
 Efficiency: Docker container images are lightweight and take up less space than virtual machines. They share the machine’s OS system 
-kernel and do not require an OS per application, driving higher server efficiencies1.
+kernel and do not require an OS per application, driving higher server efficiencies.
 
 Runtime: Container images become containers at runtime. In the case of Docker containers, images become containers when they run on 
 Docker Engine.
 
 Isolation: Docker provides strong isolation capabilities, ensuring applications are safer in containers.
-Docker container images are just the blueprint for a container. When you run a Docker container image, it becomes a Docker container
+Docker container images are just the blueprint for a container. When you run a Docker container image, it becomes a Docker container.
 
 --------------------------------------------------------
 APPLICATION VIRTUALIZATION AND CONTAINER VIRTUALIZATION
