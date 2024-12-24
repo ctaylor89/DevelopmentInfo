@@ -1,12 +1,17 @@
 Application_Hosting_Options
 Azure_Containers
+Azure_DNS
+Azure_ExpressRoute
 Azure_Virtual_Desktop
 Azure_Virtual_Networking
+Azure_Virtual_Private_Networks
 Compute_Networking_Services
 Exercises_
+Learning_Links
+Missed_Questions
 Random_Notes
 Technical_Terms
-
+You_should_be_able_to
 *Left off: https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/8-virtual-network
 
 ---------------------------------------------------------------
@@ -49,6 +54,49 @@ Imagine your website back-end reaches capacity, but the front end and storage ar
 the back-end separately to improve performance. If something necessitated such a change, you could also choose to change the 
 storage service or modify the front end without impacting any of the other components.
 ---------------------------------------------------------------
+Azure_DNS
+
+Azure DNS is a hosting service for DNS domains that provides name resolution by using Microsoft Azure infrastructure. By hosting 
+your domains in Azure, you can manage your DNS records using the same credentials, APIs, tools, and billing services.
+
+DNS domains in Azure DNS are hosted on Azure's global network of DNS name servers, providing resiliency and high availability. 
+Azure DNS uses anycast networking, so the closest available DNS server answers each DNS query, providing fast performance and 
+high availability for your domain.
+
+Azure DNS can manage DNS records for your Azure services and provide DNS for your external resources as well. Azure DNS is integrated in the Azure portal and uses the same credentials, support contract, and billing as your other Azure services.
+---------------------------------------------------------------
+Azure_ExpressRoute
+
+Azure ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection, with the help of 
+a connectivity provider. This connection is called an ExpressRoute Circuit. This feature allows you to connect offices, 
+datacenters, or other facilities to the Microsoft cloud. Each location would have its own ExpressRoute circuit.
+
+ExpressRoute connections don't go over the public Internet. This setup allows ExpressRoute connections to offer more reliability, 
+faster speeds, consistent latencies, and higher security than typical connections over the Internet.
+
+Security
+Azure DNS is based on Azure Resource Manager, which provides features such as:
+Azure role-based access control (Azure RBAC) to control who has access to specific actions for your organization.
+Activity logs to monitor how a user in your organization modified a resource or to find an error when troubleshooting.
+Resource locking to lock a subscription, resource group, or resource. Locking prevents other users in your organization from 
+accidentally deleting or modifying critical resources.
+
+Azure DNS can manage DNS records for your Azure services and provide DNS for your external resources as well. You can manage 
+your domains and records with the Azure portal, Azure PowerShell cmdlets, and the cross-platform Azure CLI. Applications that 
+require automated DNS management can integrate with the service by using the REST API and SDKs.
+
+Customizable virtual networks with private domains
+Azure DNS also supports private DNS domains. This feature allows you to use your own custom domain names in your private virtual 
+networks, rather than being stuck with the Azure-provided names.
+
+Customizable virtual networks with private domains
+Azure DNS also supports private DNS domains. This feature allows you to use your own custom domain names in your private 
+virtual networks, rather than being stuck with the Azure-provided names.
+
+Important!
+You can't use Azure DNS to buy a domain name. For an annual fee, you can buy a domain name by using App Service domains or 
+a third-party domain name registrar. Once purchased, your domains can be hosted in Azure DNS for record management.
+---------------------------------------------------------------
 Azure_Virtual_Desktop
 
 Another type of virtual machine is the Azure Virtual Desktop. Azure Virtual Desktop is a desktop and application virtualization 
@@ -86,7 +134,11 @@ Private endpoints exist within a virtual network and have a private IP address f
 Azure virtual network(VNet) allows you to create multiple isolated virtual networks. When you set up a virtual network, you define a 
 private IP address space that is in the private IP address range. The private IP range only exists within the virtual network and 
 isn't internet routable. You can divide the private IP address space into subnets and allocate part of the defined address space 
-to each named subnet.
+to each named subnet. A subnet is defined by an IP address range, which is a subset of the IP address space of a larger network.
+
+* A subnet, short for subnetwork, is a logical subdivision of a larger network. It is used to partition a single network into 
+smaller, more manageable segments. Subnets improve network performance, enhance security, and allow better control of traffic 
+flow within a network. A subnet is defined by an IP address range, which is a subset of the IP address space of a larger network.
 
 For name resolution, you can use the name resolution service built into Azure. You also can configure the virtual network to use 
 either an internal or an external DNS server. You can enable incoming connections from the internet by assigning a public IP 
@@ -135,10 +187,108 @@ to each other. Network traffic between peered networks is private, and travels o
 the public internet. Peering enables resources in each virtual network to communicate with each other. These virtual networks 
 can be in separate regions. This feature allows you to create a global interconnected network through Azure.
 
-User-defined routes (UDR) allow you to control the routing tables between subnets within a virtual network or between virtual 
----networks. This allows for greater control over network traffic flow.
+User-defined routes(UDR) allow you to control the routing tables between subnets within a virtual network or between virtual 
+networks. This allows for greater control over network traffic flow.
+---
+* Dynamic routing automatically adjusts network paths based on changes in the network topology, making it a versatile and 
+powerful method for managing network traffic. Routers exchange routing information in real time using protocols like BGP. 
+This allows the network to automatically adapt to changes such as link failures or new routes.
 
+With Dynamic routing, new routers or subnets can be added without requiring a complete reconfiguration of the routing tables.
+Dynamic Routing adjusts to congestion by redistributing traffic to less congested paths and chooses the best route based on 
+real-time metrics such as bandwidth, latency, or hop count.
+---------------------------------------------------------------
+Azure_Virtual_Private_Networks
 
+* An Azure VPN Gateway is a specific type of network gateway in Azure that provides secure, encrypted connections between Azure 
+virtual networks (VNets) and on-premises networks or other Azure VNets. It enables hybrid cloud and multi-cloud connectivity 
+through Virtual Private Network (VPN) technology.
+
+A virtual private network (VPN) uses an encrypted tunnel within another network. VPNs are typically deployed to connect two or 
+more trusted private networks to one another over an untrusted network (typically the public internet). Traffic is encrypted while 
+traveling over the untrusted network to prevent eavesdropping or other attacks. VPNs can enable networks to safely and securely 
+share sensitive information.
+
+A VPN gateway is a type of virtual network gateway. Azure VPN Gateway instances are deployed in a dedicated subnet of the virtual 
+network and enable the following connectivity:
+	Connect on-premises datacenters to virtual networks through a site-to-site connection.
+	Connect individual devices to virtual networks through a point-to-site connection.
+	Connect virtual networks to other virtual networks through a network-to-network connection.
+
+All data transfer is within a VPN gateway is encrypted inside a private tunnel as it crosses the internet. You can deploy only one 
+VPN gateway in each virtual network. However, you can use one gateway to connect to multiple locations, which includes other 
+virtual networks or on-premises datacenters.
+
+When setting up a VPN gateway, you must specify the type of VPN - either policy-based or route-based. The primary distinction 
+between these two types is how they determine which traffic needs encryption. In Azure, regardless of the VPN type, the method of 
+authentication employed is a preshared key.
+
+Policy-based VPN gateways specify the static IP address of packets that should be encrypted through each tunnel. This type of device 
+evaluates every data packet against those sets of IP addresses to choose the tunnel where that packet is going to be sent through.
+---
+In Route-based gateways, IPSec tunnels are modeled as a network interface or virtual tunnel interface. IP routing, which can be 
+either static routes or dynamic routing protocols, decides which one of these tunnel interfaces to use when sending each packet. 
+Route-based VPNs are the preferred connection method for on-premises devices. Route-based VPNs are more resilient to topology 
+changes such as the creation of new subnets. Route-based VPNs rely on route tables for traffic management, making them more 
+adaptable to changing network configurations. Route-based VPNs allow multiple Site-to-Site(S2S) and Point-to-site(P2S) connections 
+simultaneously. 
+
+Route-based VPNs can configure active-active connections for high availability.
+
+Use a route-based VPN gateway if you need any of the following types of connectivity:
+	VNet-to-VNet - secure communication between Azure Virtual Networks (VNets), even if they are in different regions or subscriptions.
+	Use Cases:
+		Connecting microservices hosted in separate VNets.
+		Facilitating resource segmentation by networking VNets securely.
+	
+	Point-to-site connections - Allows individual devices or remote users to securely connect to an Azure Virtual Network.
+	Use Cases:
+		Providing remote workers secure access to Azure-hosted resources.
+		Combining with Site-to-Site(S2S) for comprehensive remote and on-premises access.
+	
+	Multisite connections - Connects multiple on-premises locations to a single Azure Virtual Network.
+	Use Cases:
+		Centralizing connectivity for multiple branch offices.
+		Configuring a hub-and-spoke network topology.
+	Dynamic Routing Supports Border Gateway Protocol (BGP) for dynamic routing, which simplifies complex routing configurations.
+	Use Cases:
+		Scenarios where the network topology changes frequently, and dynamic route updates are required.
+		Hybrid networks with on-premises equipment supporting BGP.
+
+	Coexistence with an Azure ExpressRoute gateway - Enables a VPN failover for Azure ExpressRoute connections.
+	Use Cases:
+		Providing redundancy to ensure connectivity if the ExpressRoute circuit fails.
+		Connecting Azure resources in regions or subscriptions not linked to the primary ExpressRoute.
+
+	Site-to-Site (S2S) Connections - secure, always-on connectivity between an on-premises network and an Azure virtual network.
+---
+If your on-premises device only supports policy-based VPNs, a policy-based VPN gateway may be required, though it has limited 
+functionality compared to route-based VPNs.
+
+Use a route-based VPN gateway for hybrid cloud connectivity, interconnecting VNets, dynamic routing (BGP), multi-site 
+configurations, and failover solutions for ExpressRoute. It is the preferred option for modern, scalable, and flexible 
+networking needs in Azure.
+
+Summary: High-Availability Scenarios for Azure VPN Gateways
+	Active/Standby:
+	Default configuration with two VPN gateway instances (one active, one standby).
+	Standby takes over during maintenance or disruptions automatically.
+	Minimal downtime: a few seconds for planned maintenance; up to 90 seconds for unplanned issues.
+	
+	Active/Active:
+	Enabled by using BGP routing protocol.
+	Both instances are active, each with its own public IP address.
+	High availability is enhanced with separate tunnels to each instance and an optional additional on-premises VPN device.
+	
+	ExpressRoute Failover:
+	Configures a VPN gateway as a backup for ExpressRoute connections.
+	Uses the public internet as an alternative connectivity path during ExpressRoute outages caused by physical or location-wide failures.
+	
+	Zone-Redundant Gateways:
+	Deploys VPN gateways across availability zones for added resiliency and scalability.
+	Protects against zone-level failures by separating gateways physically and logically.
+	Requires specific SKUs and Standard public IP addresses instead of Basic ones.
+	These options provide varying levels of redundancy and fault tolerance to ensure secure and reliable connectivity for Azure networks.
 ---------------------------------------------------------------
 Compute_Networking_Services
 
@@ -161,12 +311,17 @@ all your VMs with a single network or power failure.
 
 Availability Sets accomplish these objectives by grouping VMs in two ways: Update Domain and Fault Domain.
 
-Update domain: The update domain groups VMs that can be rebooted at the same time. This setup allows you to apply updates while 
+Update domain: 
+The update domain groups VMs that can be rebooted at the same time. This setup allows you to apply updates while 
 knowing that only one update domain grouping is offline at a time. All of the machines in one update domain update at the same time. 
 An update group going through the update process is given a 30-minute time to recover before maintenance on the next update domain 
 starts.
 
-Fault domain: The fault domain groups your VMs by common power source and network switch. By default, an Availability Set splits 
+Fault domain: fault domain is a logical group of hardware that shares a common single point of failure. It is used to enhance the 
+availability and reliability of resources by distributing them across different fault domains, ensuring that a single hardware 
+failure does not affect all instances of a resource.
+
+The fault domain groups your VMs by common power source and network switch. By default, an Availability Set splits 
 your VMs across up to three fault domains. This helps protect against a physical power or networking failure by having VMs in 
 different fault domains (thus being connected to different power and networking resources). There’s no additional cost for 
 configuring an availability set. You only pay for the VM instances you create.
@@ -214,11 +369,7 @@ used as a web server to serve static content (HTML, CSS, JavaScript, images, etc
 
 	# Set the home page.
 	echo "<html><body><h2>Welcome to Azure! My name is $(hostname).</h2></body></html>" | sudo tee -a /var/www/html/index.html
----------------------------------------------------------------
-
-
----------------------------------------------------------------
-
+---
 
 ---------------------------------------------------------------
 
@@ -240,6 +391,32 @@ used as a web server to serve static content (HTML, CSS, JavaScript, images, etc
 
 ---------------------------------------------------------------
 
+
+---------------------------------------------------------------
+You_should_be_able_to
+
+Compare compute types, including container instances, virtual machines, and functions.
+Describe virtual machine options, including virtual machines (VMs), virtual machine scale sets, virtual machine availability sets, and Azure Virtual Desktop.
+Describe resources required for virtual machines.
+Describe application hosting options, including Azure Web Apps, containers, and virtual machines.
+Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, VPN Gateway, and ExpressRoute.
+Define public and private endpoints.
+---
+Describe Azure regions, region pairs, and sovereign regions.
+Describe Availability Zones.
+Describe Azure datacenters.
+Describe Azure resources and Resource Groups.
+Describe subscriptions.
+Describe management groups.
+Describe the hierarchy of resource groups, subscriptions, and management groups.
+
+---------------------------------------------------------------
+Learning_Links
+Introduction to Azure network foundation services 4 hr 44 min
+https://learn.microsoft.com/en-us/training/paths/intro-to-azure-network-foundation-services/
+---------------------------------------------------------------
+Missed_Questions
+Which Azure Virtual Machine feature staggers updates across VMs based on their update domain and fault domain? Availability Sets.
 
 ---------------------------------------------------------------
 Random_Notes

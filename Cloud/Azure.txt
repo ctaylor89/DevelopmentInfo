@@ -54,6 +54,10 @@ Deploying Web Apps and APIs to Azure [2 of 8] | .NET on Azure for Beginners
 Tutorials_Videos_Other
 
 ------------------------------------------------------------
+*******************************************************
+This content helps prepare for Exam AZ-900, required to earn the Azure Fundamentals certification.
+https://learn.microsoft.com/en-us/collections/n6ga8m0jkgrwk
+*******************************************************
 
 What is NoSQL?  A good article that explains a lot.
 https://www.mongodb.com/nosql-explained
@@ -438,8 +442,6 @@ When an application is hosted on Azure, the application should authenticate to A
 A managed identity in Azure is a feature of Azure Active Directory (AAD) that provides an automatically managed identity for 
 applications or services running on Azure, eliminating the need for hardcoding credentials or secrets in the application code. 
 With managed identities, the authentication process becomes more secure and straightforward.
-
-
 -------------------------------------------------------------
 Job_Requirements
 
@@ -459,9 +461,29 @@ App Service is the best choice. For microservice architecture, consider Azure Sp
 control over the VMs on which your code runs, consider Azure Virtual Machines. For more information about how to choose between 
 these Azure services, see https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
  
- Describe Azure compute and networking services
- Several pages. Start Here:
- https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/5-containers
+Describe Azure compute and networking services
+Several pages. Start Here:
+https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/5-containers
+
+When you create an Azure account, a subscription will be created for you. After you've created an Azure account, you're free 
+to create additional subscriptions. For example, your company might use a single Azure account for your business and separate 
+subscriptions for development, marketing, and sales departments. After you've created an Azure subscription, you can start 
+creating Azure resources within each subscription.
+
+Azure CLI
+Azure command to check what version of the CLI you're using right now: az version
+Date command to get the current date and time: date
+To switch from being in Bash to Powershell: pwsh  Enter bash from Powershell to switch to bash
+Run an update to the CLI: az upgrade
+---
+Another way to interact is using the Azure CLI interactive mode. This changes CLI behavior to more closely resemble an integrated 
+development environment (IDE). Interactive mode provides autocompletion, command descriptions, and even examples. If you’re 
+unfamiliar with BASH and PowerShell, but want to use the command line, interactive mode may help you.
+Enter az interactive to enter interactive mode.
+
+You may have to wait a minute or two to allow the interactive mode to fully initialize. Then, enter the letter “a” and 
+auto-completion should start to work. If auto-completion isn’t working, erase what you’ve entered, wait a bit longer, and try again
+---
 
 
 
