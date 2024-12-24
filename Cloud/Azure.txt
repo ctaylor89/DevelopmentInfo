@@ -124,7 +124,7 @@ Maintain Your Credentials:
 Remember that Microsoft role-based and specialty certifications expire unless renewed.
 Stay updated with the latest technology for your job role and renew your certification by passing an online assessment on Microsoft Learn.
 ---
-Certainly! If you’re aiming to prepare for the AZ-204: Developing Solutions for Microsoft Azure exam, there are several excellent 
+If you’re aiming to prepare for the AZ-204: Developing Solutions for Microsoft Azure exam, there are several excellent 
 resources available. Let’s explore some options:
 
 Microsoft Learn Study Guide:
@@ -156,12 +156,14 @@ Spend time working with Azure services. Set up sandbox environments, build sampl
 Hands-on labs and practical exercises are crucial for reinforcing concepts.
 
 Practice Tests:
-Take practice exams to assess your readiness. These simulate the actual exam environment and help you identify areas where you need improvement.
+Take practice exams to assess your readiness. These simulate the actual exam environment and help you identify areas where 
+you need improvement.
+
 Exam Day:
 The actual exam is a 2-hour test with around 40-60 questions.
 Aim to complete the exam within the allotted time.
-Remember that everyone’s learning pace is different, so adjust your study plan accordingly. Stay consistent, practice regularly, and you’ll be 
-well-prepared to earn your AZ-204 certification! 
+Remember that everyone’s learning pace is different, so adjust your study plan accordingly. Stay consistent, practice regularly, 
+and you’ll be well-prepared to earn your AZ-204 certification! 
 -------------------------------------------------------------
 Azure_Services_Most_Commonly_Used_By_Developers
 

@@ -2,6 +2,8 @@ Application_Hosting_Options
 Azure_Containers
 Azure_DNS
 Azure_ExpressRoute
+Azure_Physical_Infrastructure
+Azure_storage_services
 Azure_Virtual_Desktop
 Azure_Virtual_Networking
 Azure_Virtual_Private_Networks
@@ -63,7 +65,8 @@ DNS domains in Azure DNS are hosted on Azure's global network of DNS name server
 Azure DNS uses anycast networking, so the closest available DNS server answers each DNS query, providing fast performance and 
 high availability for your domain.
 
-Azure DNS can manage DNS records for your Azure services and provide DNS for your external resources as well. Azure DNS is integrated in the Azure portal and uses the same credentials, support contract, and billing as your other Azure services.
+Azure DNS can manage DNS records for your Azure services and provide DNS for your external resources as well. Azure DNS is 
+integrated in the Azure portal and uses the same credentials, support contract, and billing as your other Azure services.
 ---------------------------------------------------------------
 Azure_ExpressRoute
 
@@ -97,6 +100,129 @@ Important!
 You can't use Azure DNS to buy a domain name. For an annual fee, you can buy a domain name by using App Service domains or 
 a third-party domain name registrar. Once purchased, your domains can be hosted in Azure DNS for record management.
 ---------------------------------------------------------------
+Azure_Physical_Infrastructure
+
+The core architectural components of Azure may be broken down into two main groupings: the physical infrastructure, and the 
+management infrastructure.
+
+DataCenters are facilities with resources arranged in racks, with dedicated power, cooling, and networking infrastructure.
+Individual datacenters aren’t directly accessible. Datacenters are grouped into Azure Regions or Azure Availability Zones.
+
+A region is a geographical area on the planet that contains at least one, but potentially multiple datacenters that are nearby 
+and networked together with a low-latency network. Azure intelligently assigns and controls the resources within each region to 
+ensure workloads are appropriately balanced.
+
+Some services or virtual machine (VM) features are only available in certain regions, such as specific VM sizes or storage types. 
+There are also some global Azure services that don't require you to select a particular region, such as Microsoft Entra ID, Azure 
+Traffic Manager, and Azure DNS.
+
+An Azure Availability Zone is a physically separate location within an Azure region, designed to provide high availability and 
+fault tolerance for your applications and data. Each availability zone is an independent set of data centers within an Azure Region.
+
+An availability zone is set up to be an isolation boundary. 
+If one zone goes down, the other continues working. Availability zones are connected through private fiber-optic networks.
+
+When you host your infrastructure, setting up your own redundancy requires that you create duplicate hardware environments. 
+Azure can help make your app highly available through availability zones.
+
+Build high-availability into your application architecture by co-locating your compute, storage, networking, and data resources 
+within an availability zone and replicating in other availability zones.
+
+Important
+Zone-Enabled Regions are Azure regions that support availability zones.
+A minimum of three separate availability zones are located in all availability zone-enabled regions. 
+Not all "Azure Regions" currently support availability zones.
+
+Availability zones are primarily for VMs, managed disks, load balancers, and SQL databases. Azure services that support 
+availability zones fall into three categories:
+1) Zonal services: A zonal service refers to a resource or service that is explicitly pinned to a specific availability zone 
+within a region. This means the resource is deployed in and operates from a single availability zone, providing precise control 
+over its placement for high availability or performance needs.
+
+2) Zone-redundant services: The platform replicates automatically across zones (i.e. zone-redundant storage, SQL Database).
+
+3) Non-regional services: Services are always available from Azure geographies and are resilient to zone-wide outages as 
+well as region-wide outages.
+
+Even with the additional resiliency that availability zones provide, it’s possible that an event could be so large that it 
+impacts multiple availability zones in a single region. To provide even further resilience, Azure has Region Pairs.
+
+Region pairs
+Most Azure regions are paired with another region within the same geography (such as US, Europe, or Asia) at least 300 miles away.
+Most regions are paired in two directions, meaning they are the backup for the region that provides a backup for them.
+
+Important! Not all Azure services automatically replicate data or automatically fall back from a failed region to cross-replicate 
+to another enabled region. In these scenarios, recovery and replication must be configured by the customer.
+
+Planned Azure updates are rolled out to paired regions one region at a time to minimize downtime and risk of application outage.
+
+Sovereign regions are instances of Azure that are isolated from the main instance of Azure. i.e. US government agencies.
+---
+Azure management infrastructure includes Azure resources and resource groups, subscriptions, and accounts.
+A resource is the basic building block of Azure. Anything you create, provision, deploy, etc. is a resource.
+
+Resource groups are simply groupings of resources. When you create a resource, you’re required to place it into a resource group. 
+While a resource group can contain many resources, a single resource can only be in one resource group at a time. Some resources 
+may be moved between resource groups, but when you move a resource to a new group, it will no longer be associated with the former 
+group. Additionally, resource groups can not be nested.
+
+You can control access levels at the resource group level by using Azure Role-Based Access Control (RBAC).
+
+When you apply an action to a resource group, that action will apply to all the resources within the resource group. If you delete 
+a resource group, all the resources will be deleted. If you grant or deny access to a resource group, you’ve granted or denied 
+access to all the resources within the resource group.
+
+Azure, subscriptions are a unit of management, billing, and scale. Similar to how resource groups are a way to logically organize 
+resources, subscriptions allow you to logically organize your resource groups and facilitate billing.
+
+A subscription provides you with authenticated and authorized access to Azure products and services. It also allows you to 
+provision resources. An Azure subscription links to an Azure account, which is an identity in Microsoft Entra ID or in a directory 
+that Microsoft Entra ID trusts.
+
+An account can have multiple subscriptions, but it’s only required to have one. In a multi-subscription account, you can use the 
+subscriptions to configure different billing models and apply different access-management policies. You can use Azure subscriptions 
+to define boundaries around Azure products, services, and resources. The two types of subscription boundaries that you can use are:
+
+1) Billing boundary: This subscription type determines how an Azure account is billed for using Azure.
+Azure generates separate billing reports and invoices for each subscription so that you can organize and manage costs.
+
+2) Access control boundary: Azure applies access-management policies at the subscription level, and you can create separate 
+subscriptions to reflect different organizational structures.
+
+You can choose to create subscriptions to set up separate environments for development and testing, security, or to isolate data 
+for compliance reasons.
+
+You can create subscriptions to reflect different organizational structures. For example, you could limit one team to lower-cost 
+resources, while allowing the IT department a full range.
+
+You can create additional subscriptions for billing purposes. Because costs are first aggregated at the subscription level, you 
+might want to create subscriptions to manage and track costs based on your needs.
+
+Resources are gathered into resource groups, and resource groups are gathered into subscriptions.
+
+You organize subscriptions into containers called management groups and apply governance conditions to the management groups. All 
+subscriptions within a management group automatically inherit the conditions applied to the management group. Management groups 
+can be nested.
+
+If you created a policy for a management group called Production, this policy would be inherited by all the subscriptions that 
+are descendants of the production management group and will apply to all resources under those subscriptions. This security 
+policy can not be altered by the resource or the subscription owner, which allows for improved governance.
+
+By moving multiple subscriptions under a management group, you can create one Azure role-based access control (Azure RBAC)
+assignment on the management group. Assigning Azure RBAC at the management group level means that all sub-management groups, 
+subscriptions, resource groups, and resources underneath that management group would also inherit those permissions. One 
+assignment on the management group can enable users to have access to everything they need instead of scripting Azure RBAC 
+over different subscriptions.
+
+Important facts about management groups:
+10,000 management groups can be supported in a single directory.
+A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
+Each management group and subscription can support only one parent.
+---------------------------------------------------------------
+Azure_storage_services
+
+
+---------------------------------------------------------------
 Azure_Virtual_Desktop
 
 Another type of virtual machine is the Azure Virtual Desktop. Azure Virtual Desktop is a desktop and application virtualization 
@@ -113,10 +239,9 @@ Entra ID allows for the creation, update, and deletion of user accounts, as well
 permissions. While traditional AD is commonly used in on-premises environments, Entra ID is typically used in cloud environments to 
 manage identities and access for users and applications that reside in the cloud.
 ---
-Azure Virtual Desktop lets you use Windows 10 or Windows 11 Enterprise multi-session, the only Windows client-based operating systems 
-that enables multiple concurrent users on a single VM. You can think of an Azure network as an extension of your on-premises 
-network with resources that link to other Azure resources.
-
+Azure Virtual Desktop lets you use Windows 10 or Windows 11 Enterprise multi-session which is the only Windows client-based 
+operating systems that enables multiple concurrent users on a single VM. You can think of an Azure network as an extension 
+of your on-premises network with resources that link to other Azure resources.
 ---------------------------------------------------------------
 Azure_Virtual_Networking
 

@@ -68,7 +68,7 @@ Ctrl-Enter
 Ctrl-Shift-Enter
 	Inserts a blank line below the cursor
 Ctrl-W
-	Selects the word containing the cursor or the word to the right of the cursor
+	Selects the word containing the cursor or the word to the right or left of the cursor
 Ctrl-=
 	Selects from the current location in the editor back to the previous location in the navigation history	
 //********************************************  
@@ -196,7 +196,6 @@ exit
 echo There was a problem
 pause
 ---
-
 Yes, installing a service isn't particularly complicated. It just takes writing a handful of registry keys. You can have a look-see with Regedit.exe, navigate to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services.
 Sc.exe can write these keys too, using the supplied command line arguments. Nevertheless, this is not the right way to do it. The point of InstallUtil.exe is that it can activate custom installation code. Code that the service author wrote. Which is not that uncommon, services tend to stuff config info in their registration keys for their own use. You'll see plenty of evidence for that when you have a look with Regedit.
 
