@@ -221,7 +221,69 @@ Each management group and subscription can support only one parent.
 ---------------------------------------------------------------
 Azure_storage_services
 
+* Low latency refers to the minimal delay between a request for data and the corresponding response or action. It is a 
+critical performance metric in systems where real-time or near-real-time responses are required.
 
+* Synchronous Replication: All copies of data are updated at the same time.
+
+Standard general-purpose v2 - Storage Tier
+Standard storage account type for blobs, file shares, queues, and tables. Recommended for most scenarios using Azure Storage. 
+If you want support for network file system (NFS) in Azure Files, use the premium file shares account type.
+
+Premium block blobs - Storage Tier
+Premium storage account type for block blobs and append blobs. Recommended for scenarios with high transaction rates or that 
+use smaller objects or require consistently low storage latency. Blob Storage (including Data Lake Storage)
+---
+Premium file shares - Storage Tier
+Premium storage account type for file shares only. Recommended for enterprise or high-performance scale applications. Use this 
+account type if you want a storage account that supports both Server Message Block (SMB) and NFS file shares. NFS (Network 
+File System) file shares are file storage solutions that enable multiple clients to access and share files over a network.
+
+Premium page blobs - performance-optimized storage tier	(Page blobs only)
+Performance Optimization:
+Offers low latency for data access compared to other tiers, such as hot, cool, and archive which are lower in performance.
+High throughput for read and write operations. Uses Solid-State Drive (SSD)-Based Storage.
+
+Transaction-Optimized Pricing: Designed for applications with high transaction rates;
+Availability: Offered in specific Azure regions. Supports local redundancy (LRS) and zone redundancy (ZRS) for data durability.
+---
+One of the benefits of using an Azure Storage Account is having a unique namespace in Azure for your data. In order to do this, 
+every storage account in Azure must have a unique-in-Azure account name. The combination of the account name and the Azure 
+Storage service endpoint forms the endpoints for your storage account. Your storage account name must be unique within Azure. 
+No two storage accounts can have the same name.
+Blob Storage			https://<storage-account-name>.blob.core.windows.net
+Data Lake Storage Gen2	https://<storage-account-name>.dfs.core.windows.net
+Azure Files				https://<storage-account-name>.file.core.windows.net
+Queue Storage			https://<storage-account-name>.queue.core.windows.net
+Table Storage			https://<storage-account-name>.table.core.windows.net
+
+One of the factors that help determine which redundancy option you should choose is whether your application requires read access 
+to the replicated data in the secondary region if the primary region becomes unavailable. 
+
+Locally redundant storage (LRS) replicates your data three times within a single data center in the primary region. LRS is the 
+lowest-cost redundancy option and offers the least durability compared to other options. LRS protects your data against server 
+rack and drive failures.
+
+Zone-redundant storage (ZRS) replicates your Azure Storage data, in the same zone, synchronously across three Azure availability 
+zones in the primary region. When you create a storage account, you select the primary region for the account. The paired secondary 
+region is based on Azure Region Pairs, and can't be changed.
+
+Azure Storage offers two options for copying your data to a secondary region: geo-redundant storage (GRS) and geo-zone-redundant 
+storage (GZRS). GRS is similar to running LRS in two regions, and GZRS is similar to running ZRS in the primary region and LRS 
+in the secondary region.
+
+By default, data in the secondary region isn't available for read or write access unless there's a failover to the secondary region.
+
+GRS copies your data synchronously three times within a single physical location in the primary region using LRS. It then copies 
+your data asynchronously to a single physical location in the secondary region (the region pair) using LRS.
+
+Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
+region (similar to ZRS) and is also replicated to a secondary geographic region, using LRS(3X in one data center).
+
+In the case of a regional outage failure, your data is available to be read only if the customer or Microsoft initiates a failover 
+from the primary to secondary region. However, if you enable read access to the secondary region, your data is always available, 
+even when the primary region is running optimally. For read access to the secondary region, enable read-access geo-redundant 
+storage (RA-GRS) or read-access geo-zone-redundant storage (RA-GZRS).
 ---------------------------------------------------------------
 Azure_Virtual_Desktop
 
