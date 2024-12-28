@@ -1,11 +1,12 @@
 Application_Hosting_Options
 Azure_Containers
+Azure_Identity_Access_Security
 Azure_DNS
 Azure_ExpressRoute
 Azure_Physical_Infrastructure
 Azure_storage_services
 Azure_Virtual_Desktop
-Azure_Virtual_Networking
+Azure_Virtual_Networking 
 Azure_Virtual_Private_Networks
 Compute_Networking_Services
 Exercises_
@@ -55,6 +56,84 @@ sections that can be maintained, scaled, or updated independently.
 Imagine your website back-end reaches capacity, but the front end and storage aren't stressed. With containers, you could scale 
 the back-end separately to improve performance. If something necessitated such a change, you could also choose to change the 
 storage service or modify the front end without impacting any of the other components.
+-------------------------------------------------------------
+Azure_Identity_Access_Security
+
+*** Azure directory services ***
+Microsoft Entra ID is a directory service that enables you to sign in and access both Microsoft cloud applications and cloud 
+applications that you develop. Microsoft Entra ID can also help you maintain your on-premises Active Directory deployment.
+
+For on-premises environments, Active Directory running on Windows Server provides an identity and access management service that's 
+managed by your organization. Microsoft Entra ID is Microsoft's cloud-based identity and access management service. If you've 
+worked with Active Directory, Microsoft Entra ID will be familiar to you.
+
+When you secure identities on-premises with Active Directory, Microsoft doesn't monitor sign-in attempts. When you connect Active 
+Directory with Microsoft Entra ID, Microsoft can help protect you by detecting suspicious sign-in attempts at no extra cost. For 
+example, Microsoft Entra ID can detect sign-in attempts from unexpected locations or unknown devices. It also has smart lockout 
+services and a custom list of banned passwords.
+
+Administrators can use Microsoft Entra ID to control access to applications and resources based on their business requirements.
+
+Developers can use Microsoft Entra ID to provide a standards-based approach for adding functionality to applications that they build, 
+such as adding SSO functionality to an app or enabling an app to work with a user's existing credentials.
+
+Users can manage their identities and take maintenance actions like self-service password reset.
+
+Single sign-on (SSO) enables you to remember only one username and one password to access multiple applications. A single identity is 
+tied to a user, which simplifies the security model. As users change roles or leave an organization, access modifications are tied to 
+that identity, which greatly reduces the effort needed to change or disable accounts.
+
+Device management: Along with accounts for individuals, Entra ID supports the registration of devices. Registration enables 
+devices to be managed through tools like Microsoft Intune. Entra ID also allows for device-based Conditional Access policies to 
+restrict access attempts to only those coming from known devices
+
+If you only had an on-premises environment running Active Directory and a cloud deployment using Microsoft Entra ID, you would 
+need to maintain two identity sets. However, you can connect Active Directory with Microsoft Entra ID, enabling a consistent 
+identity experience between cloud and on-premises server.
+
+* A domain in the context of IT and networking is a logical grouping of resources, such as computers, users, and other devices, 
+that share a common database and security policies. Domains are typically managed using directory services like Active Directory(AD).
+Domains help administrators efficiently organize, manage, and secure a network.
+
+* Key Components of a Domain
+Centralized Directory:
+The core of a domain is the directory service, which stores information about resources (users, computers, printers, etc.) and 
+their relationships. Admins can manage users, devices, and security policies from a single location.
+
+Authentication and Authorization:
+Domains provide centralized authentication using protocols like Kerberos or NTLM. Users and devices authenticate against the 
+domain controller to access resources securely.
+
+Domain Controller (DC): - A component of the domain.
+A server that manages the domain's directory database and provides authentication services like authentication, authorization, 
+and policy enforcement for domain members.
+
+Active Directory (AD): A Windows-based directory service used to store information about objects (users, computers, groups) within the domain.
+Trust Relationships: Allows users in one domain to access resources in another.
+
+Domains are Identified by a unique name, such as example.com or corp.local.
+
+Group Policy Management:
+Administrators define settings (e.g., password policies, desktop configurations) centrally using Group Policy Objects (GPOs).
+These settings are applied automatically to all users and devices in the domain. Group policy provides centralized configuration 
+and policy management for domain-joined resources.
+
+Users log in once (Single Sign-On) to access multiple resources within the domain.
+Domains can support thousands of devices and users, making them suitable for small businesses to large enterprises.
+Easily share files, printers, and other resources among users in the domain.
+
+
+Microsoft Entra Domain Services can be deployed into a virtual network in Azure.
+Entra Domain Services enables Azure VMs to join the domain and leverage centralized management and authentication.
+
+Entra Domain Services integrates with on-premises AD through Azure AD Connect, enabling:
+Synchronization of users and credentials and Unified authentication for on-premises and cloud resources.
+Provide domain services in the cloud for applications and resources hosted in Azure.
+
+Group Policy is not supported in Azure AD, but is supported in Microsoft Entra Domain Services.
+Use Azure AD for Modern apps and services and use Microsoft Entra Domain Services for legacy apps and hybrid integration.
+
+
 ---------------------------------------------------------------
 Azure_DNS
 
@@ -226,6 +305,8 @@ critical performance metric in systems where real-time or near-real-time respons
 
 * Synchronous Replication: All copies of data are updated at the same time.
 
+* Lower availability in the context of an Azure storage account refers to the likelihood that your data might not be accessible at all times.
+
 Standard general-purpose v2 - Storage Tier
 Standard storage account type for blobs, file shares, queues, and tables. Recommended for most scenarios using Azure Storage. 
 If you want support for network file system (NFS) in Azure Files, use the premium file shares account type.
@@ -284,6 +365,217 @@ In the case of a regional outage failure, your data is available to be read only
 from the primary to secondary region. However, if you enable read access to the secondary region, your data is always available, 
 even when the primary region is running optimally. For read access to the secondary region, enable read-access geo-redundant 
 storage (RA-GRS) or read-access geo-zone-redundant storage (RA-GZRS).
+---
+All data written to an Azure storage account is encrypted by the service. Azure Storage provides you with fine-grained control 
+over who has access to your data.
+
+Blob Storage service
+Azure Blob storage is an object storage solution for the cloud. It can store massive amounts of data, such as text or binary data.
+Blob storage can manage thousands of simultaneous uploads, massive amounts of video data, constantly growing log files, and can 
+be reached from anywhere with an internet connection.
+
+One advantage of blob storage over disk storage is that it doesn't require developers to think about or manage disks. Data is 
+uploaded as blobs, and Azure takes care of the physical storage needs. Blob storage is ideal for:
+	Serving images or documents directly to a browser.
+	Storing files for distributed access.
+	Streaming video and audio.
+	Storing data for backup and restore, disaster recovery, and archiving.
+	Storing data for analysis by an on-premises or Azure-hosted service.
+
+Azure Storage offers different access tiers for your blob storage, helping you store object data in the most cost-effective manner:
+	Hot access tier: Optimized for storing data that is accessed frequently (for example, images for your website).
+	Cool access tier: Optimized for data that is infrequently accessed and stored for at least 30 days 
+	                  (for example, invoices for your customers).
+	Cold access tier: Optimized for storing data that is infrequently accessed and stored for at least 90 days.
+	Archive access tier: Appropriate for data that is rarely accessed and stored for at least 180 days, with flexible 
+	                     latency requirements (for example, long-term backups).
+
+The following considerations apply to the different access tiers:
+	Hot, cool, and cold access tiers can be set at the account level. The archive access tier isn't available at the account level.
+	Hot, cool, cold, and archive tiers can be set at the blob level, during or after upload.
+	Data in the cool and cold access tiers can tolerate slightly lower availability, but still requires high durability, 
+	retrieval latency, and throughput characteristics similar to hot data. For cool and cold data, a lower availability 
+	service-level agreement (SLA) and higher access costs compared to hot data are acceptable trade-offs for lower storage costs.
+	Archive storage stores data offline and offers the lowest storage costs, but also the highest costs to rehydrate and access data.
+
+PowerShell cmdlets and Azure CLI can be used to create, mount, and manage Azure file shares as part of the administration of Azure 
+applications. You can create and manage Azure file shares using Azure portal and Azure Storage Explorer.
+
+Familiar programmability: Applications running in Azure can access data in the share via file system I/O APIs. Developers can 
+therefore use their existing code and skills to migrate existing applications. In addition to System IO APIs, you can use Azure 
+Storage Client Libraries or the Azure Storage REST API.
+
+Azure Queue storage is a service for storing large numbers of messages. Once stored, you can access the messages from anywhere 
+in the world via authenticated calls using HTTP or HTTPS. A queue can contain as many messages as your storage account has room for 
+(potentially millions). Each individual message can be up to 64 KB in size. Queues are commonly used to create a backlog of work 
+to process asynchronously.
+
+Queue storage can be combined with compute functions like Azure Functions to take an action when a message is received.
+---
+Azure Disk storage, or Azure managed disks, are block-level storage volumes managed by Azure for use with Azure VMs.
+
+Azure Table storage stores large amounts of structured  non-relational data. Azure tables are a NoSQL datastore that accepts 
+authenticated calls from inside and outside the Azure cloud.
+---
+Identify Azure data migration options
+
+Azure Migrate is a service that helps you migrate from an on-premises environment to the cloud. Azure Migrate functions as a hub 
+to help you manage the assessment and migration of your on-premises datacenter to Azure. Azure Migrate provides the following:
+	Unified migration platform: A single portal to start, run, and track your migration to Azure.
+	Range of tools: A range of tools for assessment and migration. 
+	Assessment and migration: In the Azure Migrate hub, you can assess and migrate your on-premises infrastructure to Azure.
+
+The Azure Migrate hub includes the following tools to help with migration:
+ Azure Migrate: Discovery and assessment. Discover and assess on-premises servers running on VMware, Hyper-V, and physical servers 
+                in preparation for migration to Azure.
+				Server Migration. Migrate VMware VMs, Hyper-V VMs, physical servers, other virtualized servers, and public 
+                cloud VMs to Azure.
+ Data Migration Assistant: Data Migration Assistant is a stand-alone tool to assess SQL Servers. It helps pinpoint potential 
+                           problems blocking migration. It identifies unsupported features and new features that can benefit you 
+						   after migration, and the right path for database migration.
+ Database Migration Service: Migrate on-premises databases to Azure VMs that are running SQL Server, Azure SQL Database, or 
+                             SQL Managed Instances.
+ App Service migration assistant: Azure App Service migration assistant is a standalone tool to assess on-premises websites for 
+                                  migration to Azure App Service. Use Migration Assistant to migrate .NET and PHP web apps to Azure.
+ Data Box: Use Azure Data Box products to move large amounts of offline data to Azure. Data box has a storage capacity of 80 terabytes.
+ ---
+*** Identify Azure file movement options ***
+In addition to large scale migration using services like Azure Migrate and Azure Data Box, Azure also has tools designed to help 
+you move or interact with individual files or small file groups.
+
+AzCopy is a command-line utility that you can use to copy blobs or files to or from your storage account. With AzCopy, you can 
+upload files, download files, copy files between storage accounts, and even synchronize files. AzCopy can even be configured to 
+work with other cloud providers to help move files back and forth between clouds.
+
+Azure AzCopy is a command-line tool designed for fast and efficient data transfer. It allows users to automate and streamline data 
+migration tasks. Here are the key use cases and capabilities of AzCopy:
+
+Synchronizing blobs or files with AzCopy is one-direction synchronization. When you synchronize, you designated the source and 
+destination, and AzCopy will copy files or blobs in that direction. It doesn't synchronize bi-directionally based on timestamps 
+or other metadata
+
+*** Key Features ***
+1) Data Transfers to and from Azure Storage:
+	Copy files, blobs, and directories to Azure Blob Storage.
+	Transfer data to Azure Files (file shares).
+	Upload and download to/from Azure Data Lake Storage Gen2.
+
+2) High-Speed Data Transfers: Leverages parallel processing to maximize transfer speed.
+
+3) Cross-Platform Support: Runs on Windows, Linux, and macOS.
+
+4) Resume and Retry:
+	Automatically retries failed transfers.
+	Supports resuming interrupted transfers.
+
+5) Authenticated Access:
+	Works with Azure Active Directory (Azure AD) credentials.
+	Can use Shared Access Signatures (SAS) or account keys for secure access.
+
+6) Compression and Filtering:
+	Compress data during transfer to save bandwidth.
+	Include or exclude specific files or directories using wildcard patterns.
+
+7) Scalability: Ideal for large-scale migrations or frequent synchronization tasks.
+
+*** Common Use Cases ***
+Data Migration:
+	Move on-premises data to Azure Blob Storage or to Azure Files.
+	Transfer data between different Azure Storage accounts or regions.
+
+Backup and Restore:
+	Backup local data to Azure for disaster recovery.
+	Restore data from Azure storage to on-premises systems.
+
+Data Synchronization:
+	Sync specific files or folders between a local system and Azure storage.
+	Keep datasets up-to-date between storage accounts.
+
+Log Management: Upload server logs, application logs, or diagnostics to Azure Blob Storage for analysis.
+
+Integration with CI/CD Pipelines: Automate storage updates or backups as part of a DevOps workflow.
+
+Archiving: Transfer large datasets to Azure for long-term archival.
+
+*** AzCopy Example Commands *** 
+Upload Files to Blob Storage: 
+	azcopy copy "/path/to/local/files" "https://<storage_account>.blob.core.windows.net/<container>/<SAS_token>"
+
+Download Files from Blob Storage:
+	azcopy copy "https://<storage_account>.blob.core.windows.net/<container>/<SAS_token>" "/path/to/local/destination"
+
+Synchronize a Directory:
+	azcopy sync "/local/directory" "https://<storage_account>.blob.core.windows.net/<container>/<SAS_token>"
+
+List Files in a Container:
+	azcopy list "https://<storage_account>.blob.core.windows.net/<container>/<SAS_token>"
+
+Remove Files from Blob Storage:
+	azcopy remove "https://<storage_account>.blob.core.windows.net/<container>/<SAS_token>"
+
+*** Features of AzCopy Synchronization ***
+Directional Sync:
+Source to Destination: Changes from the source are replicated to the destination. This includes uploading new files and deleting files at the destination if they no longer exist at the source (if configured).
+
+Incremental Transfers:
+Only modified or new files are transferred. Files that are identical between source and destination are skipped, saving time and bandwidth.
+
+File and Directory Filters:
+Sync specific files or exclude certain files using wildcard patterns.
+
+Cross-Environment Support:
+	Sync between:
+		Local storage and Azure Blob Storage.
+		Azure Blob Storage containers.
+		Azure Files.
+
+Deletion Options:
+By default, AzCopy will not delete files from the destination.
+Use the --delete-destination flag to remove files at the destination that are no longer present at the source. 
+
+Monitor Logs: Use AzCopy’s log files to troubleshoot or verify successful transfers.
+
+Use the --dry-run Option. Preview which files will be transferred or deleted without making any changes:
+	azcopy sync "/local/directory" "https://<storage_account>.blob.core.windows.net/<container>/<SAS_token>" --dry-run
+
+Authenticate Securely: Prefer Azure AD credentials or SAS tokens for secure access to storage accounts.
+Automate with Scripts: Integrate AzCopy sync commands into scheduled tasks or DevOps pipelines for regular updates.	
+---
+File shares in Azure are a storage solution provided by Azure Files, a service within the Azure Storage platform. They are fully managed, 
+cloud-based file shares that can be accessed via the Server Message Block (SMB) protocol or the Network File System (NFS) protocol. This 
+makes them ideal for scenarios where multiple users or applications need access to the same files.
+
+*** Key Features of File Shares ***
+Access via Standard Protocols:
+	SMB Protocol: Supports Windows, macOS, and Linux systems.
+	NFS Protocol: Designed for Linux/UNIX-based systems.
+
+Cross-Platform Compatibility: Azure file shares can be mounted on operating systems like Windows, Linux, and macOS, as well as 
+                              accessed programmatically via REST APIs or SDKs.
+
+Integration with Azure Services: File shares can be used as storage for Azure Kubernetes Service (AKS) pods, Azure Virtual Machines 
+                                 (VMs), and other Azure services.
+
+Hybrid Use Cases:
+Use Azure File Sync to cache Azure file shares on on-premises Windows Servers for faster access while leveraging cloud scalability.
+
+Security Features: Supports Azure Active Directory (Azure AD) authentication and role-based access control (RBAC).
+	               Data can be encrypted both in transit and at rest.
+
+Scalability: Each file share can scale up to 100 TiB in the premium tier, supporting high throughput and low latency 
+             for demanding workloads.
+
+Hybrid Environments: Integrate Azure file shares with on-premises servers using Azure File Sync, enabling fast local access 
+                     with cloud backup
+
+Standard File Shares:
+	Designed for general-purpose file storage.
+	Available in the cool and hot access tiers for cost optimization.
+
+Premium File Shares:
+	Provides high-performance, low-latency file storage.
+	Ideal for I/O-intensive workloads like databases or media processing.
+	Capacity up to 100 TiB.
 ---------------------------------------------------------------
 Azure_Virtual_Desktop
 
@@ -304,6 +596,7 @@ manage identities and access for users and applications that reside in the cloud
 Azure Virtual Desktop lets you use Windows 10 or Windows 11 Enterprise multi-session which is the only Windows client-based 
 operating systems that enables multiple concurrent users on a single VM. You can think of an Azure network as an extension 
 of your on-premises network with resources that link to other Azure resources.
+
 ---------------------------------------------------------------
 Azure_Virtual_Networking
 
