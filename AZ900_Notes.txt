@@ -87,6 +87,8 @@ Device management: Along with accounts for individuals, Entra ID supports the re
 devices to be managed through tools like Microsoft Intune. Entra ID also allows for device-based Conditional Access policies to 
 restrict access attempts to only those coming from known devices
 
+Application management: You can manage your cloud and on-premises apps by using Microsoft Entra ID.
+
 If you only had an on-premises environment running Active Directory and a cloud deployment using Microsoft Entra ID, you would 
 need to maintain two identity sets. However, you can connect Active Directory with Microsoft Entra ID, enabling a consistent 
 identity experience between cloud and on-premises server.
@@ -104,35 +106,94 @@ Authentication and Authorization:
 Domains provide centralized authentication using protocols like Kerberos or NTLM. Users and devices authenticate against the 
 domain controller to access resources securely.
 
+* The acronym NTLM stands for NT LAN Manager. It is a suite of Microsoft security protocols designed to provide authentication, 
+integrity, and confidentiality in a network. NTLM is used to authenticate users and devices within a network.
+It is primarily used in Windows environments for legacy systems or when modern protocols like Kerberos cannot be used.
+
 Domain Controller (DC): - A component of the domain.
 A server that manages the domain's directory database and provides authentication services like authentication, authorization, 
 and policy enforcement for domain members.
 
 Active Directory (AD): A Windows-based directory service used to store information about objects (users, computers, groups) within the domain.
-Trust Relationships: Allows users in one domain to access resources in another.
+Trust Relationships: Allows users in one domain to access resources in another domain.
 
 Domains are Identified by a unique name, such as example.com or corp.local.
 
+Group Policy is not supported in Azure AD, but is supported in Microsoft Entra Domain Services.
+Use Azure AD for Modern apps and services and use Microsoft Entra Domain Services for legacy apps and hybrid integration.
+---
 Group Policy Management:
-Administrators define settings (e.g., password policies, desktop configurations) centrally using Group Policy Objects (GPOs).
-These settings are applied automatically to all users and devices in the domain. Group policy provides centralized configuration 
-and policy management for domain-joined resources.
+Administrators define settings, such as password policies, desktop configurations, centrally using Group Policy Objects (GPOs).
+These settings are applied automatically to all users and devices in the domain. 
 
-Users log in once (Single Sign-On) to access multiple resources within the domain.
+Group policy Management provides centralized configuration and policy management for domain-joined resources.
+
+With Single Sign-On users log in once to access multiple resources within the domain.
 Domains can support thousands of devices and users, making them suitable for small businesses to large enterprises.
-Easily share files, printers, and other resources among users in the domain.
-
+You can easily share files, printers, and other resources among users in the domain.
 
 Microsoft Entra Domain Services can be deployed into a virtual network in Azure.
 Entra Domain Services enables Azure VMs to join the domain and leverage centralized management and authentication.
+---
+Entra Domain Services integrates with on-premises AD through Azure AD Connect, enabling synchronization of users and credentials 
+and Unified authentication for on-premises and cloud resources. Entra Domain Services provide domain services in the cloud for 
+applications and resources hosted in Azure.
 
-Entra Domain Services integrates with on-premises AD through Azure AD Connect, enabling:
-Synchronization of users and credentials and Unified authentication for on-premises and cloud resources.
-Provide domain services in the cloud for applications and resources hosted in Azure.
+The Entra Domain Services feature called Domain Join, allows Azure VMs and other resources to join the domain for centralized management.
 
-Group Policy is not supported in Azure AD, but is supported in Microsoft Entra Domain Services.
-Use Azure AD for Modern apps and services and use Microsoft Entra Domain Services for legacy apps and hybrid integration.
+Microsoft Entra Domain Services is a service that provides managed domain services such as domain join, group policy, lightweight 
+directory access protocol (LDAP), and Kerberos/NTLM authentication. Just like Microsoft Entra ID lets you use directory services 
+without having to maintain the infrastructure supporting it, with Microsoft Entra Domain Services, you get the benefit of domain 
+services without the need to deploy, manage, and patch domain controllers (DCs) in the cloud.
 
+A Microsoft Entra Domain Services managed domain lets you run legacy applications in the cloud that can't use modern authentication 
+methods, or where you don't want directory lookups to always go back to an on-premises Active Directory Domain Service environment. 
+You can lift and shift those legacy applications from your on-premises environment into a managed domain, without needing to manage 
+the Active Directory Domain Service environment in the cloud.
+
+Microsoft Entra Domain Services integrates with your existing Microsoft Entra tenant. This integration lets users sign into services 
+and applications connected to the managed domain using their existing credentials. You can also use existing groups and user accounts 
+to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure.
+
+When you create a Microsoft Entra Domain Services managed domain, you define a unique namespace. This namespace is the domain name. 
+Two Windows Server domain controllers are then deployed into your selected Azure region. This deployment of domain controllers is 
+known as a replica set. You don't need to manage, configure, or update these domain controllers. The Azure platform handles the 
+domain controllers as part of the managed domain, including backups and encryption at rest using Azure Disk Encryption.
+
+If you had an on-premises environment running Active Directory and a cloud deployment using Microsoft Entra ID, you would need to 
+maintain two identity sets. However, you can connect Active Directory with Microsoft Entra ID, enabling a consistent identity 
+experience between cloud and on-premises.
+
+One method of connecting Microsoft Entra ID with your on-premises AD is using Microsoft Entra Connect. Microsoft Entra Connect 
+synchronizes user identities between on-premises Active Directory and Microsoft Entra ID. Microsoft Entra Connect synchronizes 
+changes between both identity systems, so you can use features like SSO, multifactor authentication, and self-service password 
+reset under both systems.
+
+A managed domain is configured to perform a one-way synchronization from Microsoft Entra ID to Microsoft Entra Domain Services. 
+You can create resources directly in the managed domain, but they aren't synchronized back to Microsoft Entra ID. In a hybrid 
+environment with an on-premises AD DS environment, Microsoft Entra Connect synchronizes identity information with Microsoft Entra ID, 
+which is then synchronized to the managed domain.
+
+* Multifactor Authentication (MFA) is a security process that requires users to verify their identity using two or more distinct 
+factors before gaining access to a system, application, or account. Examples are passwords, PINs, security questions, smartphone, 
+hardware token, smart card, fingerprints, facial recognition and voice recognition.
+
+Microsoft Entra multifactor authentication is a Microsoft service that provides multifactor authentication capabilities.
+Passwordless authentication methods are more convenient because the password is removed and replaced with something you have, plus 
+something you are, or something you know.
+
+Microsoft global Azure and Azure Government offer three passwordless authentication options that integrate with Microsoft Entra ID:
+Windows Hello for Business: Biometric and PIN credentials are directly tied to the user's PC.  Has public key infrastructure (PKI) 
+integration and built-in support for single sign-on (SSO),
+
+Microsoft Authenticator app: Turns any iOS or Android phone into a strong, passwordless credential. Users can sign-in to any 
+platform or browser by getting a notification to their phone, matching a number displayed on the screen to the one on their phone, 
+and then using their biometric (touch or face) or PIN to confirm. 
+
+FIDO2 security keys: (Fast IDentity Online) FIDO2 security keys are an unphishable standards-based passwordless authentication 
+method that can come in any form factor. Fast Identity Online (FIDO) is an open standard for passwordless authentication. FIDO 
+allows users and organizations to leverage the standard to sign-in to their resources without a username or password by using an 
+external security key or a platform key built into a device.
 
 ---------------------------------------------------------------
 Azure_DNS
