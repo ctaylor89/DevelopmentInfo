@@ -210,9 +210,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StudyNotesToRecord", "Study
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cloud", "Cloud", "{87315A71-98D3-4E18-A60E-13798903C186}"
 	ProjectSection(SolutionItems) = preProject
-		AZ900_Notes.txt = AZ900_Notes.txt
+		AZ900.txt = AZ900.txt
 		Cloud\Azure.txt = Cloud\Azure.txt
 		AzureToAWS.txt = AzureToAWS.txt
+		Azure01_Learn.txt = Azure01_Learn.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolePracticeCSharp", "ConsolePracticeCSharp\ConsolePracticeCSharp.csproj", "{9B0FC2A6-6A0A-4C7E-8851-2FC4B261C4DE}"
