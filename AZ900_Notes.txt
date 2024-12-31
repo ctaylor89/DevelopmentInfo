@@ -16,7 +16,9 @@ Random_Notes
 Technical_Terms
 You_should_be_able_to
 *Left off: https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/8-virtual-network
-
+Achievements: 
+Microsoft Azure Fundamentals: Describe Azure architecture and services
+Describe Azure identity, access, and security
 ---------------------------------------------------------------
 Application_Hosting_Options
 
@@ -155,6 +157,10 @@ Microsoft Entra Domain Services integrates with your existing Microsoft Entra te
 and applications connected to the managed domain using their existing credentials. You can also use existing groups and user accounts 
 to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure.
 
+* A Microsoft Entra tenant is a dedicated instance of Microsoft's identity and access management services for an organization. It is 
+the backbone of identity management in Microsoft Entra and provides the infrastructure to manage users, groups, applications, 
+and access to resources securely.
+
 When you create a Microsoft Entra Domain Services managed domain, you define a unique namespace. This namespace is the domain name. 
 Two Windows Server domain controllers are then deployed into your selected Azure region. This deployment of domain controllers is 
 known as a replica set. You don't need to manage, configure, or update these domain controllers. The Azure platform handles the 
@@ -171,8 +177,8 @@ reset under both systems.
 
 A managed domain is configured to perform a one-way synchronization from Microsoft Entra ID to Microsoft Entra Domain Services. 
 You can create resources directly in the managed domain, but they aren't synchronized back to Microsoft Entra ID. In a hybrid 
-environment with an on-premises AD DS environment, Microsoft Entra Connect synchronizes identity information with Microsoft Entra ID, 
-which is then synchronized to the managed domain.
+environment with an on-premises AD DS environment, Microsoft Entra Connect synchronizes identity information with Microsoft 
+Entra ID, which is then synchronized to the managed domain.
 
 * Multifactor Authentication (MFA) is a security process that requires users to verify their identity using two or more distinct 
 factors before gaining access to a system, application, or account. Examples are passwords, PINs, security questions, smartphone, 
@@ -183,18 +189,176 @@ Passwordless authentication methods are more convenient because the password is 
 something you are, or something you know.
 
 Microsoft global Azure and Azure Government offer three passwordless authentication options that integrate with Microsoft Entra ID:
-Windows Hello for Business: Biometric and PIN credentials are directly tied to the user's PC.  Has public key infrastructure (PKI) 
-integration and built-in support for single sign-on (SSO),
+1) Windows Hello for Business: Biometric and PIN credentials are directly tied to the user's PC.  Has public key infrastructure (PKI) 
+   integration and built-in support for single sign-on (SSO),
 
-Microsoft Authenticator app: Turns any iOS or Android phone into a strong, passwordless credential. Users can sign-in to any 
+2) Microsoft Authenticator app: Turns any iOS or Android phone into a strong, passwordless credential. Users can sign-in to any 
 platform or browser by getting a notification to their phone, matching a number displayed on the screen to the one on their phone, 
-and then using their biometric (touch or face) or PIN to confirm. 
+and then using their biometric (touch or face) or PIN to confirm.
 
-FIDO2 security keys: (Fast IDentity Online) FIDO2 security keys are an unphishable standards-based passwordless authentication 
+3) FIDO2 security keys: (Fast IDentity Online) FIDO2 security keys are an unphishable standards-based passwordless authentication 
 method that can come in any form factor. Fast Identity Online (FIDO) is an open standard for passwordless authentication. FIDO 
 allows users and organizations to leverage the standard to sign-in to their resources without a username or password by using an 
 external security key or a platform key built into a device.
+---
+Describe Azure external identities
+Microsoft Entra External ID refers to all the ways you can securely interact with users outside of your organization. With External 
+Identities, external users can "bring their own identities." Whether they have a corporate or government-issued digital identity, 
+or an unmanaged social identity like Google or Facebook, they can use their own credentials to sign in. The external user’s 
+identity provider manages their identity, and you manage access to your apps with Microsoft Entra ID or Azure AD B2C to keep your 
+resources protected.
 
+The following capabilities make up External Identities:
+1) Business to business (B2B) collaboration - Collaborate with external users by letting them use their preferred identity to sign-in 
+to your Microsoft applications.
+
+2) B2B direct connect - Establish a mutual, two-way trust with another Microsoft Entra organization for seamless collaboration. 
+
+3) Microsoft Azure Active Directory business to customer (B2C) - Publish modern SaaS apps or custom-developed apps 
+(excluding Microsoft apps) to consumers and customers, while using Azure AD B2C for identity and access management.
+---
+Conditional Access is a tool that Microsoft Entra ID uses to allow (or deny) access to resources based on identity signals. These 
+signals include who the user is, where the user is, and what device the user is requesting access from.
+
+Conditional Access provides a multifactor authentication experience for users. For example, a user might not be challenged for 
+second authentication factor if they're at a known location. However, they might be challenged for a second authentication factor 
+if their sign-in signals are unusual or they're at an unexpected location.
+
+Conditional Access is useful when you need to:
+1) Require multifactor authentication (MFA) to access an application depending on the requester’s role, location, or network. For 
+example, you could require MFA for administrators but not regular users or for people connecting from outside your corporate network.
+
+2) Require access to services only through approved client applications. For example, you could limit which email applications 
+are able to connect to your email service.
+
+3) Require users to access your application only from managed devices. A managed device is a device that meets your standards for 
+security and compliance.
+
+4) Block access from untrusted sources, such as access from unknown or unexpected locations.
+---
+XXXXXXXXXXXXXXXX Recorded to here. 12/31  1_AZ900.mp3
+Azure enables you to control access through Azure role-based access control (Azure RBAC).
+Azure provides built-in roles that describe common access rules for cloud resources. You can also define your own roles. Each role 
+has an associated set of access permissions that relate to that role.
+
+Role-based access control is applied to a scope, which is a resource or set of resources that this access applies to.
+
+Scopes include a management group(a collection of multiple subscriptions), a single subscription, a resource group, a single resource.
+Azure RBAC is hierarchical, in that when you grant access at a parent scope, those permissions are granted to all child scopes.
+
+Azure RBAC is enforced on any action that's initiated against an Azure resource that passes through Azure Resource Manager. 
+Resource Manager is a management service that provides a way to organize and secure your cloud resources.
+
+You typically access Resource Manager from the Azure portal, Azure Cloud Shell, Azure PowerShell, and the Azure CLI. Azure 
+RBAC doesn't enforce access permissions at the application or data level.
+---
+Describe defense-in-depth.  Layers of defense-in-depth
+https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/8-describe-defense-depth
+---
+https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/9-describe-microsoft-defender-for-cloud
+Defender for Cloud is a monitoring tool for security posture management and threat protection. Defender for Cloud monitors your 
+cloud, on-premises, hybrid, and multicloud environments to provide guidance and notifications aimed at strengthening your 
+security posture.
+
+Defender for Cloud provides the tools needed to harden your resources, track your security posture, protect against cyber attacks, 
+and streamline security management. Deployment of Defender for Cloud is easy, it’s already natively integrated to Azure.
+
+When necessary, Defender for Cloud can automatically deploy a Log Analytics agent to gather security-related data. For Azure 
+machines, deployment is handled directly. For hybrid and multicloud environments, Microsoft Defender plans are extended to non-Azure 
+machines with the help of Azure Arc. Cloud security posture management (CSPM) features are extended to multicloud machines without 
+the need for any agents(See below) to be installed.
+
+* The word "agents" refers to software components or programs installed on a machine (virtual or physical) to enable communication, 
+monitoring, and management with a central system or service. These agents act as intermediaries, collecting data from the machine 
+or performing tasks based on instructions from the central service.
+
+Role of Agents in Cloud and Security Management
+Data Collection: Agents gather telemetry data, such as system performance, configuration, and security logs.
+Task Execution: Agents can execute commands, enforce security policies, or remediate issues on the machine.
+Communication: Agents send the collected data to a management platform (e.g., Azure) and receive instructions in return.
+Customization: Agents are typically designed to support specific features or integrate with services like Microsoft Defender.
+
+For agent base approaches, you can install the Azure Monitor Agent or Microsoft Defender for Endpoint agent on a machine.
+Agentless based approaches do not require any software to be installed on the machines.
+
+Defender for Cloud can also protect resources in other clouds (such as AWS and GCP).
+For example, if you've connected an Amazon Web Services (AWS) account to an Azure subscription, you can enable any of these protections:
+1) Defender for Cloud's CSPM features extend to your AWS resources. This agentless plan assesses your AWS resources according to 
+   AWS-specific security recommendations, and includes the results in the secure score. The resources will also be assessed for 
+   compliance with built-in standards specific to AWS (AWS CIS, AWS PCI DSS, and AWS Foundational Security Best Practices). Defender 
+   for Cloud's asset inventory page is a multicloud enabled feature helping you manage your AWS resources alongside your Azure resources.
+2) Microsoft Defender for Containers extends its container threat detection and advanced defenses to your Amazon EKS Linux clusters.
+3) Microsoft Defender for Servers brings threat detection and advanced defenses to your Windows and Linux EC2 instances.
+
+Defender for Cloud fills three vital needs as you manage the security of your resources and workloads in the cloud and on-premises:
+1) Continuously assess – Know your security posture. Identify and track vulnerabilities.
+2) Secure – Harden resources and services with Azure Security Benchmark.
+3) Defend – Detect and resolve threats to resources, workloads, and services.
+
+Defender for cloud helps you continuously assess your environment. Defender for Cloud includes vulnerability assessment solutions 
+for your virtual machines, container registries, and SQL servers. Microsoft Defender for servers includes automatic, native 
+integration with Microsoft Defender for Endpoint. With this integration enabled, you'll have access to the vulnerability findings 
+from Microsoft threat and vulnerability management.
+
+Between Defender for cloud and Microsoft Defender for Endpoint tools you’ll have regular, detailed vulnerability scans that cover 
+your compute, data, and infrastructure. You can review and respond to the results of these scans all from within Defender for Cloud.
+
+Secure
+From authentication methods to access control to the concept of Zero Trust, security in the cloud is an essential basic that must 
+be done right. In order to be secure in the cloud, you have to ensure your workloads are secure. To secure your workloads, you need 
+security policies in place that are tailored to your environment and situation. Because policies in Defender for Cloud are built 
+on top of Azure Policy controls, you're getting the full range and flexibility of a world-class policy solution. In Defender for 
+Cloud, you can set your policies to run on management groups, across subscriptions, and even for a whole tenant.
+
+One of the benefits of moving to the cloud is the ability to grow and scale as you need, adding new services and resources as 
+necessary. Defender for Cloud is constantly monitoring for new resources being deployed across your workloads. Defender for Cloud 
+assesses if new resources are configured according to security best practices. If not, they're flagged and you get a prioritized 
+list of recommendations for what you need to fix. Recommendations help you reduce the attack surface across each of your resources.
+
+The list of recommendations is enabled and supported by the Azure Security Benchmark. This Azure-specific benchmark provides a set 
+of guidelines for security and compliance best practices based on common compliance frameworks. In this way, Defender for Cloud 
+enables you not just to set security policies, but to apply secure configuration standards across your resources.
+
+To help you understand how important each recommendation is to your overall security posture, Defender for Cloud groups the 
+recommendations into security controls and adds a secure score value to each control. The secure score gives you an at-a-glance 
+indicator of the health of your security posture, while the controls give you a working list of things to consider to improve your 
+security score and your overall security posture.
+
+Defend
+The first two areas were focused on assessing, monitoring, and maintaining your environment. Defender for Cloud also helps you 
+defend your environment by providing security alerts and advanced threat protection features.
+
+Security alerts
+When Defender for Cloud detects a threat in any area of your environment, it generates a security alert.
+1) Security alerts describe details of the affected resources
+2) Security alerts suggest remediation steps
+3) Security alerts provide, in some cases, an option to trigger a logic app in response
+
+Whether an alert is generated by Defender for Cloud or received by Defender for Cloud from an integrated security product, you 
+can export it. Defender for Cloud's threat protection includes fusion kill-chain analysis, which automatically correlates alerts 
+in your environment based on cyber kill-chain analysis, to help you better understand the full story of an attack campaign, where 
+it started, and what kind of impact it had on your resources.
+
+Advanced threat protection
+Defender for cloud provides advanced threat protection features for many of your deployed resources, including virtual machines, 
+SQL databases, containers, web applications, and your network. Protections include securing the management ports of your VMs with 
+just-in-time access, and adaptive application controls to create allowlists for what apps should and shouldn't run on your machines.
+
+Which Microsoft Entra tool can vary the credentials needed to log in based on signals, such as where the user is located? 
+Answer: Conditional Access is a tool that Microsoft Entra ID uses to allow (or deny) access to resources based on identity signals. 
+Conditional Access might challenge you for a second authentication factor if your sign-in signals are unusual or from an unexpected 
+location.
+
+** Learning objectives
+You should now be able to:
+Describe directory services in Azure, including Microsoft Entra ID and Microsoft Entra Domain Services.
+Describe authentication methods in Azure, including single sign-on (SSO), multifactor authentication (MFA), and passwordless.
+Describe external identities and guest access in Azure.
+Describe Microsoft Entra Conditional Access.
+Describe Azure Role Based Access Control (RBAC).
+Describe the concept of Zero Trust.
+Describe the purpose of the defense in depth model.
+Describe the purpose of Microsoft Defender for Cloud.
 ---------------------------------------------------------------
 Azure_DNS
 
