@@ -1,0 +1,235 @@
+Cloud_Service_Types
+Governance_And_Compliance
+Learning_Objectives
+Links_
+
+------------------------------------------------------------
+Cloud_Service_Types
+
+Some common scenarios where IaaS might make sense include:
+	Lift-and-shift migration: You’re setting up cloud resources similar to your on-prem datacenter, and then simply moving the 
+	things running on-prem to running on the IaaS infrastructure.
+
+	Testing and development: You have established configurations for development and test environments that you need to rapidly 
+	replicate. You can start up or shut down the different environments rapidly with an IaaS structure, while maintaining complete control.
+
+Platform as a service (PaaS) is a middle ground between renting space in a datacenter (infrastructure as a service) and paying for 
+a complete and deployed solution (software as a service). In a PaaS environment, the cloud provider maintains the physical 
+infrastructure, physical security, and connection to the internet. They also maintain the operating systems, middleware, 
+development tools, and business intelligence services that make up a cloud solution. In a PaaS scenario, you don't have to worry about 
+the licensing or patching for operating systems and databases.
+
+Some common scenarios where PaaS might make sense include:
+
+Development framework: PaaS provides a framework that developers can build upon to develop or customize cloud-based applications. 
+Similar to the way you create an Excel macro, PaaS lets developers create applications using built-in software components. 
+
+Analytics or business intelligence: Tools provided as a service with PaaS allow organizations to analyze and mine their data, 
+finding insights and patterns and predicting outcomes to improve forecasting, product design decisions, investment returns, and 
+other business decisions.
+
+Software as a service (SaaS) is the most complete cloud service model from a product perspective. With SaaS, you’re essentially 
+renting or using a fully developed application. 
+------------------------------------------------------------
+Private cloud
+It’s a cloud (delivering IT services over the internet) that’s used by a single entity. A private cloud may be hosted from your 
+on site datacenter. It may also be hosted in a dedicated datacenter offsite, potentially even by a third party that has dedicated 
+that datacenter to your company.
+
+Public cloud
+A public cloud is built, controlled, and maintained by a third-party cloud provider. With a public cloud, anyone that wants to 
+purchase cloud services can access and use resources. 
+---
+Hybrid cloud - Definition 1 (Combines public and private clouds in an inter-connected environment)
+A hybrid cloud is a computing environment that uses both public and private clouds in an inter-connected environment. A hybrid 
+cloud environment can be used to allow a private cloud to surge for increased, temporary demand by deploying public cloud 
+resources. Hybrid cloud can be used to provide an extra layer of security. For example, users can flexibly choose which services 
+to keep in public cloud and which to deploy to their private cloud infrastructure.
+
+Hybrid cloud - Definition 2 (Combines on-premises data centers (private cloud) with public cloud services)
+A hybrid cloud model is an infrastructure approach that combines on-premises data centers (private cloud) with public cloud services, 
+such as Microsoft Azure, to create a unified, flexible, and scalable computing environment. It enables organizations to run workloads 
+and manage resources seamlessly across both environments while benefiting from the strengths of each.
+---
+Multi-cloud
+A multi-cloud model refers to an infrastructure strategy where an organization uses services from multiple cloud providers, such as 
+Microsoft Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and others. This approach enables businesses to distribute 
+workloads, optimize performance, enhance reliability, and avoid vendor lock-in by leveraging the strengths of different cloud 
+platforms. multi-cloud scenario, you use multiple public cloud providers. Maybe you use different features from different 
+cloud providers.
+
+Azure Arc
+Azure Arc is a set of technologies that helps manage your cloud environment. Azure Arc can help manage your cloud environment, 
+whether it's a public cloud solely on Azure, a private cloud in your datacenter, a hybrid configuration, or even a multi-cloud 
+environment running on multiple cloud providers at once. For hybrid and multicloud environments, Microsoft Defender plans are 
+extended to non-Azure machines with the help of Azure Arc. 
+
+Azure VMware Solution (AVS) is a Microsoft service that allows organizations to seamlessly run VMware workloads natively in Azure. 
+It provides a fully managed environment that integrates VMware infrastructure with Azure services, enabling businesses to extend 
+or migrate their on-premises VMware environments to the cloud without refactoring applications or changing operational processes. 
+------------------------------------------------------------
+Governance_And_Compliance
+
+Microsoft Purview is a comprehensive, unified data governance solution that helps organizations discover, manage, protect, and 
+govern their data assets across on-premises, multi-cloud, and SaaS environments. It provides tools for compliance, risk management, 
+and data security to help organizations meet regulatory requirements, protect sensitive information, and enable better data-driven 
+decision-making. Microsoft Purview extends to external sources, providing a centralized governance layer.
+
+Data Discovery and Classification: 
+Automatically scans and classifies data assets across Azure, AWS, Google Cloud, and on-premises systems.
+Identifies sensitive information, such as Personally Identifiable Information (PII), to ensure compliance with privacy regulations.
+
+Data Catalog: Provides a searchable data map to enable users to find and understand data assets across the organization.
+Includes metadata management and lineage tracking to understand how data flows through systems.
+Data Governance:
+
+Allows organizations to set and enforce data policies, access controls, and usage guidelines.
+Helps maintain data consistency, quality, and compliance.
+
+Risk and Compliance Management:
+Enables monitoring of data risks and ensures alignment with regulatory standards like GDPR, HIPAA, and CCPA.
+Provides tools for managing audits and tracking data access.
+---
+Use Cases for Microsoft Purview:
+Regulatory Compliance: Ensure adherence to privacy laws and standards by identifying and managing sensitive data.
+Data Governance: Centralize data governance practices to create a unified view of organizational data.
+Risk Management: Identify potential risks related to data exposure or misuse and take proactive measures.
+Data Discovery for Business Intelligence: Enable employees to find and use data efficiently for analytics and decision-making.
+Hybrid and Multi-Cloud Data Management: Govern data across different environments, including on-premises and multi-cloud systems.
+
+* Lineage tracking refers to the process of understanding, visualizing, and documenting the journey of data as it flows through 
+systems, applications, and processes. It provides a detailed view of where data originates, how it transforms, and where it ends up.
+---
+Azure Policy is a service in Azure that enables you to create, assign, and manage policies that control or audit your resources. 
+These policies enforce different rules across your resource configurations so that those configurations stay compliant with 
+corporate standards.
+
+Azure Policy enables you to define both individual policies and groups of related policies, known as initiatives. Azure Policy 
+evaluates your resources and highlights resources that are not compliant with the policies you've created. Azure Policy can also 
+prevent noncompliant resources from being created.
+
+Azure Policies can be set at each level, enabling you to set policies on a specific resource, resource group, subscription, and 
+so on. Additionally, Azure Policies are inherited by the lower levels.
+
+Azure Policy comes with built-in policy and initiative definitions for Storage, Networking, Compute, Security Center, and Monitoring. 
+For example, if you define a policy that allows only a certain size for the virtual machines (VMs) to be used in your environment, 
+that policy is invoked when you create a new VM and whenever you resize existing VMs. Azure Policy also evaluates and monitors all 
+current VMs in your environment, including VMs that were created before the policy was created.
+
+In some cases, Azure Policy can automatically remediate noncompliant resources and configurations to ensure the integrity of the 
+state of the resources. For example, if all resources in a certain resource group should be tagged with AppName tag and a value of 
+"SpecialOrders," Azure Policy will automatically apply that tag if it is missing. If you have a specific resource that you don’t 
+want Azure Policy to automatically fix, you can flag that resource as an exception 
+
+Azure Policy also integrates with Azure DevOps by applying any continuous integration and delivery pipeline policies that pertain 
+to the pre-deployment and post-deployment phases of your applications. An Azure Policy initiative is a way of grouping related 
+policies together. The initiative definition contains all of the policy definitions to help track your compliance state.
+---
+Resource locks prevent resources from being deleted or updated, depending on the type of lock. Resource locks can be applied to 
+individual resources, resource groups, or even an entire subscription. Resource locks are inherited. There are two types of 
+resource locks: 
+	Delete means authorized users can still read and modify a resource, but they can't delete the resource.
+	ReadOnly means authorized users can read a resource, but they can't delete or update the resource. 
+
+You can manage resource locks from the Azure portal, PowerShell, the Azure CLI, or from an Azure Resource Manager template.
+Resource locks apply regardless of RBAC permissions. Even if you're an owner of the resource, you must still remove the 
+lock before you can perform the blocked activity.
+
+------------------------------------------------------------
+Learning_Objectives
+
+Describe the benefits of high availability and scalability in the cloud.
+Describe the benefits of reliability and predictability in the cloud.
+Describe the benefits of security and governance in the cloud.
+Describe the benefits of manageability in the cloud.
+
+Describe infrastructure as a service (IaaS).
+Describe platform as a service (PaaS).
+Describe software as a service (SaaS).
+Identify appropriate use cases for each cloud service (IaaS, PaaS, SaaS).
+------------------------------------------------------------
+Random_Notes
+
+High availability focuses on ensuring maximum availability, regardless of disruptions or events that may occur.
+
+Scalability refers to the ability to adjust resources to meet demand.
+
+With vertical scaling, if you were developing an app and you needed more processing power, you could vertically scale up to 
+add more CPUs or RAM to the virtual machine.
+
+With horizontal scaling, if you suddenly experienced a steep jump in demand, your deployed resources could be scaled out 
+(either automatically or manually). For example, you could add additional virtual machines or containers, scaling out.
+
+Reliability is the ability of a system to recover from failures and continue to function.
+
+Predictability can be focused on performance predictability or cost predictability.
+
+Performance predictability focuses on predicting the resources needed to deliver a positive experience for your customers. 
+Autoscaling, load balancing, and high availability are just some of the cloud concepts that support performance predictability. If 
+you suddenly need more resources, autoscaling can deploy additional resources to meet the demand, and then scale back when the 
+demand drops. Or if the traffic is heavily focused on one area, load balancing will help redirect some of the overload to less 
+stressed areas.
+
+Cost predictability is focused on predicting or forecasting the cost of the cloud spend. With the cloud, you can track your 
+resource use in real time, monitor resources to ensure that you’re using them in the most efficient way, and apply data analytics 
+to find patterns and trends that help better plan resource deployments. By operating in the cloud and using cloud analytics and 
+information, you can predict future costs and adjust your resources as needed. You can even use tools like the Total Cost of 
+Ownership (TCO) or Pricing Calculator to get an estimate of potential cloud spend.
+
+Whether you’re deploying infrastructure as a service or software as a service, cloud features support governance and compliance. 
+Things like set templates help ensure that all your deployed resources meet corporate standards and government regulatory 
+requirements. Plus, you can update all your deployed resources to new standards as standards change. Cloud-based auditing helps 
+flag any resource that’s out of compliance with your corporate standards and provides mitigation strategies. Depending on your 
+operating model, software patches and updates may also automatically be applied, which helps with both governance and security.
+
+Management of the cloud speaks to managing your cloud resources. In the cloud, you can:
+	Automatically scale resource deployment based on need.
+	Deploy resources based on a preconfigured template, removing the need for manual configuration.
+	Monitor the health of resources and automatically replace failing resources.
+	Receive automatic alerts based on configured metrics, so you’re aware of performance in real time.
+
+Management in the cloud speaks to how you’re able to manage your cloud environment and resources. 
+You can manage your cloud environment and resources:
+	Through a web portal.
+	Using a command line interface.
+	Using APIs.
+	Using PowerShell.
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+
+
+
+

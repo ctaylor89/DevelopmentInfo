@@ -1,0 +1,47 @@
+The AZ-900: Microsoft Azure Fundamentals exam covers foundational knowledge of cloud concepts and core Azure services. 
+Below are the key topics divided into domains, along with the percentage of questions likely to come from each area:
+
+1. Cloud Concepts (25-30%)
+Benefits of cloud computing: 
+High availability, scalability, elasticity, agility, disaster recovery, and cost considerations.
+Cloud service models: Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).
+Cloud deployment models: Public, private, and hybrid cloud.
+Principles of economies of scale: Cost savings from shared resources.
+
+2. Azure Core Services (15-20%)  What is it and what is the purpose(or advantage) of each
+Core Azure architectural components:
+Azure Regions, Region Pairs, Availability Zones, Resource Groups, Subscriptions, and Management Groups.
+
+Core Azure services and products:
+Compute (e.g., Virtual Machines, Azure Kubernetes Service).
+Networking (e.g., Virtual Networks, VPN Gateway, Azure CDN).
+Storage (e.g., Blob Storage, Disk Storage, File Storage).
+Databases (e.g., Azure SQL Database, Cosmos DB).
+
+Core Azure solutions: Internet of Things (IoT), AI and machine learning, serverless computing, and DevOps.
+
+3. Security, Privacy, Compliance, and Trust (25-30%)
+Azure Security: Azure Security Center, Azure Sentinel, Role-Based Access Control (RBAC) and identity management, 
+                Network security groups (NSGs), Azure Firewall, Azure DDoS Protection.
+                .
+Azure identity and governance: Azure Active Directory (AAD), Conditional Access and MFA, Azure Policy, Blueprints, 
+                               Azure Active Directory (Azure AD), resource tagging and Locks.
+                               Monitoring tools like Azure Monitor, Log Analytics, and Application Insight
+
+Trust and compliance:
+Microsoft Privacy Statement, Trust Center, and Service Trust Portal.
+Azure compliance certifications.
+
+4. Azure Pricing and Support (20-25%)
+Cost management:
+Azure subscriptions, pricing, and factors affecting costs (e.g., region, type of service).
+Azure Cost Management and TCO (Total Cost of Ownership) Calculator.
+
+Service level agreements (SLAs):
+SLA metrics for Azure services (uptime, performance).
+Composite SLAs.
+
+Azure support plans:
+Basic, Developer, Standard, Professional Direct, and Premier.
+Azure Service Health and the knowledge base.
+

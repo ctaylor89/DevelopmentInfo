@@ -13,10 +13,14 @@ Serverless_Architecture
 
 "Do you desire the end result or do you desire to do the work to get to the end result. The first option is just wishfull thinking. 
 The second option is effort that results in personal growth"
+
+AZ900 Learn course
+https://learn.microsoft.com/en-us/collections/n6ga8m0jkgrwk
 -------------------------------------------------------------
 Tutorials_Article
 
-
+Build great solutions with the Microsoft Azure Well-Architected Framework 
+https://learn.microsoft.com/en-us/training/paths/azure-well-architected-framework/
 -------------------------------------------------------------
 Tutorials_Videos_PluralSight
 
