@@ -19,6 +19,8 @@ You_should_be_able_to
 Achievements: 
 Microsoft Azure Fundamentals: Describe Azure architecture and services
 Describe Azure identity, access, and security
+
+XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn.mp3
 ---------------------------------------------------------------
 Application_Hosting_Options
 
@@ -463,6 +465,9 @@ Planned Azure updates are rolled out to paired regions one region at a time to m
 Sovereign regions are instances of Azure that are isolated from the main instance of Azure. i.e. US government agencies.
 ---
 Azure management infrastructure includes Azure resources and resource groups, subscriptions, and accounts.
+A resource is the basic building block of Azure. Anything you create, provision, deploy, etc. is a resource.
+A resource is the basic building block of Azure. Anything you create, provision, deploy, etc. is a resource.
+A resource is the basic building block of Azure. Anything you create, provision, deploy, etc. is a resource.
 A resource is the basic building block of Azure. Anything you create, provision, deploy, etc. is a resource.
 
 Resource groups are simply groupings of resources. When you create a resource, you’re required to place it into a resource group. 

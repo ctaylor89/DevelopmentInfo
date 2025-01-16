@@ -1,0 +1,113 @@
+How to setup an Azure pipeline to upload files to AWS storage(EC2 or S3 bucket). Includes information on how to monitor the AWS storage accounts from Azure and how to setup protection for the uploaded data in AWS storage.
+
+Description:
+Our department currently uses an Azure pipeline to deliver files to an Azure service. We would like to have our Azure pipeline 
+deliver files to an AWS server. Here are the steps to follow in order to have our Azure pipeline deliver files 
+to an AWS production server instead of the Azure server we are currently using?
+
+To transition your Azure pipeline to deliver files to an AWS production server, follow these steps:
+
+1) Prepare the AWS Environment
+	a) Set Up AWS Server: Ensure the AWS production server is configured to receive files (e.g., S3 bucket, EC2 instance, or other services).
+	b)Create Access Credentials: Generate AWS access keys (Access Key ID and Secret Access Key) for a user with appropriate permissions to upload files.
+
+2) Install AWS Tools in Azure DevOps
+	a) Go to your Azure DevOps organization and navigate to your project.
+	b) Install the AWS Toolkit for Azure DevOps from the Visual Studio Marketplace.
+	c) This toolkit provides tasks to interact with AWS services directly from your Azure pipelines.
+
+3) In Azure DevOps configure the AWS Service Connection
+	a) Go to Project Settings > Service Connections > New Service Connection.
+	b) Choose AWS and provide your Access Key ID, Secret Access Key, and AWS region.
+	c) Azure DevOps:Save the service connection for use in your pipeline.
+
+4) Modify the Azure Pipeline
+	a) Edit your pipeline YAML file(see below) or Classic UI pipeline configuration to include tasks for uploading files to AWS.
+
+5. Test the Pipeline
+	a) Run the pipeline and ensure the files are correctly delivered to the AWS server.
+	b) Check logs for errors and validate delivery on the AWS side.
+	
+6. Update Notifications and Documentation
+	a) Notify your team of the changes.
+	b) Update documentation to reflect the new AWS configuration and delivery workflow.	
+
+--------------------------------------
+Follow this example to create a YAML file if the pipeline is uploading to an AWS S3 Bucket:
+Note: An S3 bucket is a storage container in the AWS Simple Storage Service. It's used to store and organize data, such as files, images and backups. It is the closest equivalent to Azure Blob Storage.
+--------------------------------------
+	trigger:
+	- main
+
+	pool:
+	  vmImage: 'ubuntu-latest'
+
+	steps:
+	- task: UsePythonVersion@0
+	  inputs:
+		versionSpec: '3.x'
+
+	- script: |
+		echo "Building files..."
+		# Your build steps here
+	  displayName: 'Build Files'
+
+	- task: AmazonWebServices.aws-cli@1
+	  inputs:
+		awsCredentials: '<YourAWSServiceConnection>'
+		regionName: 'us-east-1'
+		command: 's3'
+		arguments: 'cp ./output-file.txt s3://your-s3-bucket-name/path-to-folder/'
+--------------------------------------
+Follow this example to create a YAML file if the pipeline is uploading to an AWS EC2 Instance:
+Note: An EC2 instance in AWS is a virtual server that you can use to run applications in the cloud.
+--------------------------------------
+You can use SSH or other tools like SCP:
+
+yaml
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: '<YourAWSInstanceServiceConnection>'
+    runOptions: 'inline'
+    inline: |
+      echo "Copying files to EC2..."
+      scp output-file.txt user@your-ec2-instance:/path/to/destination
+
+--------------------------------------
+You can monitor AWS S3 buckets from your connected Azure account using Microsoft Purview. Microsoft Purview is a unified data governance tool that helps you manage and govern your data across multiple cloud platforms, including AWS.
+
+Here is how to set it up:
+1) Connect Your AWS Account: Authenticate and connect your AWS account to Microsoft Purview.
+2) Create an AWS Role: Create a dedicated role in AWS IAM (Identity and Access Management) to allow Microsoft Purview to access your S3 buckets.
+3) Configure Purview: Use Microsoft Purview to scan your S3 buckets and discover sensitive information types.
+--------------------------------------
+You can monitor an AWS EC2 instance from your connected Azure account using Azure Monitor and Azure Arc. 
+
+Here is how you can set it up:
+1) Connect Your AWS Account: Use the multicloud connector in the Azure portal to connect your AWS account. This involves deploying a CloudFormation template to your AWS account.
+
+2) Enable Azure Arc: Azure Arc allows you to manage and monitor your AWS EC2 instances as if they were Azure resources. This includes using standard Azure constructs like Azure Policy and applying tags
+
+3) Install Azure Monitor Agent: The Azure Monitor agent collects telemetry from the client operating system of your EC2 instances, allowing you to use the same data collection rules across your different cloud environments
+
+Note: Azure Arc is used to  manage your multi-cloud environment. For hybrid and multicloud environments, Microsoft Defender plans are extended to non-Azure machines with the help of Azure Arc.
+
+Microsoft Purview is a comprehensive, unified data governance solution that helps organizations discover, manage, protect, and govern their data assets across on-premises, multi-cloud, and SaaS environments. It provides tools for compliance, risk management, and data security.
+--------------------------------------
+To protect resources running in the AWS cloud, Microsoft Defender for Cloud's asset inventory page is a multicloud enabled feature helping you manage your AWS resources alongside your Azure resources.
+
+Once you've connected an Amazon Web Services (AWS) account to an Azure subscription, you can enable any of these protections:
+	1) Defender for Cloud's CSPM features extend to your AWS resources. This agentless plan assesses your AWS resources according to 
+	   AWS-specific security recommendations, and includes the results in the secure score. The resources will also be assessed for 
+	   compliance with built-in standards specific to AWS (AWS CIS, AWS PCI DSS, and AWS Foundational Security Best Practices). 
+
+	2) Microsoft Defender for Containers can protect data in an AWS S3 bucket.
+	3) Microsoft Defender for Servers brings threat detection and advanced defenses to your Windows and Linux EC2 instances.
+
+
+
+

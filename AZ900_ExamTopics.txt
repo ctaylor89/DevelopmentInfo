@@ -3,7 +3,10 @@ Below are the key topics divided into domains, along with the percentage of ques
 
 1. Cloud Concepts (25-30%)
 Benefits of cloud computing: 
-High availability, scalability, elasticity, agility, disaster recovery, and cost considerations.
+High availability, scalability, elasticity, agility, disaster recovery, and cost considerations. Agility refers to the 
+ability of an organization to quickly and efficiently adapt to changes in demand, technology, or market conditions using 
+cloud-based resources and services. 
+
 Cloud service models: Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).
 Cloud deployment models: Public, private, and hybrid cloud.
 Principles of economies of scale: Cost savings from shared resources.

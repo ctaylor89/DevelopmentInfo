@@ -1,4 +1,5 @@
 Cloud_Service_Types
+database_Services
 Governance_And_Compliance
 Learning_Objectives
 Links_
@@ -30,6 +31,98 @@ other business decisions.
 
 Software as a service (SaaS) is the most complete cloud service model from a product perspective. With SaaS, you’re essentially 
 renting or using a fully developed application. 
+------------------------------------------------------------
+database_Services
+
+Azure offers a wide range of database services to meet the needs of various applications and workloads. These services include 
+fully managed relational, non-relational, and hybrid database solutions. Below is an overview of the database services Azure provides:
+
+1. Relational Database Services - Azure offers several fully managed relational database options
+
+Azure SQL Database:
+	A fully managed relational database-as-a-service (DBaaS) built on Microsoft SQL Server.
+	Supports advanced features like AI-driven performance optimization, high availability, and scalability.
+	Ideal for modern cloud applications.
+
+Azure SQL Managed Instance:
+	Combines the broad SQL Server compatibility with the benefits of a fully managed platform.
+	Suitable for migrating on-premises SQL Server databases to the cloud with minimal changes.
+
+Azure Database for MySQL:
+	A fully managed MySQL database with features like automatic backups, scaling, and high availability.
+	Supports popular open-source tools and frameworks.
+
+Azure Database for PostgreSQL:
+	A fully managed PostgreSQL database with features like hyperscale (Citus) for horizontal scaling.
+	Ideal for high-performance analytics and large datasets.
+
+Azure Database for MariaDB:
+	A fully managed MariaDB database with features like high availability and security.
+	Compatible with existing MariaDB tools and frameworks.
+
+2. Non-Relational (NoSQL) Database Services - For applications requiring unstructured or semi-structured data storage, Azure provides:
+ 
+Azure Cosmos DB:
+A globally distributed, multi-model NoSQL database service.
+Supports key-value, graph, column-family, and document data models.
+Features low-latency data access, global distribution, and strong consistency.
+
+Azure Table Storage:
+	A NoSQL key-value store designed for semi-structured data.
+	Ideal for scenarios requiring fast and inexpensive storage for large datasets.
+
+3. Data Warehouse Services - For big data and analytical workloads, Azure offers:
+
+Azure Synapse Analytics:
+	An integrated analytics service that combines enterprise data warehousing with big data analytics.
+	Supports querying data on-demand using serverless options or provisioned resources.
+	Includes integration with Azure Data Lake and machine learning.
+
+4. Cache and In-Memory Databases
+Azure Cache for Redis:
+A fully managed in-memory cache that supports Redis protocols.
+Ideal for accelerating applications by reducing database query load and improving response times.
+
+5. Hybrid and On-Premises Databases
+SQL Server on Azure Virtual Machines:
+
+Run SQL Server in a virtual machine for full control over database management.
+Ideal for workloads requiring custom configurations or third-party software.
+Azure Arc-enabled Data Services:
+
+Extend Azure data services to on-premises, multi-cloud, or edge environments.
+Supports hybrid database scenarios with features like Azure SQL Managed Instance and PostgreSQL.
+6. Specialized Databases
+Azure Data Explorer:
+
+Optimized for real-time data exploration and analytics.
+Ideal for log and telemetry data analysis.
+Azure Managed Instance for Apache Cassandra:
+
+A managed version of Apache Cassandra for distributed NoSQL workloads.
+
+Key Benefits of Azure Database Services:
+Fully Managed: Services handle patching, backups, scaling, and monitoring.
+Global Scalability: Many services provide global replication and high availability.
+Integration: Seamless integration with other Azure services like AI, machine learning, and analytics.
+Security: Built-in encryption, compliance certifications, and identity management (e.g., Azure AD).
+Azure’s database offerings cater to a variety of scenarios, from small web applications to large-scale enterprise solutions, 
+making it a versatile platform for modern data needs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ------------------------------------------------------------
 Private cloud
 It’s a cloud (delivering IT services over the internet) that’s used by a single entity. A private cloud may be hosted from your 
@@ -147,6 +240,11 @@ Describe infrastructure as a service (IaaS).
 Describe platform as a service (PaaS).
 Describe software as a service (SaaS).
 Identify appropriate use cases for each cloud service (IaaS, PaaS, SaaS).
+
+Describe the purpose of Microsoft Purview.
+Describe the purpose of Azure Policy.
+Describe the purpose of resource locks.
+Describe the purpose of the Service Trust portal.
 ------------------------------------------------------------
 Random_Notes
 
@@ -194,6 +292,13 @@ You can manage your cloud environment and resources:
 	Using a command line interface.
 	Using APIs.
 	Using PowerShell.
+---
+The Microsoft Service Trust Portal (STP) is a valuable resource for Azure administrators, especially those responsible for security, 
+compliance, and governance. The Service Trust Portal provides access to tools, documentation, and information to help organizations 
+manage compliance and trust requirements in Azure and other Microsoft services.
+
+
+
 ------------------------------------------------------------
 
 
