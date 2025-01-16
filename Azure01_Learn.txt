@@ -20,13 +20,13 @@ Achievements:
 Microsoft Azure Fundamentals: Describe Azure architecture and services
 Describe Azure identity, access, and security
 
-XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn.mp3
+XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn.mp3ccvvvvvbbbbb
 ---------------------------------------------------------------
 Application_Hosting_Options
 
 App Service enables you to build and host web apps, background jobs, mobile back-ends, and RESTful APIs in the programming language 
 of your choice without managing infrastructure. It offers automatic scaling and high availability. App Service supports Windows and 
-Linux. It enables automated deployments from GitHub, Azure DevOps, or any Git repo to support a continuous deployment model.
+Linux. App Service enables automated deployments from GitHub, Azure DevOps, or any Git repo to support a continuous deployment model.
 
 With App Service, you can host most common App Service Styles like: Web apps, API apps, WebJobs and Mobile apps.
 
