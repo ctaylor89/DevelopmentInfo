@@ -2,3 +2,8 @@ How to disable new AI-based IntelliCode in VS 2022?
 https://stackoverflow.com/questions/70007337/how-to-disable-new-ai-based-intellicode-in-vs-2022
 Tools > Options > IntelliCode > General and uncheck whole line completions.
 ---------------------------
+How to Merge code
+
+Very good guide to do a 3 way merge using VS Code
+https://www.youtube.com/watch?v=HosPml1qkrg
+

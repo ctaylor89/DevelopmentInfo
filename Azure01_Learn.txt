@@ -13,6 +13,7 @@ Exercises_
 Learning_Links
 Missed_Questions
 Random_Notes
+Service_Level_Agreements
 Technical_Terms
 You_should_be_able_to
 *Left off: https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/8-virtual-network
@@ -20,7 +21,7 @@ Achievements:
 Microsoft Azure Fundamentals: Describe Azure architecture and services
 Describe Azure identity, access, and security
 
-XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn.mp3ccvvvvvbbbbb
+XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn.mp3
 ---------------------------------------------------------------
 Application_Hosting_Options
 
@@ -42,6 +43,8 @@ REST-based web APIs come with full Swagger support and the ability to package an
 You can use the WebJobs feature to run a program (.exe, Java, PHP, Python, or Node.js) or script (.cmd, .bat, PowerShell, or Bash) 
 in the same context as a web app, API app, or mobile app. They can be scheduled or run by a trigger. WebJobs are often used to 
 run background tasks as part of your application logic.
+
+You can run JavaScript applications on Azure App Service using Node.js.
 ---------------------------------------------------------------
 Azure_Containers
 
@@ -1051,6 +1054,78 @@ When you provision a VM, you’ll also have the chance to pick the resources that 
 	Storage disks (hard disk drives, solid state drives, etc.)
 	Networking (virtual network, public IP address, and port configuration)
 ---------------------------------------------------------------
+Service_Level_Agreements
+
+Service-level agreements, (SLAs), formally outline all performance, availability, and support expectations between the cloud service 
+provider and the organization. Guaranteeing expected levels of service can be challenging when dealing with the integration of different 
+cloud and on-premises systems.
+
+1) Availability: Specifies the percentage of time a service is expected to be operational.
+
+Example: A 99.9% SLA means the service is guaranteed to be available 99.9% of the time in a given billing month.
+Downtime exceeding the SLA could result in a service credit for customers.
+
+2) Performance Targets: May include metrics like latency, throughput, and other performance parameters.
+
+3) Service Credits: If Azure fails to meet its SLA commitments, customers may receive financial compensation in the form of credits 
+based on the service's monthly billing.
+
+4) Scope: SLAs typically apply to services deployed in production environments and may not cover preview or free-tier offerings.
+
+5) Exclusions: SLAs usually exclude issues caused by:
+	Customer misconfigurations.
+	External attacks (e.g., denial of service).
+	Scheduled maintenance.
+	Events beyond Azure's reasonable control (e.g., natural disasters).
+
+6) Examples of Azure SLAs:
+	Virtual Machines: Single Instance VM and VMs in an Availability Set.
+
+7) Practical Uses:
+	Service Planning: Helps customers choose services based on criticality and reliability.
+	Compliance: Ensures services align with organizational SLAs or regulatory requirements.
+	Monitoring: Encourages regular tracking of performance against SLA guarantees.
+---
+Azure SLAs can apply to applications running on Platform as a Service (PaaS). However, the SLA depends on the specific Azure PaaS services used to build and host the application. These SLAs guarantee the availability, performance, and reliability of the underlying Azure services that support the application.
+
+Key Points for PaaS SLAs:
+SLA Coverage: Azure provides SLAs for most PaaS services like:
+
+Azure App Service: Web apps, API apps, and mobile apps.
+Azure SQL Database: Managed relational database service.
+Azure Functions: Serverless compute.
+Azure Kubernetes Service (AKS): Managed Kubernetes.
+Azure Logic Apps: Workflow automation.
+Composite SLA: The overall SLA for an application using multiple PaaS services is calculated as a composite SLA. This combines the SLAs of all individual services the application depends on.
+
+Example: If an app uses Azure App Service (99.95%) and Azure SQL Database (99.99%), the composite SLA is: \text{Composite SLA} = 0.9995 \times 0.9999 = 0.9994 \, \text{(99.94%)}
+Custom Logic: The application logic and code deployed on a PaaS service are not covered by the Azure SLA. Azure only guarantees the availability and performance of the PaaS service itself.
+
+Redundancy and Best Practices: To meet SLA guarantees:
+
+Use High Availability (HA) features like multiple regions or availability zones.
+Implement resiliency patterns such as retries, caching, and failovers.
+Service-Specific SLAs:
+
+Azure App Service:
+99.95% availability for apps deployed to two or more instances in the same region.
+Azure Functions:
+99.95% availability in a consumption plan.
+Azure SQL Database:
+99.99% availability for all service tiers.
+How SLAs Benefit PaaS Applications:
+Predictable Performance: Ensures the hosted application runs reliably and meets business expectations.
+Downtime Management: Provides clarity on acceptable downtime and remedies (e.g., service credits).
+Application Architecture: Encourages developers to design robust, highly available applications by leveraging Azure features.
+Important Considerations:
+Non-Covered Scenarios: SLAs do not account for:
+Application bugs or failures in your code.
+Misconfigurations of the PaaS services.
+Service Dependencies: Always review the SLAs of all services used by your application for a comprehensive understanding.
+Using PaaS services with Azure's SLAs allows you to offload infrastructure management while ensuring reliable performance for your applications.
+
+
+---------------------------------------------------------------
 Exercises_
 
 In this instance, you're going to use the Azure CLI. Task 1: Create a Linux virtual machine and install Nginx. Nginx is commonly 
@@ -1119,7 +1194,7 @@ Describe Azure resources and Resource Groups.
 Describe subscriptions.
 Describe management groups.
 Describe the hierarchy of resource groups, subscriptions, and management groups.
-
+----
 ---------------------------------------------------------------
 Learning_Links
 Introduction to Azure network foundation services 4 hr 44 min

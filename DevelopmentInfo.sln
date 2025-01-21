@@ -213,8 +213,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cloud", "Cloud", "{87315A71
 		AZ900.txt = AZ900.txt
 		AZ900_ExamTopics.txt = AZ900_ExamTopics.txt
 		Cloud\Azure.txt = Cloud\Azure.txt
-		AzureToAWS.txt = AzureToAWS.txt
 		Azure01_Learn.txt = Azure01_Learn.txt
+		AzureToAWS.txt = AzureToAWS.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolePracticeCSharp", "ConsolePracticeCSharp\ConsolePracticeCSharp.csproj", "{9B0FC2A6-6A0A-4C7E-8851-2FC4B261C4DE}"
@@ -224,6 +224,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestQuestions", "TestQuestions", "{D981F3F2-B062-48E3-917B-F0B9C87B0515}"
 	ProjectSection(SolutionItems) = preProject
 		TestSitesAndQuestions.txt = TestSitesAndQuestions.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level_2_Notes", "Level_2_Notes", "{DB8D40F2-E9B0-437F-B9D6-36C1F9249E59}"
+	ProjectSection(SolutionItems) = preProject
+		VirtualNetworking_2.txt = VirtualNetworking_2.txt
 	EndProjectSection
 EndProject
 Global
@@ -417,6 +422,7 @@ Global
 		{CCFFF22D-2611-4580-90F5-A1695F0F3957} = {C70DA016-F8C2-4462-9F07-ADBF7BD5DD5B}
 		{3B85970F-B145-48E5-873F-A6D9897FF4A4} = {E4F01E6A-3244-4E7A-8107-A548CC6FABF6}
 		{5F8C8377-6EEB-4E62-A6F1-920FB0C0492E} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
+		{DB8D40F2-E9B0-437F-B9D6-36C1F9249E59} = {87315A71-98D3-4E18-A60E-13798903C186}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F826286-BB0E-4C31-B721-7DBAA2852733}
