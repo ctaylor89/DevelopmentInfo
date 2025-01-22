@@ -100,7 +100,7 @@ The above query is used to find out employee(s) having salary more than avgSalar
 is used in further operations.
 
 Let vs.Into - Most people find it difficult to decide which one to use when designing a LINQ query.
-into – Hides the previous variable when used in a query, as you see in the above example. Which means its hides the previous range variable and 
+into – Hides the previous variable when used in a query, as you see in the above example. Which means it hides the previous range variable and 
 	   creates a temporary range variable which you can use in further operations. Most commonly used in grouping.
 
 let – Doesn’t hide the previous variable and creates a new variable. Which means you create a new variable and you can also use the previous 

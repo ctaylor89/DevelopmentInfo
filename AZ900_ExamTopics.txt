@@ -47,4 +47,34 @@ Composite SLAs.
 Azure support plans:
 Basic, Developer, Standard, Professional Direct, and Premier.
 Azure Service Health and the knowledge base.
+------------------------------------------------------------------------
+You_should_be_able_to
 
+Compare compute types, including container instances, virtual machines, and functions.
+
+Describe virtual machine options, including virtual machines (VMs), virtual machine scale sets, virtual machine availability sets, 
+and Azure Virtual Desktop.
+
+Describe resources required for virtual machines.
+Describe application hosting options, including Azure Web Apps, containers, and virtual machines.
+Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, VPN Gateway, and ExpressRoute.
+Define public and private endpoints.
+---
+Describe Azure regions, region pairs, and sovereign regions.
+Describe Availability Zones.
+Describe Azure datacenters.
+Describe Azure resources and Resource Groups.
+Describe subscriptions.
+Describe management groups.
+Describe the hierarchy of resource groups, subscriptions, and management groups.
+------------------------------------------------------------------------
+** Learning objectives
+You should now be able to:
+Describe directory services in Azure, including Microsoft Entra ID and Microsoft Entra Domain Services.
+Describe authentication methods in Azure, including single sign-on (SSO), multifactor authentication (MFA), and passwordless.
+Describe external identities and guest access in Azure.
+Describe Microsoft Entra Conditional Access.
+Describe Azure Role Based Access Control (RBAC).
+Describe the concept of Zero Trust.
+Describe the purpose of the defense in depth model.
+Describe the purpose of Microsoft Defender for Cloud.

@@ -1,0 +1,10 @@
+----------------------------------------------------------------------------------
+Networking (e.g., Virtual Networks, VPN Gateway, Azure CDN).
+Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, VPN Gateway, and ExpressRoute.
+----------------------------------------------------------------------------------
+
+
+
+
+Azure ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection, with the help of 
+a connectivity provider. ExpressRoute connections don't go over the public Internet.

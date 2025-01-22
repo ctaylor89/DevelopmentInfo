@@ -21,6 +21,7 @@ Achievements:
 Microsoft Azure Fundamentals: Describe Azure architecture and services
 Describe Azure identity, access, and security
 
+:244
 XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn.mp3
 ---------------------------------------------------------------
 Application_Hosting_Options
@@ -353,29 +354,37 @@ Which Microsoft Entra tool can vary the credentials needed to log in based on si
 Answer: Conditional Access is a tool that Microsoft Entra ID uses to allow (or deny) access to resources based on identity signals. 
 Conditional Access might challenge you for a second authentication factor if your sign-in signals are unusual or from an unexpected 
 location.
-
-** Learning objectives
-You should now be able to:
-Describe directory services in Azure, including Microsoft Entra ID and Microsoft Entra Domain Services.
-Describe authentication methods in Azure, including single sign-on (SSO), multifactor authentication (MFA), and passwordless.
-Describe external identities and guest access in Azure.
-Describe Microsoft Entra Conditional Access.
-Describe Azure Role Based Access Control (RBAC).
-Describe the concept of Zero Trust.
-Describe the purpose of the defense in depth model.
-Describe the purpose of Microsoft Defender for Cloud.
 ---------------------------------------------------------------
 Azure_DNS
 
-Azure DNS is a hosting service for DNS domains that provides name resolution by using Microsoft Azure infrastructure. By hosting 
-your domains in Azure, you can manage your DNS records using the same credentials, APIs, tools, and billing services.
+A DNS domain refers to a namespace under which a unique set of resources can be identified by their domain names, such as 
+example.com or subdomain.example.com.
 
-DNS domains in Azure DNS are hosted on Azure's global network of DNS name servers, providing resiliency and high availability. 
-Azure DNS uses anycast networking, so the closest available DNS server answers each DNS query, providing fast performance and 
-high availability for your domain.
+Azure DNS is a hosting service for DNS domains(which are namespaces). Azure DNS provides name resolution by using Microsoft 
+Azure infrastructure. By hosting your domains in Azure, you can manage your DNS records using the same credentials, APIs, tools, 
+and billing services.
 
-Azure DNS can manage DNS records for your Azure services and provide DNS for your external resources as well. Azure DNS is 
-integrated in the Azure portal and uses the same credentials, support contract, and billing as your other Azure services.
+DNS domains in Azure DNS are hosted on Azure's global network of DNS name servers. Azure DNS uses anycast networking, so the 
+closest available DNS server answers each DNS query, providing fast performance and high availability for your domain.
+
+Security
+Azure DNS is based on Azure Resource Manager, which provides features such as:
+	Azure role-based access control (Azure RBAC) to control who has access to specific actions for your organization.
+	Activity logs to monitor how a user in your organization modified a resource or to find an error when troubleshooting.
+	Resource locking to lock a subscription, resource group, or resource. Locking prevents other users in your organization from 
+	accidentally deleting or modifying critical resources.
+
+Azure DNS can manage DNS records for your Azure services and provide DNS for your external resources as well. You can manage your 
+domains and records with the Azure portal, Azure PowerShell cmdlets, and the cross-platform Azure CLI. Applications that require 
+automated DNS management can integrate with the service by using the REST API and SDKs.
+
+Customizable virtual networks with private domains
+Azure DNS also supports private DNS domains. This feature allows you to use your own custom domain names in your private 
+virtual networks, rather than being stuck with the Azure-provided names.
+
+Important!
+You can not use Azure DNS to buy a domain name. For an annual fee, you can buy a domain name by using App Service domains or 
+a third-party domain name registrar. Once purchased, your domains can be hosted in Azure DNS for record management.
 ---------------------------------------------------------------
 Azure_ExpressRoute
 
@@ -385,29 +394,6 @@ datacenters, or other facilities to the Microsoft cloud. Each location would hav
 
 ExpressRoute connections don't go over the public Internet. This setup allows ExpressRoute connections to offer more reliability, 
 faster speeds, consistent latencies, and higher security than typical connections over the Internet.
-
-Security
-Azure DNS is based on Azure Resource Manager, which provides features such as:
-Azure role-based access control (Azure RBAC) to control who has access to specific actions for your organization.
-Activity logs to monitor how a user in your organization modified a resource or to find an error when troubleshooting.
-Resource locking to lock a subscription, resource group, or resource. Locking prevents other users in your organization from 
-accidentally deleting or modifying critical resources.
-
-Azure DNS can manage DNS records for your Azure services and provide DNS for your external resources as well. You can manage 
-your domains and records with the Azure portal, Azure PowerShell cmdlets, and the cross-platform Azure CLI. Applications that 
-require automated DNS management can integrate with the service by using the REST API and SDKs.
-
-Customizable virtual networks with private domains
-Azure DNS also supports private DNS domains. This feature allows you to use your own custom domain names in your private virtual 
-networks, rather than being stuck with the Azure-provided names.
-
-Customizable virtual networks with private domains
-Azure DNS also supports private DNS domains. This feature allows you to use your own custom domain names in your private 
-virtual networks, rather than being stuck with the Azure-provided names.
-
-Important!
-You can't use Azure DNS to buy a domain name. For an annual fee, you can buy a domain name by using App Service domains or 
-a third-party domain name registrar. Once purchased, your domains can be hosted in Azure DNS for record management.
 ---------------------------------------------------------------
 Azure_Physical_Infrastructure
 
@@ -1086,28 +1072,34 @@ based on the service's monthly billing.
 	Compliance: Ensures services align with organizational SLAs or regulatory requirements.
 	Monitoring: Encourages regular tracking of performance against SLA guarantees.
 ---
-Azure SLAs can apply to applications running on Platform as a Service (PaaS). However, the SLA depends on the specific Azure PaaS services used to build and host the application. These SLAs guarantee the availability, performance, and reliability of the underlying Azure services that support the application.
+Azure SLAs can apply to applications running on Platform as a Service (PaaS). However, the SLA depends on the specific Azure PaaS 
+services used to build and host the application. These SLAs guarantee the availability, performance, and reliability of the 
+underlying Azure services that support the application.
 
 Key Points for PaaS SLAs:
 SLA Coverage: Azure provides SLAs for most PaaS services like:
+	Azure App Service: Web apps, API apps, and mobile apps.
+	Azure SQL Database: Managed relational database service.
+	Azure Functions: Serverless compute.
+	Azure Kubernetes Service (AKS): Managed Kubernetes.
+	Azure Logic Apps: Workflow automation.
 
-Azure App Service: Web apps, API apps, and mobile apps.
-Azure SQL Database: Managed relational database service.
-Azure Functions: Serverless compute.
-Azure Kubernetes Service (AKS): Managed Kubernetes.
-Azure Logic Apps: Workflow automation.
-Composite SLA: The overall SLA for an application using multiple PaaS services is calculated as a composite SLA. This combines the SLAs of all individual services the application depends on.
+Composite SLA: The overall SLA for an application using multiple PaaS services is calculated as a composite SLA. This combines the 
+SLAs of all individual services the application depends on.
 
-Example: If an app uses Azure App Service (99.95%) and Azure SQL Database (99.99%), the composite SLA is: \text{Composite SLA} = 0.9995 \times 0.9999 = 0.9994 \, \text{(99.94%)}
-Custom Logic: The application logic and code deployed on a PaaS service are not covered by the Azure SLA. Azure only guarantees the availability and performance of the PaaS service itself.
+Custom Logic: The application logic and code deployed on a PaaS service are not covered by the Azure SLA. Azure only guarantees 
+the availability and performance of the PaaS service itself.
 
 Redundancy and Best Practices: To meet SLA guarantees:
 
 Use High Availability (HA) features like multiple regions or availability zones.
 Implement resiliency patterns such as retries, caching, and failovers.
-Service-Specific SLAs:
+* In Azure, failovers refer to the process of automatically or manually transferring workloads, services, or data to a secondary 
+system or region when the primary system becomes unavailable. Failovers are a critical part of ensuring high availability, disaster 
+recovery, and business continuity in cloud-based solutions.
 
-Azure App Service:
+Service-Specific SLAs:
+App Service:
 99.95% availability for apps deployed to two or more instances in the same region.
 Azure Functions:
 99.95% availability in a consumption plan.
@@ -1178,23 +1170,6 @@ used as a web server to serve static content (HTML, CSS, JavaScript, images, etc
 
 
 ---------------------------------------------------------------
-You_should_be_able_to
-
-Compare compute types, including container instances, virtual machines, and functions.
-Describe virtual machine options, including virtual machines (VMs), virtual machine scale sets, virtual machine availability sets, and Azure Virtual Desktop.
-Describe resources required for virtual machines.
-Describe application hosting options, including Azure Web Apps, containers, and virtual machines.
-Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, VPN Gateway, and ExpressRoute.
-Define public and private endpoints.
----
-Describe Azure regions, region pairs, and sovereign regions.
-Describe Availability Zones.
-Describe Azure datacenters.
-Describe Azure resources and Resource Groups.
-Describe subscriptions.
-Describe management groups.
-Describe the hierarchy of resource groups, subscriptions, and management groups.
-----
 ---------------------------------------------------------------
 Learning_Links
 Introduction to Azure network foundation services 4 hr 44 min
