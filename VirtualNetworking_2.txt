@@ -3,8 +3,22 @@ Networking (e.g., Virtual Networks, VPN Gateway, Azure CDN).
 Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, VPN Gateway, and ExpressRoute.
 ----------------------------------------------------------------------------------
 
-
-
-
 Azure ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection, with the help of 
 a connectivity provider. ExpressRoute connections don't go over the public Internet.
+---
+VPN Gateway
+
+Azure VPN Gateway is a type of virtual network gateway and it enables hybrid cloud and multi-cloud connectivity.
+Route-based VPN gateways use routing tables to support route-based VPN connections. 
+Policy-based VPN gateways use IPsec selectors to filter traffic.
+
+A Route-Based Gateway refers to an Azure Virtual Network Gateway configured to support route-based VPN connections. 
+A Route-Based Gateway uses a routing table.
+---
+VPN
+
+A Route-Based VPN is a specific type of VPN configuration that uses a routing table.
+A Policy-based VPN uses static routing rules wich are (IPsec policies) to define what traffic should pass through the VPN tunnel.
+
+A VPN uses an encrypted tunnel within another network. VPNs are typically deployed to connect two or 
+more trusted private networks to one another over an untrusted network (typically the public internet).
