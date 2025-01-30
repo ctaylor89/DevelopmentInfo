@@ -78,3 +78,43 @@ Describe Azure Role Based Access Control (RBAC).
 Describe the concept of Zero Trust.
 Describe the purpose of the defense in depth model.
 Describe the purpose of Microsoft Defender for Cloud.
+------------------------------------------------------------------------
+Virtual Machines (VMs): Including Azure VMs, AWS EC2 instances, and Google Cloud VMs.
+
+Virtual Machine Scale Sets: Automatically scaling sets of VMs.
+
+App Services: Web apps, mobile apps, and API apps.
+
+Azure Kubernetes Service (AKS): Managed Kubernetes clusters.
+
+Azure SQL Database: Managed relational database service.
+
+Azure Storage Accounts: Blob storage, file shares, and more.
+
+Azure Key Vault: Securely storing and accessing secrets.
+
+Azure Functions: Serverless compute service.
+
+Azure Logic Apps: Automating workflows and business processes.
+
+Azure Cosmos DB: Globally distributed, multi-model database service.
+
+Azure Container Instances: Running containers without managing servers.
+
+Azure Synapse Analytics: Analytics service that brings together big data and data warehousing.
+
+Azure Databricks: Apache Spark-based analytics platform.
+
+Azure Data Lake Storage: Scalable data storage and analytics service.
+
+Azure IoT Hub: Connecting, monitoring, and managing IoT assets.
+
+Azure DevOps: Development collaboration tools.
+
+Azure API Management: Managing APIs across all environments.
+
+Azure Service Fabric: Distributed systems platform for microservices and containers.
+
+Azure Event Hubs: Big data streaming platform and event ingestion service.
+
+Azure Logic Apps: Automating workflows and business processes.
