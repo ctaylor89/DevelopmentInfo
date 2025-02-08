@@ -1,14 +1,16 @@
 Application_Hosting_Options
 Azure_Containers
-Azure_Identity_Access_Security
+Azure_Cost_Management
 Azure_DNS
 Azure_ExpressRoute
+Azure_Identity_Access_Security
 Azure_Physical_Infrastructure
 Azure_storage_services
 Azure_Virtual_Desktop
 Azure_Virtual_Networking 
 Azure_Virtual_VPNs
 Azure_VPN_Gateways
+Cloud_Concepts
 Compute_Networking_Services
 Exercises_
 Learning_Links
@@ -22,11 +24,14 @@ Achievements:
 Microsoft Azure Fundamentals: Describe Azure architecture and services
 Describe Azure identity, access, and security
 
-:560 Prepare for recording *************************************
+:635 Prepare for recording *************************************
 :244
-XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn.mp3
+XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn1.mp3
 :358
-XXXXXXXXXXXXXXXX Recorded to here. 01/30  Azure02_Learn.mp3
+XXXXXXXXXXXXXXXX Recorded to here. 01/30  Azure01_Learn2.mp3
+
+:495
+XXXXXXXXXXXXXXXX Recorded to here. 02/02  Azure01_Learn3.mp3
 ---------------------------------------------------------------
 Application_Hosting_Options
 
@@ -227,8 +232,8 @@ to your Microsoft applications.
 3) Microsoft Azure Active Directory business to customer (B2C) - Publish modern SaaS apps or custom-developed apps 
 (excluding Microsoft apps) to consumers and customers, while using Azure AD B2C for identity and access management.
 ---
-Conditional Access is a tool that Microsoft Entra ID uses to allow (or deny) access to resources based on identity signals. These 
-signals include who the user is, where the user is, and what device the user is requesting access from.
+Conditional Access is a tool that Microsoft Entra ID uses to allow (or deny) access to resources based on identity signals. 
+Identity signals signals include who the user is, where the user is, and what device the user is requesting access from.
 
 Conditional Access provides a multifactor authentication experience for users. For example, a user might not be challenged for 
 second authentication factor if they're at a known location. However, they might be challenged for a second authentication factor 
@@ -489,6 +494,7 @@ regions or globally to ensure seamless operation and availability.
 
 Even with the additional resiliency that availability zones provide, it’s possible that an event could be so large that it 
 impacts multiple availability zones in a single region. To provide even further resilience, Azure has Region Pairs.
+XXXXXXXXXXXXXXXX Recorded to here. 02/02  Azure01_Learn3.mp3
 
 Region pairs
 Most Azure regions are paired with another region within the same geography (such as US, Europe, or Asia) at least 300 miles away.
@@ -564,9 +570,6 @@ Important facts about management groups:
 A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
 Each management group and subscription can support only one parent.
 ---------------------------------------------------------------
-
-
-:560 Prepare for recording *************************************
 Azure_storage_services
 
 * Low latency refers to the minimal delay between a request for data and the corresponding response or action. It is a 
@@ -574,13 +577,14 @@ critical performance metric in systems where real-time or near-real-time respons
 
 * Synchronous Replication: All copies of data are updated at the same time.
 
-* Lower availability in the context of an Azure storage account refers to the likelihood that your data might not be accessible at all times.
+* Lower availability in the context of an Azure storage account refers to the likelihood that your data might not be accessible 
+at all times.
 
 * Availability Zone is  a high-availability offering designed to ensure resilience and uptime for your applications and services. 
-It represents a physically separate location within an Azure region, providing protection against data center-level failures.
+An Availability Zone represents a physically separate location within an Azure region, providing protection against data 
+center-level failures.
 
 * A data center is a physical facility that is used to house critical applications, data, and computing infrastructure.
-
 
 Standard general-purpose v2 - Storage Tier is the standard storage account type for blobs, file shares, queues, and tables. It is 
 recommended for most scenarios using Azure Storage. If you want support for network file system (NFS) in Azure Files, use the 
@@ -591,17 +595,22 @@ scenarios with high transaction rates or that use smaller objects or require con
 (including Data Lake Storage)
 ---
 Premium file shares - Storage Tier is the premium storage account type for file shares only. Recommended for enterprise or 
-high-performance scale applications. Use this account type if you want a storage account that supports both Server Message Block 
-(SMB) and NFS file shares. NFS (Network File System) file shares are file storage solutions that enable multiple clients to access 
-and share files over a network.
+high-performance scale applications. Use the Premium file shares account type if you want a storage account that supports both 
+Server Message Block (SMB) and NFS file shares. NFS (Network File System) file shares are file storage solutions that enable 
+multiple clients to access and share files over a network.
 
 Premium page blobs - performance-optimized storage tier	(Page blobs only)
 Performance Optimization:
 Offers low latency for data access compared to other tiers, such as hot, cool, and archive which are lower in performance.
-High throughput for read and write operations. Uses Solid-State Drive (SSD)-Based Storage.
+Premium page blobs provide High throughput for read and write operations using Solid-State Drive (SSD)-Based Storage.
 
-Transaction-Optimized Pricing: Designed for applications with high transaction rates;
-Availability: Offered in specific Azure regions. Supports local redundancy (LRS) and zone redundancy (ZRS) for data durability.
+Transaction-Optimized Pricing is designed for applications with high transaction rates.Transaction-Optimized Pricing is offered 
+in specific Azure regions. Transaction-Optimized Pricing supports local redundancy (LRS) and zone redundancy (ZRS) for data durability.
+Transaction-Optimized Pricing is a pricing model designed to reduce costs for workloads that have frequent transactions but require 
+lower overall storage capacity. It is designed for workloads with high read/write operations, reducing the per-operation cost 
+compared to standard storage pricing. Transaction-Optimized Pricing is ideal for scenarios where frequent access is required, such 
+as event-driven applications, message queuing, or IoT telemetry. It works well for blob storage, table storage, and queue storage 
+in scenarios where transactions dominate cost rather than raw storage capacity.
 ---
 One of the benefits of using an Azure Storage Account is having a unique namespace in Azure for your data. In order to do this, 
 every storage account in Azure must have a unique-in-Azure account name. The combination of the account name and the Azure 
@@ -621,12 +630,14 @@ lowest-cost redundancy option and offers the least durability compared to other 
 rack and drive failures.
 
 Zone-redundant storage (ZRS) replicates your Azure Storage data, in the same zone, synchronously across three Azure availability 
-zones in the primary region. When you create a storage account, you select the primary region for the account. *? The paired secondary 
-region is based on Azure Region Pairs, and can't be changed.
+zones in the primary region. When you create a storage account, you select the primary region for the account. The paired secondary 
+region is based on Azure assigned Region Pairs, and can't be changed by the user.
 
-Azure Storage offers two options for duplicating your data in a secondary region: geo-redundant storage (GRS) and geo-zone-redundant 
-storage (GZRS). GRS is similar to running Locally redundant storage in two regions, and GZRS is similar to running ZRS in the primary region and LRS 
-in the secondary region.
+:635 Prepare for recording *************************************
+
+Azure Storage offers two options for duplicating your data in a secondary region. There is geo-redundant storage (GRS) and 
+geo-zone-redundant storage (GZRS). GRS is similar to running Locally redundant storage in two regions, and GZRS is similar to 
+running Zone-redundant storage in the primary region and LRS in the secondary region.
 
 By default, data in the secondary region isn't available for read or write access unless there's a failover to the secondary region.
 
@@ -1047,6 +1058,18 @@ A firewall is like a guard, monitoring and controlling traffic to ensure securit
 Both can complement each other in network setups, with gateways managing connectivity and firewalls enforcing security.
 Most VPN setups require a gateway or equivalent functionality.
 ---------------------------------------------------------------
+Cloud_Concepts
+Scalability is a system’s ability to handle increasing workloads by adding resources (either horizontally by adding more instances 
+or vertically by upgrading hardware). It is usually planned and manual, meaning resources are provisioned in advance to accommodate growth.
+
+Elasticity is the system's ability to automatically scale resources up or down based on demand. It is dynamic and automated, ensuring 
+that the system adjusts in real-time to workload fluctuations.
+
+Agility refers to the ability of an organization to quickly and efficiently adapt to changes in demand, technology, or market conditions 
+using cloud-based resources and services. 
+
+
+---------------------------------------------------------------
 Compute_Networking_Services
 
 VMs provide infrastructure as a service (IaaS). You can create and provision a VM in minutes when you select a preconfigured VM image.
@@ -1173,8 +1196,35 @@ Application bugs or failures in your code.
 Misconfigurations of the PaaS services.
 Service Dependencies: Always review the SLAs of all services used by your application for a comprehensive understanding.
 Using PaaS services with Azure's SLAs allows you to offload infrastructure management while ensuring reliable performance for your applications.
+---------------------------------------------------------------
+Azure_Cost_Management
 
+Azure Cost Management is a suite of tools designed to help organizations analyze, monitor, and optimize their cloud costs. It 
+provides a comprehensive view of your spending and helps you manage your budget effectively1. 
+Key features include:
+  Cost Analysis: View and analyze your spending patterns in the Azure portal, Microsoft 365 admin center, or Power BI.
 
+  Budgets and Alerts: Set budgets and configure alerts for anomalies, reservation utilization, and scheduled reports.
+
+  Cost Allocation: Use cost allocation rules to split shared costs and enable tag inheritance.
+
+  Automation: Export data to automate business processes or integrate cost management into external tools.
+
+  Optimization: Receive recommendations to save costs, such as using savings plans and managing reservations.
+
+Total Cost of Ownership (TCO) Calculator
+The TCO Calculator is a tool that helps you estimate the cost savings you can achieve by migrating your workloads to Azure. It 
+compares the costs of running your applications on-premises with the costs of running them on Azure, providing a clear picture of 
+potential savings. Key features include:
+  Cost Comparison: Compare the total cost of ownership of on-premises infrastructure with Azure cloud services.
+
+  Customization: Input your specific data to get a tailored cost analysis.
+
+  Savings Estimation: Estimate the cost savings over different periods (e.g., 3, 5, or 7 years).
+
+  ROI Calculation: Calculate the return on investment for your migration to Azure.
+
+These tools are designed to help you make informed decisions about your cloud investments and optimize your spending.
 ---------------------------------------------------------------
 Exercises_
 
