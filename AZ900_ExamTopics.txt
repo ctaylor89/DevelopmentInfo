@@ -3,7 +3,9 @@ Below are the key topics divided into domains, along with the percentage of ques
 
 1. Cloud Concepts (25-30%)
 Benefits of cloud computing: 
-High availability, scalability, elasticity, agility, disaster recovery, and cost considerations. Agility refers to the 
+High availability, scalability, elasticity, agility, disaster recovery, and cost considerations. 
+
+a)Agility refers to the 
 ability of an organization to quickly and efficiently adapt to changes in demand, technology, or market conditions using 
 cloud-based resources and services. 
 
@@ -16,17 +18,54 @@ Core Azure architectural components:
 Azure Regions, Region Pairs, Availability Zones, Resource Groups, Subscriptions, and Management Groups.
 
 Core Azure services and products:
-Compute (e.g., Virtual Machines, Azure Kubernetes Service).
-Networking (e.g., Virtual Networks, VPN Gateway, Azure CDN).
-Storage (e.g., Blob Storage, Disk Storage, File Storage).
-Databases (e.g., Azure SQL Database, Cosmos DB).
+Compute: Virtual Machines, Azure Kubernetes Service, Azure App Service, Azure Functions, Azure Container Instances, Azure Batch.
+Networking: Virtual Networks(VNet), Load Balancer, Application Gateway, Azure DNS, ExpressRoute, VPN Gateway, Azure CDN, Azure Firewall.
+Storage: Blob Storage, Disk Storage, File Storage, Queue Storage, File Share, Table Storage, Data Lake Storage.
+Databases: Azure SQL Database, Cosomos DB, Database for MySQL/PostgreSQL/MariaDB, SQL Managed Instance, Azure Cache for Redis.
+
+AI & Machine Learning
+Azure AI Services – Pre-built AI models (Vision, Speech, Language, etc.).
+Azure Machine Learning – Develop and deploy Machine Learning(ML) models.
+Azure Cognitive Search – AI-powered search service
+
+Analytics & Big Data
+Azure Synapse Analytics – Big data analytics and data warehousing.
+Azure Data Lake Storage – Scalable data lake for big data.
+Azure Databricks – Apache Spark-based big data analytics.
+Azure Stream Analytics – Real-time data processing.
+Azure Data Factory – ETL (Extract, Transform, Load) service
+
+Identity & Security
+Azure Active Directory (Azure AD) – Identity and access management.
+Azure Key Vault – Securely store keys, secrets, and certificates.
+Microsoft Defender for Cloud – Threat protection and security monitoring.
+Azure Sentinel – Cloud-native SIEM (Security Information and Event Management).
+Azure DDoS Protection – Defend against distributed denial-of-service attacks.
+
+IoT & Edge Computing
+Azure IoT Hub – Connect, monitor, and manage IoT devices.
+Azure IoT Edge – Run AI and analytics at the edge.
+Azure Digital Twins – Model real-world systems.
+
+Developer & DevOps
+Azure DevOps – CI/CD pipelines, repositories, and collaboration tools.
+Azure Pipelines – Build, test, and deploy automation.
+Azure Repos – Git repositories.
+Azure Monitor – Full-stack observability and monitoring.
+Azure Log Analytics – Analyze logs from various sources.
+
+Hybrid & Multi-Cloud
+Azure Arc – Manage resources across on-prem, multi-cloud, and edge.
+Azure Stack – Bring Azure services on-premises.
+Azure Backup – Cloud-based backup solution.
+Azure Site Recovery – Disaster recovery service.
 
 Core Azure solutions: Internet of Things (IoT), AI and machine learning, serverless computing, and DevOps.
 
 3. Security, Privacy, Compliance, and Trust (25-30%)
 Azure Security: Azure Security Center, Azure Sentinel, Role-Based Access Control (RBAC) and identity management, 
                 Network security groups (NSGs), Azure Firewall, Azure DDoS Protection.
-                .
+                
 Azure identity and governance: Azure Active Directory (AAD), Conditional Access and MFA, Azure Policy, Blueprints, 
                                Azure Active Directory (Azure AD), resource tagging and Locks.
                                Monitoring tools like Azure Monitor, Log Analytics, and Application Insight

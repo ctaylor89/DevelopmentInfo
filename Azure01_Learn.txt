@@ -15,6 +15,7 @@ Compute_Networking_Services
 Exercises_
 Learning_Links
 Missed_Questions
+Questions_
 Random_Notes
 Service_Level_Agreements
 Technical_Terms
@@ -24,14 +25,16 @@ Achievements:
 Microsoft Azure Fundamentals: Describe Azure architecture and services
 Describe Azure identity, access, and security
 
-:635 Prepare for recording *************************************
+:654 Prepare for recording *************************************
 :244
 XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn1.mp3
 :358
 XXXXXXXXXXXXXXXX Recorded to here. 01/30  Azure01_Learn2.mp3
-
 :495
 XXXXXXXXXXXXXXXX Recorded to here. 02/02  Azure01_Learn3.mp3
+:573
+XXXXXXXXXXXXXXXX Recorded to here. 02/15  Azure01_Learn2.mp3
+
 ---------------------------------------------------------------
 Application_Hosting_Options
 
@@ -633,17 +636,33 @@ Zone-redundant storage (ZRS) replicates your Azure Storage data, in the same zon
 zones in the primary region. When you create a storage account, you select the primary region for the account. The paired secondary 
 region is based on Azure assigned Region Pairs, and can't be changed by the user.
 
-:635 Prepare for recording *************************************
-
 Azure Storage offers two options for duplicating your data in a secondary region. There is geo-redundant storage (GRS) and 
-geo-zone-redundant storage (GZRS). GRS is similar to running Locally redundant storage in two regions, and GZRS is similar to 
-running Zone-redundant storage in the primary region and LRS in the secondary region.
+geo-zone-redundant storage (GZRS). 
+
+Geo-Redundant Storage (GRS) Stores three copies of your data in the primary region to provide local redundency. Geo-Redundant Storage
+also replicates three additional copies to a secondary region (hundreds of miles away). The secondary region is not accessible for 
+reads unless a failover is initiated. In case of a failure in the primary region, Azure manually fails over to the secondary region.
+
+A variant to Geo-Redundant Storage is Read-Access Geo-Redundant Storage (RA-GRS). It allows read access to the secondary region.
+
+Using Geo-Zone-Redundant Storage (GZRS), data is replicated across multiple availability zones in the primary region (higher 
+availability than GRS). Geo-Zone-Redundant Storage replicates three additional copies in a secondary region for disaster recovery.
+The secondary region is not accessible for reads unless failover is triggered.
 
 By default, data in the secondary region isn't available for read or write access unless there's a failover to the secondary region.
 
-GRS copies your data synchronously three times within a single physical location in the primary region using LRS. It then copies 
-your data asynchronously to a single physical location in the secondary region (the region pair) using LRS.
+Geo-Redundant Storage copies your data synchronously three times within a single physical location in the primary region using Locally 
+redundant storage. It then copies the data asynchronously to a single physical location in the secondary region (the region pair) 
+where it is also stored three times using LRS.
+:654 Prepare for recording *************************************
 
+Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
+Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
+Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
+Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
+Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
+Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
+Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
 Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
 region (similar to ZRS) and is also replicated to a secondary geographic region, using LRS(3X in one data center).
 
@@ -1068,7 +1087,9 @@ that the system adjusts in real-time to workload fluctuations.
 Agility refers to the ability of an organization to quickly and efficiently adapt to changes in demand, technology, or market conditions 
 using cloud-based resources and services. 
 
-
+Key Difference:
+Scalability is about long-term capacity planning. Elasticity is about real-time resource adjustment based on demand.
+Azure VM Scale Sets and Azure Functions provide elasticity, while services like Azure SQL Database Hyperscale offer scalability.
 ---------------------------------------------------------------
 Compute_Networking_Services
 
@@ -1225,6 +1246,41 @@ potential savings. Key features include:
   ROI Calculation: Calculate the return on investment for your migration to Azure.
 
 These tools are designed to help you make informed decisions about your cloud investments and optimize your spending.
+---------------------------------------------------------------
+Questions_
+
+Q: What is the difference between durability and fault tolerance?
+A: Durability refers to the ability of a system to ensure that data remains intact and accessible over time, even in the face of 
+hardware failures, network issues, or other disruptions. In Azure, durability is achieved through data replication and redundancy. 
+For example, Azure Storage replicates data across multiple locations to protect against data loss.
+
+Fault tolerance, on the other hand, refers to the ability of a system to continue operating properly in the event of the failure of 
+some of its components. This means that even if a part of the system fails, the overall system remains functional. Fault tolerance 
+is achieved through techniques such as redundancy, failover mechanisms, and load balancing.
+
+In summary, durability ensures that data is preserved and available over time, while fault tolerance ensures that the system 
+continues to operate despite failures. Both are essential for building reliable and resilient cloud applications.
+
+Q:
+A:
+
+Q:
+A:
+
+Q:
+A:
+
+Q:
+A:
+
+Q:
+A:
+
+Q:
+A:
+
+Q:
+A:
 ---------------------------------------------------------------
 Exercises_
 

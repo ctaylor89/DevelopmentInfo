@@ -179,8 +179,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TSQLFundamentals2012", "TSQ
 		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 09 - Transactions and Concurrency - Exercises.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 09 - Transactions and Concurrency - Exercises.sql
 		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 09 - Transactions and Concurrency.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 09 - Transactions and Concurrency.sql
 		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 10 - Programmable Objects.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\Chapter 10 - Programmable Objects.sql
-		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\orders.txt = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\orders.txt
-		Solution Folders\Technologies\TSQL\TSQLFundamentals2012\TSQL2012.sql = Solution Folders\Technologies\TSQL\TSQLFundamentals2012\TSQL2012.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyExercises", "MyExercises", "{CCFFF22D-2611-4580-90F5-A1695F0F3957}"
