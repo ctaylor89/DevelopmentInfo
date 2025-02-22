@@ -274,7 +274,7 @@ You typically access Resource Manager from the Azure portal, Azure Cloud Shell, 
 RBAC doesn't enforce access permissions at the application or data level.
 
 * Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides a 
-flexible and convenient way to manage your Azure environment directly from your web browser. You can access Cloud Shell from 
+flexible and convenient way to manage your Azure environment directly from your web browser. You can also access Cloud Shell from 
 the Azure portal, shell.azure.com, Azure mobile app, Visual Studio Code, and more.
 
 Resource Grouping: Resources can be grouped into resource groups, making it easier to manage and organize them.
@@ -1347,12 +1347,96 @@ Random_Notes
 
 Functions can be either stateless or stateful. When they're stateless (the default), they behave as if they restart every time they 
 respond to an event. When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
+
+*The following 3 services associate with Azure Blueprints?
+Azure Advisor
+It analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost 
+effectiveness, performance, Reliability (formerly called High availability), and security of your Azure resources.
+Azure Advisor is a recommendation service that provides guidance on how to optimize Azure resources. It does not directly 
+integrate with Azure Blueprints, but you can use Advisor recommendations to inform your Blueprint designs.
+
+ARM Templates
+Azure Resource Manager (ARM) templates define the infrastructure and configuration of Azure resources in a repeatable way. You can use 
+ARM templates to create and manage resources as part of an Azure Blueprint.
+
+Azure RBAC is used to manage user access to Azure resources. You can use RBAC as part of an Azure Blueprint to assign roles and permissions 
+to users or groups for specific resources.
+
+Application Insights
+Application Insights, a feature of Azure Monitor, is an extensible Application Performance Management (APM) service for 
+developers and DevOps professionals.
+
+Azure DevOps
+Collaborate on software development through source control, work tracking, and continuous integration and delivery, both 
+on-premises and in the cloud!
+
+Azure Automation
+Azure Automation is a cloud-based automation service for managing and deploying Azure resources, but it is a separate 
+service from Azure Cloud Shell.
+
+Azure Cost Management
+Azure Cost Management is a tool for visualizing and monitoring Azure resource usage and costs.
+
+High Availability
+Focuses on minimizing downtime within a single region by using Availability Sets, Availability Zones, and Load Balancers. However, it 
+does not guarantee recovery from an entire region failure.
+
+Disaster Recovery
+DR involves replicating and recovering resources in a secondary region to maintain business continuity in case of a regional outage.
+
+Resiliency
+Resiliency is a broader term than Disaster Recovery that includes both High Availability and Disaster Recovery, ensuring an application 
+can recover from disruptions at various levels.
+
+Azure Application Gateway
+Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications. Traditional load 
+balancers operate at the transport layer (OSI layer 4 - TCP and UDP) and route traffic based on source IP address and port, to a 
+destination IP address and port.
+
+Azure AD Connect
+Azure AD Connect is a Microsoft tool that allows organizations to synchronize their on-premises Active Directory (AD) infrastructure 
+with Azure Active Directory (Azure AD). It enables a seamless and secure identity synchronization and authentication experience for 
+users across on-premises and cloud environments.
+
+Azure Databricks
+Azure Databricks is an Azure Cloud service for machine learning. It is designed for data science and data engineering. fast, easy, 
+and collaborative Apache Spark-based big data analytics service designed for data science and data engineering. It is the only 
+option that can host machine learning workloads.
+
+Azure Logic Apps
+Azure Logic Apps is a cloud service that helps you schedule, automate, and orchestrate tasks, business processes, and workflows when 
+you need to integrate apps, data, systems, and services across enterprises or organizations. 
+
+Azure Content Delivery Network (CDN). 
+Azure CDN is designed to efficiently distribute content to users worldwide, reducing load times and improving user experience.
+---
+To guarantee 99.95% VM connectivity, you must deploy at least two VMs in the same Availability Set in Azure. This is because Availability 
+Sets ensure that your VMs are physically separated across multiple hardware servers within an Azure datacenter, providing redundancy and 
+minimizing the risk of datacenter-wide failures. If you have only one VM in an Availability Set, you can still experience a single point 
+of failure if the hardware server that the VM is running on fails.
+
+By deploying two or more VMs within an Availability Set, Azure will distribute them across different fault domains and update domains. 
+This ensures that even if one fault domain or update domain experiences a disruption, your VMs will still be accessible via the other 
+fault domain(s) or update domain(s).
+---
 ---------------------------------------------------------------
 Technical_Terms
 
 Big data refers to extremely large and complex datasets that are difficult to process, analyze, and manage using traditional data 
 processing techniques or software tools. Big data typically requires advanced technologies and methods for efficient storage, 
 analysis, and extraction of meaningful insights.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

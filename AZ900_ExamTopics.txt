@@ -1,3 +1,8 @@
+Microsoft Azure Fundamentals *Purchased 02/22/25
+https://app.exampro.co/student/journey/az-900
+
+Exam_Questions_Missed
+
 The AZ-900: Microsoft Azure Fundamentals exam covers foundational knowledge of cloud concepts and core Azure services. 
 Below are the key topics divided into domains, along with the percentage of questions likely to come from each area:
 
@@ -157,3 +162,142 @@ Azure Service Fabric: Distributed systems platform for microservices and contain
 Azure Event Hubs: Big data streaming platform and event ingestion service.
 
 Azure Logic Apps: Automating workflows and business processes.
+-----------------------------------------------------------------------
+Exam_Questions_Missed
+
+Q:A company wants to ensure the the application survives a region-wide failure. Which concept needs to be consdidered?
+A:Fault Tolerance, not High Availability
+
+Q:A company has just deployed a set of Virtual Machines (VMs) to host a production software for their end users.
+The company needs to have a solution that will allow them to know the health of their VMs at all times so they can implement alerts and redundancy.
+Which solution would best fulfil this need for the company?
+
+A:Azure Monitor helps you maximize the availability and performance of your applications and services. It delivers a comprehensive solution for 
+collecting, analyzing, and acting on telemetry from your cloud and on-premises environments.
+https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+
+Q:What does Azure Sentinel use playbooks for?
+A:Azure Sentinel uses playbooks for automating responses to detected security threats and incidents.
+A playbook is a collection of these remediation actions that can be run from Azure Sentinel as a routine. A playbook can help automate and 
+orchestrate your threat response; it can be run manually or set to run automatically in response to specific alerts or incidents, when 
+triggered by an analytics rule or an automation rule, respectively.
+
+Q:A company is planning on setting up a solution in Microsoft Azure.
+The solution requires a tool that provides guidance and recommendations to improve an Azure environment.
+Which of the following would be best suited for this requirement?
+A:Advisor is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments. It analyzes your 
+resource configuration and usage telemetry and then recommends solutions that can help you improve the cost-effectiveness, performance, 
+Reliability (formerly called High availability), and security of your Azure resources.
+
+Q:A company has deployed a mission-critical application on Azure. They want to be notified immediately if the application experiences any 
+unexpected downtime. Which Azure service can the company use to create alerts to monitor the application's availability?
+A:Azure Monitor is a service in Azure that enables you to collect and analyze telemetry data from your Azure and on-premises environments. 
+Azure Monitor alerts provide a way to get notified or take automated actions on issues detected in your environment. By creating alerts 
+in Azure Monitor, the company can receive notifications via email or SMS if the application experiences unexpected downtime.
+Note: Azure Load Balancer is incorrect because it is a service that distributes incoming network traffic across multiple virtual machines 
+and does not provide alerting capabilities for monitoring application availability.
+Azure Traffic Manager is incorrect because it is a service that enables you to control the distribution of user traffic to your web 
+applications and does not provide alerting capabilities for monitoring application availability.
+Azure Log Analytics is incorrect because it is a service that collects and analyzes log data, but does not provide direct monitoring or 
+
+alerting capabilities for CPU utilization.
+Q:An organization is migrating its on-premises web application to Microsoft Azure. The company is looking to save money by only running 
+the right amount of servers to meet the demand of traffic for this web application while in production.
+Which Azure service would allow the organization to dynamically adjust the number of virtual machines running their web application based 
+on demand and save costs while meeting traffic capacity?
+A: Azure Virtual Machine Scale Sets. This service enables organizations to create and manage a group of identical virtual machines, 
+which can automatically increase or decrease based on traffic demand. By using this service, organizations can optimize their resource 
+utilization and reduce costs, as they only need to pay for the compute resources used. Additionally, virtual machine scale sets provide 
+high availability and reliability for the web application.
+
+Q:Which of the following best describes Azure Cloud Shell?
+A:A command-line interface (CLI) for managing Azure resources using Bash or PowerShell. Azure Cloud Shell is a command-line interface 
+(CLI) for managing Azure resources using Bash or PowerShell. It is an interactive, browser-accessible shell for managing Azure resources. 
+It is pre-configured with popular command-line tools, including Azure CLI and Azure PowerShell, and it eliminates the need to install 
+and configure these tools locally. You can access Cloud Shell through the Azure portal or through the Azure mobile app.
+
+Q:Which of the following is true about adding a Delete lock to an Azure resource that already has a Read-only lock?
+A: You can add a Delete lock, and both locks will function independently.
+
+Q:What is the network component used to establish a site-to-site VPN connection between an on-premises network and an Azure account?
+A:A Local Network Gateway represents the hardware or software VPN device in your local network. Use this with a connection to set up 
+a site-to-site VPN connection between an Azure virtual network and your local network.
+
+Q:How many virtual machines should be deployed in an Availability set to guarantee that there is Virtual Machine connectivity to at 
+least one instance for at least 99.95% of the time?
+A: Two or more instances. 
+
+Q:A company needs to host a big data analysis service for machine learning on Azure. Which of the following Azure cloud service 
+would be best suited for this requirement?
+A: Azure Databricks. Azure Databricks is a fast, easy, and collaborative Apache Spark-based big data analytics service designed for 
+data science and data engineering. It is the only option that can host machine learning workloads.
+
+Q: A company is deploying an application across multiple Virtual Machines (VMs) in Azure. They want to ensure that the application 
+remains operational without downtime even if an entire Azure region experiences a failure.
+Which of the following architectural concepts should they consider to meet this requirement?
+A: Disaster Recovery. Since the company wants to ensure application availability even if an entire Azure region fails, they need 
+a disaster recovery (DR) strategy. DR involves replicating and recovering resources in a secondary region to maintain business 
+continuity in case of a regional outage
+
+Q:Which of the following services can you associate with Azure Blueprints?
+A:Azure policies are used to enforce rules and standards on resources in an Azure environment. You can use Azure policies as part of an Azure Blueprint to ensure that resources 
+created using the Blueprint comply with specific rules and standards.
+A: Azure Resource Manager (ARM) templates define the infrastructure and configuration of Azure resources in a repeatable way. You can use ARM templates to create and manage 
+resources as part of an Azure Blueprint.
+A: Azure RBAC is used to manage user access to Azure resources. You can use RBAC as part of an Azure Blueprint to assign roles and permissions to users or groups for specific resources.
+---
+GreenTech Solutions, a medium-sized company specializing in sustainable technology solutions, plans to migrate its on-premises data center to Azure to enhance scalability, reliability, and global reach. The company's key applications include a customer-facing website, an internal inventory management system, and a big data analytics platform for market research.
+Storage Requirements:
+
+The customer-facing website requires high-availability storage for static content and media files.
+The inventory management system needs secure and efficient storage for transactional databases.
+The big data analytics platform demands large-scale storage with high throughput for processing and analyzing vast amounts of market data.
+
+Networking Requirements:
+Secure and fast connectivity between Azure services and on-premises systems.
+Efficient distribution of website content to global users.
+Private and secure network communication within Azure.
+
+Regions:
+Primary operations in North America, but plans to expand to Europe and Asia.
+Need for high availability and disaster recovery across multiple regions.
+
+Q: What type of Azure Storage would be most appropriate for the static content of GreenTech Solutions' customer-facing website?
+A: Blob Storage. Azure Blob Storage is ideal for storing large amounts of unstructured data, such as images and other media files, 
+which are typical for a customer-facing website.
+
+Q: Which Azure service should GreenTech Solutions use to ensure secure and fast connectivity between its on-premises systems and Azure services?
+A: Azure Express Route
+
+Q: For high availability and disaster recovery, how should GreenTech Solutions configure its resources across Azure regions?
+A: Use geo-redundant storage across multiple regions.
+
+Q: Which Azure service is best suited for efficient global distribution of GreenTech Solutions' website content?
+A: Azure Content Delivery Network (CDN). Azure CDN is designed to efficiently distribute content to users worldwide, reducing load 
+times and improving user experience.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

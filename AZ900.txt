@@ -1,9 +1,16 @@
 Cloud_Service_Types
+Courses_
 database_Services
 Governance_And_Compliance
 Learning_Objectives
 Links_
 
+------------------------------------------------------------
+Courses_
+
+Microsoft Azure Fundamentals *Took practice exam 02/19/25
+https://app.exampro.co/student/journey/az-900
+https://app.exampro.co/student/journey/az-900
 ------------------------------------------------------------
 Cloud_Service_Types
 
