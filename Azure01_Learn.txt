@@ -1261,14 +1261,28 @@ is achieved through techniques such as redundancy, failover mechanisms, and load
 In summary, durability ensures that data is preserved and available over time, while fault tolerance ensures that the system 
 continues to operate despite failures. Both are essential for building reliable and resilient cloud applications.
 
-Q:
+Q: How is high availability different from fault tolerance?
+A: Both High Availability (HA) and Fault Tolerance (FT) aim to improve reliability, but they differ in how they handle failures and 
+ensure uptime. Availability aims to minimize downtime and reduce service interruptions through redundancy and failover mechanisms.
+Fault Tolerance ensures continuous operation with zero downtime, even if a failure occurs.
+
+In practice, most Azure services focus on High Availability rather than true Fault Tolerance, as Fault Tolerance is often too 
+costly and complex for most applications.
+
+HA - Uses redundancy, load balancing, failover mechanisms (e.g., Availability Zones, Auto-Scaling).
+	 Cost is lower than FT – fewer redundant resources; designed for quick recovery.
+
+FT - Requires fully redundant systems running in parallel, often with real-time state replication.
+	 Cost is higher – requires full duplication of resources for seamless failover.
+	 Fault tolerance can be set up across Azure regions to ensure high availability and disaster recovery. There are several 
+	 multi-region strategies you can use to enhance resilience:
+
+Q:	
 A:
 
-Q:
-A:
-
-Q:
-A:
+Q: Does Load Balancing automatically scale when a demand for resources increases above capacity?
+A: No, Load Balancing itself does not automatically scale resources when demand increases. Load balancers distribute traffic across 
+available resources, but Azure Auto-Scaling is a separate feature that must be configured alongside load balancing.
 
 Q:
 A:
@@ -1355,16 +1369,38 @@ effectiveness, performance, Reliability (formerly called High availability), and
 Azure Advisor is a recommendation service that provides guidance on how to optimize Azure resources. It does not directly 
 integrate with Azure Blueprints, but you can use Advisor recommendations to inform your Blueprint designs.
 
+Azure Blueprints help organizations define, deploy, and manage cloud environments in a repeatable and consistent manner. They are 
+used to orchestrate resources, policies, and security controls across multiple subscriptions while ensuring compliance with 
+organizational standards. Azure Blueprints ensures that every new Azure deployment follows predefined security, compliance, and 
+operational guidelines. Ideal for organizations with strict regulatory requirements (e.g., ISO 27001, HIPAA, FedRAMP). Azure 
+Blueprints Automates Infrastructure Deployment.
+
 ARM Templates
 Azure Resource Manager (ARM) templates define the infrastructure and configuration of Azure resources in a repeatable way. You can use 
 ARM templates to create and manage resources as part of an Azure Blueprint.
 
 Azure RBAC is used to manage user access to Azure resources. You can use RBAC as part of an Azure Blueprint to assign roles and permissions 
 to users or groups for specific resources.
+---
+Azure Monitor is a comprehensive monitoring solution that helps collect, analyze, and respond to telemetry data from Azure resources, 
+applications, and infrastructure. It provides real-time visibility into performance, availability, and operational health.
+For Performance Monitoring Azure Monitor collects metrics, logs, and traces from Azure services, applications, and on-premises resources.
+Sources include Azure VMs, Azure App Service, Kubernetes, and more. Integrates with tools like Azure Metrics Explorer, Log Analytics, 
+and Application Insights.
+
+For Performance Monitoring Azure Monitor tracks CPU, memory, disk, and network usage for VMs and containers. Monitors application 
+performance using Application Insights. Alerting & Automation - Azure Monitor detects anomalies and triggers alerts based on custom 
+thresholds. Azure Monitor can integrate with Azure Logic Apps, Azure Functions, or ITSM tools for automated responses.
+
+Log Analytics
+Uses Kusto Query Language (KQL) to analyze logs for troubleshooting and auditing.
+Aggregates data from Azure Activity Logs, VM logs, and diagnostics.
+---
 
 Application Insights
-Application Insights, a feature of Azure Monitor, is an extensible Application Performance Management (APM) service for 
-developers and DevOps professionals.
+Application Insights is a feature of Azure Monitor. Application Insights is an extensible Application Performance Management (APM) 
+service for developers and DevOps professionals. Azure Monitor collects metrics, logs, and traces from Azure services, applications, 
+and on-premises resources. Sources include Azure VMs, Azure App Service, Kubernetes, and more.
 
 Azure DevOps
 Collaborate on software development through source control, work tracking, and continuous integration and delivery, both 

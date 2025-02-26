@@ -165,8 +165,8 @@ Azure Logic Apps: Automating workflows and business processes.
 -----------------------------------------------------------------------
 Exam_Questions_Missed
 
-Q:A company wants to ensure the the application survives a region-wide failure. Which concept needs to be consdidered?
-A:Fault Tolerance, not High Availability
+Q:A company wants to ensure the the application survives a region-wide failure. Which concept needs to be considered?
+A:Fault Tolerance, not High Availability * Either answer is correct based on my research.
 
 Q:A company has just deployed a set of Virtual Machines (VMs) to host a production software for their end users.
 The company needs to have a solution that will allow them to know the health of their VMs at all times so they can implement alerts and redundancy.
