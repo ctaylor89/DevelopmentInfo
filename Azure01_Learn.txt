@@ -33,7 +33,7 @@ XXXXXXXXXXXXXXXX Recorded to here. 01/30  Azure01_Learn2.mp3
 :495
 XXXXXXXXXXXXXXXX Recorded to here. 02/02  Azure01_Learn3.mp3
 :573
-XXXXXXXXXXXXXXXX Recorded to here. 02/15  Azure01_Learn2.mp3
+XXXXXXXXXXXXXXXX Recorded to here. 02/15  Azure01_Learn4.mp3
 
 ---------------------------------------------------------------
 Application_Hosting_Options
@@ -273,9 +273,8 @@ create, update, and delete resources in your Azure account.
 You typically access Resource Manager from the Azure portal, Azure Cloud Shell, Azure PowerShell, and the Azure CLI. Azure 
 RBAC doesn't enforce access permissions at the application or data level.
 
-* Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides a 
-flexible and convenient way to manage your Azure environment directly from your web browser. You can also access Cloud Shell from 
-the Azure portal, shell.azure.com, Azure mobile app, Visual Studio Code, and more.
+* Azure Cloud Shell is a browser-based, interactive shell that provides a command-line environment for managing Azure resources. 
+It allows users to execute Azure CLI, Azure PowerShell, and other tools without needing local installations.
 
 Resource Grouping: Resources can be grouped into resource groups, making it easier to manage and organize them.
 Tagging: You can apply tags to resources to categorize and track them.
@@ -1141,6 +1140,13 @@ When you provision a VM, you’ll also have the chance to pick the resources that 
 	Size (purpose, number of processor cores, and amount of RAM)
 	Storage disks (hard disk drives, solid state drives, etc.)
 	Networking (virtual network, public IP address, and port configuration)
+
+Azure Service Health
+
+Azure usage and charge reports
+
+By creating an Azure Files Share the company can easily map a network drive from their windows machines to the Azure Storage Account.
+Remember that files are not necessarily human readable files.
 ---------------------------------------------------------------
 Service_Level_Agreements
 
@@ -1360,14 +1366,17 @@ Which Azure Virtual Machine feature staggers updates across VMs based on their u
 Random_Notes
 
 Functions can be either stateless or stateful. When they're stateless (the default), they behave as if they restart every time they 
-respond to an event. When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
+respond to a n event. When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
 
 *The following 3 services associate with Azure Blueprints?
 Azure Advisor
 It analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost 
-effectiveness, performance, Reliability (formerly called High availability), and security of your Azure resources.
-Azure Advisor is a recommendation service that provides guidance on how to optimize Azure resources. It does not directly 
-integrate with Azure Blueprints, but you can use Advisor recommendations to inform your Blueprint designs.
+effectiveness, performance and security of your Azure resources. Azure Advisor is a recommendation service that provides 
+guidance on how to optimize Azure resources. It does not directly integrate with Azure Blueprints, but you can use Advisor 
+recommendations to inform your Blueprint designs.
+
+*Usage telemetry in Azure refers to the collection, monitoring, and analysis of data about how users interact with applications, 
+services, or infrastructure. This telemetry helps track performance, detect issues, and optimize resource utilization.
 
 Azure Blueprints help organizations define, deploy, and manage cloud environments in a repeatable and consistent manner. They are 
 used to orchestrate resources, policies, and security controls across multiple subscriptions while ensuring compliance with 
@@ -1383,20 +1392,22 @@ Azure RBAC is used to manage user access to Azure resources. You can use RBAC as
 to users or groups for specific resources.
 ---
 Azure Monitor is a comprehensive monitoring solution that helps collect, analyze, and respond to telemetry data from Azure resources, 
-applications, and infrastructure. It provides real-time visibility into performance, availability, and operational health.
+applications, and infrastructure. Azure Monitor provides real-time visibility into performance, availability, and operational health.
 For Performance Monitoring Azure Monitor collects metrics, logs, and traces from Azure services, applications, and on-premises resources.
-Sources include Azure VMs, Azure App Service, Kubernetes, and more. Integrates with tools like Azure Metrics Explorer, Log Analytics, 
-and Application Insights.
+Sources include Azure VMs, Azure App Service, Kubernetes, and more. Azure Monitor integrates with tools like Azure Metrics Explorer, 
+Log Analytics, and Application Insights.
 
 For Performance Monitoring Azure Monitor tracks CPU, memory, disk, and network usage for VMs and containers. Monitors application 
 performance using Application Insights. Alerting & Automation - Azure Monitor detects anomalies and triggers alerts based on custom 
 thresholds. Azure Monitor can integrate with Azure Logic Apps, Azure Functions, or ITSM tools for automated responses.
 
+* The ITSM (IT Service Management) tools referred to in the above sentence are platforms used for managing IT services and workflows. 
+Azure Monitor integrates with these tools to create work items, automate responses, and streamline incident management.
+
 Log Analytics
 Uses Kusto Query Language (KQL) to analyze logs for troubleshooting and auditing.
-Aggregates data from Azure Activity Logs, VM logs, and diagnostics.
+Log Analytics aggregates data from Azure Activity Logs, VM logs, and diagnostics.
 ---
-
 Application Insights
 Application Insights is a feature of Azure Monitor. Application Insights is an extensible Application Performance Management (APM) 
 service for developers and DevOps professionals. Azure Monitor collects metrics, logs, and traces from Azure services, applications, 
@@ -1407,11 +1418,14 @@ Collaborate on software development through source control, work tracking, and c
 on-premises and in the cloud!
 
 Azure Automation
-Azure Automation is a cloud-based automation service for managing and deploying Azure resources, but it is a separate 
-service from Azure Cloud Shell.
+Azure Automation is a cloud-based automation service for managing and deploying Azure resources. Azure Automation is a designed to 
+simplify and streamline the management of your IT infrastructure. It helps automate repetitive, time-consuming tasks, ensuring 
+consistency and reducing the risk of errors. Azure Automation is ideal for tasks like provisioning resources, managing updates, 
+enforcing compliance, and orchestrating complex workflows. Manage resources across Azure, on-premises, and other cloud environments.
 
 Azure Cost Management
-Azure Cost Management is a tool for visualizing and monitoring Azure resource usage and costs.
+Azure Cost Management is a suite of tools designed to help organizations analyze, monitor, and optimize their cloud spending. It 
+provides insights into your Azure usage and costs, enabling you to make informed decisions and manage your budget effectively.
 
 High Availability
 Focuses on minimizing downtime within a single region by using Availability Sets, Availability Zones, and Load Balancers. However, it 
@@ -1455,6 +1469,23 @@ By deploying two or more VMs within an Availability Set, Azure will distribute t
 This ensures that even if one fault domain or update domain experiences a disruption, your VMs will still be accessible via the other 
 fault domain(s) or update domain(s).
 ---
+Azure Cloud Shell is a browser-based, interactive shell that provides a command-line environment for managing Azure resources. 
+It allows users to execute Azure CLI, Azure PowerShell, and other tools without needing local installations. Azure Cloud Shell is 
+ideal for automation and scripting, while the Azure Portal is more user-friendly for visual management.
+---
+Traffic Manager
+Azure Traffic Manager is a DNS-based traffic routing service that directs user requests to the best-performing or most available 
+endpoint based on predefined routing methods. It improves high availability, performance, and geo-distribution of applications across 
+multiple regions.
+
+Key Benefits of Traffic Manager
+Global Load Balancing – Routes traffic across different Azure regions.
+High Availability & Failover – Automatically redirects traffic if an endpoint goes down.
+Performance Optimization – Routes users to the closest or fastest endpoint.
+Scalability – Supports applications deployed in multiple locations.
+Multi-Cloud & Hybrid Support – Can route traffic to Azure, on-premises, or even other cloud providers.
+---
+
 ---------------------------------------------------------------
 Technical_Terms
 

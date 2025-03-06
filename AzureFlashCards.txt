@@ -1,0 +1,12 @@
+What are 5 pros of using Cloud Hosting?
+Flexible, Scalable, Secure, Cost-Effective, High Configurability
+
+What are 2 cons of using a dedicated server?
+Very Expensive, High Maintenance
+
+What are the four most common types of cloud services for Infrastructure as a Service? (IaaS)?
+	Compute Networking Databases Storage - Blob, Disk, File Storage(Managed File Shares), 
+	Back up and Archive(Disaster recovery and long-term data storage using Azure Backup and Azure Archive Storage) 
+Better: Security & Identity Management - Azure AD, Key Vault, Defender for Cloud, RBAC
+
+

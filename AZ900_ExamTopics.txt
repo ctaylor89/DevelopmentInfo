@@ -198,9 +198,9 @@ Note: Azure Load Balancer is incorrect because it is a service that distributes 
 and does not provide alerting capabilities for monitoring application availability.
 Azure Traffic Manager is incorrect because it is a service that enables you to control the distribution of user traffic to your web 
 applications and does not provide alerting capabilities for monitoring application availability.
-Azure Log Analytics is incorrect because it is a service that collects and analyzes log data, but does not provide direct monitoring or 
-
-alerting capabilities for CPU utilization.
+Azure Log Analytics is incorrect because it is a service that collects and analyzes log data.
+---
+Alerting capabilities for CPU utilization.
 Q:An organization is migrating its on-premises web application to Microsoft Azure. The company is looking to save money by only running 
 the right amount of servers to meet the demand of traffic for this web application while in production.
 Which Azure service would allow the organization to dynamically adjust the number of virtual machines running their web application based 
@@ -237,21 +237,23 @@ remains operational without downtime even if an entire Azure region experiences 
 Which of the following architectural concepts should they consider to meet this requirement?
 A: Disaster Recovery. Since the company wants to ensure application availability even if an entire Azure region fails, they need 
 a disaster recovery (DR) strategy. DR involves replicating and recovering resources in a secondary region to maintain business 
-continuity in case of a regional outage
+continuity in case of a regional outage.
 
 Q:Which of the following services can you associate with Azure Blueprints?
-A:Azure policies are used to enforce rules and standards on resources in an Azure environment. You can use Azure policies as part of an Azure Blueprint to ensure that resources 
-created using the Blueprint comply with specific rules and standards.
-A: Azure Resource Manager (ARM) templates define the infrastructure and configuration of Azure resources in a repeatable way. You can use ARM templates to create and manage 
-resources as part of an Azure Blueprint.
-A: Azure RBAC is used to manage user access to Azure resources. You can use RBAC as part of an Azure Blueprint to assign roles and permissions to users or groups for specific resources.
+A1:Azure policies are used to enforce rules and standards on resources in an Azure environment. You can use Azure policies as part
+of an Azure Blueprint to ensure that resources created using the Blueprint comply with specific rules and standards.
+A2: Azure Resource Manager (ARM) Templates define the infrastructure and configuration of Azure resources in a repeatable way. You 
+can use ARM templates to create and manage resources as part of an Azure Blueprint.
+A3: Azure RBAC is used to manage user access to Azure resources. You can use RBAC as part of an Azure Blueprint to assign roles and 
+permissions to users or groups for specific resources.
 ---
-GreenTech Solutions, a medium-sized company specializing in sustainable technology solutions, plans to migrate its on-premises data center to Azure to enhance scalability, reliability, and global reach. The company's key applications include a customer-facing website, an internal inventory management system, and a big data analytics platform for market research.
+GreenTech Solutions, a medium-sized company specializing in sustainable technology solutions, plans to migrate its on-premises data 
+center to Azure to enhance scalability, reliability, and global reach. The company's key applications include a customer-facing 
+website, an internal inventory management system, and a big data analytics platform for market research.
 Storage Requirements:
-
-The customer-facing website requires high-availability storage for static content and media files.
-The inventory management system needs secure and efficient storage for transactional databases.
-The big data analytics platform demands large-scale storage with high throughput for processing and analyzing vast amounts of market data.
+ The customer-facing website requires high-availability storage for static content and media files.
+ The inventory management system needs secure and efficient storage for transactional databases.
+ The big data analytics platform demands large-scale storage with high throughput for processing and analyzing vast amounts of market data.
 
 Networking Requirements:
 Secure and fast connectivity between Azure services and on-premises systems.
@@ -276,6 +278,60 @@ Q: Which Azure service is best suited for efficient global distribution of Green
 A: Azure Content Delivery Network (CDN). Azure CDN is designed to efficiently distribute content to users worldwide, reducing load 
 times and improving user experience.
 
+--- Test 2
+Q: What is considered a capital expense?
+A: Office building, Physical hardware, Vehhicles. Upfront costs and not ongoing costs like a subscription.
+
+Q: Azure Backup is an example of ________ 
+A: PaaS
+
+Q: A company i migrating a number of servers to Azure. One of the servers, named server1, needs to be on a separate network
+segment based on the comapny's requirements. Which Azure services can be utilized to fulfill this requirement?
+A: A virtual network for server1 and another virtual network for all of the other servers.
+
+Q: They want to use a tool to collect and analyze logs from their web applications to improve their troubleshooting capabilities. 
+Which of the following services help them achieve this?
+A: Azure Application Insights
+
+Q: What are you responsible for when implementing a SaaS solution?
+A: Configuring the application.
+
+Q: All of the Azure resources used by a department will be managed by an administrator. What a two possible techniques to segment 
+Azure for the departments?
+A: multiple subscriptions and multiple resource groups.
+
+Q: Does an Azure firewall encrypt network traffic?
+A: NO
+
+Q: There is a requirement that all billing for cloud resources in an account should be grouped per department for budgetary reasons.
+Which of the following Azure features should they implement to meet this requirement?
+A: Azure Tags, Azure Resource groups
+
+Q: What is the longest term in years for a reserved VM Instance?
+A: 3 years
+
+Q: A company wants to be alerted when Microsoft plans to execute maintenance that may affect the resources deployed to an Azure subscription.
+What Azure service should be used?
+A: Azure Service Health
+
+Q: A company wants to access raw data about their Azure expenditures so they can visualize it in their own Business Intelligence tool.
+Which Azure Cost Management service allows them to view and download this data?
+A: Azure usage and charge reports
+
+Q: When getting started in Azure, what should be created first?
+A: A Subscription
+
+Q: A company plans to map a network drive from several computers that run Windows 10 to Azure Storage. They need to create a solution in Azure 
+for the planned mapped drive. What should be created?
+A: Azure Files  *It would be a file share solution. Remember that files are not necessarily human readable files.
+By creating an Azure Files Share the company can easily map a network drive from their windows machines to the Azure Storage Account.
+
+Q: Which of the following types of infrastructure no longer requires its own data center when hosted by an organization?
+A: Public cloud *Once an organization hosts it's data in the public cloud it no longer needs its own data center.
+---
+  
+Q: 
+A: 
 
 
 
