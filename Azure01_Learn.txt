@@ -1141,10 +1141,24 @@ When you provision a VM, you’ll also have the chance to pick the resources that 
 	Storage disks (hard disk drives, solid state drives, etc.)
 	Networking (virtual network, public IP address, and port configuration)
 
-Azure Service Health
-
+Azure Service Health is a monitoring service that provides real-time insights into the health of Azure services, regions, and 
+resources. It helps organizations stay informed about service issues, planned maintenance, and potential outages. The component
+Azure Status displays global service health information across all Azure regions. Has Integration with Azure Monitor: Can be 
+configured to send alerts to teams via email, SMS, or ITSM tools like ServiceNow.
+---
 Azure usage and charge reports
-
+Azure provides several tools and reports to track resource usage, monitor costs, and analyze spending patterns. These reports help 
+organizations optimize cloud expenses and ensure transparency in billing.
+Key Features:
+	Cost Analysis – Visualize costs by subscription, resource group, service, or time period.
+	Usage Reports – Shows detailed breakdowns of resources consumed and their associated costs.
+	Forecasting & Budgeting – Predict future costs based on trends and set spending limits.
+	Alerts & Anomalies – Set up alerts for unexpected spikes in usage or costs.
+	Exports – Schedule automated reports to download usage and billing data in CSV format
+Azure Pricing Calculator:
+	Estimates costs before deploying resources.
+	Helps plan spending based on expected workloads.
+---
 By creating an Azure Files Share the company can easily map a network drive from their windows machines to the Azure Storage Account.
 Remember that files are not necessarily human readable files.
 ---------------------------------------------------------------
@@ -1413,12 +1427,35 @@ Application Insights is a feature of Azure Monitor. Application Insights is an e
 service for developers and DevOps professionals. Azure Monitor collects metrics, logs, and traces from Azure services, applications, 
 and on-premises resources. Sources include Azure VMs, Azure App Service, Kubernetes, and more.
 
+Azure Sentinel
+Azure Sentinel uses playbooks for automating responses to detected security threats and incidents.
+A playbook is a collection of these remediation actions that can be run from Azure Sentinel as a routine. A playbook can help automate and 
+orchestrate your threat response; A playbook can be run manually or set to run automatically in response to specific alerts or incidents, 
+when triggered by an analytics rule or an automation rule.
+
+* An analytics rule is designed to detect security threats based on log data and generate alerts or incidents. An example of an 
+analytics rule is a rule that detects failed login attempts exceeding 10 attempts in 5 minutes from the same IP address. When 
+triggered, this rule generates an alert or incident, which can then trigger a playbook to respond. Analytics Rules use detection 
+patterns to scan logs continuously.
+
+* An automation rule is used to automatically trigger actions based on incidents rather than detection patterns. An automation 
+rule automatically assigns high-severity incidents to a security analyst and runs a playbook. The automation rule helps in 
+managing incidents efficiently without manual intervention.
+
+* A detection pattern is a predefined logic or set of conditions used to identify potential security threats, anomalies, or suspicious 
+activities in log data. In Azure Sentinel, detection patterns are used in analytics rules to monitor data sources and trigger alerts 
+when certain criteria are met.
+	Key Characteristics of a Detection Pattern
+	Defined Conditions - A specific set of rules based on log data.
+	Trigger Mechanism  - If the conditions are met, an alert or incident is generated.
+	Based on Log Queries - Often written in Kusto Query Language (KQL) to scan security logs.
+
 Azure DevOps
 Collaborate on software development through source control, work tracking, and continuous integration and delivery, both 
 on-premises and in the cloud!
 
 Azure Automation
-Azure Automation is a cloud-based automation service for managing and deploying Azure resources. Azure Automation is a designed to 
+Azure Automation is a cloud-based automation service for managing and deploying Azure resources. Azure Automation is designed to 
 simplify and streamline the management of your IT infrastructure. It helps automate repetitive, time-consuming tasks, ensuring 
 consistency and reducing the risk of errors. Azure Automation is ideal for tasks like provisioning resources, managing updates, 
 enforcing compliance, and orchestrating complex workflows. Manage resources across Azure, on-premises, and other cloud environments.
@@ -1439,9 +1476,11 @@ Resiliency is a broader term than Disaster Recovery that includes both High Avai
 can recover from disruptions at various levels.
 
 Azure Application Gateway
-Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications. Traditional load 
-balancers operate at the transport layer (OSI layer 4 - TCP and UDP) and route traffic based on source IP address and port, to a 
-destination IP address and port.
+Azure Application Gateway (AAG) is a Layer 7 (HTTP/HTTPS) load balancer that manages web traffic to your applications. It provides 
+intelligent routing, security, and scalability for web applications deployed in Azure. It has a Web Application Firewall (WAF) that 
+Protects against web attacks like SQL injection and cross-site scripting (XSS). It has Session Affinity (Cookie-Based) that ensures 
+users maintain sessions with the same backend server. Azure Application Gateway encrypts traffic from client to gateway and from 
+gateway to backend. Note that the Azure Load Balancer does not have URL-Based routing and a firewall.
 
 Azure AD Connect
 Azure AD Connect is a Microsoft tool that allows organizations to synchronize their on-premises Active Directory (AD) infrastructure 
@@ -1449,21 +1488,38 @@ with Azure Active Directory (Azure AD). It enables a seamless and secure identit
 users across on-premises and cloud environments.
 
 Azure Databricks
-Azure Databricks is an Azure Cloud service for machine learning. It is designed for data science and data engineering. fast, easy, 
-and collaborative Apache Spark-based big data analytics service designed for data science and data engineering. It is the only 
-option that can host machine learning workloads.
+Azure Databricks is an Azure Cloud service for machine learning. It is a fast, easy, and collaborative Apache Spark-based big data 
+analytics service designed for data science and data engineering. It is the only option that can host machine learning workloads.
 
 Azure Logic Apps
 Azure Logic Apps is a cloud service that helps you schedule, automate, and orchestrate tasks, business processes, and workflows when 
 you need to integrate apps, data, systems, and services across enterprises or organizations. 
 
 Azure Content Delivery Network (CDN). 
-Azure CDN is designed to efficiently distribute content to users worldwide, reducing load times and improving user experience.
+Azure Content Delivery Network (CDN) is a globally distributed network of servers that helps deliver content faster and more reliably by 
+caching content closer to users. Azure Content Delivery Network enhances performance, reduces latency, and optimizes bandwidth usage for 
+web applications, media streaming, and APIs.
+---
+Azure Backup
+Azure Backup is a cloud-based backup solution that provides data protection for on-premises and cloud-based workloads. It helps safeguard 
+data from accidental deletion, corruption, and ransomware attacks. Performs Incremental Backups.
+Backup Methods:
+	Azure VM Backup     – Backs up entire virtual machines, including OS and data disks.
+	Azure Files Backup  – Protects files stored in Azure Files shares.
+	SQL Database Backup – Protects SQL databases on Azure VMs.
+	On-Premises Backup  – Uses Azure Backup Server (MABS) or Azure Site Recovery for hybrid workloads.
+
+Azure Backup itself is a PaaS (Platform as a Service) offering, meaning it runs on Microsoft's managed cloud infrastructure and does 
+not require you to manage the underlying hardware, storage, or backup software. Azure Backup does not directly support backing up 
+native Azure PaaS services like Azure SQL Database, Azure Blob Storage, or Cosmos DB. These have their own built-in backup mechanisms
 ---
 To guarantee 99.95% VM connectivity, you must deploy at least two VMs in the same Availability Set in Azure. This is because Availability 
 Sets ensure that your VMs are physically separated across multiple hardware servers within an Azure datacenter, providing redundancy and 
 minimizing the risk of datacenter-wide failures. If you have only one VM in an Availability Set, you can still experience a single point 
 of failure if the hardware server that the VM is running on fails.
+
+For all Virtual Machines that have two or more instances deployed across two or more Availability Zones in the same Azure region, Azure 
+guarantees you will have Virtual Machine Connectivity to at least one instance at least 99.99% of the time.
 
 By deploying two or more VMs within an Availability Set, Azure will distribute them across different fault domains and update domains. 
 This ensures that even if one fault domain or update domain experiences a disruption, your VMs will still be accessible via the other 
@@ -1471,7 +1527,8 @@ fault domain(s) or update domain(s).
 ---
 Azure Cloud Shell is a browser-based, interactive shell that provides a command-line environment for managing Azure resources. 
 It allows users to execute Azure CLI, Azure PowerShell, and other tools without needing local installations. Azure Cloud Shell is 
-ideal for automation and scripting, while the Azure Portal is more user-friendly for visual management.
+ideal for automation and scripting, while the Azure Portal is more user-friendly for visual management. By accessing Cloud Shell from 
+their iPhone, users can manage the web app's settings and perform administrative tasks using the command-line tools.
 ---
 Traffic Manager
 Azure Traffic Manager is a DNS-based traffic routing service that directs user requests to the best-performing or most available 
@@ -1485,7 +1542,33 @@ Performance Optimization – Routes users to the closest or fastest endpoint.
 Scalability – Supports applications deployed in multiple locations.
 Multi-Cloud & Hybrid Support – Can route traffic to Azure, on-premises, or even other cloud providers.
 ---
+Azure Local Network Gateway (LNG)
+The Local Network Gateway (LNG) in Azure represents your on-premises network when setting up a VPN connection between Azure and your 
+local infrastructure. The Local Network Gateway stores the necessary information about your on-prem network, such as public IP address 
+and subnet details, so that Azure Virtual Network Gateway can establish a secure connection.
+	Key Functions of Local Network Gateway
+	Connects On-Premises to Azure – Used for Site-to-Site (S2S) VPN and ExpressRoute connections.
+	Stores On-Premises Network Information – Includes public IP of the VPN device and BGP settings.
+	Works with Virtual Network Gateway – Helps establish encrypted tunnels between Azure and on-prem resources.
+* A Virtual Network Gateway represents Azure's VPN endpoint.
+---
+If a company wants to ensure application availability even if an entire Azure region fails, they need a disaster recovery (DR) strategy. 
+DR involves replicating and recovering resources in a secondary region to maintain business continuity in case of a regional outage.
 
+For high availability and disaster recovery, use geo-redundant storage across multiple regions.
+
+A Hybrid Cloud is a combination of on-premises infrastructure and Azure cloud services. A private cloud can be connected to an 
+on-premises service, enabling seamless integration between cloud-based and on-prem workloads. This setup is common in hybrid cloud 
+architectures, where organizations extend their on-prem infrastructure to a private cloud environment for flexibility and scalability.
+
+When migrating or expanding your on-premises servers, you are able to choose a private, hybrid, or public cloud model.
+Private cloud only serves one organization without public integration. Public cloud doesn’t integrate directly with 
+on-premises servers without a hybrid model.
+
+Every Azure region has multiple data centers.
+
+
+End Random_Notes
 ---------------------------------------------------------------
 Technical_Terms
 

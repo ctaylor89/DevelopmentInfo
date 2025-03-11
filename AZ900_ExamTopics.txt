@@ -242,8 +242,10 @@ continuity in case of a regional outage.
 Q:Which of the following services can you associate with Azure Blueprints?
 A1:Azure policies are used to enforce rules and standards on resources in an Azure environment. You can use Azure policies as part
 of an Azure Blueprint to ensure that resources created using the Blueprint comply with specific rules and standards.
+
 A2: Azure Resource Manager (ARM) Templates define the infrastructure and configuration of Azure resources in a repeatable way. You 
 can use ARM templates to create and manage resources as part of an Azure Blueprint.
+
 A3: Azure RBAC is used to manage user access to Azure resources. You can use RBAC as part of an Azure Blueprint to assign roles and 
 permissions to users or groups for specific resources.
 ---
@@ -285,7 +287,7 @@ A: Office building, Physical hardware, Vehhicles. Upfront costs and not ongoing 
 Q: Azure Backup is an example of ________ 
 A: PaaS
 
-Q: A company i migrating a number of servers to Azure. One of the servers, named server1, needs to be on a separate network
+Q: A company is migrating a number of servers to Azure. One of the servers, named server1, needs to be on a separate network
 segment based on the comapny's requirements. Which Azure services can be utilized to fulfill this requirement?
 A: A virtual network for server1 and another virtual network for all of the other servers.
 
@@ -296,7 +298,7 @@ A: Azure Application Insights
 Q: What are you responsible for when implementing a SaaS solution?
 A: Configuring the application.
 
-Q: All of the Azure resources used by a department will be managed by an administrator. What a two possible techniques to segment 
+Q: All of the Azure resources used by a department will be managed by an administrator. What are two possible techniques to segment 
 Azure for the departments?
 A: multiple subscriptions and multiple resource groups.
 
@@ -329,7 +331,90 @@ By creating an Azure Files Share the company can easily map a network drive from
 Q: Which of the following types of infrastructure no longer requires its own data center when hosted by an organization?
 A: Public cloud *Once an organization hosts it's data in the public cloud it no longer needs its own data center.
 ---
-  
+--- Test 3  
+Q: Which of the following features or benefits can be obtained by using the Azure Pricing Calculator? (Select two)
+A: Compare pricing between different Azure regions.
+A: Estimate the cost of running specific Azure services and resources
+W: Calculating the total cost of ownership (TCO) for on-premises infrastructure is not a direct capability of the Azure Pricing 
+Calculator. It is designed to help estimate costs specifically for Azure services and resources, not for on-premises infrastructure.
+
+https://app.exampro.co/student/attempts/3ee1eca3-e247-437c-ae2b-955cc6288b6b/review
+
+Q: Which of the following features or benefits can be obtained by using the Azure Pricing Calculator? (Select two)
+A: Compare pricing between different Azure regions.
+A: Estimate the cost of running specific Azure services and resources.
+W: Calculate the total cost of ownership (TCO) for on-premises infrastructure.
+* Calculating the total cost of ownership (TCO) for on-premises infrastructure is not a direct capability of the Azure Pricing 
+Calculator. By using the Azure Pricing Calculator, users can estimate the cost of running specific Azure services and resources. 
+They can input details such as the number of instances, storage usage, data transfer, and other factors to get a comprehensive 
+cost estimate for their chosen services.
+
+Q: Which Azure service would best meet HealthyEats Inc.'s storage requirements for sensitive customer data?
+A: Azure SQL Database is an ideal choice for storing sensitive customer data because it offers advanced security features, including 
+encryption, threat detection, and secure network connectivity. This database service is designed for handling structured data like 
+customer information and transaction logs, which suits HealthyEats Inc.'s requirements.
+W: Blob Storage
+
+Q: To manage high traffic and ensure minimal latency, what feature should HealthyEats Inc. implement in their Azure environment?
+A: Azure Load Balancer is the best option for managing high traffic and ensuring minimal latency. It distributes incoming traffic 
+across multiple servers to prevent any single server from becoming a bottleneck, thus maintaining performance during peak times. 
+This is crucial for HealthyEats Inc. during high meal ordering periods.
+W: Azure Traffic Manager *This is a DNS-based traffic routing service. Do not let the name fool you!
+
+Q: Which Azure service would help a company comply with regional data protection regulations?
+A: Azure Policy provides governance and compliance features that are essential for businesses operating in multiple regulatory 
+environments. It enables organizations to create, assign, and manage policies that enforce rules over their cloud resources, ensuring 
+these resources comply with corporate standards and external regulations. This service is beneficial for a company as it allows 
+them to implement policies that ensure data is managed and stored in ways that comply with regional data protection laws like GDPR 
+in Europe, making it a versatile tool for managing compliance across various regions.
+
+Q: What Azure service would be most effective for a company to manage and analyze their inventory data and transaction logs?
+A: Azure Synapse Analytics is a powerful analytics service that can handle large volumes of data, making it suitable for managing 
+and analyzing a company's inventory data and transaction logs. It offers big data and data warehouse technologies, enabling complex 
+analysis, data warehousing, and the integration of various data sources.
+
+Q: A company needs to store a large amount of archival data that is infrequently accessed. They are considering using Azure Blob 
+Storage as their storage solution. The company wants to optimize costs while ensuring that the data is available when needed.
+Which Azure access tier should they choose for this requirement?
+A: The Archive access tier in Azure Blob Storage is designed for data that is rarely accessed and has the lowest storage costs. 
+However, it has a longer retrieval time compared to the Cool access tier, which may not be suitable for data that needs to be 
+readily available.
+A: The Cool access tier in Azure Blob Storage is designed for data that is infrequently accessed but still requires relatively 
+fast access when needed. It offers lower storage costs compared to the Hot access tier while maintaining reasonable retrieval 
+latency. The Cool access tier is suitable for long-term storage, backups, and archival data.
+AW: The Archive access tier in Azure Blob Storage is designed for data that is rarely accessed and has the lowest storage costs. 
+However, it has a longer retrieval time compared to the Cool access tier, which may not be suitable for data that needs to be readily available.
+
+Q: Which security feature would help evaluate current identity practices and provide recommendations for improvements?
+A: Entra ID Identity Secure Score evaluates how well an organization's identity management practices comply with security best 
+practices. It provides a numerical score reflecting the current state of identity security and offers actionable recommendations 
+for improvement. The score helps organizations assess potential risks and areas for strengthening their identity management. As 
+it directly focuses on improving security and identity-related configurations, it's the best tool for assessing compliance 
+with security standards.
+* The Microsoft Trust Center provides valuable information about Microsoft's security, privacy, and compliance policies across its 
+cloud services, but it is primarily a resource for learning about security standards and compliance certifications. 
+
+Q: Which cloud model can be used to connect to an on-premises server?
+A: A hybrid cloud model is designed to combine the benefits of both on-premises (private cloud) and public cloud environments.
+
+Q: 
+A: 
+
+Q: 
+A: 
+
+Q: 
+A: 
+
+Q: 
+A: 
+
+Q: 
+A: 
+
+Q: 
+A: 
+
 Q: 
 A: 
 
