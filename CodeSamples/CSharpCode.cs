@@ -16,13 +16,14 @@ namespace DevelopmentInfo.CodeSamples
         delegate int DelegateMakeNumber(int val);
         delegate bool DelegateBiggerThan(int n, string s);
         enum Cars { Mustang = 1, Corvette = 2, F150 = 3 };
+        readonly int[] RangOfNumbers = { 20, 1, 4, 8, 9, 44, 5, 11, 66, 222, 300, 440, 500, 511 };
 
         public void CSharpCoding()
         {
-            Console.WriteLine("Starting method: CSharp3()  feature branch change");
+            Console.WriteLine("Starting method: CSharp3()  feature branch change2");
 
             var listIntegers = new List<int>();
-            listIntegers.AddRange(new int[] { 20, 1, 4, 8, 9, 44, 5, 11, 66, 222, 300, 440, 500, 511 });
+            listIntegers.AddRange(RangOfNumbers);
 
             // Find all even numbers in a list of numbers            
             List<int> evenNumbers = listIntegers.FindAll(i => (i % 2) == 0);
