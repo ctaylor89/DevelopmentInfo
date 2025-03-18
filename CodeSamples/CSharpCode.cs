@@ -18,11 +18,15 @@ namespace DevelopmentInfo.CodeSamples
         enum Cars { Mustang = 1, Corvette = 2, F150 = 3 };
 
         public void CSharpCoding()
-        {
-            Console.WriteLine("Starting method: CSharp3()  conflict_branch changed");
+        {            
+            Console.WriteLine("Starting method: CSharp3()  conflict_branch changed 2");
+            Console.WriteLine("Starting method: CSharp3()  conflict_branch Added this line");
 
             var listIntegers = new List<int>();
-            listIntegers.AddRange(new int[] { 20, 1, 4, 8, 9, 44, 5, 11, 66, 222, 300, 440, 500, 511 });
+            listIntegers.AddRange(new int[] { 20, 1, 4, 8, 9, 44, 5, 11, 66, 222, 300, 449, 509, 519 });
+            var count = listIntegers.Count;
+            Console.WriteLine("Count of listIntegers: {0}", count);
+
 
             // Find all even numbers in a list of numbers            
             List<int> evenNumbers = listIntegers.FindAll(i => (i % 2) == 0);
