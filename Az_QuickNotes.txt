@@ -118,7 +118,9 @@ Managed container platform for running microservices and event-driven apps.
 Auto-scales based on HTTP traffic, background jobs, or event-driven triggers.
 Is is an alternative to Kubernetes without cluster management overhead.
 
-12. Azure Backup is a cloud-based backup solution that provides data protection for on-premises and cloud-based workloads.
+12. Azure Backup is a cloud-based backup service that provides data protection, disaster recovery, and long-term retention 
+for on-premises, hybrid, and cloud environments. It allows organizations to securely back up virtual machines (VMs), 
+databases, files, and applications without needing additional infrastructure.
 
 13. Azure Site Recovery is a disaster recovery service that helps ensure business continuity by replicating and failing over 
 virtual machines (VMs) and physical servers to Azure in case of a disaster or outage. It provides automated failover and failback 
