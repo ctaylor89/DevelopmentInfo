@@ -395,7 +395,53 @@ with security standards.
 cloud services, but it is primarily a resource for learning about security standards and compliance certifications. 
 
 Q: Which cloud model can be used to connect to an on-premises server?
-A: A hybrid cloud model is designed to combine the benefits of both on-premises (private cloud) and public cloud environments.
+A: A hybrid cloud model is a cloud computing architecture that combines on-premises infrastructure, private cloud, and public cloud resources.  
+   A hybrid cloud model is designed to combine the benefits of both on-premises (private cloud) and public cloud environments.
+   A hybrid cloud can consist of only a private cloud and a public cloud, without requiring on-premises infrastructure.
+
+Q: A company needs to ensure that their critical data is readily accessible with the lowest possible latency because it is accessed 
+very frequently. The primary concern is achieving the best performance for data retrieval and updates, with less emphasis on the 
+cost-saving measures for storing data that is accessed less frequently. 
+Given these requirements, which Azure Blob Storage option should they choose?
+A: Hot storage
+AW  Premium storage, is not applicable to Azure Blob Storage. Premium storage is primarily associated with Azure managed disks and Azure Files
+
+Q: Microsoft Defender for Cloud can be used to collect VM Firewall Logs. Is this statement true?
+A: No
+
+Q: Which of the following passwordless authentication options are available and integrated with Microsoft Entra ID? (Select three.)
+A: Hello for Business, FID02 security keys, Microsoft Authenticator
+
+Q: Which security feature would help evaluate current identity practices and provide recommendations for improvements?
+A: Entra ID Identity Secure Score
+* Entra ID Identity Secure Score evaluates how well an organization's identity management practices comply with security best 
+practices. It provides a numerical score reflecting the current state of identity security and offers actionable recommendations 
+for improvement.
+
+Q: A company is looking to adopt a hybrid cloud approach and wants to manage their on-premises servers, Kubernetes clusters, and Azure resources from a single interface. They also want to ensure consistent security and compliance across all environments.
+
+Which Azure service should they consider to meet these requirements?
+A: Azure Arc
+* Azure Arc enables organizations to extend Azure management and governance capabilities to on-premises infrastructure, multi-cloud 
+environments, and edge devices. Azure Arc also allows for consistent policy enforcement, security, and compliance across all 
+environments, ensuring that the organization can maintain control and governance across their entire hybrid infrastructure.
+
+Q: Which of the following options are valid CLI tools for managing Azure resources?
+A: Azure PowerShell, Azure CLI
+* Azure Cloud Shell is a command-line environment but is not a standalone CLI tool. It provides access to both Azure CLI and 
+Azure PowerShell within a browser-based shell environment.
+
+Q: 
+A: 
+
+Q: 
+A: 
+
+Q: 
+A: 
+
+Q: 
+A: 
 
 Q: 
 A: 

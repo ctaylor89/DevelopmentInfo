@@ -8,7 +8,7 @@ namespace DevelopmentInfo.RunCodeSamples
     {
         static void Main(string[] args)
         {
-            int selection = 0;
+            int selection;
             bool keepRunning = true;
                         
             while(keepRunning)
@@ -36,7 +36,7 @@ namespace DevelopmentInfo.RunCodeSamples
                         new Collections().LinqQueries();
                         new Collections().NameValueCollectionClass();
                         new Collections().VariousCollections();
-                    break;
+                        break;
                     case 2:
                         var cSharpCode = new CSharpCode();
                         cSharpCode.CSharpCoding();
@@ -47,35 +47,35 @@ namespace DevelopmentInfo.RunCodeSamples
                         conversions.FloatToBytesAndBack();
                         conversions.IntToBytesAndBack();
                         conversions.StringToBytesAndBack();
-                    break;
+                        break;
                     case 4:
                         new FileOperations().WriteValuesToFile();
-                    break;
+                        break;
                     case 5:
                         var databaseOperations = new DatabaseOperations();
                         databaseOperations.SelectEmployeeStoredProcedureNorthwind();
                         databaseOperations.GetCustomerOrdersByNamesNorthwind(new string[] { "Chop-suey Chinese", "Ernst Handel", "Around the horn" });
-                    break;
+                        break;
                     case 6:
                         new Internationalization().TwoRegionDemo();
-                    break;
+                        break;
                     case 7: // Theads and  tasks
                         new Threading().RunTPLExercises();
                         new Threading().RunThreadExercises();
-                    break;
+                        break;
                     case 8:
                        new LINQPractice().RunLinkQuerys();
                        new LINQPractice().LinkQueryXML();
-                    break;
+                       break;
                     case 9:
                         new DesignPatterns().RunPatterns();
-                    break;
+                        break;
                     case 10:
                         new OopOperations().ExerciseDerivedObjects();
-                    break;
+                        break;
                     case 11:
                         new ServiceCalls().RunServiceCalls();
-                    break;
+                        break;
                     case 12:
                         new TryThis().GenerateListOfTimes();
                         new TryThis().GenerateListOfThelast120Years();
@@ -132,10 +132,10 @@ namespace DevelopmentInfo.RunCodeSamples
                     case 22:
                         // Environment.Exit(0);
                         keepRunning = false;
-                    break;
+                        break;
                     default:
                         Console.WriteLine("Invalid Selection");
-                    break;
+                        break;
                 }
             }
         }

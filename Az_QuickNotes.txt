@@ -1,0 +1,263 @@
+﻿PaaS_Platform_Services
+Points_to_Remember
+
+What are 5 pros of using Cloud Hosting?
+Flexible, Scalable, Secure, Cost-Effective, High Configurability
+
+What are 2 cons of using a dedicated server?
+Very Expensive, High Maintenance
+---
+What are the four most common types of cloud services for Infrastructure as a Service? (IaaS)?
+
+1. Compute Services 🖥️
+Provides virtual machines (VMs) and containerized environments for running applications.
+Examples in Azure:
+Azure Virtual Machines – Scalable cloud-based VMs.
+Azure Kubernetes Service (AKS) – Managed Kubernetes for containerized applications.
+Azure Batch – Batch processing for large-scale workloads.
+
+2. Storage Services 🗄️
+Offers scalable, secure, and durable cloud storage for various data types.
+Examples in Azure:
+Azure Blob Storage – Object storage for unstructured data (e.g., images, videos, logs).
+Azure Files – Managed file shares accessible via SMB/NFS.
+Azure Disk Storage – High-performance SSD/HDD disks for VMs.
+
+3. Networking Services 🌐
+Provides network connectivity, load balancing, and security for cloud resources.
+Examples in Azure:
+Azure Virtual Network (VNet) – Creates isolated, secure cloud networks.
+Azure Load Balancer – Distributes incoming traffic across multiple VMs.
+Azure VPN Gateway – Securely connects on-premises networks to Azure.
+
+4. Security & Identity Management 🔒
+Protects cloud infrastructure with access control, encryption, and security monitoring.
+Examples in Azure:
+
+5. Microsoft Entra ID (Azure AD) – Identity and access management (IAM).
+
+
+6. Azure Firewall – Cloud-native firewall for securing networks.
+
+
+7. Microsoft Defender for Cloud – Security monitoring, threat detection and security recommendations.
+Microsoft Defender for Cloud is a cloud security posture management (CSPM) and workload protection (CWP) 
+service that helps secure Azure, hybrid, and multi-cloud environments. It provides threat detection, 
+security recommendations, and compliance management to protect cloud resources.
+----------------------------------------------------------------
+PaaS_Platform_Services
+
+Most Common Azure Services That Run on the PaaS Platform
+
+1. Azure App Service 🌐
+Fully managed hosting for web apps, APIs, and mobile backends.
+Supports multiple languages (.NET, Java, Python, Node.js).
+Includes auto-scaling, CI/CD integration, and built-in security.
+
+2. Azure Functions ⚡
+Serverless computing for running event-driven applications.
+Pay-per-execution pricing model (only runs when triggered).
+Ideal for automation, background tasks, and microservices.
+
+3. Azure SQL Database 🛢️
+Fully managed relational database based on SQL Server.
+Offers auto-scaling, backups, security, and AI-based optimization.
+No need to manage database infrastructure. Azure SQL Database can be distributed among regions using 
+various geo-distribution features to enhance availability, performance, and disaster recovery.
+
+4. Azure Cosmos DB 🌍
+Globally distributed NoSQL database with multi-model support.
+Provides low-latency, high-availability data access worldwide.
+Ideal for real-time apps, IoT, and AI-driven workloads.
+
+5. Azure Synapse Analytics 📊
+Unified platform for big data analytics and data warehousing.
+Supports SQL, Spark, and data integration pipelines.
+Used for ETL, reporting, and AI-driven insights.
+
+6. Azure AI Services (Cognitive Services) 🤖
+Pre-trained AI models for vision, speech, language, and decision-making.
+Includes Azure OpenAI, Speech-to-Text, and Face Recognition APIs.
+Enables AI capabilities without deep Machine Learning expertise.
+
+7. Azure Machine Learning 🎛️
+Managed service for building, training, and deploying Machine Learning models.
+Provides MLOps, AutoML, and compute power for AI workloads.
+
+8. Azure Logic Apps 🔄
+Automates workflows and integrates SaaS applications.
+No-code/low-code solution for process automation. Connects to Microsoft 365, Salesforce, SAP, and databases.
+Primarily used for workflow automation, business process orchestration, and integration of services.
+Logic Apps focuses on creating event-driven workflows.
+
+9. Azure API Management 🔐
+Securely publishes, monitors, and manages APIs at scale. "at scale" means that the service is designed to handle 
+large volumes of APIs efficiently, without performance degradation.
+API Management is a cloud-based service that provides centralized control over APIs.
+Supports rate limiting, authentication, and analytics.
+Helps expose and monetize APIs efficiently.
+
+10. Azure Service Bus 📨
+Azure Service Bus is a fully managed enterprise messaging service that enables communication between applications
+and services. It is primarily used for decoupling applications and ensuring asynchronous messaging in distributed systems.
+Supports asynchronous messaging, queues, and topics. Topics are used in the publish-subscribe (pub/sub) messaging pattern, 
+allowing a single message to be broadcast to multiple subscribers.
+
+11. Azure Event Grid 📡
+Azure Event Grid is an event routing service that enables the creation of event-driven architectures.
+Think publishing and subscribing to events. It allows different components of a system to communicate 
+and react to events in real-time. Connects applications, Azure services, and third-party services.
+Supports serverless event-driven architectures.
+
+12. Azure DevOps Services 🚀
+Cloud-based CI/CD pipeline, Git repositories, Agile tools, and testing.
+Automates software development and deployment. Supports integration with GitHub, Jenkins, and Terraform.
+
+13. Azure Container Apps 🐳
+Managed container platform for running microservices and event-driven apps.
+Auto-scales based on HTTP traffic, background jobs, or event-driven triggers.
+Is is an alternative to Kubernetes without cluster management overhead.
+
+12. Azure Backup is a cloud-based backup solution that provides data protection for on-premises and cloud-based workloads.
+
+13. Azure Site Recovery is a disaster recovery service that helps ensure business continuity by replicating and failing over 
+virtual machines (VMs) and physical servers to Azure in case of a disaster or outage. It provides automated failover and failback 
+capabilities, allowing organizations to quickly recover their critical workloads and minimize downtime.
+
+14. Azure Key Vault is a cloud service that helps safeguard cryptographic keys and secrets used by cloud applications and services.
+It provides a secure and centralized way to manage sensitive information, such as API keys, passwords, and certificates. Key Vault.
+
+15. Azure Batch – Batch Azure Batch is a Platform as a Service (PaaS) solution that enables parallel and high-performance 
+computing (HPC) workloads in the cloud. It automatically manages job scheduling, scaling, and resource provisioning for 
+compute-intensive tasks.
+
+16. Azure Spring Apps is a fully managed service for building and deploying Spring Boot applications. It simplifies the
+deployment and management of Spring Boot applications by providing a scalable and secure platform.
+
+17. Azure Static Web Apps is a service that automatically builds and deploys full-stack static web apps to Azure from 
+a code repository. It is a fully managed platform that enables developers to deploy and host static web applications with built-in 
+API support, authentication, and global scaling. It is optimized for modern front-end frameworks like React, Angular, Vue, and 
+Blazor, and integrates seamlessly with GitHub Actions or Azure DevOps for CI/CD deployment.
+
+18. Azure Communication Services is a fully managed cloud-based communication platform that enables developers to add voice, video, 
+chat, SMS, and email capabilities to applications using Microsoft's secure infrastructure (the same backbone as Microsoft Teams).
+
+19. Azure Data Factory is a cloud-based data integration service that allows you to create, schedule, and orchestrate data 
+workflows. It provides a visual interface for designing data pipelines and supports various data sources and destinations.
+Primarily used for data integration, ETL (Extract, Transform, Load) processes, and data movement across cloud and on-premises 
+environments. Focuses on creating data pipelines that orchestrate and automate the movement and transformation of large datasets.
+
+20. Azure Data Lake Storage is a scalable and secure data lake service that allows you to store and analyze large volumes of data.
+It is designed for big data analytics and provides a hierarchical namespace, fine-grained access control, and integration with
+analytics services like Synapse Analytics and Databricks.
+
+21. Azure Data Explorer is a fast and scalable data exploration service for log and telemetry data. It provides a 
+query language and real-time analytics capabilities.
+
+22. Azure Databricks is an Apache Spark-based analytics platform optimized for Azure. It provides a collaborative environment
+for data scientists, data engineers, and business analysts to work together on big data and AI projects.
+
+23. Azure Purview is a unified data governance solution that helps organizations discover, classify, and manage their data assets.
+It provides automated data discovery, lineage tracking, and data classification capabilities.
+
+24. Azure Front Door is a global, scalable entry point for web applications. It provides application acceleration,
+global load balancing, SSL offloading, and web application firewall (WAF) capabilities. It helps improve the performance
+and availability of web applications by routing traffic to the nearest Azure region and optimizing content delivery.
+Front Door is a Layer 7 (HTTP/HTTPS) load balancer.
+* Azure Load Balancer is a Layer 4 (TCP/UDP) load balancer that distributes incoming network traffic across multiple servers or
+services within a single region. It operates at the transport layer.
+
+25. Azure Content Delivery Network (CDN) is a global content delivery network that caches and delivers content
+from edge locations to improve performance and reduce latency for web applications. It supports dynamic and static content
+and integrates with other Azure services like Blob Storage and Web Apps.
+
+26. *Azure Logic Apps is a cloud-based service that enables you to create and automate workflows and integrate applications
+and services. It provides a visual designer for building workflows and supports a wide range of connectors for popular	
+	applications and services. Logic Apps is primarily used for automating business processes, integrating SaaS applications,
+	and orchestrating complex workflows. It focuses on creating event-driven workflows that can connect various services and
+		
+	automate tasks without writing code. It is a low-code/no-code solution for building integration and automation solutions.
+	27. Azure API Management is a service that allows you to create, publish, secure, and analyze APIs. It provides features
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------
+What are some Azure services to remember?
+
+Azure SQL Database 🛢️
+Managed relational database service based on SQL Server.
+Offers built-in scalability, backups, and security features.
+
+Azure Cosmos DB 🌍
+Globally distributed NoSQL database with low latency and high availability.
+Supports multiple database models, including document, key-value, graph, and column-family.
+
+Azure Virtual Network (VNet) 🌐
+Enables secure communication between Azure resources and on-premises networks.
+Supports VPNs, ExpressRoute, and private endpoints.
+
+Azure VPN Gateway – Secure connections between an Azure virtual network and on-premises locations over the public internet
+by creating a VPN tunnel. Also connects 
+
+Azure Load Balancer ⚖️
+Distributes incoming network traffic to ensure high availability.
+Supports both public and private traffic balancing for applications.
+
+Azure Active Directory (Azure AD) 🔑
+Identity and access management (IAM) service.
+Enables SSO (Single Sign-On), multi-factor authentication (MFA), and security monitoring.
+---
+What are some Azure products to remember?
+
+Azure Advisor is a personalized cloud optimization service that provides best practice recommendations to help you 
+improve cost efficiency, security, reliability, operational excellence, and performance in your Azure environment.
+
+Azure Monitor is a monitoring solution that helps collect, analyze, and respond to telemetry data from resources, 
+applications, and infrastructure(VMs, Kubernetes Clusters, Networking Resources, Storage Services, App Services and functions,
+identity and security). Monitor provides real-time visibility into performance, availability, and operational health.
+
+Azure Application Gateway – Layer 7 load balancing with WAF.
+
+Azure Traffic Manager – Global DNS-based load balancing.
+
+--------------------------------------------------------
+Points_to_Remember
+
+When using Geo-Redundant Storage (GRS) in Azure, data is first copied synchronously three times within a single physical location 
+in the primary region (this is known as Locally Redundant Storage (LRS) within that region). Then, asynchronously, the data is 
+replicated to the secondary region, where it is also stored three times within a single physical location in that secondary region.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

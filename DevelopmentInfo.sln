@@ -226,8 +226,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestQuestions", "TestQuesti
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level_2_Notes", "Level_2_Notes", "{DB8D40F2-E9B0-437F-B9D6-36C1F9249E59}"
 	ProjectSection(SolutionItems) = preProject
-		AzureFlashCards.txt = AzureFlashCards.txt
 		VirtualNetworking_2.txt = VirtualNetworking_2.txt
+		Az_QuickNotes.txt = Az_QuickNotes.txt
 	EndProjectSection
 EndProject
 Global

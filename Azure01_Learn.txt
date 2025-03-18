@@ -368,7 +368,7 @@ Security
 From authentication methods to access control to the concept of Zero Trust, security in the cloud is an essential basic that must 
 be done right. In order to be secure in the cloud, you have to ensure your workloads are secure. To secure your workloads, you need 
 security policies in place that are tailored to your environment and situation. Because policies in Defender for Cloud are built 
-on top of Azure Policy controls, you're getting the full range and flexibility of a world-class policy solution. In Defender for 
+on top of [Azure Policy Controls], you're getting the full range and flexibility of a world-class policy solution. In Defender for 
 Cloud, you can set your policies to run on management groups, across subscriptions, and even for a whole tenant.
 
 One of the benefits of moving to the cloud is the ability to grow and scale as you need, adding new services and resources as 
@@ -406,7 +406,9 @@ run on your machines.
 Azure_DNS
 
 A DNS domain refers to a namespace under which a unique set of resources can be identified by their domain names, such as 
-example.com or subdomain.example.com.
+example.com or subdomain.example.com. Name resolution is the process of converting a human-readable hostname or domain name 
+(e.g., example.com or myvm.local) into an IP address (e.g., 192.168.1.10). This allows applications and users to connect to 
+resources using friendly names instead of numerical IP addresses.
 
 Azure DNS is a hosting service for DNS domains(which are namespaces). Azure DNS provides name resolution by using Microsoft 
 Azure infrastructure. By hosting your domains in Azure, you can manage your DNS records using the same credentials, APIs, tools, 
@@ -1380,7 +1382,7 @@ Which Azure Virtual Machine feature staggers updates across VMs based on their u
 Random_Notes
 
 Functions can be either stateless or stateful. When they're stateless (the default), they behave as if they restart every time they 
-respond to a n event. When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
+respond to a new event. When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
 
 *The following 3 services associate with Azure Blueprints?
 Azure Advisor
@@ -1509,7 +1511,7 @@ Backup Methods:
 	SQL Database Backup – Protects SQL databases on Azure VMs.
 	On-Premises Backup  – Uses Azure Backup Server (MABS) or Azure Site Recovery for hybrid workloads.
 
-Azure Backup itself is a PaaS (Platform as a Service) offering, meaning it runs on Microsoft's managed cloud infrastructure and does 
+Azure Backup is a PaaS offering, meaning it runs on Microsoft's managed cloud infrastructure and does 
 not require you to manage the underlying hardware, storage, or backup software. Azure Backup does not directly support backing up 
 native Azure PaaS services like Azure SQL Database, Azure Blob Storage, or Cosmos DB. These have their own built-in backup mechanisms
 ---
@@ -1551,6 +1553,15 @@ and subnet details, so that Azure Virtual Network Gateway can establish a secure
 	Stores On-Premises Network Information – Includes public IP of the VPN device and BGP settings.
 	Works with Virtual Network Gateway – Helps establish encrypted tunnels between Azure and on-prem resources.
 * A Virtual Network Gateway represents Azure's VPN endpoint.
+---
+Azure Front Door is a global, scalable entry point for web applications. It provides application acceleration,
+global load balancing, SSL offloading, and web application firewall (WAF) capabilities. It helps improve the performance
+and availability of web applications by routing traffic to the nearest Azure region and optimizing content delivery.
+Azure Front Door is ideal for scenarios where you need to distribute traffic across multiple regions,
+optimize web application performance, and enhance security with WAF. It is commonly used for global applications,
+content delivery, and scenarios requiring SSL offloading. Azure Front Door is a Layer 7 (HTTP/HTTPS) load balancer.
+* Azure Load Balancer is a Layer 4 (TCP/UDP) load balancer that distributes incoming network traffic across multiple servers or
+services within a single region. It operates at the transport layer.
 ---
 If a company wants to ensure application availability even if an entire Azure region fails, they need a disaster recovery (DR) strategy. 
 DR involves replicating and recovering resources in a secondary region to maintain business continuity in case of a regional outage.
