@@ -21,7 +21,7 @@ namespace DevelopmentInfo.CodeSamples
         /// <summary>
         /// Experimental method to remove white space from a string
         /// </summary>
-        public string MoveCharacters(string input)
+        public string MoveCharacters(string input, int map, bool IsReduced)
         {
             string result = string.Empty;
 
