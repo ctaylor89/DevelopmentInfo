@@ -17,6 +17,15 @@ namespace DevelopmentInfo.CodeSamples
         delegate bool DelegateBiggerThan(int n, string s);
         enum Cars { Mustang = 1, Corvette = 2, F150 = 3 };
 
+        /// <summary>
+        /// Created in the conflict_branch
+        /// </summary>
+        public string GetFished()
+        {
+            Console.WriteLine("Starting method: GetFished()");
+            return "Fished";
+        }
+
         public void CSharpCoding()
         {            
             Console.WriteLine("Starting method: CSharp3()  conflict_branch changed 2");
