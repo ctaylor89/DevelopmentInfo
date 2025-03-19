@@ -18,6 +18,17 @@ namespace DevelopmentInfo.CodeSamples
         enum Cars { Mustang = 1, Corvette = 2, F150 = 3 };
         readonly int[] RangOfNumbers = { 20, 1, 4, 8, 9, 44, 5, 11, 66, 222, 300, 440, 500, 511 };
 
+        /// <summary>
+        /// Experimental method to remove white space from a string
+        /// </summary>
+        public string MoveCharacters(string input)
+        {
+            string result = string.Empty;
+
+            
+            return result;
+        }
+
         public void CSharpCoding()
         {  
             Console.WriteLine("Starting method: CSharp3()  conflict_branch Added this line");
