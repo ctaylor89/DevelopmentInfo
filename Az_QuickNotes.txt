@@ -173,13 +173,15 @@ services within a single region. It operates at the transport layer.
 from edge locations to improve performance and reduce latency for web applications. It supports dynamic and static content
 and integrates with other Azure services like Blob Storage and Web Apps.
 
-26. *Azure Logic Apps is a cloud-based service that enables you to create and automate workflows and integrate applications
+26. Azure Logic Apps is a cloud-based service that enables you to create and automate workflows and integrate applications
 and services. It provides a visual designer for building workflows and supports a wide range of connectors for popular	
-	applications and services. Logic Apps is primarily used for automating business processes, integrating SaaS applications,
-	and orchestrating complex workflows. It focuses on creating event-driven workflows that can connect various services and
-		
-	automate tasks without writing code. It is a low-code/no-code solution for building integration and automation solutions.
-	27. Azure API Management is a service that allows you to create, publish, secure, and analyze APIs. It provides features
+applications and services. Logic Apps is primarily used for automating business processes, integrating SaaS applications,
+and orchestrating complex workflows. It focuses on creating event-driven workflows that can connect various services and
+automate tasks without writing code. It is a low-code/no-code solution for building integration and automation solutions.
+
+27. Entra Domain Services integrates with on-premises AD through Azure AD Connect, enabling synchronization of users and credentials 
+and Unified authentication for on-premises and cloud resources. Entra Domain Services provide domain services in the cloud for 
+applications and resources hosted in Azure.
 
 			
 

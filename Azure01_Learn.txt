@@ -96,6 +96,7 @@ Administrators can use Microsoft Entra ID to control access to applications and 
 
 Developers can use Microsoft Entra ID to provide a standards-based approach for adding functionality to applications that they build, 
 such as adding SSO functionality to an app or enabling an app to work with a user's existing credentials.
+* The term "standards-based approach" refers to the use of industry-standard authentication and authorization protocols.
 
 Users can manage their identities and take maintenance actions like self-service password reset.
 
@@ -106,16 +107,25 @@ that identity, which greatly reduces the effort needed to change or disable acco
 Device management: Along with accounts for individuals, Entra ID supports the registration of devices. Registration enables 
 devices to be managed through tools like Microsoft Intune. Entra ID also allows for device-based Conditional Access policies to 
 restrict access attempts to only those coming from known devices
+* The term "devices" refers to physical or virtual computing hardware that can be registered with Microsoft Entra ID to enable 
+identity management, security policies, and compliance enforcement.
 
 Application management: You can manage your cloud and on-premises apps by using Microsoft Entra ID.
 
 If you only had an on-premises environment running Active Directory and a cloud deployment using Microsoft Entra ID, you would 
 need to maintain two identity sets. However, you can connect Active Directory with Microsoft Entra ID, enabling a consistent 
-identity experience between cloud and on-premises server.
+identity experience between cloud and on-premises server by using the same identity set.
 
 * A domain in the context of IT and networking is a logical grouping of resources, such as computers, users, and other devices, 
 that share a common database and security policies. Domains are typically managed using directory services like Active Directory(AD).
-Domains help administrators efficiently organize, manage, and secure a network.
+Domains help administrators efficiently organize, manage, and secure a network. 
+
+* Domains depend on DNS (Domain Name System) for name resolution, DHCP for IP addressing, and LDAP/Kerberos for authentication 
+over the network.
+
+* A network is a physical or virtual infrastructure that enables devices to communicate. Includes routers, switches, IP addresses, 
+and protocols (e.g., TCP/IP, DNS, DHCP). A domain operates within a network – A domain is a logical structure that relies on a 
+network to allow communication between devices.
 
 * Key Components of a Domain
 Centralized Directory:
@@ -123,16 +133,14 @@ The core of a domain is the directory service, which stores information about re
 their relationships. Admins can manage users, devices, and security policies from a single location.
 
 Authentication and Authorization:
-Domains provide centralized authentication using protocols like Kerberos or NTLM. Users and devices authenticate against the 
-domain controller to access resources securely.
+In a traditional on-premises Active Directory (AD) domain, a Domain Controller (DC) is a server that manages authentication, 
+security policies, and directory services for users and devices. However, in Azure, the concept is different because Azure 
+Active Directory (Entra ID) does not use traditional domain controllers. Azure AD is not a direct replacement for on-prem AD; 
+it is cloud-based
 
 * The acronym NTLM stands for NT LAN Manager. It is a suite of Microsoft security protocols designed to provide authentication, 
 integrity, and confidentiality in a network. NTLM is used to authenticate users and devices within a network.
 It is primarily used in Windows environments for legacy systems or when modern protocols like Kerberos cannot be used.
-
-Domain Controller (DC): - A component of the domain.
-A server that manages the domain's directory database and provides authentication services like authentication, authorization, 
-and policy enforcement for domain members.
 
 Active Directory (AD): A Windows-based directory service used to store information about objects (users, computers, groups) within the domain.
 Trust Relationships: Allows users in one domain to access resources in another domain.
@@ -159,7 +167,8 @@ Entra Domain Services integrates with on-premises AD through Azure AD Connect, e
 and Unified authentication for on-premises and cloud resources. Entra Domain Services provide domain services in the cloud for 
 applications and resources hosted in Azure.
 
-The Entra Domain Services feature called Domain Join, allows Azure VMs and other resources to join the domain for centralized management.
+The Entra Microsoft Domain Services feature called Domain Join, allows Azure VMs and other resources to join the domain for centralized 
+management. It allows domain-joined VMs in Azure to authenticate without a full on-premises AD setup.
 
 Microsoft Entra Domain Services is a service that provides managed domain services such as domain join, group policy, lightweight 
 directory access protocol (LDAP), and Kerberos/NTLM authentication. Just like Microsoft Entra ID lets you use directory services 
