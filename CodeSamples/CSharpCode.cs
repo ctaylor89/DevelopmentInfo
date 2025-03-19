@@ -19,10 +19,14 @@ namespace DevelopmentInfo.CodeSamples
         readonly int[] RangOfNumbers = { 20, 1, 4, 8, 9, 44, 5, 11, 66, 222, 300, 440, 500, 511 };
 
         public void CSharpCoding()
-        {
-            Console.WriteLine("Starting method: CSharp3()  feature branch change2");
+        {  
+            Console.WriteLine("Starting method: CSharp3()  conflict_branch Added this line");
 
             var listIntegers = new List<int>();
+            
+            var count = listIntegers.Count;
+            Console.WriteLine("Count of listIntegers: {0}", count);
+
             listIntegers.AddRange(RangOfNumbers);
 
             // Find all even numbers in a list of numbers            
