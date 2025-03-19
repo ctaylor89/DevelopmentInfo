@@ -29,6 +29,15 @@ namespace DevelopmentInfo.CodeSamples
             return result;
         }
 
+        /// <summary>
+        /// Created in the conflict_branch
+        /// </summary>
+        public string GetFished()
+        {
+            Console.WriteLine("Starting method: GetFished()");
+            return "Fished";
+        }
+
         public void CSharpCoding()
         {  
             Console.WriteLine("Starting method: CSharp3()  conflict_branch Added this line");
