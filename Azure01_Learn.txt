@@ -32,7 +32,7 @@ XXXXXXXXXXXXXXXX Recorded to here. 12/31  Azure01_Learn1.mp3
 XXXXXXXXXXXXXXXX Recorded to here. 01/30  Azure01_Learn2.mp3
 :495
 XXXXXXXXXXXXXXXX Recorded to here. 02/02  Azure01_Learn3.mp3
-:573
+:586
 XXXXXXXXXXXXXXXX Recorded to here. 02/15  Azure01_Learn4.mp3
 
 ---------------------------------------------------------------
@@ -302,8 +302,9 @@ They are designed to automatically scale in response to demand or a defined sche
 App Services, Azure Kubernetes Service, Azure SQL Database, Azure Storage Accounts, Azure Key Vault,Azure Functions, Azure Logic Apps, 
 Azure Cosmos DB, Azure Container Instances, Azure Synapse Analytics, Azure Databricks, Azure Data Lake Storage, Azure IoT Hub, 
 
-Azure DevOps: Development collaboration tools, Azure API Management which Manages APIs across all environments.
+Azure DevOps: Development collaboration tools. 
 
+Azure API Management Manages APIs across all environments.
 Azure Service Fabric: Distributed systems platform for microservices and containers.
 Azure Event Hubs: Big data streaming platform and event ingestion service.
 Azure Logic Apps: Automating workflows and business processes.
@@ -582,6 +583,8 @@ Important facts about management groups:
 10,000 management groups can be supported in a single directory.
 A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
 Each management group and subscription can support only one parent.
+
+XXXXXXXXXXXXXXXX Recorded to here. 02/15  Azure01_Learn4.mp3
 ---------------------------------------------------------------
 Azure_storage_services
 
@@ -591,9 +594,9 @@ critical performance metric in systems where real-time or near-real-time respons
 * Synchronous Replication: All copies of data are updated at the same time.
 
 * Lower availability in the context of an Azure storage account refers to the likelihood that your data might not be accessible 
-at all times.
+at all times. Availability is typically measured as a percentage of time that the service is available.
 
-* Availability Zone is  a high-availability offering designed to ensure resilience and uptime for your applications and services. 
+* Availability Zone is a high-availability offering designed to ensure resilience and uptime for your applications and services. 
 An Availability Zone represents a physically separate location within an Azure region, providing protection against data 
 center-level failures.
 
@@ -617,6 +620,10 @@ Performance Optimization:
 Offers low latency for data access compared to other tiers, such as hot, cool, and archive which are lower in performance.
 Premium page blobs provide High throughput for read and write operations using Solid-State Drive (SSD)-Based Storage.
 
+* A Page Blob in Azure is a type of storage blob designed for random read/write operations, making it ideal for disk storage, 
+databases, and virtual machines (VMs). Unlike Block Blobs (which store data in blocks), Page Blobs store data in fixed-size 
+pages of 512 bytes each.
+
 Transaction-Optimized Pricing is designed for applications with high transaction rates.Transaction-Optimized Pricing is offered 
 in specific Azure regions. Transaction-Optimized Pricing supports local redundancy (LRS) and zone redundancy (ZRS) for data durability.
 Transaction-Optimized Pricing is a pricing model designed to reduce costs for workloads that have frequent transactions but require 
@@ -624,6 +631,11 @@ lower overall storage capacity. It is designed for workloads with high read/writ
 compared to standard storage pricing. Transaction-Optimized Pricing is ideal for scenarios where frequent access is required, such 
 as event-driven applications, message queuing, or IoT telemetry. It works well for blob storage, table storage, and queue storage 
 in scenarios where transactions dominate cost rather than raw storage capacity.
+Key Advantages of Transaction-Optimized Pricing:
+1) Lower Transaction Costs – Ideal for workloads that require frequent read/write operations, as it reduces per-operation costs.
+
+2) Cost-Effective for Small Objects – Best for applications that store a large number of small files where transaction costs 
+would otherwise be high.
 ---
 One of the benefits of using an Azure Storage Account is having a unique namespace in Azure for your data. In order to do this, 
 every storage account in Azure must have a unique-in-Azure account name. The combination of the account name and the Azure 
@@ -1586,8 +1598,18 @@ Private cloud only serves one organization without public integration. Public cl
 on-premises servers without a hybrid model.
 
 Every Azure region has multiple data centers.
-
-
+---
+SQL Server Stretch Database is a feature in SQL Server that allows you to dynamically extend your on-premises database to Azure, 
+keeping historical or less frequently accessed data in the cloud without affecting application performance.
+	How SQL Server Stretch Database Works
+	1) Identify Cold Data – Choose tables or rows that are infrequently accessed.
+	2) Enable Stretch Database – SQL Server automatically migrates selected data to Azure SQL Database.
+	3) Query Data as Usual – Queries retrieve data from both on-prem and Azure, without requiring changes to applications.
+	4) Manage Performance & Costs – Optimize storage costs by keeping hot data on-prem and cold data in Azure.
+---
+Advantages of Using Transaction-Optimized Pricing in Azure
+Transaction-Optimized Pricing is a storage pricing model in Azure Blob Storage designed for workloads with high transaction 
+rates and small object sizes. It offers cost savings by optimizing for transaction-heavy workloads instead of storage capacity.
 End Random_Notes
 ---------------------------------------------------------------
 Technical_Terms
