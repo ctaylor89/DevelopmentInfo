@@ -1671,7 +1671,7 @@ From Conflict Branch ###########################################################
 From Conflict Branch second merge############################################################
 From Conflict Branch third merge with visual studio############################################################
 
-*** End Radical Efficient_Notes ***
+*** End Radical Efficient_Notes in main ***
 ---------------------------------------------------------------
 Technical_Terms
 
