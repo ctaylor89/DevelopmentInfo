@@ -1667,7 +1667,7 @@ Azure Application Gateway is a web traffic load balancer that enables you to man
 Azure Budgets is a tool for setting and enforcing spending thresholds within Azure. 
 
 
-
+From Conflict Branch ############################################################
 
 *** End Random_Notes ***
 ---------------------------------------------------------------
@@ -1676,6 +1676,8 @@ Technical_Terms
 Big data refers to extremely large and complex datasets that are difficult to process, analyze, and manage using traditional data 
 processing techniques or software tools. Big data typically requires advanced technologies and methods for efficient storage, 
 analysis, and extraction of meaningful insights. 
+
+---------------------------------------------------------------
 
 
 
