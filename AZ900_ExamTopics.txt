@@ -248,6 +248,9 @@ can use ARM templates to create and manage resources as part of an Azure Bluepri
 
 A3: Azure RBAC is used to manage user access to Azure resources. You can use RBAC as part of an Azure Blueprint to assign roles and 
 permissions to users or groups for specific resources.
+
+A4: Azure Advisor is a recommendation service that provides guidance on how to optimize Azure resources. It does not directly 
+integrate with Azure Blueprints, but you can use Advisor recommendations to inform your Blueprint designs.
 ---
 GreenTech Solutions, a medium-sized company specializing in sustainable technology solutions, plans to migrate its on-premises data 
 center to Azure to enhance scalability, reliability, and global reach. The company's key applications include a customer-facing 
@@ -431,11 +434,15 @@ A: Azure PowerShell, Azure CLI
 * Azure Cloud Shell is a command-line environment but is not a standalone CLI tool. It provides access to both Azure CLI and 
 Azure PowerShell within a browser-based shell environment.
 
-Q: 
-A: 
+Q: Which of the following cloud solutions offers multifactor authentication, identity protection, and strong role-based 
+   access control (RBAC)?
+A: Azure Active directory has features that manage Azure Active Directory self-service password reset, Multi-Factor Authentication, 
+custom banned password list, and smart lockout. Identity protection: Detect potential vulnerabilities affecting your organization's 
+identities, configure policies to respond to suspicious actions, and then take appropriate action to resolve them. Azure AD also 
+access to RBAC that provides fine-grained access management to Azure resources.
 
-Q: 
-A: 
+Q: Which combination of Azure management tools is most ideal for Mac and Linux developers to manage cloud resources?
+A: Azure Portal and Azure CLI
 
 Q: 
 A: 

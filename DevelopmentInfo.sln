@@ -226,8 +226,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestQuestions", "TestQuesti
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level_2_Notes", "Level_2_Notes", "{DB8D40F2-E9B0-437F-B9D6-36C1F9249E59}"
 	ProjectSection(SolutionItems) = preProject
-		VirtualNetworking_2.txt = VirtualNetworking_2.txt
 		Az_QuickNotes.txt = Az_QuickNotes.txt
+		VirtualNetworking_2.txt = VirtualNetworking_2.txt
 	EndProjectSection
 EndProject
 Global
@@ -407,6 +407,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{96AF24B0-902C-48DE-B3F0-38328FCB6192} = {EFD945D6-38C8-4118-9D33-ABD517066A4D}
 		{FD6AC3A8-9CC2-40DC-937C-F892315FEB74} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
 		{F90F7A87-C403-468D-8C3D-E08A01DFC21B} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
 		{6F1691E6-3D9C-4E64-9F06-8A942AC832B0} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}

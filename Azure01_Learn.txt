@@ -1449,12 +1449,16 @@ Application Insights
 Application Insights is a feature of Azure Monitor. Application Insights is an extensible Application Performance Management (APM) 
 service for developers and DevOps professionals. Azure Monitor collects metrics, logs, and traces from Azure services, applications, 
 and on-premises resources. Sources include Azure VMs, Azure App Service, Kubernetes, and more.
+---
+Microsof Sentinel
+Microsoft Sentinel (formerly Azure Sentinel) is a cloud-native Security Information and Event Management (SIEM) and Security 
+Orchestration Automated Response (SOAR) solution. It helps organizations detect, investigate, and respond to security threats 
+across their entire environment using AI and automation.
 
-Azure Sentinel
-Azure Sentinel uses playbooks for automating responses to detected security threats and incidents.
-A playbook is a collection of these remediation actions that can be run from Azure Sentinel as a routine. A playbook can help automate and 
-orchestrate your threat response; A playbook can be run manually or set to run automatically in response to specific alerts or incidents, 
-when triggered by an analytics rule or an automation rule.
+Microsoft Sentinel uses playbooks for automating responses to detected security threats and incidents.
+A playbook is a collection of these remediation actions that can be run from Azure Sentinel as a routine. A playbook can help 
+automate and orchestrate your threat response; A playbook can be run manually or set to run automatically in response to 
+specific alerts or incidents, when triggered by an analytics rule or an automation rule.
 
 * An analytics rule is designed to detect security threats based on log data and generate alerts or incidents. An example of an 
 analytics rule is a rule that detects failed login attempts exceeding 10 attempts in 5 minutes from the same IP address. When 
@@ -1472,7 +1476,7 @@ when certain criteria are met.
 	Defined Conditions - A specific set of rules based on log data.
 	Trigger Mechanism  - If the conditions are met, an alert or incident is generated.
 	Based on Log Queries - Often written in Kusto Query Language (KQL) to scan security logs.
-
+---
 Azure DevOps
 Collaborate on software development through source control, work tracking, and continuous integration and delivery, both 
 on-premises and in the cloud!
@@ -1483,9 +1487,18 @@ simplify and streamline the management of your IT infrastructure. It helps autom
 consistency and reducing the risk of errors. Azure Automation is ideal for tasks like provisioning resources, managing updates, 
 enforcing compliance, and orchestrating complex workflows. Manage resources across Azure, on-premises, and other cloud environments.
 
+Azure Automation provides the following key features:
+	Process Automation - Automate manual, repetitive tasks using runbooks, PowerShell, Python, or Graphical workflows.
+	Configuration Management - Maintain consistent configurations across your environment.
+	Update Management - Manage updates and patches for Windows and Linux VMs.
+	Change Tracking - Monitor changes to resources and track configuration drift.
+	Inventory Management - Track and manage software and hardware assets.
+	Compliance - Enforce security and compliance policies through automated workflows.
+---
 Azure Cost Management
 Azure Cost Management is a suite of tools designed to help organizations analyze, monitor, and optimize their cloud spending. It 
 provides insights into your Azure usage and costs, enabling you to make informed decisions and manage your budget effectively.
+It ensures cost efficiency by providing insights, budgets, and recommendations to help control and reduce expenses.
 
 High Availability
 Focuses on minimizing downtime within a single region by using Availability Sets, Availability Zones, and Load Balancers. However, it 
@@ -1511,8 +1524,9 @@ with Azure Active Directory (Azure AD). It enables a seamless and secure identit
 users across on-premises and cloud environments.
 
 Azure Databricks
-Azure Databricks is an Azure Cloud service for machine learning. It is a fast, easy, and collaborative Apache Spark-based big data 
-analytics service designed for data science and data engineering. It is the only option that can host machine learning workloads.
+Azure Databricks is a fast, scalable, and collaborative Apache Spark-based analytics platform designed for big data processing, 
+machine learning, and AI workloads. It is optimized for Azure cloud, integrating seamlessly with services like Azure Data Lake, 
+Azure Synapse, and Power BI. It is the only option that can host machine learning workloads.
 
 Azure Logic Apps
 Azure Logic Apps is a cloud service that helps you schedule, automate, and orchestrate tasks, business processes, and workflows when 
@@ -1533,7 +1547,7 @@ Backup Methods:
 	On-Premises Backup  – Uses Azure Backup Server (MABS) or Azure Site Recovery for hybrid workloads.
 
 Azure Backup is a PaaS offering, meaning it runs on Microsoft's managed cloud infrastructure and does 
-not require you to manage the underlying hardware, storage, or backup software. Azure Backup does not directly support backing up 
+not require you to manage the underlying hardware, storage, or backup so ftware. Azure Backup does not directly support backing up 
 native Azure PaaS services like Azure SQL Database, Azure Blob Storage, or Cosmos DB. These have their own built-in backup mechanisms
 ---
 To guarantee 99.95% VM connectivity, you must deploy at least two VMs in the same Availability Set in Azure. This is because Availability 
@@ -1610,13 +1624,58 @@ keeping historical or less frequently accessed data in the cloud without affecti
 Advantages of Using Transaction-Optimized Pricing in Azure
 Transaction-Optimized Pricing is a storage pricing model in Azure Blob Storage designed for workloads with high transaction 
 rates and small object sizes. It offers cost savings by optimizing for transaction-heavy workloads instead of storage capacity.
-End Random_Notes
+
+An Azure Network Security Group (NSG) is a security feature that controls inbound and outbound traffic to Azure resources at the 
+network level. It acts as a virtual firewall, allowing or denying traffic based on defined security rules.
+
+An Azure Network Security Group (NSG) is a security feature that controls inbound and outbound traffic to Azure resources at the 
+network level. It acts as a virtual firewall, allowing or denying traffic based on defined security rules. NSGs allow or block 
+incoming (inbound) and outgoing (outbound) traffic. Rules are applied based on source, destination, port, and protocol.
+NSGs allow or block incoming (inbound) and outgoing (outbound) traffic.
+
+Third-party cloud services and on-premises Active Directory can be used to access Azure resources. This is known as ‘federation’.
+
+A Federation is a collection of domains that have established trust. The level of trust may vary, but typically includes 
+authentication and almost always includes authorization. A typical federation might include a number of organizations that have 
+established trust for shared access to a set of resources.
+
+Azure File Sync (AFS) is a cloud-based service that allows you to centralize file storage in Azure Files while keeping local 
+copies on Windows Server. It enables you to sync, cache, and tier files across multiple locations while maintaining fast local access.
+Syncs multiple servers with the same Azure file share, ensuring real-time updates. Syncs multiple servers with the same Azure file 
+share, ensuring real-time updates. If a server crashes, quickly restore files by syncing a new server to Azure.
+
+Virtual Network Peering is an Azure networking feature that enables connectivity between virtual networks deployed in the same 
+Azure region or across different regions. By configuring a virtual network peering, you can establish private and secure 
+communication between the peered virtual networks. In this scenario, using virtual network peering, you can connect VNet1 and 
+VNet2, allowing resources within each network to communicate with each other.
+
+Availability Sets are used to ensure that virtual machines are deployed across multiple physical servers, racks, storage units, 
+and network switches within a data center. 
+
+Azure Marketplace is an online store that offers various applications and services designed for use in Azure. It includes 
+pre-configured virtual machine images optimized for different applications, including WordPress. By using Azure Marketplace, a 
+developer can quickly launch a virtual machine that is already set up for WordPress, reducing the time and complexity involved 
+in manual configuration.
+
+Azure Arc is a hybrid management solution that enables management of on-premises, multi-cloud, and edge environments using Azure 
+services. Azure Arc allows you to manage servers, Kubernetes clusters, and applications across on-premises, multi-cloud, and 
+edge environments from a single control plane. With Azure Arc, you can use Azure management services such as Azure Policy, 
+Azure Monitor, and Azure Security Center to manage resources outside of Azure.
+
+Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications.
+
+Azure Budgets is a tool for setting and enforcing spending thresholds within Azure. 
+
+
+
+
+*** End Random_Notes ***
 ---------------------------------------------------------------
 Technical_Terms
 
 Big data refers to extremely large and complex datasets that are difficult to process, analyze, and manage using traditional data 
 processing techniques or software tools. Big data typically requires advanced technologies and methods for efficient storage, 
-analysis, and extraction of meaningful insights.
+analysis, and extraction of meaningful insights. 
 
 
 
