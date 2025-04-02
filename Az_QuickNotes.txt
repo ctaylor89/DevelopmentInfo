@@ -127,9 +127,9 @@ virtual machines (VMs) and physical servers to Azure in case of a disaster or ou
 capabilities, allowing organizations to quickly recover their critical workloads and minimize downtime.
 
 14. Azure Key Vault is a cloud service that helps safeguard cryptographic keys and secrets used by cloud applications and services.
-It provides a secure and centralized way to manage sensitive information, such as API keys, passwords, and certificates. Key Vault.
+Key Vault provides a secure and centralized way to manage sensitive information, such as API keys, passwords, and certificates. 
 
-15. Azure Batch – Batch Azure Batch is a Platform as a Service (PaaS) solution that enables parallel and high-performance 
+15. Azure Batch – Batch is a Platform as a Service (PaaS) solution that enables parallel and high-performance 
 computing (HPC) workloads in the cloud. It automatically manages job scheduling, scaling, and resource provisioning for 
 compute-intensive tasks.
 

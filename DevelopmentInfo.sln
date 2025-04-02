@@ -211,6 +211,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cloud", "Cloud", "{87315A71
 		AZ900.txt = AZ900.txt
 		AZ900_ExamTopics.txt = AZ900_ExamTopics.txt
 		Cloud\Azure.txt = Cloud\Azure.txt
+		AzServices.txt = AzServices.txt
 		Azure01_Learn.txt = Azure01_Learn.txt
 		AzureToAWS.txt = AzureToAWS.txt
 	EndProjectSection

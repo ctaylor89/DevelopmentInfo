@@ -29,17 +29,15 @@ branch. Think of it as a way to select which line of development you’re working 
 git fork  - Means you are copying the repository to your Github account.
 
 git branch --set-upstream-to=origin/<branch> Dev
-git branch --set-upstream-to=origin/<branch> Dev
-
+ This sets the upstream (tracking) branch of the local Dev branch to origin/<branch>.
+ This means when you run git pull or git push while on Dev, Git knows which remote branch (origin/<branch>) to interact with.
+---
 Steps to Merge One Tracking Branch into Another
+    1. Switch to the Target Branch using switch command.
+       git switch target-branch-name
 
-1. Switch to the Target Branch using switch command.
-    git switch target-branch-name
-
-2. Merge the Source Branch into the Target Branch using merge command: 
-    git merge source-branch-name
-
-
+    2. Merge the Source Branch into the Target Branch using merge command: 
+       git merge source-branch-name
 -----------------------------------------------------------
 how to pull down a specific branch in git
 https://www.google.com/search?q=how+to+pull+down+a+specific+branch+in+git&rlz=1C1CHZN_enUS1007US1007&oq=how+to+pull+down+a+particular+branch+&aqs=chrome.1.69i57j0i22i30j0i390l2.13684j1j7&sourceid=chrome&ie=UTF-8

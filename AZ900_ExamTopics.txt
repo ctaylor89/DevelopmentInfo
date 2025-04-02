@@ -10,9 +10,8 @@ Below are the key topics divided into domains, along with the percentage of ques
 Benefits of cloud computing: 
 High availability, scalability, elasticity, agility, disaster recovery, and cost considerations. 
 
-a)Agility refers to the 
-ability of an organization to quickly and efficiently adapt to changes in demand, technology, or market conditions using 
-cloud-based resources and services. 
+* Agility refers to the ability of an organization to quickly and efficiently adapt to changes in demand, technology, or 
+market conditions using cloud-based resources and services. 
 
 Cloud service models: Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).
 Cloud deployment models: Public, private, and hybrid cloud.
@@ -421,7 +420,8 @@ A: Entra ID Identity Secure Score
 practices. It provides a numerical score reflecting the current state of identity security and offers actionable recommendations 
 for improvement.
 
-Q: A company is looking to adopt a hybrid cloud approach and wants to manage their on-premises servers, Kubernetes clusters, and Azure resources from a single interface. They also want to ensure consistent security and compliance across all environments.
+Q: A company is looking to adopt a hybrid cloud approach and wants to manage their on-premises servers, Kubernetes clusters, and 
+Azure resources from a single interface. They also want to ensure consistent security and compliance across all environments.
 
 Which Azure service should they consider to meet these requirements?
 A: Azure Arc

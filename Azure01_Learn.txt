@@ -1,4 +1,4 @@
-Application_Hosting_Options
+ï»¿Application_Hosting_Options
 Azure_Containers
 Azure_Cost_Management
 Azure_DNS
@@ -124,7 +124,7 @@ Domains help administrators efficiently organize, manage, and secure a network.
 over the network.
 
 * A network is a physical or virtual infrastructure that enables devices to communicate. Includes routers, switches, IP addresses, 
-and protocols (e.g., TCP/IP, DNS, DHCP). A domain operates within a network – A domain is a logical structure that relies on a 
+and protocols (e.g., TCP/IP, DNS, DHCP). A domain operates within a network â€“ A domain is a logical structure that relies on a 
 network to allow communication between devices.
 
 * Key Components of a Domain
@@ -231,7 +231,7 @@ external security key or a platform key built into a device.
 Describe Azure external identities
 Microsoft Entra External ID refers to all the ways you can securely interact with users outside of your organization. With External 
 Identities, external users can "bring their own identities." Whether they have a corporate or government-issued digital identity, 
-or an unmanaged social identity like Google or Facebook, they can use their own credentials to sign in. The external user’s 
+or an unmanaged social identity like Google or Facebook, they can use their own credentials to sign in. The external userâ€™s 
 identity provider manages their identity, and you manage access to your apps with Microsoft Entra ID or Azure AD B2C to keep your 
 resources protected.
 
@@ -252,7 +252,7 @@ second authentication factor if they're at a known location. However, they might
 if their sign-in signals are unusual or they're at an unexpected location.
 
 Conditional Access is useful when you need to:
-1) Require multifactor authentication (MFA) to access an application depending on the requester’s role, location, or network. For 
+1) Require multifactor authentication (MFA) to access an application depending on the requesterâ€™s role, location, or network. For 
 example, you could require MFA for administrators but not regular users or for people connecting from outside your corporate network.
 
 2) Require access to services only through approved client applications. For example, you could limit which email applications 
@@ -292,7 +292,7 @@ Tagging: You can apply tags to resources to categorize and track them.
 https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/8-describe-defense-depth
 ---
 Microsoft Defender for Cloud provides comprehensive protection for a wide range of resources across your cloud and on-premises 
-environments. Here’s a more detailed list of the resources it protects:
+environments. Hereâ€™s a more detailed list of the resources it protects:
 
 Virtual Machines (VMs): Including Azure VMs, AWS EC2 instances, and Google Cloud VMs.
 
@@ -322,7 +322,7 @@ cloud resources, which includes virtual machines, databases, containers, and mor
 threat protection, and compliance management
 
 Defender for Cloud provides the tools needed to harden your resources, track your security posture, protect against cyber attacks, 
-and streamline security management. Deployment of Defender for Cloud is easy, it’s already natively integrated into Azure.
+and streamline security management. Deployment of Defender for Cloud is easy, itâ€™s already natively integrated into Azure.
 
 When necessary, Defender for Cloud can automatically deploy a Log Analytics agent to gather security-related data. For Azure 
 machines, deployment is handled directly. For hybrid and multicloud environments, Microsoft Defender plans are extended to non-Azure 
@@ -360,16 +360,16 @@ For example, if you've connected an Amazon Web Services (AWS) account to an Azur
 3) Defender for Servers brings threat detection and advanced defenses to your Windows and Linux EC2 instances.
 
 Defender for Cloud fills three vital needs as you manage the security of your resources and workloads in the cloud and on-premises:
-1) Continuously assess – Know your security posture. Identify and track vulnerabilities.
-2) Secure – Harden resources and services with Azure Security Benchmark.
-3) Defend – Detect and resolve threats to resources, workloads, and services.
+1) Continuously assess â€“ Know your security posture. Identify and track vulnerabilities.
+2) Secure â€“ Harden resources and services with Azure Security Benchmark.
+3) Defend â€“ Detect and resolve threats to resources, workloads, and services.
 
 Defender for cloud helps you continuously assess your environment. Defender for Cloud includes vulnerability assessment solutions 
 for your virtual machines, container registries, and SQL servers. Microsoft Defender for servers includes automatic, native 
 integration with Microsoft Defender for Endpoint. With this integration enabled, you'll have access to the vulnerability findings 
 from Microsoft threat and vulnerability management.
 
-Between Defender for cloud and Microsoft Defender for Endpoint, you’ll have regular, detailed vulnerability scans that cover 
+Between Defender for cloud and Microsoft Defender for Endpoint, youâ€™ll have regular, detailed vulnerability scans that cover 
 your compute, data, and infrastructure. You can review and respond to the results of these scans all from within Defender for Cloud.
 
 XXXXXXXXXXXXXXXX Recorded to here. 01/30  Azure02_Learn.mp3
@@ -466,7 +466,7 @@ The core architectural components of Azure may be broken down into two main grou
 management infrastructure.
 
 DataCenters are facilities with resources arranged in racks, with dedicated power, cooling, and networking infrastructure.
-Individual datacenters aren’t directly accessible. Datacenters are grouped into Azure Regions or Azure Availability Zones.
+Individual datacenters arenâ€™t directly accessible. Datacenters are grouped into Azure Regions or Azure Availability Zones.
 Azure organizes its data centers into regions and further divides some regions into Availability Zones to ensure redundancy and 
 high availability. These data centers power cloud-based services like virtual machines, storage, networking, and databases.
 
@@ -506,7 +506,7 @@ over its placement for high availability or performance needs.
 their functionality without depending on the physical location of data centers. These services are designed to operate across 
 regions or globally to ensure seamless operation and availability.
 
-Even with the additional resiliency that availability zones provide, it’s possible that an event could be so large that it 
+Even with the additional resiliency that availability zones provide, itâ€™s possible that an event could be so large that it 
 impacts multiple availability zones in a single region. To provide even further resilience, Azure has Region Pairs.
 XXXXXXXXXXXXXXXX Recorded to here. 02/02  Azure01_Learn3.mp3
 
@@ -526,7 +526,7 @@ A resource is the basic building block of Azure. Anything you create, provision,
 A resource is the basic building block of Azure. Anything you create, provision, deploy, etc. is a resource.
 A resource is the basic building block of Azure. Anything you create, provision, deploy, etc. is a resource.
 
-Resource groups are simply groupings of resources. When you create a resource, you’re required to place it into a resource group. 
+Resource groups are simply groupings of resources. When you create a resource, youâ€™re required to place it into a resource group. 
 While a resource group can contain many resources, a single resource can only be in one resource group at a time. Some resources 
 may be moved between resource groups, but when you move a resource to a new group, it will no longer be associated with the former 
 group. Additionally, resource groups can not be nested.
@@ -534,7 +534,7 @@ group. Additionally, resource groups can not be nested.
 You can control access levels at the resource group level by using Azure Role-Based Access Control (RBAC).
 
 When you apply an action to a resource group, that action will apply to all the resources within the resource group. If you delete 
-a resource group, all the resources will be deleted. If you grant or deny access to a resource group, you’ve granted or denied 
+a resource group, all the resources will be deleted. If you grant or deny access to a resource group, youâ€™ve granted or denied 
 access to all the resources within the resource group.
 
 Azure, subscriptions are a unit of management, billing, and scale. Similar to how resource groups are a way to logically organize 
@@ -544,7 +544,7 @@ A subscription provides you with authenticated and authorized access to Azure pr
 provision resources. An Azure subscription links to an Azure account, which is an identity in Microsoft Entra ID or in a directory 
 that Microsoft Entra ID trusts.
 
-An account can have multiple subscriptions, but it’s only required to have one. In a multi-subscription account, you can use the 
+An account can have multiple subscriptions, but itâ€™s only required to have one. In a multi-subscription account, you can use the 
 subscriptions to configure different billing models and apply different access-management policies. You can use Azure subscriptions 
 to define boundaries around Azure products, services, and resources. The two types of subscription boundaries that you can use are:
 
@@ -632,9 +632,9 @@ compared to standard storage pricing. Transaction-Optimized Pricing is ideal for
 as event-driven applications, message queuing, or IoT telemetry. It works well for blob storage, table storage, and queue storage 
 in scenarios where transactions dominate cost rather than raw storage capacity.
 Key Advantages of Transaction-Optimized Pricing:
-1) Lower Transaction Costs – Ideal for workloads that require frequent read/write operations, as it reduces per-operation costs.
+1) Lower Transaction Costs â€“ Ideal for workloads that require frequent read/write operations, as it reduces per-operation costs.
 
-2) Cost-Effective for Small Objects – Best for applications that store a large number of small files where transaction costs 
+2) Cost-Effective for Small Objects â€“ Best for applications that store a large number of small files where transaction costs 
 would otherwise be high.
 ---
 One of the benefits of using an Azure Storage Account is having a unique namespace in Azure for your data. In order to do this, 
@@ -654,16 +654,16 @@ Locally redundant storage (LRS) replicates your data three times within a single
 lowest-cost redundancy option and offers the least durability compared to other options. LRS protects your data against server 
 rack and drive failures.
 
-Zone-redundant storage (ZRS) replicates your Azure Storage data, in the same zone, synchronously across three Azure availability 
+Zone-redundant storage (ZRS) replicates your Azure Storage data synchronously across three Azure availability 
 zones in the primary region. When you create a storage account, you select the primary region for the account. The paired secondary 
 region is based on Azure assigned Region Pairs, and can't be changed by the user.
 
 Azure Storage offers two options for duplicating your data in a secondary region. There is geo-redundant storage (GRS) and 
 geo-zone-redundant storage (GZRS). 
 
-Geo-Redundant Storage (GRS) Stores three copies of your data in the primary region to provide local redundency. Geo-Redundant Storage
-also replicates three additional copies to a secondary region (hundreds of miles away). The secondary region is not accessible for 
-reads unless a failover is initiated. In case of a failure in the primary region, Azure manually fails over to the secondary region.
+Geo-Redundant Storage (GRS) Stores three copies of your data in the primary region to provide local redundency and replicates three 
+additional copies to a secondary region. The secondary region is not accessible for reads unless a failover is initiated. In case 
+of a failure in the primary region, Azure manually fails over to the secondary region.
 
 A variant to Geo-Redundant Storage is Read-Access Geo-Redundant Storage (RA-GRS). It allows read access to the secondary region.
 
@@ -677,20 +677,12 @@ Geo-Redundant Storage copies your data synchronously three times within a single
 redundant storage. It then copies the data asynchronously to a single physical location in the secondary region (the region pair) 
 where it is also stored three times using LRS.
 :654 Prepare for recording *************************************
-
-Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
-Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
-Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
-Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
-Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
-Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
-Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
 Geo-zone-redundant storage (GZRS) Data in a GZRS storage account is copied across three Azure availability zones in the primary 
 region (similar to ZRS) and is also replicated to a secondary geographic region, using LRS(3X in one data center).
 
-In the case of a regional outage failure, your data is available to be read only if the customer or Microsoft initiates a failover 
-from the primary to secondary region. However, if you enable read access to the secondary region, your data is always available, 
-even when the primary region is running optimally. For read access to the secondary region, enable read-access geo-redundant 
+In the case of a regional outage failure, your data is available to be read in the secondayr region, only if the customer or 
+Microsoft initiates a failover from the primary to secondary region. However, if you enable read access to the secondary region, 
+your data is always readable in the secondary region. For read access to the secondary region, enable read-access geo-redundant 
 storage (RA-GRS) or read-access geo-zone-redundant storage (RA-GZRS).
 ---
 All data written to an Azure storage account is encrypted by the service. Azure Storage provides you with fine-grained control 
@@ -842,10 +834,11 @@ Remove Files from Blob Storage:
 
 *** Features of AzCopy Synchronization ***
 Directional Sync:
-Source to Destination: Changes from the source are replicated to the destination. This includes uploading new files and deleting files at the destination if they no longer exist at the source (if configured).
+Source to Destination: Changes from the source are replicated to the destination. This includes uploading new files and deleting 
+files at the destination if they no longer exist at the source (if configured).
 
 Incremental Transfers:
-Only modified or new files are transferred. Files that are identical between source and destination are skipped, saving time and bandwidth.
+Only modified or new files are transferred saving time and bandwidth.
 
 File and Directory Filters:
 Sync specific files or exclude certain files using wildcard patterns.
@@ -860,7 +853,7 @@ Deletion Options:
 By default, AzCopy will not delete files from the destination.
 Use the --delete-destination flag to remove files at the destination that are no longer present at the source. 
 
-Monitor Logs: Use AzCopy’s log files to troubleshoot or verify successful transfers.
+Monitor Logs: Use AzCopyâ€™s log files to troubleshoot or verify successful transfers.
 
 Use the --dry-run Option. Preview which files will be transferred or deleted without making any changes:
 	azcopy sync "/local/directory" "https://<storage_account>.blob.core.windows.net/<container>/<SAS_token>" --dry-run
@@ -911,6 +904,10 @@ service that runs on the cloud. Azure Virtual Desktop provides centralized secur
 Entra ID. You can enable multifactor authentication to secure user sign-ins. You can also secure access to data by assigning 
 granular role-based access controls (RBACs) to users.
 ---
+Azure Virtual Desktop lets you use Windows 10 or Windows 11 Enterprise multi-session which is the only Windows client-based 
+operating systems that enables multiple concurrent users on a single VM. You can think of an Azure network as an extension 
+of your on-premises network with resources that link to other Azure resources.
+---
 *Entra ID, previously known as Azure Active Directory (Azure AD), is a cloud-based identity and access management (IAM) service 
 provided by Microsoft. It is designed to help organizations securely manage and authenticate users, devices, and applications 
 across various environments, including on-premises, cloud, and hybrid systems. Entra ID helps organizations manage user identities, 
@@ -919,11 +916,6 @@ ensuring that employees, partners, and customers can securely access company res
 Entra ID allows for the creation, update, and deletion of user accounts, as well as the management of their attributes, roles, and 
 permissions. While traditional AD is commonly used in on-premises environments, Entra ID is typically used in cloud environments to 
 manage identities and access for users and applications that reside in the cloud.
----
-Azure Virtual Desktop lets you use Windows 10 or Windows 11 Enterprise multi-session which is the only Windows client-based 
-operating systems that enables multiple concurrent users on a single VM. You can think of an Azure network as an extension 
-of your on-premises network with resources that link to other Azure resources.
-
 ---------------------------------------------------------------
 Azure_Virtual_Networking
 
@@ -1031,11 +1023,15 @@ An Azure VPN Gateway is a specific type of network gateway in Azure that provide
 virtual networks (VNets) and on-premises networks or other Azure VNets. Azure VPN Gateway enables hybrid cloud and multi-cloud 
 connectivity through Virtual Private Network (VPN) technology.
 
-An Azure VPN gateway is a type of virtual network gateway. Azure VPN Gateway instances are deployed in a dedicated subnet of the virtual 
-network and enable the following connectivity:
+An Azure VPN gateway is a type of virtual network gateway. Azure VPN Gateway instances are deployed in a dedicated subnet of 
+the virtual network and enable the following connectivity:
 	Connect on-premises datacenters to virtual networks through a site-to-site connection.
 	Connect individual devices to virtual networks through a point-to-site connection.
 	Connect virtual networks to other virtual networks through a network-to-network connection.
+
+In Azure Virtual Networks (VNet), a Point-to-Site (P2S) VPN connection allows an individual client device (such as a laptop or 
+workstation) to securely connect to an Azure VNet over the internet. It is commonly used when you need secure remote access to 
+Azure resources without requiring a dedicated site-to-site VPN or ExpressRoute.
 
 All data transfer that is within a VPN gateway is encrypted inside a private tunnel as it crosses the internet. You can deploy only one 
 VPN gateway in each virtual network. However, you can use one gateway to connect to multiple locations, which includes other 
@@ -1100,7 +1096,7 @@ Both can complement each other in network setups, with gateways managing connect
 Most VPN setups require a gateway or equivalent functionality.
 ---------------------------------------------------------------
 Cloud_Concepts
-Scalability is a system’s ability to handle increasing workloads by adding resources (either horizontally by adding more instances 
+Scalability is a systemâ€™s ability to handle increasing workloads by adding resources (either horizontally by adding more instances 
 or vertically by upgrading hardware). It is usually planned and manual, meaning resources are provisioned in advance to accommodate growth.
 
 Elasticity is the system's ability to automatically scale resources up or down based on demand. It is dynamic and automated, ensuring 
@@ -1112,6 +1108,12 @@ using cloud-based resources and services.
 Key Difference:
 Scalability is about long-term capacity planning. Elasticity is about real-time resource adjustment based on demand.
 Azure VM Scale Sets and Azure Functions provide elasticity, while services like Azure SQL Database Hyperscale offer scalability.
+
+Azure automatically routes traffic between subnets in a virtual network. Therefore, all virtual machines in a virtual network can 
+connect to the other virtual machines in the same virtual network. Even if the virtual machines are on separate subnets within the 
+virtual network, they can still communicate with each other.
+
+
 ---------------------------------------------------------------
 Compute_Networking_Services
 
@@ -1146,7 +1148,7 @@ failure does not affect all instances of a resource.
 
 The fault domain groups your VMs by common power source and network switch. By default, an Availability Set splits 
 your VMs across up to three fault domains. This helps protect against a physical power or networking failure by having VMs in 
-different fault domains (thus being connected to different power and networking resources). There’s no additional cost for 
+different fault domains (thus being connected to different power and networking resources). Thereâ€™s no additional cost for 
 configuring an availability set. You only pay for the VM instances you create.
 ---
 An organization can extend the capabilities of its own on-premises network by creating a virtual network in Azure and adding VMs 
@@ -1157,15 +1159,16 @@ operational again.
 
 VMs are also an excellent choice when you move from a physical server to the cloud (also known as lift and shift). You can create 
 an image of the physical server and host it within a VM with little or no changes. Just like a physical on-premises server, you 
-must maintain the VM: you’re responsible for maintaining the installed OS and software.
+must maintain the VM: youâ€™re responsible for maintaining the installed OS and software.
 
-When you provision a VM, you’ll also have the chance to pick the resources that are associated with that VM, including:
+When you provision a VM, youâ€™ll also have the chance to pick the resources that are associated with that VM, including:
 	Size (purpose, number of processor cores, and amount of RAM)
 	Storage disks (hard disk drives, solid state drives, etc.)
 	Networking (virtual network, public IP address, and port configuration)
 
-Azure Service Health is a monitoring service that provides real-time insights into the health of Azure services, regions, and 
+Service Health is a monitoring service that provides real-time insights into the health of Azure services, regions, and 
 resources. It helps organizations stay informed about service issues, planned maintenance, and potential outages. The component
+
 Azure Status displays global service health information across all Azure regions. Has Integration with Azure Monitor: Can be 
 configured to send alerts to teams via email, SMS, or ITSM tools like ServiceNow.
 ---
@@ -1173,11 +1176,11 @@ Azure usage and charge reports
 Azure provides several tools and reports to track resource usage, monitor costs, and analyze spending patterns. These reports help 
 organizations optimize cloud expenses and ensure transparency in billing.
 Key Features:
-	Cost Analysis – Visualize costs by subscription, resource group, service, or time period.
-	Usage Reports – Shows detailed breakdowns of resources consumed and their associated costs.
-	Forecasting & Budgeting – Predict future costs based on trends and set spending limits.
-	Alerts & Anomalies – Set up alerts for unexpected spikes in usage or costs.
-	Exports – Schedule automated reports to download usage and billing data in CSV format
+	Cost Analysis â€“ Visualize costs by subscription, resource group, service, or time period.
+	Usage Reports â€“ Shows detailed breakdowns of resources consumed and their associated costs.
+	Forecasting & Budgeting â€“ Predict future costs based on trends and set spending limits.
+	Alerts & Anomalies â€“ Set up alerts for unexpected spikes in usage or costs.
+	Exports â€“ Schedule automated reports to download usage and billing data in CSV format
 Azure Pricing Calculator:
 	Estimates costs before deploying resources.
 	Helps plan spending based on expected workloads.
@@ -1264,7 +1267,7 @@ Using PaaS services with Azure's SLAs allows you to offload infrastructure manag
 Azure_Cost_Management
 
 Azure Cost Management is a suite of tools designed to help organizations analyze, monitor, and optimize their cloud costs. It 
-provides a comprehensive view of your spending and helps you manage your budget effectively1. 
+provides a comprehensive view of your spending and helps you manage your budget effectively. 
 Key features include:
   Cost Analysis: View and analyze your spending patterns in the Azure portal, Microsoft 365 admin center, or Power BI.
 
@@ -1313,10 +1316,10 @@ In practice, most Azure services focus on High Availability rather than true Fau
 costly and complex for most applications.
 
 HA - Uses redundancy, load balancing, failover mechanisms (e.g., Availability Zones, Auto-Scaling).
-	 Cost is lower than FT – fewer redundant resources; designed for quick recovery.
+	 Cost is lower than FT â€“ fewer redundant resources; designed for quick recovery.
 
 FT - Requires fully redundant systems running in parallel, often with real-time state replication.
-	 Cost is higher – requires full duplication of resources for seamless failover.
+	 Cost is higher â€“ requires full duplication of resources for seamless failover.
 	 Fault tolerance can be set up across Azure regions to ensure high availability and disaster recovery. There are several 
 	 multi-region strategies you can use to enhance resilience:
 
@@ -1442,6 +1445,7 @@ thresholds. Azure Monitor can integrate with Azure Logic Apps, Azure Functions, 
 Azure Monitor integrates with these tools to create work items, automate responses, and streamline incident management.
 
 Log Analytics
+Log Analytics is the backend data engine for Azure Monitor Insights.
 Uses Kusto Query Language (KQL) to analyze logs for troubleshooting and auditing.
 Log Analytics aggregates data from Azure Activity Logs, VM logs, and diagnostics.
 ---
@@ -1450,10 +1454,13 @@ Application Insights is a feature of Azure Monitor. Application Insights is an e
 service for developers and DevOps professionals. Azure Monitor collects metrics, logs, and traces from Azure services, applications, 
 and on-premises resources. Sources include Azure VMs, Azure App Service, Kubernetes, and more.
 ---
-Microsof Sentinel
+Microsoft Sentinel
+Sentinel is a cloud-native SIEM and SOAR solution for threat detection, investigation, and automated response.
 Microsoft Sentinel (formerly Azure Sentinel) is a cloud-native Security Information and Event Management (SIEM) and Security 
 Orchestration Automated Response (SOAR) solution. It helps organizations detect, investigate, and respond to security threats 
 across their entire environment using AI and automation.
+
+* SIEM â†’ Security Information and Event Management. SOAR â†’ Security Orchestration, Automation, and Response 
 
 Microsoft Sentinel uses playbooks for automating responses to detected security threats and incidents.
 A playbook is a collection of these remediation actions that can be run from Azure Sentinel as a routine. A playbook can help 
@@ -1516,10 +1523,10 @@ Azure Application Gateway (AAG) is a Layer 7 (HTTP/HTTPS) load balancer that man
 intelligent routing, security, and scalability for web applications deployed in Azure. It has a Web Application Firewall (WAF) that 
 Protects against web attacks like SQL injection and cross-site scripting (XSS). It has Session Affinity (Cookie-Based) that ensures 
 users maintain sessions with the same backend server. Azure Application Gateway encrypts traffic from client to gateway and from 
-gateway to backend. Note that the Azure Load Balancer does not have URL-Based routing and a firewall.
+gateway to backend. * Note that the Azure Load Balancer does not have URL-Based routing and a firewall.
 
 Azure AD Connect
-Azure AD Connect is a Microsoft tool that allows organizations to synchronize their on-premises Active Directory (AD) infrastructure 
+Azure AD Connect is a tool that allows organizations to synchronize their on-premises Active Directory (AD) infrastructure 
 with Azure Active Directory (Azure AD). It enables a seamless and secure identity synchronization and authentication experience for 
 users across on-premises and cloud environments.
 
@@ -1541,10 +1548,10 @@ Azure Backup
 Azure Backup is a cloud-based backup solution that provides data protection for on-premises and cloud-based workloads. It helps safeguard 
 data from accidental deletion, corruption, and ransomware attacks. Performs Incremental Backups.
 Backup Methods:
-	Azure VM Backup     – Backs up entire virtual machines, including OS and data disks.
-	Azure Files Backup  – Protects files stored in Azure Files shares.
-	SQL Database Backup – Protects SQL databases on Azure VMs.
-	On-Premises Backup  – Uses Azure Backup Server (MABS) or Azure Site Recovery for hybrid workloads.
+	Azure VM Backup     â€“ Backs up entire virtual machines, including OS and data disks.
+	Azure Files Backup  â€“ Protects files stored in Azure Files shares.
+	SQL Database Backup â€“ Protects SQL databases on Azure VMs.
+	On-Premises Backup  â€“ Uses Azure Backup Server (MABS) or Azure Site Recovery for hybrid workloads.
 
 Azure Backup is a PaaS offering, meaning it runs on Microsoft's managed cloud infrastructure and does 
 not require you to manage the underlying hardware, storage, or backup so ftware. Azure Backup does not directly support backing up 
@@ -1573,20 +1580,20 @@ endpoint based on predefined routing methods. It improves high availability, per
 multiple regions.
 
 Key Benefits of Traffic Manager
-Global Load Balancing – Routes traffic across different Azure regions.
-High Availability & Failover – Automatically redirects traffic if an endpoint goes down.
-Performance Optimization – Routes users to the closest or fastest endpoint.
-Scalability – Supports applications deployed in multiple locations.
-Multi-Cloud & Hybrid Support – Can route traffic to Azure, on-premises, or even other cloud providers.
+Global Load Balancing â€“ Routes traffic across different Azure regions.
+High Availability & Failover â€“ Automatically redirects traffic if an endpoint goes down.
+Performance Optimization â€“ Routes users to the closest or fastest endpoint.
+Scalability â€“ Supports applications deployed in multiple locations.
+Multi-Cloud & Hybrid Support â€“ Can route traffic to Azure, on-premises, or even other cloud providers.
 ---
 Azure Local Network Gateway (LNG)
 The Local Network Gateway (LNG) in Azure represents your on-premises network when setting up a VPN connection between Azure and your 
 local infrastructure. The Local Network Gateway stores the necessary information about your on-prem network, such as public IP address 
 and subnet details, so that Azure Virtual Network Gateway can establish a secure connection.
 	Key Functions of Local Network Gateway
-	Connects On-Premises to Azure – Used for Site-to-Site (S2S) VPN and ExpressRoute connections.
-	Stores On-Premises Network Information – Includes public IP of the VPN device and BGP settings.
-	Works with Virtual Network Gateway – Helps establish encrypted tunnels between Azure and on-prem resources.
+	Connects On-Premises to Azure â€“ Used for Site-to-Site (S2S) VPN and ExpressRoute connections.
+	Stores On-Premises Network Information â€“ Includes public IP of the VPN device and BGP settings.
+	Works with Virtual Network Gateway â€“ Helps establish encrypted tunnels between Azure and on-prem resources.
 * A Virtual Network Gateway represents Azure's VPN endpoint.
 ---
 Azure Front Door is a global, scalable entry point for web applications. It provides application acceleration,
@@ -1608,7 +1615,7 @@ on-premises service, enabling seamless integration between cloud-based and on-pr
 architectures, where organizations extend their on-prem infrastructure to a private cloud environment for flexibility and scalability.
 
 When migrating or expanding your on-premises servers, you are able to choose a private, hybrid, or public cloud model.
-Private cloud only serves one organization without public integration. Public cloud doesn’t integrate directly with 
+Private cloud only serves one organization without public integration. Public cloud doesnâ€™t integrate directly with 
 on-premises servers without a hybrid model.
 
 Every Azure region has multiple data centers.
@@ -1616,41 +1623,38 @@ Every Azure region has multiple data centers.
 SQL Server Stretch Database is a feature in SQL Server that allows you to dynamically extend your on-premises database to Azure, 
 keeping historical or less frequently accessed data in the cloud without affecting application performance.
 	How SQL Server Stretch Database Works
-	1) Identify Cold Data – Choose tables or rows that are infrequently accessed.
-	2) Enable Stretch Database – SQL Server automatically migrates selected data to Azure SQL Database.
-	3) Query Data as Usual – Queries retrieve data from both on-prem and Azure, without requiring changes to applications.
-	4) Manage Performance & Costs – Optimize storage costs by keeping hot data on-prem and cold data in Azure.
+	1) Identify Cold Data â€“ Choose tables or rows that are infrequently accessed.
+	2) Enable Stretch Database â€“ SQL Server automatically migrates selected data to Azure SQL Database.
+	3) Query Data as Usual â€“ Queries retrieve data from both on-prem and Azure, without requiring changes to applications.
+	4) Manage Performance & Costs â€“ Optimize storage costs by keeping hot data on-prem and cold data in Azure.
 ---
 Advantages of Using Transaction-Optimized Pricing in Azure
-Transaction-Optimized Pricing is a storage pricing model in Azure Blob Storage designed for workloads with high transaction 
-rates and small object sizes. It offers cost savings by optimizing for transaction-heavy workloads instead of storage capacity.
+Transaction-Optimized Pricing is a storage pricing model in Blob Storage designed for workloads with high transaction 
+rates and small object sizes. It offers cost savings by optimizing for transaction-heavy workloads instead of optimizing for
+storage capacity.
 
-An Azure Network Security Group (NSG) is a security feature that controls inbound and outbound traffic to Azure resources at the 
+An Azure Network Security Group (NSG) is a security feature that controls inbound and outbound traffic to resources at the 
 network level. It acts as a virtual firewall, allowing or denying traffic based on defined security rules.
+Rules are applied based on source, destination, port, and protocol. NSGs can block or allow HTTP (port 80) but cannot inspect 
+the actual HTTP request like a Web Application Firewall does.
 
-An Azure Network Security Group (NSG) is a security feature that controls inbound and outbound traffic to Azure resources at the 
-network level. It acts as a virtual firewall, allowing or denying traffic based on defined security rules. NSGs allow or block 
-incoming (inbound) and outgoing (outbound) traffic. Rules are applied based on source, destination, port, and protocol.
-NSGs allow or block incoming (inbound) and outgoing (outbound) traffic.
-
-Third-party cloud services and on-premises Active Directory can be used to access Azure resources. This is known as ‘federation’.
-
+Third-party cloud services and on-premises Active Directory can be used to access Azure resources. This is known as â€˜federationâ€™.
 A Federation is a collection of domains that have established trust. The level of trust may vary, but typically includes 
-authentication and almost always includes authorization. A typical federation might include a number of organizations that have 
-established trust for shared access to a set of resources.
+authentication and authorization. A typical federation might include a number of organizations that have established trust for 
+shared access to a set of resources.
 
-Azure File Sync (AFS) is a cloud-based service that allows you to centralize file storage in Azure Files while keeping local 
-copies on Windows Server. It enables you to sync, cache, and tier files across multiple locations while maintaining fast local access.
-Syncs multiple servers with the same Azure file share, ensuring real-time updates. Syncs multiple servers with the same Azure file 
-share, ensuring real-time updates. If a server crashes, quickly restore files by syncing a new server to Azure.
+Azure File Sync (AFS) allows you to centralize file storage in Azure Files while keeping local copies on Windows Server. It enables 
+you to sync, cache, and tier files across multiple locations while maintaining fast local access.
+It basically syncs multiple servers with the same Azure file share, ensuring real-time updates. 
 
-Virtual Network Peering is an Azure networking feature that enables connectivity between virtual networks deployed in the same 
-Azure region or across different regions. By configuring a virtual network peering, you can establish private and secure 
+Virtual Network Peering is an networking feature that enables connectivity between virtual networks deployed in the same 
+region or across different regions. By configuring a virtual network peering, you can establish private and secure 
 communication between the peered virtual networks. In this scenario, using virtual network peering, you can connect VNet1 and 
-VNet2, allowing resources within each network to communicate with each other.
+VNet2, allowing resources within each network to communicate with each other. Virtual Network Peering connects Azure VNets for 
+seamless, high-speed private communication without using gateways.
 
-Availability Sets are used to ensure that virtual machines are deployed across multiple physical servers, racks, storage units, 
-and network switches within a data center. 
+Availability Sets ensure high availability by distributing VMs across multiple fault domains (hardware racks) and 
+update domains (maintenance groups) to minimize downtime from hardware failures or Azure updates. 
 
 Azure Marketplace is an online store that offers various applications and services designed for use in Azure. It includes 
 pre-configured virtual machine images optimized for different applications, including WordPress. By using Azure Marketplace, a 
@@ -1662,16 +1666,73 @@ services. Azure Arc allows you to manage servers, Kubernetes clusters, and appli
 edge environments from a single control plane. With Azure Arc, you can use Azure management services such as Azure Policy, 
 Azure Monitor, and Azure Security Center to manage resources outside of Azure.
 
+* Edge environments refer to computing devices located near the data source (outside traditional data centers or clouds) that process 
+data locally before sending it to the cloud.
+
 Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications.
 
 Azure Budgets is a tool for setting and enforcing spending thresholds within Azure. 
+Azure Usage and Charges Reports allow you to download raw data so you can perform your own analytics on your spend.
 
+You can map a network drive from your Windows machines to the Azure Storage Account by creating an Azure Files Share.
 
-From Conflict Branch ############################################################
-From Conflict Branch second merge############################################################
-From Conflict Branch third merge with visual studio############################################################
+A Network Security Group (NSG) is a security feature in Azure that controls inbound and outbound traffic to Azure resources at the 
+network level. It acts as a virtual firewall, filtering traffic based on rules that allow or deny access to specific network resources.
+Traffic can be allowed or denied based on source, destination, port, and protocol. Traffic Filtering at the Network Level(IP, TCP/UDP).
+NSGs can be applied to:
+	* Subnet â€“ Affects all VMs and resources in that subnet.
+	* Network Interface (NIC) â€“ Affects only a specific VM.
 
-*** End Radical Efficient_Notes in main ***
+An App Service Plan defines the pricing, scaling, and compute resources for Azure App Services. 
+
+The Service Trust Portal is a Microsoft resource provided that helps organizations manage compliance and data protection in Azure. 
+It offers tools, documents, and guidance to understand Microsoft's security, privacy, and compliance practices. Key features 
+include access to audit reports, compliance resources, and trust-related information to meet regulatory requirements and ensure 
+data security in the cloud.
+
+Static Web Apps is a service that automatically builds and deploys full-stack static web apps to Azure from a code repository. 
+A full-stack static web application is a web app that:
+	1) Has a static frontend â€“ Uses HTML, CSS, JavaScript, and frameworks like React, Angular, or Vue.
+	2) Integrates with backend APIs â€“ Connects to Azure Functions or external services for dynamic functionality.
+	3) Is hosted on a globally distributed content delivery network (CDN) for fast performance.
+Static Web Apps hosts the static frontend and integrates it with backend APIs, authentication, and CI/CD for automated deployment.
+
+Communication Services is a fully managed cloud-based communication platform that enables developers to add voice, video, 
+chat, SMS, and email capabilities to applications using Microsoft's secure infrastructure (the same backbone as Microsoft Teams).
+
+Azure Data Factory (ADF) is a cloud-based data integration service that allows you to orchestrate, automate, and transform data 
+workflows across various sources and destinations.
+Key Features:
+âœ… Extract, Transform, Load (ETL) & Extract, Load, Transform (ELT) processing.
+âœ… Integrates with on-premises, cloud, and SaaS data sources (SQL, APIs, Blob Storage, etc.).
+âœ… No-code & code-based options for data transformation using Data Flows or Azure Databricks.
+âœ… Scheduled and event-driven workflows with pipelines and triggers.
+âœ… Monitoring & logging for data movement and transformation.
+ðŸ“Œ Use Case: Moving data from an on-prem SQL database to Azure Data Lake for analytics. 
+*  data integration refers to the process of combining data from multiple sources into a unified view for analysis, 
+   reporting, or processing.
+---
+Azure API Management is a platform-as-a-service (PaaS) solution designed to manage APIs across various environments, including 
+cloud and on-premises. It provides tools for creating, publishing, securing, and monitoring APIs throughout their lifecycle. 
+Key features include:
+API Gateway: Acts as a central entry point for API requests, enabling routing, transformation, and security.
+ Management Plane: Offers administrative capabilities for API configuration, monitoring, and analytics.
+ Developer Portal: Facilitates API discovery and consumption by developers with self-service capabilities.
+ Azure API Management supports hybrid and multicloud scenarios
+
+*Transformation refers to the process of modifying API requests and responses as they pass through the API Gateway. 
+Examples of transformation include:
+ Rewriting URLs: Adjusting the request path to match backend endpoints.
+ Changing Formats: Converting data formats (e.g., from XML to JSON or vice versa).
+ Modifying Headers: Adding, removing, or altering HTTP headers in requests or responses.
+ Filtering Data: Removing unnecessary fields from a response payload to improve efficiency.
+ These transformations help ensure compatibility between clients and backend services while optimizing performance and security.
+---
+In Azure's hierarchy, a tenant is defined at the topmost level. It represents an instance of Azure Active Directory (AAD), 
+containing all Management Groups, Subscriptions, and Resource Groups within it. Essentially, the tenant acts as the overarching 
+identity and access boundary for an organization in Azure.
+
+*** End Randowm_Notes in main ***
 ---------------------------------------------------------------
 Technical_Terms
 
@@ -1679,6 +1740,9 @@ Big data refers to extremely large and complex datasets that are difficult to pr
 processing techniques or software tools. Big data typically requires advanced technologies and methods for efficient storage, 
 analysis, and extraction of meaningful insights. 
 
+"Failing over" refers to the process of automatically or manually switching workloads from a primary site (on-premises or another 
+Azure region) to a secondary site (Azure or another region) when a disaster or outage occurs. This ensures business continuity by 
+keeping applications running
 ---------------------------------------------------------------
 
 

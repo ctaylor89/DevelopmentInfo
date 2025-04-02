@@ -1,0 +1,145 @@
+Components_Features
+
+Services_
+Microsoft_Services
+Misc_
+---------------------------------------------------------------------
+Purpose of this doc: Simple descriptions of what these services and components do.
+
+in as few words as possible, describe the purpose of 
+---------------------------------------------------------------------
+Components_Features
+
+A Fault Domain is a group of resources that share the same power, network, and hardware rack. The impact of a hardware 
+failure is minimized for VM's when an Availability set distributes the VM instances across separate fault domains.
+
+An update domain ensures grouped VMs are updated in stages, preventing all VM groups from going down during maintenance.
+
+Blueprints help organizations define, deploy, and manage cloud environments in a repeatable and consistent manner.
+
+Resource Manager templates define the infrastructure and configuration of resources in a repeatable way.
+
+Route-Based Gateway refers to an Virtual Network Gateway configured to support route-based VPN connections.
+
+A Route-Based VPN is a specific type of VPN configuration that uses a routing table.
+A Policy-based VPN uses static routing rules to define what traffic should pass through the VPN tunnel.
+
+Virtual Network (VNet) provides networking capabilities for secure, isolated communication between Azure resources, 
+on-premises networks, and the internet.
+
+Virtual Network Peering connects Azure VNets for seamless, private global communication without using gateways.
+
+VPN uses an encrypted tunnel within another network. VPNs are typically deployed to connect two or 
+more trusted private networks to one another over an untrusted network (typically the public internet).
+
+
+---------------------------------------------------------------------
+Services_
+
+AD Connect is a tool that allows organizations to synchronize their on-premises Active Directory (AD) infrastructure 
+with Azure Active Directory (Azure AD).
+
+Advisor is a recommendation service that provides guidance on how to optimize resources.
+
+AI Services are pre-trained AI models for vision, speech, language, and decision-making.
+Includes Azure OpenAI, Speech-to-Text, and Face Recognition APIs.
+
+API Management securely publishes, monitors, and manages APIs. Includes API Gateway.
+
+Arc enables organizations to extend Azure management and governance capabilities to on-premises infrastructure, multi-cloud 
+environments, and edge devices.
+
+Application Gateway is an L7(HTTP/HTTPS) load balancer that manages traffic, provides SSL termination, and offers 
+Web Application Firewall (WAF) protection.
+
+Application Insights monitors application performance, detects issues, and provides telemetry for diagnostics and optimization.
+
+Automation is a cloud-based automation service for managing and deploying resources.
+
+Backup is a cloud-based backup solution that provides data protection for on-premises and cloud-based workloads.
+
+Batch enables parallel and high-performance computing workloads in the cloud.
+
+Cloud Shell is a browser-based, interactive shell that provides a command-line environment for managing resources.
+
+Communication Services enables developers to add voice, video, chat, SMS, and email capabilities to applications.
+
+Content Delivery Network (CDN) is a globally distributed network of servers that delivers content faster and more reliably by 
+caching content closer to users.
+
+Data Explorer is a fast and scalable data exploration service for log and telemetry data. Query language and real-time analytics.
+
+Data Factory is a data integration service that allows you to create, schedule, and orchestrate data workflows.
+Use Case: Moving data from an on-prem SQL database to Azure Data Lake for analytics. 
+
+Data Lake Storage is a scalable service that allows you to store and analyze large volumes of data.
+
+Databricks is a fast, scalable, and analytics platform designed for big data processing, machine learning, and AI workloads. 
+
+Event Grid is an event routing service for publishing and subscribing to events.
+
+File Sync allows you to centralize file storage in Azure Files while keeping local copies on Windows Servers.
+
+Front Door is a global web application accelerator that provides traffic routing, caching, and security.
+
+Key Vault is a cloud service that helps safeguard cryptographic keys and secrets used by cloud applications and services.
+
+Load Balancer is an L4 traffic distributor that balances inbound and outbound network traffic for high availability and scalability.
+
+Local Network Gateway represents your on-premises network when setting up a VPN between Azure and your local infrastructure.
+
+Log Analytics collects and queries log data for monitoring, troubleshooting, and insights in Azure Monitor.
+Log Analytics is the backend data engine for Azure Monitor Insights.
+
+Logic Apps is a cloud service that helps you schedule, automate, and orchestrate tasks, business processes, and workflows.
+
+Machine Learning is a managed service for building, training, and deploying Machine Learning models.
+
+Marketplace is an online store that offers various applications and services designed for use in Azure. Includes pre-configured 
+virtual machine images optimized for different applications
+
+Monitor collects, analyzes, and visualizes telemetry data to optimize performance and detect issues in resources.
+
+Network Security Group is a feature that controls inbound and outbound traffic to resources at the network level(firewall).
+
+RBAC is used to manage user access to Azure resources.
+
+Service Bus is a fully managed messaging service that enables communication between applications and services.
+
+Service Health is a monitoring service that provides real-time insights into the health of Azure services, regions, and 
+resources. It helps organizations stay informed about service issues, planned maintenance, and potential outages.
+
+Site Recovery is a disaster recovery service that replicates and fails over VMs and physical servers to Azure in the 
+case of a disaster or outage. 
+
+Spring Apps is a fully managed service for building and deploying Spring Boot applications.
+
+Static Web Apps is a service that automatically builds and deploys full-stack static web apps to Azure from a code repository.
+
+Status is a public dashboard that shows the real-time health of Azure services across different regions.
+
+Synapse Analytics is a unified platform for big data analytics and data warehousing.
+
+Traffic Manager is a DNS-based traffic routing service that directs user requests to the best-performing or most available 
+endpoint.
+
+Virtual Network (VNet) provides networking capabilities for secure, isolated communication between Azure resources, 
+on-premises networks, and the internet.
+
+Virtual Network Peering is an networking feature that enables connectivity between virtual networks deployed in the same 
+region or across different regions.
+----------------------------------------------------------------------
+in as few words as possible, describe the purpose of 
+----------------------------------------------------------------------
+Microsoft_Services
+
+Sentinel is a cloud-native SIEM and SOAR solution for threat detection, investigation, and automated response.
+* SIEM → Security Information and Event Management. SOAR → Security Orchestration, Automation, and Response 
+* Uses playbooks for automating responses.
+
+SQL Server Stretch Database is a feature in SQL Server that allows you to dynamically extend your on-premises database to Azure, 
+keeping historical or less frequently accessed data in the cloud without affecting application performance.
+
+The Service Trust Portal (STP) is a platform that provides security, compliance, and privacy information for 
+Microsoft cloud services.
+
