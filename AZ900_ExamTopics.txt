@@ -1,6 +1,9 @@
 Microsoft Azure Fundamentals *Purchased 02/22/25
 https://app.exampro.co/student/journey/az-900
 
+Prepare for the exam
+https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification
+
 Exam_Questions_Missed
 
 The AZ-900: Microsoft Azure Fundamentals exam covers foundational knowledge of cloud concepts and core Azure services. 

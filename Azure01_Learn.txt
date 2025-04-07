@@ -5,6 +5,7 @@ Azure_DNS
 Azure_ExpressRoute
 Azure_Identity_Access_Security
 Azure_Physical_Infrastructure
+Azure_Service_Fabric
 Azure_storage_services
 Azure_Virtual_Desktop
 Azure_Virtual_Networking 
@@ -15,6 +16,7 @@ Compute_Networking_Services
 Exercises_
 Learning_Links
 Missed_Questions
+Needs_a_home
 Questions_
 Random_Notes
 Service_Level_Agreements
@@ -287,8 +289,9 @@ It allows users to execute Azure CLI, Azure PowerShell, and other tools without 
 
 Resource Grouping: Resources can be grouped into resource groups, making it easier to manage and organize them.
 Tagging: You can apply tags to resources to categorize and track them.
+A resource group can contain resources from multiple regions.
 ---
-*Record this web page. Describe defense-in-depth.  Layers of defense-in-depth
+* Record this web page. Describe defense-in-depth.  Layers of defense-in-depth
 https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/8-describe-defense-depth
 ---
 Microsoft Defender for Cloud provides comprehensive protection for a wide range of resources across your cloud and on-premises 
@@ -586,56 +589,112 @@ Each management group and subscription can support only one parent.
 
 XXXXXXXXXXXXXXXX Recorded to here. 02/15  Azure01_Learn4.mp3
 ---------------------------------------------------------------
-Azure_storage_services
+Azure_Service_Fabric
+Azure Service Fabric is a distributed systems platform designed to simplify the development, deployment, and management of scalable 
+and reliable microservices and containers. It supports both stateless and stateful microservices, making it versatile for various 
+application needs. Service Fabric powers many Microsoft services, such as Azure SQL Database and Azure Cosmos DB, and can run on 
+Azure, on-premises, or other clouds. Service Fabric also provides robust features for container orchestration, application 
+lifecycle management, and high-density deployments.
+
+Service Fabric provides a sophisticated, lightweight runtime that supports stateless and stateful microservices. A key differentiator 
+of Service Fabric is its robust support for building stateful services, either with Service Fabric built-in programming models or 
+containerized stateful services. Service Fabric Resource Provider is available in all Azure regions.
+---------------------------------------------------------------
+Needs_a_home
 
 * Low latency refers to the minimal delay between a request for data and the corresponding response or action. It is a 
 critical performance metric in systems where real-time or near-real-time responses are required.
 
 * Synchronous Replication: All copies of data are updated at the same time.
 
-* Lower availability in the context of an Azure storage account refers to the likelihood that your data might not be accessible 
-at all times. Availability is typically measured as a percentage of time that the service is available.
-
 * Availability Zone is a high-availability offering designed to ensure resilience and uptime for your applications and services. 
 An Availability Zone represents a physically separate location within an Azure region, providing protection against data 
 center-level failures.
 
+* Lower availability in the context of an Azure storage account refers to the likelihood that your data might not be accessible 
+at all times. Availability is typically measured as a percentage of time that the service is available.
+
 * A data center is a physical facility that is used to house critical applications, data, and computing infrastructure.
 
-Standard general-purpose v2 - Storage Tier is the standard storage account type for blobs, file shares, queues, and tables. It is 
-recommended for most scenarios using Azure Storage. If you want support for network file system (NFS) in Azure Files, use the 
-premium file shares account type.
+---------------------------------------------------------------
+Azure_storage_services
+
+---
+Blob Storage service
+A Page Blob in Azure is a type of storage blob designed for random read/write operations, making it ideal for disk storage, 
+databases, and virtual machines (VMs). Unlike Block Blobs (which store data in blocks), Page Blobs store data in fixed-size 
+pages of 512 bytes each.
 
 Premium block blobs - Storage Tier is the premium storage account type for block blobs and append blobs. It is recommended for 
 scenarios with high transaction rates or that use smaller objects or require consistently low storage latency. Blob Storage 
 (including Data Lake Storage)
+
+Premium page blobs - performance-optimized storage tier	(Page blobs only)
+Offers low latency for data access compared to other tiers, such as hot, cool, and archive which are lower in performance.
+Premium page blobs provide High throughput for read and write operations using Solid-State Drive (SSD)-Based Storage.
+
+Azure Blob storage is an object storage solution for the cloud. It can store massive amounts of data, such as text or binary data.
+Blob storage can manage thousands of simultaneous uploads, massive amounts of video data, constantly growing log files, and can 
+be reached from anywhere with an internet connection.
+
+One advantage of blob storage over disk storage is that it doesn't require developers to think about or manage disks. Data is 
+uploaded as blobs, and Azure takes care of the physical storage needs. Blob storage is ideal for:
+	Serving images or documents directly to a browser.
+	Storing files for distributed access.
+	Streaming video and audio.
+	Storing data for backup and restore, disaster recovery, and archiving.
+	Storing data for analysis by an on-premises or Azure-hosted service.
+
+What are the access tiers for blob storage?
+Azure Blob Storage offers the following access tiers to optimize cost and performance based on data usage:
+
+Hot Tier: It has higher storage costs but lower access costs. Designed for frequently accessed or modified data. 
+
+Cool Tier: It has lower storage costs but higher access costs (compared to the hot tier).
+Designed for infrequently accessed data that needs to be stored for at least 30 days. 
+
+Cold Tier: It offers lower storage costs but higher access costs. (compared to the cool tier )
+Designed for rarely accessed data that requires fast retrieval.  Data must be stored for at least 90 days. 
+
+Archive Tier: It offers the lowest storage costs but the highest access costs. Best for data that is rarely accessed and 
+can tolerate a long retrieval latency of hours. Data must be stored for at least 180 days. 
+
+Premium block blobs are optimized for scenarios that require low latency and high throughput, such as media streaming or 
+transaction-heavy workloads. Unlike the Hot, Cool, Cold, and Archive tiers, Premium block blobs are designed specifically for 
+performance-sensitive applications.
+
+* High throughput refers to the ability to transfer large amounts of data quickly and efficiently over a period of time. It's 
+about how much data can be read from or written to the storage per second — typically measured in megabytes per second (MB/s) 
+or input/output operations per second (IOPS).
+
+Azure Storage offers different access tiers for your blob storage, helping you store object data in the most cost-effective manner:
+	Hot access tier: Optimized for storing data that is accessed frequently (for example, images for your website).
+	Cool access tier: Optimized for data that is infrequently accessed and stored for at least 30 days 
+	                  (for example, invoices for your customers).
+	Cold access tier: Optimized for storing data that is infrequently accessed and stored for at least 90 days.
+	Archive access tier: Appropriate for data that is rarely accessed and stored for at least 180 days, with flexible 
+	                     latency requirements (for example, long-term backups).
+
+Standard general-purpose v2 - Storage Tier is the standard storage account type for blobs, file shares, queues, and tables. It is 
+recommended for most scenarios using Azure Storage. If you want support for network file system (NFS) in Azure Files, use the 
+premium file shares account type.
 ---
 Premium file shares - Storage Tier is the premium storage account type for file shares only. Recommended for enterprise or 
 high-performance scale applications. Use the Premium file shares account type if you want a storage account that supports both 
 Server Message Block (SMB) and NFS file shares. NFS (Network File System) file shares are file storage solutions that enable 
 multiple clients to access and share files over a network.
 
-Premium page blobs - performance-optimized storage tier	(Page blobs only)
-Performance Optimization:
-Offers low latency for data access compared to other tiers, such as hot, cool, and archive which are lower in performance.
-Premium page blobs provide High throughput for read and write operations using Solid-State Drive (SSD)-Based Storage.
-
-* A Page Blob in Azure is a type of storage blob designed for random read/write operations, making it ideal for disk storage, 
-databases, and virtual machines (VMs). Unlike Block Blobs (which store data in blocks), Page Blobs store data in fixed-size 
-pages of 512 bytes each.
-
-Transaction-Optimized Pricing is designed for applications with high transaction rates.Transaction-Optimized Pricing is offered 
+Transaction-Optimized Pricing is designed for applications with high transaction rates. Transaction-Optimized Pricing is offered 
 in specific Azure regions. Transaction-Optimized Pricing supports local redundancy (LRS) and zone redundancy (ZRS) for data durability.
 Transaction-Optimized Pricing is a pricing model designed to reduce costs for workloads that have frequent transactions but require 
 lower overall storage capacity. It is designed for workloads with high read/write operations, reducing the per-operation cost 
 compared to standard storage pricing. Transaction-Optimized Pricing is ideal for scenarios where frequent access is required, such 
-as event-driven applications, message queuing, or IoT telemetry. It works well for blob storage, table storage, and queue storage 
-in scenarios where transactions dominate cost rather than raw storage capacity.
+as event-driven applications, message queuing, or IoT telemetry. Transaction-Optimized Pricing works well for blob storage, table 
+storage, and queue storage in scenarios where transactions dominate cost rather than raw storage capacity.
 Key Advantages of Transaction-Optimized Pricing:
-1) Lower Transaction Costs – Ideal for workloads that require frequent read/write operations, as it reduces per-operation costs.
-
-2) Cost-Effective for Small Objects – Best for applications that store a large number of small files where transaction costs 
-would otherwise be high.
+	1) Lower Transaction Costs – Ideal for workloads that require frequent read/write operations, as it reduces per-operation costs.
+	2) Cost-Effective for Small Objects – Best for applications that store a large number of small files where transaction costs 
+	   would otherwise be high.
 ---
 One of the benefits of using an Azure Storage Account is having a unique namespace in Azure for your data. In order to do this, 
 every storage account in Azure must have a unique-in-Azure account name. The combination of the account name and the Azure 
@@ -647,6 +706,9 @@ Azure Files				https://<storage-account-name>.file.core.windows.net
 Queue Storage			https://<storage-account-name>.queue.core.windows.net
 Table Storage			https://<storage-account-name>.table.core.windows.net
 
+When you create a storage account, you select the primary region for the account. The paired secondary 
+region is based on Azure assigned Region Pairs, and can't be changed by the user.
+
 One of the factors that help determine which redundancy option you should choose is whether your application requires read access 
 to the replicated data in the secondary region if the primary region becomes unavailable. 
 
@@ -655,8 +717,7 @@ lowest-cost redundancy option and offers the least durability compared to other 
 rack and drive failures.
 
 Zone-redundant storage (ZRS) replicates your Azure Storage data synchronously across three Azure availability 
-zones in the primary region. When you create a storage account, you select the primary region for the account. The paired secondary 
-region is based on Azure assigned Region Pairs, and can't be changed by the user.
+zones in the primary region.
 
 Azure Storage offers two options for duplicating your data in a secondary region. There is geo-redundant storage (GRS) and 
 geo-zone-redundant storage (GZRS). 
@@ -687,27 +748,6 @@ storage (RA-GRS) or read-access geo-zone-redundant storage (RA-GZRS).
 ---
 All data written to an Azure storage account is encrypted by the service. Azure Storage provides you with fine-grained control 
 over who has access to your data.
-
-Blob Storage service
-Azure Blob storage is an object storage solution for the cloud. It can store massive amounts of data, such as text or binary data.
-Blob storage can manage thousands of simultaneous uploads, massive amounts of video data, constantly growing log files, and can 
-be reached from anywhere with an internet connection.
-
-One advantage of blob storage over disk storage is that it doesn't require developers to think about or manage disks. Data is 
-uploaded as blobs, and Azure takes care of the physical storage needs. Blob storage is ideal for:
-	Serving images or documents directly to a browser.
-	Storing files for distributed access.
-	Streaming video and audio.
-	Storing data for backup and restore, disaster recovery, and archiving.
-	Storing data for analysis by an on-premises or Azure-hosted service.
-
-Azure Storage offers different access tiers for your blob storage, helping you store object data in the most cost-effective manner:
-	Hot access tier: Optimized for storing data that is accessed frequently (for example, images for your website).
-	Cool access tier: Optimized for data that is infrequently accessed and stored for at least 30 days 
-	                  (for example, invoices for your customers).
-	Cold access tier: Optimized for storing data that is infrequently accessed and stored for at least 90 days.
-	Archive access tier: Appropriate for data that is rarely accessed and stored for at least 180 days, with flexible 
-	                     latency requirements (for example, long-term backups).
 
 The following considerations apply to the different access tiers:
 	Hot, cool, and cold access tiers can be set at the account level. The archive access tier isn't available at the account level.
@@ -1702,15 +1742,15 @@ chat, SMS, and email capabilities to applications using Microsoft's secure infra
 
 Azure Data Factory (ADF) is a cloud-based data integration service that allows you to orchestrate, automate, and transform data 
 workflows across various sources and destinations.
+* Data integration refers to the process of combining data from multiple sources into a unified view for analysis, 
+  reporting, or processing.
 Key Features:
-✅ Extract, Transform, Load (ETL) & Extract, Load, Transform (ELT) processing.
-✅ Integrates with on-premises, cloud, and SaaS data sources (SQL, APIs, Blob Storage, etc.).
-✅ No-code & code-based options for data transformation using Data Flows or Azure Databricks.
-✅ Scheduled and event-driven workflows with pipelines and triggers.
-✅ Monitoring & logging for data movement and transformation.
-📌 Use Case: Moving data from an on-prem SQL database to Azure Data Lake for analytics. 
-*  data integration refers to the process of combining data from multiple sources into a unified view for analysis, 
-   reporting, or processing.
+	Extract, Transform, Load (ETL) & Extract, Load, Transform (ELT) processing.
+	Integrates data from on-premises, cloud, and SaaS data sources (SQL, APIs, Blob Storage, etc.).
+	No-code & code-based options for data transformation using Data Flows or Azure Databricks.
+	Scheduled and event-driven workflows with pipelines and triggers.
+	Monitoring & logging for data movement and transformation.
+	Use Case: Moving data from an on-prem SQL database to Azure Data Lake for analytics. 
 ---
 Azure API Management is a platform-as-a-service (PaaS) solution designed to manage APIs across various environments, including 
 cloud and on-premises. It provides tools for creating, publishing, securing, and monitoring APIs throughout their lifecycle. 
@@ -1732,7 +1772,84 @@ In Azure's hierarchy, a tenant is defined at the topmost level. It represents an
 containing all Management Groups, Subscriptions, and Resource Groups within it. Essentially, the tenant acts as the overarching 
 identity and access boundary for an organization in Azure.
 
+In App Service (Web Apps, API Apps, or Mobile Apps), an app always runs in an App Service plan. An App Service plan defines a set 
+of compute resources for a web app to run. When you create an App Service plan in a certain region, a set of compute resources is 
+created for that plan in that region. Whatever apps you put into this App Service plan run on these compute resources as defined 
+by your App Service plan. Each App Service plan defines:
+	Operating System (Windows, Linux)
+	Region (West US, East US, etc.)
+	Number of VM instances
+	Size of VM instances (Small, Medium, Large)
+	Pricing tier (Free, Shared, Basic, Standard, Premium, PremiumV2, PremiumV3, Isolated)
+---
+Using multiple resource groups within a single subscription is another way to segment Azure for departments. Each department can have its own dedicated resource group to manage their resources. Resource groups provide logical containers for organizing and managing resources, allowing department administrators to control access, apply policies, and manage resources specific to their department.
+
+By creating multiple Azure subscriptions, each department can have its own dedicated subscription. This allows for better isolation and control over resources, as each department administrator can manage their own subscription independently. It provides a clear separation of resources, access controls, and billing, ensuring that each department has autonomy over their Azure resources.
+---
+Premium storage, is not applicable to Azure Blob Storage. Premium storage is primarily associated with Azure managed disks and Azure Files, offering high-performance storage for specific workloads that demand low latency and high IOPS (input/output operations per second).
+
+Cold storage
+Cold storage, is designed for infrequently accessed data that can tolerate higher retrieval times. It offers a lower storage cost compared to hot storage but with a trade-off of longer access times. Cold storage is ideal for data that is accessed less frequently but still needs to be stored for long-term retention or compliance purposes.
+
+Standard storage
+Standard storage, is the baseline storage offering for Azure Blob Storage. It provides a balance between cost and performance and is suitable for general-purpose storage scenarios where frequent access and low latency are not critical requirements.
+
+Premium storage
+Hot storage
+Azure Blob Storage offers different tiers to cater to varying data access patterns and cost requirements. Hot storage is optimized for frequently accessed data that requires low latency and quick access. It is suitable for scenarios where data needs to be readily available for immediate retrieval and processing.
+---
+Azure Bastion is a service you deploy that lets you connect to a virtual machine using your browser and the Azure portal. The Azure Bastion service is a fully platform-managed PaaS service that you provision inside your virtual network.
+
+Azure Security Center
+This is correct. The just-in-time (JIT) virtual machine (VM) access feature in Azure Security Center allows you to lock down inbound traffic to your Azure Virtual Machines. This reduces exposure to attacks while providing easy access when you need to connect to a VM.
+---
+What advantages does high availability bring to cloud computing? (Select 3)
+
+It enables load balancing across multiple resources, preventing overloading of any single resource.
+High availability enables load balancing across multiple resources, preventing overloading of any single resource. This helps ensure that resources are used efficiently and can handle sudden spikes in demand.
+
+It enables organizations to easily scale their resources based on their needs.
+High availability improves scalability by allowing resources to be easily added or removed as needed. This helps organizations respond quickly to changing business needs without having to worry about resource constraints.
+
+It allows for redundancy of resources, ensuring that if one resource fails, another can take its place without interruption.
+---
+A computing environment that combines a public cloud and a private cloud by allowing data and applications to be shared between them
+is a Hybrid Cloud.
+---
+Azure Policy is a service that allows you to enforce and apply organizational standards and policies on Azure resources. While it contributes to security and compliance by enforcing certain rules and configurations, it does not provide a specific platform for accessing compliance documentation, audit reports, and Microsoft's privacy and compliance commitments like the Azure Service Trust Portal.
+
+Explanation
+Azure Service Trust Portal is the platform that provides access to compliance documentation, audit reports, and security controls related to Azure services. It serves as a centralized hub for accessing information on various compliance programs, including certifications, attestations, and regulatory standards.
+
+It offers transparency into Microsoft's privacy and compliance commitments, allowing organizations to assess the security and compliance of their Azure deployments. By using the Azure Service Trust Portal, security administrators can stay up-to-date with the latest information and ensure the security and compliance of their Azure cloud services.
+---
+Azure Policy helps to enforce organizational standards and to assess compliance at-scale. Common use cases for Azure Policy include implementing governance for resource consistency, regulatory compliance, security, cost, and management. Policy definitions for these common use cases are already available in your Azure environment as built-ins to help you get started.
+---
+Azure Functions provides the platform for serverless code. Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure.
+---
+The Service Trust Portal is a platform provided by Microsoft that offers transparency and insight into the security, privacy, and compliance practices of Microsoft cloud services. It provides access to various compliance documentation, audit reports, regulatory standards, and control frameworks. It enables organizations to understand Microsoft's commitment to privacy and compliance and helps them assess the trustworthiness of Azure services.
+By using the Service Trust Portal, organizations can stay informed about Microsoft's compliance certifications, data protection policies, and security controls, ensuring that they align with their own security and compliance requirements.
+---
+"For all Virtual Machines that have two or more instances deployed across two or more Availability Zones in the same Azure region, we guarantee you will have Virtual Machine Connectivity to at least one instance at least 99.99% of the time."
+---
+The Azure Pricing Calculator allows users to compare pricing between different Azure regions. This helps organizations assess the cost implications of deploying their workloads in different regions and choose the most cost-effective option based on their requirements.
+
+By using the Azure Pricing Calculator, users can estimate the cost of running specific Azure services and resources. They can input details such as the number of instances, storage usage, data transfer, and other factors to get a comprehensive cost estimate for their chosen services.
+---
+Azure Cost Management is designed for monitoring, analyzing, and optimizing ongoing Azure spending after migration. It helps track and control costs in an Azure environment but does not assist with estimating pre-migration cost savings.
+
+The Azure TCO Calculator is specifically designed to help businesses estimate the cost savings of migrating their workloads to Azure. It allows users to input details about their current on-premises infrastructure (e.g., server counts, storage usage, and energy costs) and provides a detailed analysis comparing the total cost of ownership for on-premises versus Azure. This tool is focused on migration scenarios, making it the correct choice in this context.
+---
+Azure Log Analytics is the ideal Azure service for addressing the company's log monitoring and analysis requirements. It provides a centralized platform for collecting, analyzing, and visualizing log data from various sources, including on-premises servers and cloud-based resources. With Log Analytics, the company can ingest and store logs, perform advanced queries using a powerful query language, create custom dashboards and visualizations, set up alerts and notifications, and gain valuable insights into system performance, security, and operational issues.
+---
+To guarantee 99.95% VM connectivity, you must deploy at least two VMs in the same Availability Set in Azure. This is because Availability Sets ensure that your VMs are physically separated across multiple hardware servers within an Azure datacenter, providing redundancy and minimizing the risk of datacenter-wide failures. If you have only one VM in an Availability Set, you can still experience a single point of failure if the hardware server that the VM is running on fails.
+
+By deploying two or more VMs within an Availability Set, Azure will distribute them across different fault domains and update domains. This ensures that even if one fault domain or update domain experiences a disruption, your VMs will still be accessible via the other fault domain(s) or update domain(s).
+
+
 *** End Randowm_Notes in main ***
+
+nmnmnmnm
 ---------------------------------------------------------------
 Technical_Terms
 
