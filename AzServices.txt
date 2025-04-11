@@ -104,6 +104,10 @@ Machine Learning is a managed service for building, training, and deploying Mach
 Marketplace is an online store that offers various applications and services designed for use in Azure. Includes pre-configured 
 virtual machine images optimized for different applications
 
+Azure Migrate is a service to help organizations plan, assess, and execute the migration of their on-premises workloads to Azure.
+
+Migrate is a service to help organizations plan, assess, and execute the migration of their on-premises workloads to Azure.
+
 Monitor collects, analyzes, and visualizes telemetry data to optimize performance and detect issues in resources.
 
 Network Security Group is a feature that controls inbound and outbound traffic to resources at the network level(firewall).
@@ -136,6 +140,17 @@ on-premises networks, and the internet.
 
 Virtual Network Peering is an networking feature that enables connectivity between virtual networks deployed in the same 
 region or across different regions.
+
+------------------------------------------------------------------------
+Technical_Terms
+
+Big data refers to extremely large and complex datasets that are difficult to process, analyze, and manage using traditional data 
+processing techniques or software tools. Big data typically requires advanced technologies and methods for efficient storage, 
+analysis, and extraction of meaningful insights. 
+
+"Failing over" refers to the process of automatically or manually switching workloads from a primary site (on-premises or another 
+Azure region) to a secondary site (Azure or another region) when a disaster or outage occurs. This ensures business continuity by 
+keeping applications running
 ----------------------------------------------------------------------
 in as few words as possible, describe the purpose of 
 
@@ -187,77 +202,73 @@ performance-sensitive applications.
 * High throughput refers to the ability to transfer large amounts of data quickly and efficiently over a period of time. It's 
 about how much data can be read from or written to the storage per second — typically measured in megabytes per second (MB/s) 
 or input/output operations per second (IOPS).
-
+-----------------------------------------------------------------------
+Data Box is a physical device provided by Microsoft to help organizations transfer large amounts of data to and from Azure 
 -----------------------------------------------------------------------
 Monday
-in the context of azure, using as few words as possible, describe the purpose of a fault domain
+In the context of azure, using as few words as possible, describe the purpose of a fault domain.
 In Azure, a fault domain ensures high availability by grouping resources to isolate them from hardware or rack failures.
 
 Can you provide an example of fault domains in action?
-Certainly! Consider an Azure virtual machine (VM) deployed in a region with three fault domains. When you set up an availability set for the VM, Azure automatically distributes the instances across these fault domains. This ensures that even if one hardware rack or power source fails (affecting one fault domain), the other fault domains remain operational, minimizing downtime. For example:
+Certainly! Consider a virtual machine deployed in a region with three fault domains. When you set up an availability set for the 
+VM, Azure automatically distributes the instances across these fault domains. This ensures that even if one hardware rack or power 
+source fails (affecting one fault domain), the other fault domains remain operational, minimizing downtime.
+This setup ensures high availability by isolating VMs from single points of failure.
 
-Fault Domain 1: VM1 and VM4
-
-Fault Domain 2: VM2 and VM5
-
-Fault Domain 3: VM3 and VM6
-
-This setup ensures high availability by isolating VMs from single points of failure. Would you like to explore another concept, like update domains?
-
-in as few words as possible, describe the purpose of an update domain
+In as few words as possible, describe the purpose of an update domain.
 An update domain ensures high availability by grouping resources to minimize downtime during planned maintenance.
 
-in as few words as possible, describe the purpose of azure monitor
-Azure Monitor collects, analyzes, and acts on telemetry data for performance and health monitoring.
+In as few words as possible, describe the purpose of Azure monitor.
+Azure Monitor collects, analyzes, and acts on telemetry data for performance and health monitoring of a wide range of 
+services and resources including Applications, VMs, Guest Operating Systems on VMs, Containers, Databases, Security Events 
+with Sentinal and Networks.
 
-in as few words as possible, describe the purpose of Log Analytics
+In as few words as possible, describe the purpose of Log Analytics.
 Log Analytics collects and analyzes log data for monitoring and troubleshooting in Azure.
 
-in as few words as possible, describe the purpose of Microsoft Sentinel
+In as few words as possible, describe the purpose of Microsoft Sentinel.
 Microsoft Sentinel is a cloud-native SIEM that detects, investigates, and responds to security threats.
 
-in as few words as possible, describe the purpose of Application Gateway
+In as few words as possible, describe the purpose of Application Gateway.
 Application Gateway provides Layer 7 load balancing, SSL termination, and web application firewall (WAF) capabilities.
 
-in as few words as possible, describe the purpose of Azure Load Balancer
-Azure Load Balancer distributes network traffic across resources to ensure scalability and availability.
+In as few words as possible, describe the purpose of Azure Load Balancer.
+Load Balancer distributes network traffic across resources to ensure scalability and availability.
 
-in as few words as possible, describe the purpose of Azure Front Door
+In as few words as possible, describe the purpose of Azure Front Door.
 Azure Front Door provides global load balancing, routing, and security for web applications.
 
-in as few words as possible, describe the purpose of Virtual Network Peering
-Virtual Network Peering connects Azure virtual networks for seamless communication with low latency.
+In as few words as possible, describe the purpose of Virtual Network Peering
+Virtual Network Peering connects Azure virtual networks for seamless communication.
 
 What are the benefits of using Virtual Network Peering?
 The benefits of Virtual Network Peering in Azure include:
-
 Low Latency Communication: Virtual networks communicate directly, bypassing the need for gateways or public internet routing.
-
 Cost Efficiency: No bandwidth charges for traffic within a region, reducing expenses for local communication.
-
 Seamless Connectivity: VMs and resources across networks can interact as if they are part of the same network.
-
 Global Reach: Connect virtual networks across different Azure regions, enabling scalability for global applications.
-
 Enhanced Security: Maintains isolated traffic flow without exposing data to the internet.
 
-Would you like to explore specific use cases for this feature?
-
-in as few words as possible, describe the purpose of Azure Virtual Network
+In as few words as possible, describe the purpose of Azure Virtual Network
 Azure Virtual Network enables secure, isolated communication between Azure resources and on-premises networks.
 
-in as few words as possible, describe the purpose of an App Service plan
+Describe the purpose of an App Service plan
 An App Service plan defines compute resources for hosting Azure App Services.
 
-in as few words as possible, describe the purpose of Service Trust Portal
+Describe the purpose of Service Trust Portal
 Service Trust Portal provides compliance resources and tools to manage data protection and regulatory requirements in Azure.
 
 describe the purpose of Service Trust Portal
-The Service Trust Portal is a resource provided by Microsoft that helps organizations manage compliance and data protection in Azure. It offers tools, documents, and guidance to understand Microsoft's security, privacy, and compliance practices. Key features include access to audit reports, compliance resources, and trust-related information to meet regulatory requirements and ensure data security in the cloud. Would you like to explore a specific aspect, such as its compliance tools or audit reports?
+The Service Trust Portal is a resource provided by Microsoft that helps organizations manage compliance and data protection in 
+Azure. It offers tools, documents, and guidance to understand Microsoft's security, privacy, and compliance practices. Key 
+features include access to audit reports, compliance resources, and trust-related information to meet regulatory requirements 
+and ensure data security in the cloud.
 
 Tuesday
 Are static web apps hosted on a content delivery network?
-Yes, static web apps are typically hosted on a content delivery network (CDN). A CDN is a distributed network of servers that caches and delivers static content, such as HTML, CSS, JavaScript, and images, to users from servers closest to their location. This reduces latency, improves load times, and enhances the overall user experience. Azure Static Web Apps, for example, automatically use a CDN to serve content globally.
+Yes, static web apps are typically hosted on a content delivery network (CDN). A CDN is a distributed network of servers that 
+caches and delivers static content, such as HTML, CSS, JavaScript, and images, to users from servers closest to their location. 
+This reduces latency, improves load times, and enhances the overall user experience. Azure Static Web Apps, for example, automatically use a CDN to serve content globally.
 
 Is this statement true? Azure Arc allows enables you to use Azure services like Azure SQL Database, Azure Functions, and more on-premises or in other clouds.
 Yes, that statement is partially true. Azure Arc does extend Azure management and services to on-premises and multi-cloud environments. However, Azure Arc does not allow you to run all Azure services on-premises or in other clouds.
@@ -504,3 +515,5 @@ Cool Tier: Suitable for infrequently accessed data that needs to be stored for a
 Cold Tier: Ideal for rarely accessed data that requires fast retrieval. Data must be stored for at least 90 days. It offers lower storage costs than the cool tier but higher access costs.
 
 Archive Tier: Best for data that is rarely accessed and can tolerate retrieval latency of hours. Data must be stored for at least 180 days, offering the lowest storage costs but the highest access costs.
+
+
