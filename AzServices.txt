@@ -504,16 +504,6 @@ Simplified Access: Enables RDP/SSH sessions directly through the Azure portal or
 
 Azure Bastion is ideal for organizations looking to securely manage VMs without compromising on accessibility. Let me know if you'd like to explore its setup or pricing!
 
-Today
-What are the access tiers for blob storage?
-Azure Blob Storage offers the following access tiers to optimize cost and performance based on data usage:
 
-Hot Tier: Designed for frequently accessed or modified data. It has higher storage costs but lower access costs.
-
-Cool Tier: Suitable for infrequently accessed data that needs to be stored for at least 30 days. It has lower storage costs and higher access costs compared to the hot tier.
-
-Cold Tier: Ideal for rarely accessed data that requires fast retrieval. Data must be stored for at least 90 days. It offers lower storage costs than the cool tier but higher access costs.
-
-Archive Tier: Best for data that is rarely accessed and can tolerate retrieval latency of hours. Data must be stored for at least 180 days, offering the lowest storage costs but the highest access costs.
 
 

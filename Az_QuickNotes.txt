@@ -36,9 +36,7 @@ Examples in Azure:
 
 5. Microsoft Entra ID (Azure AD) – Identity and access management (IAM).
 
-
 6. Azure Firewall – Cloud-native firewall for securing networks.
-
 
 7. Microsoft Defender for Cloud – Security monitoring, threat detection and security recommendations.
 Microsoft Defender for Cloud is a cloud security posture management (CSPM) and workload protection (CWP) 

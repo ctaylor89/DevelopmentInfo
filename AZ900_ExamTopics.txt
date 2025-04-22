@@ -1,8 +1,17 @@
+Schedule an exam
+https://learn.microsoft.com/en-us/credentials/certifications/register-schedule-exam
+
 Microsoft Azure Fundamentals *Purchased 02/22/25
 https://app.exampro.co/student/journey/az-900
 
 Prepare for the exam
 https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification
+
+Az-900 Fundamentals Exam Cram(2024 Edition) 2.5 hour course  *I completed this course
+https://www.youtube.com/watch?v=8n-kWJetQRk&t=7566s
+
+Az-900 Azure Fundamentals  *Vince sent me this. 9 hour course broken up into small indexed topics
+https://www.youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3
 
 Exam_Questions_Missed
 
@@ -427,7 +436,7 @@ Q: A company is looking to adopt a hybrid cloud approach and wants to manage the
 Azure resources from a single interface. They also want to ensure consistent security and compliance across all environments.
 
 Which Azure service should they consider to meet these requirements?
-A: Azure Arc
+A: Azure Arc    
 * Azure Arc enables organizations to extend Azure management and governance capabilities to on-premises infrastructure, multi-cloud 
 environments, and edge devices. Azure Arc also allows for consistent policy enforcement, security, and compliance across all 
 environments, ensuring that the organization can maintain control and governance across their entire hybrid infrastructure.
@@ -447,8 +456,9 @@ access to RBAC that provides fine-grained access management to Azure resources.
 Q: Which combination of Azure management tools is most ideal for Mac and Linux developers to manage cloud resources?
 A: Azure Portal and Azure CLI
 
-Q: 
-A: 
+Q: If I am testing new software in an Azure VM will I incur charges after I stop the VM?
+A: Look for status: If VM is in "Stopped (deallocated)", you’re not paying for compute,  if VM is in "Stopped" only, you are still 
+paying for the VM itself.
 
 Q: 
 A: 

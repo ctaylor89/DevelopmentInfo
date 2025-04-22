@@ -6,6 +6,7 @@ Azure_ExpressRoute
 Azure_Identity_Access_Security
 Azure_Physical_Infrastructure
 Azure_Service_Fabric
+Azure_Stack
 Azure_storage_services
 Azure_Tools
 Azure_Virtual_Desktop
@@ -21,8 +22,8 @@ Needs_a_home
 Questions_
 Random_Notes
 Service_Level_Agreements
-Technical_Terms
-You_should_be_able_to
+Test_Shortcommings
+
 *Left off: https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/8-virtual-network
 Achievements: 
 Microsoft Azure Fundamentals: Describe Azure architecture and services
@@ -83,6 +84,10 @@ storage service or modify the front end without impacting any of the other compo
 Azure_Identity_Access_Security
 
 *** Azure directory services ***
+Active Directory (AD) is a directory service. It is a hierarchical structure that stores and manages information about objects on 
+a network, such as users, computers, and resources. AD provides authentication, authorization, and centralized management for 
+Windows domain networks.
+
 Microsoft Entra ID is a directory service that enables you to sign in and access both Microsoft cloud applications and cloud 
 applications that you develop. Microsoft Entra ID can also help you maintain your on-premises Active Directory deployment.
 
@@ -97,15 +102,15 @@ services and a custom list of banned passwords.
 
 Administrators can use Microsoft Entra ID to control access to applications and resources based on their business requirements.
 
-Developers can use Microsoft Entra ID to provide a standards-based approach for adding functionality to applications that they build, 
-such as adding SSO functionality to an app or enabling an app to work with a user's existing credentials.
+Developers can use Microsoft Entra ID to provide a standards-based approach for adding functionality to applications that they 
+build, such as adding SSO functionality to an app or enabling an app to work with a user's existing credentials.
 * The term "standards-based approach" refers to the use of industry-standard authentication and authorization protocols.
 
 Users can manage their identities and take maintenance actions like self-service password reset.
 
-Single sign-on (SSO) enables you to remember only one username and one password to access multiple applications. A single identity is 
-tied to a user, which simplifies the security model. As users change roles or leave an organization, access modifications are tied to 
-that identity, which greatly reduces the effort needed to change or disable accounts.
+Single sign-on (SSO) enables you to remember only one username and one password to access multiple applications. A single identity 
+is tied to a user, which simplifies the security model. As users change roles or leave an organization, access modifications are 
+tied to that identity, which greatly reduces the effort needed to change or disable accounts.
 
 Device management: Along with accounts for individuals, Entra ID supports the registration of devices. Registration enables 
 devices to be managed through tools like Microsoft Intune. Entra ID also allows for device-based Conditional Access policies to 
@@ -330,8 +335,13 @@ RBAC doesn't enforce access permissions at the application or data level.
 It allows users to execute Azure CLI, Azure PowerShell, and other tools without needing local installations.
 
 Resource Grouping: Resources can be grouped into resource groups, making it easier to manage and organize them.
-Tagging: You can apply tags to resources to categorize and track them.
-A resource group can contain resources from multiple regions.
+Tagging: You can apply tags to resource groups to categorize and track them. A resource group can contain resources from multiple 
+regions. There is no parent child relationship between resource groups and it's contained resources.
+Applying tags to resource groups lets you:
+	Track costs per project, team, or environment
+	Filter/search in the portal more easily
+	Automate based on tags (e.g., auto-shutdown all Environment = Dev)
+	Audit and govern through Azure Policy
 ---
 * Record this web page. Describe defense-in-depth.  Layers of defense-in-depth
 https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/8-describe-defense-depth
@@ -556,6 +566,7 @@ regions or globally to ensure seamless operation and availability.
 
 Even with the additional resiliency that availability zones provide, it’s possible that an event could be so large that it 
 impacts multiple availability zones in a single region. To provide even further resilience, Azure has Region Pairs.
+
 XXXXXXXXXXXXXXXX Recorded to here. 02/02  Azure01_Learn3.mp3
 
 Region pairs
@@ -668,10 +679,40 @@ at all times. Availability is typically measured as a percentage of time that th
 
 * A data center is a physical facility that is used to house critical applications, data, and computing infrastructure.
 
+* A distributed systems platform is a software or infrastructure framework that enables a collection of independent computers 
+(nodes) to work together as a single cohesive system, providing shared services, computing power, and resources to users or 
+applications — usually in a way that's scalable, fault-tolerant, and location-transparent.
+	Decentralized	Work is spread across multiple nodes, not just one machine
+	Scalable		Can grow horizontally (add more machines) to handle more load
+	Fault-tolerant	Can keep running even if some nodes fail
+	Transparent		Hides complexity — users don’t need to know where a resource physically lives
+	Consistent		Ensures correct data/state across the system (with varying guarantees)
+	Concurrent		Many processes run at once, often in parallel
+
+---------------------------------------------------------------
+Azure_Stack
+
+Azure Stack is a family of products that brings Azure services to on-premises, edge, or hybrid environments. It’s Microsoft's way 
+of letting you run Azure-like infrastructure and services outside the Microsoft cloud — whether that's in your own data center, 
+on edge devices, or disconnected environments.
+
+Not every organization can or wants to put everything in the public cloud.
+Reasons include:
+	Regulatory or compliance requirements
+	Low-latency needs (edge computing)
+	Disconnected environments (ships, oil rigs, military zones)
+	Data sovereignty
+
+Azure Stack Product Family
+Azure Stack Hub	 Full-blown Azure-in-a-box for disconnected or sovereign environments. You manage it. Full IaaS and PaaS capabilities.
+Azure Stack HCI	 Hyperconverged infrastructure optimized for running VMs on-prem. 
+				 Tightly integrated with Azure services like Site Recovery, Defender, etc.
+Azure Stack Edge Physical appliance for edge AI/compute/storage needs. Think machine learning at a factory floor, ship, or retail site.
+
+
 ---------------------------------------------------------------
 Azure_storage_services
 
----
 Blob Storage service
 A Page Blob in Azure is a type of storage blob designed for random read/write operations, making it ideal for disk storage, 
 databases, and virtual machines (VMs). Unlike Block Blobs (which store data in blocks), Page Blobs store data in fixed-size 
@@ -734,8 +775,15 @@ premium file shares account type.
 Premium file shares - Storage Tier is the premium storage account type for file shares only. Recommended for enterprise or 
 high-performance scale applications. Use the Premium file shares account type if you want a storage account that supports both 
 Server Message Block (SMB) and NFS file shares. NFS (Network File System) file shares are file storage solutions that enable 
-multiple clients to access and share files over a network.
+multiple clients to access and share files over a network. It’s not just a basic object blob store like S3 or traditional block blobs.
+---
+Azure Data Lake Storage (ADLS) is built on top of Blob Storage, but it's not limited to just storing blobs in the traditional sense.
+ADLS Gen2 is basically Blob Storage with a hierarchical namespace added on top. This enables file system–like operations (folders, 
+directories, permissions at the file level).
 
+You can use ADLS for file-based operations, directory structures, POSIX-style permissions — things you don’t get in standard Blob 
+Storage without the hierarchical namespace.
+---
 Transaction-Optimized Pricing is designed for applications with high transaction rates. Transaction-Optimized Pricing is offered 
 in specific Azure regions. Transaction-Optimized Pricing supports local redundancy (LRS) and zone redundancy (ZRS) for data durability.
 Transaction-Optimized Pricing is a pricing model designed to reduce costs for workloads that have frequent transactions but require 
@@ -775,11 +823,11 @@ Azure Storage offers two options for duplicating your data in a secondary region
 geo-zone-redundant storage (GZRS). 
 
 Geo-Redundant Storage (GRS) Stores three copies of your data in the primary region to provide local redundency (3 times within a 
-data center) and replicates three additional copies to a secondary region  (3 times within a data center). The secondary region 
+data center) and replicates three additional copies to a secondary region (also 3 times within a data center). The secondary region 
 is not accessible for reads unless a failover is initiated. In case of a failure in the primary region, Azure manually fails over 
 to the secondary region.
 
-A variant to Geo-Redundant Storage is Read-Access Geo-Redundant Storage (RA-GRS). It allows read access to the secondary region.
+* A variant to Geo-Redundant Storage is Read-Access Geo-Redundant Storage (RA-GRS). It allows read access to the secondary region.
 
 Using Geo-Zone-Redundant Storage (GZRS), data is replicated across multiple availability zones in the primary region (higher 
 availability than GRS). Geo-Zone-Redundant Storage replicates three additional copies (LRS) in a secondary region for disaster recovery.
@@ -997,7 +1045,7 @@ Azure Monitor is a comprehensive monitoring solution that helps collect, analyze
 applications, and infrastructure. Azure Monitor provides real-time visibility into performance, availability, and operational health.
 For Performance Monitoring Azure Monitor collects metrics, logs, and traces from Azure services, applications, and on-premises resources.
 Sources include Azure VMs, Azure App Service, Kubernetes, and more. Azure Monitor integrates with tools like Azure Metrics Explorer, 
-Log Analytics, and Application Insights.D
+Log Analytics, and Application Insights.
 
 For Performance Monitoring Azure Monitor tracks CPU, memory, disk, and network usage for VMs and containers. Monitors application 
 performance using Application Insights. Alerting & Automation - Azure Monitor detects anomalies and triggers alerts based on custom 
@@ -1010,12 +1058,12 @@ Log Analytics
 Log Analytics is the backend data store for Azure Monitor Insights and many other services.
 Uses Kusto Query Language (KQL) to analyze logs for troubleshooting and auditing.
 Log Analytics aggregates data from Azure Activity Logs, VM logs, and diagnostics.
----
+
 Azure Monitor Alerts A proactive way to detect and address issues before they become critical. You can create alerts on any metric 
 or log data source in the Azure Monitor data platform. Alert type includes metric, log, activity, service health, high CPU usage,
 resource health, smart detection and Prometheus (open-source monitoring and alerting toolkit). Monitor Alerts can trigger actions 
 like sending emails, SMS, or invoking Azure Logic Apps, Automation Runbooks or Azure Functions for automated responses.
-
+---
 Automation Runbooks are scripts that you run in the cloud (typically Azure Automation) to automate operational tasks, like 
 restarting a VM, cleaning up resources, rotating secrets, or patching systems.
 
@@ -1066,6 +1114,9 @@ Azure virtual network(VNet) allows you to create multiple isolated virtual netwo
 private IP address space that is in the private IP address range. The private IP range only exists within the virtual network and 
 isn't internet routable. You can divide the private IP address space into subnets and allocate part of the defined address space 
 to each named subnet. A subnet is defined by an IP address range, which is a subset of the IP address space of a larger network.
+
+* You can not directly place an Azure database inside a Virtual Network (VNet) — but you can restrict access to it from a VNet, 
+which is often what people actually mean. 
 
 * A subnet, short for subnetwork, is a logical subdivision of a larger network. It is used to partition a single network into 
 smaller, more manageable segments. Subnets improve network performance, enhance security, and allow better control of traffic 
@@ -1255,7 +1306,7 @@ using cloud-based resources and services.
 
 Key Difference:
 Scalability is about long-term capacity planning. Elasticity is about real-time resource adjustment based on demand.
-Azure VM Scale Sets and Azure Functions provide elasticity, while services like Azure SQL Database Hyperscale offer scalability.
+Azure VM Scale Sets and Azure Functions provide elasticity, while services like Azure SQL Database Hyperscale offers scalability.
 
 The Shared Responsibility Model in cloud computing defines the division of responsibilities between the cloud service provider and the
 customer. In this model, the cloud provider is responsible for the security of the cloud infrastructure, while the customer is
@@ -1267,8 +1318,21 @@ are shared among multiple customers. Providers like Microsoft Azure, Amazon Web 
 these services in their data centers, offering a wide range of capabilities such as virtual machines, storage, databases, networking, 
 and AI tools.
 
-A private cloud is a customers own data center.
-A hybrid cloud is a combination of public and private clouds, allowing data and applications to be shared between them. 
+The Azure public cloud is a shared, scalable computing environment where resources like compute, storage, and networking are provided 
+on-demand over the internet, and customers only pay for what they use.
+
+A private cloud can be a customers own data center. Unlike public clouds, where resources are shared among multiple users, a private 
+cloud provides exclusive access to computing resources, either hosted on-premises or in a dedicated Azure environment. Azure doesn’t 
+offer a “private cloud” in the same way you'd build one on-prem. Instead,a private cloud in Azure typically refers to services or 
+architectures that mimic private cloud characteristics. Azure services that enable private cloud setups are Azure Stack and Azure
+VMWare.
+
+A private cloud is a cloud computing environment that is exclusively used by a single organization. It can be hosted on-premises
+
+A hybrid cloud is a computing environment that combines public cloud and private cloud (or on-premises infrastructure), allowing 
+data and applications to move between them seamlessly.
+
+A multi-cloud strategy involves using multiple cloud service providers to meet different business needs.
 
 Economies of scale refer to the ability to do things more efficeintly or at a lower cost per unit when operting at a larger scale.
 cost advantages that a business gains as it increases production or operations — basically, the 
@@ -1307,7 +1371,7 @@ VMs provide infrastructure as a service (IaaS). You can create and provision a V
 You can group VMs together to provide high availability, scalability, and redundancy. Azure can also manage the grouping of VMs 
 for you with features such as scale sets and availability sets. An application might need to handle fluctuations in demand. Shutting 
 down VMs when you don't need them or quickly starting them up to meet a sudden increase in demand means you pay only for the 
-resources you use.
+resources you use. 
 
 Virtual machine scale sets let you create and manage a group of identical, load-balanced VMs. Scale sets allow you to centrally 
 manage, configure, and update a large number of VMs in minutes. The number of VM instances can automatically increase or decrease 
@@ -1333,8 +1397,8 @@ failure does not affect all instances of a resource.
 
 The fault domain groups your VMs by common power source and network switch. By default, an Availability Set splits 
 your VMs across up to three fault domains. This helps protect against a physical power or networking failure by having VMs in 
-different fault domains (thus being connected to different power and networking resources). There’s no additional cost for 
-configuring an availability set. You only pay for the VM instances you create.
+different fault domains (thus being connected to different power and networking resources) within the same data center. There’s 
+no additional cost for configuring an availability set. You only pay for the VM instances you create.
 ---
 An organization can extend the capabilities of its own on-premises network by creating a virtual network in Azure and adding VMs 
 to that virtual network. As with running certain types of applications in the cloud and extending an on-premises network to the 
@@ -1353,19 +1417,6 @@ When you provision a VM, you’ll also have the chance to pick the resources tha
 
 Azure Status displays global service health information across all Azure regions. Has Integration with Azure Monitor: Can be 
 configured to send alerts to teams via email, SMS, or ITSM tools like ServiceNow.
----
-Azure usage and charge reports
-Azure provides several tools and reports to track resource usage, monitor costs, and analyze spending patterns. These reports help 
-organizations optimize cloud expenses and ensure transparency in billing.
-Key Features:
-	Cost Analysis – Visualize costs by subscription, resource group, service, or time period.
-	Usage Reports – Shows detailed breakdowns of resources consumed and their associated costs.
-	Forecasting & Budgeting – Predict future costs based on trends and set spending limits.
-	Alerts & Anomalies – Set up alerts for unexpected spikes in usage or costs.
-	Exports – Schedule automated reports to download usage and billing data in CSV format
-Azure Pricing Calculator:
-	Estimates costs before deploying resources.
-	Helps plan spending based on expected workloads.
 ---
 By creating an Azure Files Share the company can easily map a network drive from their windows machines to the Azure Storage Account.
 Remember that files are not necessarily human readable files.
@@ -1458,10 +1509,11 @@ Key features include:
   Optimization: Receive recommendations to save costs, such as using savings plans and managing reservations.
 
 Resource Tags
-When you apply a tag at a higher level (such as at the resource group or subscription level), the tag can propagate to child 
-resources (such as virtual machines or storage accounts) within that resource group or subscription. Child resources can 
-override inherited tags by applying their own tags. Tag inheritance is useful for consistent cost management, policy 
-enforcement, resource organization, and automation.
+Resources within a resource group do not automatically inherit the tags assigned to the resource group. Tags must be explicitly 
+applied to each individual resource if you want them to have the same metadata. How to Apply Tags to Resources:
+1) Manual Tagging: Assign tags directly to each resource through the Azure portal.
+2) Azure Policy: Use a policy to enforce tag inheritance, ensuring that all resources within a resource group receive the same tags.
+3) Automation: Implement scripts using Azure CLI or PowerShell to apply tags to newly created resources.
 
 Total Cost of Ownership (TCO) Calculator
 The TCO Calculator is a tool that helps you estimate the cost savings you can achieve by migrating your workloads to Azure. It 
@@ -1471,6 +1523,12 @@ potential savings. Key features include:
   Customization: Input your specific data to get a tailored cost analysis.
   Savings Estimation: Estimate the cost savings over different periods (e.g., 3, 5, or 7 years).
   ROI Calculation: Calculate the return on investment for your migration to Azure.
+
+Azure Pricing Calculator:
+	Estimates costs before deploying resources.
+	Helps plan spending based on expected workloads.
+	Provides a detailed breakdown of costs for various Azure services.
+	Allows you to customize configurations and options to get accurate estimates.
 
 Pricing Calculator is an interactive tool that helps you estimate the costs of Azure services based on your specific usage patterns.
 You can select different Azure services, configure their settings, and see how changes affect your estimated costs. Choose regions,
@@ -1483,9 +1541,7 @@ Azure Hybrid Use Benefit (AHUB) is a licensing perk from Microsoft that lets you
 or SQL Server licenses with Software Assurance (SA) to save money when running those workloads in Azure.
 
 Spot Pricing - Access unused Azure compute capacity at discounted rates. Spot VMs are ideal for workloads that can tolerate interruptions,
-such as batch processing, development, and testing. They can be evicted when Azure needs the capacity back. Only for VMs.
-
-
+such as batch processing, development, and testing. They can be evicted when Azure needs the capacity back.Provided only for VMs.
 ---------------------------------------------------------------
 Questions_
 
@@ -1517,12 +1573,12 @@ FT - Requires fully redundant systems running in parallel, often with real-time 
 	 Fault tolerance can be set up across Azure regions to ensure high availability and disaster recovery. There are several 
 	 multi-region strategies you can use to enhance resilience:
 
-Q:
-A:
-
 Q: Does Load Balancing automatically scale when a demand for resources increases above capacity?
-A: No, Load Balancing itself does not automatically scale resources when demand increases. Load balancers distribute traffic across 
-available resources, but Azure Auto-Scaling is a separate feature that must be configured alongside load balancing.
+A: No, Load Balancing itself does not automatically scale resources when demand increases. Load balancers distribute traffic 
+across available resources, but Azure Auto-Scaling is a separate feature that must be configured alongside load balancing. 
+Autoscaling dynamically adjusts the number of resources, such as virtual machines or containers, based on traffic patterns and 
+predefined rules. The load balancer then distributes incoming traffic across these resources to prevent overload and maintain 
+efficiency.
 
 Q:
 A:
@@ -1564,12 +1620,10 @@ used as a web server to serve static content (HTML, CSS, JavaScript, images, etc
 
 	# Set the home page.
 	echo "<html><body><h2>Welcome to Azure! My name is $(hostname).</h2></body></html>" | sudo tee -a /var/www/html/index.html
----
-
 ---------------------------------------------------------------
+Test_Shortcommings
 
 
----------------------------------------------------------------
 ---------------------------------------------------------------
 Learning_Links
 Introduction to Azure network foundation services 4 hr 44 min
@@ -1578,9 +1632,13 @@ https://learn.microsoft.com/en-us/training/paths/intro-to-azure-network-foundati
 Missed_Questions
 Which Azure Virtual Machine feature staggers updates across VMs based on their update domain and fault domain? Availability Sets.
 
-
+Which azure service should be used to correlate events from multiple Azure resources in a central repository? Monitor + Log Analytics.
 ---------------------------------------------------------------
 Random_Notes
+
+The Cloud Adoption Framework (CAF) is end-to-end guidance for organizations moving to the cloud — especially Azure. It’s not a 
+tool or a service, but a structured set of best practices, documentation, and tools to help you:
+1) Plan your cloud journey 2) Migrate or build new workloads 3) Govern and secure your cloud environment 4) Manage operations post-deployment
 
 Functions can be either stateless or stateful. When they're stateless (the default), they behave as if they restart every time they 
 respond to a new event. When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
@@ -1684,19 +1742,44 @@ Azure AD Connect is a tool that allows organizations to synchronize their on-pre
 with Azure Active Directory (Azure AD). It enables a seamless and secure identity synchronization and authentication experience for 
 users across on-premises and cloud environments.
 
-Azure Databricks
+Azure Databricks (Analytics for Big Data processing and Machine Learning))
 Azure Databricks is a fast, scalable, and collaborative Apache Spark-based analytics platform designed for big data processing, 
 machine learning, and AI workloads. It is optimized for Azure cloud, integrating seamlessly with services like Azure Data Lake, 
 Azure Synapse, and Power BI. It is the only option that can host machine learning workloads.
 
-Azure Logic Apps
+Azure Synapse Analytics (Analytics service for Big Data and Data Warehousing)
+Azure Synapse Analytics is a comprehensive analytics service that combines big data and data warehousing into a unified platform. 
+It enables organizations to ingest, prepare, manage, and analyze data for business intelligence and machine learning purposes.
+* Big data refers to extremely large and complex datasets that traditional data processing tools cannot efficiently handle.
+* Data warehousing is the process of collecting, storing, and managing data from various sources to support business intelligence.
+
+Azure Logic Apps (Workflow Automation and Orchestration)
 Azure Logic Apps is a cloud service that helps you schedule, automate, and orchestrate tasks, business processes, and workflows when 
-you need to integrate apps, data, systems, and services across enterprises or organizations. 
+you need to integrate apps, data, systems, and services across enterprises or organizations. It is a workflow automation tool.
+* Similar to Azure Functions, but Logic Apps is more focused on integrating and automating workflows between different services 
+and applications.
+*Also similar to MS Power Automate, but Power Automate is more user-friendly and designed for business users\Citizen Developers.
 
 Azure Content Delivery Network (CDN). 
 Azure Content Delivery Network (CDN) is a globally distributed network of servers that helps deliver content faster and more reliably by 
 caching content closer to users. Azure Content Delivery Network enhances performance, reduces latency, and optimizes bandwidth usage for 
 web applications, media streaming, and APIs.
+---
+Azure Event Hubs (Collects telemetry and event data. Streams it to consumers)
+Azure Event Hubs is a high-throughput data ingestion and streaming service. It’s built to collect massive volumes of telemetry and 
+event data from multiple sources (apps, services, devices), and stream it to consumers for real-time processing or storage.
+
+Think of Event Hubs like a supercharged data firehose—it lets you shove millions of events per second into Azure, and then lets 
+your services consume and analyze that stream however they need to.
+---
+Azure Service Bus (Think message queuing)
+Azure Service Bus is a fully managed enterprise message broker — designed for reliable message delivery between decoupled 
+components of a distributed system. It’s your go-to when systems need to talk to each other reliably, but can’t or shouldn’t be 
+tightly coupled — think commands, business workflows, ordered delivery, and retry logic.
+
+Service Bus supports a publish-subscribe model for one-to-many communication, allowing multiple subscribers to receive messages 
+from a single publisher.Service Bus includes features like FIFO (First-In-First-Out) ordering, session management, and dead-letter 
+queues for handling errors.
 ---
 Azure Backup
 Azure Backup is a cloud-based backup solution that provides data protection for on-premises and cloud-based workloads. It helps safeguard 
@@ -1716,12 +1799,12 @@ Sets ensure that your VMs are physically separated across multiple hardware serv
 minimizing the risk of datacenter-wide failures. If you have only one VM in an Availability Set, you can still experience a single point 
 of failure if the hardware server that the VM is running on fails.
 
-For all Virtual Machines that have two or more instances deployed across two or more Availability Zones in the same Azure region, Azure 
-guarantees you will have Virtual Machine Connectivity to at least one instance at least 99.99% of the time.
-
 By deploying two or more VMs within an Availability Set, Azure will distribute them across different fault domains and update domains. 
 This ensures that even if one fault domain or update domain experiences a disruption, your VMs will still be accessible via the other 
 fault domain(s) or update domain(s).
+
+For all Virtual Machines that have two or more instances deployed across two or more Availability Zones in the same Azure region, Azure 
+guarantees you will have Virtual Machine Connectivity to at least one instance at least 99.99% of the time.
 ---
 Azure Cloud Shell is a browser-based, interactive shell that provides a command-line environment for managing Azure resources. 
 It allows users to execute Azure CLI, Azure PowerShell, and other tools without needing local installations. Azure Cloud Shell is 
@@ -1750,17 +1833,21 @@ and subnet details, so that Azure Virtual Network Gateway can establish a secure
 	Works with Virtual Network Gateway – Helps establish encrypted tunnels between Azure and on-prem resources.
 * A Virtual Network Gateway represents Azure's VPN endpoint.
 ---
+Azure Front Door (Entry point for Web Applications. Global Load Balancing and Application Acceleration)
 Azure Front Door is a global, scalable entry point for web applications. It provides application acceleration,
 global load balancing, SSL offloading, and web application firewall (WAF) capabilities. It helps improve the performance
 and availability of web applications by routing traffic to the nearest Azure region and optimizing content delivery.
+
 Azure Front Door is ideal for scenarios where you need to distribute traffic across multiple regions,
 optimize web application performance, and enhance security with WAF. It is commonly used for global applications,
 content delivery, and scenarios requiring SSL offloading. Azure Front Door is a Layer 7 (HTTP/HTTPS) load balancer.
+
 * Azure Load Balancer is a Layer 4 (TCP/UDP) load balancer that distributes incoming network traffic across multiple servers or
 services within a single region. It operates at the transport layer.
 ---
-If a company wants to ensure application availability even if an entire Azure region fails, they need a disaster recovery (DR) strategy. 
-DR involves replicating and recovering resources in a secondary region to maintain business continuity in case of a regional outage.
+If a company wants to ensure application availability even if an entire Azure region fails, they need a disaster recovery 
+(DR) strategy. DR involves replicating in and recovering from duplicated resources in a secondary region to maintain business 
+continuity in case of a regional outage. 
 
 For high availability and disaster recovery, use geo-redundant storage across multiple regions.
 
@@ -1797,8 +1884,8 @@ A Federation is a collection of domains that have established trust. The level o
 authentication and authorization. A typical federation might include a number of organizations that have established trust for 
 shared access to a set of resources.
 
-Azure File Sync (AFS) allows you to centralize file storage in Azure Files while keeping local copies on Windows Server. It enables 
-you to sync, cache, and tier files across multiple locations while maintaining fast local access.
+Azure File Sync (AFS) allows you to centralize file storage in Azure Files while keeping local copies on Windows Server. 
+It enables you to sync, cache, and tier files across multiple locations while maintaining fast local access.
 It basically syncs multiple servers with the same Azure file share, ensuring real-time updates. 
 
 Virtual Network Peering is an networking feature that enables connectivity between virtual networks deployed in the same 
@@ -1830,10 +1917,12 @@ or point-and-click tools. Instead of spinning up VMs, networks, or databases by 
 you write scripts or configuration files that declare what the infrastructure should look like, then apply them to create or update 
 that infrastructure automatically.
 
-Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications.
+Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications. Provides a
+Web Application Firewall and Session Affinity (sessions are consistently routed to the same backend server).
 
 Azure Budgets is a tool for setting and enforcing spending thresholds within Azure. 
-Azure Usage and Charges Reports allow you to download raw data so you can perform your own analytics on your spend.
+
+Azure Usage and Charges Reports allow you to download raw data so you can perform your own analytics on your spending.
 
 You can map a network drive from your Windows machines to the Azure Storage Account by creating an Azure Files Share.
 
@@ -1844,12 +1933,15 @@ NSGs can be applied to:
 	* Subnet – Affects all VMs and resources in that subnet.
 	* Network Interface (NIC) – Affects only a specific VM.
 
-An App Service Plan defines the pricing, scaling, and compute resources for Azure App Services. 
-
 The Service Trust Portal is a Microsoft resource provided that helps organizations manage compliance and data protection in Azure. 
 It offers tools, documents, and guidance to understand Microsoft's security, privacy, and compliance practices. Key features 
 include access to audit reports, compliance resources, and trust-related information to meet regulatory requirements and ensure 
 data security in the cloud.
+
+Azure Security Center is a unified security management system and threat protection solution for Azure resources and hybrid 
+environments. It helps organizations strengthen their security posture, detect vulnerabilities, and respond to threats effectively.
+It provides continuous security assessment, threat detection, and security recommendations for Azure resources. It also offers
+security management for on-premises and hybrid environments.
 
 Static Web Apps is a service that automatically builds and deploys full-stack static web apps to Azure from a code repository. 
 A full-stack static web application is a web app that:
@@ -1893,6 +1985,7 @@ In Azure's hierarchy, a tenant is defined at the topmost level. It represents an
 containing all Management Groups, Subscriptions, and Resource Groups within it. Essentially, the tenant acts as the overarching 
 identity and access boundary for an organization in Azure.
 
+An App Service Plan defines the pricing, scaling, and compute resources for Azure App Services.
 In App Service (Web Apps, API Apps, or Mobile Apps), an app always runs in an App Service plan. An App Service plan defines a set 
 of compute resources for a web app to run. When you create an App Service plan in a certain region, a set of compute resources is 
 created for that plan in that region. Whatever apps you put into this App Service plan run on these compute resources as defined 
@@ -1903,72 +1996,100 @@ by your App Service plan. Each App Service plan defines:
 	Size of VM instances (Small, Medium, Large)
 	Pricing tier (Free, Shared, Basic, Standard, Premium, PremiumV2, PremiumV3, Isolated)
 ---
-Hyper-V = Microsoft's virtualization tech
-It turns one machine into many by running multiple virtualized OS environments. If you need to run a lab, test software, or isolate services — Hyper-V gets it done without extra hardware.
+Hyper-V is Microsoft's virtualization technology. Hyper-V turns one machine into many by running multiple virtualized OS 
+environments. If you need to run a lab, test software, or isolate services — Hyper-V gets it done without extra hardware.
 ---
-Using multiple resource groups within a single subscription is another way to segment Azure for departments. Each department can have its own dedicated resource group to manage their resources. Resource groups provide logical containers for organizing and managing resources, allowing department administrators to control access, apply policies, and manage resources specific to their department.
+Using multiple resource groups within a single subscription is another way to segment Azure for departments. Each department can 
+have its own dedicated resource group to manage their resources. Resource groups provide logical containers for organizing and 
+managing resources, allowing department administrators to control access, apply policies, and manage resources specific to their 
+department.
 
-By creating multiple Azure subscriptions, each department can have its own dedicated subscription. This allows for better isolation and control over resources, as each department administrator can manage their own subscription independently. It provides a clear separation of resources, access controls, and billing, ensuring that each department has autonomy over their Azure resources.
+By creating multiple Azure subscriptions, each department can have its own dedicated subscription. This allows for better isolation 
+and control over resources, as each department administrator can manage their own subscription independently. It provides a clear 
+separation of resources, access controls, and billing, ensuring that each department has autonomy over their Azure resources.
 ---
-Premium storage, is not applicable to Azure Blob Storage. Premium storage is primarily associated with Azure managed disks and Azure Files, offering high-performance storage for specific workloads that demand low latency and high IOPS (input/output operations per second).
+Premium storage, is not applicable to Azure Blob Storage. Premium storage is primarily associated with Azure managed disks and 
+Azure Files, offering high-performance storage for specific workloads that demand low latency and high IOPS (input/output 
+operations per second).
 
-Cold storage
-Cold storage, is designed for infrequently accessed data that can tolerate higher retrieval times. It offers a lower storage cost compared to hot storage but with a trade-off of longer access times. Cold storage is ideal for data that is accessed less frequently but still needs to be stored for long-term retention or compliance purposes.
+What are the access tiers for blob storage?
+Azure Blob Storage offers the following access tiers to optimize cost and performance based on data usage:
+Hot Tier: Designed for frequently accessed or modified data. It has higher storage costs but lower access costs.
 
-Standard storage
-Standard storage, is the baseline storage offering for Azure Blob Storage. It provides a balance between cost and performance and is suitable for general-purpose storage scenarios where frequent access and low latency are not critical requirements.
+Cool Tier: Suitable for infrequently accessed data that needs to be stored for at least 30 days. It has lower storage costs 
+and higher access costs compared to the hot tier.
+
+Cold Tier: Ideal for rarely accessed data that requires fast retrieval. Data must be stored for at least 90 days. It offers 
+lower storage costs than the cool tier but higher access costs.
+
+Archive Tier: Best for data that is rarely accessed and can tolerate retrieval latency of hours. Data must be stored for at least 
+180 days, offering the lowest storage costs but the highest access costs.
 
 Premium storage
-Hot storage
-Azure Blob Storage offers different tiers to cater to varying data access patterns and cost requirements. Hot storage is optimized for frequently accessed data that requires low latency and quick access. It is suitable for scenarios where data needs to be readily available for immediate retrieval and processing.
+Azure Premium Storage is a high-performance storage solution designed for workloads that require low latency and high throughput. 
+It uses solid-state drives (SSDs) to deliver consistent and reliable performance for demanding applications.
+Optimized for SQL Server, Oracle, and other database workloads. Premium storage is available for Blob storage in Azure. 
+Specifically, Premium Block Blob Storage accounts are designed for scenarios requiring low latency and high throughput.
 ---
-Azure Bastion is a service you deploy that lets you connect to a virtual machine using your browser and the Azure portal. The Azure Bastion service is a fully platform-managed PaaS service that you provision inside your virtual network.
-
-Azure Security Center
-This is correct. The just-in-time (JIT) virtual machine (VM) access feature in Azure Security Center allows you to lock down inbound traffic to your Azure Virtual Machines. This reduces exposure to attacks while providing easy access when you need to connect to a VM.
+Azure Bastion is a service you deploy that lets you connect to a virtual machine using your browser and the Azure portal. The 
+Azure Bastion service is a PaaS service that you provision inside your virtual network. It is designed to provide secure and 
+seamless Remote Desktop Protocol (RDP) and Secure Shell (SSH) connectivity to virtual machines (VMs) in Azure. It eliminates 
+the need for public IP addresses on VMs, enhancing security by reducing exposure to the internet.
 ---
-What advantages does high availability bring to cloud computing? (Select 3)
-
-It enables load balancing across multiple resources, preventing overloading of any single resource.
-High availability enables load balancing across multiple resources, preventing overloading of any single resource. This helps ensure that resources are used efficiently and can handle sudden spikes in demand.
-
-It enables organizations to easily scale their resources based on their needs.
-High availability improves scalability by allowing resources to be easily added or removed as needed. This helps organizations respond quickly to changing business needs without having to worry about resource constraints.
-
-It allows for redundancy of resources, ensuring that if one resource fails, another can take its place without interruption.
+What advantages does High Availability bring to cloud computing?
+1) High availability enables load balancing across multiple resources, preventing overloading of any single resource.
+2) It enables organizations to easily scale their resources based on their needs.
+3) It allows for redundancy of resources, ensuring that if one resource fails, another can take its place without interruption.
 ---
 A computing environment that combines a public cloud and a private cloud by allowing data and applications to be shared between them
 is a Hybrid Cloud.
 ---
-Azure Policy is a service that allows you to enforce and apply organizational standards and policies on Azure resources. While it contributes to security and compliance by enforcing certain rules and configurations, it does not provide a specific platform for accessing compliance documentation, audit reports, and Microsoft's privacy and compliance commitments like the Azure Service Trust Portal.
+Azure Policy is a service that allows you to enforce and apply organizational standards and policies on Azure resources. While it 
+contributes to security and compliance by enforcing certain rules and configurations, it does not provide a specific platform for 
+accessing compliance documentation, audit reports, and Microsoft's privacy and compliance commitments like the Azure Service Trust 
+Portal does.
 
-Explanation
-Azure Service Trust Portal is the platform that provides access to compliance documentation, audit reports, and security controls related to Azure services. It serves as a centralized hub for accessing information on various compliance programs, including certifications, attestations, and regulatory standards.
+Azure Service Trust Portal is the platform that provides access to compliance documentation, audit reports, and security controls 
+related to Azure services. It serves as a centralized hub for accessing information on various compliance programs, including 
+certifications, attestations, and regulatory standards. The Service Trust Portal offers transparency into Microsoft's privacy and 
+compliance commitments, allowing organizations to assess the security and compliance of their Azure deployments. By using the Azure 
+Service Trust Portal, security administrators can stay up-to-date with the latest information and ensure the security and compliance 
+of their Azure cloud services.
 
-It offers transparency into Microsoft's privacy and compliance commitments, allowing organizations to assess the security and compliance of their Azure deployments. By using the Azure Service Trust Portal, security administrators can stay up-to-date with the latest information and ensure the security and compliance of their Azure cloud services.
+Azure Functions provides the platform for serverless code. Azure Functions is a serverless compute service that lets you run 
+event-triggered code without having to explicitly provision or manage infrastructure.
 ---
-Azure Policy helps to enforce organizational standards and to assess compliance at-scale. Common use cases for Azure Policy include implementing governance for resource consistency, regulatory compliance, security, cost, and management. Policy definitions for these common use cases are already available in your Azure environment as built-ins to help you get started.
+For all Virtual Machines that have two or more instances deployed across two or more Availability Zones in the same Azure region, 
+it is guaranteed that you will have Virtual Machine Connectivity to at least one instance at least 99.99% of the time."
 ---
-Azure Functions provides the platform for serverless code. Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure.
----
-The Service Trust Portal is a platform provided by Microsoft that offers transparency and insight into the security, privacy, and compliance practices of Microsoft cloud services. It provides access to various compliance documentation, audit reports, regulatory standards, and control frameworks. It enables organizations to understand Microsoft's commitment to privacy and compliance and helps them assess the trustworthiness of Azure services.
-By using the Service Trust Portal, organizations can stay informed about Microsoft's compliance certifications, data protection policies, and security controls, ensuring that they align with their own security and compliance requirements.
----
-"For all Virtual Machines that have two or more instances deployed across two or more Availability Zones in the same Azure region, we guarantee you will have Virtual Machine Connectivity to at least one instance at least 99.99% of the time."
----
-The Azure Pricing Calculator allows users to compare pricing between different Azure regions. This helps organizations assess the cost implications of deploying their workloads in different regions and choose the most cost-effective option based on their requirements.
+The Azure Pricing Calculator allows users to compare pricing between different Azure regions. This helps organizations assess the 
+cost implications of deploying their workloads in different regions and choose the most cost-effective option based on their 
+requirements. By using the Azure Pricing Calculator, users can estimate the cost of running specific Azure services and resources. 
+They can input details such as the number of instances, storage usage, data transfer, and other factors to get a comprehensive cost 
+estimate for their chosen services.
 
-By using the Azure Pricing Calculator, users can estimate the cost of running specific Azure services and resources. They can input details such as the number of instances, storage usage, data transfer, and other factors to get a comprehensive cost estimate for their chosen services.
----
-Azure Cost Management is designed for monitoring, analyzing, and optimizing ongoing Azure spending after migration. It helps track and control costs in an Azure environment but does not assist with estimating pre-migration cost savings.
+Azure Cost Management is designed for monitoring, analyzing, and optimizing ongoing Azure spending after migration. It helps track 
+and control costs in an Azure environment but does not assist with estimating pre-migration cost savings.
 
-The Azure TCO Calculator is specifically designed to help businesses estimate the cost savings of migrating their workloads to Azure. It allows users to input details about their current on-premises infrastructure (e.g., server counts, storage usage, and energy costs) and provides a detailed analysis comparing the total cost of ownership for on-premises versus Azure. This tool is focused on migration scenarios, making it the correct choice in this context.
+The Azure TCO Calculator is specifically designed to help businesses estimate the cost savings of migrating their workloads to Azure. 
+It allows users to input details about their current on-premises infrastructure (e.g., server counts, storage usage, and energy costs) 
+and provides a detailed analysis comparing the total cost of ownership for on-premises versus Azure. This tool is focused on migration 
+scenarios, making it the correct choice in this context.
 ---
-Azure Log Analytics is the ideal Azure service for addressing the company's log monitoring and analysis requirements. It provides a centralized platform for collecting, analyzing, and visualizing log data from various sources, including on-premises servers and cloud-based resources. With Log Analytics, the company can ingest and store logs, perform advanced queries using a powerful query language, create custom dashboards and visualizations, set up alerts and notifications, and gain valuable insights into system performance, security, and operational issues.
+Azure Log Analytics is the ideal Azure service for addressing a company's log monitoring and analysis requirements. It provides 
+a centralized platform for collecting, analyzing, and visualizing log data from various sources, including on-premises servers 
+and cloud-based resources. With Log Analytics, the company can ingest and store logs, perform advanced queries using a powerful 
+query language, create custom dashboards and visualizations, set up alerts and notifications, and gain valuable insights into 
+system performance, security, and operational issues.
 ---
-To guarantee 99.95% VM connectivity, you must deploy at least two VMs in the same Availability Set in Azure. This is because Availability Sets ensure that your VMs are physically separated across multiple hardware servers within an Azure datacenter, providing redundancy and minimizing the risk of datacenter-wide failures. If you have only one VM in an Availability Set, you can still experience a single point of failure if the hardware server that the VM is running on fails.
+To guarantee 99.95% VM connectivity, you must deploy at least two VMs in the same Availability Set in Azure. This is because 
+Availability Sets ensure that your VMs are physically separated across multiple hardware servers within an Azure datacenter, 
+providing redundancy and minimizing the risk of datacenter-wide failures. If you have only one VM in an Availability Set, you 
+can still experience a single point of failure if the hardware server that the VM is running on fails.
 
-By deploying two or more VMs within an Availability Set, Azure will distribute them across different fault domains and update domains. This ensures that even if one fault domain or update domain experiences a disruption, your VMs will still be accessible via the other fault domain(s) or update domain(s).
+By deploying two or more VMs within an Availability Set, Azure will distribute them across different fault domains and update 
+domains. This ensures that even if one fault domain or update domain experiences a disruption, your VMs will still be accessible 
+via the other fault domain(s) or update domain(s).
 ---
 Azure Migrate is a service to help organizations plan, assess, and execute the migration of their on-premises workloads to Azure. 
 It offers tools and guidance for discovering existing resources, evaluating their readiness for migration, and performing the 
@@ -1978,6 +2099,22 @@ Data Box is a physical device provided by Microsoft to help organizations transf
 in a secure, efficient, and cost-effective way. It is particularly useful when transferring terabytes or petabytes of data 
 over the network is impractical due to bandwidth limitations or time constraints.
 ---
+Azure AD B2B collaboration allows organizations to securely share resources and collaborate with external partners who have their 
+own identity systems. The company can invite the external vendors as guests in their Azure AD and grant them access to specific 
+resources. Azure AD B2B collaboration ensures that external users are authenticated and authorized before accessing resources.
+
+Azure Machine Learning Designer lets you visually connect datasets and modules on an interactive canvas to create machine learning 
+models. Azure Machine Learning designer is a drag-and-drop interface used to train and deploy models in Azure Machine Learning.
+
+Azure Sphere is a software and hardware solution that provides communication and security features for IoT devices. Sphere = Secure.
+
+Azure Cognitive Services are a collection of AI-powered APIs and SDKs from Microsoft that let you add intelligent features — like 
+vision, speech, language understanding, and decision-making — to your apps without needing to build and train machine learning 
+models yourself.
+
+high availability (HA) in Azure does not refer only to storage types — it's a broader concept that applies to many services, 
+including compute, networking, databases, and applications.
+
 
 *** End Randowm_Notes in main ***
 
