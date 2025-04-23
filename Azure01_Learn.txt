@@ -16,13 +16,11 @@ Azure_VPN_Gateways
 Cloud_Concepts
 Compute_Networking_Services
 Exercises_
-Learning_Links
 Missed_Questions
 Needs_a_home
 Questions_
 Random_Notes
 Service_Level_Agreements
-Test_Shortcommings
 
 *Left off: https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/8-virtual-network
 Achievements: 
@@ -141,6 +139,13 @@ human-readable domain names instead of numerical IP addresses.
 * A network is a physical or virtual infrastructure that enables devices to communicate. Includes routers, switches, IP addresses, 
 and protocols (e.g., TCP/IP, DNS, DHCP). A domain operates within a network – A domain is a logical structure that relies on a 
 network to allow communication between devices.
+
+Multiple domains can exist in the same physical or virtual network — especially in traditional AD. In Azure, there are some 
+limitations, especially with Entra Domain Services, which requires separate VNets per domain instance.
+
+A single domain can contain more than one virtual network. In Azure, virtual networks (VNets) can exist within the same domain
+or subscription. You can create multiple VNets within a domain and connect them using VNet peering or VPN gateways to enable 
+communication between them.
 
 * Key Components of a Domain
 Centralized Directory:
@@ -708,10 +713,12 @@ Azure Stack Hub	 Full-blown Azure-in-a-box for disconnected or sovereign environ
 Azure Stack HCI	 Hyperconverged infrastructure optimized for running VMs on-prem. 
 				 Tightly integrated with Azure services like Site Recovery, Defender, etc.
 Azure Stack Edge Physical appliance for edge AI/compute/storage needs. Think machine learning at a factory floor, ship, or retail site.
-
-
 ---------------------------------------------------------------
 Azure_storage_services
+
+File Share is a fully managed cloud file storage service that allows users to create file shares accessible via SMB 
+(Server Message Block) and NFS (Network File System) protocols. It enables seamless file sharing across cloud and on-premises 
+environments. Azure File Share is ideal for replacing traditional file servers. *Note: A file can be any type of file.
 
 Blob Storage service
 A Page Blob in Azure is a type of storage blob designed for random read/write operations, making it ideal for disk storage, 
@@ -830,11 +837,10 @@ to the secondary region.
 * A variant to Geo-Redundant Storage is Read-Access Geo-Redundant Storage (RA-GRS). It allows read access to the secondary region.
 
 Using Geo-Zone-Redundant Storage (GZRS), data is replicated across multiple availability zones in the primary region (higher 
-availability than GRS). Geo-Zone-Redundant Storage replicates three additional copies (LRS) in a secondary region for disaster recovery.
-The secondary region is not accessible for reads unless failover is triggered.
+availability than GRS). Geo-Zone-Redundant Storage replicates three additional copies (LRS) in a secondary region for disaster 
+recovery. The secondary region is not accessible for reads unless a failover is triggered.
 
 :654 Prepare for recording *************************************
-
 
 In the case of a regional outage failure, your data is available to be read in the secondayr region, only if the customer or 
 Microsoft initiates a failover from the primary to secondary region. However, if you enable read access to the secondary region, 
@@ -1159,8 +1165,10 @@ also can control routing and override those settings, as follows:
    on-premises BGP routes to Azure virtual networks.
 
 Azure virtual networks enable you to filter network traffic between subnets by using the following approaches:
-1) Network security groups are Azure resources that can contain multiple inbound and outbound security rules. You can define 
-these rules to allow or block traffic, based on factors such as source and destination IP address, port, and protocol.
+1) Azure Network Security Groups (NSGs) allow organizations to control network traffic by defining inbound and outbound security 
+rules. NSGs act as a basic network-level firewall, providing filtering capabilities based on source and destination IP addresses, 
+port numbers, and protocols. By configuring NSGs, the organization can manage access to the virtual machines by allowing or denying 
+specific ports and protocols, ensuring security and control over the network traffic flow.
 
 2) Network virtual appliances are specialized VMs that can be compared to a hardened network appliance. A network virtual 
 appliance carries out a particular network function, such as running a firewall or performing wide area network (WAN) optimization.
@@ -1295,6 +1303,7 @@ Billing_Pricing
 
 ---------------------------------------------------------------
 Cloud_Concepts
+
 Scalability is a system’s ability to handle increasing workloads by adding resources (either horizontally by adding more instances 
 or vertically by upgrading hardware). It is usually planned and manual, meaning resources are provisioned in advance to accommodate growth.
 
@@ -1327,7 +1336,7 @@ offer a “private cloud” in the same way you'd build one on-prem. Instead,a p
 architectures that mimic private cloud characteristics. Azure services that enable private cloud setups are Azure Stack and Azure
 VMWare.
 
-A private cloud is a cloud computing environment that is exclusively used by a single organization. It can be hosted on-premises
+A private cloud is a cloud computing environment that is exclusively used by a single organization. It can be hosted on-premises.
 
 A hybrid cloud is a computing environment that combines public cloud and private cloud (or on-premises infrastructure), allowing 
 data and applications to move between them seamlessly.
@@ -1335,8 +1344,7 @@ data and applications to move between them seamlessly.
 A multi-cloud strategy involves using multiple cloud service providers to meet different business needs.
 
 Economies of scale refer to the ability to do things more efficeintly or at a lower cost per unit when operting at a larger scale.
-cost advantages that a business gains as it increases production or operations — basically, the 
-more you produce or buy, the cheaper it gets per unit.
+It is cost advantages that a business gains as it increases production or operations.
 
 The cloud increases OpEx spending and rduces CapEx spending.
 
@@ -1357,11 +1365,9 @@ Predictability is the ability to forecast performance and costs accurately. ex: 
 
 The Cloud Adoption Framework is to help organizations create and implement the business and techology strategies to succeed in Azure.
 
-In PaaS cloud model, the customer is responsible for deploying and managing applications. PaaS lets developers create applications 
+In a PaaS cloud model, the customer is responsible for deploying and managing applications. PaaS lets developers create applications 
 using built-in tools and services without worrying about the underlying infrastructure. Cloud features such as scalability, 
 high-availability and multi-tenancy are built-in.
-
-
 
 ---------------------------------------------------------------
 Compute_Networking_Services
@@ -1378,6 +1384,10 @@ manage, configure, and update a large number of VMs in minutes. The number of VM
 in response to demand, or you can set it to scale based on a defined schedule. Virtual machine scale sets also automatically deploy 
 a load balancer to make sure that your resources are being used efficiently. With virtual machine scale sets, you can build 
 large-scale services for areas such as compute, big data, and container workloads.
+
+Virtual Machine Scale Sets work by defining a group of virtual machines that share a common configuration and that can be treated 
+as a single entity for scaling and management purposes. You can define the minimum and maximum number of virtual machines in the 
+scale set, as well as the rules for scaling up and down based on demand.
 ---
 Virtual machine availability sets are another tool to help you build a more resilient, highly available environment. Availability 
 sets are designed to ensure that VMs stagger updates and have varied power and network connectivity, preventing you from losing 
@@ -1517,11 +1527,11 @@ applied to each individual resource if you want them to have the same metadata. 
 
 Total Cost of Ownership (TCO) Calculator
 The TCO Calculator is a tool that helps you estimate the cost savings you can achieve by migrating your workloads to Azure. It 
-compares the costs of running your applications on-premises with the costs of running them on Azure, providing a clear picture of 
-potential savings. Key features include:
+compares the costs of running your applications on-premises with the costs of running them on Azure over time, providing a clear 
+picture of potential savings. Key features include:
   Cost Comparison: Compare the total cost of ownership of on-premises infrastructure with Azure cloud services.
   Customization: Input your specific data to get a tailored cost analysis.
-  Savings Estimation: Estimate the cost savings over different periods (e.g., 3, 5, or 7 years).
+  Savings Estimation: Estimate the cost savings over different periods of time (e.g., 3, 5, or 7 years).
   ROI Calculation: Calculate the return on investment for your migration to Azure.
 
 Azure Pricing Calculator:
@@ -1532,16 +1542,19 @@ Azure Pricing Calculator:
 
 Pricing Calculator is an interactive tool that helps you estimate the costs of Azure services based on your specific usage patterns.
 You can select different Azure services, configure their settings, and see how changes affect your estimated costs. Choose regions,
-services, options and configurations to get a detailed cost estimate. Would be used before deploying resources to understand potential 
-costs.
+services, options and configurations to get a detailed cost estimate. The Pricing Calculator would be used before deploying resources 
+to understand potential costs.
 
 These tools are designed to help you make informed decisions about your cloud investments and optimize your spending.
 
 Azure Hybrid Use Benefit (AHUB) is a licensing perk from Microsoft that lets you use your existing on-premises Windows Server 
 or SQL Server licenses with Software Assurance (SA) to save money when running those workloads in Azure.
 
-Spot Pricing - Access unused Azure compute capacity at discounted rates. Spot VMs are ideal for workloads that can tolerate interruptions,
-such as batch processing, development, and testing. They can be evicted when Azure needs the capacity back.Provided only for VMs.
+Spot Pricing - Access unused compute capacity at discounted rates. Spot VMs are ideal for workloads that can tolerate interruptions,
+such as batch processing, development, and testing. They can be evicted when Azure needs the capacity back. Provided only for VMs.
+
+* An Spot VM is a deeply discounted VM that lets you use unused Azure compute capacity, but with no guarantee that it will stay running.
+Not available in all regions and sizes.
 ---------------------------------------------------------------
 Questions_
 
@@ -1589,45 +1602,6 @@ A:
 Q:
 A:
 
-Q:
-A:
----------------------------------------------------------------
-Exercises_
-
-In this instance, you're going to use the Azure CLI. Task 1: Create a Linux virtual machine and install Nginx. Nginx is commonly 
-used as a web server to serve static content (HTML, CSS, JavaScript, images, etc.) quickly and efficiently.
-
-1) From Cloud Shell, run the following az vm create command to create a Linux VM:
-	az vm create \
-	--resource-group "learn-2ffbb06c-2df8-4e08-9772-93cce76be2ab" \
-	--name my-vm \
-	--public-ip-sku Standard \
-	--image Ubuntu2204 \
-	--admin-username azureuser \
-	--generate-ssh-keys
-
-2) Run the following az vm extension set command to configure Nginx on your VM:
-	az vm extension set --resource-group "learn-2ffbb06c-2df8-4e08-9772-93cce76be2ab" --vm-name my-vm --name customScript --publisher Microsoft.Azure.Extensions --version 2.1 --settings '{"fileUris":["https://raw.githubusercontent.com/MicrosoftDocs/mslearn-welcome-to-azure/master/configure-nginx.sh"]}' --protected-settings '{"commandToExecute": "./configure-nginx.sh"}'
-
-*The step 2 command uses a Custom Script Extension to run a Bash script on your VM. Here are the contents of the script:
-	#!/bin/bash
-
-	# Update apt cache.
-	sudo apt-get update
-
-	# Install Nginx.
-	sudo apt-get install -y nginx
-
-	# Set the home page.
-	echo "<html><body><h2>Welcome to Azure! My name is $(hostname).</h2></body></html>" | sudo tee -a /var/www/html/index.html
----------------------------------------------------------------
-Test_Shortcommings
-
-
----------------------------------------------------------------
-Learning_Links
-Introduction to Azure network foundation services 4 hr 44 min
-https://learn.microsoft.com/en-us/training/paths/intro-to-azure-network-foundation-services/
 ---------------------------------------------------------------
 Missed_Questions
 Which Azure Virtual Machine feature staggers updates across VMs based on their update domain and fault domain? Availability Sets.
@@ -1669,23 +1643,23 @@ across their entire environment using AI and automation.
 
 * SIEM → Security Information and Event Management. SOAR → Security Orchestration, Automation, and Response 
 
-Microsoft Sentinel uses playbooks for automating responses to detected security threats and incidents.
-A playbook is a collection of these remediation actions that can be run from Azure Sentinel as a routine. A playbook can help 
+Sentinel uses playbooks for automating responses to detected security threats and incidents.
+A playbook is a collection of these remediation actions that can be run from Sentinel as a routine. A playbook can help 
 automate and orchestrate your threat response; A playbook can be run manually or set to run automatically in response to 
 specific alerts or incidents, when triggered by an analytics rule or an automation rule.
 
 * An analytics rule is designed to detect security threats based on log data and generate alerts or incidents. An example of an 
 analytics rule is a rule that detects failed login attempts exceeding 10 attempts in 5 minutes from the same IP address. When 
-triggered, this rule generates an alert or incident, which can then trigger a playbook to respond. Analytics Rules use detection 
-patterns to scan logs continuously.
+an analytics rule is triggered it will generate an alert or incident, which it turn will trigger a playbook to respond. 
+Analytics Rules use detection patterns to scan logs continuously.
 
 * An automation rule is used to automatically trigger actions based on incidents rather than detection patterns. An automation 
 rule automatically assigns high-severity incidents to a security analyst and runs a playbook. The automation rule helps in 
 managing incidents efficiently without manual intervention.
 
-* A detection pattern is a predefined logic or set of conditions used to identify potential security threats, anomalies, or suspicious 
-activities in log data. In Azure Sentinel, detection patterns are used in analytics rules to monitor data sources and trigger alerts 
-when certain criteria are met.
+* A detection pattern is a predefined logic or set of conditions used to identify potential security threats, anomalies, or 
+suspicious activities in log data. In Azure Sentinel, detection patterns are used in analytics rules to monitor data sources and 
+trigger alerts when certain criteria are met.
 	Key Characteristics of a Detection Pattern
 	Defined Conditions - A specific set of rules based on log data.
 	Trigger Mechanism  - If the conditions are met, an alert or incident is generated.
@@ -1722,10 +1696,18 @@ levels are: CanNotDelete - Authorized users can read and modify the resource, bu
 High Availability
 Focuses on minimizing downtime within a single region by using Availability Sets, Availability Zones, and Load Balancers. However, it 
 does not guarantee recovery from an entire region failure.
-
+---
 Disaster Recovery
-DR involves replicating and recovering resources in a secondary region to maintain business continuity in case of a regional outage.
+Disaster Recovery (DR) in Azure refers to the strategies, services, and tools you use to keep your applications and data available 
+during major failures — such as outages, data center issues, cyberattacks, or natural disasters.
 
+Azure Site Recovery	- Primary DR service — replicates VMs (Azure or on-prem) to a secondary region for failover
+Azure Backup		- Long-term data protection, snapshots, and recovery of files, disks, or full machines
+Geo-redundant storage (GRS)	- Automatically replicates data across regions for durability
+Availability Zones	- Protects against data center-level failures within a region
+Traffic Manager / Front Door - Distributes and redirects traffic to healthy regions during failover
+Azure BCDR Blueprint - Microsoft’s recommended design pattern for business continuity and disaster recovery
+---
 Resiliency
 Resiliency is a broader term than Disaster Recovery that includes both High Availability and Disaster Recovery, ensuring an application 
 can recover from disruptions at various levels.
@@ -1842,8 +1824,20 @@ Azure Front Door is ideal for scenarios where you need to distribute traffic acr
 optimize web application performance, and enhance security with WAF. It is commonly used for global applications,
 content delivery, and scenarios requiring SSL offloading. Azure Front Door is a Layer 7 (HTTP/HTTPS) load balancer.
 
-* Azure Load Balancer is a Layer 4 (TCP/UDP) load balancer that distributes incoming network traffic across multiple servers or
-services within a single region. It operates at the transport layer.
+* SSL Offloading is the process of handling SSL/TLS encryption and decryption on a separate device — like a load balancer or 
+reverse proxy — instead of on your backend servers.
+---
+Azure Load Balancer is a Layer 4 (TCP/UDP) load balancer that distributes incoming network traffic across multiple servers or
+services within a single region. It operates at the transport layer. Load Balancer can distribute traffic both within a Virtual 
+Network (VNet) and outside of it, depending on the type of load balancer used. Types of Azure Load Balancers:
+
+Internal Load Balancer:
+Distributes traffic within a VNet. Used for private network scenarios where backend resources need to communicate internally.
+Ideal for applications that require internal load balancing without exposing endpoints to the internet.
+
+Public Load Balancer:
+Distributes traffic from external sources to resources inside a VNet. Used for internet-facing applications where incoming traffic 
+needs to be balanced across multiple backend resources.
 ---
 If a company wants to ensure application availability even if an entire Azure region fails, they need a disaster recovery 
 (DR) strategy. DR involves replicating in and recovering from duplicated resources in a secondary region to maintain business 
@@ -1853,7 +1847,7 @@ For high availability and disaster recovery, use geo-redundant storage across mu
 
 A Hybrid Cloud is a combination of on-premises infrastructure and Azure cloud services. A private cloud can be connected to an 
 on-premises service, enabling seamless integration between cloud-based and on-prem workloads. This setup is common in hybrid cloud 
-architectures, where organizations extend their on-prem infrastructure to a private cloud environment for flexibility and scalability.
+architectures, where organizations extend their on-prem infrastructure to a private cloud for flexibility and scalability.
 
 When migrating or expanding your on-premises servers, you are able to choose a private, hybrid, or public cloud model.
 Private cloud only serves one organization without public integration. Public cloud doesn’t integrate directly with 
@@ -2096,6 +2090,7 @@ It offers tools and guidance for discovering existing resources, evaluating thei
 migration with minimal downtime.
 ---
 Data Box is a physical device provided by Microsoft to help organizations transfer large amounts of data to and from Azure 
+Data Box is a physical device provided by Microsoft to help organizations transfer large amounts of data to and from Azure 
 in a secure, efficient, and cost-effective way. It is particularly useful when transferring terabytes or petabytes of data 
 over the network is impractical due to bandwidth limitations or time constraints.
 ---
@@ -2103,19 +2098,26 @@ Azure AD B2B collaboration allows organizations to securely share resources and 
 own identity systems. The company can invite the external vendors as guests in their Azure AD and grant them access to specific 
 resources. Azure AD B2B collaboration ensures that external users are authenticated and authorized before accessing resources.
 
-Azure Machine Learning Designer lets you visually connect datasets and modules on an interactive canvas to create machine learning 
-models. Azure Machine Learning designer is a drag-and-drop interface used to train and deploy models in Azure Machine Learning.
+Azure Machine Learning Designer is a drag-and-drop tool within Azure Machine Learning Studio that allows users to visually build, 
+deploy, and manage machine learning pipelines without writing extensive code. It simplifies the process of creating machine 
+learning workflows by providing prebuilt components and custom components that can be connected to form a pipeline.
 
 Azure Sphere is a software and hardware solution that provides communication and security features for IoT devices. Sphere = Secure.
 
 Azure Cognitive Services are a collection of AI-powered APIs and SDKs from Microsoft that let you add intelligent features — like 
 vision, speech, language understanding, and decision-making — to your apps without needing to build and train machine learning 
 models yourself.
+---
+High availability (HA) in Azure does not refer only to storage types — it's a broader concept that applies to many services, 
+including compute, networking, databases and applications.
 
-high availability (HA) in Azure does not refer only to storage types — it's a broader concept that applies to many services, 
-including compute, networking, databases, and applications.
+High availability allows for redundancy of resources, meaning that if one resource fails, another can take its place without 
+interruption. This helps ensure that services remain available to users even in the event of a failure or outage.
 
+High availability enables organizations to easily scale their resources based on their needs.
 
+High availability is provided by load balancing across multiple resources, preventing overloading of any single resource.
+---
 *** End Randowm_Notes in main ***
 
 

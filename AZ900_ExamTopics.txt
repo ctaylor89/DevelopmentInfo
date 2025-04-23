@@ -13,6 +13,11 @@ https://www.youtube.com/watch?v=8n-kWJetQRk&t=7566s
 Az-900 Azure Fundamentals  *Vince sent me this. 9 hour course broken up into small indexed topics
 https://www.youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3
 
+---------------------------------------------------------------
+Learning_Links
+Introduction to Azure network foundation services 4 hr 44 min
+https://learn.microsoft.com/en-us/training/paths/intro-to-azure-network-foundation-services/
+---------------------------------------------------------------
 Exam_Questions_Missed
 
 The AZ-900: Microsoft Azure Fundamentals exam covers foundational knowledge of cloud concepts and core Azure services. 
