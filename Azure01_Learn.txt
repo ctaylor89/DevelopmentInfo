@@ -15,6 +15,7 @@ Azure_Virtual_VPNs
 Azure_VPN_Gateways
 Cloud_Concepts
 Compute_Networking_Services
+Defintions_Explanations
 Exercises_
 Missed_Questions
 Needs_a_home
@@ -716,6 +717,11 @@ Azure Stack Edge Physical appliance for edge AI/compute/storage needs. Think mac
 ---------------------------------------------------------------
 Azure_storage_services
 
+Premium storage in Azure is designed for high-performance workloads that require low latency and high throughput. It primarily 
+uses solid-state drives (SSDs). High Availability: 99.9% uptime SLA when attached to a running VM. Disks can be replicated across 
+availability zones for resilience. * Premium storage, is not applicable to Blob Storage. Premium storage is primarily associated with 
+Azure managed disks and Azure Files.
+
 File Share is a fully managed cloud file storage service that allows users to create file shares accessible via SMB 
 (Server Message Block) and NFS (Network File System) protocols. It enables seamless file sharing across cloud and on-premises 
 environments. Azure File Share is ideal for replacing traditional file servers. *Note: A file can be any type of file.
@@ -1064,6 +1070,8 @@ Log Analytics
 Log Analytics is the backend data store for Azure Monitor Insights and many other services.
 Uses Kusto Query Language (KQL) to analyze logs for troubleshooting and auditing.
 Log Analytics aggregates data from Azure Activity Logs, VM logs, and diagnostics.
+
+Detection patterns in Microsoft Sentinel are typically written using Kusto Query Language (KQL).
 
 Azure Monitor Alerts A proactive way to detect and address issues before they become critical. You can create alerts on any metric 
 or log data source in the Azure Monitor data platform. Alert type includes metric, log, activity, service health, high CPU usage,
@@ -1483,8 +1491,8 @@ the availability and performance of the PaaS service itself.
 
 Redundancy and Best Practices: To meet SLA guarantees:
 
-Use High Availability (HA) features like multiple regions or availability zones.
-Implement resiliency patterns such as retries, caching, and failovers.
+Use High Availability (HA) features like multiple regions(GEO-Redundancy) or Availability Sets, Availability Zones and Load 
+Balancers. Implement resiliency patterns such as retries, caching, and failovers.
 * In Azure, failovers refer to the process of automatically or manually transferring workloads, services, or data to a secondary 
 system or region when the primary system becomes unavailable. Failovers are a critical part of ensuring high availability, disaster 
 recovery, and business continuity in cloud-based solutions.
@@ -1628,6 +1636,14 @@ organizational standards. Azure Blueprints ensures that every new Azure deployme
 operational guidelines. Ideal for organizations with strict regulatory requirements (e.g., ISO 27001, HIPAA, FedRAMP). Azure 
 Blueprints Automates Infrastructure Deployment.
 
+The Blueprint Definition is the overall template — it defines what resources, policies, and configurations will be deployed.
+Artifacts are the actual building blocks that define the infrastructure and configuration. They support IaC by letting you 
+declaratively define:
+	ARM templates (or Bicep files) — for deploying actual resources like VMs, VNets, storage accounts(infrastructure as code).
+	Policy assignments — to enforce governance (e.g., naming standards, allowed regions).
+	Role assignments — to assign RBAC roles to users/groups.
+	Resource groups — as containers for resources.
+
 ARM Templates
 Azure Resource Manager (ARM) templates define the infrastructure and configuration of Azure resources in a repeatable way. You can use 
 ARM templates to create and manage resources as part of an Azure Blueprint.
@@ -1694,12 +1710,17 @@ levels are: CanNotDelete - Authorized users can read and modify the resource, bu
 			ReadOnly - Authorized users can only read the resource; they cannot modify or delete it.
 
 High Availability
-Focuses on minimizing downtime within a single region by using Availability Sets, Availability Zones, and Load Balancers. However, it 
-does not guarantee recovery from an entire region failure.
+Focuses on minimizing downtime within a single region by using Availability Sets, Availability Zones, and Load Balancers. However, 
+it does not guarantee recovery from an entire region failure. To protect against full region failure, organizations typically 
+implement disaster recovery (DR) strategies.
 ---
 Disaster Recovery
 Disaster Recovery (DR) in Azure refers to the strategies, services, and tools you use to keep your applications and data available 
-during major failures — such as outages, data center issues, cyberattacks, or natural disasters.
+during major failures — such as outages, data center issues, cyberattacks, or natural disasters. To protect against full region 
+failure, organizations typically implement disaster recovery (DR) strategies, such as:
+	Geo-redundancy: Replicating data and services across multiple regions.
+	Failover to another region: Using Azure Site Recovery or similar solutions.
+	Backup and restore plans: Ensuring critical data is stored in a separate location.
 
 Azure Site Recovery	- Primary DR service — replicates VMs (Azure or on-prem) to a secondary region for failover
 Azure Backup		- Long-term data protection, snapshots, and recovery of files, disks, or full machines
@@ -1823,6 +1844,7 @@ and availability of web applications by routing traffic to the nearest Azure reg
 Azure Front Door is ideal for scenarios where you need to distribute traffic across multiple regions,
 optimize web application performance, and enhance security with WAF. It is commonly used for global applications,
 content delivery, and scenarios requiring SSL offloading. Azure Front Door is a Layer 7 (HTTP/HTTPS) load balancer.
+Front Door - Distributes and redirects traffic to healthy regions during failover
 
 * SSL Offloading is the process of handling SSL/TLS encryption and decryption on a separate device — like a load balancer or 
 reverse proxy — instead of on your backend servers.
@@ -1836,12 +1858,12 @@ Distributes traffic within a VNet. Used for private network scenarios where back
 Ideal for applications that require internal load balancing without exposing endpoints to the internet.
 
 Public Load Balancer:
-Distributes traffic from external sources to resources inside a VNet. Used for internet-facing applications where incoming traffic 
-needs to be balanced across multiple backend resources.
+Distributes traffic from external sources to resources inside a VNet. Used for internet-facing applications where 
+incoming traffic needs to be balanced across multiple backend resources.
 ---
-If a company wants to ensure application availability even if an entire Azure region fails, they need a disaster recovery 
-(DR) strategy. DR involves replicating in and recovering from duplicated resources in a secondary region to maintain business 
-continuity in case of a regional outage. 
+If a company wants to ensure application availability even if an entire Azure region fails, they need a disaster 
+recovery (DR) strategy. DR involves replicating in and recovering from duplicated resources in a secondary region to 
+maintain business continuity in case of a regional outage. 
 
 For high availability and disaster recovery, use geo-redundant storage across multiple regions.
 
@@ -2068,7 +2090,7 @@ and control costs in an Azure environment but does not assist with estimating pr
 The Azure TCO Calculator is specifically designed to help businesses estimate the cost savings of migrating their workloads to Azure. 
 It allows users to input details about their current on-premises infrastructure (e.g., server counts, storage usage, and energy costs) 
 and provides a detailed analysis comparing the total cost of ownership for on-premises versus Azure. This tool is focused on migration 
-scenarios, making it the correct choice in this context.
+scenarios.
 ---
 Azure Log Analytics is the ideal Azure service for addressing a company's log monitoring and analysis requirements. It provides 
 a centralized platform for collecting, analyzing, and visualizing log data from various sources, including on-premises servers 
@@ -2090,7 +2112,6 @@ It offers tools and guidance for discovering existing resources, evaluating thei
 migration with minimal downtime.
 ---
 Data Box is a physical device provided by Microsoft to help organizations transfer large amounts of data to and from Azure 
-Data Box is a physical device provided by Microsoft to help organizations transfer large amounts of data to and from Azure 
 in a secure, efficient, and cost-effective way. It is particularly useful when transferring terabytes or petabytes of data 
 over the network is impractical due to bandwidth limitations or time constraints.
 ---
@@ -2103,7 +2124,10 @@ deploy, and manage machine learning pipelines without writing extensive code. It
 learning workflows by providing prebuilt components and custom components that can be connected to form a pipeline.
 
 Azure Sphere is a software and hardware solution that provides communication and security features for IoT devices. Sphere = Secure.
-
+* An IoT (Internet of Things) device is any physical object that connects to the internet and exchanges data with other systems. 
+These devices often have sensors, processors, and communication capabilities that allow them to gather and transmit information, 
+automate tasks, and interact with the digital world.
+---
 Azure Cognitive Services are a collection of AI-powered APIs and SDKs from Microsoft that let you add intelligent features — like 
 vision, speech, language understanding, and decision-making — to your apps without needing to build and train machine learning 
 models yourself.
@@ -2116,21 +2140,95 @@ interruption. This helps ensure that services remain available to users even in 
 
 High availability enables organizations to easily scale their resources based on their needs.
 
-High availability is provided by load balancing across multiple resources, preventing overloading of any single resource.
+High availability is provided by load balancing across multiple resources, thus preventing overloading of any single resource.
 ---
+When using Geo-Redundant Storage (GRS) in Azure, data is first copied synchronously three times within a single physical location 
+in the primary region (this is known as Locally Redundant Storage (LRS) within that region). Then, asynchronously, the data is 
+replicated to the secondary region, where it is also stored three times within a single physical location in that secondary region.
+3 + 3 = 6 copies of the data.
+
+An Analytics rule detects threats from log patterns, generates alerts. An Automation rule triggers responses based on incident 
+attributes, not detection. An incident attribute refers to metadata or properties associated with an incident, not the raw 
+detection or alert itself. Concrete Example:
+If an automation rule is set up to act only on incidents with severity = "High", then "Severity: High" is the incident attribute 
+it's using to trigger a response.
+
+A ReadOnly lock (CanNotDelete) prevents any changes to the resource. If a resource has a ReadOnly lock applied, other locks 
+cannot be added unless the ReadOnly lock is removed first. The ReadOnly lock restricts all modifications, including adding 
+additional locks or tags to the resource.
+
+Azure Automation is a cloud-based automation service that helps manage and deploy Azure resources efficiently. It allows users 
+to automate repetitive, time-consuming tasks, ensuring consistency and reducing errors. Uses runbooks (PowerShell, Python, or 
+graphical workflows) to automate tasks like resource provisioning and configuration.
+
+Software licensing is generally treated as an operating expense (OpEx).
+
+Geo-distribution makes a service or application available in multiple geographic locations that are typically close to your users.
+Geo-location allows you to deploy applications to regional datacenters around the world.
+
+Availability zones are primarily for virtual machines, managed disks, load balancers, and SQL databases.
+
 *** End Randowm_Notes in main ***
+--------------------------------------------------------------
+Defintions_Explanations
+
+Provisioning - Making something available or providing resources.
+Provisioning generally refers to the act of making something available or providing resources. In information technology, it 
+specifically means the process of creating and setting up IT infrastructure, managing user access, and making data available to 
+systems and users. 
 
 
+Which two Azure resources can make use of availability zones? Each correct answer presents a complete solution.
+Availability zones are primarily for virtual machines, managed disks, load balancers, and SQL databases.
 
+Which Azure compute service can you use to deploy and manage a set of identical virtual machines?
+Virtual Machine Scale Sets are an Azure compute resource that you can use to deploy and manage and scale a set of identical virtual machines.
 
+What can you use to provide Mac and Android users with access to a Windows environment that will run Windows-based applications?
+Azure Virtual Desktop
 
+Which two protocols can be used to access Azure file shares? Each correct answer presents a complete solution
+Network File System (NFS) or Server Message Block (SMB)
 
+What Microsoft Entra feature can you use to configure security authentication that requires users to use their mobile phone to sign in?
+multi-factor authentication (MFA)
 
+Which two services are provided by Microsoft Entra? Each correct answer presents a complete solution.
+single sign-on (SSO) and authentication
 
+Which two factors affect Azure costs? Each correct answer presents a complete solution.
+resource location and resource usage
 
+Which are two common scenarios for using resource tags? Each correct answer presents a complete solution.
+associating costs with different environments and categorizing costs by department
 
+You need to ensure that multi-factor authentication (MFA) is enabled on accounts with write permissions in an Azure subscription.
+What should you implement?
+Azure Policy
 
+What can you use to restrict the deployment of a virtual machine to a specific location?
+Azure Policy
 
+What can you use to ensure that a development team can only create virtual machines of a certain size?
+Azure Policy
 
+Which two actions can be performed by using Azure portal? Each correct answer presents a complete solution.
+Create new resources or Create Microsoft Entra user. You cannot Assign deny permission on a resource group or
+change the availability zone of a virtual machine.
 
+Which management layer accepts requests from any Azure tool or API and enables you to create, update, and delete 
+resources in an Azure account?
+Azure Resource Manager (ARM)
 
+Which Azure service evaluates Azure resources and makes recommendations to help improve reliability, security, 
+performance, and cost reduction?
+Azure Advisor
+
+What should you proactively review and act on to avoid service interruptions, such as service retirements and breaking changes?
+health advisories
+
+Which Azure service can generate an alert if virtual machine utilization is over 80% for five minutes?
+Azure Monitor
+
+What can you use to find information about planned maintenance for Azure services that are critical to your organization?
+Azure Service Health

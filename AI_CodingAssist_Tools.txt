@@ -1,5 +1,5 @@
 Coding Assistance tools
-Github_Copilot_VisualStudio_2022
+Github_Copilot_VisualStudio
 Prompt_
 Prompt_Using
 
@@ -49,7 +49,10 @@ Prompt_
 https://learnprompting.org/docs/intro
 https://www.freecodecamp.org/news/how-to-communicate-with-ai-tools-prompt-engineering/
 ----------------------------------------
-Github_Copilot_VisualStudio_2022
+Github_Copilot_VisualStudio
+
+GitHub Docs
+https://docs.github.com/en/copilot/copilot-chat-cookbook
 
 Intro to GitHub Copilot in Visual Studio - Good 15 minute overview
 https://www.youtube.com/watch?v=z1ycDvspv8U
@@ -69,6 +72,15 @@ https://www.youtube.com/watch?v=SZVCJRUADc4
 
 GitHub Copilot and AI for Developers: Potential and Pitfalls with Scott Hanselman | BRK231H
 https://www.youtube.com/watch?v=5pbPLHYB6-0
+
+What’s included in the free version 04/25:
+
+2,000 intelligent code completions a month: Get context-aware code suggestions that draw context from your GitHub projects and VS Code workspace.
+50 Copilot Chat messages a month: Ask Copilot for help understanding code, refactoring something, or debugging an issue.
+Choose your AI model: Pick between Claude 3.5 Sonnet or OpenAI GPT-4o.
+Make changes to multiple files with Copilot Edits: Tackle changes across multiple files with Copilot Edits.
+Support for the Copilot Extensions ecosystem: Access third-party agents designed for tasks such as querying Stack Overflow or searching the web with Perplexity.
+Choose where you build: Enjoy support in VS Code and across GitHub.
 ----------------------------------------
 
 Can pass it study notes and ask it to generate questions
