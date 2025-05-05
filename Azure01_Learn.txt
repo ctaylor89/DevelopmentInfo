@@ -90,14 +90,14 @@ Windows domain networks.
 Microsoft Entra ID is a directory service that enables you to sign in and access both Microsoft cloud applications and cloud 
 applications that you develop. Microsoft Entra ID can also help you maintain your on-premises Active Directory deployment.
 
-For on-premises environments, Active Directory running on Windows Server provides an identity and access management service that's 
-managed by your organization. Microsoft Entra ID is Microsoft's cloud-based identity and access management service. If you've 
-worked with Active Directory, Microsoft Entra ID will be familiar to you.
+Microsoft Entra ID is Microsoft's cloud-based identity and access management service. If you've worked with Active Directory, 
+Entra ID will be familiar to you. For on-premises environments, Active Directory running on Windows Server provides an identity 
+and access management service that's managed by your organization. 
 
-When you secure identities on-premises with Active Directory, Microsoft doesn't monitor sign-in attempts. When you connect Active 
-Directory with Microsoft Entra ID, Microsoft can help protect you by detecting suspicious sign-in attempts at no extra cost. For 
-example, Microsoft Entra ID can detect sign-in attempts from unexpected locations or unknown devices. It also has smart lockout 
-services and a custom list of banned passwords.
+When you secure identities on-premises with Active Directory, it doesn't monitor sign-in attempts. When you connect Active 
+Directory with Entra ID, it can help protect you by detecting suspicious sign-in attempts at no extra cost. For example, Entra ID 
+can detect sign-in attempts from unexpected locations or unknown devices. It also has smart lockout services and a custom 
+list of banned passwords.
 
 Administrators can use Microsoft Entra ID to control access to applications and resources based on their business requirements.
 
@@ -109,7 +109,7 @@ Users can manage their identities and take maintenance actions like self-service
 
 Single sign-on (SSO) enables you to remember only one username and one password to access multiple applications. A single identity 
 is tied to a user, which simplifies the security model. As users change roles or leave an organization, access modifications are 
-tied to that identity, which greatly reduces the effort needed to change or disable accounts.
+tied to that identity, which greatly reduces the effort needed to change or disable accounts that are within the same organization.
 
 Device management: Along with accounts for individuals, Entra ID supports the registration of devices. Registration enables 
 devices to be managed through tools like Microsoft Intune. Entra ID also allows for device-based Conditional Access policies to 
@@ -122,6 +122,14 @@ Application management: You can manage your cloud and on-premises apps by using 
 If you only had an on-premises environment running Active Directory and a cloud deployment using Microsoft Entra ID, you would 
 need to maintain two identity sets. However, you can connect Active Directory with Microsoft Entra ID, enabling a consistent 
 identity experience between cloud and on-premises server by using the same identity set.
+
+Entra ID Identity Secure Score is a feature within the Microsoft Entra admin center that evaluates your organization's 
+identity security posture. Identity Secure Score provides a numerical score reflecting how well your tenant's identity configurations 
+align with Microsoft's recommended best practices.
+
+Entra ID Identity Protection is a feature that helps detect and mitigate identity-related risks, such as compromised accounts or 
+suspicious sign-in activity, its primary focus is on identifying and responding to threats rather than providing a broad assessment 
+of overall security practices. 
 
 * A domain in the context of IT and networking is a logical grouping of resources, such as computers, users, and other devices, 
 that share a common database and security policies. Domains are typically managed using directory services like Active Directory(AD).
@@ -1316,7 +1324,8 @@ Scalability is a system’s ability to handle increasing workloads by adding res
 or vertically by upgrading hardware). It is usually planned and manual, meaning resources are provisioned in advance to accommodate growth.
 
 Elasticity is the system's ability to automatically scale resources up or down based on demand. It is dynamic and automated, ensuring 
-that the system adjusts in real-time to workload fluctuations.
+that the system adjusts in real-time to workload fluctuations. Using elasticity in cloud computing, an IT person can increase resource 
+capacity—often literally by pushing a button (or triggering an API, CLI command, or autoscale policy).
 
 Agility refers to the ability of an organization to quickly and efficiently adapt to changes in demand, technology, or market conditions 
 using cloud-based resources and services. 
@@ -1614,7 +1623,12 @@ A:
 Missed_Questions
 Which Azure Virtual Machine feature staggers updates across VMs based on their update domain and fault domain? Availability Sets.
 
-Which azure service should be used to correlate events from multiple Azure resources in a central repository? Monitor + Log Analytics.
+Which azure service should be used to correlate events from multiple Azure resources in a central repository? 
+Monitor Logs + Log Analytics. *If one thing correlates with another, there is a close similarity or connection between them, 
+often because one thing causes the other.
+
+What protects against datacenter-level failures? Availability Zones. 
+
 ---------------------------------------------------------------
 Random_Notes
 
@@ -1768,12 +1782,44 @@ Azure Content Delivery Network (CDN) is a globally distributed network of server
 caching content closer to users. Azure Content Delivery Network enhances performance, reduces latency, and optimizes bandwidth usage for 
 web applications, media streaming, and APIs.
 ---
+Event Hubs and Event Grid
+
 Azure Event Hubs (Collects telemetry and event data. Streams it to consumers)
 Azure Event Hubs is a high-throughput data ingestion and streaming service. It’s built to collect massive volumes of telemetry and 
 event data from multiple sources (apps, services, devices), and stream it to consumers for real-time processing or storage.
 
 Think of Event Hubs like a supercharged data firehose—it lets you shove millions of events per second into Azure, and then lets 
-your services consume and analyze that stream however they need to.
+your services consume and analyze that stream however they need to. Consumer pulls from partitions.
+How an Event Hub works:
+1) Producer sends events to a centralized service (like Azure Event Hub).
+2) Events are stored temporarily (in partitions or queues).
+3) Consumers poll or fetch events from that store when they're ready.
+4) Each consumer controls its own read position (offset).
+
+Azure Event Grid is a fully managed event routing service designed to enable event-driven architectures. Event Grid allows you to 
+easily build applications that react to changes or events in your Azure environment or from custom sources. Listens for events from 
+supported sources (like Azure Blob Storage, Resource Groups, or custom apps). Routes those events to subscribed handlers (like Azure 
+Functions, Logic Apps, Event Hubs, or webhooks). Delivers events in near real-time.
+
+What is the difference between Event Hubs and Event Grid?
+
+Feature			Event Grid											Event Hubs
+Primary Use		Event routing and notification (react to changes)	High-throughput event ingestion and streaming
+Ideal For		Lightweight event-driven apps						Telemetry and log ingestion from apps/devices
+Event Size		Small (≤1 MB per event)								Large volumes (up to 1 MB per message, billions/day)
+Storage			No message retention beyond delivery				Messages retained for 1–90 days
+
+Use Event Hub when you need to handle high-volume, high-speed event streams for analytics or data pipelines.
+Use Event Grid for lightweight event notifications and reactive workflows between Azure services or external systems.
+
+When to Use Each
+Scenario:											Use This:
+Ingesting telemetry from IoT devices or apps		Event Hub
+Sending notifications when a blob is created		Event Grid
+Logging clicks, app usage, or game telemetry		Event Hub
+Triggering Logic App when a VM is created			Event Grid
+Building a stream processing pipeline				Event Hub
+Orchestrating reactive workflows (event-driven)		Event Grid
 ---
 Azure Service Bus (Think message queuing)
 Azure Service Bus is a fully managed enterprise message broker — designed for reliable message delivery between decoupled 
@@ -1781,7 +1827,7 @@ components of a distributed system. It’s your go-to when systems need to talk 
 tightly coupled — think commands, business workflows, ordered delivery, and retry logic.
 
 Service Bus supports a publish-subscribe model for one-to-many communication, allowing multiple subscribers to receive messages 
-from a single publisher.Service Bus includes features like FIFO (First-In-First-Out) ordering, session management, and dead-letter 
+from a single publisher. Service Bus includes features like FIFO (First-In-First-Out) ordering, session management, and dead-letter 
 queues for handling errors.
 ---
 Azure Backup
@@ -1821,7 +1867,7 @@ multiple regions.
 
 Key Benefits of Traffic Manager
 Global Load Balancing – Routes traffic across different Azure regions.
-High Availability & Failover – Automatically redirects traffic if an endpoint goes down.
+ProvideHigh Availability & Failover – Automatically redirects traffic if an endpoint goes down.
 Performance Optimization – Routes users to the closest or fastest endpoint.
 Scalability – Supports applications deployed in multiple locations.
 Multi-Cloud & Hybrid Support – Can route traffic to Azure, on-premises, or even other cloud providers.
@@ -1871,9 +1917,11 @@ A Hybrid Cloud is a combination of on-premises infrastructure and Azure cloud se
 on-premises service, enabling seamless integration between cloud-based and on-prem workloads. This setup is common in hybrid cloud 
 architectures, where organizations extend their on-prem infrastructure to a private cloud for flexibility and scalability.
 
+A private cloud is typically a cloud environment dedicated to a single organization, either hosted on-premises or by a third party.
+
 When migrating or expanding your on-premises servers, you are able to choose a private, hybrid, or public cloud model.
-Private cloud only serves one organization without public integration. Public cloud doesn’t integrate directly with 
-on-premises servers without a hybrid model.
+Private cloud only serves one organization without public integration. Both a public or private cloud does not integrate 
+directly with on-premises servers without being a hybrid model.
 
 Every Azure region has multiple data centers.
 ---
@@ -1902,7 +1950,11 @@ shared access to a set of resources.
 
 Azure File Sync (AFS) allows you to centralize file storage in Azure Files while keeping local copies on Windows Server. 
 It enables you to sync, cache, and tier files across multiple locations while maintaining fast local access.
-It basically syncs multiple servers with the same Azure file share, ensuring real-time updates. 
+It basically syncs multiple servers with the same Azure file share, ensuring real-time updates and two way synchronization. 
+
+Azure File Sync can sync files across regions, but with some caveats you should be aware of. The Azure File Share itself is tied 
+to a single storage account in a single region. All sync traffic (from remote servers) routes through that region. Servers 
+farther from the storage account's region will experience higher latency and slower sync performance.
 
 Virtual Network Peering is an networking feature that enables connectivity between virtual networks deployed in the same 
 region or across different regions. By configuring a virtual network peering, you can establish private and secure 
@@ -1934,7 +1986,8 @@ you write scripts or configuration files that declare what the infrastructure sh
 that infrastructure automatically.
 
 Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications. Provides a
-Web Application Firewall and Session Affinity (sessions are consistently routed to the same backend server).
+Web Application Firewall and Session Affinity (sessions are consistently routed to the same backend server). It is a regional service, 
+meaning that it can only manage and route traffic to back-end resources within the same region where it is deployed.
 
 Azure Budgets is a tool for setting and enforcing spending thresholds within Azure. 
 
