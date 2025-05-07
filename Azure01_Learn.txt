@@ -2228,32 +2228,32 @@ Defintions_Explanations
 Provisioning - Making something available or providing resources.
 Provisioning generally refers to the act of making something available or providing resources. In information technology, it 
 specifically means the process of creating and setting up IT infrastructure, managing user access, and making data available to 
-systems and users. 
+systems and users.
 
-
-Which two Azure resources can make use of availability zones? Each correct answer presents a complete solution.
-Availability zones are primarily for virtual machines, managed disks, load balancers, and SQL databases.
+Which two Azure resources can make use of availability zones?  Each correct answer presents a complete solution.
+  Availability zones are primarily for virtual machines, managed disks, load balancers, and SQL databases.
 
 Which Azure compute service can you use to deploy and manage a set of identical virtual machines?
-Virtual Machine Scale Sets are an Azure compute resource that you can use to deploy and manage and scale a set of identical virtual machines.
+Virtual Machine Scale Sets are an Azure compute resource that you can use to deploy and manage and scale a set of identical 
+virtual machines.
 
 What can you use to provide Mac and Android users with access to a Windows environment that will run Windows-based applications?
-Azure Virtual Desktop
+  Azure Virtual Desktop
 
 Which two protocols can be used to access Azure file shares? Each correct answer presents a complete solution
-Network File System (NFS) or Server Message Block (SMB)
+  Network File System (NFS) or Server Message Block (SMB)
 
 What Microsoft Entra feature can you use to configure security authentication that requires users to use their mobile phone to sign in?
-multi-factor authentication (MFA)
+  Multi-factor authentication (MFA)
 
 Which two services are provided by Microsoft Entra? Each correct answer presents a complete solution.
-single sign-on (SSO) and authentication
+  Single sign-on (SSO) and authentication
 
 Which two factors affect Azure costs? Each correct answer presents a complete solution.
-resource location and resource usage
+  Resource location and resource usage
 
 Which are two common scenarios for using resource tags? Each correct answer presents a complete solution.
-associating costs with different environments and categorizing costs by department
+  Associating costs with different environments and categorizing costs by department
 
 You need to ensure that multi-factor authentication (MFA) is enabled on accounts with write permissions in an Azure subscription.
 What should you implement?
@@ -2285,3 +2285,85 @@ Azure Monitor
 
 What can you use to find information about planned maintenance for Azure services that are critical to your organization?
 Azure Service Health
+
+---
+Which statement is true about Azure subscriptions and Azure Active Directory (Azure AD) tenants?
+	An Azure AD tenant can be associated with one or more Azure subscriptions
+	An Azure subscription can only be associated with one Azure AD tenant at a time.
+
+What advantages does high availability bring to cloud computing? (Select 3)
+It allows for redundancy of resources, ensuring that if one resource fails, another can take its place without interruption.
+It enables load balancing across multiple resources, preventing overloading of any single resource.
+It enables organizations to easily scale their resources based on their needs.
+
+Which Azure service would best facilitate secure and fast data transfer between BlueTech’s global research teams?	
+	Azure ExpressRoute
+
+To ensure low-latency access across North America, Europe, and Asia, which Azure feature should BlueTech implement?	
+	Azure Content Delivery Network (CDN)
+
+What Azure service would be most suitable for BlueTechs’s IoT devices deployed in field locations for data collection and monitoring?
+  Azure IoT Hub is a managed service that acts as a central message hub for bi-directional communication between IoT applications and the 
+devices they manage. It's ideal for BlueTech's IoT devices deployed in field locations, as it not only allows secure and reliable 
+communication but also supports monitoring, analytics, and management of these devices,.
+
+So is PaaS the serverless platform?
+  Not quite. It’s more accurate to say: Serverless is a higher abstraction built on top of PaaS. Azure Functions is built on top of 
+Azure’s PaaS infrastructure. It abstracts the underlying Platform as a Service features (like App Service infrastructure, scaling, 
+and OS patching) to offer a serverless experience.
+
+You have the following data storage requirements:
+Data must be stored on multiple nodes.
+Data must be stored on nodes in separate geographic locations.
+Data can be read from the secondary location as well as from the primary location
+Which of the following Azure stored redundancy options should you recommend?
+  For geo-clustered sites, the storage redundancy option that meets the requirements listed is Read Access Geo-Redundant Storage. 
+With this option, data is stored on multiple nodes in separate geographic locations, and data can be read from the secondary 
+location as well as from the primary location.
+
+A company wants to securely move large amounts of data to Azure by shipping the drives using Azure Import/Export service.
+What two things does the company need to do prepare their drives for an import job?	
+A dataset CSV file and a driveset CSV file.
+---
+Is all data that is copied to an Azure storage account backed up automatically to another Azure data center?
+  No. Data is not backed up automatically to another Azure Data Center although it can be depending on the replication 
+  option configured for the account.
+
+Locally Redundant Storage (LRS) is the default that maintains three copies of the data in the data center.
+
+Geo-redundant storage (GRS) has cross-regional replication to protect against regional outages. Data is replicated synchronously 
+three times in the primary region, then replicated asynchronously in the secondary region.
+---
+You have a virtual machine named VM1 that runs Windows Server 2016. VM1 is in the East US Azure region.
+Which Azure service should you use from the Azure portal to view service failure notifications that can affect the availability of VM1?
+
+ A: Advisor analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the 
+ cost effectiveness, performance, Reliability (formerly called High availability), and security of your Azure resources.
+
+ Which of the following categories does Azure Advisor make recommendations for? 
+   Security, Performance, Reliability or High Availability, Cost.
+---
+What enables you to deploy, manage and monitor all of your applications and services in a single, centralized location?
+  Azure Resource Manager enables you to deploy, manage and monitor all of your applications and services in a single, 
+  centralized location
+
+A team of developers at a software development company plans to deploy, and then remove, 50 customized virtual machines each week. 
+30 of the virtual machines run Windows Server 2016 and 20 of the virtual machines run Ubuntu Linux. An Azure service is required to 
+minimize the administrative effort required to deploy and remove the virtual machines. What Azure service best fits the requirement?
+  Azure DevTest Labs is a service that helps you quickly create and manage environments for development and testing in Azure, 
+  while controlling costs and enforcing policies. What It Does:
+	Provision preconfigured virtual machines (VMs) for dev/test teams.
+	Control costs by setting quotas, schedules (auto-shutdown/start), and policies.
+	Use reusable artifacts (like scripts, tools, or apps) that can be automatically applied to VMs.
+	Integrates with ARM templates to deploy complex environments consistently.
+	Supports self-service for developers to spin up VMs within governance limits.
+---
+Which Azure support subscription is automatically included with a Free tier Azure account?
+Basic
+
+
+
+Your company plans to deploy several custom applications to Azure. The applications will provide invoicing services to the customers of the company. Each application will have several prerequisite applications and services installed. You need to recommend a cloud deployment solution for all the applications.
+
+What should you recommend?
+Infrastructure as a service (IaaS) is an instant computing infrastructure, provisioned and managed over the internet. The IaaS service provider manages the infrastructure, while you purchase, install, configure, and manage your own software
