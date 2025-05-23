@@ -5,6 +5,7 @@ Azure_DNS
 Azure_ExpressRoute
 Azure_Identity_Access_Security
 Azure_Physical_Infrastructure
+Azure_Policy
 Azure_Service_Fabric
 Azure_Stack
 Azure_storage_services
@@ -665,6 +666,74 @@ A management group tree can support up to six levels of depth. This limit doesn'
 Each management group and subscription can support only one parent.
 
 XXXXXXXXXXXXXXXX Recorded to here. 02/15  Azure01_Learn4.mp3
+---------------------------------------------------------------
+Azure_Policy
+
+Azure Policy can be applied to a wide range of Azure resources, services, and management layers, allowing you to enforce organizational standards and assess compliance at scale. Here's a breakdown of what services/features it can target:
+
+🔹 1. Resource Types
+Azure Policy can be applied to nearly all Azure resource types, including but not limited to:
+
+Compute – VMs, VMSS (e.g., enforce VM size, restrict regions)
+
+Storage – Storage accounts (e.g., enforce HTTPS, restrict public access)
+
+Networking – VNETs, NSGs, public IPs (e.g., deny public IP on NICs)
+
+Databases – SQL, Cosmos DB, etc. (e.g., enforce encryption, TLS versions)
+
+Key Vault – Enforce firewall rules, purge protection
+
+🔹 2. Resource Configurations
+Azure Policy can evaluate settings and properties of resources:
+
+Tags (e.g., require CostCenter tag)
+
+SKU types
+
+Location
+
+Encryption settings
+
+Diagnostic settings (e.g., require logging)
+
+🔹 3. Azure Kubernetes Service (AKS)
+Enforce pod security policies
+
+Ensure image provenance
+
+Validate network policies
+
+🔹 4. Governance Layers
+Management Groups – Policies can be assigned here to cascade to subscriptions
+
+Subscriptions
+
+Resource Groups
+
+Individual Resources
+
+🔹 5. Azure Arc Resources
+On-prem or multi-cloud resources connected via Azure Arc can have policy applied for things like:
+
+OS patching
+
+Security configuration
+
+Guest Configuration
+
+🔹 6. Guest Configuration
+Used to enforce inside-the-VM settings, like:
+
+Password policies
+
+Software installation
+
+Registry settings
+
+⚠️ Requires a dependency agent (and often a VM extension)
+
+
 ---------------------------------------------------------------
 Azure_Service_Fabric
 Azure Service Fabric is a distributed systems platform designed to simplify the development, deployment, and management of scalable 
@@ -2257,7 +2326,7 @@ Which are two common scenarios for using resource tags? Each correct answer pres
 
 You need to ensure that multi-factor authentication (MFA) is enabled on accounts with write permissions in an Azure subscription.
 What should you implement?
-Azure Policy
+  Azure Policy
 
 What can you use to restrict the deployment of a virtual machine to a specific location?
 Azure Policy
@@ -2265,11 +2334,11 @@ Azure Policy
 What can you use to ensure that a development team can only create virtual machines of a certain size?
 Azure Policy
 
-Which two actions can be performed by using Azure portal? Each correct answer presents a complete solution.
+Select two actions that can be performed by using Azure portal? Each correct answer presents a complete solution.
 Create new resources or Create Microsoft Entra user. You cannot Assign deny permission on a resource group or
 change the availability zone of a virtual machine.
 
-Which management layer accepts requests from any Azure tool or API and enables you to create, update, and delete 
+Which management service accepts requests from any Azure tool or API and enables you to create, update, and delete 
 resources in an Azure account?
 Azure Resource Manager (ARM)
 
@@ -2278,7 +2347,7 @@ performance, and cost reduction?
 Azure Advisor
 
 What should you proactively review and act on to avoid service interruptions, such as service retirements and breaking changes?
-health advisories
+Health Advisories that are provided by Service Health
 
 Which Azure service can generate an alert if virtual machine utilization is over 80% for five minutes?
 Azure Monitor
@@ -2303,8 +2372,8 @@ To ensure low-latency access across North America, Europe, and Asia, which Azure
 	Azure Content Delivery Network (CDN)
 
 What Azure service would be most suitable for BlueTechs’s IoT devices deployed in field locations for data collection and monitoring?
-  Azure IoT Hub is a managed service that acts as a central message hub for bi-directional communication between IoT applications and the 
-devices they manage. It's ideal for BlueTech's IoT devices deployed in field locations, as it not only allows secure and reliable 
+  Azure IoT Hub is a managed service that acts as a central message hub for bi-directional communication between IoT applications and 
+the devices they manage. It's ideal for BlueTech's IoT devices deployed in field locations, as it not only allows secure and reliable 
 communication but also supports monitoring, analytics, and management of these devices,.
 
 So is PaaS the serverless platform?
@@ -2361,9 +2430,29 @@ minimize the administrative effort required to deploy and remove the virtual mac
 Which Azure support subscription is automatically included with a Free tier Azure account?
 Basic
 
+Your company plans to deploy several custom applications to Azure. The applications will provide invoicing services to the 
+customers of the company. Each application will have several prerequisite applications and services installed. You need to 
+recommend a cloud deployment solution for all the applications. What should you recommend?
+  Azure Resource Manager templates. ARM templates are JSON files that define the infrastructure and configuration for your 
+  Azure solution. They allow you to deploy and manage resources consistently and repeatedly, making them ideal for deploying 
+  complex applications with multiple dependencies.
 
 
-Your company plans to deploy several custom applications to Azure. The applications will provide invoicing services to the customers of the company. Each application will have several prerequisite applications and services installed. You need to recommend a cloud deployment solution for all the applications.
+Azure IoT Edge is a fully managed service that extends cloud intelligence and analytics to IoT devices at the edge of your
+network—close to where data is generated.
+Azure IoT Edge allows you to deploy cloud workloads (like AI, machine learning, stream analytics, or custom logic) directly 
+onto IoT edge devices—without having to send all the raw data to the cloud first.
 
-What should you recommend?
-Infrastructure as a service (IaaS) is an instant computing infrastructure, provisioned and managed over the internet. The IaaS service provider manages the infrastructure, while you purchase, install, configure, and manage your own software
+Azure Site Recovery (ASR) is a disaster recovery service that helps you replicate, fail over, and recover workloads running on:
+Physical servers
+Virtual machines (VMs) (on-premises or in Azure)
+Other clouds
+It ensures business continuity by keeping critical applications and services available during outages or disruptions.
+---
+A Bicep template is a declarative language file used to define and deploy Azure resources in a clean, readable syntax that 
+simplifies what was traditionally done using ARM templates (JSON).
+
+No, a read-only lock does not prevent a resource from being deleted — but it does prevent changes to its configuration.
+
+
+
