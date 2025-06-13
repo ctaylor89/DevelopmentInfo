@@ -1,0 +1,174 @@
+﻿
+---------------------------------------------------
+What are the things to learn when I am learning .net core 8 and already know .net MVC?
+
+Here's a breakdown of what to focus on. You’ll find similarities but also critical changes in architecture, tooling, and 
+development patterns.
+
+🔄 Major Conceptual Differences to Focus On
+1. Unified Platform (ASP.NET Core)
+.NET 8 is cross-platform and unifies .NET Framework, .NET Core, and Xamarin into a single platform.
+
+Learn how ASP.NET Core handles both web APIs and MVC in a more modular way.
+
+Projects are typically SDK-style (simpler .csproj files).
+
+2. Startup and Program.cs Simplification.
+ASP.NET Core uses the Minimal Hosting Model (Program.cs only), eliminating Startup.cs.
+
+Middleware and services are configured in a more linear flow.
+	var builder = WebApplication.CreateBuilder(args);
+	var app = builder.Build();
+	app.MapControllers();
+	app.Run();
+* Learn about custom middleware, built-in ones (auth, static, etc.)
+
+3.Dependency Injection (DI) is Built-in
+
+Everything is DI-first. Services like DbContexts, Repositories, HttpClients, etc., are registered and injected.
+Learn scoped, singleton, and transient lifetimes.
+
+4. Minimal APIs (New in .NET 6+, enhanced in .NET 8)
+Functional alternative to full MVC controllers.
+Great for small APIs or microservices.
+	app.MapGet("/hello", () => "Hello World!");
+
+Important Features/Technologies to Learn
+
+1. Endpoint Routing
+	ASP.NET Core uses a central routing system for both MVC and minimal APIs.
+	Supports attribute routing, conventional routing, and route constraints.
+
+2. Configuration System
+	Stronger and more flexible than Web.config.
+	Environment-based configs using appsettings.{Environment}.json.
+
+3. Logging & Monitoring
+	Built-in logging providers.
+	Integrates easily with Application Insights, Serilog, etc.
+
+4. EF Core (Entity Framework Core)
+	Fully revamped ORM (lighter and cross-platform).
+	Learn code-first migrations, LINQ improvements, and DbContext lifecycle.
+
+5. Middleware Pipeline
+	Replace HttpModules and HttpHandlers with your own middleware logic.
+		app.Use(async (context, next) =>
+		{
+			// custom logic
+			await next();
+		});
+
+6. Authentication and Authorization
+	ASP.NET Core Identity is modular.
+	Learn how to use JWT, OAuth, OpenID Connect for APIs and apps.
+	Integration with Azure AD is streamlined.
+
+7. Unit Testing with xUnit or NUnit
+	Dependency injection makes services easier to mock and test.
+	Learn how to use TestServer or WebApplicationFactory for integration tests.
+
+8. APIs	Minimal APIs, controllers, routing
+---
+Tooling & Ecosystem Changes
+1. Command Line (CLI)
+	dotnet new, dotnet run, dotnet build, dotnet ef (for migrations).
+	You can scaffold projects and models using CLI templates.
+
+2. Cross-Platform Development
+	You can develop and run apps on Linux, macOS, Docker.
+	Learn how to write Dockerfiles for ASP.NET Core apps.
+
+3. gRPC & SignalR
+	Learn gRPC for high-performance APIs.
+	SignalR for real-time messaging (rewritten for Core).
+
+4. Rate Limiting and Output Caching (new in .NET 8)
+	Native middleware support for rate limiting.
+	Learn AddOutputCache() and app.UseOutputCache().
+---
+Bonus Tips
+	Avoid legacy habits: No more Global.asax, Web.config, or System.Web.
+	Embrace IConfiguration, IOptions<T>, and ILogger<T>.
+	If you're a WebForms or MVC5 dev, Razor Pages may feel familiar and be an easier step than MVC controllers.
+
+	Use https://learn.microsoft.com/en-us/dotnet/ as your primary doc source — it’s clean and frequently updated.
+---------------------------------------------------
+Dependency_Injection
+
+Here's a clean example of Dependency Injection (DI) in ASP.NET Core (.NET 8) — covering:
+	Service interface and implementation
+	Registering the service
+	Consuming the service in a controller
+
+1. Define a Service Interface
+	public interface IGreetingService
+	{
+		string GetGreeting(string name);
+	}
+
+2. Implement the Service
+	public class GreetingService : IGreetingService
+	{
+		public string GetGreeting(string name)
+		{
+			return $"Hello, {name}! Welcome to .NET 8.";
+		}
+	}
+
+3. Register the Service in Program.cs
+	var builder = WebApplication.CreateBuilder(args);
+
+	// Register the service with DI container
+	builder.Services.AddScoped<IGreetingService, GreetingService>();
+	builder.Services.AddControllers();
+	var app = builder.Build();
+	app.MapControllers();
+	app.Run();
+
+4. Inject the Service into a Controller
+	[ApiController]
+	[Route("api/[controller]")]
+	public class GreetingController : ControllerBase
+	{
+		private readonly IGreetingService _greetingService;
+
+		// Constructor injection
+		public GreetingController(IGreetingService greetingService)
+		{
+			_greetingService = greetingService;
+		}
+
+		[HttpGet("{name}")]
+		public IActionResult GetGreeting(string name)
+		{
+			var message = _greetingService.GetGreeting(name);
+			return Ok(message);
+		}
+	}
+
+---------------------------------------------------
+
+
+---------------------------------------------------
+
+
+---------------------------------------------------
+
+
+---------------------------------------------------
+
+
+---------------------------------------------------
+
+
+---------------------------------------------------
+
+
+---------------------------------------------------
+
+
+---------------------------------------------------
+
+
+---------------------------------------------------
