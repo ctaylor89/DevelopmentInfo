@@ -565,8 +565,8 @@ public class MyGarbage : IDisposable
  
     public void Dispose()               // This method will only be called from code
     {
-        Dispose(true);					// Pass in true to free managed resources
-        GC.SuppressFinalize(this);      // Let the garbage collector know that the finalizer has already been called      
+        Dispose(true);					// Pass in true to free managed resources that are implementing IDispose.
+        GC.SuppressFinalize(this);      // Let the garbage collector know that the finalizer has already been called.
     }
 
     public void ExampleMethod()
@@ -631,7 +631,8 @@ _Interpolated string expressions that provide convenient syntax to create format
     var message = $"The area of a circle with radius {r} is {Math.PI * r * r:F3}.";
     Console.WriteLine($"Pod level = {(pod01.Id == 77009 ? "100" : "30")}");
 
-Lambda expressions that allow you to create anonymous functions(In this case the lambda expression is the parameter):
+Lambda expressions that allow you to create anonymous functions(In this case the lambda expression is the parameter and Max is 
+                                                                the Linq extension method):
     int[] numbers = { 2, 3, 4, 5 };
     var maximumSquare = numbers.Max(x => x * x);  // Output = 25;
 

@@ -188,8 +188,13 @@ You can also use query results with the IN clause, like this:
 --------------------------------------------------------------------------------
 Joins_
 
+INNER JOIN - Returns only the rows where there is a match in both tables.
+LEFT OUTER JOIN — All rows from the left table. If no match from right table, NULLs are filled in.
+RIGHT OUTER JOIN — All rows from the right table. If no match from left table, NULLs are filled in.
+FULL OUTER JOIN — All rows from both tables, matching where possible.
 
-
+OUTER JOIN is a generic term, It always requires LEFT, RIGHT, or FULL to define which side you're keeping unmatched rows from.
+OUTER JOIN - Returns all rows from one table, and matching rows from the other. If no match, NULLs are filled in.
 --------------------------------------------------------------------------------
 Key_Words
 

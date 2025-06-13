@@ -1,4 +1,5 @@
 Currency_
+CTE_
 Error_Handling
 OBJECT_ID()_Parmeters
 SQL_Injection_Attacks
@@ -21,7 +22,14 @@ http://www.johnsansom.com/top-5-free-sql-server-tools/
 http://sqlsentry.net/plan-explorer/sql-server-query-view.asp  -- SQL Sentry Plan Explorer
 http://www.brentozar.com/archive/2011/02/my-favorite-free-sql-server-downloads  -- Tunning tools
 http://www.datamanipulation.net/sqlquerystress/  -- SQLQueryStress is a free tool for SQL Server programmers
+---------------
+DDL (Data Definition Language)
+Purpose: Defines or changes the structure of database objects (tables, indexes, views, schemas, etc).
 
+DML (Data Manipulation Language)
+Purpose: Works with the data inside the objects to perform CRUD operations.
+
+---------------
 The GO command isn't a Transact-SQL statement, but a special command recognized by several MS utilities including 
 SQL Server Management Studio code editor. The GO command is used to group SQL commands into batches which are sent 
 to the server together. The commands included in the batch, that is, the set of commands since the last GO command 
@@ -779,6 +787,9 @@ whatever, it doesn't affect performance that much, but when functions are used i
 can cause major performance issues. Functions used in the WHERE clause forces SQL Server to do a table scan or index scan 
 to get the correct results instead of doing an index seek if there is an index that can be used. The reason for this is 
 that the function value has to be evaluated for each row of data to determine if it matches your criteria. 
+	(This is bad — likely forces index scan):
+	SELECT * FROM Orders
+	WHERE YEAR(OrderDate) = 2024
 
 * Indulging in Nested Views
 Views which call views that join to views which are calling other views… A view is nothing but a query. But, because they 
@@ -804,13 +815,6 @@ read values.  Once you have identified the statements then you can look at the q
 
 Good short article to read and work through to learn more about tunning. Also contains some good links.
 http://www.mssqltips.com/sqlservertutorial/277/index-scans-and-table-scans/
-
-SQL Server's query optimizer uses distribution statistics to determine how it's going to satisfy your SQL query. These statistics 
-represent the distribution of the data within a column, or columns. The Query Optimizer uses them to estimate how many rows will 
-be returned from a query plan. With no statistics to show how the data is distributed, the optimizer has no way to compare 
-the efficiency of different plans and so will be frequently forced to simply scan the table or index. Without statistics, it can’t 
-possibly know if the column has the data you’re looking for without stepping through it. With statistics about the column, the 
-optimizer can make much better choices about how it will access your data and use your indexes.
 
 Distribution statistics are created automatically when you create an index. If you have enabled the automatic creation of statistics 
 (the default setting of the AUTO_CREATE_STATISTICS database setting ) you’ll also get statistics created any time a column is 
@@ -1044,6 +1048,23 @@ FROM Production.Product
 ORDER BY ProductNumber;
 GO
 _______________
+CTE_
+
+A CTE (Common Table Expression) in SQL is basically a temporary result set you can reference within a SELECT, INSERT, UPDATE, or 
+DELETE statement. Think of it like a short-lived view that only exists for the duration of your query.
+
+The CTE (HighSalaryEmployees) is defined, then you query from the returned result set.
+	WITH HighSalaryEmployees AS (
+		SELECT EmployeeID, Name, Salary
+		FROM Employees
+		WHERE Salary > 100000
+	)
+	SELECT *
+	FROM HighSalaryEmployees
+	ORDER BY Salary DESC;
+
+
+---------------
 Error_Handling
 
 http://www.codeproject.com/Articles/38991/A-Closer-Look-Inside-RAISERROR-SQLServer

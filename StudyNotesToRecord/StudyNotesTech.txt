@@ -1,7 +1,7 @@
-C_Sharp
+ÔªøC_Sharp
 Docker_
 Kuberneties_
-
+Web_Site_Security
 --------------------------------------------------------------------
 C_Sharp
 
@@ -118,7 +118,7 @@ package manager.
 
 Helm is an open-source project which was originally created by DeisLabs and donated to CNCF, which now maintains it. The original goal of Helm 
 was to provide users with a better way to manage all the Kubernetes YAML files we create on Kubernetes projects. The path Helm took to solve 
-this issue was to create Helm Charts. Each chart is a bundle with one or more Kubernetes manifests ñ a chart can have child charts and 
+this issue was to create Helm Charts. Each chart is a bundle with one or more Kubernetes manifests ‚Äì a chart can have child charts and 
 dependent charts as well.
 
 This means that Helm installs the whole dependency tree of a project if you run the install command for the top-level chart. You just a single 
@@ -142,7 +142,7 @@ Pod Template: A pod template is used for creating new pods, including container 
 Configuration Template Pattern: The main configuration file is a skeleton (template) that gets changed at start up according to the 
 intended scenario.
 
-These templates help in managing multiple Kubernetes clusters, as itís common to have resources that can be applied to all environments 
+These templates help in managing multiple Kubernetes clusters, as it‚Äôs common to have resources that can be applied to all environments 
 but with small modifications. For example, when an app runs in the staging environment, it should connect to the staging database. 
 However, in production, it should connect to the production database. In such cases, Kubernetes templates are very useful. They allow for 
 the creation of reusable and composable components that can be used in different applications.
@@ -159,11 +159,11 @@ Composability is a system design principle that deals with the inter-relationshi
 components that can be selected and assembled in various combinations to satisfy specific user requirements. In information systems, 
 the essential features that make a component composable are that it be:
 
-self-contained (modular): it can be deployed independently ñ note that it may cooperate with other components, but dependent components are replaceable
+self-contained (modular): it can be deployed independently ‚Äì note that it may cooperate with other components, but dependent components are replaceable
 stateless:[citation needed] it treats each request as an independent transaction, unrelated to any previous request. Stateless is just one technique; managed state and transactional systems can also be composable, but with greater difficulty.
 It is widely believed that composable systems are more trustworthy than non-composable systems because it is easier to evaluate their individual parts.
 ---
-`yq` is a command-line tool designed to transform YAMLπ≤. It is similar to `jq`, which focuses on transforming JSON instead of YAML. 
+`yq` is a command-line tool designed to transform YAML¬π¬≤. It is similar to `jq`, which focuses on transforming JSON instead of YAML. 
 Here are some of the things `yq` can do:
 1. Read values from a YAML file.
 2. Add new values to a YAML file.
@@ -172,7 +172,7 @@ Here are some of the things `yq` can do:
 5. Convert YAML into JSON.
 6. Merge two or more YAML files.
 
-`yq` is particularly useful in Kubernetes, where YAML files are commonly used for configurationπ. It provides a lightweight option for templating YAML files, which can be helpful when you want to update the fields in your YAML filesπ. This makes `yq` a great tool for handling Kubernetes resource fields without leaving the command-line?.
+`yq` is particularly useful in Kubernetes, where YAML files are commonly used for configuration¬π. It provides a lightweight option for templating YAML files, which can be helpful when you want to update the fields in your YAML files¬π. This makes `yq` a great tool for handling Kubernetes resource fields without leaving the command-line?.
 
 *************************************************
 Skip Recording this
@@ -197,7 +197,7 @@ This ensures the application runs quickly and reliably from one computing enviro
 Portability: Docker container images are platform-independent. They can run on any infrastructure that supports Docker, including both 
 Linux and Windows-based systems.
 
-Efficiency: Docker container images are lightweight and take up less space than virtual machines. They share the machineís OS system 
+Efficiency: Docker container images are lightweight and take up less space than virtual machines. They share the machine‚Äôs OS system 
 kernel and do not require an OS per application, driving higher server efficiencies.
 
 Runtime: Container images become containers at runtime. In the case of Docker containers, images become containers when they run on 
@@ -294,11 +294,11 @@ Decouple your service layer from your database layer.
 To accomplish this, you can define a data transfer object (DTO). A DTO is an object that defines how the data will be sent over 
 the network.
 --------------------------------------------------------
-IQueryable serves a specific purpose when dealing with data manipulation and querying. Letís explore its significance:
+IQueryable serves a specific purpose when dealing with data manipulation and querying. Let‚Äôs explore its significance:
 
 Deferred Execution and Query Expressions:
 IQueryable<T> is an abstraction that encapsulates LINQ expressions. These expressions describe how to obtain a collection of 
-data, but the actual data retrieval doesnít occur until you evaluate it (for example, by turning it into an IEnumerable or 
+data, but the actual data retrieval doesn‚Äôt occur until you evaluate it (for example, by turning it into an IEnumerable or 
 similar).  Unlike IEnumerable<T>, which immediately retrieves data from the source (such as a database), IQueryable<T> builds a 
 query expression that remains unevaluated until explicitly invoked. This deferred execution allows you to compose queries and 
 apply additional filtering before the query is sent to the database.
@@ -315,7 +315,7 @@ By allowing the query to execute on the server side, it minimizes unnecessary da
 You can apply additional .Where clauses or other query operators before the actual execution, optimizing the database query.
 
 Terminal Methods and Evaluation:
-IQueryable<T> is evaluated only when a ìterminalî method is called upon it. Examples of terminal methods include ToList(), 
+IQueryable<T> is evaluated only when a ‚Äúterminal‚Äù method is called upon it. Examples of terminal methods include ToList(), 
 ToArray(), Single(), Count(), Any(), etc.  At this point, the LINQ provider translates the expression into the appropriate 
 query language (e.g., SQL) and fetches the results.
 --------------------------------------------------------
@@ -362,8 +362,8 @@ returns. It provides important metadata that can be used by help pages and clien
 Here are some key points about the ResponseType annotation:
 Descriptive Metadata: It helps to produce more descriptive response details for API help pages generated by tools like Swagger.
 Client Expectations: It informs clients about what type of object they should expect in the response, which can aid in deserialization.
-Documentation Clarity: It improves the clarity of the API documentation, making it easier for developers to understand the APIís behavior.
-In summary, the ResponseType annotation enhances the developer experience by providing clear expectations about the APIís response types.
+Documentation Clarity: It improves the clarity of the API documentation, making it easier for developers to understand the API‚Äôs behavior.
+In summary, the ResponseType annotation enhances the developer experience by providing clear expectations about the API‚Äôs response types.
 --------------------------------------------------------
 To Setup a new database and connect to it from Entity Framework:
 
@@ -372,17 +372,17 @@ add-migration MyNewMigrationName
 update-database                  // Push the migration up to the database
 --------------------------------------------------------
 In ASP.NET Core, the ValidateAntiForgeryToken attribute plays a crucial role in preventing Cross-Site Request Forgery (CSRF) 
-attacks. Letís dive into how it works:
+attacks. Let‚Äôs dive into how it works:
 
 What is CSRF?
-CSRF is an attack where a malicious website tricks a userís browser into performing actions on another website where the user is 
-authenticated. The attacker exploits the userís existing session to perform unauthorized actions without their knowledge.
+CSRF is an attack where a malicious website tricks a user‚Äôs browser into performing actions on another website where the user is 
+authenticated. The attacker exploits the user‚Äôs existing session to perform unauthorized actions without their knowledge.
 
 Example of a CSRF Attack:
 Imagine a user is authenticated on a banking website (www.good-banking-site.example.com).
 The attacker creates a malicious site (www.bad-crook-site.example.com) containing a hidden form that posts to the banking site.
-When the user visits the malicious site, the form automatically submits to the banking site, using the userís authentication context.
-The banking site processes the request, assuming itís legitimate, because it trusts any request with a valid authentication cookie.
+When the user visits the malicious site, the form automatically submits to the banking site, using the user‚Äôs authentication context.
+The banking site processes the request, assuming it‚Äôs legitimate, because it trusts any request with a valid authentication cookie.
 
 How ValidateAntiForgeryToken Works
 The ValidateAntiForgeryToken attribute ensures that only authenticated users can submit forms or perform actions on the server.
@@ -394,10 +394,10 @@ If the token is missing or invalid, the server rejects the request.
 Apply the ValidateAntiForgeryToken attribute to your controller actions that handle form submissions (usually HTTP POST actions).
 
 Additional Notes:
-The ValidateAntiForgeryToken attribute can be applied globally across the appís controllers but can be overridden using the 
-IgnoreAntiforgeryToken attribute. Using HTTPS doesnít prevent CSRF attacks; the malicious site can send requests over HTTPS as 
+The ValidateAntiForgeryToken attribute can be applied globally across the app‚Äôs controllers but can be overridden using the 
+IgnoreAntiforgeryToken attribute. Using HTTPS doesn‚Äôt prevent CSRF attacks; the malicious site can send requests over HTTPS as 
 easily as over HTTP. Remember, ValidateAntiForgeryToken is a powerful defense mechanism against Cross-Site Request Forgery (CSRF) 
-attacks in ASP.NET Core. Always use ValidateAntiForgeryToken for form submissions to enhance your applicationís security!
+attacks in ASP.NET Core. Always use ValidateAntiForgeryToken for form submissions to enhance your application‚Äôs security!
 --------------------------------------------------------
 The value attribute of an HTML input element is used to specify the initial value or default value for the input field. When a 
 user interacts with the input (such as typing in a text field or selecting an option in a dropdown), the value can change dynamically.
@@ -431,7 +431,7 @@ Example:
     <input type="hidden" name="user_id" value="123">
 
 Remember that the value attribute is static and does not change automatically based on user input. If you want to capture user 
-input dynamically, youíll need to use JavaScript or other event handlers to change the value assigned to the value attribute.
+input dynamically, you‚Äôll need to use JavaScript or other event handlers to change the value assigned to the value attribute.
 --------------------------------------------------------
 EditorFor: This control renders HTML markup based on the datatype of the property. E.g. suppose there is a boolean property in the 
 model. To render this property in the view as a checkbox we can use CheckBoxFor or EditorFor. Both will be generate the same markup.
@@ -443,7 +443,7 @@ Tag Helpers enable you to define custom HTML elements in your Razor views using 
 They provide an alternative approach to creating and manipulating HTML compared to traditional HTML Helpers.
 
 There are many Tag Helpers available in public GitHub repositories and as NuGet packages.
-Remember that Tag Helpers donít replace HTML Helpers entirely; they provide an alternative approach and coexist with HTML 
+Remember that Tag Helpers don‚Äôt replace HTML Helpers entirely; they provide an alternative approach and coexist with HTML 
 Helpers and there's not a Tag Helper for each HTML Helper.
 
 Tag Helpers reduce the explicit transitions between HTML and C# in Razor views. The Microsoft.AspNetCore.Mvc.TagHelpers 
@@ -490,16 +490,16 @@ Route Templates in .Net core:
   Templates can include various segments and parameters (like IDs) that pass data to the controller methods. Conventional 
   routing is typically used with controllers and views. Attribute routing is commonly used for REST APIs.
 --------------------------------------------------------
-POCO stands for Plain Old CLR Object. Itís a term commonly used in the context of object-oriented programming and data persistence. 
+POCO stands for Plain Old CLR Object. It‚Äôs a term commonly used in the context of object-oriented programming and data persistence. 
 
 Definition:
 A POCO is a .NET data structure that contains only public properties or fields.
-It doesnít derive from any special base class, nor does it return any special types for its properties.
+It doesn‚Äôt derive from any special base class, nor does it return any special types for its properties.
 Essentially, a POCO is just a plain old class without any bells and whistles.
 Characteristics of a POCO:
-Pure Class: Itís a pure C# or VB.NET class.
-No Framework Dependencies: It doesnít depend on any framework-specific base class.
-Persistence-Ignorant: It doesnít contain any code or attributes specific to an ORM (Object-Relational Mapping) framework.
+Pure Class: It‚Äôs a pure C# or VB.NET class.
+No Framework Dependencies: It doesn‚Äôt depend on any framework-specific base class.
+Persistence-Ignorant: It doesn‚Äôt contain any code or attributes specific to an ORM (Object-Relational Mapping) framework.
     public class Customer
     {
         public int Id { get; set; }
@@ -521,12 +521,6 @@ Persistence-Ignorant: It doesnít contain any code or attributes specific to an O
 
 --------------------------------------------------------
 Difference between Html.Partial() and Html.RenderPartial() in ASP.NET MVC
-
-Html.Partial returns html string.	Html.RenderPartial returns void.
-Html.Partial injects the html string of the partial view into the main view.	Html.RenderPartial writes html in the response stream.
-Performance is slow.	Perform is faster compared with HtmlPartial().
-Html.Partial() need not to be inside the braces.	Html.RenderPartial must be inside braces @{ }
-
 ---
 AI
 
@@ -535,7 +529,7 @@ The Html.Partial() and Html.RenderPartial() methods in ASP.NET MVC serve similar
 Html.Partial():
 Returns: An MvcHtmlString (a string that can be assigned to a variable).
 Usage: You can store the output in a variable or return it from a method.
-Behavior: The result is constructed inline with the parent view and accesses the parentís model.
+Behavior: The result is constructed inline with the parent view and accesses the parent‚Äôs model.
 Use Case: When you need to manipulate the output or assign it to a variable.
 
 Html.RenderPartial():
@@ -561,6 +555,7 @@ The basic usage is:
 // Razor syntax
 @Html.Partial("ViewName")
 @{ Html.RenderPartial("ViewName");  }
+Html.Partial() need not to be inside the braces.	Html.RenderPartial must be inside braces @{ }
 
 // WebView syntax
 <%: Html.Partial("ViewName") %>
@@ -581,7 +576,7 @@ into the parent page. An .ascx user control has far more overhead.
 '@Html.RenderPartial' returns the equivalent of a .ascx user control. It gets its own copy of the page's ViewDataDictionary and 
 changes made to the RenderPartial's ViewData do not effect the parent's ViewData.
 --------------------------------------------------------
-In an HTML document, the <section> tag defines a standalone section of functionality. Itís typically used for grouping related 
+In an HTML document, the <section> tag defines a standalone section of functionality. It‚Äôs typically used for grouping related 
 content together, often with a heading. Here are some key points about the <section> tag:
 
 Semantic Purpose:
@@ -613,7 +608,7 @@ Use the ::backdrop pseudo-element to style the backdrop behind a modal dialog.
 Add the autofocus attribute to the element that should receive immediate interaction upon opening a modal dialog.
 
 Example:
-Hereís an HTML-only example of creating a non-modal dialog:
+Here‚Äôs an HTML-only example of creating a non-modal dialog:
 HTML
 
 <dialog open>
@@ -625,14 +620,14 @@ HTML
 Webpack is a powerful module bundler for web development. Its primary purpose is to bundle JavaScript files, styles, images, 
 and other resources into a single file for efficient deployment. Here are the key points about Webpack:
 
-Webpackís main focus is on bundling JavaScript modules.
+Webpack‚Äôs main focus is on bundling JavaScript modules.
 It takes your code, along with its dependencies, and creates a single output file (usually named bundle.js).
 
 While JavaScript is its primary use case, Webpack is also capable of handling other assets like stylesheets, images, fonts, 
 and more. It can transform, bundle, or package any resource or asset needed for your web application.
 
 You can use Webpack without any configuration, and it will bundle your assets based on sensible defaults.
-However, you can also provide a custom webpack.config.js file to tailor the behavior according to your projectís needs.
+However, you can also provide a custom webpack.config.js file to tailor the behavior according to your project‚Äôs needs.
 --------------------------------------------------------
 Flexbox, also known as the Flexible Box Layout, is a powerful CSS method for arranging items within a container. Here are the 
 key points about flexbox:
@@ -735,39 +730,39 @@ Common HTTP Status Codes
 200 OK: General success response for various types of requests.
 201 Created: Indicates successful creation of a new resource.
 -------------------------
-Status Code 200 ñ This is the standard ìOKî status code for a successful HTTP request. The response that is returned is dependent 
+Status Code 200 ‚Äì This is the standard ‚ÄúOK‚Äù status code for a successful HTTP request. The response that is returned is dependent 
 on the request. For example, for a GET request, the response will be included in the message body. For a PUT/POST request, the 
 response will include the resource that contains the result of the action.
 
-Status Code 201 ñ This is the status code that confirms that the request was successful and, as a result, a new resource was created. 
+Status Code 201 ‚Äì This is the status code that confirms that the request was successful and, as a result, a new resource was created. 
 Typically, this is the status code that is sent after a POST/PUT request.
 
-Status Code 204 ñ This status code confirms that the server has fulfilled the request but does not need to return information. 
+Status Code 204 ‚Äì This status code confirms that the server has fulfilled the request but does not need to return information. 
 Examples of this status code include delete requests or if a request was sent via a form and the response should not cause the form to be 
 refreshed or for a new page to load.
 
-Status Code 304 ñ The is status code used for browser caching. If the response has not been modified, the client/user can continue to use 
-the same response/cached version. For example, a browser can request if a resource has been modified since a specific time. If it hasnít, 
+Status Code 304 ‚Äì The is status code used for browser caching. If the response has not been modified, the client/user can continue to use 
+the same response/cached version. For example, a browser can request if a resource has been modified since a specific time. If it hasn‚Äôt, 
 the status code 304 is sent. If it has been modified, a status code 200 is sent, along with the resource.
 
-Status Code 400 ñ The server cannot understand and process a request due to a client error. Missing data, domain validation, and invalid 
+Status Code 400 ‚Äì The server cannot understand and process a request due to a client error. Missing data, domain validation, and invalid 
 formatting are some examples that cause the status code 400 to be sent.
 
-Status Code 401 ñ This status code request occurs when authentication is required but has failed or not been provided.
+Status Code 401 ‚Äì This status code request occurs when authentication is required but has failed or not been provided.
 
-Status Code 403 ñ Very similar to status code 401, a status code 403 happens when a valid request was sent, but the server refuses to 
+Status Code 403 ‚Äì Very similar to status code 401, a status code 403 happens when a valid request was sent, but the server refuses to 
 accept it. This happens if a client/user requires the necessary permission or they may need an account to access the resource. Unlike 
 a status code 401, authentication will not apply here.
 
-Status Code 404 ñ A status code 404 occurs when the request is valid, but the resource cannot be found on the server. Even though 
-these are grouped in the Client Errors ìbucket,î they are often due to improper URL redirection.
+Status Code 404 ‚Äì A status code 404 occurs when the request is valid, but the resource cannot be found on the server. Even though 
+these are grouped in the Client Errors ‚Äúbucket,‚Äù they are often due to improper URL redirection.
 
-Status Code 409 ñ A status code 409 is sent when a request conflicts with the current state of the resource. This is usually an 
+Status Code 409 ‚Äì A status code 409 is sent when a request conflicts with the current state of the resource. This is usually an 
 issue with simultaneous updates, or versions, that conflict with one another.
 
-Status Code 410 ñ Resource requested is no longer available and will not be available again.
+Status Code 410 ‚Äì Resource requested is no longer available and will not be available again.
 
-Status Code 500 ñ The 500 series codes are similar to the 400 series codes in that they are true error codes. The status code 500 
+Status Code 500 ‚Äì The 500 series codes are similar to the 400 series codes in that they are true error codes. The status code 500 
 happens when the server cannot fulfill a request due to an unexpected issue. Web developers typically have to comb through the 
 server logs to determine where the exact issue is coming from.
 --------------------------------------------------------
@@ -792,47 +787,61 @@ To check the event propogation status, you can use event.isPropogationStopped(),
 event.isDefaultPrevented.
 --------------------------------------------------------
 The ?? operator in C# is called the null-coalescing operator. It allows you to define a default value for a nullable value type or a 
-reference type. Hereís how it works:
+reference type. Here‚Äôs how it works:
     If the left-hand operand is not null, the operator returns the value of the left-hand operand.
     If the left-hand operand is null, the operator returns the value of the right operand.
+
+    string? userInput = null; // Simulating a null value
+    string result = userInput ?? "Default Value";
 
 Note that in JavaScript the null-coalescing operator uses double pipes(||) instead of double question marks (??).
 --------------------------------------------------------
 To enhance the performance of your C# backend code, consider implementing the following optimizations:
 
 Profile Your Application: Use profiling tools like Visual Studio Profiler to identify performance bottlenecks. This helps in pinpointing 
-specific areas that require optimization 5.
+specific areas that require optimization.
+
 Memory Optimizations: Implement object pooling, reduce object sizes, and prevent memory leaks to manage memory efficiently. This 
-increases application scalability and reduces memory-related issues 5.
+increases application scalability and reduces memory-related issues.
 
 Avoid Dynamic Typing: Dynamic typing can lead to significant performance hits. Prefer strongly typed variables and properties to avoid 
 runtime type checking overhead.
 
-Use Efficient Algorithms and Data Structures: Identify performance-critical sections of your code and optimize them using efficient algorithms and data structures. Refactor code to eliminate unnecessary computations and loops 5.
+Use Efficient Algorithms and Data Structures: Identify performance-critical sections of your code and optimize them using efficient 
+algorithms and data structures. Refactor code to eliminate unnecessary computations and loops.
 
-Enable JIT Compiler Optimizations: Ensure that Just-In-Time (JIT) compiler optimizations are enabled in your applicationís configuration. JIT optimizations can significantly improve runtime performance by optimizing code execution 5.
+Enable JIT Compiler Optimizations: Ensure that Just-In-Time (JIT) compiler optimizations are enabled in your application‚Äôs 
+configuration. JIT optimizations can significantly improve runtime performance by optimizing code execution.
 
-Synchronization Primitives: Use locks, mutexes, or semaphores to ensure thread-safe access to shared resources and avoid race conditions. Proper synchronization is crucial for multithreaded applications 5.
+Synchronization Primitives: Use locks, mutexes, or semaphores to ensure thread-safe access to shared resources and avoid race 
+conditions. Proper synchronization is crucial for multithreaded applications 5.
 
-Client-Side Caching: Employ client-side caching to store frequently accessed or relatively static data, reducing the need for repeated network requests. This can significantly improve response times 5.
+Client-Side Caching: Employ client-side caching to store frequently accessed or relatively static data, reducing the need for 
+repeated network requests. This can significantly improve response times.
 
-Reduce Network Round-Trip Time: Minimize the number of network round-trips by compressing data, employing HTTP compression, and lowering the size of payloads. This boosts the overall speed of your.NET application 5.
+Reduce Network Round-Trip Time: Minimize the number of network round-trips by compressing data, employing HTTP compression, and 
+lowering the size of payloads. This boosts the overall speed of your.NET application.
 
-Asynchronous Programming: Avoid blocking calls and prefer asynchronous programming to run multiple processes simultaneously without blocking the main thread. This creates responsive and scalable applications 5.
+Asynchronous Programming: Avoid blocking calls and prefer asynchronous programming to run multiple processes simultaneously 
+without blocking the main thread. This creates responsive and scalable applications.
 
-Update.NET Framework and Libraries: Regularly update your.NET framework, libraries, and dependencies. Newer versions often come with performance improvements, bug fixes, and optimized algorithms 5.
+Update.NET Framework and Libraries: Regularly update your.NET framework, libraries, and dependencies. Newer versions often come 
+with performance improvements, bug fixes, and optimized algorithms.
 
-By applying these optimizations, you can significantly improve the performance of your C# backend code, leading to faster response times, better scalability, and a more efficient application overall.
 ---
 1. Visual Studio Profiler
-Description: Integrated into Visual Studio, the Visual Studio Profiler provides a comprehensive suite of tools for diagnosing performance issues. It supports profiling C#, VB.NET, C++, F#, and more.
-Features: Offers detailed insights into CPU usage, memory consumption, and application-level issues. It allows you to visualize execution times and CPU usage, making it easier to identify bottlenecks.
-Usage: Ideal for developers looking for a deep dive into application performance, especially when integrated with the Visual Studio IDE for ease of use and analysis 1.
+Description: Integrated into Visual Studio, the Visual Studio Profiler provides a comprehensive suite of tools for diagnosing 
+             performance issues. It supports profiling C#, VB.NET, C++, F#, and more.
+Features: Offers detailed insights into CPU usage, memory consumption, and application-level issues. It allows you to 
+          visualize execution times and CPU usage, making it easier to identify bottlenecks.
+Usage: Ideal for developers looking for a deep dive into application performance, especially when integrated with the Visual 
+       Studio IDE for ease of use and analysis.
 2..NET Async Tool
 Description: Part of the Visual Studio Profiler, the.NET Async tool specifically targets asynchronous code performance.
-Features: Displays start time, end time, and total time for each async operation, helping to identify inefficiencies in asynchronous code paths.
-Usage: Best suited for applications heavily reliant on asynchronous programming, where understanding the performance characteristics of async operations is crucia
----
+Features: Displays start time, end time, and total time for each async operation, helping to identify inefficiencies in 
+          asynchronous code paths.
+Usage: Best suited for applications heavily reliant on asynchronous programming, where understanding the performance 
+       characteristics of async operations is crucia
 --------------------------------------------------------
 Responsive web design (RWD) is an approach to web design that ensures your website looks great and functions well across various 
 devices and screen sizes. Whether users access your site on desktops, tablets, or smartphones, responsive design adapts the layout, 
@@ -840,7 +849,8 @@ content, and user experience accordingly. By using techniques like CSS media que
 create a seamless browsing experience for everyone. 
 
 --------------------------------------------------------
-XSLT (Extensible Stylesheet Language Transformations) serves as a powerful tool for transforming and manipulating XML data. Its primary purposes include:
+XSLT (Extensible Stylesheet Language Transformations) serves as a powerful tool for transforming and manipulating XML data. Its 
+primary purposes include:
 
 XML Transformation: XSLT allows you to convert XML documents into different formats (e.g., HTML, plain text, or other XML structures) by applying rules defined in an XSLT stylesheet.
 Data Extraction and Filtering: You can extract specific data from an XML document using XSLT templates. For example, you can select nodes, filter content, and create new structures.
@@ -851,38 +861,43 @@ In summary, XSLT is essential for converting, styling, and manipulating XML data
 --------------------------------------------------------
 Basically TypeScript provides strong type checking on javascript.
 --------------------------------------------------------
-Using Microsoft mvc. When making a call to a controller action named Index, it should be an http GET request.
+Using Microsoft mvc. When making a call to a controller action named Index, it should be an http GET request. It is default in .Net 8.
 --------------------------------------------------------
-In Microsoft MVC, when you make a call to a controller action named "Index", it typically corresponds to 
-the default action that is invoked when you access a controller without specifying a particular action method. The HTTP request 
-method used to call this action depends on how you configure your routes and how you intend to interact with the action.
+In Microsoft MVC, when you make a call to a controller action named "Index", it typically corresponds to the default action 
+that is invoked when you access a controller without specifying a particular action method. The HTTP request method used to 
+call this action depends on how you configure your routes and how you intend to interact with the action.
 --------------------------------------------------------
 Why HTML Helpers in ASP.NET MVC?
 HTML Helpers in ASP.NET MVC are utility methods that help generate HTML markup. They serve several purposes:
-Abstraction of HTML: HTML Helpers abstract the low-level details of HTML markup generation. Instead of manually writing HTML tags in your views, you can use HTML Helpers to generate them programmatically.
+Abstraction of HTML: HTML Helpers abstract the low-level details of HTML markup generation. Instead of manually writing HTML 
+tags in your views, you can use HTML Helpers to generate them programmatically.
 
-Type Safety: HTML Helpers are strongly typed, meaning they are bound to specific data types. This ensures type safety during compile time, reducing the chances of runtime errors.
+Type Safety: HTML Helpers are strongly typed, meaning they are bound to specific data types. This ensures type safety during 
+compile time, reducing the chances of runtime errors.
 
-Code Reusability: By encapsulating common HTML patterns into reusable methods, HTML Helpers promote code reusability and maintainability. You can use them across multiple views and share them among different projects.
+Code Reusability: By encapsulating common HTML patterns into reusable methods, HTML Helpers promote code reusability and 
+maintainability. You can use them across multiple views and share them among different projects.
 
-Intellisense Support: When you use HTML Helpers in your views, you benefit from Intellisense support in your IDE. This support provides helpful suggestions and auto-completion, making development faster and more efficient.
+Intellisense Support: When you use HTML Helpers in your views, you benefit from Intellisense support in your IDE. This support 
+provides helpful suggestions and auto-completion, making development faster and more efficient.
 
-Security: Some HTML Helpers automatically handle the encoding of user input, helping prevent common security vulnerabilities such as Cross-Site Scripting (XSS) attacks.
+Security: Some HTML Helpers automatically handle the encoding of user input, helping prevent common security vulnerabilities 
+such as Cross-Site Scripting (XSS) attacks.
 --------------------------------------------------------
 Similarities between Angular and React
 https://www.copycat.dev/blog/angular-vs-react/
 The following are some ways that Angular and React are similar:
 
 Architecture: Component-based architecture is a feature of both Angular and React. These UI components are endlessly reusable and recyclable and are the building block of all React and Angular apps.
-Open-source: Both tools are open-source. Due to the large development communities for React and Angular, theyíre both regularly maintained and updated.
+Open-source: Both tools are open-source. Due to the large development communities for React and Angular, they‚Äôre both regularly maintained and updated.
 Client-side and Server-side rendering: Client-side and server-side rendering are both efficiently provided by Angular and React.
-Performance: Performance-wise, Angular and React are comparable. The userís perspective mostly determines the difference.
+Performance: Performance-wise, Angular and React are comparable. The user‚Äôs perspective mostly determines the difference.
 Development environment: Angular and React can both be used to create the front end of a mobile or online application.
 Easy updating: Both Angular and React provide seamless updating. React is dependent on third-party libraries, whereas Angular leverages CLI.
 Popularity: Both of these technologies are widely used by developers to create single-page applications(SPAs).
 ---
 REACT
-Reactís virtual DOM implementation significantly boosts its speed such that it outperforms Angular. The burden on the browser is 
+React‚Äôs virtual DOM implementation significantly boosts its speed such that it outperforms Angular. The burden on the browser is 
 lessened since all virtual DOM trees are compact and created on the server. Furthermore, unlike in the case of Angular, the 
 data-binding process is unidirectional; therefore, bindings are not given observers. No additional effort is generated in either respect.
 
@@ -915,10 +930,17 @@ React, however, supports Javascript and Typescript, making it a preferred option
 transitions from Javascript to Typescript and vice-versa.
 ---
 Data binding is the process of synchronizing data between a Model and a View. Angular leverages changeable data and a two-way 
-data-binding method. This implies that the model state will change when changes to the UIís input occur, and vice versa.
+data-binding method. This implies that the model state will change when changes to the UI‚Äôs input occur, and vice versa.
 
 React, on the other hand, employs a unidirectional (or one-way) data-binding procedure. As a result, changing a UI element does 
-not alter a componentís state, which can facilitate debugging.
+not alter a component‚Äôs state, which can facilitate debugging.
+--------------------------------------------------------
+Early binding in C# refers to compile-time binding where the type of an object and its associated methods are determined at compile 
+time rather than at runtime. This means that method calls and property accesses are resolved when the code is compiled, leading to 
+better performance and type safety.
+
+Early binding contrasts with late binding, where methods are resolved at runtime, such as when using reflection or dynamic types 
+(dynamic keyword). Since early binding checks types at compile time, it helps prevent errors and usually results in faster execution.
 --------------------------------------------------------
 In C#, a lambda expression is a concise way to create an anonymous function. It allows you to define a small block of code that 
 can accept parameters and return a value. Here are the key points about lambda expressions:
@@ -933,7 +955,7 @@ A statement lambda that performs more complex logic: (x, y) => { return x + y; }
 
 Delegate Types:
 Lambda expressions can be converted to delegate types.
-If a lambda doesnít return a value, it can be an Action<T1, T2> delegate.
+If a lambda doesn‚Äôt return a value, it can be an Action<T1, T2> delegate.
 If it returns a value, it can be a Func<T, TResult> delegate.
 
 Use Cases:
@@ -941,10 +963,133 @@ lambda are commonly used in LINQ queries, asynchronous code, and background task
 Example: numbers.Select(x => x * x) squares each number in an array.
 Remember, lambda expressions provide a concise way to create anonymous functions in C#
 --------------------------------------------------------
+Static classes in C# can have private members. Static classes are designed to contain only static members, but within the class, 
+you can declare private fields, properties, and methods that are accessible only within that class.
+
+It is not possible to create an instance of a static class in C#. Static classes are designed to be non-instantiable.
+--------------------------------------------------------
+Web_Site_Security
+
+The Antiforgery token in ASP.NET MVC is used to prevent Cross-Site Request Forgery (CSRF) attacks, which occur when a 
+malicious site tricks a user into submitting unauthorized requests to a trusted website. Any authenticated user can 
+be tricked into modifying state on your server by simply visiting a malicious website.
+How an Antiforgery token Works
+When a user loads a form in an MVC application, the server generates two tokens:
+    One is stored in a cookie.
+    The other is placed in a hidden form field.
+    When the form is submitted, both tokens must be sent back to the server.
+
+The server validates that the tokens match. If they don‚Äôt, the request is rejected.
+
+Use @Html.AntiForgeryToken() inside your form. This generates a hidden input field containing the antiforgery token.
+
+Apply [ValidateAntiForgeryToken] to your action method:
+    HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult SubmitAction(string username)
+    {
+        // Process the request securely
+        return View();
+    }
+
+If the token is missing or invalid ‚Üí HTTP 400 Bad Request. Antiforgery tokens verify that form submissions come from real users 
+interacting with your app ‚Äî not malicious third-party sites trying to exploit authenticated sessions.
+
+In .NET 8, you typically configure antiforgery globally to avoid having to sprinkle [ValidateAntiForgeryToken] everywhere.
+You can wire it up globally at the middleware level.
+Key points
+This applies antiforgery globally on all unsafe HTTP methods.
+No need to decorate individual controllers with [ValidateAntiForgeryToken].
+Works for MVC, Razor Pages, or Minimal APIs.
+
+Still requires that the client sends the antiforgery token (either as a form field or a header).
+For APIs and AJAX requests
+When you're working with APIs (especially SPAs), the common pattern is:
+    Server sends the antiforgery token as a cookie (XSRF-TOKEN).
+    Client reads it and sends it back in a header (X-CSRF-TOKEN).
+
+If you're building a pure API that uses JWT tokens ‚Üí CSRF protection usually isn‚Äôt necessary (because no cookies are involved).
+
+---
+Cross-site scripting (XSS) is a web security vulnerability that allows attackers to inject malicious scripts into web pages 
+viewed by other users. These scripts can steal sensitive information, manipulate website content, or impersonate users.
+
+There are three main types of XSS attacks:
+
+Reflected XSS: The malicious script is included in a URL and executed when a user clicks the link.
+Stored XSS: The script is permanently stored on a website (e.g., in a comment section) and runs whenever a user views the affected page.
+DOM-based XSS: The attack occurs within the browser‚Äôs Document Object Model (DOM) without direct interaction with the server.
+
+To prevent Cross-site scripting (XSS), developers should:
+Sanitize and validate user input to remove harmful scripts.
+Use Content Security Policy (CSP) to restrict script execution.
+Escape output before rendering user-generated content.
+---
+ASP.NET Core MVC automatically encodes HTML output in Razor views, preventing direct execution of user input.
+    @model MyModel
+    <p>@Model.UserInput</p> // Automatically HTML-encoded
+
+If you need to allow some HTML but filter out dangerous tags, consider using HtmlSanitizer.
+
+Use HtmlEncoder to sanitize input before storing or processing: 
+    string sanitizedInput = HtmlEncoder.Default.Encode(userInput);
+
+Use AntiXSS Middleware
+    Enable Request Filtering with AddAntiforgery() to block unexpected input in form.
+
+Explicit Encoding with HtmlEncoder
+If working with raw strings, encode output manually:
+    @using System.Text.Encodings.Web
+    @Html.Raw(HtmlEncoder.Default.Encode(Model.UserInput))
+
+Enforce Content Security Policy (CSP)
+CSP prevents inline scripts from executing. You can add a CSP header:
+    app.Use(async (context, next) =>
+    {
+        context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src 'self'");
+        await next();
+    });
+    
+Validate and Escape Input in JavaScript
+Avoid inserting raw user input into JavaScript without sanitization:
+    document.getElementById('message').innerText = userInput; // Safe
+Instead of:
+    document.getElementById('message').innerHTML = userInput; // Unsafe
+---
+Preventing Cross-Site Scripting (XSS) in Web APIs requires a combination of input validation, output encoding, and security 
+headers to ensure malicious scripts don‚Äôt get executed in client applications. Here‚Äôs a structured approach for ASP.NET 
+Core Web APIs:
+
+Input Validation
+Ensure that user input is properly validated before processing:
+public class UserInput
+{
+    [Required]
+    [MaxLength(50)]
+    [RegularExpression(@"^[a-zA-Z0-9]*$", ErrorMessage = "Invalid characters in name")]
+    public string Name { get; set; }
+}
+This prevents harmful characters from being injected into API requests.
+
+Sanitize User Input
+Use HtmlEncoder to sanitize input before storing or processing:
+    using System.Text.Encodings.Web;
+    tring sanitizedInput = HtmlEncoder.Default.Encode(userInput);
+This ensures that special characters like < and > are encoded safely.
+
+Output Encoding
+Before returning data to clients, encode it to prevent execution:
+    public IActionResult GetUser(string name)
+    {
+        var safeName = HtmlEncoder.Default.Encode(name);
+        return Ok(new { Name = safeName });
+    }
+This prevents malicious scripts from being executed in the browser.
+
 
 --------------------------------------------------------
 
---------------------------------------------------------
+
 
 --------------------------------------------------------
 

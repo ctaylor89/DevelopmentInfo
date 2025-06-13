@@ -199,6 +199,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNetCore", "DotNetCore", "{5F8C8377-6EEB-4E62-A6F1-920FB0C0492E}"
 	ProjectSection(SolutionItems) = preProject
 		DotNetCore.txt = DotNetCore.txt
+		DotNetCore2.txt = DotNetCore2.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StudyNotesToRecord", "StudyNotesToRecord", "{EFD945D6-38C8-4118-9D33-ABD517066A4D}"
@@ -210,8 +211,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cloud", "Cloud", "{87315A71
 	ProjectSection(SolutionItems) = preProject
 		AZ900.txt = AZ900.txt
 		AZ900_ExamTopics.txt = AZ900_ExamTopics.txt
-		Cloud\Azure.txt = Cloud\Azure.txt
 		AzServices.txt = AzServices.txt
+		Cloud\Azure.txt = Cloud\Azure.txt
 		Azure01_Learn.txt = Azure01_Learn.txt
 		AzureToAWS.txt = AzureToAWS.txt
 	EndProjectSection
