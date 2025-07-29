@@ -1,7 +1,9 @@
 Coding Assistance tools
 Github_Copilot_VisualStudio
 Prompt_
+
 Prompt_Using
+Using_Prompt_Engineering
 
 https://dev.to/eekayonline/a-list-of-ai-powered-tools-for-c-developers-3p1k
 
@@ -82,6 +84,10 @@ Make changes to multiple files with Copilot Edits: Tackle changes across multipl
 Support for the Copilot Extensions ecosystem: Access third-party agents designed for tasks such as querying Stack Overflow or searching the web with Perplexity.
 Choose where you build: Enjoy support in VS Code and across GitHub.
 ----------------------------------------
+Using_Prompt_Engineering
+
+Ask ChatGPT the 80/20 for <your topic>
+ "80/20" What are the 20% of concepts I need to understand to get 80% of the value from this topic?
 
 Can pass it study notes and ask it to generate questions
  "Study Notes"Turn my notes into 15 paractice questions.

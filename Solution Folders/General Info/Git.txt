@@ -1,5 +1,6 @@
 Login_for_GIT_Push
-Name: ctaylor89		Pwd: REMOVETHISghp_REMOVETHISZIzVTzZtGxigKqXmvwUez1A3V8YHcX3jQBul or See GitHub_ in MainNotes2020.txt		Created 032223
+Name: ctaylor89		Pwd: REMOVETHISghp_REMOVETHISZIzVTzZtGxigKqXmvwUez1A3V8YHcX3jQBul or See GitHub_ in MainNotes2020.txt		
+Created 032223
 
 git init								         Create a git repository from that directory
 git restore <file path and file name>            To restore an unstaged file

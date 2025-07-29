@@ -67,6 +67,23 @@ that either implement or override its methods. You can have functionality in you
 ---	
 The main features of a C Sharp static class:
 Static classes contain only static members, cannot be instantiated, is sealed, constructor only called once.
+---
+Making a method that is in an instance type of method static in C# has several advantages:
+1.	No Need for Object Instantiation
+A static method belongs to the type itself, not to a specific instance. You can call it directly on the class without creating 
+an object, which can simplify usage and improve performance when object state is not needed.
+
+2.	Clearer Intent
+Declaring a method as static signals that it does not depend on or modify instance data. This makes the code easier to understand 
+and maintain.
+
+3.	Static methods can be slightly faster to invoke because they don’t require a reference to an object instance.
+
+4.	Thread Safety
+If a method does not access or modify instance fields, making it static can help avoid accidental state sharing between threads.
+
+If a method does not rely on instance data, making it static improves clarity, usability, and sometimes performance. It also 
+enforces better design by making dependencies explicit.
 
 //C Sharp DataTypes
 Value Types: integer, float, double, decimal, char, booleon, enum, struct, nullable
@@ -222,7 +239,7 @@ types of guest OSes (e.g. you could not run Windows in a Red Hat Linux container
 run separate application processes, in which case the variables and libraries required by the application process are added to the 
 container.
 
-One of the best-known container virtualization products is Docker (docker.com). Containerization underpins many cloud services. 
+One of It the best-known container virtualization products is Docker (docker.com). Containerization underpins many cloud services. 
 In particular, it supports microservices and serverless architecture. Containerization is also being widely used to implement corporate 
 workspaces on mobile devices.
 --------------------------------------------------------

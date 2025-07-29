@@ -1,5 +1,5 @@
 Comprehension_and_Lambda_queries
-
+Examples_
 
 Looks like a good tutorial
 https://www.codeproject.com/Articles/286255/Using-LINQ-Queries
@@ -13,6 +13,109 @@ Examples of the more popular LINQ methods
 https://canro91.github.io/2021/01/18/LinqGuide/
 
 ----------------------------------------------------------------------------------
+Examples_  ref: https://canro91.github.io/2021/01/18/LinqGuide/ 
+
+If you're trying to filter numbers that equal 99, and then select them (trivially or with transformation), you could use:
+    var results = numbers.Where(x => x == 99).Select(x => x);   *Select() is optional here
+
+If you want a list instead of IEnumerable:
+    var results = numbers.Where(x => x == 99).ToList();
+
+It is not necessary to use Select() if you are not transforming the elements.
+    var results = numbers.Where(x => x == 99).ToList();
+
+Use Where to filter, Select to transform. Use .ToList() to convert the result to a List. Then you can use the result
+to call ForEach() or any other method that works on a List.
+    numbers.Where(n => n < 3).OrderByDescending(n => n).ToList().ForEach(i => Console.Write($"List Item Value: {i}\n"));
+
+You can replace a foreach statement with a single line of code:
+    var favorites = movies.Where(movie => movie.Rating > 4);
+---
+Where can be used to filter a collection based on a condition or call a method that returns a boolean value.
+Instead of lambda functions, we can use a method as the filtering condition. Let’s create an IsFavorite() method that 
+receives Movie as a parameter and returns bool. For example:
+    private bool IsFavorite(Movie movie) => movie.Rating > 4.5;
+
+Then, we can use IsFavorite() inside the Where() method to filter our movies. Like this,
+    var favorites = movies.Where(movie => IsFavorite(movie));
+
+Since IsFavorite() only has one parameter, we can remove the parameter name:
+    var favorites = movies.Where(IsFavorite);   *Note that Where is a linq extension method.
+---
+Use the Select statement to find only the names of our favorite movies.
+    var favorites = movies.Where(movie => movie.Rating > 4.5)
+                          .Select(movie => movie.Name);
+
+Use the Select keyword to find only the names of our favorite movies in uppercase.
+    var favorites = movies.Where(movie => movie.Rating > 4.5)
+                          .Select(movie => movie.Name.ToUpper());
+---
+The Any keyword checks if a collection has at least one element matching a condition. It returns either true or false.
+Let’s see if we have watched movies with a low rating.
+    var hasAnyMovies = movies.Any();
+    var hasBadMovies = movies.Any(movie => movie.Rating < 2)
+---
+The All keyword checks if every element inside a collection matches a condition. It also returns either true or false.
+Let’s see if we have only watched really-good movies.
+    bool weHaveOnlySeenReallyGoodMovies = movies.All(movie => movie.Rating >= 4.5);
+---
+GroupBy groups the elements of a collection based on a key. It returns a collection of “groups” or “buckets” organized 
+by a key. 
+Let’s group some movies by rating.
+    var groupedByRating = movies.GroupBy(movie => movie.Rating);
+
+    foreach (var group in groupedByRating)
+    {
+        Console.WriteLine($"Rating: {group.Key}");
+
+        foreach (var movie in group)
+        {
+            Console.WriteLine($"{movie.Name}");
+        }
+        Console.WriteLine();
+    }
+// Output:
+// Rating: 4.5
+// Titanic
+//
+// Rating: 4.6
+// The Fifth Element
+//
+// Rating: 4.7
+// Terminator 2
+//
+// Rating: 5
+// Avatar
+// My Neighbor Totoro
+//
+// Rating: 4
+// Platoon
+--
+We grouped our list of movies using only one property: Rating. But, GroupBy has other use-cases: transforming each group 
+and grouping by more than one property.
+    var groupedBooks = books.GroupBy(b => new { b.Author, b.Genre });
+What This Does:
+It groups the books by a composite key consisting of both Author and Genre.
+The resulting group.Key is an anonymous type with two properties: Author and Genre.
+
+If you need to return these groups from a method or work with them further, consider projecting them into a named type 
+instead of using anonymous types, like so:
+    var groupedBooks = books.GroupBy(b => new BookGroupKey { Author = b.Author, Genre = b.Genre })
+--
+First and FirstOrDefault return the first element in a collection or the first one matching a condition. First throws 
+an exception if the collection is empty or doesn’t have matching elements. And FirstOrDefault returns the default value 
+of the element type, instead. Let’s find the oldest film we have watched.
+    var oldest = movies.OrderBy(movie => movie.ReleaseYear)
+                       .First();
+
+In the same spirit of First() and FirstOrDefault(), we have Last() and LastOrDefault(). They return the last element 
+instead of the first one. .NET6 introduced new LINQ methods and oveloads. FirstOrDefault() and similar XOrDefault() 
+methods have a new overload to pass an optional default value. And, we have methods like MinBy() we can use to replace an 
+OrderBy() followed by First().
+--
+Four new LINQ methods in .NET 6: Chunk, DistinctBy, Take, XOrDefault
+https://canro91.github.io/2022/06/27/NET6LinqMethods/
+----------------------------------------------------------------------------------
 Three ways in which you can write a LINQ query in C#:
 1) Use Comprehension query syntax. 2) Use Lambda syntax(chaining methods together). 3) Use a combination of both.
 *Not: Also known as Query Syntax and LINQ Method Syntax.
@@ -24,7 +127,7 @@ Using a query expression with Comprehension and Lambda syntax(Mixed Syntax).
     int numCount1 =
          (from num in numbers1
          where num < 3 || num > 7
-         select num).Count();       // Adding Count() is the Lambda systax.
+         select num).Count();       // Adding Count() is the Lambda syntax.
 ----------------------------------------------------------------------------------
 Comprehension_and_Lambda_queries 
 The select operator is optional in lambda when not doing a projection.
@@ -260,7 +363,8 @@ Locating_duplicate_values
 
 Q: How do I retrieve a list of integer values that are repeated more than once in a List<int>?
 
-A: Group the elements based on their value, and then pick a representative of the group if there are more than one element in the group.
+A: Group the elements based on their value, and then pick a representative of the group if there are more 
+than one element in the group.
     var query = lst.GroupBy(x=>x)
                   .Where(g=>g.Count()>1)
                   .Select(y=>y.Key)

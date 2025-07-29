@@ -128,7 +128,8 @@ https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-7.0&t
 
 The .csproj file format has been simplified in ASP.NET Core. Some notable changes include:
 
-Explicit inclusion of files isn't necessary for them to be considered part of the project. This reduces the risk of XML merge conflicts when working on large teams.
+Explicit inclusion of files isn't necessary for them to be considered part of the project. This reduces the risk of XML merge 
+conflicts when working on large teams.
 
 There are no GUID-based references to other projects, which improves file readability.
 

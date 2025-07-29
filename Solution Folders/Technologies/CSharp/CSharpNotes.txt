@@ -1,4 +1,4 @@
-_Access_Levels
+ï»¿_Access_Levels
 _Arrays
 _Attributes
 _Classes
@@ -16,10 +16,12 @@ _Keywords
 _JSON
 _Loops
 _MethodImplOptions
+_Newer_C#_Features
 _Optimization
 _Properties
 _RandomNotes
 _String_Methods
+
 
 Casting is the action of changing an entity of one data type into another.
 
@@ -433,9 +435,7 @@ public abstract class Animal
     protected Animal(string myString){      *Note that the constructor is protected to limit it being called only by the sub class.
       data = myString;
     }
-
-    public abstract void FeedIt();      
-
+    public abstract void FeedIt();
     public virtual void CombAnimal()        *This method does not need to be overriden.    
     {...}
 }
@@ -474,6 +474,151 @@ Contains only static members, cannot be instantiated, is sealed, cannot contain 
 ---------------------------------------------------------------
 _CodeSnippets
 https://msdn.microsoft.com/en-us/library/z41h7fat.aspx  - Visual C# Code Snippets
+
+---------------------------------------------------------------
+_Newer_C#_Features
+
+Declare a constructor directly in the type signature for any class or struct, not just records:
+    public class Book(double price, string author)
+    {
+        public double Price { get; } = price;
+        public string Author { get; } = author;
+    }
+---
+Collection Expressions (AKA Inline Collection Literals)
+Create existing types with a unified syntaxâ€”arrays, lists, spans:
+
+New:    int[] x1 = [1, 2, 3, 4];  
+Orig:   int[] x1 = new int[] { 1, 2, 3, 4 };
+
+New:    int[] x2 = []
+Orig:   int[] x2 = Array.Empty<int>();
+
+New:    WriteByteArray([1, 2, 3]);      // The compiler will try to infer the correct type based on the target method parameter.
+Orig:   WriteByteArray(new[] byte { (byte)1, (byte)2, (byte)3});
+Method: void WriteByteArray(byte[] bytes)
+
+New:    WriteByteSpan([1, 2, 3]);
+Orig:   WriteByteSpan(stackalloc[] { (byte)1, (byte)2, (byte)3 });
+Method: void WriteByteArray(Span<byte> bytes)
+
+New:    List<int> x4 = [1, 2, 3, 4 ];
+Orig:   List<int> x4 = new() { 1, 2, 3, 4 };
+
+The spread operator (..) was introduced as part of collection expressions. It allows you to flatten or merge collections into 
+a new one inline. It is similar to how JavaScript spread syntax works.
+    var numbers = [1, 2, 3];
+    var moreNumbers = [0, ..numbers, 4];    // [0, 1, 2, 3, 4]
+Another example:
+    Span<byte> baseHeader = [0x01, 0x02];
+    Span<byte> fullPacket = [..baseHeader, 0xAA, 0xBB, 0xCC];
+
+The spread operator works inside collection expressions, which can target:
+Arrays, Lists, Span, ReadOnlySpan. Limitation: Spread Must have an Existing Collection.
+---
+An inline array is a feature that allows you to define a fixed-size buffer as a field in a struct, using the [InlineArray(N)] 
+attribute. An inline array is: A struct that behaves like an array. Usable via Span<T> for type safe access. It is useful for 
+performance-critical scenarios where you want to avoid heap allocations and use stack memory instead.
+
+    using System.Runtime.CompilerServices;
+    [InlineArray(4)]
+    public struct Int4
+    {
+        private int _element0;
+    }
+
+Int4 acts like an array of 4 integers: int[4]. The compiler auto-generates fields: _element0, _element1, _element2, _element3
+Efficient and safe for performance-critical scenarios. Only private field allowed that must be named _element0, _element1, etc.
+    // Example usage of Int4 inline array
+    [InlineArray(4)]                    // Attribute
+    struct Int4
+    {
+        private int _element0;
+        private int _element1;
+        private int _element2;
+        private int _element3;
+        public int this[int index] // Indexer to access elements like an array
+        {
+            get => index switch
+            {
+                0 => _element0,
+                1 => _element1,
+                2 => _element2,
+                3 => _element3,
+                _ => throw new IndexOutOfRangeException()
+            };
+            set
+            {
+                switch (index)
+                {
+                    case 0: _element0 = value; break;
+                    case 1: _element1 = value; break;
+                    case 2: _element2 = value; break;
+                    case 3: _element3 = value; break;
+                    default: throw new IndexOutOfRangeException();
+                }
+            }
+        }
+    }
+You can access it like an array:
+    Int4 values = default;
+    values[0] = 10;
+    values[1] = 20;
+
+    foreach (var val in values)
+        Console.WriteLine(val);  // Prints 10, 20, 0, 0
+
+You can also use Buffer6 struct as another example of inline arrays:
+[InlineArray(6)]
+struct Buffer6<T>
+{
+    private T _element0;
+    private T _element1;
+}
+---
+ref readonly Parameters are a new way to pass parameters by reference while ensuring that the parameter cannot be modified within 
+the method. Clarifies intent and enables further optimizations. Explicit way to pass by reference while ensuring immutability:
+    void Process(ref readonly MyStruct s) { /* can't modify s */ }
+Clarifies intent and enables further optimizations. This is useful when you want to pass large value types efficiently without 
+copying, but also ensure they cannot be modified inside the method.
+    public struct LargeStruct
+    {
+        public int A;
+        public int B;
+        public int C;
+        public int D;
+        public override string ToString() => $"[{A}, {B}, {C}, {D}]";
+    }
+
+---
+olds the memory address of an int value rather than the value itself.
+---
+Type Aliasing for Any Type
+You can now alias any type (arrays, tuples, pointer typesâ€¦):
+using MyAlias = System.Collections.Generic.List<int>;
+using IntArr = int[];
+using Point = (int x, int y);
+using Ptr = int*; // Pointer type alias
+Console.WriteLine($"X: {p.X}, Y: {p.Y}");
+---
+Optional Parameters in Lambdas. Lambdas can now define default values:
+Func<int, int> add = (x = 5) => x + 10; // x defaults to 5 if not provided
+var inc = (int x, int delta = 1) => x + delta;
+int* in C# is a pointer to an int, meaning it holds the memory address of an int value rather than the value itself.
+int* is part of unsafe code in C#. You must use the unsafe keyword to work with pointers.
+    unsafe
+    {
+        int value = 42;
+        int* ptr = &value; // Get the address of value
+        Console.WriteLine(*ptr); // Dereference the pointer to get the value
+    }
+
+When Would You Use int*?
+Interop with native code (P/Invoke, C/C++ libraries). Working with large blocks of memory where performance matters.
+Avoiding array bounds checks in critical code (unsafe memory manipulation).
+---
+
+
 
 ---------------------------------------------------------------
 _DataTypes
@@ -689,12 +834,12 @@ public string DefaultValue => new YearMonth(DateTime.Now).Value;
 ---------------------------------------------------------------
 _ExtensionMethods
 
-The LINQ’s standard query operators such as select, where, etc. are implemented in the Enumerable class. These methods are implemented 
+The LINQâ€™s standard query operators such as select, where, etc. are implemented in the Enumerable class. These methods are implemented 
 as extension methods of the type IEnumerable<T> interface.
 
 Extension methods allow us to add methods to existing types without creating a new derived type, recompiling, or otherwise modifying 
 the original type. In simple words, we can say that the Extension methods can be used as an approach to extending the functionality of 
-a class by adding new methods in the future if the source code of the class is not available or if we don’t have any permission in making 
+a class by adding new methods in the future if the source code of the class is not available or if we donâ€™t have any permission in making 
 changes to the class.
 
 The most important point that you need to keep in mind is, extension methods are the special kind of static methods of a static class, 
@@ -873,10 +1018,16 @@ ref requires the variable be initialized before it is passed. It is also like th
 the called method to modify the argument value. To use an out parameter, both the method definition and the calling method must 
 explicitly use the out keyword. 
 
-Variables passed as out arguments do not have to be initialized before being passed in a method call. However, the called method 
-is required to assign a value before the method returns. The in, ref, and out keywords are not considered part of the method 
-signature for the purpose of overload resolution. Therefore, methods cannot be overloaded if the only difference is 
-that one method takes a ref or in argument and the other takes an out argument.
+Variables passed as 'out' arguments do not have to be initialized before being passed to a method call. However, the 
+called method is required to assign a value before the method returns. 
+
+Variables passed as 'ref' arguments have to be initialized before being passed to a method call.
+
+Variables passed as 'in' arguments have to be initialized before being passed to a method call and are read only within 
+the called method. Using the 'in' keywork will prevent the called method from making a copy of the argument.
+
+The in, ref, and out keywords are not considered part of the method 
+signature for the purpose of overload resolution.
 
 Extension methods have the following restrictions:
 The out keyword cannot be used on the first argument of an extension method.
@@ -884,7 +1035,9 @@ The ref keyword cannot be used on the first argument of an extension method when
 not constrained to be a struct.
 The in keyword cannot be used unless the first argument is a struct. The in keyword cannot be used on any generic type, even when 
 constrained to be a struct.
----
+
+Overuse is a code smell â€” especially ref and out. Prefer returning values when possible.
+The 'in' keyword is readonly by design. Use it in performance-critical paths only.
 ---------------------------------------------------------------
 Configuration
 http://www.codeproject.com/Articles/19675/Cracking-the-Mysteries-of-NET-Configuration#t2_1
@@ -1113,7 +1266,7 @@ The major differences between these are:
 Casting is also used for other conversions (e.g. between value types); "as" is only valid for reference type expressions 
 (although the target type can be a nullable value type)
 
-Casting can invoke user-defined conversions (if they’re applicable at compile-time); "as" only ever performs a reference conversion.
+Casting can invoke user-defined conversions (if theyâ€™re applicable at compile-time); "as" only ever performs a reference conversion.
 
 If the actual value of the expression is a non-null reference to an incompatible type, casting will throw an InvalidCastException 
 whereas the "as" operator will result in a null value instead.
@@ -1157,11 +1310,11 @@ Most script languages use late binding and most compiled languages use early bin
 an early binding one, has reflection for late binding. 
 
 A binding is called an early binding, compiler time binding or static type binding when the target method is found during compile 
-time (the code that will call the method is also created during compile time). If the required method doesn’t exist, an error is 
+time (the code that will call the method is also created during compile time). If the required method doesnâ€™t exist, an error is 
 issued during compilation.
 
 Late bound means the target method is looked up at run time. Often the textual name of the method is used to look it up. If the 
-method isn’t there, the program will crash or go into some exception handling scheme during run time.
+method isnâ€™t there, the program will crash or go into some exception handling scheme during run time.
 ---
 In C#, all collections (eg lists, dictionaries, stacks, queues, etc) are enumerable because they implement the IEnumerable interface. 
 So are strings. You can iterate over a string using a foreach block to get every character in the string.
@@ -1280,7 +1433,7 @@ LastIndexOfAny searches for multiple characters in reverse. It returns the final
 int index = value.LastIndexOfAny(new char[] { 'd', 'b' });
 
 The performance of LastIndexOfAny is not ideal. If you want to improve it, one thing you can do is store the character array argument 
-in a field—static or instance—and then use a reference to that cache as the argument. This will avoid an object creation on every call. 
+in a fieldâ€”static or instanceâ€”and then use a reference to that cache as the argument. This will avoid an object creation on every call. 
 And reducing object creations reduces memory pressure and garbage collections.
 -----
 PadLeft() and PadRight()  Returns a new string with left\right padding.

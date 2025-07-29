@@ -6,6 +6,7 @@ Git_Cmd_line_commands
 Github_Desktop
 Git_Errors
 Ignoring_files
+LF_CRLF_Problem
 Misc_Info
 MyRepositories
 Publish_To_Git_Hub_From_Visual_Studio
@@ -15,6 +16,27 @@ Tutorials
 Visual_Studio
 
 --------------------------------------------------------
+LF_CRLF_Problem
+
+In Visual Studio, you can easily convert a file's line endings from LF (Unix) to CRLF (Windows) using either the UI or 
+a quick trick in the editor. Here's how:
+
+Option 1: Use the Status Bar in Visual Studio
+1) Open the file in Visual Studio.
+
+2) Look at the bottom-right corner of the window. You'll see: LF or CRLF. Click on it and select the desired line ending 
+format from the dropdown menu. Then save the file.
+
+3) **Note**: Ensure you have the correct line ending settings in your .gitattributes file. If the issue persists after 
+changing the line endings, check the repository settings or your local clone settings.
+---
+Using visual studio, when attempting to create a new repository from a new solution and push it to my existing github account, I 
+get an error message saying CRLF would be replaced by LF in .gitattributes. How can I resolve this issue?
+
+Run this in your terminal inside the repo folder:
+	git config core.autocrlf true
+	git add --renormalize .
+	git commit -m "Normalize line endings"
 --------------------------------------------------------
 Name: ctaylor89		Pwd: ghp_REMOVETHISZIzVTzZtGxigKqXmvwUez1A3V8YHcX3jQBul or See GitHub_ in MainNotes2020.txt		Created 032223
 

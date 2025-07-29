@@ -61,13 +61,12 @@ namespace DevelopmentInfo.CodeSamples
 
             if (length == 0)
             {
-                Console.WriteLine("0", length);
+                Console.WriteLine($"{length}");
                 return;
             }
             else if (length >= 1)
             {
-                Console.WriteLine("0", length);
-                Console.WriteLine("1", length);
+                Console.WriteLine($"{length}");
             }
 
             for (int i = 2; i <= length; i++)

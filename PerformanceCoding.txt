@@ -1,0 +1,53 @@
+Questions_CSharp
+
+
+
+-----------------------------------------------------------------------------
+CSharp Performance Coding Techniques
+-----------------------------------------------------------------------------
+https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/performance/ref-tutorial
+
+Often, performance tuning for a .NET application involves two techniques. First, reduce the number and size of heap allocations. 
+Second, reduce how often data is copied. Visual Studio provides great tools that help analyze how your application is using 
+memory. Once you've determined where your app makes unnecessary allocations, you make changes to minimize those allocations. 
+You convert class types to struct types. You use ref safety features to preserve semantics and minimize extra copying.
+---
+Using ref safety in your application
+These techniques are low-level performance tuning. They can increase performance in your application when applied to hot paths, 
+and when you've measured the impact before and after the changes. "hot paths" means code paths that run frequently and are 
+performance critical, the parts of your application where execution time matters most. In most cases, the cycle 
+you'll follow is:
+1) Measure allocations: Determine what types are being allocated the most, and when you can reduce the heap allocations.
+2) Convert class to struct: Many times, types can be converted from a class to a struct. Your app uses stack space instead of 
+   making heap allocations.
+3) Preserve semantics: Converting a class to a struct can impact the semantics for parameters and return values. Any method that 
+   modifies its parameters should now mark those parameters with the ref modifier. That ensures the modifications are made to the 
+   correct object. Similarly, if a property or method return value should be modified by the caller, that return should be marked 
+   with the ref modifier.
+4) Avoid copies: When you pass a large struct as a parameter, you can mark the parameter with the in modifier. You can pass a 
+   reference in fewer bytes, and ensure that the method doesn't modify the original value. You can also return values by readonly 
+   ref to return a reference that can't be modified. Additionally, consider using the stackalloc keyword for large arrays to 
+   optimize memory usage. Also, remember to assess the impact of such changes on your code's performance to ensure that they yield 
+   the desired benefits.
+
+Using these techniques you can improve performance in the hot paths of your code.
+
+
+
+
+-----------------------------------------------------------------------------
+Questions_CSharp
+
+Q: Does a csharp application automatically allocate space on the stack?
+A: Yes, a C# application allocates space on the stack for value types and reference type references.
+   Also Method Call Frames, Local Variables, and Parameters are allocated on the stack.
+
+Q: Does a csharp application automatically resize allocated space on the stack?    
+A: No, the stack size is fixed for a given thread and does not dynamically resize. Instead, the stack grows and 
+shrinks as methods are called and return.
+
+Q: What is a reference type in C#?
+A: A reference type in C# is a type that stores a reference to the actual data, rather than the data itself.
+
+
+
