@@ -2,6 +2,10 @@
 Docker_
 Kuberneties_
 Web_Site_Security
+
+
+1) Already recorded up to this point :268
+2) Already recorded up to this point  05/02/2024 :535
 --------------------------------------------------------------------
 C_Sharp
 
@@ -1101,13 +1105,22 @@ Before returning data to clients, encode it to prevent execution:
         var safeName = HtmlEncoder.Default.Encode(name);
         return Ok(new { Name = safeName });
     }
+
 This prevents malicious scripts from being executed in the browser.
-
-
 --------------------------------------------------------
+An anti-pattern is a common but misguided solution to a problem. It’s something people tend to do because it feels convenient or 
+intuitive—but it reliably leads to worse results, technical debt, bugs, or long-term pain.
 
+In short:
+A pattern = good repeatable solution.
+An anti-pattern = bad repeatable solution.
 
-
+Examples in software:
+    God object — one class that knows/does everything.
+    Spaghetti code — code with tangled control flow.
+    Copy-paste programming — duplicating logic instead of extracting shared behavior.
+    “Big bang” rewrite — rewriting an entire system from scratch instead of incremental refactoring.
+    Golden hammer — forcing one tool/technique onto every problem.
 --------------------------------------------------------
 
 --------------------------------------------------------

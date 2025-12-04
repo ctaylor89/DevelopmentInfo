@@ -1,0 +1,482 @@
+﻿Developer’s_Prompting_Handbook
+Few-shot_examples
+Temperature_
+----------------------------------------
+Developer’s_Prompting_Handbook
+A practical, no-nonsense guide to getting reliable, high-quality results from large language models — written for software engineers.
+________________________________________
+Quick orientation (read this first)
+If you only remember one thing: prompts are instructions + context + constraints + format. Treat the model like a teammate who 
+needs a clear brief, not a magic box you can control. The better your brief, the less guesswork and the better the output.
+This handbook gives templates, worked examples, debugging strategies, anti-patterns, and a one-page cheat sheet you can print or
+pin to your monitor.
+________________________________________
+1. The Meta-Template (the backbone of every good prompt)
+   Every useful prompt follows this structure. Use it as a checklist before hitting Enter.
+1. Role — Who should the model be? (senior dev, architect, reviewer)
+2. Goal — What exact outcome do you want? (refactor, fix, design, compare)
+3. Context — Minimal, necessary info (code, constraints, environment).
+4. Constraints — Hard limits (no behavior changes, runtime, libraries).
+5. Output format — Exactly how to present the answer (code-only, list, table, JSON).
+6. Verification steps (optional but powerful) — Tests or checks to confirm correctness.
+
+Example of a meta-prompt:
+Act as a senior C# architect. Goal: refactor this service for testability and separation of concerns. 
+Context: .NET 8, Azure SQL, current code pasted below. Constraints: keep public API the same, no third-party libraries. 
+Output format: show refactored code, a 5-bullet summary of changes, and 3 unit tests to validate behavior.
+________________________________________
+2. Practical Templates (copy-paste + fill)
+
+2.1 Code Review (small-to-medium method)
+Act as a senior [language/framework] engineer.
+Goal: review the following code for correctness, performance, security, readability, and maintainability.
+Context: [runtime/version], dependencies: [list], code: ```[paste code]```
+Constraints: do not change behavior or public API. Keep suggestions minimal and practical.
+Output: 1) Revised code (only if safe to change) 2) Up to 10 bullet points: problems found, severity (low/med/high), 
+and suggested fix 3) Quick test checklist to verify changes.
+
+2.2 Bug Diagnosis (error + stack trace)
+Act as a debugging assistant.
+Goal: identify likely root cause(s) and propose the simplest reliable fix.
+Context: error message, stack trace, relevant code blocks, environment (OS, runtime, dependencies).
+Constraints: prefer minimal invasive changes; when unsure, list top 3 hypotheses ranked by likelihood.
+Output: 1) Most likely cause 2) Suggested fix with code snippet 3) Steps to reproduce (if not provided) and verification steps.
+
+2.3 Refactor or Architecture Change  
+Act as a software architect with experience in [system type].
+Goal: propose a refactor or architecture change to achieve [goal: testability/scale/maintainability].
+Context: current architecture summary (services, data store, integration points). Include pain points.
+Constraints: budget/tech stack constraints here.
+Output: 1) Recommended architecture (diagram description / components) 2) Migration steps prioritized by risk 3) Back-out plan 
+and tests to validate.
+
+2.4 Unit Test Generation
+Act as a unit test engineer.
+Goal: generate unit tests for the following public method(s).
+Context: method signature, behavior specification, edge cases, dependencies (list). Use [framework name].
+Constraints: tests must be isolated, deterministic, and runnable with the given project setup.
+Output: test code files plus brief explanation of test cases.
+
+2.5 API Design
+Act as a REST API designer.
+Goal: design a RESTful endpoint for [feature].
+Context: domain model, key business rules. Constraints: use JSON, support pagination, authentication type.
+Output: 1) Endpoint path and HTTP verbs  2) Request/response schemas  3) Example payloads 
+4) Validation rules and possible error responses.
+________________________________________
+3. Worked Examples (software dev focused)
+
+Example A — Refactor a noisy method
+Prompt skeleton:
+Act as a senior C# engineer. Goal: refactor this long method into smaller functions and improve testability. 
+Context: .NET 8, method below. Constraints: preserve behavior and public API. 
+Output: refactored code + brief notes showing why each change helps testability.
+What to expect from the LLM:
+•	Break the method into well-named private helpers
+•	Replace magic numbers with constants
+•	Extract external dependencies behind interfaces
+•	Suggest unit tests and show one or two examples
+
+Example B — Migrate from Azure DevOps YAML to GitHub Actions
+Prompt skeleton:
+Act as a DevOps engineer familiar with Azure DevOps and GitHub Actions. 
+Goal: convert this Azure DevOps YAML pipeline into a GitHub Actions workflow that performs the same steps. 
+Context: pipeline YAML pasted below. Constraints: avoid third-party actions if possible; keep pipeline behavior identical.
+Output: GitHub Actions workflow file and notes about differences to watch for during the migration.
+What to expect:
+•	A .github/workflows/ci.yml containing equivalent steps
+•	Notes about agent types, caching, secrets mapping, and permissions differences
+________________________________________
+4. Advanced Techniques — squeeze better results out of any model	
+
+4.1 System vs User messages (where available)
+When the platform supports it, put global rules in the system prompt: tone, safety, confidentiality, verbosity. 
+Use user (or assistant) messages for the task-specific context.
+
+4.2 Chain-of-thought workarounds (iterate explicitly)
+If you want the model to reason step-by-step, request intermediate steps or ask it to “think aloud” in separate phases: 
+(1) list assumptions, (2) propose approach, (3) execute. This reduces hallucination.
+
+4.3 Few-shot examples
+For non-trivial transformations, show 2–4 examples of input → output. The model mimics format and is far more reliable.
+
+4.4 Temperature and creativity
+•	Low temperature (0–0.3): factual, deterministic outputs (code, tests).
+•	Medium (0.3–0.7): more varied phrasing, good for docs and design options.
+•	High (>0.7): brainstorming, ideation — avoid for code.
+4.5 Use explicit checks and tests in the prompt
+Ask the model to provide tests or verification steps at the end — this forces the output to be grounded and gives you a quick way to validate.
+________________________________________
+5. Prompt Debugging: if output is wrong, do this
+1.	Check missing context — did you omit environment, versions, or critical constraints? Add them.
+2.	Lower the temperature and rerun for deterministic output.
+3.	Ask for a step-by-step plan before producing final code. Then ask the model to implement the plan.
+4.	Use unit tests — request test cases and run them locally. If tests fail, paste failing tests and ask for fixes.
+5.	Pin the output format — tell the model to return only code between fenced blocks and nothing else.
+________________________________________
+6. Anti-patterns (what wastes time)
+•	Vague prompts: “Help with this code” without context.
+•	Too much text at once: Long files with no pointers. Instead: give a scope.
+•	Asking for too much at once: Requesting a full re-architecture + migration plan + tests in a single prompt without stepwise refinement.
+•	Over-reliance on the model for correctness: Always validate with tests; models can hallucinate plausible but incorrect code.
+________________________________________
+7. Ethical & Security Considerations (practical rules)
+•	Never paste secrets (API keys, connection strings) in prompts. Redact or replace with placeholders.
+•	Be cautious with PII — anonymize user data when possible.
+•	License awareness: If asking for large code dumps, be careful about proprietary/licensed content.
+________________________________________
+8. Prompt Templates Library (full list)
+•	Code review
+•	Bug triage / diagnosis
+•	Refactor to patterns (clean architecture, onion, hexagonal)
+•	Unit & integration test generation
+•	End-to-end test scenario generation
+•	CI/CD pipeline translation and generation
+•	Database migration planning
+•	API design & contract generation
+•	Performance tuning advice (profiling prompts + suggested fixes)
+•	Security review checklist generation
+Each of the above can be implemented using the Meta-Template. Keep one master prompt file in your repo (e.g., .llm/prompts.md) with the templates you use.
+________________________________________
+9. One-page Quick Reference (pin this)
+•	Role: be explicit. — Act as a senior X engineer.
+•	Goal: be exact. — Fix this bug / refactor for testability.
+•	Context: include only what’s needed (env, versions, relevant code).
+•	Constraints: list hard no-go changes.
+•	Format: demand exact output format (code-only, JSON, list).
+•	Verification: ask for tests/steps.
+•	Temperature: 0–0.3 for code.
+________________________________________
+10. Appendix: Sample prompts (fill-in-the-blanks)
+A. Code review (quick) `Act as a senior {language} engineer. Review this method for {issues}. Context: {runtime/version}. Constraints: {constraints}. Output: {output format}. Code: ```{code}````
+B. Unit tests Act as a unit test writer. Generate {framework} tests for {method}. Include edge cases and mocks for dependencies.
+C. Architecture comparison Act as a systems architect. Compare {option A} vs {option B} for {workload}. Score each against scalability, cost, operational complexity, and developer productivity. Recommend one and give migration steps.
+________________________________________
+Final notes (be direct)
+If you want consistent, reliable output, invest 3–5 minutes in writing a good prompt. Do not assume the model knows your constraints. Use verification (tests / checks) as part of the prompt. Keep templates in your repo and reuse them — treat prompts as first-class development artifacts.
+If you want, I can:
+•	Generate a printable PDF of this handbook.
+•	Create a .llm/prompts.md file formatted for your team (with placeholders filled for your stack).
+•	Produce a set of ready-to-use prompts tailored to a specific repo if you paste an example file.
+Tell me which and I’ll create it.
+----------------------------------------
+Temperature_
+
+# Temperature & creativity — deep dive and practical guide
+
+Short answer: **temperature** controls how random/creative the model’s token choices are. Low = safe, deterministic outputs; high = varied, unexpected, creative outputs. But there’s more: temperature interacts with other sampling knobs and with the task itself. Below is a thorough, no-nonsense guide so you can pick the right setting and avoid the usual mistakes.
+
+---
+
+## What temperature actually does (technical intuition, non-mathy)
+
+* The model assigns probabilities to possible next tokens.
+* **Temperature** scales those probabilities before sampling:
+
+  * **Low temperature (→0)** sharpens the distribution: the highest-probability tokens become much more likely → responses are repetitive, predictable, and stable.
+  * **High temperature (>0.7)** flattens the distribution: less-probable tokens get more chance → output is more diverse, inventive, and occasionally bizarre.
+* **Temperature does not** change the model’s knowledge — it only changes which plausible continuations get chosen.
+
+---
+
+## Practical ranges and when to use them
+
+* **0.0–0.2 — Deterministic**
+  Use for: code generation, unit tests, config files, data transformation, anything you’ll run or test automatically. Expect near-identical outputs on repeated runs.
+* **0.2–0.5 — Conservative**
+  Use for: concise technical explanations, polished documentation, bug fixes where you want a little phrasing flexibility but low risk of hallucination.
+* **0.5–0.8 — Balanced**
+  Use for: design options, API naming suggestions, multi-option brainstorming where you want variety but still useful outputs.
+* **0.8–1.2 — Creative / exploratory**
+  Use for: high-level brainstorming, product naming, example scenarios, persona-based content. Expect more unusual ideas and occasional nonsense.
+* **>1.2 — Wild**
+  Rarely useful for engineering tasks. Use only when you explicitly want highly varied, chaotic output.
+
+---
+
+## Interaction with other sampling settings (common knobs)
+
+* **top_p (nucleus sampling)**: instead of temperature-only, you can restrict sampling to the smallest set of tokens whose cumulative probability ≥ top_p. Use together with temperature — top_p limits the tail while temperature controls randomness within that subset.
+
+  * Example: `temperature=0.7, top_p=0.9` gives creative results while avoiding extremely low-probability tokens.
+* **repetition_penalty / frequency_penalty**: reduce repeated phrasing when exploring higher temperatures.
+* **max_tokens** and **stop sequences**: high temperature + large max_tokens can produce long, meandering answers — use stop sequences or shorter max length to keep things focused.
+* **deterministic decoding (greedy / beam search)**: beam search is useful for structured generation and can reduce randomness while exploring multiple likely outputs; combine low temperature with beam search when you need the single “best” completion.
+
+---
+
+## Concrete examples (prompt + recommended temp)
+
+* **Generate NUnit unit tests (must be correct)**
+  `temperature=0.0` — deterministic, repeatable test code.
+* **Refactor for readability (trade-offs allowed)**
+  `temperature=0.2–0.4` — conservative rewording, stable code style.
+* **Suggest 5 API names / endpoints**
+  `temperature=0.6` — balanced creativity, varied name ideas.
+* **Brainstorm 20 product names / taglines**
+  `temperature=0.8–1.0` — creative and diverse outputs.
+* **Write a speculative future tech blog post**
+  `temperature=0.9–1.2` — creative voice, but expect to fact-check.
+
+---
+
+## How to pick temperature quickly (troubleshooting checklist)
+
+1. Is the output executed as code or tests? → set temperature ≤ 0.2.
+2. Is correctness more important than variety? → keep temperature low.
+3. Do you want several different ideas to pick from? → set temperature mid-high and request N variations.
+4. Do you see hallucinations or nonsense? → lower temperature and/or add constraints & verification steps.
+5. Want repeatable runs for CI or automation? → use temperature = 0.0 (and pin seeds if available).
+
+---
+
+## Prompting patterns that reduce dependence on temperature
+
+* **Request multiple candidates explicitly**: “Give me 6 distinct options.” This often produces diversity without cranking temperature.
+* **Few-shot examples**: provide 2–3 examples of the style you want — reduces need for high temperature.
+* **Constrain format**: ask for JSON, tables, or fenced code blocks. When structure is required, the model behaves more predictably even with slightly higher temperature.
+
+---
+
+## Pitfalls & gotchas
+
+* **Higher temperature ↔ more hallucinations.** If fact accuracy matters, lower the temperature and ask for citations or verification steps.
+* **Assuming temperature fixes style issues.** Tone, verbosity, and register are still steered best by explicit instructions in the prompt. Temperature affects token choice, not instruction-following.
+* **Inconsistent results in pipelines.** When prompts feed into automated systems (CI, codegen), keep temperature low or deterministic to avoid flaky behavior.
+* **Over-reliance on one knob.** Use temperature *with* top_p, repetition penalties, and explicit format constraints for best results.
+
+---
+
+## Quick reference table
+
+| Task type                             | Temperature |
+| ------------------------------------- | ----------: |
+| Code / Tests / Scripts                |   0.0 – 0.2 |
+| Bug analysis / Precise fixes          |   0.0 – 0.3 |
+| API design / Docs                     |   0.2 – 0.5 |
+| Naming / Small brainstorming          |   0.5 – 0.8 |
+| Wide brainstorming / Creative writing |   0.8 – 1.2 |
+
+---
+
+## Example prompt snippets (explicitly including temperature in workflow)
+
+* For code:
+  `Act as a senior C# engineer. Refactor this method. Output only the refactored method in a fenced code block. (Run with temperature=0.0.)`
+* For brainstorming:
+  `Generate 10 alternative endpoint names and one-sentence justification each. (Run with temperature=0.8, top_p=0.9.)`
+
+---
+
+## Final rule of thumb
+
+Set **temperature to the lowest value that still yields adequate variety for your task** — start low and increase only if you need more diversity. Always pair with format constraints and verification (tests, checks) so creativity doesn’t become chaos.
+
+Want a small script/CI snippet that runs the same prompt at three temperatures (0.0, 0.6, 0.9) and saves outputs for side-by-side review? I can draft that for your environment.
+--------------------------------------------
+Few-shot_examples — deep dive and how to use them like a pro
+
+Short answer: **few-shot examples are 1–4 concrete input→output examples you include in the prompt so the model imitates the format, style, and constraints you want.** They massively reduce ambiguity and hallucination because the model can copy the pattern rather than guess what you meant.
+
+Below is a practical, no-nonsense guide: what few-shot does, why it works, how to build examples, common mistakes, and concrete developer-focused examples you can copy.
+
+---
+
+## Why few-shot works
+
+* **Pattern imitation.** LLMs are excellent at completing sequences. Showing examples gives a reliable sequence to continue.
+* **Reduces underspecification.** Instead of describing every micro-rule, you show the result you expect.
+* **Style and format control.** The model mimics structure (JSON, tests, code style), not just semantics.
+* **Low cost, high impact.** A few short examples often yield bigger improvements than long specification paragraphs.
+
+---
+
+## How many examples and why
+
+* **1–4 examples** is the sweet spot for most tasks:
+
+  * 1 example helps but may still be interpreted loosely.
+  * 2–3 examples cover variety (happy path and one edge case).
+  * 4 gives good coverage without burning tokens or confusing the model.
+* More than ~5 examples increases token usage and can create conflicting patterns; use only for complex transformations.
+
+---
+
+## Crafting high-quality examples (step-by-step)
+
+1. **Pick concise, representative examples.** Use samples that cover the most important variety: one typical case, one edge case, one counterexample if helpful.
+2. **Keep examples minimal but complete.** Include only the data needed to show the transformation.
+3. **Label clearly.** Use explicit separators and labels: `INPUT:` / `OUTPUT:` or `### Example 1` to avoid mixing.
+4. **Show the exact output format.** If you want JSON, show valid JSON outputs. If you want fenced code, show fenced code.
+5. **Include one “bad example” when you need to show what *not* to do.** This helps the model avoid common mistakes.
+6. **Avoid contradictions.** If examples conflict (different styles for same task), the model will be confused.
+7. **Sanitize secrets and PII.** Never paste keys or private customer data in examples.
+
+---
+
+## What to demonstrate in examples
+
+* **Format** (JSON, code block, table, bullet list) — mandatory.
+* **Tone / naming conventions** (camelCase vs snake_case, comment style).
+* **Edge cases** (empty lists, nulls, invalid input handling).
+* **Constraints** implicitly (e.g., “do not change function signature” — show an example that obeys it).
+* **Verification** — include expected assertions or unit test expectations if relevant.
+
+---
+
+## Combining few-shot with other levers
+
+* **With temperature:** use lower temperature for code even with few-shot. Few-shot reduces need for high temperature.
+* **With meta-template:** put role/goals first, then examples, then new input. This orders the model’s priorities: instruction → demonstration → task.
+* **With explicit steps:** ask the model to (1) list assumptions, (2) produce the result — this pairs well with few-shot to reduce hallucination.
+
+---
+
+## Pitfalls and how to avoid them
+
+* **Overfitting to examples:** examples that are too idiosyncratic can cause the model to over-specialize. Use representative, not bizarre, examples.
+* **Token bloat:** examples consume token budget — when the input is large, trim examples to the essential bits.
+* **Conflicting styles:** keep examples internally consistent.
+* **Hidden rules:** don’t rely on too many implied rules in examples; pair examples with a short explicit rule list for clarity.
+
+---
+
+## Practical templates (insert examples into these)
+
+**Template A — Code refactor (few-shot + instruct)**
+
+````
+Act as a senior C# engineer. Goal: refactor methods for readability and testability without changing public APIs.
+
+### Example 1
+INPUT:
+```csharp
+// original method
+public int Calculate(...) { /* noisy code */ }
+````
+
+OUTPUT:
+
+```csharp
+// refactored: extracted helpers, interfaces injected
+public int Calculate(...) { /* refactored, concise */ }
+```
+
+### Example 2 (edge case)
+
+INPUT:
+
+```csharp
+// original with null checks mixed in
+```
+
+OUTPUT:
+
+```csharp
+// refactored version showing guard clauses
+```
+
+Now refactor the following INPUT: [paste method here] — return only the OUTPUT in a fenced C# code block.
+
+```
+
+**Template B — Unit test generation**  
+```
+
+Act as a unit-test engineer. Use xUnit. Generate focused tests including edge cases.
+
+### Example 1
+
+INPUT: method signature + brief behavior
+OUTPUT:
+
+```csharp
+[Fact]
+public void ReturnsZeroWhen...() { ... }
+```
+
+Now generate tests for: [paste signature & behavior].
+
+```
+
+**Template C — API naming / options (few-shot variations)**  
+```
+
+Act as an API designer. Provide 6 name options with 1-line rationale.
+
+Example:
+INPUT: feature = "user notification preferences"
+OUTPUT:
+
+1. /v1/user/notification-settings — clear, RESTy, versioned
+2. /v1/user/alerts — shorter, but less precise
+   ...
+
+Now: feature = "[your feature]" — give 6 options.
+
+```
+
+---
+
+## Concrete, copy-pasta examples you can run now
+
+**Few-shot for transforming log lines → JSON:**
+```
+
+Act as a log parser. Convert log lines to JSON with keys: timestamp, level, message.
+
+Example 1
+INPUT: [2025-12-01 14:02:33] ERROR: Connection failed to DB
+OUTPUT: {"timestamp":"2025-12-01T14:02:33","level":"ERROR","message":"Connection failed to DB"}
+
+Example 2
+INPUT: [2025-12-01 14:03:00] INFO: Job completed
+OUTPUT: {"timestamp":"2025-12-01T14:03:00","level":"INFO","message":"Job completed"}
+
+Now convert these:
+INPUT:
+[2025-12-01 14:10:00] WARN: Disk at 90% capacity
+
+```
+
+**Few-shot for refactoring a small method (C#):**
+```
+
+Act as a senior C# dev. Refactor to smaller methods and keep signature.
+
+Example 1
+INPUT:
+public string NormalizeName(string s) { /* messy code */ }
+OUTPUT:
+public string NormalizeName(string s) { s = TrimAndLower(s); return RemoveIllegalChars(s); }
+private string TrimAndLower(string s) => s?.Trim().ToLowerInvariant();
+private string RemoveIllegalChars(string s) { ... }
+
+Now refactor:
+INPUT: [paste messy method]
+
+```
+
+---
+
+## Testing & iterating with few-shot
+1. **Start with 2 examples**: one normal, one edge.  
+2. **Run the prompt.** If output is off, inspect which part of the example the model didn't copy.  
+3. **Adjust examples** — make them clearer or add a “bad example” to show what to avoid.  
+4. **Pin format**: if you need machine-parsable outputs, require valid JSON or fenced code only.  
+5. **Automate A/B**: if you run prompts in pipelines, store example sets and test which yields best acceptance rate.
+
+---
+
+## Quick checklist before you send a few-shot prompt
+- [ ] 1–4 representative examples included.  
+- [ ] Examples show exact output format (valid code/JSON).  
+- [ ] Edge cases covered.  
+- [ ] No secrets or PII.  
+- [ ] Short explicit instruction above examples (role + goal).  
+- [ ] New input placed *after* examples.
+
+---
+
+Few-shot is one of the single most powerful practical techniques you can use. It’s cheap, fast, and—when used correctly—turns vague instructions into predictable, repeatable outputs. Want me to craft 3 few-shot prompt sets tailored to your repo (code refactor, tests, API design)? Paste a sample file and I’ll generate them. No fluff.
+```

@@ -146,6 +146,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Development Tools", "Development Tools", "{9693650C-57CF-4E81-A8B2-03D683FC5817}"
 	ProjectSection(SolutionItems) = preProject
 		AI_CodingAssist_Tools.txt = AI_CodingAssist_Tools.txt
+		AI_Prompting.txt = AI_Prompting.txt
 		Solution Folders\DevelopmentTools\ApplicationInsights.txt = Solution Folders\DevelopmentTools\ApplicationInsights.txt
 		AzureDevOps.txt = AzureDevOps.txt
 		Solution Folders\DevelopmentTools\PowerShell.txt = Solution Folders\DevelopmentTools\PowerShell.txt
