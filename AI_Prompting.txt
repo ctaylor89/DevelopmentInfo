@@ -270,90 +270,106 @@ Short answer: **temperature** controls how random/creative the model’s token c
 
 ## Final rule of thumb
 
-Set **temperature to the lowest value that still yields adequate variety for your task** — start low and increase only if you need more diversity. Always pair with format constraints and verification (tests, checks) so creativity doesn’t become chaos.
+Set **temperature to the lowest value that still yields adequate variety for your task** — start low and increase only if you 
+need more diversity. Always pair with format constraints and verification (tests, checks) so creativity doesn’t become chaos.
 
-Want a small script/CI snippet that runs the same prompt at three temperatures (0.0, 0.6, 0.9) and saves outputs for side-by-side review? I can draft that for your environment.
+Want a small script/CI snippet that runs the same prompt at three temperatures (0.0, 0.6, 0.9) and saves outputs for side-by-side 
+review? I can draft that for your environment.
 --------------------------------------------
 Few-shot_examples — deep dive and how to use them like a pro
 
-Short answer: **few-shot examples are 1–4 concrete input→output examples you include in the prompt so the model imitates the format, style, and constraints you want.** They massively reduce ambiguity and hallucination because the model can copy the pattern rather than guess what you meant.
+Short answer: Few-shot examples are 1–4 concrete input→output examples you include in the prompt so the model imitates the 
+format, style, and constraints you want. They massively reduce ambiguity and hallucination because the model can copy the pattern 
+rather than guess what you meant.
 
-Below is a practical, no-nonsense guide: what few-shot does, why it works, how to build examples, common mistakes, and concrete developer-focused examples you can copy.
-
+Below is a practical, no-nonsense guide: what few-shot does, why it works, how to build examples, common mistakes, and concrete 
+developer-focused examples you can copy.
 ---
 
 ## Why few-shot works
 
-* **Pattern imitation.** LLMs are excellent at completing sequences. Showing examples gives a reliable sequence to continue.
-* **Reduces underspecification.** Instead of describing every micro-rule, you show the result you expect.
-* **Style and format control.** The model mimics structure (JSON, tests, code style), not just semantics.
-* **Low cost, high impact.** A few short examples often yield bigger improvements than long specification paragraphs.
-
+* Pattern imitation. LLMs are excellent at completing sequences. Showing examples gives a reliable sequence to continue.
+* Reduces underspecification. Instead of describing every micro-rule, you show the result you expect.
+* Style and format control. The model mimics structure (JSON, tests, code style), not just semantics.
+* Low cost, high impact. A few short examples often yield bigger improvements than long specification paragraphs.
 ---
 
 ## How many examples and why
 
-* **1–4 examples** is the sweet spot for most tasks:
-
+* 1–4 examples is the sweet spot for most tasks:
   * 1 example helps but may still be interpreted loosely.
   * 2–3 examples cover variety (happy path and one edge case).
   * 4 gives good coverage without burning tokens or confusing the model.
 * More than ~5 examples increases token usage and can create conflicting patterns; use only for complex transformations.
-
 ---
 
 ## Crafting high-quality examples (step-by-step)
 
-1. **Pick concise, representative examples.** Use samples that cover the most important variety: one typical case, one edge case, one counterexample if helpful.
-2. **Keep examples minimal but complete.** Include only the data needed to show the transformation.
-3. **Label clearly.** Use explicit separators and labels: `INPUT:` / `OUTPUT:` or `### Example 1` to avoid mixing.
-4. **Show the exact output format.** If you want JSON, show valid JSON outputs. If you want fenced code, show fenced code.
-5. **Include one “bad example” when you need to show what *not* to do.** This helps the model avoid common mistakes.
-6. **Avoid contradictions.** If examples conflict (different styles for same task), the model will be confused.
-7. **Sanitize secrets and PII.** Never paste keys or private customer data in examples.
+1. Pick concise, representative examples. Use samples that cover the most important variety: one typical case, one edge case, 
+   one counterexample if helpful.
+2. Keep examples minimal but complete. Include only the data needed to show the transformation.
+3. Label clearly. Use explicit separators and labels: `INPUT:` / `OUTPUT:` or `### Example 1` to avoid mixing.
+4. Show the exact output format. If you want JSON, show valid JSON outputs. If you want fenced code, show fenced code.
+5. Include one “bad example” when you need to show what *not* to do. This helps the model avoid common mistakes.
+6. Avoid contradictions. If examples conflict (different styles for same task), the model will be confused.
+7. Sanitize secrets and PII. Never paste keys or private customer data in examples.
+---
+Note: Fenced code is code that’s wrapped between triple backticks so it’s clearly separated from normal text.
+    ```csharp
+    public void DoWork()
+    {
+        Console.WriteLine("Hello");
+    }
+    ```
 
+Why you should use fenced code with AI
+1. It tells the model “this is code, don’t rewrite it unless I say so.”
+2. It prevents corruption of formatting.
+3. It makes copy/paste safe.
+4. It increases accuracy when asking the model to modify or refactor code.
 ---
 
 ## What to demonstrate in examples
 
-* **Format** (JSON, code block, table, bullet list) — mandatory.
-* **Tone / naming conventions** (camelCase vs snake_case, comment style).
-* **Edge cases** (empty lists, nulls, invalid input handling).
-* **Constraints** implicitly (e.g., “do not change function signature” — show an example that obeys it).
-* **Verification** — include expected assertions or unit test expectations if relevant.
-
+* Format: (JSON, code block, table, bullet list) — mandatory.
+* Tone / naming conventions: (camelCase vs snake_case, comment style).
+* Edge cases: (empty lists, nulls, invalid input handling).
+* Constraints: implicitly (e.g., “do not change function signature” — show an example that obeys it).
+* Verification — include expected assertions or unit test expectations if relevant.
 ---
 
 ## Combining few-shot with other levers
 
-* **With temperature:** use lower temperature for code even with few-shot. Few-shot reduces need for high temperature.
-* **With meta-template:** put role/goals first, then examples, then new input. This orders the model’s priorities: instruction → demonstration → task.
-* **With explicit steps:** ask the model to (1) list assumptions, (2) produce the result — this pairs well with few-shot to reduce hallucination.
-
+* With temperature: Use lower temperature for code even with few-shot. Few-shot reduces need for high temperature.
+* With meta-template: Put role/goals first, then examples, then new input. This orders the model’s priorities: 
+                      instruction → demonstration → task.
+* With explicit steps: Ask the model to 
+    (1) list assumptions, 
+    (2) produce the result — this pairs well with few-shot to reduce hallucination.
 ---
 
 ## Pitfalls and how to avoid them
 
-* **Overfitting to examples:** examples that are too idiosyncratic can cause the model to over-specialize. Use representative, not bizarre, examples.
-* **Token bloat:** examples consume token budget — when the input is large, trim examples to the essential bits.
-* **Conflicting styles:** keep examples internally consistent.
-* **Hidden rules:** don’t rely on too many implied rules in examples; pair examples with a short explicit rule list for clarity.
-
+* Overfitting to examples: Examples that are too idiosyncratic can cause the model to over-specialize. Use representative, not 
+  bizarre, examples.
+    Note: An idiosyncrasy is a peculiar or unique habit, mannerism, or characteristic that belongs to a specific person or group.
+* Token bloat: Examples consume token budget — when the input is large, trim examples to the essential bits.
+* Conflicting styles: Keep examples internally consistent.
+* Hidden rules: Don’t rely on too many implied rules in examples; pair examples with a short explicit rule list for clarity.
 ---
 
 ## Practical templates (insert examples into these)
 
 **Template A — Code refactor (few-shot + instruct)**
+    ````
+    Act as a senior C# engineer. Goal: refactor methods for readability and testability without changing public APIs.
 
-````
-Act as a senior C# engineer. Goal: refactor methods for readability and testability without changing public APIs.
-
-### Example 1
-INPUT:
-```csharp
-// original method
-public int Calculate(...) { /* noisy code */ }
-````
+    ### Example 1
+    INPUT:
+    ```csharp
+    // original method
+    public int Calculate(...) { /* noisy code */ }
+    ````
 
 OUTPUT:
 
@@ -478,5 +494,7 @@ INPUT: [paste messy method]
 
 ---
 
-Few-shot is one of the single most powerful practical techniques you can use. It’s cheap, fast, and—when used correctly—turns vague instructions into predictable, repeatable outputs. Want me to craft 3 few-shot prompt sets tailored to your repo (code refactor, tests, API design)? Paste a sample file and I’ll generate them. No fluff.
+Few-shot is one of the single most powerful practical techniques you can use. It’s cheap, fast, and—when used correctly—turns 
+vague instructions into predictable, repeatable outputs. Want me to craft 3 few-shot prompt sets tailored to your repo (code 
+refactor, tests, API design)? Paste a sample file and I’ll generate them. No fluff.
 ```
