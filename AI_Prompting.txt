@@ -1,5 +1,7 @@
 ﻿Developer’s_Prompting_Handbook
 Few-shot_examples
+Practice_Templates
+Random_Notes
 Temperature_
 ----------------------------------------
 Developer’s_Prompting_Handbook
@@ -136,7 +138,8 @@ ________________________________________
 •	API design & contract generation
 •	Performance tuning advice (profiling prompts + suggested fixes)
 •	Security review checklist generation
-Each of the above can be implemented using the Meta-Template. Keep one master prompt file in your repo (e.g., .llm/prompts.md) with the templates you use.
+Each of the above can be implemented using the Meta-Template. Keep one master prompt file in your repo 
+(e.g., .llm/prompts.md) with the templates you use.
 ________________________________________
 9. One-page Quick Reference (pin this)
 •	Role: be explicit. — Act as a senior X engineer.
@@ -159,6 +162,17 @@ If you want, I can:
 •	Create a .llm/prompts.md file formatted for your team (with placeholders filled for your stack).
 •	Produce a set of ready-to-use prompts tailored to a specific repo if you paste an example file.
 Tell me which and I’ll create it.
+----------------------------------------
+Random_Notes
+
+So when I asked “how automated do you want it,” I meant:
+Do you want a prompt that builds your API step-by-step,
+or a prompt that builds it all on its own with you doing nothing after giving requirements?
+
+
+
+
+
 ----------------------------------------
 Temperature_
 
@@ -232,9 +246,11 @@ Short answer: **temperature** controls how random/creative the model’s token c
 
 ## Prompting patterns that reduce dependence on temperature
 
-* **Request multiple candidates explicitly**: “Give me 6 distinct options.” This often produces diversity without cranking temperature.
-* **Few-shot examples**: provide 2–3 examples of the style you want — reduces need for high temperature.
-* **Constrain format**: ask for JSON, tables, or fenced code blocks. When structure is required, the model behaves more predictably even with slightly higher temperature.
+* Request multiple candidates explicitly**: “Give me 6 distinct options.” This often produces diversity without 
+  cranking temperature.
+* Few-shot examples: provide 2–3 examples of the style you want — reduces need for high temperature.
+* Constrain format: ask for JSON, tables, or fenced code blocks. When structure is required, the model behaves more predictably 
+  even with slightly higher temperature.
 
 ---
 
@@ -498,3 +514,65 @@ Few-shot is one of the single most powerful practical techniques you can use. It
 vague instructions into predictable, repeatable outputs. Want me to craft 3 few-shot prompt sets tailored to your repo (code 
 refactor, tests, API design)? Paste a sample file and I’ll generate them. No fluff.
 ```
+------------------------------------------
+Practice_Prompt_Sequences
+
+------------------------------------------
+Prompt_Sequences
+
+Low Automation — You Guide Each Step
+
+You manually drive the process.
+The model waits for your instructions.
+
+You do the workflow like this:
+
+“Generate the project structure only.”
+
+“Now generate Program.cs.”
+
+“Now create controllers.”
+
+“Now add EF models.”
+
+“Now generate appsettings.json.”
+
+Pros
+Full control
+Easy to fix mistakes during generation
+
+Cons
+Slow
+Lots of back-and-forth
+You need to remember the steps
+------------------------------------------
+Practice_Templates
+
+Goal: Build a .net core API using .Net 10. 
+Model:  public class Pod
+        {
+            public Pod()
+            {
+            }
+
+            public int MyProperty { get; set; }
+            public int ID { get; set; }
+            public string Name { get; set; }
+            public string Brand { get; set; }
+            public int Rating { get; set; }
+            public DateTime CreatedOn { get; set; }
+        }
+
+------
+Please generate A template for multi-step iterative generation
+------------------------------------------
+
+2.5 API Design
+Act as a REST API designer.
+Goal: design a RESTful endpoint for [feature].
+Context: domain model, key business rules. Constraints: use JSON, support pagination, authentication type.
+Output: 1) Endpoint path and HTTP verbs  2) Request/response schemas  3) Example payloads 
+4) Validation rules and possible error responses.
+
+
+

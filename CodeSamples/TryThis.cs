@@ -149,7 +149,7 @@ namespace DevelopmentInfo.CodeSamples
             return inputArray.Select(member => member[0] >= 55 && member[1] > 7 ? "Senior" : "Open").ToList();
             // Select method is an extension method of IEnuberable and it projects each element of a sequence into a new form.
         }
-
+                
         public static IEnumerable<string> OpenOrSenior3(int[][] data)
         {
             foreach (int[] player in data)
@@ -164,6 +164,14 @@ namespace DevelopmentInfo.CodeSamples
                 }
             }
         }
+
+        public IEnumerable<string> OpenOrSenior4(int[][] data) =>
+            data.Select(d =>
+                d[0] < 0 || d[1] < -2 || d[1] > 26
+                    ? "Open"
+                    : (d[0] >= 55 && d[1] > 7 ? "Senior" : "Open"));
+
+
         //---------------------------------------------------------------------
         // Accepts a string, and returns the same string with all even indexed characters in each word upper cased,
         // and all odd indexed characters in each word lower case.

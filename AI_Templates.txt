@@ -1,0 +1,91 @@
+
+-----------------------------------------------------------
+Here’s a rewritten, cleaned-up prompt template that explicitly defines the domain model properties and removes ambiguity. 
+This is how you want to specify it if you expect consistent API output.
+-------------------------------------------------------------
+	Act as a senior .NET 8 C# developer and REST API designer.
+
+	Goal:
+	Design a RESTful Web API for managing Pods using a domain-driven approach.
+	Sketch the ASP.NET Core controller
+
+	Domain Model (REQUIRED — DO NOT MODIFY):
+	The domain model is named "Pod" and contains the following properties:
+
+	- Id (int) — unique identifier for the Pod
+	- Name (string) — human-readable name of the Pod
+	- Size (int) — numeric size value of the Pod
+	- Temperature (double) — temperature associated with the Pod
+
+	Context:
+	Design the API around the Pod domain model and its key business rules.
+
+	Constraints:
+	- Use JSON for all request and response bodies
+	- Follow RESTful conventions
+	- Assume ASP.NET Core Web API (.NET 8)
+	- Use clear and consistent naming
+
+	Required Output:
+	1. Define the endpoint paths and corresponding HTTP verbs for Pod management
+	2. Define request and response schemas for each endpoint
+	3. Provide example JSON payloads for requests and responses
+	4. Define validation rules and possible error responses (including HTTP status codes)
+	5. Define the DTO model using c# that has the same properties as domain model 
+	6. Sketch the .NET 8 controller based on the DTO model (without implementation)
+
+	Do not generate implementation code.
+	Do not invent additional domain properties.
+	Do not add unrelated endpoints.
+-----------------------------------------------------------
+ *This was used to generate the code files for AI_Built_WebAPI.
+Below is a reusable prompt macro you can drop into any API-design workflow. It’s parameterized, rigid, and designed to 
+be reused by swapping values—not rewriting the prompt every time.
+
+Reusable Prompt Macro — REST API Design (.NET 8)
+-----------------------------------------------------------
+	Act as a senior .NET 8 C# developer and REST API designer.
+
+	Goal:
+	Design a RESTful Web API for managing Pods using a domain-driven approach.
+	
+	Domain Model (REQUIRED — DO NOT MODIFY):
+	The domain model is named "Pod" and contains the following properties:
+	- Id (int) — unique identifier for the Pod
+	- Name (string) — human-readable name of the Pod
+	- Size (int) — numeric size value of the Pod
+	- Temperature (double) — temperature associated with the Pod
+	
+	Context:
+	Design the API around the Pod domain model and its key business rules.
+
+	Constraints:
+	- Use JSON for all request and response bodies
+	- Follow RESTful conventions
+	- Assume ASP.NET Core Web API (.NET 8)
+	- Use clear and consistent naming
+
+	Required Output:
+	1. Define the endpoint paths and corresponding HTTP verbs for Pod management
+	2. Define request and response schemas for each endpoint
+	3. Provide example JSON payloads for requests and responses
+	4. Define validation rules and possible error responses (including HTTP status codes)
+	5. Define the DTO model using c# that has the same properties as domain model 
+	6. Sketch the .NET 8 controller based on the DTO model (without implementation)
+
+	Do not generate implementation code.
+	Do not invent additional domain properties.
+	Do not add unrelated endpoints.
+---
+Notes: Why this works:
+You change values, not structure
+The model can’t “helpfully” add fields
+Works for any CRUD-style domain
+Easy to embed into automation or agents
+If you want next steps, I can:
+Add business-rule macros
+
+-----------------------------------------------------------
+Add pagination / filtering macros
+Convert this into a multi-phase generator macro
+Adapt it for Minimal APIs instead of controllers

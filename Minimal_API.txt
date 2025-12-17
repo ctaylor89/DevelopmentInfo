@@ -1,0 +1,84 @@
+
+Key Points
+Top-level statements remove the need for Program class and Main method.
+
+Minimal APIs use MapGet, MapPost, etc. directly on the WebApplication instance.
+
+DTO defined as a record (PodDto) for immutability and concise syntax.
+
+Swagger/OpenAPI integrated for documentation and testing.
+
+RESTful conventions preserved exactly as in the controller design.
+---------------------------------------------------------------------
+Example:
+This minimal API style:
+Keeps the same endpoints and JSON contracts we defined earlier.
+Uses top-level statements and records for modern C# 10+ idioms.
+Provides a lighter, faster way to build APIs compared to controllers.
+---
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Register services (e.g., Pod repository, DbContext, etc.)
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
+// RESTful Endpoints
+
+// GET /api/pods
+app.MapGet("/api/pods", () =>
+{
+    // Return all Pods
+    return Results.Ok(new List<PodDto>());
+});
+
+// GET /api/pods/{id}
+app.MapGet("/api/pods/{id:int}", (int id) =>
+{
+    // Return Pod by Id
+    return Results.Ok(new PodDto { Id = id, Name = "Pod Alpha", Size = 42, Temperature = 23.5 });
+});
+
+// POST /api/pods
+app.MapPost("/api/pods", (PodDto pod) =>
+{
+    // Create new Pod
+    pod.Id = 1; // Example assignment
+    return Results.Created($"/api/pods/{pod.Id}", pod);
+});
+
+// PUT /api/pods/{id}
+app.MapPut("/api/pods/{id:int}", (int id, PodDto pod) =>
+{
+    // Full update
+    pod.Id = id;
+    return Results.Ok(pod);
+});
+
+// PATCH /api/pods/{id}
+app.MapPatch("/api/pods/{id:int}", (int id, PodDto pod) =>
+{
+    // Partial update
+    pod.Id = id;
+    return Results.Ok(pod);
+});
+
+// DELETE /api/pods/{id}
+app.MapDelete("/api/pods/{id:int}", (int id) =>
+{
+    // Delete Pod
+    return Results.NoContent();
+});
+
+app.Run();
+
+// DTO Model
+public record PodDto(int Id, string Name, int Size, double Temperature);

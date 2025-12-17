@@ -1,3 +1,4 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
@@ -82,8 +83,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{DA3AA080-B8E
 		Solution Folders\Technologies\WCF\Web_Config_Example01.txt = Solution Folders\Technologies\WCF\Web_Config_Example01.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormAppDemo", "WebFormAppDemo\WebFormAppDemo.csproj", "{4850F6E2-6CDE-44CA-A269-EE273028BE18}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{45BEEC6B-D7B0-4646-A07F-D646ACA0A0EC}"
 	ProjectSection(SolutionItems) = preProject
 		Solution Folders\Technologies\WPF\CutPasteXAML.cpp = Solution Folders\Technologies\WPF\CutPasteXAML.cpp
@@ -147,8 +146,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Development Tools", "Develo
 	ProjectSection(SolutionItems) = preProject
 		AI_CodingAssist_Tools.txt = AI_CodingAssist_Tools.txt
 		AI_Prompting.txt = AI_Prompting.txt
+		AI_Templates.txt = AI_Templates.txt
 		Solution Folders\DevelopmentTools\ApplicationInsights.txt = Solution Folders\DevelopmentTools\ApplicationInsights.txt
 		AzureDevOps.txt = AzureDevOps.txt
+		Developer's Prompting Handbook — Practical Guide For Software Engineers.docx = Developer's Prompting Handbook — Practical Guide For Software Engineers.docx
+		Minimal_API.txt = Minimal_API.txt
 		Solution Folders\DevelopmentTools\PowerShell.txt = Solution Folders\DevelopmentTools\PowerShell.txt
 		Solution Folders\DevelopmentTools\VisualStudio.txt = Solution Folders\DevelopmentTools\VisualStudio.txt
 	EndProjectSection
@@ -326,22 +328,6 @@ Global
 		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|x64.Build.0 = Release|x64
 		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|x86.ActiveCfg = Release|x86
 		{18506E71-8004-43D4-8A0A-26C2D7EAC216}.Release|x86.Build.0 = Release|x86
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|x64.Build.0 = Debug|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Debug|x86.Build.0 = Debug|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|x64.ActiveCfg = Release|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|x64.Build.0 = Release|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|x86.ActiveCfg = Release|Any CPU
-		{4850F6E2-6CDE-44CA-A269-EE273028BE18}.Release|x86.Build.0 = Release|Any CPU
 		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4577B6BC-258C-42CA-A932-75FCC56667ED}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
