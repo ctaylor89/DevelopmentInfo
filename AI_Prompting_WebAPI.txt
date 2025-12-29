@@ -1,0 +1,22 @@
+Act as a C# .NET 10 developer. Create a Web API.
+
+
+The project MUST use the following directory structure exactly:
+
+TM1/
+    L1/
+        L2/
+            L3/
+
+TM2/
+    L1/
+        L2/
+            L3/
+
+TM3/
+    L1/
+        L2/
+            L3/
+
+Do not rename, add, remove, reorder, or modify any directories.
+Do not create additional sibling or nested directories.

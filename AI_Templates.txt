@@ -89,3 +89,83 @@ Add business-rule macros
 Add pagination / filtering macros
 Convert this into a multi-phase generator macro
 Adapt it for Minimal APIs instead of controllers
+
+-----------------------------------------------------------
+My goal: Ask the AI machine to give me instructions to add authentication to an existing Web API Application.
+-----------------------------------------------------------
+Act as a senior .NET 8 C# developer and REST API designer.
+Goal: Provide step-by-step instructions to add authentication to an existing ASP.NET Core Web API application
+that is not currently using any authentication mechanism.
+
+1. Choose an authentication method:
+   - Decide between JWT Bearer tokens, cookie-based authentication, or another method based on your application's needs.
+
+2. Install necessary NuGet packages:
+   - For JWT Bearer authentication, install the `Microsoft.AspNetCore.Authentication.JwtBearer` package.
+   - For cookie-based authentication, install the `Microsoft.AspNetCore.Authentication.Cookies` package.
+
+3. Configure authentication services:
+   - In `Program.cs`, add the authentication services to the DI container:
+     ```csharp
+     builder.Services.AddAuthentication(options =>
+     {
+         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+         options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+     })
+     .AddJwtBearer(options =>
+     {
+         options.TokenValidationParameters = new TokenValidationParameters
+         {
+             ValidateIssuer = true,
+             ValidateAudience = true,
+             ValidateLifetime = true,
+             ValidateIssuerSigningKey = true,
+             // Set your issuer, audience, and signing key here
+         };
+     });
+     ```
+
+4. Protect your API endpoints:
+   - Use the `[Authorize]` attribute on controllers or actions that require authentication.
+   - Example:
+     ```csharp
+     [Authorize]
+     [ApiController]
+     [Route("api/[controller]")]
+     public class PodController : ControllerBase
+     {
+         // Your actions here
+     }
+     ```
+
+5. Implement user login and token generation:
+   - Create a login endpoint that validates user credentials and generates a JWT token.
+   - Example:
+     ```csharp
+     [HttpPost("login")]
+     public IActionResult Login([FromBody] LoginRequest request)
+     {
+         // Validate user credentials
+         // Generate JWT token
+         return Ok(new { Token = jwtToken });
+     }
+     ```
+
+6. Test your authentication:
+   - Use a tool like Postman to test your API endpoints.
+   - Include the JWT token in the `Authorization` header for protected endpoints.
+
+7. (Optional) Implement user registration:
+   - Create a registration endpoint to allow new users to sign up.
+   - Hash passwords and store user information securely.
+
+8. (Optional) Configure authorization policies:
+   - Define custom authorization policies if needed.
+   - Use the `[Authorize(Policy = "YourPolicyName")]` attribute to apply them.
+
+9. (Optional) Add role-based or claims-based authorization:
+   - Implement role-based or claims-based authorization as needed for your application.
+
+10. Document your API:
+    - Update your API documentation to include authentication details.
+    - Provide examples of how to obtain and use JWT tokens or cookies.

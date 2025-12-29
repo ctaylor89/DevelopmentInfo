@@ -211,6 +211,18 @@ namespace DevelopmentInfo.CodeSamples
 
             return sb.ToString().TrimEnd();
         }
+
+        // AI generated
+        public static string ToWeirdCase3(string input) =>
+            string.Join(' ',
+                input.Split(' ')
+                     .Select(word =>
+                         string.Concat(
+                             word.Select((c, i) => i % 2 == 0 ? char.ToUpper(c) : c)
+                         )
+                     )
+            );
+
         //---------------------------------------------------------------------
         public int ConsonantCount(string str)
         {
@@ -379,7 +391,7 @@ namespace DevelopmentInfo.CodeSamples
         public static int DescendingOrder(int num)
         {
             var numStr = num.ToString();
-            var numArray = new int[numStr.ToString().Length];
+            var numArray = new int[numStr.Length];
 
             for (int i = 0; i < numStr.Length; i++)
                 numArray[i] = int.Parse(numStr[i].ToString());
@@ -388,8 +400,8 @@ namespace DevelopmentInfo.CodeSamples
             Array.Reverse(numArray);
 
             var sb = new StringBuilder();
-            Array.ForEach(numArray, n => sb.Append(n.ToString()));           
-                        
+            Array.ForEach(numArray, n => sb.Append(n.ToString()));
+
             return int.Parse(sb.ToString());
 
             // Better, Uses OrderByDescending extension method on a string.
