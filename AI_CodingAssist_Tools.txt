@@ -138,12 +138,126 @@ training, making them more flexible and applicable to a wider range of applicati
 ---
 Conversational Prompt Engineering
 
+---
+Vibe_Coding
+Key characteristics (from the sources)
+It’s an AI?assisted technique where a developer describes a task to a large language model, which generates the code.
 
+The developer does not review or edit the code, but evaluates it by running it and asking the AI to improve it.
 
+It emphasizes natural?language prompting instead of traditional coding.
 
+The term was introduced by Andrej Karpathy in early 2025.
 
-----------------------------------------
+It became widely recognized — even listed as a trending term by Merriam?Webster and named Word of the Year 2025 by Collins Dictionary
 
+How it differs from traditional AI?assisted coding
+Traditional AI coding tools (like autocomplete or Copilot suggestions) still assume you’re reading, editing, and understanding the code.
+
+Vibe coding flips that:
+
+Traditional AI Coding			Vibe Coding
+You write and review code		You describe what you want and let AI write it
+You inspect and edit output		You avoid reviewing code and iterate via prompts
+Focus on correctness			Focus on experimentation and flow
+AI assists						AI leads, you guide
+
+Sources emphasize that vibe coding is more about flow, iteration, and creativity than about code structure or correctness.
+
+It aligns with the rise of agentic AI systems that can build, debug, and refine applications conversationally
+It’s a shift from “writing code” to “guiding an AI to build software.”
+
+Vibe coding is practical for enterprise and regulated environments, but not as a free?form, anything?goes workflow.
+It only works when wrapped in strong governance, architecture controls, compliance processes, and human oversight.
+
+Enterprise vibe coding offers speed and flexibility for greenfield projects, but it carries legal, architectural, and operational risks in complex or regulated domains.
+
+Meaning:
+Great for prototypes, internal tools, and low?risk apps
+Risky for core systems, PHI/PII workflows, or safety?critical software
+--
+Regulated industries face additional challenges
+Regulated sectors (healthcare, finance, defense, energy) require traceability, compliance, and software quality that often clash with vibe coding’s loose, experimental nature.
+
+Key conflicts:
+Vibe coding lacks built?in audit trails
+AI?generated code may violate compliance rules
+Harder to prove correctness, safety, and regulatory alignment
+IP ownership and licensing concerns
+--
+Enterprises must add structure, governance, and guardrails
+Enterprise vibe coding tools can accelerate development, but choosing the wrong platform can expose companies to security breaches and compliance violations.
+
+Required guardrails:
+Secure AI platforms (no PHI/PII leakage)
+Code scanning and SAST/DAST pipelines
+Architecture review gates
+Versioning and traceability
+Human?in?the?loop validation
+--
+The enterprise path forward: structured vibe coding
+Enterprise guidance emphasizes that vibe coding is viable when paired with governance, risk controls, and structured workflows.
+
+This means:
+AI generates code
+Humans validate architecture, security, and compliance
+Automated pipelines enforce quality
+Documentation and traceability are mandatory
+
+Enterprises are already adopting vibe coding — carefully
+Enterprise vibe coding is becoming mainstream, but organizations must balance velocity with risk management.
+
+Why enterprises like it:
+Faster iteration
+Lower development cost
+Empowering semi?technical teams
+Rapid prototyping
+
+Why they’re cautious:
+Compliance exposure
+Security risks
+Maintainability concerns
+IP ambiguity
+--
+Practical guidance for regulated environments (like healthcare)
+Given your interest in health?tech, here’s what the sources imply:
+
+? Where vibe coding can work in healthcare
+Internal dashboards
+
+Non?clinical workflow tools
+
+Data exploration prototypes
+
+Integration scaffolding
+
+DevOps automation scripts
+
+Documentation generation
+
+Test harnesses
+
+? Where vibe coding should not be used without strict controls
+Clinical decision support
+
+Medical device software
+
+PHI?handling services
+
+FDA?regulated components
+
+Safety?critical systems
+
+Security?sensitive code paths
+
+https://www.techiebrandon.com/articles/vibe-coding-in-the-enterprise-opportunities-limitations-and-legal-caution?utm_source=copilot.com
+The 10 Top Enterprise Vibe Coding Tools: Complete 2026 Guide
+https://www.superblocks.com/blog/best-enterprise-vibe-coding-tools?utm_source=copilot.com
+Vibe Coding for Enterprise: Key Benefits, Risks, & Practices
+
+https://codeconductor.ai/blog/vibe-coding-enterprise/
+
+Note: Look for a tutorial or article on "Vibe Coding in C#" specifically.
 ----------------------------------------
 
 ----------------------------------------

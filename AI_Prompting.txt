@@ -562,10 +562,8 @@ Model:  public class Pod
             public int Rating { get; set; }
             public DateTime CreatedOn { get; set; }
         }
-
-------
+---
 Please generate A template for multi-step iterative generation
-------------------------------------------
 
 2.5 API Design
 Act as a REST API designer.
@@ -573,6 +571,59 @@ Goal: design a RESTful endpoint for [feature].
 Context: domain model, key business rules. Constraints: use JSON, support pagination, authentication type.
 Output: 1) Endpoint path and HTTP verbs  2) Request/response schemas  3) Example payloads 
 4) Validation rules and possible error responses.
+---
+Act as a REST API designer.
+Goal: Add authentication to an existing ASP.NET 8 Core Web API application
+Context: The API currently has no authentication. We need to secure it using JWT Bearer tokens.
+Constraints: Use JSON for request/response bodies. Support for token-based authentication.
+Output: 1) Endpoint path and HTTP verbs  2) Request/response schemas  3) Example payloads
+4) Validation rules and possible error responses.
+---
+Example of API Design for Authentication Troubleshooting
 
+Act as a .Net c# API REST API designer.
+Goal: Trouble shoot authentication issues in an existing ASP.NET 8 Core Web API application
+Context: The API is experiencing issues with JWT Bearer token authentication. Some endpoints are not properly validating tokens, and users are able to access protected resources without valid credentials.
+Constraints: Use JSON for request/response bodies. Support for token-based authentication.
+Output: 1) Endpoint path and HTTP verbs  2) Request/response schemas  3) Example payloads
+4) Validation rules and possible error responses.
+---
+Act as a senior .NET 8 C# developer and REST API designer.
+Goal: Trouble shoot issue where a call from an xunit test does not access a web api method.
+Context: The xunit test is not properly configured to authenticate with the API, resulting in a 401 Unauthorized response.
+Constraints: Use JSON for request/response bodies. Support for token-based authentication.
+Output: 1) Endpoint path and HTTP verbs  2) Request/response schemas  3) Example payloads
+4) Validation rules and possible error responses.
+---
+Act as a senior .NET 8 C# developer and REST API designer.
+Goal: Trouble shoot issue where a test method call from an xunit test does not access a web api method.
+Context: The xunit test method is an async method and the web api method being called is an async method.
+See the code snippets below. 
 
+This is the test method making the call to the controller action 
+    ``` 
+        [Fact]
+        public async Task GetStringAsync()
+        {
+            var response = await _client.GetAsync("/api/pods");
+            response.EnsureSuccessStatusCode();
+            Assert.Equal("PodsController is healthy.", (IEnumerable<char>?)response.Content);
+        } ```
 
+This is the controller action being called:
+    ``` [HttpGet]
+        public async Task<string> GetStringAsync()
+        {
+            string result = "PodsController is healthy.";
+            return await Task.FromResult(result);
+        } ```
+
+Output: 1) What is causing the 500 internal server error when the test method calls the GetStringAsync controller action? 
+2) Suggested fix with code snippet 3) Steps to reproduce (if not provided) and verification steps.
+---
+Act as a .Net 8 Web API Instructor using c#.  
+Goal: Get a solid understanding of the repository pattern as it is used in Web API applications.
+Output : 1)Explain the repository pattern with code examples in c#. Show how to implement it in a Web API application.
+2) Provide best practices for using the repository pattern effectively.
+3) Provide common pitfalls to avoid when using the repository pattern.
+4) Provide a simple example of a Web API application that uses the repository pattern.
