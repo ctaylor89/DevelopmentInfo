@@ -239,6 +239,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookKeeping", "BookKeeping", "{11680CD5-2E31-46DD-84BB-4B03512D3832}"
 	ProjectSection(SolutionItems) = preProject
 		BkStartupNotes.txt = BkStartupNotes.txt
+		BK_Notes.txt = BK_Notes.txt
 	EndProjectSection
 EndProject
 Global

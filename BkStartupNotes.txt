@@ -301,68 +301,53 @@ or a pricing model for your future bookkeeping business
 --------------------------------------------------------
 Certifications_for_Bookkeepers
 
-bookkeeping certifications aren’t a maze. There are only a handful that actually matter, and even fewer that meaningfully improve your earning power. Below is a clean, no‑nonsense list of the exact certifications worth getting, ordered by impact and practicality for someone launching a bookkeeping business in California.
+bookkeeping certifications aren’t a maze. There are only a handful that actually matter, and even fewer that meaningfully 
+improve your earning power. Below is a clean, no‑nonsense list of the exact certifications worth getting, ordered by impact 
+and practicality for someone launching a bookkeeping business in California.
 
 The Only Certifications That Truly Matter
 1. QuickBooks Online ProAdvisor (FREE)
-Impact: Essential
-Difficulty: Easy
-Time: 1–2 weeks
+	Impact: Essential
+	Difficulty: Easy
+	Time: 1–2 weeks
 
 This is the must‑have credential for any modern bookkeeper.
 Why it matters:
-
-QuickBooks Online dominates the small‑business market.
-
-Certification gives you free QBO software, discounts, and marketing placement.
-
-Clients actively look for “ProAdvisors.”
-
-For your tech background, this will feel straightforward.
+	QuickBooks Online dominates the small‑business market.
+	Certification gives you free QBO software, discounts, and marketing placement.
+	Clients actively look for “ProAdvisors.”
+	For your tech background, this will feel straightforward.
 
 2. AIPB Certified Bookkeeper (CB)
-Impact: High
-Difficulty: Moderate
-Time: 2–4 months
+	Impact: High
+	Difficulty: Moderate
+	Time: 2–4 months
 
-This is the gold standard for credibility if you want to:
+	This is the gold standard for credibility if you want to:
+	charge higher rates
+	work with CPAs
+	handle more complex books
 
-charge higher rates
+	It covers:
+		accrual accounting
+		adjusting entries
+		payroll
+		error correction
+		fraud prevention
 
-work with CPAs
-
-handle more complex books
-
-It covers:
-
-accrual accounting
-
-adjusting entries
-
-payroll
-
-error correction
-
-fraud prevention
-
-This is the certification that signals “I’m not just a data‑entry bookkeeper.”
+	This is the certification that signals “I’m not just a data‑entry bookkeeper.”
 
 3. NACPB Certifications (Pick 1–2)
 Impact: Medium
 Difficulty: Easy–Moderate
 Time: 2–6 weeks each
-
 The National Association of Certified Public Bookkeepers offers modular certifications:
+	Certified Professional Bookkeeper (CPB)
+	Payroll Certification
+	QuickBooks Online Certification (separate from Intuit’s)
+	These are great if you want structured learning without the intensity of AIPB.
+	Optional but Valuable (Depending on Your Niche)
 
-Certified Professional Bookkeeper (CPB)
-
-Payroll Certification
-
-QuickBooks Online Certification (separate from Intuit’s)
-
-These are great if you want structured learning without the intensity of AIPB.
-
-Optional but Valuable (Depending on Your Niche)
 4. Xero Advisor Certification (FREE)
 Useful if you want:
 
@@ -386,24 +371,16 @@ make you more efficient
 Given your automation mindset, these tools will feel natural.
 ---
 The Ideal Path to Certification
-
 Given your technical strengths and desire to start a business, this is the most efficient sequence:
-
-QuickBooks Online ProAdvisor (1–2 weeks)
-
-AIPB Certified Bookkeeper (2–4 months)
-
-Optional: Xero Advisor or NACPB CPB depending on niche
+	QuickBooks Online ProAdvisor (1–2 weeks)
+	AIPB Certified Bookkeeper (2–4 months)
+	Optional: Xero Advisor or NACPB CPB depending on niche
 
 This gives you:
-
-credibility
-
-platform mastery
-
-a competitive edge
-
-the ability to charge premium rates
+	credibility
+	platform mastery
+	a competitive edge
+	the ability to charge premium rates
 ---
 90‑Day Bookkeeping Certification Plan
 
@@ -411,88 +388,71 @@ Phase 1 (Days 1–30): QuickBooks Online ProAdvisor + Core Bookkeeping Skills
 This phase builds your foundation and gets you certified on the software clients expect.
 
 Week 1: QuickBooks Online Basics
-Set up a QBO test company (free in ProAdvisor portal).
+	Set up a QBO test company (free in ProAdvisor portal).
 
 Learn:
-
-Chart of accounts
-
-Bank feeds
-
-Categorization rules
-
-Invoicing & bills
-
-Basic reporting
+	Chart of accounts
+	Bank feeds
+	Categorization rules
+	Invoicing & bills
+	Basic reporting
 ---
 Week 2: QuickBooks Online Advanced Features
-Complete QBO ProAdvisor Certification
-Work through Intuit’s training modules.
+	Complete QBO ProAdvisor Certification
+	Work through Intuit’s training modules.
 
 Learn:
-Advanced reporting
-Custom fields
-Automated workflows
-Integrations with other apps
-Take the certification exam.
-Add the badge to your LinkedIn and future website.
-Outcome: You’re now officially certified and discoverable in the ProAdvisor directory.
+	Advanced reporting
+	Custom fields
+	Automated workflows
+	Integrations with other apps
+	Take the certification exam.
+	Add the badge to your LinkedIn and future website.
+	Outcome: You’re now officially certified and discoverable in the ProAdvisor directory.
 
 Week 3: Bookkeeping Fundamentals
-Double‑entry accounting
-Debits vs credits
-Accrual vs cash
-Bank reconciliation workflows
-Month‑end close structure
-Outcome: You understand the mechanics behind the software.
+	Double‑entry accounting
+	Debits vs credits
+	Accrual vs cash
+	Bank reconciliation workflows
+	Month‑end close structure
+	Outcome: You understand the mechanics behind the software.
 
 Week 4: Applied Practice
-Reconcile 2–3 months of sample data.
-Build sample financial statements.
-Practice fixing common errors (your troubleshooting strength shines here).
-Outcome: You can handle real‑world books with confidence.
+	Reconcile 2–3 months of sample data.
+	Build sample financial statements.
+	Practice fixing common errors (your troubleshooting strength shines here).
+	Outcome: You can handle real‑world books with confidence.
 
 Phase 2 (Days 31–60): AIPB Certified Bookkeeper Prep
-This is the credibility booster. You’ll tackle the deeper accounting topics.
+	This is the credibility booster. You’ll tackle the deeper accounting topics.
 
 Week 5: Adjusting Entries
-Accruals
-
-Deferrals
-
-Depreciation
-
-Amortization
+	Accruals
+	Deferrals
+	Depreciation
+	Amortization
 
 Week 6: Payroll Fundamentals
-Gross vs net
-
-Withholdings
-
-Employer taxes
-
-Payroll journal entries
+	Gross vs net
+	Withholdings
+	Employer taxes
+	Payroll journal entries
 
 Week 7: Error Correction & Internal Controls
-Finding and fixing discrepancies
-
-Audit trails
-
-Fraud prevention
-
-Controls for small businesses
+	Finding and fixing discrepancies
+	Audit trails
+	Fraud prevention
+	Controls for small businesses
 
 Week 8: Practice Exams + Reinforcement
-Work through AIPB practice tests.
-
-Revisit weak areas.
-
-Build a “month‑end close checklist” template for your future clients.
-
-Outcome: You’re ready for the AIPB exam and already operating like a professional bookkeeper.
+	Work through AIPB practice tests.
+	Revisit weak areas.
+	Build a “month‑end close checklist” template for your future clients.
+	Outcome: You’re ready for the AIPB exam and already operating like a professional bookkeeper.
 
 Phase 3 (Days 61–90): Optional NACPB or Xero + Business Launch Prep
-This phase rounds out your skills and gets your business ready to take clients.
+	This phase rounds out your skills and gets your business ready to take clients.
 
 Week 9: Choose Your Optional Certification
 Pick one based on your niche:
