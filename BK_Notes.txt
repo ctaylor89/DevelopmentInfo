@@ -1,52 +1,86 @@
 Here are the 20 most common, high-signal keywords you’ll see in bookkeeping task descriptions. 
-No fluff — these are the ones that actually show up in job postings and client scopes:
+These are the ones that actually show up in job postings and client scopes:
 
 Accounts Payable (A/P) – Entering, coding, and paying bills
+Accounts Payable (A/P) is the function that tracks and manages a business’s short-term obligations to vendors for goods and services already received but not yet paid. It includes receiving and reviewing vendor invoices, verifying accuracy and approval, coding expenses to the correct general ledger accounts, and scheduling payments according to agreed terms to maintain cash flow and avoid late fees. A/P also involves reconciling vendor statements, handling credits or disputes, and ensuring payments are issued correctly by check, ACH, or credit card. Done right, accounts payable keeps expenses accurate, supports clean financial reporting, and protects vendor relationships while giving management a clear picture of what the company owes and when.
 
 Accounts Receivable (A/R) – Invoicing, posting payments, collections
+Accounts Receivable covers the money owed to the business by customers for products or services already delivered. This includes creating and sending invoices, applying customer payments, tracking outstanding balances, and following up on overdue accounts. Accurate A/R ensures revenue is recorded correctly and cash is collected on time, which is critical for maintaining healthy cash flow.
 
 Bank Reconciliation – Matching bank/credit card statements to books
+Bank reconciliation is the process of matching transactions in the accounting system to those shown on bank and credit card statements. The goal is to identify and resolve discrepancies such as missing entries, timing differences, bank fees, or errors. Regular reconciliations ensure cash balances are accurate and help catch fraud or mistakes early.
 
 General Ledger (GL) – Maintaining and reviewing ledger accounts
+The General Ledger is the core record that contains all financial transactions categorized into accounts such as cash, revenue, expenses, assets, and liabilities. Maintaining the GL involves ensuring transactions are posted to the correct accounts and periods. A clean, accurate GL is essential because all financial reports are generated from it.
 
 Journal Entries – Recording adjustments, accruals, corrections
+Journal entries are manual or automated adjustments made to the accounting system to record transactions not captured through normal processes. Common examples include accruals, depreciation, corrections, and reclassifications. Proper journal entries ensure financial statements reflect the true financial position of the business.
 
 Month-End Close – Closing books on a monthly schedule
+Month-end close is the structured process of finalizing the books for a completed month. It includes posting all transactions, reconciling accounts, reviewing balances, and generating financial statements. A timely and consistent close allows management to rely on accurate monthly financial data for decision-making.
 
 Financial Statements – Preparing P&L, balance sheet, cash flow
+Financial statements are formal reports that summarize a company’s financial performance and position. The primary statements include the Profit and Loss (income statement), Balance Sheet, and Cash Flow Statement. Bookkeepers are responsible for ensuring the underlying data is accurate so these reports can be trusted by management, lenders, and accountants.
 
 Invoicing / Billing – Creating and managing customer invoices
+Invoicing involves creating and issuing bills to customers for goods or services provided. This includes ensuring correct pricing, taxes, payment terms, and customer information. Accurate and timely invoicing directly affects how quickly a business gets paid and how revenue is recognized.
 
 Payroll Processing – Running payroll, deductions, filings support
+Payroll processing covers calculating employee wages, deductions, taxes, and net pay, as well as issuing payments and maintaining payroll records. While payroll services may handle filings, bookkeepers often review payroll reports and post payroll entries correctly. Accurate payroll ensures compliance and proper expense reporting.
 
 Expense Tracking – Categorizing and monitoring expenses
+Expense tracking is the process of recording, categorizing, and monitoring business expenses. This includes operational costs, reimbursements, subscriptions, and credit card charges. Proper expense tracking supports budgeting, tax deductions, and accurate profitability analysis.
 
 Budgeting – Tracking actuals vs budget (often light analysis)
+Budgeting involves comparing actual financial results against planned expectations. Bookkeepers may assist by organizing historical data, tracking variances, and producing reports that show where spending differs from the budget. This helps management control costs and plan future spending.
 
 Cash Flow Management – Monitoring inflows/outflows and balances
+Cash flow management focuses on monitoring how money moves in and out of the business. It includes tracking inflows from customers, outflows for expenses, and timing differences between them. Effective cash flow management ensures the business can meet its obligations and avoid cash shortages.
 
 Data Entry – Entering transactions accurately and on time
+Data entry refers to recording financial transactions into the accounting system accurately and consistently. This includes sales, expenses, payments, and adjustments. While basic, accurate data entry is foundational—errors here flow directly into reports and reconciliations.
 
 Account Reconciliations – Reconciling GL, AR, AP, and sub-ledgers
+Account reconciliations involve comparing internal account balances to external records or supporting schedules. This can include bank accounts, credit cards, loans, and clearing accounts. Reconciliations verify accuracy and ensure balances are complete and supported.
 
 1099 Preparation – Tracking vendors and preparing 1099s
+1099 preparation involves tracking payments made to independent contractors and preparing required year-end tax forms. Bookkeepers ensure vendors are classified correctly and totals are accurate. Proper 1099 handling helps the business stay compliant with IRS reporting requirements.
 
 Sales Tax Compliance – Calculating, filing, and remitting sales tax
+Sales tax compliance includes calculating, tracking, and reporting sales tax collected from customers. This may involve multiple states or jurisdictions with different rules. Accurate sales tax handling prevents penalties and ensures liabilities are recorded correctly.
 
 Audit Support – Providing documentation and reports
+Audit support means providing documentation, reports, and explanations to accountants or auditors. This includes transaction detail, reconciliations, and financial statements. Strong bookkeeping makes audits smoother and faster by reducing questions and corrections.
 
 Financial Reporting – Custom or standard management reports
+Financial reporting goes beyond standard statements to include customized reports for management. This may include department summaries, trend analysis, or KPI reports. Bookkeepers ensure reports are accurate, timely, and clearly presented.
 
 Fixed Assets – Tracking assets and depreciation
+Fixed assets are long-term purchases such as equipment, vehicles, and furniture. Bookkeeping tasks include recording acquisitions, tracking asset values, and posting depreciation. Proper fixed asset tracking ensures expenses are matched to the correct periods.
 
 Clean-Up / Catch-Up Bookkeeping – Fixing messy or outdated books
+Clean-up or catch-up bookkeeping involves correcting errors or bringing books up to date after a period of neglect. This may include reclassifying transactions, reconciling accounts, and fixing prior reporting issues. These projects restore financial accuracy and reliability.
 
-If you want to optimize for hiring platforms
-
+* If you want to optimize for hiring platforms
 Temp / contract roles lean heavily on: reconciliations, clean-up, month-end close, A/P, A/R
+Remote roles often emphasize: QuickBooks, reconciliations, invoicing, payroll support.
 
-Remote roles often emphasize: QuickBooks, reconciliations, invoicing, payroll support
+Note: Payroll support means assisting with payroll-related tasks without being the person legally responsible for running payroll or filing payroll taxes. In remote bookkeeping roles, the bookkeeper typically supports a payroll service (like ADP, Gusto, Paychex, or QuickBooks Payroll) rather than replacing it. The work is operational and review-focused, not compliance-heavy.
 
-Higher-paying gigs include: month-end close, financial statements, sales tax, audit support
+Concretely, payroll support usually includes collecting and validating payroll inputs (hours worked, PTO, bonuses, commissions), reviewing payroll reports for accuracy before or after payroll runs, and posting payroll journal entries to the general ledger so wages, taxes, and benefits hit the correct accounts and periods. It also often involves reconciling payroll clearing accounts, tracking employer taxes and benefit expenses, and answering basic payroll-related questions from management (not employees).
+Payroll support does not usually include in remote bookkeeping roles: filing payroll tax returns, making tax payments, handling garnishments, or resolving IRS/state notices. Those functions typically stay with the payroll provider or an accountant. When a job posting says “payroll support,” it’s signaling “hands-on bookkeeping around payroll” rather than “you own payroll compliance.”
 
-If you want, I can tailor this list for resume keywords, LinkedIn searches, or Upwork/FlexJobs listings — different platforms reward different wording.
+* Higher-paying gigs include: month-end close, financial statements, sales tax, audit support
+
+If you want, I can tailor this list for resume keywords, LinkedIn searches, or Upwork/FlexJobs listings — different 
+platforms reward different wording.
+****************************************
+
+
+Financial Reporting
+
+
+Fixed Assets
+
+
+Clean-Up / Catch-Up Bookkeeping
