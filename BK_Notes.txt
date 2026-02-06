@@ -123,7 +123,18 @@ Data entry refers to recording financial transactions into the accounting system
 expenses, payments, and adjustments. Data entry errors flow directly into reports and reconciliations.
 ---
 Account Reconciliations – Reconciling GL, AR, AP, and sub-ledgers
-Account reconciliations involve comparing internal account balances to external records or supporting schedules. This can include bank accounts, credit cards, loans, and clearing accounts. Reconciliations verify accuracy and ensure balances are complete and supported.
+Account reconciliations involve comparing internal account balances to external records or supporting schedules. This can 
+include bank accounts, credit cards, loans, and clearing accounts. Reconciliations verify accuracy and ensure balances are 
+complete and supported.
+
+* A transaction is cleared when:
+	The bank or credit card has processed it.
+	It appears on the statement.
+	You’ve checked it off during reconciliation.
+When you reconcile: 
+	You compare QuickBooks to the statement
+	You check off each transaction that appears
+	QuickBooks marks it with a “C” (Cleared)
 ---
 1099 Preparation – Tracking vendors and preparing 1099s
 1099 preparation involves tracking payments made to independent contractors and preparing required year-end tax forms. Bookkeepers ensure vendors are classified correctly and totals are accurate. Proper 1099 handling helps the business stay compliant with IRS reporting requirements.
@@ -267,3 +278,83 @@ Bottom line
 	Feed = data entry assistant
 	Reconciliation = confirmation, not correction
 
+What “payee” actually means in QuickBooks
+
+A payee is:
+
+A vendor (money going out)
+
+A customer (money coming in)
+
+Or sometimes an employee or owner
+
+It is not:
+
+The bank
+
+The account
+
+The category
+
+The payee is the counterparty in the transaction.
+
+Why transactions show “without payees”
+
+Bank feeds usually provide:
+
+Amount
+
+Date
+
+Memo/description text
+
+They often do NOT provide a clean vendor name that QuickBooks can map automatically.
+
+So QuickBooks says:
+
+“I have a transaction, but I don’t know who it’s with.”
+
+Why payees matter (and why you shouldn’t ignore this)
+	Payees affect:
+	Vendor reports
+	Expense detail
+	1099 tracking
+	Search and audit trails
+
+Categories affect financials. Payees affect clarity. Both matter.
+Leaving payees blank doesn’t usually break the Balance Sheet — but it kills reporting quality.
+
+Best practice (real-world)
+Assign payees for:
+
+Regular vendors
+
+Large expenses
+
+Anything 1099-related
+
+Don’t obsess over payees for:
+
+Small one-off charges
+
+Bank fees
+
+Interest
+
+Accuracy > perfection.
+
+One important warning
+
+Do not confuse “payee” with “category.”
+
+Payee = who
+
+Category = where it hits the books
+
+You can have:
+
+Correct category
+
+Wrong or missing payee
+End_of_Random_Notes
+------------------------------------------------------------------------------------------------------------
