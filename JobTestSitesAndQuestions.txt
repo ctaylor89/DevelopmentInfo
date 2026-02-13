@@ -1,0 +1,449 @@
+﻿Interview_Notes
+LinkedIn_Profile
+Practice_And_Learn_Sites
+Questions_Random
+Resume_Notes
+Testing_Concepts
+Testing_Technologies
+
+------------------------------------------------------------
+Practice_And_Learn_Sites
+
+------------------------------------------------------------
+Questions_Random
+
+------------------------------------------------------------
+Testing_Technologies
+
+Selenium is a popular open-source tool for automating web browsers. It allows testers to write scripts in various programming 
+languages (like Java, C#, Python) to interact with web elements and validate functionality.
+
+
+
+---
+Healthcare IT standards:
+HL7 is a set of international standards for the transfer of clinical and administrative data between software applications 
+used by various healthcare providers.
+
+DICOM is a standard for transmitting, storing, and sharing medical images, and is widely used in healthcare imaging systems.
+
+
+------------------------------------------------------------
+Testing_Concepts
+
+------------------------------------------------------------
+Interview_Notes
+
+I’ll answer this **as the testing manager sitting across the table from you**, and I’ll be blunt about what *actually* sounds credible vs. what raises red flags.
+
+## What I Want to Hear (and Why It Works)
+
+A **good, acceptable reason** is not “I’m burned out on coding” or “testing seems easier.”
+Those kill your chances instantly.
+
+What *does* work is framing the move as a **shift in where you add the most value**, not a step down.
+
+Here’s the core message I’m listening for:
+
+> “I’m strongest at finding risk, edge cases, and failure paths — and I want a role where that mindset is the primary responsibility.”
+
+That tells me:
+
+* You understand what testing really is
+* You’re not running away from development
+* You’re moving *toward* quality ownership
+
+---
+
+## A Strong, Realistic Answer You Could Say
+
+You don’t need to memorize this, but this is the **shape** of a winning response:
+
+> “After several years in development, I realized that the part of the job I consistently did best — and enjoyed most — was 
+validating behavior, thinking through edge cases, and catching issues before they escaped to production.
+>
+> I was often the person on the team questioning assumptions, reviewing stories for testability, and writing tests that exposed 
+gaps in requirements or logic.
+>
+> I want to move into software testing because that critical, risk-focused thinking is where I add the most value, and I want 
+quality to be my primary responsibility instead of a secondary one.”
+
+Why this works:
+
+* It’s **proactive**, not defensive
+* It shows **self-awareness**
+* It respects testing as a discipline
+* It doesn’t trash development
+
+---
+
+## Even Better: Tie It to Business Impact
+
+If you want bonus points, connect it to outcomes:
+
+> “I’ve seen how small gaps in testing turn into expensive production issues. I want to be in a role where my focus is preventing 
+those failures earlier — through better test design, automation, and collaboration with developers.”
+
+That tells me:
+
+* You think beyond code
+* You understand cost of defects
+* You care about the product, not just tasks
+
+---
+
+## What NOT to Say (Ever)
+
+If I hear any of these, I’m immediately skeptical:
+
+* ❌ “Testing has less pressure”
+* ❌ “I’m tired of writing code”
+* ❌ “Testing seems more stable”
+* ❌ “I want a slower pace”
+* ❌ “I already do testing anyway”
+
+Those say:
+
+* You don’t respect the role
+* You think testing is a fallback
+* You don’t understand modern testing
+
+---
+
+## Why Your Dev Background Is Actually a Selling Point
+
+As a testing manager, I **like** former developers *if* they get this right.
+
+What I assume about you (in a good way):
+
+* You understand how bugs are introduced
+* You can read code when black-box testing isn’t enough
+* You can write better automation
+* You can challenge devs without hand-waving
+
+But I also want to hear that you’re willing to:
+
+* Think like a user
+* Test things that “shouldn’t happen”
+* Say “this isn’t shippable” when it’s unpopular
+
+---
+
+## One-Sentence Version (If I Push You)
+
+If I ask, *“Bottom line, why testing?”* — this is gold:
+
+> “Because my strength is in preventing defects, not just fixing them — and testing is where 
+that mindset has the most impact.”
+
+---
+
+## Final Manager Reality Check
+
+Switching from development to testing is **not** a downgrade if you frame it correctly.
+It *is* a red flag if it sounds like an escape hatch.
+
+If you want, I can:
+
+* Help you tailor this answer to **manual vs automation vs SDET**
+* Role-play a follow-up interview question I *will* ask next
+* Help rewrite your resume so this transition looks intentional, not reactive
+
+Say how deep you want to go.
+
+-----------------------------------------------------------
+------------------------------------------------------------
+LinkedIn_Profile
+
+About Section:
+
+ABOUT ME
+With over 20 years of development and test experience, I am looking forward to expand my participation in testing and learning to build automated test software if given the opportunity to do so. 
+
+As a Software Developer, I have thoroughly tested each of my projects after development. As a result, seldom did I leave any problems to be found by QA. In my experience working at Road Safety where I was the sole architect\developer of my main project, we sold over a thousand units to the public. I only received two minor customer issues that were reported back to me. 
+
+My experience includes Web Application development and testing, Web API development and testing, desktop applications and testing, SQL\Oracle development and testing.
+
+TECHNOLOGIES 
+JUnit, C# .Net 8, C++. WEB API, Swagger/OpenAPI, HTML, CSS, MVC, JavaScript, JQuery, Bootstrap, XML, WCF, Oracle, SQL Server, Entity Framework.
+
+TOOLS
+ChatGPT, Copilot, Postman, Visual Studio 2022, TFS, GIT, Jenkins, JIRA, Azure DevOps
+
+BASIC SKILLS
+Creating and editing software test procedures. Configuring systems for testing software programs. Running software integration and Unit testing. Project architecting, requirements gathering, customer support, training and creating research documentation. 
+
+TESTING EXPERIENCE:
+Set up a test computer lab to support testing of software applications and remote controls. Hired and managed one individual to assist in the testing process. Configured test computers and test VM's with operating systems and software versions to match customer environments. 
+
+Created a device simulator using C++ for testing an application during development.
+Created unit tests to perform testing while developing a web application for the Navy's HR and utilities management departments. Tested software applications and device drivers for laser marking machines, electronic signature pads and remote controls. 
+
+Created software in C++ to test laser power output levels and automatically adjust the power input as needed.
+Tested application features using different user roles to ensure to ensure that only the correct features were available for that role. 
+
+In my last position I Identified errors and areas for improvement in the test procedures. Provided feedback to the team lead. Followed Agile\Scrum methodologies and participated in daily stand-ups, sprint planning, and retrospectives. 
+---
+#Notes
+SOME PROJECTS I HAVE WORKED ON OVER THE YEARS
+
+Worked on a project for the Navy to manage their utilities for their ships and bases. We used C#, JavaScript, AngularJS(V1.5) and an Oracle database.
+
+Worked with a team of developers building a new web application for recruiting new sailors. The web application provides job information and a survey for potential applicants to help determine which jobs in the Navy they would be a good fit for. The website is built using C#, ASP.NET, JQuery, JavaScript. Used ChatGPT and Copilot for AI assistance.   
+	
+Supported an existing human resource management website by adding some new features to the front and back end code. Used Visual Studio, SQL Server and GIT for development. Researched\documented new technologies such as Azure, Docker and Kubernetes for management to use in their architecture planning meetings. Performed application testing and created new test procedures.
+
+Developed an employee mileage calculation application for the County of Ventura that consists of both an MVC website and a Web API interface for a mobile device to connect.
+
+Added a new section to an MVC Web application for the Ventura County Health Services Department to manage their medical providers and community partners.
+
+Added a new feature to an ASP.Net Web Forms website for the sending of messages between Sales Associates and their customers. Also architected a backend solution that consolidates existing messaging and email services using WCF web service for easier maintainability.
+
+Created a web site to report on the performance of medical device batteries using C#, MVC and WCF.
+This included a backend service on the client's system that would collect the battery data from the battery charger and then send that data to a RESTful API that I also designed.
+
+Architect and developed a client side service in C# that facilitates the downloading and programming of an emergency vehicle monitoring device. I was also the sole architect and developer of a desktop application that would read and process vehicle driving data from a box located in a non-emergency vehicle.
+
+22nd Century Technologies Inc.
+
+♦ Development Experience:
+• Developed new front end and back end features for an HR web application. The HR website is built using ASP.NET, C#, JQuery, and JavaScript. Used Azure DevOps, Visual Studio, IIS, SQL Server Management Studio and GIT for development tools. 
+• Researched and documented new technologies such as .Net 8 API development, Azure, Docker and Kubernetes for our architect  to use in his architecture planning meetings.
+---
+Brandes Associates Inc.
+
+♦ Testing Experience:
+• Tested and validated my added features to the Mission Planning System. 
+• Created and executed unit tests in Java using JUnit. 
+• Used JaCoCo and SonarQube for unit test code quality analysis including code coverage. 
+• Performed integration testing from a windows environment for the application running on a Unix server.
+
+♦ Development Experience:
+• Performed software development work on a mission planning application for the Navy using Java.
+• Worked in a Scrum\Agile development environment including CI/CD. 
+---
+Miracle Software Systems, Inc
+
+Contracted to the Military Counseling & Family Planning department of the DOD.
+
+♦ Testing Experience:
+• Performed integration and regression testing to ensure code quality while developing. 
+• Followed Agile\Scrum methodologies.
+• Used JIRA for planning and project management.
+• Performed project demos, design reviews.
+
+♦ Development Experience:
+• Added features to their client facing MVC ASP.Net website. 
+• Made use of several languages and technologies including C#, JavaScript, JQuery, HTML, CSS, Microsoft SQL 
+• database, Entity Framework, Visual Studio, GIT and IIS.
+---
+Accenture Federal Services
+Contracted through Accenture to work on a Dynamics 365 ERP system for the Public Benefits Guarantee Corporation. 
+
+♦ Testing Experience:
+• Tested code changes I made to existing Dynamics 365 plug-in components.
+
+♦ Development Experience:
+• Using Visual Studio and C# added changes to existing plug-in components to resolve customer issues. 
+• Made some requested changes to the UI through the Portal Editor using Javascript code.
+• Added logic changes to the UI work flows via the Work Flow editor.
+• Attended a Dynamics 365 Bootcamp to prepare for the project.
+---
+Brandes Associates, Inc.
+
+♦ Testing Experience:
+• Set up a test VMs to support testing of the Navy-Air Force Mission Planning System.
+• Worked with the test department by testing features added to the Mission Planning System. 
+
+♦ Development Experience:
+• Applied Software patches to existing applications to fix bugs and add features.
+• Created installation programs using InstallShield to install software patches for fixes and updates.
+• Designed and created a .NET C# automation program to update customer user documentation. 
+• Produced documentation for problem\resolution analysis and test procedures.
+---
+♦ VSolvit
+
+Worked on a team where we were performing a major rewrite of a utilities management program for the Navy. 
+
+♦ Testing Experience:
+• Created unit tests for testing an application at the data access and business logic layers while developing.
+• Performed integration testing on applications using C# and .Net technologies.
+
+♦ Development Experience:
+• Used various technologies such as AngularJS(V1.5), Java script, JQuery, OraclePL/SQL, MVC, LINQ and C# 
+in the full stack development of an application rewrite.
+---
+♦ TEKSystems
+
+Contracted to the Web Development team in the IT department for the County of Ventura for a 6 month contract. 
+
+♦ Testing Experience:
+• Performed integration testing on applications built using C# and .Net technologies. 
+
+♦ Development Experience:
+• Developed an employee mileage calculation application that consisted of both a website and a Web API interface 
+for mobile devices. Used C#, HTML, JavaScript, C# .Net and Visual Studio. 
+• Added a section to a web application for the Health Services department to manage their medical providers 
+and community partners. 
+• Made several additions to a back end WCF service for the Animal Control department. This included speeding 
+up data retrieval times, identifying and removing duplicate data and fixing other bugs.
+---
+♦ Community Centric
+
+♦ Testing Experience:
+Performed integration and unit testing for the code I was developing.
+
+♦ Development Experience:
+• Added features to existing .Net C# desktop applications that transform data from financial institutions 
+into a proprietary format. 
+• Designed and developed back end services using ASP.NET Web API, WCF and deployed these services to an AWS server. 
+• Designed tables and stored procedures for a Microsoft SQL database. 
+• Created technical documentation and instructions for other developers.
+---
+♦ ZOLL Medical Corporation
+
+Was the sole Architect\Developer\Tester\Customer Support of a C++ application to monitor the driving behavior of Teenage drivers.
+
+♦ Testing Experience:
+• Created a hardware simulation tool in C++ to test the application's ability to communicate with the 
+vehicle black box over a serial port.
+• Performed integration testing on applications built using C++, C# and .Net technologies. 
+• Set up a single test computer to support testing of software applications running different operating systems 
+that can be easily switched out as needed.
+• Performed integration testing on the firmware located in the Vehicle monitoring box.
+
+♦ Development Experience:
+• I later expanded the Vehicle monitoring software using C# to accommodate Fleet vehicles as well. This included adding report generation  
+and a Microsoft SQL database to store drive data received from a vehicle black box.
+
+• Created an application that was linked to a legacy Vehicle monitoring device that used RS-232 communication to a TCP socket so that it 
+could collect drive data over the internet. This application kept track of associating dynamic IP addresses 
+with vehicle box identifiers.
+
+• Created back end services using ASP.NET Web API to support communication between a new web application and 
+legacy Vehicle monitoring devices that could not communicate over the internet.
+• Technologies used were  .Net, C#, MFC, C++, WinForms, WCF, MVC, TSQL, LINQ, XML, HTML, Visual Studio, MSSQL Management Studio.
+---
+Interlink Electronics
+
+Hired to take over testing and run a test department for both applications and remote control devices.
+
+♦ Testing Experience:
+• Set up a test computer lab to support testing of software applications and remote controls. 
+• Configured test computers with operating systems that can be easily switched out as needed to support testing of software applications and devices.
+• Tested and verified new software versions to match customer environments.
+• Tested software to verify customer issues.
+• Tested software applications and device drivers for functionality and compatibility across different setups.
+• Created a test application to test a device driver for a hand held control used in presentation meetings.
+• Created and tested installation programs applications and device drivers
+• Hired an assistant to help with the testing.
+• Tested device drivers that were created by off-site consultants.
+-----------------------------------------------------------
+Resume_Notes
+
+.NET SOFTWARE TESTER
+
+•	Experienced in the full life cycle of the software design process, including system requirements definition, prototyping, design, testing and maintenance. 
+•	Experienced in researching and designing system level software and creating specifications. 
+•	Created and updated technical documents based on investigation and research.
+•	Performed application testing including creation and refinement of application test procedures.
+•	Used AI tools for research and application development taking advantage of Prompt Engineering techniques.
+•	Experienced with MS-SQL Server and Oracle database development creating tables, packages, scripts, Entity Framework PL/SQL and stored procedures.
+•	Experienced in researching and providing technical support to customers and consulting engineers.
+
+LANGUAGES AND TECHNOLOGIES
+
+♦  C# \ C++\ .Net	♦  Integration testing  ♦  Azure ♦  Unit testing ♦  TSQL ♦  Visio
+♦  GIT\TFS	♦  Jenkins ♦  AI ChatGPT	♦  AI Copilot	♦  Prompt Engineering 
+Scrum\Agile
+
+PROFESSIONAL EXPERIENCE
+
+22nd Century, Inc. McClean, VA  	  				           	August 2024 – December 2025
+Software Engineer / Contractor
+
+Performed development and integration testing on a web application for the Navy's Human Resources department. 
+Tested application features using different user roles to ensure features met the requirements and functioned as expected.
+Identified and documented defects found in the application during testing.
+Assisted in the creation of test integration plans.
+Identified areas for improvement in the test procedures and provided feedback to the team lead.
+Created and executed unit tests in C# to ensure code quality while developing.
+Followed Agile\Scrum methodologies and participated in daily stand-ups, sprint planning, and retrospectives.
+
+---
+Brandes Associates, Inc. Camarillo, CA
+Software Engineer / Contractor
+
+Tested and validated added features to the Navy-Air Force Joint Mission Planning System (JMPS). 
+Created and executed unit tests in Java using JUnit.
+Used JaCoCo and SonarQube for unit test code quality analysis.
+Worked in a Scrum\Agile development environment including CI/CD, performed demos and design reviews and unit 
+testing with code coverage.
+
+* JaCoCo generates coverage reports. SonarQube imports and visualizes them
+---
+Miracle Systems, Arlington, VA
+.Net Software Developer / Contractor
+Performed development and integration testing on a web application for the Department of Veterans Affairs. Created and executed 
+unit tests in C#to ensure code quality while developing. Followed Agile\Scrum methodologies and participated in daily stand-ups, 
+sprint planning, and retrospectives. Utilized Azure DevOps, GIT and Visual Studio to build unit tests.
+---
+Accenture Federal, Arlington, VA
+.Net Software Developer / Contractor
+Performed integration testing on a Dynamics 365 application. 
+Created and executed unit tests in C# to ensure code quality while developing. 
+Followed Agile\Scrum methodologies and participated in daily stand-ups, sprint planning, and retrospectives. 
+Utilized Azure DevOps, GIT and Visual Studio to build unit tests.
+---
+Brandes Associates, Inc. Camarillo, CA
+Software Developer / Contractor
+Worked with the test department to validate added features to the Navy-Air Force Joint Mission Planning System (JMPS). 
+Designed and created a C# automation program to update customer user documentation. 
+Produced documentation for problem\resolution analysis and test procedures.
+---
+VSolvit, Ventura, CA
+.Net Software Developer / Contractor
+Created unit tests for testing an application at the data access and business logic layers while developing.
+Performed integration testing on applications using C# and .Net technologies.
+---
+TEKSystems, Westlake, CA
+.Net Software Developer / Contractor
+Performed integration testing on applications I did development work on using C# and .Net technologies.
+
+Community Centric, Stanley, NC
+.Net Software Developer
+Performed integration testing on applications I did development work on using C# and .Net technologies.
+
+ZOLL Medical\Road Safety, Newbury Park, CA
+.Net C#, C++ Software Developer
+Created unit tests for testing an application at the data access and business logic layers while developing.
+Performed integration testing on applications using C# and .Net technologies.
+Created a hardware simulation tool in C++ to simulate communication with a medical device over a serial port for testing purposes.
+Set up a single test computer to support testing of software applications running different operating systems that 
+can be easily switched out as needed.
+
+Interlink Electronics
+
+Set up a test computer lab with multiple configurations to support testing of software applications and remote controls.
+Test computers were configured with different operating systems and software versions to match customer environments
+and to be used for testing application and device driver installations. Tested software applications and device drivers
+for functionality and compatibility across different setups. Provided feedback to development teams on issues found 
+during testing.
+
+EDUCATION
+University of California Santa Barbara
+Earned a certificate in Object-Oriented Analysis and Design with C++.
+Ventura College District
+Computer Programming courses C, Advanced C, C++, Basic, Visual Basic.Net, Java, Program Design and Algorithm Development, Database Programming and Design and many general education courses. 
+Passed the CompTIA Security+ and the Azure AZ900 certification exams
+
+
+
+♦  Integration Testing	♦  Unit testing ♦	Test System Setup
+♦  Hardware Simulation  ♦  Jacoco       ♦  SonarQube	
+♦  SQL Server Management Studio	        ♦  Scrum\Agile
+♦  UI Development		♦  Restful API Development	♦  Jenkins
+♦  AI ChatGPT			♦  AI Copilot	♦  Visual Studio 2022
+♦  C# \ C++\ .Net	    ♦  Azure	    ♦  Azure DevOps
+
+------------------------------------------------------------

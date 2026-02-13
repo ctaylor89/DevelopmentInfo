@@ -1,18 +1,28 @@
 ﻿AI_Research
+Applications_in_Quickbooks
 Balance_Sheet_Explained
+Certification_Course1
 Certifications_for_Bookkeepers
 Definitions_
+Links_Resources
+Plans_QB
 Pricing_Model
+Random_Notes
 Sales_Strategy
 Startup_Notes
 Startup_Videos
 Study_Plan
+
+If you need a bit of help when working through the certification, don’t worry—you’re not alone.
+Call the Care team directly on 1-888-333-3451.
 --------------------------------------------------------
 AI_Research
 
-context: I live in California and I am considering changing careers and starting my own bookkeeping business. Output: List some good ways to get started in this type of business. Also tell me how strong the demand is for bookkeepers.
-
-Starting a bookkeeping business in California is a realistic and accessible path, and demand remains steady despite long‑term automation trends. California bookkeepers typically earn $50,000–$81,000 depending on experience, and U.S. employers still post tens of thousands of openings each year due to turnover and small‑business needs. 
+context: I live in California and I am considering changing careers and starting my own bookkeeping business. Output: List some 
+good ways to get started in this type of business. Also tell me how strong the demand is for bookkeepers.
+Starting a bookkeeping business in California is a realistic and accessible path, and demand remains steady despite long‑term 
+automation trends. California bookkeepers typically earn $50,000–$81,000 depending on experience, and U.S. employers still post 
+tens of thousands of openings each year due to turnover and small‑business needs. 
 
 Getting Started With a Bookkeeping Business in California
 1. Build or Refresh Your Core Skills
@@ -299,9 +309,40 @@ the best niches for someone with your technical background
 or a pricing model for your future bookkeeping business
 
 --------------------------------------------------------
+Applications_in_Quickbooks
+
+My Apps
+Chart of accounts?
+Sales & Get Paid -> Payment links
+					QuickBooks payouts
+					Channel payouts
+---
+Reports & Analytics
+Standard reports -> What you owe -> Accounts receivable aging summary?
+                                 -> Unpaid Bills
+								 -> Bills and Applied Payments?
+								 -> 1099 Contractor Balance Summary?
+Management Reports?
+Performance center
+Financial Planner -> Cash flow
+                  -> Cash flow Planner
+
+
+
+--------------------------------------------------------
+Certification_Course1
+
+Light-touch advisory moments. These are the moments where you can have an outsized impact on your clients by sharing insights based on pairing your expertise of the QuickBooks platform with your knowledge as an accounting pro. When it comes to light-touch advisory moments, there are four key themes. These include recommending the best possible integrations, educating your clients on best practice, looking at the reports and sharing your insights, and finally, tailoring QuickBooks Online to best meet your clients' needs.
+
+
+--------------------------------------------------------
 Certifications_for_Bookkeepers
 
-bookkeeping certifications aren’t a maze. There are only a handful that actually matter, and even fewer that meaningfully 
+---
+Once you’re in QBOA: Look at the left menu, Click ProAdvisor, Click Training
+This is where your free certification training lives.
+---
+Bookkeeping certifications aren’t a maze. There are only a handful that actually matter, and even fewer that meaningfully 
 improve your earning power. Below is a clean, no‑nonsense list of the exact certifications worth getting, ordered by impact 
 and practicality for someone launching a bookkeeping business in California.
 
@@ -517,8 +558,10 @@ Outcome: You’re certified, operational, and ready to onboard your first paying
 You’ll be positioned not as a basic bookkeeper, but as a tech‑forward, systems‑driven bookkeeping professional — the kind that commands higher rates and attracts better clients.
 --------------------------------------------------------
 Study_Plan
-Absolutely, Craig — here’s a clean, structured **week‑by‑week study calendar** that fits the 90‑day plan we built. It’s paced for someone who learns quickly but still wants a sustainable rhythm. Each week includes clear goals, study blocks, and practical tasks so you steadily build skill, confidence, and certification momentum.
 
+Here’s a clean, structured **week‑by‑week study calendar** that fits the 90‑day plan we built. It’s paced for someone who learns 
+quickly but still wants a sustainable rhythm. Each week includes clear goals, study blocks, and practical tasks so you steadily 
+build skill, confidence, and certification momentum.
 ---
 
 # **📅 12‑Week Bookkeeping Study Calendar**
@@ -801,6 +844,38 @@ Your technical, systems‑driven mindset is perfect for this because:
 
 If you want, I can walk you through how to *read* a balance sheet, how to *build* one, or how to *spot errors* in one — all skills that make you a standout bookkeeper.
 --------------------------------------------------------
+Links_Resources
+
+QB Tour
+https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/get-started-adjust-settings-sign-intuit-quickbooks/L6TekQ3zX_US_en_US
+
+Gets you to sign in site to access the QBOA training and certification materials.
+https://accounts.intuit.com/
+Select: Go right to your products. This will take you to the dashboard where you can access the ProAdvisor training and certification materials.
+To select ProAdvisor training, click on the ProAdvisor tab on the left menu. This will take you to the training portal where you can start your 
+certification journey.
+
+Pro Advisor Glossary
+https://drive.google.com/file/d/1SPt24RBgvJSBesv6cnUDn73_ccDdtnDO/view?pli=1
+
+In the Know. Weekly newsletter from Intuit with tips, updates, and insights for ProAdvisors. It’s a great way to stay current on the platform and 
+industry trends.
+https://www.firmofthefuture.com/quickbooks-proadvisor/in-the-know/
+--------------------------------------------------------
+Plans_QB
+
+QuickBooks Money is for small businesses that need money management features without bookkeeping. Unlike other QuickBooks plans, 
+there’s no subscription, and just a small per- transaction fee. QuickBooks Money customers have access to QuickBooks Checking 
+and can also send pay-enabled invoices that offer automated sales tax calculation, automatic reminders, PayPal and Venmo as 
+payment options, partial payments, and payment links.
+---
+QuickBooks plans for small and medium businesses
+
+
+
+
+
+--------------------------------------------------------
 Pricing_Model
 
 Here’s a pricing model that fits the kind of bookkeeping business you’re building — tech‑forward, systems‑driven, and positioned to attract higher‑quality clients. It’s structured, transparent, and easy to scale as you grow.
@@ -972,6 +1047,32 @@ If you want, I can also build:
 - or a **script for sales calls** to justify your pricing  
 
 Just tell me which direction you want to go.
+--------------------------------------------------------
+Random_Notes
+
+If you are not doing a good job tracking your customers or sub-customers, tracking vendors on your expenses, then your 
+reports will be lacking in details. Make sure transactions are categorized correctly and that you are using the right accounts. 
+If you are not doing a good job tracking your customers or vendors, you may miss out on important insights and opportunities 
+for improvement.
+---
+Under the gear icon you can switch to the “account and settings” menu. This is where you can adjust your company information, 
+your financial settings, your sales settings, your expenses settings, and your advanced settings. You can also manage your users 
+and your billing information from this menu. You can also access the “account and settings” menu from the left navigation bar 
+by clicking on the “settings” icon and then selecting “account and settings” from the dropdown menu. This is an important menu 
+to familiarize yourself with as it allows you to customize your QuickBooks Online experience and ensure that your company 
+information and financial settings are accurate.
+
+You can also switch companies from the gear icon. This is useful if you are managing multiple companies or if you want to test 
+out different features in a sample company. To switch companies, click on the gear icon and then select “switch company” from 
+the dropdown menu. You will see a list of all the companies you have access to, and you can click on the one you want to switch 
+to. This allows you to easily navigate between different company files without having to log out and log back in.
+---
+If your rentals are all under separate LLCs? If so, you do not want to combine different LLCs into one QB account using classes. 
+You will need to keep them separate.
+---
+
+
+
 --------------------------------------------------------
 Sales_Strategy
 
