@@ -7,7 +7,8 @@ Definitions_
 Links_Resources
 Plans_QB
 Pricing_Model
-Random_Notes
+Random_Notes_Accounting_Bookkeeping
+Random_Notes_Quickbooks					*The program
 Sales_Strategy
 Startup_Notes
 Startup_Videos
@@ -332,7 +333,42 @@ Financial Planner -> Cash flow
 --------------------------------------------------------
 Certification_Course1
 
-Light-touch advisory moments. These are the moments where you can have an outsized impact on your clients by sharing insights based on pairing your expertise of the QuickBooks platform with your knowledge as an accounting pro. When it comes to light-touch advisory moments, there are four key themes. These include recommending the best possible integrations, educating your clients on best practice, looking at the reports and sharing your insights, and finally, tailoring QuickBooks Online to best meet your clients' needs.
+Light-touch advisory moments. These are the moments where you can have an outsized impact on your clients by sharing 
+insights based on pairing your expertise of the QuickBooks platform with your knowledge as an accounting pro. When it 
+comes to light-touch advisory moments, there are four key themes. These include recommending the best possible integrations, 
+educating your clients on best practice, looking at the reports and sharing your insights, and finally, tailoring QuickBooks 
+Online to best meet your clients' needs.
+
+Clients are added to the client list when they’re set up within QuickBooks Online Accountant or when they invite your firm through a pre-existing QuickBooks account. 
+
+The client list is split into four tabs: Overview, shows all clients, Bookkeeping, shows only QuickBooks clients, Payroll, shows 
+only QuickBooks Payroll clients, and Multi-entity, which shows your clients with Intuit Enterprise Suite subscriptions.
+
+Under Clients, you can see the client’s name, the QuickBooks product they use, their subscription status, and when they were 
+added to your list. You can also search for clients by name or filter them by product or subscription status.
+New clients can invite you to connect to their QuickBooks using your firm ID. You can also add clients manually by clicking the 
+“Add client” button and entering their email address. Once you’re connected to a client’s QuickBooks account, you can access 
+their books, run reports, and provide support.
+---
+Your work
+Selecting Work from the left-hand menu opens a project management tool that your firm can use to manage work items assigned to 
+each client.
+
+Projects are groups of tasks that you can create for each client. You can assign tasks to yourself or other team members, set 
+due dates, and track progress. This is a great way to stay organized and ensure that you’re meeting deadlines for your clients.
+---
+Accountant-only features
+Client overview is a single page that reflects the status of the account, its complexity, and the amount of work needed to get 
+the accounts in order. It can be used when you’re first engaging with a client to indicate the level of work you’re taking on, 
+and as a health-check as you continue your engagement.
+
+The Client overview is a snapshot of the client’s account. It shows the details of the company’s setup from a QuickBooks 
+perspective—what the subscription is, if they use QuickBooks Payroll, and what apps are connected.
+
+It also:
+Summarizes the banking activity—including balances and information about reconciliations.
+	Indicates common issues Tallies the transaction volume 
+	From here you can quickly access the chart of accounts and the client’s financial statements.
 
 
 --------------------------------------------------------
@@ -851,9 +887,15 @@ https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/get
 
 Gets you to sign in site to access the QBOA training and certification materials.
 https://accounts.intuit.com/
-Select: Go right to your products. This will take you to the dashboard where you can access the ProAdvisor training and certification materials.
-To select ProAdvisor training, click on the ProAdvisor tab on the left menu. This will take you to the training portal where you can start your 
-certification journey.
+Select: Go right to your products. This will take you to the dashboard where you can access the ProAdvisor training and 
+certification materials. To select ProAdvisor training, click on the ProAdvisor tab on the left menu. This will take you 
+to the training portal where you can start your certification journey.
+
+Access to my temp QuickBooks Accountant account for practice and exploration. If already signed in.
+https://qbo.intuit.com/app/postlogin?locale=en-us&iux_intuit_tid=1-698e33bb-3a3fbb4947d3a5e83da0bd42
+
+Sample QuickBooks Online company (the demo file with fake data). Open in an incognito window.
+https://qbo.intuit.com/redir/testdrive
 
 Pro Advisor Glossary
 https://drive.google.com/file/d/1SPt24RBgvJSBesv6cnUDn73_ccDdtnDO/view?pli=1
@@ -1048,7 +1090,7 @@ If you want, I can also build:
 
 Just tell me which direction you want to go.
 --------------------------------------------------------
-Random_Notes
+Random_Notes_Quickbooks
 
 If you are not doing a good job tracking your customers or sub-customers, tracking vendors on your expenses, then your 
 reports will be lacking in details. Make sure transactions are categorized correctly and that you are using the right accounts. 
@@ -1071,7 +1113,32 @@ If your rentals are all under separate LLCs? If so, you do not want to combine d
 You will need to keep them separate.
 ---
 
+--------------------------------------------------------
+Random_Notes_Accounting_Bookkeeping
 
+To classify a transaction in QuickBooks Online means:
+You decide what type of financial activity it is and where it belongs in your accounting system.
+When you classify a transaction, you’re deciding:
+	Does it hit Income?
+	An Expense?
+	An Asset?
+	A Liability?
+	Or Equity?
+That decision controls:
+	Your Profit & Loss
+	Your Balance Sheet
+	Your tax reporting
+	Your financial accuracy
+
+Example: Bank feed shows: $450 – Home Depot
+Classifying means choosing:
+	Repairs & Maintenance?
+	Equipment (Asset)?
+	Cost of Goods Sold?
+	Office Supplies?
+Each one changes your financial reports differently.
+
+---
 
 --------------------------------------------------------
 Sales_Strategy
