@@ -3,6 +3,7 @@ Applications_in_Quickbooks
 Balance_Sheet_Explained
 Certification_Course1
 Certifications_for_Bookkeepers
+Chart_Of_Accounts
 Definitions_
 Links_Resources
 Plans_QB
@@ -369,6 +370,14 @@ It also:
 Summarizes the banking activity—including balances and information about reconciliations.
 	Indicates common issues Tallies the transaction volume 
 	From here you can quickly access the chart of accounts and the client’s financial statements.
+
+From Settings gear icon you can customize QuickBooks to your client’s needs—including managing users, creating custom form 
+styles, and applying settings that tailor QuickBooks to the client’s business. You can also jump to specific sections of 
+QuickBooks—such as the chart of accounts, the reconciliation tab of the transactions center, and any of the lists within 
+QuickBooks. Under the Tools heading, you can access useful tools—such as importing and exporting data to and from QuickBooks, 
+and the audit log which tracks all user activity.
+---
+
 
 
 --------------------------------------------------------
@@ -797,6 +806,101 @@ build skill, confidence, and certification momentum.
 Just tell me what format you want.
 
 --------------------------------------------------------
+Chart_Of_Accounts
+
+A Chart of Accounts (COA) is:
+The master list of every account your business uses to organize its financial activity. 
+Every transaction you enter must land in one of these accounts.
+
+What the Chart of Accounts actually does:
+It organizes your business into five main buckets:
+	Assets – What you own
+	Liabilities – What you owe
+	Equity – What belongs to the owner
+	Income – Money coming in
+	Expenses – Money going out
+That’s it. Everything fits somewhere in those five buckets.
+---
+Simple example: A basic Chart of Accounts might include:
+	Assets: Checking Account, Savings Account, Accounts Receivable, Equipment
+	Liabilities: Credit Card, Loan Payable, Accounts Payable
+	Equity: Owner’s Equity, Retained Earnings
+	Income: Service Income, Product Sales
+	Expenses: Rent, Utilities, Supplies, Insurance
+
+*Each of those is an “account” in the chart.
+---
+The Chart of Accounts determines:
+	How your Profit & Loss is structured
+	How your Balance Sheet looks
+	How clean your reporting is
+	How easy tax prep will be
+
+*If the COA is messy, everything downstream is messy.
+---
+What beginners do wrong:
+Create too many accounts
+Create duplicate accounts
+Confuse categories with accounts
+Add accounts instead of using subaccounts
+Let auto-rules create junk
+
+More accounts ≠ better accounting. Clear structure beats clutter.
+
+Where to find it in QuickBooks: ⚙️ Settings → Chart of Accounts
+There you can: View accounts, Add accounts, Edit names, Make accounts inactive
+The Chart of Accounts is strictly your financial structure.
+---
+Subaccounts are used when you need more detail under a main account — without cluttering your financial statements at the top 
+level. In QuickBooks Online, a subaccount sits under a “parent” account in the Chart of Accounts.
+Think of it like folders inside a folder.
+
+Example of a Parent Account:
+	Utilities (Expense)
+	Subaccounts:
+		Electricity, Water, Internet, Gas
+
+On your Profit & Loss:
+	If collapsed → shows just Utilities
+	If expanded → shows the breakdown
+
+*That’s the purpose: detail without chaos. Use Subaccounts when you want reporting detail, but summary totals still matter.
+
+When You SHOULD NOT Use Subaccounts
+If every expense has its own account, you’re overbuilding.
+
+When Classes or Locations are better
+If you’re tracking: Departments, Job costing, Multiple business units then use Classes or Locations, not subaccounts.
+Subaccounts track type. Classes track who/where.
+
+Use subaccounts when:
+The detail supports decision-making, but the summary still matters. If you never look at the breakdown, don’t create it.
+
+Classes (Operational Tracking)
+Classes track: Departments, Divisions, Locations, Service lines, Jobs (sometimes).
+Classes do NOT change the Chart of Accounts. They layer tracking on top of accounts.
+
+Example:
+You have one account: Advertising Expense
+But you want to know:
+	Marketing Department spend
+	Sales Department spend
+	Admin Department spend
+
+Instead of creating:
+	Advertising – Marketing
+	Advertising – Sales
+	Advertising – Admin
+
+You use:
+	Class = Marketing / Sales / Admin
+Now one expense account. Multiple operational views.
+Use Classes when you want to indicate which part of the business generated or used the money.
+
+If you're organizing types of money, use subaccounts.
+If you're organizing parts of the business, use classes.
+*Can ask AI how to redesign your setup if it’s already overbuilt.
+--------------------------------------------------------
 Definitions_
 
 --------------------------------------------------------
@@ -894,7 +998,7 @@ to the training portal where you can start your certification journey.
 Access to my temp QuickBooks Accountant account for practice and exploration. If already signed in.
 https://qbo.intuit.com/app/postlogin?locale=en-us&iux_intuit_tid=1-698e33bb-3a3fbb4947d3a5e83da0bd42
 
-Sample QuickBooks Online company (the demo file with fake data). Open in an incognito window.
+Sample QuickBooks Online company (the demo file with fake data). *** Open in an incognito window ***.
 https://qbo.intuit.com/redir/testdrive
 
 Pro Advisor Glossary
