@@ -31,6 +31,129 @@ DICOM is a standard for transmitting, storing, and sharing medical images, and i
 ------------------------------------------------------------
 Testing_Concepts
 
+1. Equivalence Partitioning
+2. Boundary Value Analysis
+3. Decision Table Testing
+4. State Transition Testing
+5. Exploratory Testing
+6. Risk-Based Testing
+7. Test-Driven Development (TDD)
+8. Behavior-Driven Development (BDD)
+---
+Test Case Design Techniques:
+1. Positive Testing
+2. Negative Testing
+3. Usability Testing
+
+A test case is a clearly defined set of inputs, actions, and expected results used to verify that a specific feature 
+or function of an application works correctly.
+
+In plain terms: It’s a documented way to prove whether something behaves the way it’s supposed to.
+A well-written test case typically includes:
+	Test Case ID – Unique identifier (e.g., TC_LOGIN_001)
+	Title / Description – What you’re testing
+	Preconditions – What must be true before executing
+	Test Steps – Exact actions to perform
+	Test Data – Inputs used
+	Expected Result – What should happen
+	Actual Result – What actually happened (filled during execution)
+	Status – Pass / Fail
+
+In regulated environments (government, finance, healthcare, defense), auditors often need to verify:
+	That testing was performed
+	That requirements were validated
+	That defects were tracked and resolved
+	That the system meets compliance or security standards
+
+*Documented test cases act as evidence during audits.
+
+Types of Test Cases You’ll See in Real QA Work
+	Functional test cases – Validate business logic
+	Negative test cases – Verify system handles bad input properly
+	Boundary test cases – Test limits (max length, min values)
+	Regression test cases – Ensure old features still work
+	API test cases – Validate request/response behavior
+	Automation test cases – Translated into code (Selenium, Playwright, etc.)
+
+Why Test Cases Matter
+	Provide traceability back to requirements
+	Ensure consistent regression testing
+	Document coverage
+	Help with audits (especially in regulated environments)
+	Allow junior testers to execute consistently
+	In government or Public Trust environments (which you’ve been targeting), documented test cases are often mandatory.
+
+Types of Test Cases You’ll See in Real QA Work
+	Functional test cases – Validate business logic
+	Negative test cases – Verify system handles bad input properly
+	Boundary test cases – Test limits (max length, min values)
+	Regression test cases – Ensure old features still work
+	API test cases – Validate request/response behavior
+	Automation test cases – Translated into code (Selenium, Playwright, etc.)
+
+Strong QA Thinking. A good test case:
+	Is clear and unambiguous
+	Tests one thing at a time
+	Includes expected results that are measurable
+	Covers both happy path and failure scenarios
+	A weak tester writes steps.
+	A strong tester thinks about risk, edge cases, and failure modes.
+
+The difference between a Test case vs test scenario:
+	A test scenario describes what needs to be tested.
+		It’s broad.
+		It doesn’t include exact steps.
+		It focuses on user behavior or system functionality.
+		
+		A test case describes how to test it
+		A test case is a detailed, step-by-step set of instructions for testing a specific feature or functionality. 
+
+The Reality in Interviews:
+"A test scenario defines what needs to be validated at a high level, while a test case provides detailed steps, data, 
+and expected results to verify a specific condition within that scenario."
+---
+A test script is a set of executable instructions used to automatically validate a feature or function of a software application.
+Automated UI Test Script (Example in C# with Selenium)
+	[Test]
+	public void ValidUserCanLogin()
+	{
+		driver.Navigate().GoToUrl("https://appurl.com/login");
+
+		driver.FindElement(By.Id("email")).SendKeys("user@test.com");
+		driver.FindElement(By.Id("password")).SendKeys("Password123");
+		driver.FindElement(By.Id("loginBtn")).Click();
+
+		Assert.IsTrue(driver.Url.Contains("dashboard"));
+	}
+
+Key Characteristics of a Test Script
+	Written in code (C#, Java, Python, etc.)
+	Uses an automation framework (Selenium, Playwright, Cypress, etc.)
+	Can run repeatedly without human involvement
+	Produces automated reports
+	Integrated into CI/CD pipelines
+
+Important Distinction - Not every test case becomes a test script.
+Good candidates for automation:
+	Regression tests
+	Repetitive tests
+	Stable functionality
+	High-risk/high-impact features
+Bad candidates for automation:
+	Frequently changing UI
+	One-off exploratory tests
+	Visual usability tests
+
+What Hiring Managers Listen For
+If you’re targeting SDET or automation roles, they expect you to understand:
+	Test scripts must be maintainable
+	Hard-coded values are bad practice
+	Page Object Model improves scalability
+	Test data should be externalized
+	Scripts must include proper assertions and cleanup
+
+*If you're transitioning from development to testing, test scripting is your leverage point — because you already understand code 
+structure, debugging, and design principles.
 ------------------------------------------------------------
 Interview_Notes
 

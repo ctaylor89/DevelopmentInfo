@@ -906,7 +906,8 @@ Definitions_
 --------------------------------------------------------
 Balance_Sheet_Explained
 
-A balance sheet is one of the core financial statements you’ll work with as a bookkeeper, and once you understand its logic, it becomes a powerful tool for assessing the health of any business.
+A balance sheet is one of the core financial statements you’ll work with as a bookkeeper, and once you understand its logic, 
+it becomes a powerful tool for assessing the health of any business.
 
 ---
 
