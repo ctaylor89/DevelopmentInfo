@@ -340,7 +340,8 @@ comes to light-touch advisory moments, there are four key themes. These include 
 educating your clients on best practice, looking at the reports and sharing your insights, and finally, tailoring QuickBooks 
 Online to best meet your clients' needs.
 
-Clients are added to the client list when they’re set up within QuickBooks Online Accountant or when they invite your firm through a pre-existing QuickBooks account. 
+Clients are added to the client list when they’re set up within QuickBooks Online Accountant or when they invite your firm 
+through a pre-existing QuickBooks account. 
 
 The client list is split into four tabs: Overview, shows all clients, Bookkeeping, shows only QuickBooks clients, Payroll, shows 
 only QuickBooks Payroll clients, and Multi-entity, which shows your clients with Intuit Enterprise Suite subscriptions.
@@ -811,6 +812,8 @@ Chart_Of_Accounts
 A Chart of Accounts (COA) is:
 The master list of every account your business uses to organize its financial activity. 
 Every transaction you enter must land in one of these accounts.
+The number of accounts that can be set up in a client’s QuickBooks account will depend on which plan they are on. 
+Each account within the chart of accounts should be set up in the same way, with the same set of details. 
 
 What the Chart of Accounts actually does:
 It organizes your business into five main buckets:
@@ -991,7 +994,8 @@ QB Tour
 https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/get-started-adjust-settings-sign-intuit-quickbooks/L6TekQ3zX_US_en_US
 
 Gets you to sign in site to access the QBOA training and certification materials.
-https://accounts.intuit.com/
+1) https://accounts.intuit.com/					*Login
+2) https://proadvisoracademy.app.intuit.com/home	*After login enter this url on a new tab
 Select: Go right to your products. This will take you to the dashboard where you can access the ProAdvisor training and 
 certification materials. To select ProAdvisor training, click on the ProAdvisor tab on the left menu. This will take you 
 to the training portal where you can start your certification journey.
@@ -1000,7 +1004,8 @@ Access to my temp QuickBooks Accountant account for practice and exploration. If
 https://qbo.intuit.com/app/postlogin?locale=en-us&iux_intuit_tid=1-698e33bb-3a3fbb4947d3a5e83da0bd42
 
 Sample QuickBooks Online company (the demo file with fake data). *** Open in an incognito window ***.
-https://qbo.intuit.com/redir/testdrive
+https://qbo.intuit.com/redir/testdrive or maybe https://c23.qbo.intuit.com/qbo23/samplecompany/validated?SKU=7&arg=QBOA&companyId=1000
+***Try a different browser if not displaying as it should.
 
 Pro Advisor Glossary
 https://drive.google.com/file/d/1SPt24RBgvJSBesv6cnUDn73_ccDdtnDO/view?pli=1
@@ -1217,10 +1222,74 @@ to. This allows you to easily navigate between different company files without h
 If your rentals are all under separate LLCs? If so, you do not want to combine different LLCs into one QB account using classes. 
 You will need to keep them separate.
 ---
+Client overview and Books review. These features are only available when you enter QuickBooks via QuickBooks Online Accountant, 
+so your clients won’t see them. The Client overview is a snapshot of the client’s account. It shows the details of the company’s 
+setup from a QuickBooks perspective—what the subscription is, if they use QuickBooks Payroll, and what apps are connected.
+It also:
+	Summarizes the banking activity—including balances and information about reconciliations
+	Indicates common issues
+	Tallies the transaction volume 
+
+From here you can quickly access the chart of accounts and the client’s financial statements.
+It’s a single page that reflects the status of the account, its complexity, and the amount of work needed to get the accounts 
+in order. It can be used when you’re first engaging with a client to indicate the level of work you’re taking on, and as a 
+health-check as you continue your engagement.
+
+The client overview is a snapshot of the client’s account. It may be useful to take a look at this during period-end reviews, 
+but it’s actually the Books review center that will step you through the most common period-end tasks. This includes everything 
+from reviewing transactions with issues, all the way to sending management reports to the client.
+
+Books review center provides the template for your period-end workflow. It steps you through the main tasks that are needed 
+to ensure your clients’ books are up to date and accurate. This feature is only available to accounting pros accessing client 
+accounts through QuickBooks Online Accountant, and your clients don’t see this. 
+You can add additional tasks to the book review process that are specific to your client.
+
+The Transaction Review tab also includes items that QuickBooks has identified as needing attention. These include uncategorized 
+transactions, trasactiond without payees, undeposited funds and unapplied payments.
+
+The Final Review tab also includes a section for reviewing reports. Selecting the link next to the report name will open the 
+relevant report. Additional reports can be added depending on your client's requirements.
+
+From the Wrap-up tab you can prepare period-end reports and share them with your clients. You can also close the books and you 
+can add client specific tasks in the Additional items section. Ex: Schedule a call with a client or perform a task.
+---
+The chart of accounts is the hub of your accounting. It’s the central place where you decide how you organize your transactions. 
+Every account or category you use in QuickBooks for every transaction comes from the chart of accounts. 
+
+Every transaction within QuickBooks must be categorized to the correct account within the chart of accounts to ensure that the 
+financial statements accurately reflect your clients’ businesses. Before this can happen though, the chart of accounts itself 
+must reflect your client’s business.
+
+During client onboarding, the chart of accounts should be customized to the client’s needs. This can be done from scratch or by 
+starting with a template. You may not be directly involved in this process, but it’s useful to understand the importance of 
+getting this right.
+---
+Asset, liability, and equity accounts appear on the balance sheet, all other accounts appear on the profit and loss statement.
+
+The number of accounts you can create in a client’s chart of accounts depends on their QuickBooks plan.
+
 
 --------------------------------------------------------
 Random_Notes_Accounting_Bookkeeping
 
+Bookkeeping is about recording and organizing financial transactions.
+It answers:
+	What happened?
+	Was it recorded correctly?
+	Is everything categorized properly?
+	Are the accounts reconciled?
+
+Typical Bookkeeping Tasks
+	Entering expenses and income
+	Recording invoices and bills
+	Reconciling bank and credit card accounts
+	Maintaining the chart of accounts
+	Managing accounts payable and receivable
+	Cleaning up uncategorized transactions
+It is operational and detail-focused.
+
+Accounting is about analysis, interpretation, and decision-making.
+---
 To classify a transaction in QuickBooks Online means:
 You decide what type of financial activity it is and where it belongs in your accounting system.
 When you classify a transaction, you’re deciding:
@@ -1242,9 +1311,109 @@ Classifying means choosing:
 	Cost of Goods Sold?
 	Office Supplies?
 Each one changes your financial reports differently.
-
 ---
+Journal Entries are considered transactions because they change the financial position of the business.If something changes 
+Assets, Liabilities, Equity, Income, or Expenses — it’s a transaction.
 
+A journal entry is simply a manual way to record a transaction directly into the accounting system.
+Instead of using a form like an Invoice, Bill, Expense or Check. You directly tell the system: Debit this account - Credit 
+that account.
+Example: You forgot to record depreciation.
+	Journal entry: Debit Depreciation Expense, Credit Accumulated Depreciation.
+That: Increases expense, Increases a contra-asset, Lowers net income, Changes equity.
+
+Another Example
+	You reclassify an expense that was posted incorrectly.
+	Original: Office Supplies Expense $1,000
+	Correction journal entry:
+	Debit Equipment (Asset) $1,000
+	Credit Office Supplies Expense $1,000
+That changes: Expenses, Assets, Profit
+---
+Accounts, like fixed assets, tell you the value of things you own, like a truck or a warehouse. And liabilities tell you how 
+much you owe, like on a mortgage. Equity accounts show you how much the business is worth to the owner. Equity accounts also 
+help you track ways the owner invests or draws money from the business. You use equity accounts when the owner deposits money 
+into the business, or when they withdraw money for their personal expenses. 
+
+Income accounts help you track why you receive money from customers or donors. Cost of goods sold and expense accounts, like 
+office supplies, help you track your spending. Income accounts don’t have balances, because they help you track the profit of 
+your business for a specific time period. You usually don’t want to see how much you spent on office supplies since you opened 
+your business. So instead, you run a report to see how much you spent for a month or a year.
+---
+In bookkeeping and accounting, a Book Review (often called a “review of the books”) is a structured check of a company’s 
+financial records to make sure everything is accurate, complete, and properly classified. It’s not an audit. It’s not a 
+compilation. It’s an internal quality control process. 
+A Book Review exists to answer one question: Can we trust these financial statements?
+
+In systems like QuickBooks Online, a book review typically involves:
+	Checking the Reconciliation History
+	Reviewing the Chart of Accounts
+	Running comparative reports
+	Cleaning up uncategorized transactions
+	Reviewing journal entries
+
+Core Functions of a Book Review are to Verify Accuracy.
+	The reviewer checks that:
+	Transactions are recorded correctly
+	Debits and credits balance
+	Bank and credit card accounts are reconciled
+	Beginning balances make sense
+If something is off, it gets flagged and corrected.
+
+Confirm Proper Classification - This is a big one.
+The review checks whether:
+	Expenses are in the right accounts
+	Assets aren’t accidentally expensed
+	Loans aren’t sitting in income
+	Owner draws aren’t mixed with expenses
+Misclassification distorts financial statements. A book review fixes that.
+
+Reconcile Key Accounts - Reconciliations are critical.
+During a review, the bookkeeper confirms:
+	Bank balances match statements
+	Credit cards match statements
+	Loan balances match lender records
+	Payroll liabilities match reports
+	Sales tax payable matches filings
+If it doesn’t tie out, it’s not reliable.
+
+Identify Missing or Duplicate Transactions 
+	Common problems:
+	Duplicate expenses
+	Missing deposits
+	Uncategorized transactions
+	Unapplied payments
+A review cleans this up.
+
+Ensure Financial Statements Make Sense
+A reviewer looks at:
+	Profit & Loss
+	Balance Sheet
+	Accounts Receivable Aging
+	Accounts Payable Aging
+Then asks:
+	Does net income seem reasonable?
+	Are receivables too high?
+	Is inventory realistic?
+	Is retained earnings correct?
+If the numbers don’t logically fit the business, something is wrong.
+
+Prepare for Taxes or Reporting
+Book reviews are often done:
+	Monthly
+	Quarterly
+	Before tax filing
+	Before giving reports to investors
+	Before applying for loans
+Clean books prevent expensive problems later.
+
+Without review:
+	Financial statements become unreliable
+	Taxes get miscalculated
+	Cash flow problems get hidden
+	Business decisions are made on bad data
+	Bookkeeping without review is just data entry.
+Review is where accounting judgment happens.
 --------------------------------------------------------
 Sales_Strategy
 

@@ -18,7 +18,7 @@ Testing_Technologies
 Selenium is a popular open-source tool for automating web browsers. It allows testers to write scripts in various programming 
 languages (like Java, C#, Python) to interact with web elements and validate functionality.
 
-
+RSpec (familiar) • Cucumber (familiar) Ruby on Rails (familiar) • Grails (familiar) • 
 
 ---
 Healthcare IT standards:
@@ -152,8 +152,26 @@ If you’re targeting SDET or automation roles, they expect you to understand:
 	Test data should be externalized
 	Scripts must include proper assertions and cleanup
 
-*If you're transitioning from development to testing, test scripting is your leverage point — because you already understand code 
-structure, debugging, and design principles.
+* If you're transitioning from development to testing, test scripting is your leverage point — because you already 
+understand code structure, debugging, and design principles.
+---
+Risk-based testing (RBT) is a strategy where testing effort is prioritized based on the level of risk in different parts 
+of the system.
+
+Instead of trying to test everything equally, you focus more time, deeper coverage, and stronger validation on areas most 
+likely to fail and most damaging if they do. That’s how mature QA teams operate.
+In QA, risk is typically calculated as: 
+	Risk = Likelihood of failure × Impact of failure
+Likelihood is "How probable is it that this feature will break?"
+
+Interview-level answer: "I look at the complexity of the code, how often it changes, and if it is sharing part of the 
+codebase with other features."
+
+Interview-level answer: Risk-based testing is a methodology where test effort is prioritized based on the likelihood and 
+business impact of potential failures. High-risk areas receive deeper test coverage and more automation, while low-risk 
+areas receive lighter validation to optimize time and resources.
+
+
 ------------------------------------------------------------
 Interview_Notes
 
@@ -167,22 +185,17 @@ Those kill your chances instantly.
 What *does* work is framing the move as a **shift in where you add the most value**, not a step down.
 
 Here’s the core message I’m listening for:
-
-> “I’m strongest at finding risk, edge cases, and failure paths — and I want a role where that mindset is the primary responsibility.”
+> “I’m strongest at finding risk, edge cases, and failure paths — and I want a role where that mindset is 
+the primary responsibility.”
 
 That tells me:
-
 * You understand what testing really is
 * You’re not running away from development
 * You’re moving *toward* quality ownership
-
 ---
-
 ## A Strong, Realistic Answer You Could Say
-
 You don’t need to memorize this, but this is the **shape** of a winning response:
-
-> “After several years in development, I realized that the part of the job I consistently did best — and enjoyed most — was 
+> “The last several years in development, I realized that the part of the job I consistently did best — and enjoyed most — was 
 validating behavior, thinking through edge cases, and catching issues before they escaped to production.
 >
 > I was often the person on the team questioning assumptions, reviewing stories for testability, and writing tests that exposed 
@@ -280,32 +293,45 @@ LinkedIn_Profile
 
 About Section:
 
-ABOUT ME
-With over 20 years of development and test experience, I am looking forward to expand my participation in testing and learning to build automated test software if given the opportunity to do so. 
+After many years of development and test experience, I am moving into software QA testing as my primary role. 
+As a developer I was accountable for quality, but realized the part of the job I was strongest at was preventing defects before release.
 
-As a Software Developer, I have thoroughly tested each of my projects after development. As a result, seldom did I leave any problems to be found by QA. In my experience working at Road Safety where I was the sole architect\developer of my main project, we sold over a thousand units to the public. I only received two minor customer issues that were reported back to me. 
+I enjoy validating behavior and catching issues before they end up in production. Critical risk-focused thinking is where I feel I can add the most value by attention to detail when manually testing, designing automated tests, contributing suggestions toward test design, evaluating risk and edge cases.
 
-My experience includes Web Application development and testing, Web API development and testing, desktop applications and testing, SQL\Oracle development and testing.
+When developing, I have thoroughly tested each of my projects after development. As a result, seldom 
+did I leave any problems to be found by QA. In my experience at Road Safety where I was the sole 
+architect\developer\tester of a large application, we sold over a thousand units to the public. I only received two 
+minor customer issues that needed attention. I attribute that success to the test plan I created and the 
+thorough testing that I performed before releasing the software.
+
+My testing experience includes working with test plans, requirement specifications, performing manual regression 
+testing, automated tests(CI\CD) for Web, Web API, backend services, desktop apps, installation applications 
+and database procedures.
 
 TECHNOLOGIES 
-JUnit, C# .Net 8, C++. WEB API, Swagger/OpenAPI, HTML, CSS, MVC, JavaScript, JQuery, Bootstrap, XML, WCF, Oracle, SQL Server, Entity Framework.
+C#, C++, JavaScript, Selenium, MSTest, NUnit, xUnit, WEB API, Swagger, HTML, CSS, MVC, JavaScript, JQuery,
+Bootstrap, XML, WCF, Oracle, SQL.
 
 TOOLS
-ChatGPT, Copilot, Postman, Visual Studio 2022, TFS, GIT, Jenkins, JIRA, Azure DevOps
+ChatGPT, Copilot, Postman, Visual Studio, TFS, GIT, Jenkins, JIRA, Azure DevOps
 
-BASIC SKILLS
-Creating and editing software test procedures. Configuring systems for testing software programs. Running software integration and Unit testing. Project architecting, requirements gathering, customer support, training and creating research documentation. 
+BASIC TESTING SKILLS
+Creating and editing software test procedures. Configuring computers and VMs for testing software programs. 
+Running software automation, integration and Unit tests. Manual testing. Writing and editing test procedures 
+based on requirements and discoveries.
 
-TESTING EXPERIENCE:
-Set up a test computer lab to support testing of software applications and remote controls. Hired and managed one individual to assist in the testing process. Configured test computers and test VM's with operating systems and software versions to match customer environments. 
+SOME OF MY TESTING EXPERIENCE:
+As a Lead Tester I set up a test computer lab for testing software applications and remote controls. 
+Configured test computers and test VM's with operating systems and software versions to match customer 
+environments. Created a device simulator using C++ for testing an application during development.
 
-Created a device simulator using C++ for testing an application during development.
-Created unit tests to perform testing while developing a web application for the Navy's HR and utilities management departments. Tested software applications and device drivers for laser marking machines, electronic signature pads and remote controls. 
+Created unit tests to perform testing while developing a web application for the Navy's HR and utilities 
+management departments. Tested applications and device drivers for laser marking machines, 
+electronic signature pads and remote controls. 
 
-Created software in C++ to test laser power output levels and automatically adjust the power input as needed.
-Tested application features using different user roles to ensure to ensure that only the correct features were available for that role. 
+Tested application features using different user roles to ensure that only the correct features were available for that role. Identified errors and areas for improvement in the test procedures. 
 
-In my last position I Identified errors and areas for improvement in the test procedures. Provided feedback to the team lead. Followed Agile\Scrum methodologies and participated in daily stand-ups, sprint planning, and retrospectives. 
+Top skills
 ---
 #Notes
 SOME PROJECTS I HAVE WORKED ON OVER THE YEARS
