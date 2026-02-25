@@ -26,8 +26,6 @@ HL7 is a set of international standards for the transfer of clinical and adminis
 used by various healthcare providers.
 
 DICOM is a standard for transmitting, storing, and sharing medical images, and is widely used in healthcare imaging systems.
-
-
 ------------------------------------------------------------
 Testing_Concepts
 
@@ -175,7 +173,8 @@ areas receive lighter validation to optimize time and resources.
 ------------------------------------------------------------
 Interview_Notes
 
-I’ll answer this **as the testing manager sitting across the table from you**, and I’ll be blunt about what *actually* sounds credible vs. what raises red flags.
+I’ll answer this **as the testing manager sitting across the table from you**, and I’ll be blunt about what *actually* 
+sounds credible vs. what raises red flags.
 
 ## What I Want to Hear (and Why It Works)
 
@@ -185,7 +184,7 @@ Those kill your chances instantly.
 What *does* work is framing the move as a **shift in where you add the most value**, not a step down.
 
 Here’s the core message I’m listening for:
-> “I’m strongest at finding risk, edge cases, and failure paths — and I want a role where that mindset is 
+> “I’m strongest at and enjoy finding risk, edge cases, and failure paths — and I want a role where that mindset is 
 the primary responsibility.”
 
 That tells me:
@@ -205,33 +204,24 @@ gaps in requirements or logic.
 quality to be my primary responsibility instead of a secondary one.”
 
 Why this works:
-
 * It’s **proactive**, not defensive
 * It shows **self-awareness**
 * It respects testing as a discipline
 * It doesn’t trash development
-
 ---
-
 ## Even Better: Tie It to Business Impact
-
 If you want bonus points, connect it to outcomes:
-
 > “I’ve seen how small gaps in testing turn into expensive production issues. I want to be in a role where my focus is preventing 
 those failures earlier — through better test design, automation, and collaboration with developers.”
 
 That tells me:
-
 * You think beyond code
 * You understand cost of defects
 * You care about the product, not just tasks
-
 ---
-
 ## What NOT to Say (Ever)
 
 If I hear any of these, I’m immediately skeptical:
-
 * ❌ “Testing has less pressure”
 * ❌ “I’m tired of writing code”
 * ❌ “Testing seems more stable”
@@ -239,48 +229,35 @@ If I hear any of these, I’m immediately skeptical:
 * ❌ “I already do testing anyway”
 
 Those say:
-
 * You don’t respect the role
 * You think testing is a fallback
 * You don’t understand modern testing
-
 ---
-
 ## Why Your Dev Background Is Actually a Selling Point
 
 As a testing manager, I **like** former developers *if* they get this right.
 
 What I assume about you (in a good way):
-
 * You understand how bugs are introduced
 * You can read code when black-box testing isn’t enough
 * You can write better automation
 * You can challenge devs without hand-waving
 
 But I also want to hear that you’re willing to:
-
 * Think like a user
 * Test things that “shouldn’t happen”
 * Say “this isn’t shippable” when it’s unpopular
-
 ---
-
 ## One-Sentence Version (If I Push You)
-
 If I ask, *“Bottom line, why testing?”* — this is gold:
-
-> “Because my strength is in preventing defects, not just fixing them — and testing is where 
+> “Because I feel my strength is in preventing defects, not just fixing them — and testing is where 
 that mindset has the most impact.”
-
 ---
-
 ## Final Manager Reality Check
-
 Switching from development to testing is **not** a downgrade if you frame it correctly.
 It *is* a red flag if it sounds like an escape hatch.
 
 If you want, I can:
-
 * Help you tailor this answer to **manual vs automation vs SDET**
 * Role-play a follow-up interview question I *will* ask next
 * Help rewrite your resume so this transition looks intentional, not reactive
@@ -294,12 +271,15 @@ LinkedIn_Profile
 About Section:
 
 After many years of development and test experience, I am moving into software QA testing as my primary role. 
-As a developer I was accountable for quality, but realized the part of the job I was strongest at was preventing defects before release.
+As a developer I was accountable for quality, but realized the part of the job I was strongest at was preventing defects 
+before release.
 
-I enjoy validating behavior and catching issues before they end up in production. Critical risk-focused thinking is where I feel I can add the most value by attention to detail when manually testing, designing automated tests, contributing suggestions toward test design, evaluating risk and edge cases.
+I enjoy validating behavior and catching issues before they end up in production. Critical risk-focused thinking is where 
+I feel I can add the most value by attention to detail when manually testing, designing automated tests, contributing 
+suggestions toward test design, evaluating risk and edge cases.
 
-When developing, I have thoroughly tested each of my projects after development. As a result, seldom 
-did I leave any problems to be found by QA. In my experience at Road Safety where I was the sole 
+When developing, I have thoroughly tested each of my projects after development. As a result, I seldom 
+left any problems to be found by QA. In my experience at Road Safety where I was the sole 
 architect\developer\tester of a large application, we sold over a thousand units to the public. I only received two 
 minor customer issues that needed attention. I attribute that success to the test plan I created and the 
 thorough testing that I performed before releasing the software.
@@ -329,35 +309,50 @@ Created unit tests to perform testing while developing a web application for the
 management departments. Tested applications and device drivers for laser marking machines, 
 electronic signature pads and remote controls. 
 
-Tested application features using different user roles to ensure that only the correct features were available for that role. Identified errors and areas for improvement in the test procedures. 
+Tested application features using different user roles to ensure that only the correct features were available for 
+that role. Identified errors and areas for improvement in the test procedures. 
 
 Top skills
 ---
 #Notes
 SOME PROJECTS I HAVE WORKED ON OVER THE YEARS
 
-Worked on a project for the Navy to manage their utilities for their ships and bases. We used C#, JavaScript, AngularJS(V1.5) and an Oracle database.
+Worked on a project for the Navy to manage their utilities for their ships and bases. We used C#, JavaScript, AngularJS(V1.5) 
+and an Oracle database.
 
-Worked with a team of developers building a new web application for recruiting new sailors. The web application provides job information and a survey for potential applicants to help determine which jobs in the Navy they would be a good fit for. The website is built using C#, ASP.NET, JQuery, JavaScript. Used ChatGPT and Copilot for AI assistance.   
+Worked with a team of developers building a new web application for recruiting new sailors. The web application provides job 
+information and a survey for potential applicants to help determine which jobs in the Navy they would be a good fit for. The 
+website is built using C#, ASP.NET, JQuery, JavaScript. Used ChatGPT and Copilot for AI assistance.   
 	
-Supported an existing human resource management website by adding some new features to the front and back end code. Used Visual Studio, SQL Server and GIT for development. Researched\documented new technologies such as Azure, Docker and Kubernetes for management to use in their architecture planning meetings. Performed application testing and created new test procedures.
+Supported an existing human resource management website by adding some new features to the front and back end code. Used Visual 
+Studio, SQL Server and GIT for development. Researched\documented new technologies such as Azure, Docker and Kubernetes for 
+management to use in their architecture planning meetings. Performed application testing and created new test procedures.
 
-Developed an employee mileage calculation application for the County of Ventura that consists of both an MVC website and a Web API interface for a mobile device to connect.
+Developed an employee mileage calculation application for the County of Ventura that consists of both an MVC website and a Web 
+API interface for a mobile device to connect.
 
-Added a new section to an MVC Web application for the Ventura County Health Services Department to manage their medical providers and community partners.
+Added a new section to an MVC Web application for the Ventura County Health Services Department to manage their medical 
+providers and community partners.
 
-Added a new feature to an ASP.Net Web Forms website for the sending of messages between Sales Associates and their customers. Also architected a backend solution that consolidates existing messaging and email services using WCF web service for easier maintainability.
+Added a new feature to an ASP.Net Web Forms website for the sending of messages between Sales Associates and their customers. 
+Also architected a backend solution that consolidates existing messaging and email services using WCF web service for easier 
+maintainability.
 
 Created a web site to report on the performance of medical device batteries using C#, MVC and WCF.
-This included a backend service on the client's system that would collect the battery data from the battery charger and then send that data to a RESTful API that I also designed.
+This included a backend service on the client's system that would collect the battery data from the battery charger and then 
+send that data to a RESTful API that I also designed.
 
-Architect and developed a client side service in C# that facilitates the downloading and programming of an emergency vehicle monitoring device. I was also the sole architect and developer of a desktop application that would read and process vehicle driving data from a box located in a non-emergency vehicle.
+Architect and developed a client side service in C# that facilitates the downloading and programming of an emergency vehicle 
+monitoring device. I was also the sole architect and developer of a desktop application that would read and process vehicle 
+driving data from a box located in a non-emergency vehicle.
 
 22nd Century Technologies Inc.
 
 ♦ Development Experience:
-• Developed new front end and back end features for an HR web application. The HR website is built using ASP.NET, C#, JQuery, and JavaScript. Used Azure DevOps, Visual Studio, IIS, SQL Server Management Studio and GIT for development tools. 
-• Researched and documented new technologies such as .Net 8 API development, Azure, Docker and Kubernetes for our architect  to use in his architecture planning meetings.
+• Developed new front end and back end features for an HR web application. The HR website is built using ASP.NET, C#, JQuery, 
+and JavaScript. Used Azure DevOps, Visual Studio, IIS, SQL Server Management Studio and GIT for development tools. 
+• Researched and documented new technologies such as .Net 8 API development, Azure, Docker and Kubernetes for our architect 
+to use in his architecture planning meetings.
 ---
 Brandes Associates Inc.
 
@@ -479,7 +474,8 @@ Hired to take over testing and run a test department for both applications and r
 
 ♦ Testing Experience:
 • Set up a test computer lab to support testing of software applications and remote controls. 
-• Configured test computers with operating systems that can be easily switched out as needed to support testing of software applications and devices.
+• Configured test computers with operating systems that can be easily switched out as needed to support testing of software 
+applications and devices.
 • Tested and verified new software versions to match customer environments.
 • Tested software to verify customer issues.
 • Tested software applications and device drivers for functionality and compatibility across different setups.
@@ -491,7 +487,6 @@ Hired to take over testing and run a test department for both applications and r
 Resume_Notes
 
 .NET SOFTWARE TESTER
-
 •	Experienced in the full life cycle of the software design process, including system requirements definition, prototyping, design, testing and maintenance. 
 •	Experienced in researching and designing system level software and creating specifications. 
 •	Created and updated technical documents based on investigation and research.
@@ -586,13 +581,5 @@ Ventura College District
 Computer Programming courses C, Advanced C, C++, Basic, Visual Basic.Net, Java, Program Design and Algorithm Development, Database Programming and Design and many general education courses. 
 Passed the CompTIA Security+ and the Azure AZ900 certification exams
 
-
-
-♦  Integration Testing	♦  Unit testing ♦	Test System Setup
-♦  Hardware Simulation  ♦  Jacoco       ♦  SonarQube	
-♦  SQL Server Management Studio	        ♦  Scrum\Agile
-♦  UI Development		♦  Restful API Development	♦  Jenkins
-♦  AI ChatGPT			♦  AI Copilot	♦  Visual Studio 2022
-♦  C# \ C++\ .Net	    ♦  Azure	    ♦  Azure DevOps
 
 ------------------------------------------------------------

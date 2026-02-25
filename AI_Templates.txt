@@ -1,4 +1,31 @@
+Job_Resume_Compare_Template
 
+------------------------------------------------------------
+Job_Resume_Compare_Template
+Act as an Applicant Tracking System (ATS) and Senior HR Resume Screener for a company hiring a QA Tester. I will provide two 
+inputs: 1) JOB DESCRIPTION 2) MY RESUME Your responsibilities: 
+A. Analyze the JOB DESCRIPTION and extract: - Required technical skills - Required tools and technologies - Required 
+methodologies (Agile, Scrum, SDLC, etc.) - Required soft skills - Required years of experience - Required certifications 
+or education - Preferred or “nice to have” qualifications - Repeated keywords (especially tools, frameworks, and technologies) 
+B. Analyze MY RESUME and identify: - Technical skills present - Testing tools mentioned - Automation experience - Development 
+experience - Methodologies mentioned - Metrics or measurable impact - Certifications and education C. Perform a detailed 
+comparison between the JOB DESCRIPTION and MY RESUME. 
+D. Provide structured output using ONLY the following format: ------------------------------------------------------- 
+
+1. REQUIRED SKILLS & QUALIFICATIONS (List everything the job requires in bullet form.) 
+2. MATCHES (List the items clearly covered in my resume.) 
+3. PARTIAL MATCHES (List items mentioned but weak, vague, or lacking measurable detail.) 
+4. MISSING ITEMS (List required skills, tools, experience, certifications, or keywords that are not present at all.) 
+5. ATS KEYWORD GAP ANALYSIS (List exact keywords from the job description that do not appear in my resume.) 
+6. RISK FACTORS (Identify anything that may cause rejection or confusion — e.g., unclear QA focus, job title mismatch, 
+lack of metrics, etc.) 
+7. RECOMMENDED IMPROVEMENTS Provide specific bullet point suggestions I could add or revise in my resume to better match the job. 
+
+Do NOT rewrite my entire resume. Do NOT rewrite the job description. Only provide targeted bullet improvements. 
+------------------------------------------------------- 
+Be objective and critical. Evaluate alignment as if screening 100+ resumes for this role.
+
+End Job_Resume_Compare_Template
 -----------------------------------------------------------
 Here’s a rewritten, cleaned-up prompt template that explicitly defines the domain model properties and removes ambiguity. 
 This is how you want to specify it if you expect consistent API output.
