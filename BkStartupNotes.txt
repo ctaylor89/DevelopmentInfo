@@ -1,6 +1,7 @@
 ﻿Applications_in_Quickbooks
 Articles_To_Read
 Balance_Sheet_Explained
+Bookkeeping_Job_Advice
 Bookkeeping_Job_Research
 Certification_Course1
 Certifications_for_Bookkeepers
@@ -18,11 +19,90 @@ Startup_Notes
 Startup_Videos
 Study_Plan
 
+*notrrc is the code for "Not Recorded".
+
 If you need a bit of help when working through the certification, don’t worry—you’re not alone.
 Call the Care team directly on 1-888-333-3451.
 --------------------------------------------------------
+Bookkeeping_Job_Advice
+
+Question: Can anyone do bookkeeping on the side outside of their normal job? How did you find clients? What lessons 
+did you learn when first starting up?
+
+Answers:
+I don't explicitly put time for phone calls and odd question answering on the bills. I just price it into the next 
+thing I bill them for (usually a year end or interim billing of such if it's a big one). Most of my clients over the 
+years don't ask too many questions, and they get the idea they're paying me to get a certain job done, and don't care 
+so much about how I get there, but rather the result.
+--
+Break up services you offer, bill often and cut your losses if someone doesn’t pay up or if getting ghosted for simple 
+requests becomes a recurring theme. It’s just not worth it. You also need to be an adviser and not a bookkeeper since 
+the later basically pays minimum wage. Best way (and realistically the only real path) is to sell the tax planning angle 
+and tack on bookkeeping as a separate service.
+Collect payment before filing anything unless they are a long term client. No exceptions.
+--
+Keep it local as much as possible and choose clients wisely (its ok to be super picky if you can afford it).
+---
+If you learned bookkeeping from a bank-feed-first perspective, you might not have built the deeper understanding of Ihow 
+transactions actually flow. And that makes accrual concepts like undeposited funds or combined payments feel way harder 
+than they need to.
+---
+If you’re about to learn QBO (or you’re teaching someone who is) this is what I think is the #1 thing you should know before diving in to help you get going on the right foot. I recorded a video that also shows a bit of what that DANG bank feed actually does when you hit match or post. Hope it help you on your journey of learning QBO! Godspeed my friend!
+https://youtu.be/14DvjL_u3bk
+---
+the bank feed suggestions are garbage though and the “AI” it tries to implement has me recategorizing 80% of the items
+---
+This, 1000%.
+"The matching logic is where it really falls apart for new users."
+You totally named the crux of it here. Not only do they trust the match suggestion as the truth, they are lead to believe that if there is no match offered, then it's not in QBO yet! And then you get...
+"their books are a mess because they were double-entering without realising it. Invoices created AND categorised from the feed. Bills entered AND posted from the feed. The bank rec technically balanced but the underlying data was chaos."
+---
+Intuit Cusotmer support is a possible fall back job, but it appears to be overly managed and monitored to unreasonble metrics. 
+If I were to do it, realize that if they fired me or I quit, it would not go on my resume or affect my unemployment 
+since I would have used it up. It could be a good way to get some experience with bookkeeping and Quickbooks, if even for a few months.
+One person noted "Expect to get fired in about 3 to months". Pays approx. $25 per hour. Breaks will be scheduled.
+---
+QuickBooks Online is legitimately harder to learn than QuickBooks Desktop for both seasoned bookkeepers and novices
+--------------------------------------------------------
 Bookkeeping_Job_Research
 
+Chat groups
+https://www.reddit.com/r/Accounting/wiki/index/#wiki_some_life_perspective.2Fadvice_for_beginning_of_career_blues_and_early_life_crisis_.28may_apply.29
+
+Q: Best way to get started in bookkeeping?
+Try to join a bookkeeping firm if possible; it can give you a strong foundation.
+They might accept as a trainee at lower rate, but to become bookkeeper you will need professional designation. 
+---
+Intuit is offering remote positions for either a QuickBooks Live Bookkeeper or an Entry-Level Tax Specialist with TurboTax 
+Live. Yeah it's the same company that owns and maintains Quickbooks and TurboTax.
+If you take either Intuit Academy's Bookkeeper or Tax courses, you can apply for bookkeeping/tax preparer jobs at Intuit with no 
+experience. Their courses are free to take.
+
+They waive the recent job experience requirement if you pass their exams within the course. You still have to pass their 
+job interviews. The job is 100% remote if I'm not wrong. Course is 30 hrs and free.
+Intuit Bookkeeping Certification: https://academy.intuit.com/programs/intuit-bookkeeping-certification
+---
+Bookkeeping is a great way to get your foot in the door of the accounting world. It’s also a viable career path on its own,
+especially if you specialize in a niche (e.g., real estate, e-commerce, nonprofits). The demand for bookkeepers remains steady,
+especially among small businesses that can’t afford a full-time accountant. You can start by offering your services to local businesses,
+building a portfolio, and then expanding through referrals and online marketing. 
+* Certifications like QuickBooks ProAdvisor can boost your credibility.
+---
+Look for small local bookkeeping firms in your area and see if they are willing to have you work a few hours a week as 
+an unpaid intern. They probably need the help and you can add the experience to your resume.
+---
+I prefer to have accountant access to any clients using third-party services so I can pull any reports needed.
+---
+When doing the quarterlies, I always make sure the quarterly totals per my payroll records match the payroll tax returns. That 
+does not, however, approach the kind of transaction-by-transaction reconciliation you describe. At year-end, I then reconcile 
+the quarterly tax returns to the amounts on the W-3.
+---
+Intuit Cusotmer support is a possible fall back job, but it appears to be overly managed and monitored to unreasonble metrics. 
+If I were to do it, realize that if they fired me or I quit, it would not go on my resume or affect my unemployment 
+since I would have used it up. It could be a good way to get some experience with bookkeeping and Quickbooks, if even for a few months.
+One person noted "Expect to get fired in about 3 to months". Pays approx. $25 per hour. Breaks will be scheduled.
+---
+Prompts
 context: I live in California and I am considering changing careers and starting my own bookkeeping business. Output: List some 
 good ways to get started in this type of business. Also tell me how strong the demand is for bookkeepers.
 Starting a bookkeeping business in California is a realistic and accessible path, and demand remains steady despite long‑term 
@@ -384,6 +464,11 @@ and the audit log which tracks all user activity.
 --------------------------------------------------------
 Certifications_for_Bookkeepers
 
+Hector Gacia, a former software engineer turned bookkeeper, shares his insights on the most valuable certifications for 
+bookkeepers, especially those with a technical background. He emphasizes that while there are many certifications available, 
+only a few truly matter and can significantly boost your credibility and earning potential in the bookkeeping industry.
+https://www.youtube.com/watch?v=g_-J6sRBMWU   16:00 markd for ProAdvisor, 19:00 for AIPB, 23:00 for NACPB, 27:00 for Xero, 30:00 for Hubdoc/Dext/Gusto
+
 ---
 Once you’re in QBOA: Look at the left menu, Click ProAdvisor, Click Training
 This is where your free certification training lives.
@@ -405,7 +490,11 @@ Why it matters:
 	Clients actively look for “ProAdvisors.”
 	For your tech background, this will feel straightforward.
 
-2. AIPB Certified Bookkeeper (CB)
+	
+2. AIPB Certified Bookkeeper (CB)  
+	The cost for this certification is around $500–$700, depending on how you prepare. It’s a deeper dive into bookkeeping 
+	principles and practices, and it’s widely respected in the industry. It signals that you understand not just how to use 
+	the software, but the underlying accounting concepts that make bookkeeping meaningful.
 	Impact: High
 	Difficulty: Moderate
 	Time: 2–4 months
@@ -998,7 +1087,6 @@ If you want, I can walk you through how to *read* a balance sheet, how to *build
 --------------------------------------------------------
 Links_Resources
 
-QB Tour
 https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/get-started-adjust-settings-sign-intuit-quickbooks/L6TekQ3zX_US_en_US
 
 Gets you to sign in site to access the QBOA training and certification materials.
@@ -1014,6 +1102,7 @@ https://qbo.intuit.com/redir/testdrive or maybe https://c23.qbo.intuit.com/qbo23
 
 Access to my temp QuickBooks Accountant account for practice and exploration. If already signed in.
 https://qbo.intuit.com/app/postlogin?locale=en-us&iux_intuit_tid=1-698e33bb-3a3fbb4947d3a5e83da0bd42
+QB Tour
 
 
 Pro Advisor Glossary
@@ -1038,9 +1127,25 @@ Client-facing bookkeepers.
 You can include: Custom cover pages, Notes and commentary, Reporting period summaries, Comparisons (month vs month, year vs year)
 Management Reports are internal decision maiking tools.
 
+If there are any sections in the report that you don’t want to be included in the final published report, you can hide them. 
+Existing reports can be duplicated as a starting point for creating new reports. 
+You can choose the time period that the report covers. 
+You can set up management reports that contain any reports you think will be useful to your clients, such as accounts 
+receivable and payable, or sales and transactions reports. They don’t only need to include financial reports, and it might be 
+that you don’t send financial reports at all.
+
+Use the Additional items sections in the Books review center to make sure that your period-end workflows meet your client’s 
+individual requirements.
+
+Favorite the reports that you will use the most, and set default time frames for reports in Reports options in Accountant tools 
+to save time when looking at reports. Set up management reports that include the most useful reports to help your clients make 
+business decisions.
+
+If you need your client to share statements and documents with you before you can complete period-end tasks, make sure you know 
+what these are and ask for them in advance!
+
 A strong monthly management report should answer one question clearly: How did we perform this month — and what needs attention?
 Here’s what actually belongs in it.
-
 1) Executive Summary (1 page max)
 It should highlight:
 	Revenue vs prior month
@@ -1408,8 +1513,8 @@ relevant report. Additional reports can be added depending on your client's requ
 From the Wrap-up tab you can prepare period-end reports and share them with your clients. You can also close the books and you 
 can add client specific tasks in the Additional items section. Ex: Schedule a call with a client or perform a task.
 ---
-The chart of accounts is the hub of your accounting. It’s the central place where you decide how you organize your transactions. 
-Every account or category you use in QuickBooks for every transaction comes from the chart of accounts. 
+The chart of accounts is the hub of your accounting. It’s the central place where you decide how you organize your 
+transactions. Every account or category you use in QuickBooks for every transaction comes from the chart of accounts. 
 
 Every transaction within QuickBooks must be categorized to the correct account within the chart of accounts to ensure that the 
 financial statements accurately reflect your clients’ businesses. Before this can happen though, the chart of accounts itself 
@@ -1469,8 +1574,23 @@ If your client’s bank and credit card accounts are connected to QuickBooks, th
 in, and can be accessed from the Account reconciliation tab of the Books review. For any bank or credit card accounts that 
 aren’t connected, you’ll need to obtain these statements before you can reconcile these accounts.  
 ---
+*notrrc
+Any payment transactions that are not assigned to an invoice or bill are considered to be unapplied payments. For each 
+transaction you have the option to create a client request, or void or delete the transaction.
+
+While it’s not part of the Book review process, when reviewing the transactions at period end, it can also be a good idea to 
+review any transactions that have been voided or deleted. To do this, go to Accountant tools and select Voided/deleted 
+transactions. This will take you to a filtered view of the audit log, showing any transactions that have been voided or deleted. 
+It should be fairly rare that this happens, and if there are multiple transactions that have been voided, it might suggest that 
+there is a training opportunity for someone in your team, or an advisory moment for your client.
+
+Account reconciliation is where you should make sure that the information stored in QuickBooks matches external sources, such 
+as bank and credit card accounts.
+
+Note: For more detailed guidance on how to carry out a reconciliation for bank and credit card accounts in QuickBooks, check out the QuickBooks Online Certification Level 1: Banking course. And take a look at QuickBooks Online Certification Level 2: Banking for how to reconcile nonbank/credit card accounts.
 
 
+End_*notrrc
 *** End Random_Notes_Quickbooks
 --------------------------------------------------------
 Random_Notes_Accounting_Bookkeeping
@@ -1789,6 +1909,12 @@ and what’s left over. It is also referred to as the Income Statement. It’s t
 profitability and making decisions. It let you know if the income is sufficient to cover expenses and generate profit.
 
 Self_Marketing
+
+Interview questions for bookkeepers. This is a great resource to prepare for sales calls and interviews with potential 
+clients. It covers common questions about bookkeeping processes, software proficiency, handling challenges, and 
+demonstrating value to clients. Reviewing these questions can help you articulate your strengths and justify your pricing 
+during sales conversations.
+https://www.upwork.com/hire/bookkeepers/interview-questions/
 
 Here’s a polished, confident **sales call script** designed specifically for a tech‑forward bookkeeping business. It positions 
 you as a premium provider without sounding pushy, and it naturally justifies your pricing by highlighting value, outcomes, and 

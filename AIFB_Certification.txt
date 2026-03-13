@@ -1,0 +1,124 @@
+﻿
+Context: AIPB Certified Bookkeeper Course  Output: What subjects and concepts are covered in this course?
+-------------------------------------------------------------------------
+The American Institute of Professional Bookkeepers (AIPB) Certified Bookkeeper (CB) course is designed to prepare working bookkeepers 
+for the national certification exam. It focuses on advanced bookkeeping skills, not beginner bookkeeping.
+
+The course curriculum is organized into six major subject areas, each taught through a workbook or module.
+
+Subjects Covered in the AIPB Certified Bookkeeper Course
+1. Adjusting Entries (Accrual Accounting)
+
+This section teaches how to properly adjust financial records at the end of an accounting period.
+Key concepts include:
+	Accruals vs. deferrals
+	Accrued revenue and accrued expenses
+	Unearned revenue (revenue collected in advance)
+	Prepaid expenses
+	End-of-period adjustments
+	Preparing an adjusted trial balance
+	Converting trial balances into financial statements
+
+Why it matters: These adjustments ensure financial statements follow accrual accounting rules and accurately reflect 
+the company’s financial position.
+
+2. Correction of Accounting Errors
+This unit focuses on detecting and correcting mistakes in the accounting records.
+Topics include:
+	Identifying common bookkeeping errors
+	Using the trial balance to detect errors
+	Bank reconciliation procedures
+	Correcting accrual and deferral errors
+	Recording correcting journal entries
+
+Why it matters:
+	Error correction is a core skill because mistakes happen frequently in real bookkeeping systems.
+
+3. Payroll Accounting
+This section teaches how to run payroll and handle employment taxes.
+Concepts include:
+Employees vs independent contractors
+Wage calculations and overtime rules
+Payroll deductions and withholdings
+Employer payroll taxes
+Payroll journal entries
+Federal forms such as:
+	W-4
+	941
+	940
+	W-2
+	W-3
+
+Why it matters:
+	Payroll compliance is highly regulated and mistakes can lead to tax penalties.
+
+4. Depreciation (Book and Tax)
+This unit explains how businesses account for long-term assets.
+Topics include:
+	Depreciating buildings, equipment, and vehicles
+	GAAP depreciation methods:
+	Straight-line
+	Declining balance
+	Units of production
+	Sum-of-the-years’ digits
+	Depreciation differences between book accounting and tax reporting
+
+Why it matters:
+	Depreciation affects both financial statements and taxes, so accuracy is critical.
+
+5. Inventory Accounting
+This module covers how companies record and value inventory.
+Topics include:
+	Periodic vs perpetual inventory systems
+	Recording inventory purchases and sales
+	Cost of Goods Sold (COGS)
+	Inventory valuation methods:
+	FIFO
+	LIFO
+	Weighted average
+	Moving average
+	Lower of Cost or Net Realizable Value (LCNRV) rule
+
+Why it matters:
+	Inventory valuation directly affects profit and tax reporting.
+
+6. Internal Controls and Fraud Prevention
+This final section focuses on protecting company assets and detecting fraud.
+Concepts include:
+	Segregation of duties
+	Cash handling controls
+	Fraud red flags
+	Preventing employee theft
+	Preventing vendor fraud
+	Preventing credit card and check fraud
+	Security controls in accounting systems
+
+Why it matters:
+Good internal controls protect businesses from financial loss and embezzlement.
+---
+Additional Concepts Covered
+
+Most versions of the course also include:
+Bookkeeper ethics and professional standards
+Certification requirements
+Exam preparation
+Practical bookkeeping scenarios
+Sometimes practice using software such as QuickBooks Online in certain programs.
+
+✅ Simple way to remember the curriculum:
+The AIPB certification focuses on six advanced bookkeeping skill areas:
+	Adjusting Entries
+	Error Correction
+	Payroll
+	Depreciation
+	Inventory
+	Internal Controls & Fraud Prevention
+
+Important insight:
+The course assumes you already know basic bookkeeping (debits/credits, journals, ledgers, financial statements). It is 
+designed to upgrade a bookkeeper to “full-charge bookkeeper” level skills rather than teach accounting from scratch.
+
+End of Course Overview
+-----------------------------------------------------
+
+
