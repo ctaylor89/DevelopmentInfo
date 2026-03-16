@@ -1,6 +1,11 @@
-﻿
-Context: AIPB Certified Bookkeeper Course  Output: What subjects and concepts are covered in this course?
+﻿AIFB_Certified_Bookkeeper_Course_Overview
+Concepts_Covered_in_the_AIPB_Certified_Bookkeeper_Course
+
 -------------------------------------------------------------------------
+AIFB_Certified_Bookkeeper_Course_Overview
+
+Context: AIPB Certified Bookkeeper Course  Output: What subjects and concepts are covered in this course?
+
 The American Institute of Professional Bookkeepers (AIPB) Certified Bookkeeper (CB) course is designed to prepare working bookkeepers 
 for the national certification exam. It focuses on advanced bookkeeping skills, not beginner bookkeeping.
 
@@ -119,6 +124,89 @@ The course assumes you already know basic bookkeeping (debits/credits, journals,
 designed to upgrade a bookkeeper to “full-charge bookkeeper” level skills rather than teach accounting from scratch.
 
 End of Course Overview
------------------------------------------------------
+-------------------------------------------------------------------------
+Concepts_Covered_in_the_AIPB_Certified_Bookkeeper_Course
+
+Revenue is the amount a company earns from selling goods and/or providing services to its customers and clients. It is the top 
+line of the income statement and a key indicator of business performance. Revenue can come from various sources, such as product 
+sales, service fees, interest income, and rental income.
+
+An expense is a cost that is used up, consumed, or incurred in the process of earning revenue during the current accounting period.
+Key Characteristics are:
+	An expense reduces net income on the Profit & Loss (Income Statement).
+	An expense represents a cost that has already provided its benefit (unlike an asset, which provides future benefit).
+	An expense is recorded when incurred, not necessarily when paid (accrual basis).
+
+Examples: Rent, utilities, office supplies used up, wages, insurance expense (portion that applies to the current period).
+---
+Cost Definition: A general term meaning the amount paid (or owed) to acquire something.
+
+Important: A cost is not automatically an expense.
+A cost becomes either an asset (if it provides future benefit), or an expense (once the benefit is used up).
+
+Examples:
+Cost of a computer (initially an asset)
+Cost of supplies (asset until used)
+Cost of inventory (asset until sold)
+---
+Asset Definition:  
+Asset is a cost that provides future economic benefit beyond the current accounting period.
+Key points:
+	Assets appear on the Balance Sheet
+	Becomes an expense over time (depreciation, amortization, usage)
+	Examples:
+		Equipment
+		Prepaid insurance
+		Inventory
+		Supplies on hand
+		Buildings
+		Vehicles
+
+---
+Common adjusting entries:
+
+An accrued expense is an expense that a business has already incurred but has not yet paid or recorded by the end of the accounting period.
+	Accrued expense = you owe money. Deferred revenue = you owe work
+
+Under the Matching Principle, expenses must be recorded in the period in which they occur, even if the payment happens later. 
+Because the business owes money, accrued expenses create a liability.
+Example: wages owed to employees at month end.
+---
+Accrued revenue – revenue earned but not yet received
+An accrued expense is an expense that a business has already incurred but has not yet paid or recorded by the end of the accounting 
+period. Under the Matching Principle, expenses must be recorded in the period in which they occur, even if the payment happens 
+later. Because the business owes money, accrued expenses create a liability.
+
+Example: services completed but not yet billed.
+---
+Deferred revenue – cash received before earning it. Deferred revenue is a liability because the business owes the customer something.
+For example: prepaid service contracts.
+Deferred revenue (also called unearned revenue) occurs when a business receives payment before it has delivered the product or 
+service. Under the Revenue Recognition Principle, revenue can only be recorded when it is earned, not when cash is received. 
+Until the service or product is delivered, the money is recorded as a liability because the business still owes the customer 
+something. 
+
+Example: if a customer pays $1,000 in advance for a service contract, the business would record a debit to the cash account for 
+$1,000 and a credit to deferred revenue for $1,000. As the business delivers the service over time, it would make adjusting 
+entries to recognize the revenue earned and reduce the deferred revenue account accordingly.
+
+Cash received before work is done = Liability (Deferred Revenue)
+Work performed = Revenue
+---
+Prepaid expenses – expenses paid in advance
+Example: prepaid insurance.
+
+Depreciation – allocating cost of equipment over time.
+
+Key exam concept:
+Bookkeepers must apply the Matching Principle, which means expenses are recorded in the same period as the revenue they helped generate.
+---
+Common bookkeeping errors to avoid:
+1. Transposition errors: writing numbers in the wrong order (e.g., $123 instead of $132).
+2. Omission errors: forgetting to record a transaction.
+3. Duplication errors: recording the same transaction more than once.
+4. Misclassification errors: recording a transaction in the wrong account (e.g., recording a capital expenditure as an expense).
+5. Timing errors: recording a transaction in the wrong accounting period.
+---
 
 
