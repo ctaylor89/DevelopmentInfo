@@ -128,8 +128,11 @@ End of Course Overview
 Concepts_Covered_in_the_AIPB_Certified_Bookkeeper_Course
 
 Revenue is the amount a company earns from selling goods and/or providing services to its customers and clients. It is the top 
-line of the income statement and a key indicator of business performance. Revenue can come from various sources, such as product 
+line of the income(P&L) statement and a key indicator of business performance. Revenue can come from various sources, such as product 
 sales, service fees, interest income, and rental income.
+---
+An expense in accounting is a cost incurred to generate revenue or a reduction in the value of an asset used in business 
+operations, recorded on the income statement to determine net income.
 
 An expense is a cost that is used up, consumed, or incurred in the process of earning revenue during the current accounting period.
 Key Characteristics are:
@@ -138,22 +141,40 @@ Key Characteristics are:
 	An expense is recorded when incurred, not necessarily when paid (accrual basis).
 
 Examples: Rent, utilities, office supplies used up, wages, insurance expense (portion that applies to the current period).
+
 ---
 Cost Definition: A general term meaning the amount paid (or owed) to acquire something.
 
 Important: A cost is not automatically an expense.
-A cost becomes either an asset (if it provides future benefit), or an expense (once the benefit is used up).
+A cost becomes either an asset (if it provides future benefit), an expense (once the benefit is used up).
 
 Examples:
-Cost of a computer (initially an asset)
-Cost of supplies (asset until used)
-Cost of inventory (asset until sold)
+	Cost of a computer (initially an asset)
+	Cost of supplies (asset until used)
+	Cost of inventory (asset until sold)
+
+Cost simply means the amount paid (or incurred) to obtain something. What that cost becomes in the accounting records depends 
+on how and when the benefit is used.
+A cost can end up as an asset, an expense, or a liability or even a revenue, depending on the circumstances. For example:
+	Cost of a computer → Asset (until used up through depreciation)
+	Cost of supplies → Asset (until used up, then becomes an expense)
+	Cost of inventory → Asset (until sold, then becomes COGS expense)
+	Cost of services → Expense (immediately consumed)
+	Cost incurred but not yet paid → Liability (accrued expense)
+
+The acronym COGS stands for Cost of Goods Sold. It represents the direct costs attributable to the production of the goods sold 
+by a company. This includes the cost of materials and labor directly used to create the product. COGS is an expense because it 
+reflects the cost of inventory that has been sold during the period, which has been used up to generate revenue.
+
+A COGS expense means the cost of inventory that has been sold during the period. It is an expense because the inventory has been 
+used up to generate revenue. These classifications follow rules like the Matching Principle.
+
 ---
 Asset Definition:  
-Asset is a cost that provides future economic benefit beyond the current accounting period.
+Asset is a type of cost that provides future economic benefit beyond the current accounting period.
 Key points:
 	Assets appear on the Balance Sheet
-	Becomes an expense over time (depreciation, amortization, usage)
+	Assets becomes an expense over time (depreciation, amortization, usage)
 	Examples:
 		Equipment
 		Prepaid insurance
@@ -162,21 +183,24 @@ Key points:
 		Buildings
 		Vehicles
 
+AIPB questions often test this logic:
+	If the benefit is future → Asset.
+	If the benefit is current → Expense.
 ---
 Common adjusting entries:
 
 An accrued expense is an expense that a business has already incurred but has not yet paid or recorded by the end of the accounting period.
 	Accrued expense = you owe money. Deferred revenue = you owe work
 
+An accrued expense is an expense that a business has already incurred but has not yet paid or recorded by the end of the accounting 
+period. Under the Matching Principle, expenses must be recorded in the period in which they occur, even if the payment happens 
+later. Because the business owes money, accrued expenses create a liability.
+---
 Under the Matching Principle, expenses must be recorded in the period in which they occur, even if the payment happens later. 
 Because the business owes money, accrued expenses create a liability.
 Example: wages owed to employees at month end.
 ---
 Accrued revenue – revenue earned but not yet received
-An accrued expense is an expense that a business has already incurred but has not yet paid or recorded by the end of the accounting 
-period. Under the Matching Principle, expenses must be recorded in the period in which they occur, even if the payment happens 
-later. Because the business owes money, accrued expenses create a liability.
-
 Example: services completed but not yet billed.
 ---
 Deferred revenue – cash received before earning it. Deferred revenue is a liability because the business owes the customer something.
@@ -196,10 +220,34 @@ Work performed = Revenue
 Prepaid expenses – expenses paid in advance
 Example: prepaid insurance.
 
+A prepaid expense happens when a business pays cash before the expense occurs.
+In other words:
+	Cash paid first
+	Expense happens later
+Because the business has not yet used the benefit, the payment is recorded as an asset.
+Example: A company pays $1,200 for one year of insurance.
+---
 Depreciation – allocating cost of equipment over time.
-
+---
+Asset definition in accounting and finance
+An asset is defined as a resource owned by an individual or organization that provides economic value. This includes physical 
+properties such as inventory, vehicles, and buildings, monetary resources such as cash, investments, and receivables, as well 
+as intangible properties like software and patents. Assets are recorded on a company's balance sheet and are essential for 
+revenue generation and financial stability. Assets can be classified into current assets (expected to be converted to cash 
+within one year) and fixed assets (long-term assets that cannot be easily converted to cash). Proper asset management is crucial 
+for accurate financial reporting and informed business decision-making.
+---
 Key exam concept:
 Bookkeepers must apply the Matching Principle, which means expenses are recorded in the same period as the revenue they helped generate.
+
+Key Principles
+Revenue Recognition Principle: Revenue is recorded when it is earned, even if payment has not yet been received. For example, if 
+a company completes a $5,000 project in December but receives payment in January, the revenue is recognized in December. 
+
+Matching Principle: Expenses are recorded in the same period as the revenues they help generate. This ensures that financial statements 
+reflect the true profitability of a period. For instance, if a company incurs utility costs in December but pays the invoice in January, 
+the expense is recorded in December. 
+
 ---
 Common bookkeeping errors to avoid:
 1. Transposition errors: writing numbers in the wrong order (e.g., $123 instead of $132).

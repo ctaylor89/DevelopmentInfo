@@ -1,16 +1,18 @@
 ﻿Applications_in_Quickbooks
 Articles_To_Read
 Balance_Sheet_Explained
+Balance_Sheet_Proving
 Bookkeeping_Job_Advice
 Bookkeeping_Job_Research
 Certification_Course1
-Certifications_for_Bookkeepers
+Certifications_Info_For_Bookkeepers
 Chart_Of_Accounts
 Definitions_
 Links_Resources	
 Management_Reports
 Plans_QB
 Pricing_Model
+Profit_And_Loss_Checking
 Random_Notes_Accounting_Bookkeeping
 Random_Notes_Quickbooks					*The program
 Reporting_in_Quickbooks
@@ -18,6 +20,7 @@ Self_Marketing
 Startup_Notes
 Startup_Videos
 Study_Plan
+Think_ahead
 
 *notrrc is the code for "Not Recorded".
 
@@ -462,7 +465,7 @@ and the audit log which tracks all user activity.
 
 
 --------------------------------------------------------
-Certifications_for_Bookkeepers
+Certifications_Info_For_Bookkeepers
 
 Hector Gacia, a former software engineer turned bookkeeper, shares his insights on the most valuable certifications for 
 bookkeepers, especially those with a technical background. He emphasizes that while there are many certifications available, 
@@ -1025,6 +1028,7 @@ It’s built on the fundamental accounting equation:
 ### **Assets**  
 Everything the business owns or controls that has value.  
 Examples: cash, accounts receivable, equipment, inventory.
+An asset in accounting is a resource owned or controlled by a business that is expected to provide future economic benefits.
 
 ### **Liabilities**  
 Everything the business owes to others.  
@@ -1104,13 +1108,16 @@ Access to my temp QuickBooks Accountant account for practice and exploration. If
 https://qbo.intuit.com/app/postlogin?locale=en-us&iux_intuit_tid=1-698e33bb-3a3fbb4947d3a5e83da0bd42
 QB Tour
 
-
 Pro Advisor Glossary
 https://drive.google.com/file/d/1SPt24RBgvJSBesv6cnUDn73_ccDdtnDO/view?pli=1
 
 In the Know. Weekly newsletter from Intuit with tips, updates, and insights for ProAdvisors. It’s a great way to stay current 
 on the platform and industry trends.
 https://www.firmofthefuture.com/quickbooks-proadvisor/in-the-know/
+
+Publication 946 (2025), How To Depreciate Property. This is a key resource for understanding how to handle depreciation in 
+bookkeeping and tax preparation.)
+https://www.irs.gov/publications/p946#en_US_2023_publink1000107316
 --------------------------------------------------------
 Management_Reports
 
@@ -1460,6 +1467,101 @@ If you want, I can also build:
 
 Just tell me which direction you want to go.
 --------------------------------------------------------
+Balance_Sheet_Proving
+
+*notrrc
+The balance sheet provides a snapshot of the client’s assets, liabilities, and equity at a specific point in time. Proving the 
+balance sheet is an important period-end task which involves working through each row, verifying that the data within it is 
+accurate, and ensuring it matches information held in other reports and statements. When this is done, you can be confident that 
+the financial records are accurate and complete.
+
+To prove the bank balances on the balance sheet, check against the relevant bank reconciliations. 
+--
+To prove the accounts receivable amounts in the balance sheet, run an Accounts receivable aging summary report and confirm the 
+figures match. 
+
+This report also provides a good opportunity for conversations with your client: 
+If the report shows credit balances, check to see why. It could be that the client owes their customer money, or the customer 
+has paid for a product or service but hasn’t been invoiced. 
+
+If there are any invoices that need chasing down, you can change the date range on the Accounts Receivable (A/R) Aging Summary 
+Report to see if any invoices have been paid since period end to see if this is necessary.
+
+If there is anything in the report that has remained unpaid for a long time, it might be a good idea to discuss with the client 
+how to handle it. If it’s considered that the amount will never be paid, leaving it in accounts receivable will mean the client’s 
+books are not an accurate reflection of their business.
+--
+To prove the accounts payable amounts in the balance sheet, run an Accounts Payable Aging Summary report and confirm the
+figures match. There may also be additional advisory conversations that you can have with your clients here too. They may value 
+some coaching on best practice for terms with their customers, their collection processes, and setting up workflows to chase 
+unpaid invoices.  
+--
+Other Current Assets
+The Other Current Assets section of the balance sheet shows any other current asset accounts from the chart of accounts. 
+--
+Inventory Asset shows the value of inventory that the client has on hand. This is important to track as it can be a significant asset for many businesses, and it can also have tax implications.
+The value against Inventory Asset can be checked against the Inventory Valuation Detail Report to ensure they show the same amount. 
+--
+Undeposited Funds (sometimes called Payments to deposit) shows the value of payments that have been received but have not yet 
+been deposited into the client’s bank account. It’s important to keep track of undeposited funds and make sure that it doesn’t 
+grow each period, as that would indicate that these amounts either aren’t being deposited, or have not correctly been recorded
+in QuickBooks. 
+--
+Uncategorized Assets
+If anything has been added to the Uncategorized assets account, it will show up on the balance sheet. Transactions should only 
+be held in this account temporarily, and so this balance should be zero. If anything does appear in this area, find these 
+transactions and reclassify them to the correct accounts. 
+--
+Fixed assets
+Fixed assets are long-term assets that a business uses in its operations, such as equipment, vehicles, or buildings.
+The value of any fixed assets will appear on the balance sheet. A periodic review of the transactions in these accounts is 
+helpful to determine if a fixed asset schedule needs to be updated, or if anything was coded incorrectly, in preparation for 
+year end. 
+
+Note: You should always follow best practices for treatment of fixed assets. For clients with QuickBooks Advanced subscriptions, 
+you can add their fixed assets, and their depreciation schedules can be managed within QuickBooks itself.
+--
+Accounts Payable
+The accounts payable figure in the balance sheet should be checked against the value in the Accounts payable aging summary 
+report, and any statements received from vendors. 
+
+Like the A/R Aging Summary Report, the A/P Aging Summary Report can provide a good opportunity for conversations with your client: 
+	Confirm that all the balances are accurate—and determine what to do with those that aren’t 
+	Discuss cash flow in relation to outstanding accounts payable
+--
+Other Current Liabilities
+Any accounts in the Other Current Liabilities section should be reconciled and compared to any detailed reports or future payments. 
+For example, you should be able to compare the balance in any Sales Taxes Payable accounts to future payments made or amounts that 
+show due on the sales tax returns.
+
+Similarly, if your clients have any long-term liabilities, they should be regularly reconciled against their loan documents or 
+amortization schedules. 
+--
+Opening Balance Equity account
+An entry to the Opening Balance Equity account is generated whenever an account is set up within QuickBooks with an opening 
+balance. This can be useful when you’re setting up an account, but it shouldn’t be left like this, as it does not explain where 
+this amount has come from.
+
+If there is an amount in Opening Balance Equity at the end of a period, it should be investigated and resolved. Open the 
+account register from the chart of accounts to view the transactions entered since the last time it was zero.
+
+In the case of a new bank account (for example Account B), if you know that the opening balance was transferred from an existing 
+account (Account A), you can simply change the account from opening balance equity to the source bank account (Account A).
+
+In other cases, correcting opening balance equity may require more complex journal entries to ensure that the source of the 
+opening balance is properly reported in QuickBooks. 
+--------------------------------------------------------
+*notrrc
+Profit_And_Loss_Checking
+
+Checking the profit and loss statement
+You should take a look at the profit and loss statement and check it for reasonableness. Some issues will be easier to spot than 
+others, for example, if there is a balance in Uncategorized Income. Others will require more of your accountancy detective 
+skills. You should review the profit and loss statement to check that the expense and income account balances make sense for 
+your client.
+
+
+--------------------------------------------------------
 Random_Notes_Quickbooks
 
 If you are not doing a good job tracking your customers or sub-customers, tracking vendors on your expenses, then your 
@@ -1586,9 +1688,23 @@ there is a training opportunity for someone in your team, or an advisory moment 
 
 Account reconciliation is where you should make sure that the information stored in QuickBooks matches external sources, such 
 as bank and credit card accounts.
+---
+QuickBooks Online Accountant (QBOA) is the only version that includes Books Review as a built-in tool. Books Review appears only 
+when you open a client’s QuickBooks Online company file via QBOA. Books Review helps accountants systematically work through 
+transaction review, reconciliation, final review, and period wrap-up tasks. 
+*Books Review is not available in the sample demo company - you must add or access an actual client file under your QBOA 
+dashboard to see it.
+---
+Books review process
+The Books review process is focused on bookkeeping tasks, ensuring that the transaction data is complete and reconciled. In 
+Final review, you really need to wear your detective hat as you dig deep into unusual or unexpected information in QuickBooks. 
 
-Note: For more detailed guidance on how to carry out a reconciliation for bank and credit card accounts in QuickBooks, check out the QuickBooks Online Certification Level 1: Banking course. And take a look at QuickBooks Online Certification Level 2: Banking for how to reconcile nonbank/credit card accounts.
+The first task in Final review is to investigate any accounts payable and receivable that are older than 90 days. Accounts 
+receivable transactions should be investigated for possible duplicates, and accounts payable should be looked at in case they 
+still need to be paid but cashflow is an issue, or if they have been paid but it’s not been properly recorded in QuickBooks.
+--
 
+*** Record Balance_Sheet_Proving
 
 End_*notrrc
 *** End Random_Notes_Quickbooks
@@ -1891,15 +2007,61 @@ For example, these could include:
 	Invoicing information from healthcare clients that are required to manage invoicing in a separate system
 	Sales information from e-commerce clients who use separate software to manage their sales and sales tax
 ---
-Think ahead
+Another name for an income statement in accounting is the Profit and Loss Statement (P&L). Other alternative names include:
+	Profit and Loss Account
+	Statement of Profit or Loss
+	Revenue Statement
+	Statement of Financial Performance
+	Earnings Statement
+	Statement of Earnings
+	Operating Statement
+	Statement of Operations. 
+---
+What Accounts Receivable Means
+Accounts Receivable (A/R) is the money that customers owe your business for goods or services that you already provided but 
+haven’t been paid for yet.
+
+It’s an asset on your balance sheet because it represents future cash inflows. When you create an invoice in QuickBooks, it 
+automatically increases your accounts receivable balance. When the customer pays, it decreases accounts receivable and increases 
+cash. Managing accounts receivable is crucial for maintaining healthy cash flow. It is recorded as an asset on the balance sheet 
+because the business expects to receive that money.
+
+You want to make sure you’re invoicing promptly, following up on overdue payments, and keeping track of who owes you what.
+If you send a client an invoice for $2,000, Accounts Receivable increases $2,000 and the invoice appears on the A/R Aging Report. 
+When the client pays the invoice, Cash increases $2,000 and Accounts Receivable decreases $2,000.
+---
+Equity in accounting represents the owners’ residual interest in a business after all liabilities have been deducted from assets.
+---
+An asset in accounting is a resource owned or controlled by a business that is expected to provide future economic benefits.
+
+Assets are valuable because they can generate revenue or be converted into cash. Assets are a key component of a company’s net 
+worth. Lenders may also factor in a company’s assets when issuing loans.
+
+Assets can be physical items, such as machinery, or intangible things, such as intellectual property. Assets are reported on a 
+company’s balance sheet. A business cannot operate effectively or sustain itself without assets; they are critical to producing 
+and marketing goods or services, which is essential for generating revenue and profit.
+
+Assets are important to informed decision-making. Knowing which assets a business has and their condition can drive choices 
+around upgrades, investments, resource allocation, and strategic planning. Finally, asset management is key to transparent 
+financial reporting and regulatory compliance, keeping a company on the right side of key stakeholders who have a vested 
+interest in its financial stance.
+
+Examples: Accounts Receivable, Inventory, Equipment, Cash, Intellectual Property, Patents(Intangible asset), Prepaid Expenses.
+
+
+*** End of Random_Notes_Accounting_Bookkeeping
+---------------------------------------------------------------
+Think_ahead
+
 Your clients are busy people with businesses to run, so getting the documents you need from clients can sometimes be challenging! 
 Give yourself, and your client, plenty of time to get the files you need so you can complete your period-end tasks 
 in a timely manner.
 ---
+If any of your clients don’t have their bank feeds connected yet, it’s worth a conversation with them about the efficiencies it 
+could bring. You could also see if it’s possible to have a view only login for their bank account, so you can access statements 
+yourself. 
 
 
-If any of your clients don’t have their bank feeds connected yet, it’s worth a conversation with them about the efficiencies it could bring. You could also see if it’s possible to have a view only login for their bank account, so you can access statements yourself. 
-*** End of Random_Notes_Accounting_Bookkeeping
 --------------------------------------------------------------
 Reporting_in_Quickbooks
 
