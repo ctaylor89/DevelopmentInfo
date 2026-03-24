@@ -158,7 +158,9 @@ Clean-up or catch-up bookkeeping involves correcting errors or bringing books up
 Temp / contract roles lean heavily on: reconciliations, clean-up, month-end close, A/P, A/R
 Remote roles often emphasize: QuickBooks, reconciliations, invoicing, payroll support.
 
-Note: Payroll support means assisting with payroll-related tasks without being the person legally responsible for running payroll or filing payroll taxes. In remote bookkeeping roles, the bookkeeper typically supports a payroll service (like ADP, Gusto, Paychex, or QuickBooks Payroll) rather than replacing it. The work is operational and review-focused, not compliance-heavy.
+Note: Payroll support means assisting with payroll-related tasks without being the person legally responsible for running payroll 
+or filing payroll taxes. In remote bookkeeping roles, the bookkeeper typically supports a payroll service (like ADP, Gusto, 
+Paychex, or QuickBooks Payroll) rather than replacing it. The work is operational and review-focused, not compliance-heavy.
 
 Concretely, payroll support usually includes collecting and validating payroll inputs (hours worked, PTO, bonuses, commissions), reviewing payroll reports for accuracy before or after payroll runs, and posting payroll journal entries to the general ledger so wages, taxes, and benefits hit the correct accounts and periods. It also often involves reconciling payroll clearing accounts, tracking employer taxes and benefit expenses, and answering basic payroll-related questions from management (not employees).
 Payroll support does not usually include in remote bookkeeping roles: filing payroll tax returns, making tax payments, handling garnishments, or resolving IRS/state notices. Those functions typically stay with the payroll provider or an accountant. When a job posting says “payroll support,” it’s signaling “hands-on bookkeeping around payroll” rather than “you own payroll compliance.”

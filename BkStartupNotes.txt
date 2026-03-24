@@ -456,6 +456,9 @@ Summarizes the banking activity—including balances and information about recon
 	Indicates common issues Tallies the transaction volume 
 	From here you can quickly access the chart of accounts and the client’s financial statements.
 
+Consider saving a PDF of the Client overview center to keep a snapshot of the point in time. This can be used as a record showing 
+things being ticked and tied to a certain date, and also comparing the account month to month to see how it’s progressing.
+
 From Settings gear icon you can customize QuickBooks to your client’s needs—including managing users, creating custom form 
 styles, and applying settings that tailor QuickBooks to the client’s business. You can also jump to specific sections of 
 QuickBooks—such as the chart of accounts, the reconciliation tab of the transactions center, and any of the lists within 
@@ -1105,6 +1108,8 @@ Links_Resources
 
 https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/get-started-adjust-settings-sign-intuit-quickbooks/L6TekQ3zX_US_en_US
 
+Veronica Wasek’s YouTube channel with QuickBooks tutorials and tips for bookkeepers. Retired CPA.
+https://courses.5mbacademy.com/courses/take/the-virtual-bookkeepers-toolbox/texts/64333870-strategies-for-finding-clients
 Gets you to sign in site to access the QBOA training and certification materials.
 1) https://accounts.intuit.com/	*Login
 2) https://proadvisoracademy.app.intuit.com/home	*After login enter this url on a new tab
@@ -1530,6 +1535,26 @@ Fixed assets are long-term assets that a business uses in its operations, such a
 The value of any fixed assets will appear on the balance sheet. A periodic review of the transactions in these accounts is 
 helpful to determine if a fixed asset schedule needs to be updated, or if anything was coded incorrectly, in preparation for 
 year end. 
+--
+On the balance sheet, assets are shown at their book value, which is the original cost of the asset minus any accumulated depreciation. 
+If there are any impairments or write-downs, these should also be reflected in the asset's book value. An impairment occurs when 
+the asset's market value drops below its book value, and a write-down is an accounting entry that reduces the book value of the 
+asset to reflect this decrease in value.
+
+Assets are listed in order of liquidity, which means how quickly they can be converted into cash. Liquid assets, such as accounts 
+receivable or inventory, can be turned into cash quickly. Equipment and buildings that take longer to sell or convert are considered 
+illiquid. 
+* Illiquid assets are securities or properties that you can't easily sell or exchange for cash without incurring significant losses.
+
+There are two main types of assets:
+	Current assets: These are assets you expect your business to use, sell, or convert to cash within a year, such as inventory.
+	Non-current assets: These assets have longer-term value to your business and are harder to convert into cash. Examples 
+	include office furniture, buildings, or long-term investments.
+
+Say you run a small gardening business. Your current assets include cash, inventory (plants and gardening supplies), and accounts 
+receivable (invoices sent to customers for work completed). Your non-current assets include your gardening equipment, such as 
+lawnmowers and trimmers. The current assets are more liquid because you can quickly sell inventory or collect accounts receivable 
+to get cash. The gardening equipment is less liquid because it may take time to find a buyer and convert it into cash.
 
 Note: You should always follow best practices for treatment of fixed assets. For clients with QuickBooks Advanced subscriptions, 
 you can add their fixed assets, and their depreciation schedules can be managed within QuickBooks itself.
@@ -1548,7 +1573,8 @@ For example, you should be able to compare the balance in any Sales Taxes Payabl
 show due on the sales tax returns.
 
 Similarly, if your clients have any long-term liabilities, they should be regularly reconciled against their loan documents or 
-amortization schedules. 
+amortization schedules. * An amortization schedule is a table that shows how a loan gets paid off over time, breaking each 
+payment into: Interest paid, Principal paid and Remaining loan balance.
 --
 Opening Balance Equity account
 An entry to the Opening Balance Equity account is generated whenever an account is set up within QuickBooks with an opening 
@@ -1576,20 +1602,20 @@ your client.
 Note: if your client is a nonprofit organization, this report may be called the statement of activities.
 
 Sales income is specifically related to invoices and sales receipts.
-It can be a good idea to tie out the sales income using items in the profit and loss against the sales summary report. If there 
-is a difference between the sales report and the profit and loss, make sure that any nonsales transactions are recategorized to 
-a different income account.
+It can be a good idea to tie out the sales income account balance using items in the profit and loss against the sales summary 
+report. If there is a difference between the sales summary report and the profit and loss, make sure that any nonsales transactions 
+are recategorized to a different income account.
 ---
 Uncategorized income accounts are generated by QuickBooks when there isn’t an obvious match for a money-in transaction. If these 
-are not recategorized to a more relevant account, then these accounts will show up on the profit and loss statement. If you see 
-a balance in these accounts on the profit and loss statement:
+Uncategorized income transactions are not recategorized to a more relevant account, then these accounts will show up on the profit
+and loss statement. If you see a balance in these accounts on the profit and loss statement:
 	Run a Profit and Loss Detail Report. 
 	Select each transaction in turn and recategorize it to the correction account.
 
-You may need to work with your client to identify the correct accounts for each transaction. After these discussions, it’s a good 
+You may need to work with your client to identify the correct accounts for each transaction. After client discussions, it’s a good 
 idea to update the rules in the bank feed, to avoid further transitions being posted to uncategorized income.
 ---
-As with uncategorized income, you should work with your client to reclassify any transactions posted to Uncategorized Expenses to 
+As with Uncategorized Income, you should work with your client to reclassify any transactions posted to Uncategorized Expenses to 
 avoid this account appearing on the profit and loss statement. 
 
 If there are many transactions posted to an Uncategorized Account and they all need reposting to the same account, it might be a 
@@ -1609,44 +1635,52 @@ client to reclassify those transactions to the appropriate accounts.
 You may see a line item in the Other Expenses section of the profit and loss report called Reconciliation Discrepancy. This 
 feature is specific to QuickBooks, and it’s important to know what it is in case it comes up in your client’s accounts. 
 
+The Reconciliation Discrepancy line on a Profit and Loss (P&L) report appears when someone changes or deletes transactions after 
+a bank or credit card account has already been reconciled. Its purpose is to force the books to stay balanced when a previously 
+reconciled transaction is altered.
+---
 When a bank account is reconciled, if it does not balance, it is possible to force the reconciliation. Any difference between 
 the bank statements and the data in QuickBooks will be accounted for in the Reconciliation Discrepancy account. There may be 
 times when this is necessary, but it isn’t best practice, so if you see this in a profit and loss statement, you should investigate.
 
-If the discrepancy can’t be found, or it’s not suitable to fix it through undoing a reconciliation on closed books, then you need 
-to address the balance so it is no longer sitting in the Reconciliation Discrepancy account.
+If the discrepancy can not be found, or it is not suitable to fix it through undoing a reconciliation on closed books, then you 
+need to address the balance so it is no longer sitting in the Reconciliation Discrepancy account.
 
-In order to clear this account, you’ll need to create a journal entry to move the balance to a more suitable account, such as 
+In order to clear this account, you will need to create a journal entry to move the balance to a more suitable account, such as 
 Bank fees. If you find that the Reconciliation Discrepancy Account is often used, it’s a good opportunity for training your 
 clients and your team in best practice, to avoid similar situations in the future. 
 ---
-QuickBooks will automatically generate certain accounts when specific transactions or settings occur in QuickBooks. Two of these 
-accounts will be created if your client passes the cost of certain expenses and items onto their customers. 
+QuickBooks will automatically generate certain accounts when specific transactions or settings occur in QuickBooks. 
 
-If this is the case, then you may see Billable expense markup and Billable expense income in their profit and loss statement. 
-These accounts are generated if the relevant settings are checked in the Expenses tab of Account and settings.
+Two of these auto generated accounts are Billable Expense Markup and Billable Expense Income. These accounts will be created 
+if your client passes the cost of certain expenses and items onto their customers. If this is the case, then you may see 
+Billable Expense Markup and Billable Expense Income in their profit and loss statement. These accounts are generated if the 
+relevant settings are checked in the Expenses tab of Account and settings.
 
-If you see balances in Billable expense markup and Billable expense income accounts, check that they are correct, and applied 
+If you see balances in Billable Expense Markup and Billable Expense Income accounts, check that they are correct, and applied 
 to customers if needed. 
 ---
 During period-end reviews, you should check that the wage and payroll information held in QuickBooks matches that held in your 
-payroll system. At year end, you should make sure that the information on the profit and loss statement regarding wages and 
+payroll system. At year end, you should make sure that the information on the Profit and Loss statement regarding wages and 
 payroll matches the information that has been recorded on your client's tax returns. This includes the totals that were paid 
 to employees and contractors (which should match the totals across all W-9 and 1099 forms respectively), and the tax accounts. 
 
-You should compare wages and payroll tax accounts to the payroll returns, to make sure they agree. If you can’t do this, 
-someone may have incorrectly posted transactions to one of those accounts. If the wages and payroll tax accounts don't agree 
-with filed payroll returns, run a transaction detail report for either the wage or tax account, and investigate any 
+You should compare wages and Payroll Tax accounts to the Payroll Returns, to make sure they agree. If you can’t do this, 
+someone may have incorrectly posted transactions to one of those accounts. If the Wages and Payroll Tax accounts don't agree 
+with filed payroll returns, run a transaction detail report for either the Wage or Tax account, and investigate any 
 transactions that are not payroll type transactions. You should also investigate if payroll type transactions were posted to 
-other accounts in the system beside wages and payroll accounts.
+other accounts in the system beside Wages and Payroll accounts.
+---
+Making sure that you’re collecting W-9s on a regular basis will make the process of preparing 1099s a lot smoother when it gets 
+to end of year. Send out requests for these in the Contractors tab of the Expenses center.
 ---
 Unapplied payments
 If your client is using accrual-basis accounting, usually meaning they have accounts receivable and/or accounts payable, there 
 are some other accounts to be aware of. When your clients record a customer payment via the Receive Payment screen and don’t 
-apply it to an invoice, the cash-basis profit and loss will report it as Unapplied Cash Payment Income.
+apply it to an invoice, the cash-basis Profit and Loss will report it as Unapplied Cash Payment Income.
 
 Similarly, if there’s no bill associated with a bill payment transaction, if an expense or check is posted to accounts payable, 
-or if a bill is put against a credit card, then the cash-basis profit and loss will report this as Unapplied Cash Bill Payment 
+or if a bill is put against a credit card, then the cash-basis Profit and Loss will report this as Unapplied Cash Bill Payment 
 Expense.
 
 End of Profit_And_Loss_Checking
@@ -1759,7 +1793,14 @@ Through QuickBooks Online Accountant, you’ll have access to two templates in t
 2) Expanded Company Financials—which includes the accounts receivable and accounts payable aging detail reports, as well as 
 the profit and loss statement, the balance sheet, and the statement of cash flows
 Note: Your clients don’t have access to these templates. Instead, when they view this tab of the Reports center, they will 
-see the Company Overview, Sales Performance, and Expenses Performance reports. 
+see the Company Overview, Sales Performance, and Expenses Performance reports.
+
+You can send management reports to your clients directly from the Books review center. You can also set up management reports 
+ahead of time so that they contain the information most relevant to your clients, and are ready to be sent at period end.
+
+Maagement reports can be sent to the client as a PDF, Word Doc or you can share a link to the report in QuickBooks. If you share 
+a link to the report, your clients will be able to see the most up-to-date version of the report whenever they access it, and 
+they can also interact with the report by changing the date range or applying filters.
 ---
 If your client’s bank and credit card accounts are connected to QuickBooks, their bank statements may automatically be pulled 
 in, and can be accessed from the Account reconciliation tab of the Books review. For any bank or credit card accounts that 
@@ -2007,6 +2048,7 @@ An accrual is simply recognizing financial activity when it happens, not when ca
 ****************************************************
 Recorded to here within this section.
 ****************************************************
+*notrrc
 ---
 Deferred revenue vs accrued revenue
 
@@ -2141,7 +2183,89 @@ financial reporting and regulatory compliance, keeping a company on the right si
 interest in its financial stance.
 
 Examples: Accounts Receivable, Inventory, Equipment, Cash, Intellectual Property, Patents(Intangible asset), Prepaid Expenses.
+---
+*notrrc
+After your books are closed. Any attempt to change transactions dated on or before the closing date will trigger the warning or 
+password prompt you selected.
 
+Year-end adjustments
+Once your accounts are reviewed and reconciled, you can set the closing date in your settings.
+
+When a new fiscal year begins, QuickBooks Online automatically transfers the net income from the previous year into the Retained 
+Earnings account on the Balance Sheet. This account reflects the total of your company's income and expenses from all previous 
+years. Note: The Retained Earnings account is not the same as the retained earnings line item shown on the Balance Sheet.
+
+Close your books with peace of mind. If you need to change the closing date, or forgot the password you used to lock your books, 
+don't worry. You can easily edit both.
+
+You can use an Exceptions to Closing Date report to see any changes made after you close your books.
+Go to Reports Icon image of the Reports menu., then Standard reports.
+---
+Getting ready for 1099 preparation
+The Books review center steps you through the core tasks that are a good idea to do at period end, but there are other things 
+that might be right for your clients, that sit outside this workflow. One of these is keeping on top of the W-9s of vendors and 
+contractors who will require 1099s in January. 
+
+Your client usually needs to submit a 1099 to the IRS at year end when they pay $600 or more for services from someone who is 
+not an employee. To prepare the 1099, you need to collect information about the individual via a completed W-9. Collecting this 
+information throughout the year will make 1099 preparation so much smoother. It can also be a really good idea to request their 
+completed W-9 before work is started. Not doing this could prove troublesome after beginning the work—you may find yourself unable 
+to get a W-9 from a vendor that’s already been paid, and you could be required to pay withholding taxes on the money you pay them.
+
+You might not know at the beginning of an engagement if your client will pay someone $600 or more. It is good practice to collect 
+a W-9 from all people or companies from whom they purchase services in case they do.
+
+The Vendors list in the Expenses center shows which of your client’s vendors are set up for 1099 tracking. These vendors will 
+also appear on the Contractors list. If you see a vendor on the list that should be tracked for 1099, open up their details, 
+select Edit, then check Track payments for 1099.
+
+If no W-9 information is held for the contractor, you’ll see a W-9 missing flag by their name, making it easier to identify who 
+needs to be contacted for a W-9. 
+
+W-9 ready is shown by contractors for whom a tax ID has been entered. You can also check if a paper or PDF copy of the W-9 has 
+been received by selecting the contractor’s name and viewing the Documents tab. 
+---
+Client overview
+Another period-end task that you might want to do is download the Client overview after you have completed the Books review.  
+Client overview will show a summary of all bank and credit card accounts and their reconciliation status, as well as nonbank 
+accounts that have been selected to list there as well. Client overview also summarizes any common issues, and the volume 
+transaction over a set period.
+
+Reviewing the Client overview, and how it changes over time, could prompt advisory conversations around the changing volume of 
+transactions, or the number of bank accounts your client has.
+
+Being able to download the Client overview each period end is a nice way of being able to review, at a high level, the work 
+you’re doing for a client month to month. You can use the Client overview to document that at this point in time, all accounts 
+were up to date and reconciled. You can also use it to analyze the work being done for a client, and how that work changed over 
+the time you have worked with them. 
+---
+Year end
+While the actions that are taken during period end are good practice for keeping your client’s books tidy, and helping them 
+understand their business throughout the year, at year end, there are tasks that are required to keep your client compliant with 
+various rules and regulations for businesses. 
+
+1) If, at the end of the year, there are still outstanding issues in the balance sheet or profit and loss, these will need to be 
+addressed before the books can be finalized for tax preparation, and year-end reports can be shared. 
+QuickBooks helps you to easily identify outstanding issues with transactions and provides a number of options for fixing them.
+
+2) You will need to keep track of which vendors and contractors require 1099s, and at the end of the year you’ll need to provide 
+   these forms. 
+
+QuickBooks offers two methods for preparing and e-filing 1099s. 
+If you choose the standard method, QuickBooks will guide you through the process of selecting the accounts used to pay 1099 recipients, mapping them to the boxes on 1099 forms, reviewing recipients then previewing and e-filing the forms.  
+
+If you choose the automated method, QuickBooks scans your books to find transactions that relate to vendors who likely need a 1099. It also filters out credit card transactions, sorts through vendors to determine whether or not they’re corporations, maps accounts to boxes on the 1099 form, and creates your forms.
+
+You can mix and match these two methods, preparing 1099s for some recipients using the standard method, and others using the automated method. 
+
+Whichever method you choose, the 1099 process within QuickBooks allows for easy corrections.
+
+3) Many businesses use budgets to help plan their finances and set goals with their money. For some, budgeting will be a required 
+part of corporate governance. 
+
+For clients with QuickBooks Plus or Advanced, there are even more options to create dynamic budgets in QuickBooks. 
+
+4) If your client has employees, you will also need to prepare and file W-2s for them. QuickBooks offers a payroll service that can help you with this process, or you can use a third-party payroll provider that integrates with QuickBooks.
 
 *** End of Random_Notes_Accounting_Bookkeeping
 ---------------------------------------------------------------
