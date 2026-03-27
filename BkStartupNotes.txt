@@ -4,7 +4,9 @@ Balance_Sheet_Explained
 Balance_Sheet_Proving
 Bookkeeping_Job_Advice
 Bookkeeping_Job_Research
+Books_Review_Center
 Certification_Course1
+Certification_PeriodEnd
 Certifications_Info_For_Bookkeepers
 Chart_Of_Accounts
 Definitions_
@@ -12,6 +14,7 @@ Formulas_And_Concepts
 Links_Resources	
 Management_Reports
 Plans_QB
+Practicing_QB
 Pricing_Model
 Profit_And_Loss_Checking
 Random_Notes_Accounting_Bookkeeping
@@ -51,15 +54,19 @@ If you learned bookkeeping from a bank-feed-first perspective, you might not hav
 transactions actually flow. And that makes accrual concepts like undeposited funds or combined payments feel way harder 
 than they need to.
 ---
-If you’re about to learn QBO (or you’re teaching someone who is) this is what I think is the #1 thing you should know before diving in to help you get going on the right foot. I recorded a video that also shows a bit of what that DANG bank feed actually does when you hit match or post. Hope it help you on your journey of learning QBO! Godspeed my friend!
+If you’re about to learn QBO (or you’re teaching someone who is) this is what I think is the #1 thing you should know before 
+diving in to help you get going on the right foot. I recorded a video that also shows a bit of what that DANG bank feed actually 
+does when you hit match or post. Hope it help you on your journey of learning QBO! Godspeed my friend!
 https://youtu.be/14DvjL_u3bk
 ---
 the bank feed suggestions are garbage though and the “AI” it tries to implement has me recategorizing 80% of the items
 ---
 This, 1000%.
 "The matching logic is where it really falls apart for new users."
-You totally named the crux of it here. Not only do they trust the match suggestion as the truth, they are lead to believe that if there is no match offered, then it's not in QBO yet! And then you get...
-"their books are a mess because they were double-entering without realising it. Invoices created AND categorised from the feed. Bills entered AND posted from the feed. The bank rec technically balanced but the underlying data was chaos."
+You totally named the crux of it here. Not only do they trust the match suggestion as the truth, they are lead to believe that 
+if there is no match offered, then it's not in QBO yet! Then you get "their books are a mess because they were double-entering 
+without realising it. Invoices created AND categorised from the feed. Bills entered AND posted from the feed. The bank rec 
+technically balanced but the underlying data was chaos."
 ---
 Intuit Cusotmer support is a possible fall back job, but it appears to be overly managed and monitored to unreasonble metrics. 
 If I were to do it, realize that if they fired me or I quit, it would not go on my resume or affect my unemployment 
@@ -412,7 +419,72 @@ Management Reports?
 Performance center
 Financial Planner -> Cash flow
                   -> Cash flow Planner
+--------------------------------------------------------
+Books_Review_Center
 
+Transaction Review
+This is the heart of the Books Review Center. It’s where you review the transactions that have come in through the bank feed, 
+and make sure they’re categorized correctly.QuickBooks flags:
+	Uncategorized transactions
+	Transactions without payees
+	Undeposited funds issues
+	Unapplied payments
+	GST/VAT issues (if applicable)
+
+You can:
+	Open each transaction to fix it
+	Select multiple transactions → Ask Client
+	Sends a request directly to the client
+	Client responds under My Accountant → Requests  
+This is where you’ll spend most of your cleanup time.
+---
+Account Reconciliation shows all accounts needing reconciliation.
+You can:
+	Filter accounts
+	Reconcile directly from this tab
+	Identify accounts with no activity for 90+ days
+
+This ensures the balance sheet is accurate before final review.
+---
+Final Review - This is your accountant‑level QA pass.
+
+You’ll check:
+A/R aging (old unpaid invoices)
+A/P aging (old unpaid bills)
+Balance sheet anomalies
+Negative asset/liability balances
+Suspense accounts
+---
+Wrap‑Up - The final step before delivering the books.
+You can:
+	Prepare a report package
+	Customize templates
+	Add/remove reports
+	Send the package to the client
+	Close the books for the period
+This is your “deliverable” stage—perfect for monthly close or cleanup completion.
+---
+When you create an additional item to the Final Review tab, you can add a link and QuickBooks link to the additional item. 
+This is a great place to link to a Google Doc or spreadsheet where you’re tracking your cleanup work, or to a checklist 
+of things you want to make sure you’ve done before you send the books back to the client.
+---
+An entry to the Opening Balance Equity account is generated whenever an account is set up within QuickBooks with an opening balance. 
+This is because QuickBooks needs to balance the books, and it does this by creating an offsetting entry in the Opening Balance Equity account. 
+When you set up an account with an opening balance, QuickBooks automatically creates a journal entry that debits the new account and credits
+
+******
+The profit and loss report and the balance sheet report will both be useful as you work through the period-end workflow. 
+There may also be other reports specific to your clients that you will return to at these times. There are setup tasks that 
+you can do to make it easier to find and use these reports.
+---
+The Wrap-up stage of Books review involves sending reports to your clients. What these contain, and how they look, can be set 
+up ahead of time so that they’re ready for you when it comes to period end.
+---
+Depending on your client, there may be other documents that you need before you can complete your period-end review. 
+For example, these could include: 
+	Loan statements
+	Invoicing information from healthcare clients that are required to manage invoicing in a separate system
+	Sales information from e-commerce clients who use separate software to manage their sales and sales tax
 
 
 --------------------------------------------------------
@@ -464,8 +536,8 @@ styles, and applying settings that tailor QuickBooks to the client’s business.
 QuickBooks—such as the chart of accounts, the reconciliation tab of the transactions center, and any of the lists within 
 QuickBooks. Under the Tools heading, you can access useful tools—such as importing and exporting data to and from QuickBooks, 
 and the audit log which tracks all user activity.
----
-
+--------------------------------------------------------
+Certification_PeriodEnd
 
 
 --------------------------------------------------------
@@ -1135,6 +1207,9 @@ https://www.firmofthefuture.com/quickbooks-proadvisor/in-the-know/
 Publication 946 (2025), How To Depreciate Property. This is a key resource for understanding how to handle depreciation in 
 bookkeeping and tax preparation.)
 https://www.irs.gov/publications/p946#en_US_2023_publink1000107316
+
+Craig's Design and Landscaping Services is a sample client on the Plus plan where you can explore and experiment. 
+https://c23.qbo.intuit.com/qbo23/samplecompany/validated?SKU=7&arg=QBOA&companyId=1000
 --------------------------------------------------------
 Management_Reports
 
@@ -1333,6 +1408,38 @@ and can also send pay-enabled invoices that offer automated sales tax calculatio
 payment options, partial payments, and payment links.
 ---
 QuickBooks plans for small and medium businesses
+--------------------------------------------------------
+Practicing_QB
+
+Craig is interested in finding out how much each of his customers spends with him, so he can understand who his most valuable customers are. Create a new management report to help him understand this.
+Select each step in turn to work through this activity.
+
+1. Challenge
+Create a Company Overview management report for last month
+
+Add the Income by Customer Summary report
+
+Save it with the name Monthly Company Overview
+
+2. Review
+You can check if you’ve successfully created the report by returning to the Management reports option in Reports & Analytics.
+You should see the new report is in the list of management reports. Select Preview and confirm if the Sales by Product/Service Detail report appears in the table of contents. 
+
+3. Solution
+Here are the steps to complete the challenge.
+
+Open Reports & Analytics from the left-hand menu
+Select Management reports
+Select the Company Overview report to open it
+Change the time period to Last month
+Go to the Reports and charts section, select Add and then select Report in the dropdown
+Select the Sales by Product/Service Detail report from the Report dropdown 
+Select Save and Close
+When prompted, save the copy of the report with the name Monthly Company Overview and select Save
+
+It’s also possible to complete this task by creating a duplicate of the existing Company Overview report and then editing the details.
+---
+
 --------------------------------------------------------
 Pricing_Model
 
@@ -1701,7 +1808,7 @@ information and financial settings are accurate.
 
 You can also switch companies from the gear icon. This is useful if you are managing multiple companies or if you want to test 
 out different features in a sample company. To switch companies, click on the gear icon and then select “switch company” from 
-the dropdown menu. You will see a list of all the companies you have access to, and you can click on the one you want to switch 
+the dashboard. You will see a list of all the companies you have access to, and you can click on the one you want to switch 
 to. This allows you to easily navigate between different company files without having to log out and log back in.
 ---
 If your rentals are all under separate LLCs? If so, you do not want to combine different LLCs into one QB account using classes. 
@@ -1788,7 +1895,7 @@ you can do to make it easier to find and use these reports.
 The Wrap-up stage of Books review involves sending reports to your clients. What these contain, and how they look, can be set 
 up ahead of time so that they’re ready for you when it comes to period end.
 ---
-Through QuickBooks Online Accountant, you’ll have access to two templates in the Management reports tab of the Reports center:
+Through QuickBooks Online Accountant, you will have access to two templates in the Management reports tab of the Reports center:
 1) Basic Company Financials—which includes the profit and loss statement, the balance sheet, and the statement of cash flows.
 2) Expanded Company Financials—which includes the accounts receivable and accounts payable aging detail reports, as well as 
 the profit and loss statement, the balance sheet, and the statement of cash flows
