@@ -1197,6 +1197,9 @@ Access to my temp QuickBooks Accountant account for practice and exploration. If
 https://qbo.intuit.com/app/postlogin?locale=en-us&iux_intuit_tid=1-698e33bb-3a3fbb4947d3a5e83da0bd42
 QB Tour
 
+Introduction to QuickBooks Online for Beginners, PART I (2025)
+https://www.youtube.com/watch?v=COav3JMA7Po
+
 Pro Advisor Glossary
 https://drive.google.com/file/d/1SPt24RBgvJSBesv6cnUDn73_ccDdtnDO/view?pli=1
 
@@ -1593,7 +1596,6 @@ Just tell me which direction you want to go.
 --------------------------------------------------------
 Balance_Sheet_Proving
 
-*notrrc
 The balance sheet provides a snapshot of the client’s assets, liabilities, and equity at a specific point in time. Proving the 
 balance sheet is an important period-end task which involves working through each row, verifying that the data within it is 
 accurate, and ensuring it matches information held in other reports and statements. When this is done, you can be confident that 
@@ -1939,9 +1941,28 @@ Final review, you really need to wear your detective hat as you dig deep into un
 The first task in Final review is to investigate any accounts payable and receivable that are older than 90 days. Accounts 
 receivable transactions should be investigated for possible duplicates, and accounts payable should be looked at in case they 
 still need to be paid but cashflow is an issue, or if they have been paid but it’s not been properly recorded in QuickBooks.
---
+---
+To view any transactions that are sitting in Undeposited Funds, go to the chart of accounts and select Undeposited Funds. You can also
+access this from the left navigation bar by going to:
+	Accounting → Chart of Accounts → Undeposited Funds
+You’ll see money stuck there that should’ve cleared
 
-*** Record Balance_Sheet_Proving
+If you have any transactions sitting in Undeposited Funds, you should investigate these and make sure they’re being deposited 
+into the correct bank account.
+---
+If you have any transactions sitting in Uncategorized Income or Uncategorized Expenses, you should investigate these and categorize 
+them appropriately.
+If you have any transactions sitting in Uncategorized Assets, you should investigate these and categorize them appropriately.
+---
+Q: In the Final review stage of Books review, and you’re reviewing the profit and loss statement. You see a figure of $43.21 
+against the Reconciliation Discrepancy Account. What does this indicate?
+
+A: It means a previously reconciled transaction was changed, deleted, or added after reconciliation — and QuickBooks had to force 
+the books to stay balanced. Could also have been caused by the account being changed on a transaction after reconciliation. 
+It signals loss of audit integrity. Bottom Line: A balance in the Reconciliation Discrepancy Account means your previously 
+reconciled books were altered, and QuickBooks created an adjustment to force the accounts to balance.
+
+*** Record topic on this page: Balance_Sheet_Proving
 
 End_*notrrc
 *** End Random_Notes_Quickbooks
