@@ -619,11 +619,16 @@ What are the different document formats that can be used for the Client overview
 1. PDF		
 2. Excel
 3. Word
-
+---
 Q:What are the different document formats that can be used for the Management Reports?
 1. PDF		- Final deliverable to client, can be customized with the reports you want to include and the formatting you want to 
               use. This is the most common format for delivering reports to clients.
 2. Excel	- internal analysis only (outside the package)
+3. Word	- internal analysis only (outside the package)
+What experienced bookkeepers typically do
+	PDF → Final client-facing reports
+	Excel → Internal analysis and troubleshooting
+	Word → Custom commentary or advisory reports
 ---
 QB Test Questions
 
@@ -636,62 +641,72 @@ From Second Attempt
 
 If your client's bank accounts are not connected to QuickBooks, what additional setup task do you need to do at period end? 
 Option 1, remove the related account from the accounts reconciliation tab as it cannot be reconciled. 
-Option 2, collect bank statements from the client. 
+Correct: Option 2, collect bank statements from the client. 
 Option 3, request your client to manually, individually add all bank and credit card transactions into QuickBooks. 
 Option 4, add an additional item to the accounts reconciliation tab reminding you to exclude these accounts from your reconciliation process. 
+-Ref: For any bank or credit card accounts that aren’t connected, you’ll need to obtain these statements before you can reconcile these accounts.  
 
 Depending on their needs, you might conduct period reviews at different frequencies for different clients. 
 How do you set the time frame that the period-end review covers in QuickBooks? 
 Option 1, set the frequency of your period end reviews in the Company tab of Account and Settings. 
-Option 2, select the start and end dates in the Books Review Center. 
+Correct:Option 2, select the start and end dates in the Books Review Center. 
 Option 3, set the frequency of your period in reviews in the Advanced tab of Account and Settings. 
 Option 4, select the end date in Reports Options in Accountant Tools-the start date will be calculated based on the end date 
 of the last review completed. New question. 
+-Ref: In QuickBooks Online (2025), you set the time frame for a period-end review by adjusting the date range at the top of the 
+Books Review center.
 
-X The Transaction Review tab of the Books Review Center shows all the transactions from the relevant period that don't have the payee field completed. 
-Why is it important to complete this field as part of your period in review? 
+X The Transaction Review tab of the Books Review Center shows all the transactions from the relevant period that don't have the 
+payee field completed. Why is it important to complete this field as part of your period in review? 
 Option 1, you cannot reconcile accounts if the payee data isn't complete. 
 Option 2, transactions without payees won't appear in any QuickBooks reports. 
-Option 3, the more detailed the information entered into QuickBooks is, the more valuable the data can be for your client. 
+Correct: Option 3, the more detailed the information entered into QuickBooks is, the more valuable the data can be for your client. 
 Option 4, QuickBooks will prevent you from closing the books for the period if it hasn't been completed for all transactions. 
+-Ref: QuickBooks Online will NOT block you from closing the books if the Payee field is missing.
+-Ref: Transactions with no payee will still appear in your financial reports. QuickBooks does not hide, exclude, or suppress them.
+What does happen is that the reports lose important detail and accuracy.
 
 X What does the outstanding transactions section of the account reconciliation tab of the books review center show: 
 Option 1, a list of transactions that are more than 90 days old. 
 Option 2, any unusual transactions, for example, a bill from a vendor for a much higher value than previous bills. 
 Option 3, any unresolved transactions that are not addressed during the transaction review stage of books review. 
-Option 4, any unpaid bills from the period. 
+Correct: Option 4, any unpaid bills from the period. 
+-Ref: The Outstanding Transactions section lists all transactions that were recorded in QuickBooks but did NOT clear 
+the bank for the period you’re reviewing.
 
 X If a client uses a accrual basis accounting and records a customer payment via the receive payment screen without applying it 
 to an invoice, how will it show up on a cash basis profit and loss report? 
 Option 1, sales. 
-Option 2, unapplied cash payment income. 
-Option three, unapplied cash payment expense. 
-Option four, uncategorized expense. 
+Correct: Option 2, unapplied cash payment income. 
+Option 3, unapplied cash payment expense. 
+Option 4, uncategorized expense. 
+-Ref: It will show up as income on a cash‑basis P&L, even though it was not applied to an invoice.
 
 X What are the main tasks in the wrap-up stage of books review? Select the two options you think apply and then select submit. 
-Option one, sending management reports to clients. 
-Option two, closing the books. 
+Correct: Option one, sending management reports to clients. 
+Correct: Option two, closing the books. 
 Option three, checking account reconciliation. 
 Option four, reviewing transactions older than 90 days. 
+-Ref: The final step of Books review is Wrap-up—finalizing and sharing reports with clients, and closing the books so 
+transactions can’t be changed.
 
 The wrap-up tab of the books review center includes the option to close the books for the period you have been reviewing. 
 What is the benefit of doing this? 
 Option one, It can prevent users accessing information from a closed period. 
 Option two, It keeps unauthorized users from accessing the QuickBooks company. 
-Option three, It will prevent any changes from being made to transactions from before the closing date. 
+Correct: Option three, It will prevent any changes from being made to transactions from before the closing date. 
 Option four, It means you can track any future changes that are made to transactions from before the closing date. Stop printing.
+-Ref: The final step of Books review is Wrap-up—finalizing and sharing reports with clients, and closing the books so 
+transactions can’t be changed.
 ---
 From first attempt
 
 Which statement about the Additional items in each of the tabs of the Books Review Center is correct?
 Option 1, Additional items can be exported from one company and imported into another company.
 Option 2, They can only be used at year end.
-Option 3, You can create a checklist of any tasks you want, along with hyperlinks, if available.
-
-
-
-
-
+Correct: Option 3, You can create a checklist of any tasks you want, along with hyperlinks, if available.
+-Ref: Additional Items = your custom checklist. Tasks = Intuit’s built‑in checklist.
+QuickBooks Online Accountant does not provide any way to export or import Additional Items between companies.
 
 
 
@@ -2116,6 +2131,39 @@ A: It means a previously reconciled transaction was changed, deleted, or added a
 the books to stay balanced. Could also have been caused by the account being changed on a transaction after reconciliation. 
 It signals loss of audit integrity. Bottom Line: A balance in the Reconciliation Discrepancy Account means your previously 
 reconciled books were altered, and QuickBooks created an adjustment to force the accounts to balance.
+---
+Outstanding Transactions
+The Outstanding Transactions section lists all transactions that were recorded in QuickBooks but did NOT clear the bank for the 
+period you’re reviewing. These are the items that should have cleared but didn’tand they’re critical for spotting 
+reconciliation issues.
+What appears in Outstanding Transactions
+You’ll see:
+	Uncleared checks
+	Uncleared deposits
+	Payments recorded in QBO that never hit the bank
+	Duplicate entries
+	Old transactions that may be errors
+	Timing differences that need review
+These are transactions that exist in the register but do not appear on the bank statement for the period.
+
+Outstanding transactions help you identify:
+1. Errors: 
+	Duplicate checks
+	Deposits entered twice
+	Transactions posted to the wrong account
+
+2. Stale items
+	Checks that should have cleared months ago
+	Deposits that never actually happened
+
+3. Fraud or missing activity
+	Payments recorded but never processed
+	Deposits that never reached the bank
+
+4. Timing differences
+	Legitimate uncleared items from the end of the month.
+
+
 
 *** Record topic on this page: Balance_Sheet_Proving
 
