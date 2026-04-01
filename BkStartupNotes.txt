@@ -490,6 +490,20 @@ For example, these could include:
 --------------------------------------------------------
 Certification_Course1
 
+The Reports options inside Accountant Tools lets you pre-configure your reports so you don’t have to keep rebuilding them every 
+time you do a period-end review.
+
+You can customize and memorize report settings in advance, including:
+
+Report date ranges (e.g., “This Month,” “Last Fiscal Year,” etc.)
+Columns and layout (add/remove columns like % of income, prior period, etc.)
+Filters (only show specific accounts, classes, customers, etc.)
+Sorting and subtotal preferences
+Display settings (cash vs accrual, summarize vs detail)
+By setting these up ahead of time, you can save significant time during your period-end reviews and ensure consistency in the 
+reports you generate for your clients.
+
+
 Light-touch advisory moments. These are the moments where you can have an outsized impact on your clients by sharing 
 insights based on pairing your expertise of the QuickBooks platform with your knowledge as an accounting pro. When it 
 comes to light-touch advisory moments, there are four key themes. These include recommending the best possible integrations, 
@@ -536,8 +550,149 @@ styles, and applying settings that tailor QuickBooks to the client’s business.
 QuickBooks—such as the chart of accounts, the reconciliation tab of the transactions center, and any of the lists within 
 QuickBooks. Under the Tools heading, you can access useful tools—such as importing and exporting data to and from QuickBooks, 
 and the audit log which tracks all user activity.
---------------------------------------------------------
-Certification_PeriodEnd
+---
+Books review process
+While it’s not part of the Book review process, when reviewing the transactions at period end, it can also be a good idea to 
+review any transactions that have been voided or deleted. 
+
+To review any transactions that have been voided or deleted, go to Accountant tools and select Voided/deleted transactions. This 
+will take you to a filtered view of the audit log, showing any transactions that have been voided or deleted.
+
+In Final review, QuickBooks pulls together a list of all the accounts payable and receivable that are older than 90 days. You 
+will also see links to the financial reports. These, and any other reports you have added to Final Review, should be reviewed to 
+verify that the information in them is correct. 
+
+The first task in Final review is to investigate any accounts payable and receivable that are older than 90 days. Accounts 
+receivable transactions should be investigated for possible duplicates, and accounts payable should be looked at in case they 
+still need to be paid but cashflow is an issue, or if they have been paid but it’s not been properly recorded in QuickBooks.
+
+To prove the accounts receivable amounts in the balance sheet, run an Accounts Receivable Aging Summary Report and confirm the 
+figures match. 
+
+If the Accounts Receivable Aging Summary Report shows credit balances, check to see why. It could be that the client owes their 
+customer money, or the customer has paid for a product or service but hasn’t been invoiced.
+
+If there are any invoices that need chasing down (you can change the date range on the A/R Aging Summary Report to see if any 
+invoices have been paid since period end to see if this is necessary).
+
+If there is anything in the report that has remained unpaid for a long time, it might be a good idea to discuss with the client 
+how to handle it. If it’s considered that the amount will never be paid, leaving it in accounts receivable will mean the client’s 
+books aren’t an accurate reflection of their business.
+
+---
+AI Test Questions 
+
+Q:What are the four key themes of light-touch advisory moments?
+1. Recommending the best possible integrations
+2. Educating your clients on best practice
+3. Looking at the reports and sharing your insights
+4. Tailoring QuickBooks Online to best meet your clients' needs
+
+Q: What are the four tabs in the client list?
+1. Overview
+2. Activity
+3. Documents
+4. Notes
+
+Q: What information can you see in the client list?
+You can see the client’s name, the QuickBooks product they use, their subscription status, and when they were added to your list.
+You can also search for clients by name or filter them by product or subscription status.
+
+Q: How can you add new clients to your client list?
+You can add new clients by clicking the "Add Client" button and filling out the necessary information.
+
+Q: What is the Client overview and how can it be used?
+The Client overview is a single page that reflects the status of the account, its complexity, and the amount of work needed to 
+get the accounts in order. The Client overview can be used when you’re first engaging with a client to indicate the level of 
+work you’re taking on, and as a health-check as you continue your engagement.
+
+Q: What information does the Client overview show?
+The Client overview shows the details of the company’s setup from a QuickBooks perspective—what the subscription is, if they 
+use QuickBooks Payroll, and what apps are connected.
+
+Q: What does the Client overview summarize?
+The Client overview summarizes the banking activity, including balances and information about reconciliations. It also indicates 
+common issues and tallies the transaction volume. From here you can quickly access the chart of accounts and the client’s 
+financial statements.
+
+What are the different document formats that can be used for the Client overview?
+1. PDF		
+2. Excel
+3. Word
+
+Q:What are the different document formats that can be used for the Management Reports?
+1. PDF		- Final deliverable to client, can be customized with the reports you want to include and the formatting you want to 
+              use. This is the most common format for delivering reports to clients.
+2. Excel	- internal analysis only (outside the package)
+---
+QB Test Questions
+
+When setting up for your period-end reviews, what can you do in Reports options (accessed from Accountant tools) that can save 
+you time during your review?
+AI: You can customize the reports you want to include and the formatting you want to use. This allows you to create a tailored report 
+package for each client, making it easier to present the information they need.
+---
+From Second Attempt
+
+If your client's bank accounts are not connected to QuickBooks, what additional setup task do you need to do at period end? 
+Option 1, remove the related account from the accounts reconciliation tab as it cannot be reconciled. 
+Option 2, collect bank statements from the client. 
+Option 3, request your client to manually, individually add all bank and credit card transactions into QuickBooks. 
+Option 4, add an additional item to the accounts reconciliation tab reminding you to exclude these accounts from your reconciliation process. 
+
+Depending on their needs, you might conduct period reviews at different frequencies for different clients. 
+How do you set the time frame that the period-end review covers in QuickBooks? 
+Option 1, set the frequency of your period end reviews in the Company tab of Account and Settings. 
+Option 2, select the start and end dates in the Books Review Center. 
+Option 3, set the frequency of your period in reviews in the Advanced tab of Account and Settings. 
+Option 4, select the end date in Reports Options in Accountant Tools-the start date will be calculated based on the end date 
+of the last review completed. New question. 
+
+X The Transaction Review tab of the Books Review Center shows all the transactions from the relevant period that don't have the payee field completed. 
+Why is it important to complete this field as part of your period in review? 
+Option 1, you cannot reconcile accounts if the payee data isn't complete. 
+Option 2, transactions without payees won't appear in any QuickBooks reports. 
+Option 3, the more detailed the information entered into QuickBooks is, the more valuable the data can be for your client. 
+Option 4, QuickBooks will prevent you from closing the books for the period if it hasn't been completed for all transactions. 
+
+X What does the outstanding transactions section of the account reconciliation tab of the books review center show: 
+Option 1, a list of transactions that are more than 90 days old. 
+Option 2, any unusual transactions, for example, a bill from a vendor for a much higher value than previous bills. 
+Option 3, any unresolved transactions that are not addressed during the transaction review stage of books review. 
+Option 4, any unpaid bills from the period. 
+
+X If a client uses a accrual basis accounting and records a customer payment via the receive payment screen without applying it 
+to an invoice, how will it show up on a cash basis profit and loss report? 
+Option 1, sales. 
+Option 2, unapplied cash payment income. 
+Option three, unapplied cash payment expense. 
+Option four, uncategorized expense. 
+
+X What are the main tasks in the wrap-up stage of books review? Select the two options you think apply and then select submit. 
+Option one, sending management reports to clients. 
+Option two, closing the books. 
+Option three, checking account reconciliation. 
+Option four, reviewing transactions older than 90 days. 
+
+The wrap-up tab of the books review center includes the option to close the books for the period you have been reviewing. 
+What is the benefit of doing this? 
+Option one, It can prevent users accessing information from a closed period. 
+Option two, It keeps unauthorized users from accessing the QuickBooks company. 
+Option three, It will prevent any changes from being made to transactions from before the closing date. 
+Option four, It means you can track any future changes that are made to transactions from before the closing date. Stop printing.
+---
+From first attempt
+
+Which statement about the Additional items in each of the tabs of the Books Review Center is correct?
+Option 1, Additional items can be exported from one company and imported into another company.
+Option 2, They can only be used at year end.
+Option 3, You can create a checklist of any tasks you want, along with hyperlinks, if available.
+
+
+
+
+
+
 
 
 --------------------------------------------------------
