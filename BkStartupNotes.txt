@@ -5,9 +5,8 @@ Balance_Sheet_Proving
 Bookkeeping_Job_Advice
 Bookkeeping_Job_Research
 Books_Review_Center
-Certification_Course1
-Certification_Course2
-Certification_PeriodEnd
+Certification_Course_PeriodEnd
+Certification_Course_SalesAndCustomers
 Certifications_Info_For_Bookkeepers
 Chart_Of_Accounts
 Courses_And_Training
@@ -489,7 +488,7 @@ For example, these could include:
 
 
 --------------------------------------------------------
-Certification_Course1
+Certification_Course_PeriodEnd
 
 The Reports options inside Accountant Tools lets you pre-configure your reports so you don’t have to keep rebuilding them every 
 time you do a period-end review.
@@ -711,7 +710,7 @@ Correct: Option 3, You can create a checklist of any tasks you want, along with 
 QuickBooks Online Accountant does not provide any way to export or import Additional Items between companies.
 
 --------------------------------------------------------
-Certification_Course2      Sales and customers
+Certification_Course_SalesAndCustomers
 
 The Sales and customers exam focuses on these learning goals. By completing this course, you should be able to:
 Describe how to manage the products and services list and the customers list.
@@ -726,9 +725,56 @@ Identify relevant reports for the sales and customers workflow.
 ---
 Sales Center is not available in QuickBooks Online (including the 2025 version).
 The Sales Center is a Desktop-only feature (found in QuickBooks Desktop like Pro/Premier/Enterprise).
+Note: It is available in the "Craigs Design and Landscape" sample company as Sales and Get Paid."
+---
+This course is about managing two key lists, the Products and Services list and the Customers list, and how to use these lists 
+to manage sales transactions. It will next cover frequent tasks which explains how to record sales and receive payments.
 
+The course will then cover occasional tasks, which include how to manage customer statements, issuing credit memos, and refunds. 
+Finally, it will cover how to set up and manage recurring salestransactions, and which reports are key to the sales and 
+customers workflow.
 
+The Sales center in QuickBooks (known as the Sales & Get Paid app in the upgraded experience) is the hub for managing all 
+sales-related activities. Clients can easily access and track, invoices, sales receipts, and payments in one place, 
+streamlining the sales process. But not all clients will use it because it won’t always be right for their business.
+------
+Sales Transactions in Sales & Get Paid Hub
+The Status column in the Sales & Get Paid app shows the current state of each sales transaction. The possible statuses include:
+- Open, - Closed, - Pending, - Canceled, - Overdue, - Paid, - Partially Paid, - Unapplied.
 
+The Action column displays a suggested task for each transaction based on it's status. The actions that appear in the dropdown 
+list depend on the transaction type and its current status.
+
+In the Invoices tab, you can see which invoices are sent, overdue, paid, not due, needs attention, unpaid, not deposited 
+or deposited. You can use the dropdown in the Action column to perform tasks like sending reminders, make recurring payments, 
+edit or delete an invoice.
+
+In the Sales Orders tab, you can connect to a sales channel or an e-commerce platform like Shopify, Amazon Seller Central, 
+eBay Connector, etc to manage sales orders. Connecting to these apps allows you to streamline your sales process and keep 
+track of your orders more efficiently. Adding these apps reduces the need for manual entry of transactions. Once connected, you 
+can see transactions listed in the tab and create new sales orders directly.
+
+In the Recurring payments tab, you can connect QuickBooks Payments to process credit card payments and send payment links 
+to customers. This allows you to automate payment collection and improve cash flow. You can also set up recurring payments 
+for customers who have regular billing cycles, such as subscriptions or monthly services. This helps ensure timely payments 
+and reduces the administrative burden of managing recurring transactions.
+
+In the Products & services tab, it contains details of the products and services that your clients sell. You can add new 
+inventory products and services, edit existing ones, and manage your product catalog efficiently. Every interaction with 
+a customer should involve a product or service, which means this items are included in every sales transaction. Keeping 
+this list up to date is crucial for accurate invoicing, inventory management, and financial reporting.
+
+If the inventory tracking feature is turned on, and the client is using it, you can manage inventory levels directly from the 
+Products & Services tab. This allows you to keep track of stock levels, set reorder points, and ensure that you have enough 
+inventory to meet customer demand. It also helps prevent stockouts and overstocking, which can impact cash flow and profitability.
+------
+Sales from the MENU. 
+The Customers tab is where you can create, view and manage customer estimates. In the Customers hub Overview tab shows a list of 
+all customers who have overdue invoices, and a list of customers with open estimates. 
+
+In the new experience, you will find the the customer list in the Customer Hub.
+The Customers tab also allows you to manage your customer list, including adding new customers, editing existing customers.
+You can view a customers contact details, plus their current open balance.
 
 --------------------------------------------------------
 Certifications_Info_For_Bookkeepers
@@ -736,7 +782,8 @@ Certifications_Info_For_Bookkeepers
 Hector Gacia, a former software engineer turned bookkeeper, shares his insights on the most valuable certifications for 
 bookkeepers, especially those with a technical background. He emphasizes that while there are many certifications available, 
 only a few truly matter and can significantly boost your credibility and earning potential in the bookkeeping industry.
-https://www.youtube.com/watch?v=g_-J6sRBMWU   16:00 markd for ProAdvisor, 19:00 for AIPB, 23:00 for NACPB, 27:00 for Xero, 30:00 for Hubdoc/Dext/Gusto
+https://www.youtube.com/watch?v=g_-J6sRBMWU   16:00 markd for ProAdvisor, 19:00 for AIPB, 23:00 for NACPB, 27:00 for Xero, 
+30:00 for Hubdoc/Dext/Gusto
 
 ---
 Once you’re in QBOA: Look at the left menu, Click ProAdvisor, Click Training
