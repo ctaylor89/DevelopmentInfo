@@ -6,11 +6,14 @@ Bookkeeping_Job_Advice
 Bookkeeping_Job_Research
 Books_Review_Center
 Certification_Course1
+Certification_Course2
 Certification_PeriodEnd
 Certifications_Info_For_Bookkeepers
 Chart_Of_Accounts
+Courses_And_Training
 Definitions_
 Formulas_And_Concepts
+Help_
 Links_Resources	
 Management_Reports
 Plans_QB
@@ -28,8 +31,6 @@ Think_ahead
 
 *notrrc is the code for "Not Recorded".
 
-If you need a bit of help when working through the certification, don’t worry—you’re not alone.
-Call the Care team directly on 1-888-333-3451.
 --------------------------------------------------------
 Bookkeeping_Job_Advice
 
@@ -660,12 +661,13 @@ X The Transaction Review tab of the Books Review Center shows all the transactio
 payee field completed. Why is it important to complete this field as part of your period in review? 
 Option 1, you cannot reconcile accounts if the payee data isn't complete. 
 Option 2, transactions without payees won't appear in any QuickBooks reports. 
-Correct: Option 3, the more detailed the information entered into QuickBooks is, the more valuable the data can be for your client. 
+Correct: Option 3, The more detailed the information entered into QuickBooks is, the more valuable the data can be for your client. 
 Option 4, QuickBooks will prevent you from closing the books for the period if it hasn't been completed for all transactions. 
 -Ref: QuickBooks Online will NOT block you from closing the books if the Payee field is missing.
 -Ref: Transactions with no payee will still appear in your financial reports. QuickBooks does not hide, exclude, or suppress them.
 What does happen is that the reports lose important detail and accuracy.
 
+Got Wrong on test:
 X What does the outstanding transactions section of the account reconciliation tab of the books review center show: 
 Option 1, a list of transactions that are more than 90 days old. 
 Option 2, any unusual transactions, for example, a bill from a vendor for a much higher value than previous bills. 
@@ -707,6 +709,24 @@ Option 2, They can only be used at year end.
 Correct: Option 3, You can create a checklist of any tasks you want, along with hyperlinks, if available.
 -Ref: Additional Items = your custom checklist. Tasks = Intuit’s built‑in checklist.
 QuickBooks Online Accountant does not provide any way to export or import Additional Items between companies.
+
+--------------------------------------------------------
+Certification_Course2      Sales and customers
+
+The Sales and customers exam focuses on these learning goals. By completing this course, you should be able to:
+Describe how to manage the products and services list and the customers list.
+Explain how to customize sales forms.
+Describe how to customize a client’s account by adjusting settings.
+Use estimates, invoices, and sales receipts appropriately.
+
+Apply the appropriate method to record customer payments and noncustomer deposits
+Explain when to use customer statements, credit memos, and customer refunds.
+Implement recurring transactions.
+Identify relevant reports for the sales and customers workflow.
+---
+Sales Center is not available in QuickBooks Online (including the 2025 version).
+The Sales Center is a Desktop-only feature (found in QuickBooks Desktop like Pro/Premier/Enterprise).
+
 
 
 
@@ -1244,6 +1264,56 @@ If you're organizing parts of the business, use classes.
 --------------------------------------------------------
 Definitions_
 
+Retained earnings are the cumulative net earnings or profits a company keeps after paying dividends to shareholders. 
+Dividends are the last financial obligations paid by a company during a period. “Retained” refers to the fact that 
+those earnings were kept by the company.
+
+Companies may use their retained earnings to increase production capacity, hire more employees, launch a new product, 
+or for share buybacks, among other uses.
+---
+Categories (a.k.a. Account Types or Buckets) are broad groupings used to organize financial information on the financial 
+statements. Categories are the high-level classifications that determine how accounts are grouped and reported in financial 
+statements.
+Examples of categories: Assets, Liabilities, Equity, Income, Cost of Goods Sold, Expenses
+What categories do:
+Determine where something appears on reports
+Control how totals roll up on the Balance Sheet or Profit & Loss
+Provide structure for your chart of accounts
+---
+Accounts are the specific places where transactions are recorded.
+Accounts are assigned to categories
+Examples of accounts: Checking Account, Accounts Receivable, Retained Earnings, Tithes & Offerings Income, 
+Office Supplies Expense, Depreciation Expense
+
+What accounts do:
+	Track actual activity
+	Hold balances
+	Appear line by line on reports
+
+Every account must belong to one category.
+---
+How Classes Work in the Chart of Accounts
+1. What “Classes” Are
+In accounting systems, classes are a tracking tool used alongside the chart of accounts—not a replacement for it. While the 
+chart of accounts (COA) shows what the transaction is (expense, revenue, asset, liability), classes show why or where the 
+transaction applies.
+Think of it this way:
+	Chart of Accounts = “What type of money is this?”
+	(Rent expense, Donations income, Utilities expense)
+	Classes = “Which program, department, fund, or activity does this belong to?”
+
+
+2. Classes vs. the Chart of Accounts
+The chart of accounts is organized by account type: Assets, Liabilities, Equity, Income, Expenses
+
+Classes sit on top of the chart of accounts as an additional reporting dimension.
+📌 Key point:
+A single account (e.g., “Office Supplies Expense”) can be used across multiple classes, allowing detailed reporting without 
+exploding the Chart of Accounts into hundreds of accounts.
+
+3. Example: How a Transaction Uses Both
+Suppose an organization buys office supplies for its youth program.
+
 --------------------------------------------------------
 Articles_To_Read
 
@@ -1265,11 +1335,7 @@ it becomes a powerful tool for assessing the health of any business.
 A **balance sheet** is a financial statement that shows a company’s **financial position at a specific point in time**.  
 It answers the question: *“What does the business own, what does it owe, and what’s left over for the owner?”*
 
-It’s built on the fundamental accounting equation:
-
-\[
-\text{Assets} = \text{Liabilities} + \text{Equity}
-\]
+It’s built on the fundamental accounting equation:  Assets = Liabilities + Equity
 
 ### **Assets**  
 Everything the business owns or controls that has value.  
@@ -1343,11 +1409,40 @@ Book value =Asset cost − Accumulated depreciation
 Allowance account reduces A/R on the balance sheet
 	Net A/R = Accounts Receivable − Allowance for Doubtful Accounts
 
-
 End *notrrc
 ---------------------------------------------------------
-Links_Resources
+Courses_And_Training
 
+Learn Accounting For FREE Produced by the #1 Ranked Accounting University in the World. 
+The Introduction to Accounting: The Language of Business is the premiere introductory accounting course in the world. Used at 
+the #1 accounting university in the world (as rated by the London Financial Times), it is the finest accounting instruction 
+ever produced. Previously, sold to students and universities is now being released to the world for FREE.
+https://learnaccountingforfree.com/
+
+Learn the basics of accounting and bookkeeping with this comprehensive online course. It covers everything from the fundamentals 
+of double-entry bookkeeping to financial statements and tax preparation. Perfect for beginners looking to build a strong 
+foundation in accounting. Not free, Course overviewhttps://www.youtube.com/@LAB-JPTC
+https://learnaccountingbasics.com/
+---------------------------------------------------------
+Help_
+
+If you need a bit of help when working through the certification, don’t worry—you’re not alone.
+Call the Care team directly on 1-888-333-3451.
+
+C and M Accounting  cntrl - Alt ?  to get to Company ID and keyboard shortcuts
+Your Company ID is 9341456370805174 for C and M Accounting. You can use this when you call the Care team to help 
+them pull up your account quickly.
+
+In QuickBooks Online, Upper right corner is Help.  You can access the Care team for support with your certification or any 
+issues you encounter. You can reach them directly at 1-888-333-3451.
+
+Issue not resolved:
+We’re reaching out to you about a recent issue you reported: INV-150467: ProAdvisor: QuickBooks Online Certification
+Level 1 - All modules completed, Cert not issued. Good news! We reviewed your case (15157058860), and we're happy to 
+say this issue was resolved.
+---------------------------------------------------------
+Links_Resources
+Passed a ProAdvisor training course yesterday. A page displayed saying congrats, passed with score of 88%. But the main page shows that it is still in progress. Help!
 https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/get-started-adjust-settings-sign-intuit-quickbooks/L6TekQ3zX_US_en_US
 
 Veronica Wasek’s YouTube channel with QuickBooks tutorials and tips for bookkeepers. Retired CPA.
@@ -1383,6 +1478,14 @@ https://www.irs.gov/publications/p946#en_US_2023_publink1000107316
 
 Craig's Design and Landscaping Services is a sample client on the Plus plan where you can explore and experiment. 
 https://c23.qbo.intuit.com/qbo23/samplecompany/validated?SKU=7&arg=QBOA&companyId=1000
+
+---
+Tutorial Videos
+
+Why Debits and Credits Still Confuse You — Let's Fix That
+https://www.bing.com/videos/riverview/relatedvideo?q=debit+definition&&mid=CA18905539AA873FD896CA18905539AA873FD896&FORM=VAMGZC
+
+
 --------------------------------------------------------
 Management_Reports
 
@@ -1584,7 +1687,8 @@ QuickBooks plans for small and medium businesses
 --------------------------------------------------------
 Practicing_QB
 
-Craig is interested in finding out how much each of his customers spends with him, so he can understand who his most valuable customers are. Create a new management report to help him understand this.
+Craig is interested in finding out how much each of his customers spends with him, so he can understand who his most valuable 
+customers are. Create a new management report to help him understand this.
 Select each step in turn to work through this activity.
 
 1. Challenge
@@ -1611,8 +1715,6 @@ Select Save and Close
 When prompted, save the copy of the report with the name Monthly Company Overview and select Save
 
 It’s also possible to complete this task by creating a duplicate of the existing Company Overview report and then editing the details.
----
-
 --------------------------------------------------------
 Pricing_Model
 
@@ -1869,7 +1971,6 @@ account (Account A), you can simply change the account from opening balance equi
 In other cases, correcting opening balance equity may require more complex journal entries to ensure that the source of the 
 opening balance is properly reported in QuickBooks. 
 --------------------------------------------------------
-*notrrc
 Profit_And_Loss_Checking
 
 Checking the profit and loss statement
@@ -2085,10 +2186,12 @@ If your client’s bank and credit card accounts are connected to QuickBooks, th
 in, and can be accessed from the Account reconciliation tab of the Books review. For any bank or credit card accounts that 
 aren’t connected, you’ll need to obtain these statements before you can reconcile these accounts.  
 ---
-*notrrc
 Any payment transactions that are not assigned to an invoice or bill are considered to be unapplied payments. For each 
-transaction you have the option to create a client request, or void or delete the transaction.
+transaction you have the option to create a client request, or to void or delete the transaction.
 
+Note: A client request in QuickBooks Online is basically you flagging something for the client to fix or explain—because you 
+can’t confidently resolve it yourself without their input.
+---
 While it’s not part of the Book review process, when reviewing the transactions at period end, it can also be a good idea to 
 review any transactions that have been voided or deleted. To do this, go to Accountant tools and select Voided/deleted 
 transactions. This will take you to a filtered view of the audit log, showing any transactions that have been voided or deleted. 
@@ -2134,7 +2237,7 @@ reconciled books were altered, and QuickBooks created an adjustment to force the
 ---
 Outstanding Transactions
 The Outstanding Transactions section lists all transactions that were recorded in QuickBooks but did NOT clear the bank for the 
-period you’re reviewing. These are the items that should have cleared but didn’tand they’re critical for spotting 
+period you’re reviewing. These are the items that should have cleared but did not and they’re critical for spotting 
 reconciliation issues.
 What appears in Outstanding Transactions
 You’ll see:
@@ -2163,11 +2266,6 @@ Outstanding transactions help you identify:
 4. Timing differences
 	Legitimate uncleared items from the end of the month.
 
-
-
-*** Record topic on this page: Balance_Sheet_Proving
-
-End_*notrrc
 *** End Random_Notes_Quickbooks
 --------------------------------------------------------
 Random_Notes_Accounting_Bookkeeping
@@ -2278,12 +2376,12 @@ During a review, the bookkeeper confirms:
 	Payroll liabilities match reports
 	Sales tax payable matches filings
 If it doesn’t tie out, it’s not reliable.  
-*notrrc
+
 * "Tie Out" means that all parts of the financial statements agree with each other and with the underlying documentation. To 
    verify that two reports or numbers match or reconcile with each other. It’s an accounting phrase meaning “confirm the totals 
    agree.” Statement: “Tie out the sales income using items in the Profit & Loss against the Sales Summary report.”
    This means you should compare the totals from two different reports to make sure they match.
-* end *notrrc
+*
 Identify Missing or Duplicate Transactions 
 	Common problems:
 	Duplicate expenses
@@ -2395,12 +2493,29 @@ The Core Difference
 What gets recorded?
 	Asset increases (Accounts Receivable)
 	Revenue increases
+
+Note: Revenues are recognized when earned, not when cash is received. This is the core principle of accrual accounting.
+Revenue is a category of income that reflects the money a business earns from its operations. It is recognized when it is earned, 
+regardless of when the cash is received. This means that if you provide a service or deliver a product, you can recognize the 
+revenue at that time, even if the customer hasn’t paid you yet. This is why accrued revenue is recorded as an asset 
+(Accounts Receivable) on the balance sheet, because it represents money that is owed to you and will be collected in the future.
+
+When you “credit Revenue,” you’re not usually hitting an account literally named Revenue.
+You’re crediting a specific income account, like:
+	Sales Income
+	Service Income
+	Consulting Revenue
+	Product Sales
+
+QuickBooks typically creates a default one for you when you set up the company:
+
+Often called “Sales of Product Income” or “Service/Fee Income”
 --
-Example: You complete $10,000 of consulting work in December.
+Accrued revenue Example: You complete $10,000 of consulting work in December.
 	Client pays in January.
 	December entry:
-		Debit Accounts Receivable $10,000
-		Credit Revenue $10,000
+		Debit Accounts Receivable $10,000		- You now have a right to collect $10,000 (an asset increases)
+		Credit Revenue $10,000					- You recognized $10,000 in earned income
 	You earned it — so it belongs in December.
 
 	When cash comes in January:
@@ -2408,10 +2523,8 @@ Example: You complete $10,000 of consulting work in December.
 		Credit Accounts Receivable $10,000
 	No new revenue is recorded.
 
-*** Deferred Revenue ***
-Now flip it.
-	You got paid.
-	But you haven’t earned it yet.
+Deferred Revenue
+	You got paid. But you haven’t earned it yet.
 
 What gets recorded?
 	Asset increases (Cash)
@@ -2596,7 +2709,43 @@ part of corporate governance.
 
 For clients with QuickBooks Plus or Advanced, there are even more options to create dynamic budgets in QuickBooks. 
 
-4) If your client has employees, you will also need to prepare and file W-2s for them. QuickBooks offers a payroll service that can help you with this process, or you can use a third-party payroll provider that integrates with QuickBooks.
+4) If your client has employees, you will also need to prepare and file W-2s for them. QuickBooks offers a payroll service that 
+can help you with this process, or you can use a third-party payroll provider that integrates with QuickBooks.
+---
+An invoice is a formal request for payment that also serves as a source document for recording revenue. It’s not just paperwork, 
+it drives your accounts receivable, revenue recognition, and audit trail.
+
+Core Purpose of an Invoice
+Requests Payment
+	Tells the customer: what they owe, why, and when it’s due.
+Triggers Revenue Recording
+	In accrual accounting, the moment you issue an invoice, you recognize revenue (not when cash is received).
+Creates Accounts Receivable
+	It records money owed to you as an asset.
+Provides Documentation
+	Supports audits, tax filings, and dispute resolution.
+
+What Happens in the Books When You Create an Invoice
+When you issue an invoice in QuickBooks Online:
+Journal Entry:
+	Debit: Accounts Receivable				*This increases your assets because it represents money you expect to receive.
+	Credit: Sales (or Service Revenue)		*This increases your revenue, reflecting the income you earned from providing goods 
+											 or services.
+
+👉 Translation:
+“You earned money, but haven’t been paid yet.”
+---
+Every journal entry has at least one debit and one credit, and the total debits must equal total credits. This is the 
+fundamental principle of double-entry accounting. It ensures that the accounting equation (Assets = Liabilities + Equity) 
+remains balanced after every transaction.
+
+How do Debits and Credits Work Together?
+Debits and credits are the two sides of every financial transaction. In double-entry accounting, every debit must have a 
+corresponding credit, and vice versa. This system helps ensure accuracy and provides a complete picture of a company's 
+financial activities.
+
+Owners equity changes on three main things: Revenue, Expenses, Dividends, and Owner’s Draws. When you record revenue, it increases 
+equity. When you record an expense, pay a dividend, or take an owner’s draw, it decreases equity.
 
 *** End of Random_Notes_Accounting_Bookkeeping
 ---------------------------------------------------------------

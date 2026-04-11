@@ -243,6 +243,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookKeeping", "BookKeeping"
 		BK_Notes.txt = BK_Notes.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{FAF28F21-FA21-40AB-8A19-E03A04EFF37A}"
+	ProjectSection(SolutionItems) = preProject
+		AccountingEquation.docx = AccountingEquation.docx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -421,6 +426,7 @@ Global
 		{5F8C8377-6EEB-4E62-A6F1-920FB0C0492E} = {96AF24B0-902C-48DE-B3F0-38328FCB6192}
 		{DB8D40F2-E9B0-437F-B9D6-36C1F9249E59} = {87315A71-98D3-4E18-A60E-13798903C186}
 		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {EFD945D6-38C8-4118-9D33-ABD517066A4D}
+		{FAF28F21-FA21-40AB-8A19-E03A04EFF37A} = {11680CD5-2E31-46DD-84BB-4B03512D3832}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F826286-BB0E-4C31-B721-7DBAA2852733}
