@@ -774,7 +774,7 @@ all customers who have overdue invoices, and a list of customers with open estim
 In the new experience, you will find the the customer list in the Customer Hub.
 The Customers tab also allows you to manage your customer list, including adding new customers, editing existing customers.
 You can view a customers contact details, plus their current open balance.
------
+------
 Overview of setup tasks
 The setup tasks will get your client up and running using the Sales center. Remember, it’s worth revisiting these tasks for a 
 client once in a while as their business develops and grows. You may need to make some changes so that their QuickBooks 
@@ -956,9 +956,148 @@ transactions will make it easier to troubleshoot the account later on, if requir
 
 If a client uses QuickBooks Payments to receive payments from customers, they can also store card details in the Additional info 
 section.
+--
+Detailed customer information helps to reduce the risk of errors or discrepancies in the client’s accounts. When records are 
+inaccurate, the consequences can be wide-ranging. For example, it could result in entering duplicate customers, sending payments 
+to the wrong address, extending terms to the wrong people, invoicing or billing a client because of the wrong information, not 
+charging sales tax when it should be charged, or losing the certificate when requested by a taxing authority.
+
+With thorough customer data, your client can develop targeted marketing strategies and personalized promotions to better serve 
+their customers and improve sales.
+---
+Merging contacts and making customers inactive
+There may be times when you need to merge contacts to keep records accurate. For example, the same customer may have accidentally 
+been added twice: once by their own name, Cynthia Lozano, and once by their company name, Lozano Consulting and Training. These 
+two records would need to be consolidated.
+
+There may be other times when you’d like to take a customer out of the records to help maintain a clean customer list like a 
+customer who hasn’t made a purchase in the last 18 months, for example. Although you can’t remove all of a customer’s data from 
+QuickBooks, you can make a customer inactive. To do this, go to the Customers list, find the customer, and select Inactive in 
+the Action column.
+
+You should only make a customer inactive if their balance is zero. If you make a customer with an outstanding balance inactive, 
+QuickBooks will create an adjusting transaction to zero out the balance, but this may not be the result you want. It’s best to 
+zero out the accounts receivable of a customer before making them inactive.
+
+When merging customers, you inactivate the customer you’re merging data from and move their transaction data to the customer 
+you’re merging to. You can still view details of the inactivated merged customer if you choose to display inactive customers 
+in the customer list.
+---
+Customizing sales forms
+Let’s now look at the third setup task for sales and customers: customizing sales form styles. You can choose to customize 
+estimates, invoices, and sales receipts. To access this feature, select the General settings gear, top right of the screen, and 
+then Custom form styles.
+
+There are three parts to customization: design, content, and email. 
+
+You can create custom fields for invoices, sales receipts, refund receipts, estimates, credit notes, and purchase orders. This 
+gives you the flexibility to add custom data and drive insights through detailed reports.
+---
+Adjusting options in the account and settings (the third setup task for sales and customers)
+Access this area from the General settings gear, top right of the screen. Select Account and Settings.
+---
+Progress invoicing is when you invoice a customer in stages based on the percentage of work completed of the total due. 
+It’s available on QuickBooks Plus and Advanced plans.
+---
+Set up sales settings
+---
+Practice Questions
+Which of the following statements about managing customers are TRUE?
+1. You can merge duplicate customer records in QuickBooks.
+2. Inactive customers can be reactivated at any time.
+3. QuickBooks automatically removes all data for a customer when they are made inactive.
+4. You can customize the information displayed on customer statements.
+5. You can add multiple customers via .csv file
+6. If you make a customer with an outstanding balance inactive, QuickBooks will create an adjusting transaction to zero 
+out the balance
+7. You can only merge customers with the same name.
+8. When you merge two customers, you inactivate the customer you’re merging data from and their transaction data moves 
+to the customer you’re merging to.
+---
+Summing up
+Be sure the Products and services list is set up to best support your client’s business. And remember, it doesn’t just include 
+physical items sold or services delivered. It can also include items such as donations and discounts.
+
+Complete and accurate customer data can help boost efficiency in your client’s business operations. It can also fuel growth, 
+especially when paired with MailChimp or other marketing tools, as it allows your client to develop targeted marketing strategies 
+and personalized promotions to better serve their customers and improve sales.
+
+Tailoring the Account and settings to your client’s needs will help them get the most from their QuickBooks accounting software. 
+Remember to revisit these settings every so often as your client’s business develops.
+---
+Course_Notes_Search_Bin_SalesAndCustomers
+
+Adjusting options in the account and settings
+Access this area from the General settings gear, top right of the screen. It’s the first option in the Your company column.
+Let’s start with the Sales tab on the left, and look at the section covering Sales form content. This part dictates what appears by default on all sales forms. 
+
+Preferred invoice terms sets the default payment date. Net 30 means payment is due 30 days from the date on the invoice.
+
+Preferred delivery method default determines how sales forms are delivered to newly created customers. The options are to Print later, Send later, or None. Choosing to print or send later means you can batch them and review them altogether. This can help to reduce errors and streamline workflows.
+
+You can change the default delivery method for a customer by editing the customer on the customer list. You can also change the delivery method when you create individual invoices or other sales forms.
+
+Shipping adds shipping-related fields to sales forms: date, tracking number, destination, subtotal to sales forms. 
+
+If you want Custom fields to appear as default on sales forms, go to Settings, then Lists, and then Custom fields.
+
+Custom transaction numbers lets you view and change the sales transaction numbers, rather than allowing QuickBooks to automatically assign numbers.
+
+Enabling Service date adds a field if you need to track the date a service was performed separately from the invoice date.
+
+Enabling Discount adds a field to invoices and other sales forms to enable discounts to be added.
+
+Enabling Deposit adds a field to invoices so you can subtract a customer deposit from the total to calculate the balance due.
+
+If your client wants to Accept tips from their customers on sales receipts and invoices, they can enable it here. This is a default setting that will apply to all future invoices.
+
+Financing
+With the Customer financing option enabled, when a client sends an estimate of more than $1,000, their customer will see a financing option powered by Intuit Credit Karma. Financing options are only shown to individuals, not to business customers, but we’re working to bring business financing options into QuickBooks.
+There’s no cost to your client. Their customer pays a competitive annual percentage rate (APR) to the lender they select. This is based on credit approval via Credit Karma.
+Note that this setting is at the company level, so it can’t be controlled on a transaction-by-transaction basis.
+
+Products and services section
+Next up, the Products and services section.
+
+Here you can choose to Show Product/Service column on sales forms so you can choose from a list of products and services to include. Turning off this option will also turn off:
+Show items table on expense and purchase forms
+Use purchase orders
+Track inventory quantity on hand
+You can also choose to Show SKU column. A SKU is a stock keeping unit, also called an item number. It’s unique and has up to 100 alphanumeric characters that you can assign to a product. You can use the SKU to quickly search for or identify an item.
+Enabling price rules means your client can provide discounts for specific products to certain customers for a specified amount of time. This is covered in the QuickBooks Online Certification Level 2.
+
+By enabling Track quantity and price/rate you're adding Quantity and Rate fields to sales forms so you can track this information for products and services.
+
+Enabling Track inventory quantity on hand is how you turn on inventory tracking for Plus and Advanced plans. QuickBooks always considers the first items a client purchases as the first items they sell. In other words, the costing method for inventory in QuickBooks is First In First Out (FIFO).
+
+Messages Section
+The Messages section is where you can adjust the content of default emails that are sent out with invoices, estimates, credit memos, sales receipts, statements, and refund receipts. You can modify these emails at the time you send them. Note that you can replace these emails for estimates, invoices, and sales receipts by setting up templates when you customize form styles, as you just saw in the previous setup task.
+Reminders
+QuickBooks can be set up to automatically send reminders to customers when invoices are, or will soon be, overdue. The Reminders section is where you can adjust the content, number, and frequency of reminder emails sent for open invoices. You can see when reminders were sent by going to the Sales center and then All sales. QuickBooks adds Reminded in the Status column for invoices that have been sent a reminder.
+Online delivery
+Online delivery is where you adjust the defaults for how sales forms are sent, such as whether they’re attached as a PDF to the email. Note that you can replace these defaults for estimates, invoices, and sales receipts by setting up templates when you customize form styles, as you just saw in the previous setup task.
+Statements
+The final section on the Sales tab relates to the details you can include and adjust on a customer statement, such as the amounts owed and by how many days they’re overdue.
+Automation settings
+Another tab to check is the Advanced (or global) settings, specifically Automation. Selections made here will affect all transactions, not just those relating to sales.
+
+Do you want to Pre-fill forms with previously entered content? This automatically fills various fields of the form, based on the last saved transaction for that customer, vendor, or employee. 
+
+Do you want to Automatically apply credits to the next invoice you create for the same customer? Most companies turn on this setting, but it’s not appropriate for all. For example, a credit to a customer for a prepayment and your client wants to choose when to apply it.
+
+Do you want to Automatically invoice unbilled activity? Enabling this displays notifications in the Activity feed on the Home page.
+
+Introducing the money-in workflow
 
 
 
+
+Create an invoice directly froman estimate to automatically transfer details and link the transactions in your records.
+Converting an estimate into an invoice saves time by filling in the invoice with information from the original estimate. This 
+process links the two transactions, ensuring your books remain accurate.
+
+If you request a deposit on an estimate, it becomes available to convert to an invoice once your customer pays the deposit and 
+accepts the estimate.
 --------------------------------------------------------
 Certifications_Info_For_Bookkeepers
 
