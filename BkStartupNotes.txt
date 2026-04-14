@@ -503,7 +503,6 @@ Display settings (cash vs accrual, summarize vs detail)
 By setting these up ahead of time, you can save significant time during your period-end reviews and ensure consistency in the 
 reports you generate for your clients.
 
-
 Light-touch advisory moments. These are the moments where you can have an outsized impact on your clients by sharing 
 insights based on pairing your expertise of the QuickBooks platform with your knowledge as an accounting pro. When it 
 comes to light-touch advisory moments, there are four key themes. These include recommending the best possible integrations, 
@@ -572,8 +571,8 @@ figures match.
 If the Accounts Receivable Aging Summary Report shows credit balances, check to see why. It could be that the client owes their 
 customer money, or the customer has paid for a product or service but hasn’t been invoiced.
 
-If there are any invoices that need chasing down (you can change the date range on the A/R Aging Summary Report to see if any 
-invoices have been paid since period end to see if this is necessary).
+If there are any invoices that need chasing down you can change the date range on the A/R Aging Summary Report to see if any 
+invoices have been paid since period end to see if chasing down the invoices is necessary.
 
 If there is anything in the report that has remained unpaid for a long time, it might be a good idea to discuss with the client 
 how to handle it. If it’s considered that the amount will never be paid, leaving it in accounts receivable will mean the client’s 
@@ -675,7 +674,7 @@ Correct: Option 4, any unpaid bills from the period.
 -Ref: The Outstanding Transactions section lists all transactions that were recorded in QuickBooks but did NOT clear 
 the bank for the period you’re reviewing.
 
-X If a client uses a accrual basis accounting and records a customer payment via the receive payment screen without applying it 
+X If a client uses a accrual-basis accounting and records a customer payment via the receive payment screen without applying it 
 to an invoice, how will it show up on a cash basis profit and loss report? 
 Option 1, sales. 
 Correct: Option 2, unapplied cash payment income. 
@@ -775,6 +774,190 @@ all customers who have overdue invoices, and a list of customers with open estim
 In the new experience, you will find the the customer list in the Customer Hub.
 The Customers tab also allows you to manage your customer list, including adding new customers, editing existing customers.
 You can view a customers contact details, plus their current open balance.
+-----
+Overview of setup tasks
+The setup tasks will get your client up and running using the Sales center. Remember, it’s worth revisiting these tasks for a 
+client once in a while as their business develops and grows. You may need to make some changes so that their QuickBooks 
+accounting software is always best aligned to their business.
+
+There are five key tasks in the setup workflow for sales and customers: 
+
+1. Managing the products and services list
+Your clients may sell products, services, or both. The products and services list in QuickBooks contains details of the items 
+that a client sells to their customers. Every interaction with a customer should involve a product or service, so that’s why 
+it’s a good idea to start with this list during the setup process. As clients add new products and services—or discontinue them, 
+this list needs to be kept up to date.
+
+Some clients might be nonprofit organizations that receive donations, or for-profit organizations that sell goods. Whichever way 
+they generate income, clients need to keep track of their products, services, and activities. To do this, create items in the 
+Products and services list to track sales and allocate them to the appropriate category in the chart of accounts to report their 
+income.
+
+2. Managing the customers list
+The customers list is the one-stop shop for managing customer details. Here you can add, edit, and remove customer information. 
+You can also save preferences and upload specific documents related to customers.
+
+3. Customizing sales forms
+QuickBooks sales forms can be used straight out of the box. But for clients wanting something more tailored, customizing is key. 
+Estimates, invoices, and sales receipts can be adjusted to display specific info, and how they look can also be changed.
+
+4. Customizing a client’s account by adjusting settings
+Account and settings is the control center for account preferences and configurations. It’s where you can modify the settings 
+that relate to sales to suit your client’s specific business needs and preferences.
+
+5. Setting up recurring transactions
+Recurring transactions are a great way to automate regular billing and save time. QuickBooks allows you to set up recurring 
+invoices, sales receipts, and other transactions to be created automatically at specified intervals. This is particularly 
+useful for clients with subscription-based services or ongoing contracts.
+--
+Standard Item Types
+The first step in adding a new item to the products and services list is to select the appropriate item type. Here’s a summary 
+of the different types of items to add to the products and services list.
+
+1) Inventory are items that are bought and sold, and their quantities on hand are tracked. Clients must be subscribed to a 
+QuickBooks Plus or Advanced plan to use the inventory feature.
+
+2) Non-inventory items are also bought and sold, but without tracking their quantities on hand. For example, small parts used to 
+install or deliver a product.
+
+3) Service items provided to your client’s customers can be one-time, recurring, or fixed-fee.
+
+4) A Bundle is a collection of products and services items that are sold together—the bundle is a standalone item. For example, 
+a package that includes an exterior door and a security lock, or a product installation that includes both labor and materials. 
+Each item remains listed individually, but when a sale of a bundle is made, a sale of each item is recorded.
+--
+Beyond Standard Item Types
+Items in the products and services list can be more than just actual products sold or services delivered. For example, a 
+write-off of a customer balance could use an item code called Bad debt, or a discount could be an item to reduce a customer's 
+invoice. Think of non-standard products and services list items as the way to organize all transactions with customers.
+
+Adding a new item to the Products and services list.
+When you have selected the item type you would like to add to the Products and services list, the Product/Service information 
+panel will appear. Let’s explore the details needed to add a new service using the Product/Service information panel.
+
+Name and SKU
+The Name field is required and is the name of the item as it will appear on sales forms. Entering the item name and SKU 
+(stock keeping unit) is straightforward. Your client could use a SKU that is unique to their business rather than the 
+manufacturer’s SKU. Another option is to use the Name as the internal code, and the SKU as the manufacturer's number 
+(assuming one manufacturer or a standard SKU, such as a book’s ISBN).
+
+Category
+Product categories enable the grouping of items of the same type. For example, if your client has a retail business selling 
+hiking gear, they may want to create separate product categories for hiking boots, backpacks, and tents. Categories help you 
+and your client easily find products or services. They’re also very useful when running sales and inventory reports, as they 
+make it easy to compare and explore data by product category.
+From the Category field, you can either assign the item to an existing category or create a new one. You can also create 
+sub-categories in the Products and services tab, by selecting the More button, then Manage categories.
+
+Description and Sales price/rate
+The I sell this product/service to my customers box is checked by default. If you leave it checked, you’ll need to fill in the 
+following details:
+1) Which income account in the chart of accounts will be credited when sales for this item are generated.
+
+2) The sales tax rate for the item.
+
+3) The Description and Sales price/rate are optional, but can save time as they automatically populate the corresponding fields 
+in any estimate, sales receipt, invoice, or credit memo generated for the product or service. 
+You or your client can still change these at the time of the transaction entry, and in the case of Sales price/rate you can also 
+use price rules.
+
+Sales Tax
+For clients who manage sales tax in QuickBooks, it’s calculated using the standard rate by default. When you add a new taxable 
+product or service, it calculates the sales tax based on the seller’s (that is, the client’s) location. It can be changed to a 
+custom rate or marked as nontaxable, if applicable. 
+
+Purchasing Information
+Clients on a QuickBooks Plus or Advanced plan can include extra information about products or services they purchase from vendors. 
+If you select the "I purchase this product/service from a vendor" checkbox, you must choose the expense account to be debited in 
+the chart of accounts when the item is added to a purchase transaction.
+
+An example of a service item that the client purchases from a vendor but also sells to a customer, is a landscape designer using 
+a contracted landscaper to provide landscaping services to a customer.
+
+To make generating expense transactions for the product or service easier, it’s optional to include:
+A description of the item—this should be a clear explanation, and it can be changed at the time of the transaction entry.
+The item cost, which is the default cost, can be overridden at the time of the transaction entry.
+The preferred vendor, if they have one, can be changed at the time of purchase.
+--
+Using product and service categories
+Helping your clients understand how products and services work in QuickBooks is a vital part of helping them get the most out 
+of their accounting software. Setting up products and services in a way that best fits their business and encouraging your 
+clients into good habits when managing them, means they’ll have a great dataset to pull meaningful reports from.
+
+Product and Service categories provide an extra dimension of data. Using Product and Service categories helps group products 
+and services in a way that makes sense to your client when running sales or stock reports. This can give clients more actionable 
+insights and information. Without categories, the reports can be less useful.
+
+When viewing sales or inventory reports, you can expand or collapse each category, making it easy to digest and have quick to find details of 
+specific items. Grouping also gives clients a clearer picture of their sales as it is easy to see what types of services are 
+popular, and the total for each category shows where the majority of sales come from.
+---
+Managing the customers list
+The customers list shows the name and contact details of each customer, along with their current open balance—that is, the amount 
+they owe your client’s business, both within the payment terms and any overdue balances. The customers list is the one-stop shop 
+for managing customer details. Here you can add, edit, and remove customer information.
+
+When customers are added to QuickBooks they can be assigned a customer type.  Selecting the Customer types button opens a screen 
+that lists all the different customer types that have been set up and enables you to create new types. You can use these to group 
+customers into different segments, such as retail customers and wholesale customers. Business owners may find it insightful to 
+see reports that give a snapshot of sales by customers by type, for example.
+
+The money bar on the Customers list runs horizontally across the screen. In this tab, it represents recent customer activity. It 
+shows information about estimates, unbilled income, overdue invoices, open invoices and credits, and recently paid activity. You 
+can select any segment of the bar to filter the customers listed below.
+---
+Adding a customer
+Use the fields in the Name and contact section to enter the specific details for the customer. If the customer is a company, 
+enter the company name as well. If the individual’s name and Company name of a customer are added, use the Customer display 
+name dropdown to select the preferred name.
+
+A customer name must be unique. It can not be the same as another customer, vendor, or employee. If a client deals with a 
+business who is both a customer and a vendor — for example, a landscaping company buys products from a store and they provide 
+gardening services to that same store, they must be added twice, once as a customer and once as a vendor. You could differentiate 
+by entering the store name and appending a [V] for vendore and a [C] for customer. 
+
+Checks might be written to a customer when giving them a refund. By default, what appears in the Name to print on checks field is 
+the Customer display name. To change it, enter the preferred name. 
+
+Check the Is a sub-customer box to make the customer a sub-customer. An example of a sub-customer could be a division within a 
+company or a department within a university.
+
+As you enter text into the Company name field, a list of QuickBooks Business Network members will be suggested. This lets you 
+connect with your customers and vendors. By connecting, you can send invoices to your customers through the network, and 
+receive bills from your vendors directly in QuickBooks. 
+
+From your network profile page, you can add a network wallet and, if approved, become a payable network member. This means 
+that if your customer is a network member with QuickBooks Bill Pay, they can pay your invoices without sharing payment 
+information.
+
+By connecting to customers via the business network, their contact info will stay up to date if they make changes in their 
+QuickBooks. These automation tools help you streamline workflows, better predict cash flow, and reduce manual entry tasks.
+
+Use the Notes and attachments section to enter notes about customers, such as products, collection information, or purchase 
+order numbers. These notes are not shared with the customer.
+
+Attachments is a useful feature as it securely stores files. It’s good for things like resale certificates, contract agreements, 
+insurance, and payment authorization forms. Note: Resale certificates are required for tax-exempt sales to customers who will 
+resell the products.
+
+Use the Payments section to set up preferences for payment method, payment terms, preferred sales form delivery method, language, 
+and credit limit. They then appear on all future invoices, unless changed or removed.
+
+In the Additional info section,
+Use the Customer type dropdown to group customers into different segments, for example, retail and wholesale. This can be 
+helpful to clients when reporting on sales and customers. In the Taxes section, use the Exemption details field to store the 
+customer’s resale certificate number, if your client doesn’t need to charge this customer sales tax. If the customer should be 
+charged sales tax, check the "This customer is taxable" box and choose the default tax code from the dropdown.
+
+In almost all cases, you should leave the Opening balance field empty. Only enter an amount and date here if you’re adding a 
+customer the client has already done business with—and who has an existing beginning balance. However, in this situation, it’s 
+better to leave this blank and enter the actual transactions that make up the customer’s balance. Entering the individual 
+transactions will make it easier to troubleshoot the account later on, if required.
+
+If a client uses QuickBooks Payments to receive payments from customers, they can also store card details in the Additional info 
+section.
+
+
 
 --------------------------------------------------------
 Certifications_Info_For_Bookkeepers
