@@ -29,7 +29,9 @@ Study_Plan
 Think_ahead
 
 *notrrc is the code for "Not Recorded".
-
+****************************************************
+Recorded to here within this section.
+****************************************************
 --------------------------------------------------------
 Bookkeeping_Job_Advice
 
@@ -830,10 +832,13 @@ Beyond Standard Item Types
 Items in the products and services list can be more than just actual products sold or services delivered. For example, a 
 write-off of a customer balance could use an item code called Bad debt, or a discount could be an item to reduce a customer's 
 invoice. Think of non-standard products and services list items as the way to organize all transactions with customers.
-
+---
 Adding a new item to the Products and services list.
 When you have selected the item type you would like to add to the Products and services list, the Product/Service information 
-panel will appear. Let’s explore the details needed to add a new service using the Product/Service information panel.
+panel will appear. 
+
+---
+Let’s explore the details needed to add a new service using the Product/Service information panel.
 
 Name and SKU
 The Name field is required and is the name of the item as it will appear on sales forms. Entering the item name and SKU 
@@ -863,8 +868,10 @@ use price rules.
 
 Sales Tax
 For clients who manage sales tax in QuickBooks, it’s calculated using the standard rate by default. When you add a new taxable 
-product or service, it calculates the sales tax based on the seller’s (that is, the client’s) location. It can be changed to a 
-custom rate or marked as nontaxable, if applicable. 
+product or service, QuickBooks calculates the sales tax based on the seller’s (that is, the client’s) location. It can be 
+changed to a custom rate or marked as nontaxable, if applicable. 
+
+* Still referring to Product/Service information panel
 
 Purchasing Information
 Clients on a QuickBooks Plus or Advanced plan can include extra information about products or services they purchase from vendors. 
@@ -879,6 +886,9 @@ A description of the item—this should be a clear explanation, and it can be ch
 The item cost, which is the default cost, can be overridden at the time of the transaction entry.
 The preferred vendor, if they have one, can be changed at the time of purchase.
 --
+****************************************************
+Recorded to here within this section. 04/15
+****************************************************
 Using product and service categories
 Helping your clients understand how products and services work in QuickBooks is a vital part of helping them get the most out 
 of their accounting software. Setting up products and services in a way that best fits their business and encouraging your 
@@ -888,9 +898,9 @@ Product and Service categories provide an extra dimension of data. Using Product
 and services in a way that makes sense to your client when running sales or stock reports. This can give clients more actionable 
 insights and information. Without categories, the reports can be less useful.
 
-When viewing sales or inventory reports, you can expand or collapse each category, making it easy to digest and have quick to find details of 
-specific items. Grouping also gives clients a clearer picture of their sales as it is easy to see what types of services are 
-popular, and the total for each category shows where the majority of sales come from.
+When viewing sales or inventory reports, you can expand or collapse each category, making it easy to digest and have quick to 
+find details of specific items. Grouping also gives clients a clearer picture of their sales as it is easy to see what types 
+of services are popular, and the total for each category shows where the majority of sales come from.
 ---
 Managing the customers list
 The customers list shows the name and contact details of each customer, along with their current open balance—that is, the amount 
@@ -1003,10 +1013,10 @@ Set up sales settings
 ---
 Practice Questions
 Which of the following statements about managing customers are TRUE?
+*All these are true.
 1. You can merge duplicate customer records in QuickBooks.
 2. Inactive customers can be reactivated at any time.
-3. QuickBooks automatically removes all data for a customer when they are made inactive.
-4. You can customize the information displayed on customer statements.
+4. You can customize the information displayed on customer statements. Statements are semi-customizable, not fully customizable.
 5. You can add multiple customers via .csv file
 6. If you make a customer with an outstanding balance inactive, QuickBooks will create an adjusting transaction to zero 
 out the balance
@@ -1024,7 +1034,69 @@ and personalized promotions to better serve their customers and improve sales.
 
 Tailoring the Account and settings to your client’s needs will help them get the most from their QuickBooks accounting software. 
 Remember to revisit these settings every so often as your client’s business develops.
----
+****************************************************
+Recorded to here within this section. parts 1 and 2  04/15
+****************************************************
+
+FREQUENT TASKS - Explore the tasks likely to be done daily or weekly for sales and customers.
+
+An invoice is issued to a customer to request payment for products or services provided. It’s a formal record of a sales 
+transaction and outlines the terms of payment, including the amount due, payment due date, and any applicable discounts or terms.
+
+When a customer accepts an estimate, it can be converted to an invoice in QuickBooks. Clients subscribed to QuickBooks Plus and 
+Advanced plans can use estimates to create purchase orders too.
+
+
+An invoice is issued to a customer to request payment for products or services provided. It’s a formal record of a sales 
+transaction and outlines the terms of payment, including the amount due, payment due date, and any applicable discounts or terms. 
+Invoices play a crucial role in managing accounts receivable and tracking sales. They help clients keep track of outstanding 
+payments, monitor cash flow, and maintain accurate financial records.
+
+When your client receives payment for the invoice, it needs to be recorded using the Receive payment feature.
+
+Unlike an invoice, a sales receipt is used to record a sale when payment for a product or service is made at the same time as 
+the sale. Sales receipts are crucial for tracking revenue and recording sales in QuickBooks. 
+
+Receive payment is used only to record payments of invoices. Keep in mind a few things:
+First, when a client receives payment for an invoice, it has to be applied to the correct invoice already recorded in QuickBooks.
+Next, if the client receives a payment from a customer but doesn’t deposit it into their bank account immediately, the 
+Undeposited Funds account in QuickBooks (sometimes called Payments to Deposit) is how to keep track of those payments until the 
+client deposits them.
+Finally, if your client uses QuickBooks Payments, transactions automatically sync with records in QuickBooks, meaning the 
+workflow is much more streamlined.
+
+Recording noncustomer deposits
+Your client may receive a deposit that isn’t related to a customer transaction, such as vendor or tax agency refunds, cash 
+contributions from owners, or proceeds from loans.
+Although they’re not directly part of the sales and customers workflow, they’re included here so you can record them accurately, 
+combine them with customer payments into a deposit, and code them to the right account—and not confuse them with sales income.
+
+It is critical that every transaction recorded for a customer involves one of the sales forms—estimate, invoice, sales receipt, 
+credit memo, or refund receipt.
+
+When a customer transaction uses a sales form, QuickBooks automatically updates the customer record with the details of every 
+transaction and feeds the transaction data into the sales reports. This can happen when sales forms include product or service 
+item codes.
+
+When an estimate is created in QuickBooks, you can track the transaction’s progress. 
+Estimates are nonaccounting transactions (sometimes called nonposting transactions). This means they aren’t recorded in any general ledger accounts, and don't affect account balances. As a result, they won’t appear in financial statements like the profit and loss or balance sheet. They do appear in the details for the customer that they apply to.
+Clients who have created at least one estimate, will see the Estimates tab in the Sales center, which is where you can create, view, and manage customer estimates. Otherwise, begin at the +New button.
+
+Clients can convert the estimate to an invoice. Using estimates in this way as part of the sales workflow saves time and eliminates human error.
+Once it becomes an invoice, QuickBooks automatically marks the estimate as Converted and Closed in the Sales center, even if only partial quantities are added to the invoice.
+
+When filling out an invoice you can upload an existing file such as a PDF, an image of handwritten notes or a text file.
+When filling out an invoice you can select the Intuit Assist icon next to the customer's name. It will display insight into that
+customer's activity. When the customer is a late payer, recommended actions are displayed, such as setting up late fees or 
+updating the payment terms.
+
+When a client creates an invoice, it is auto recorded as income and an entry is entered into the accunts receivable account. When 
+the client receives payment, they close the receivable and record the money as deposited into the bank.
+
+
+**** Left off at "A more powerful QuickBooks: the Payments Agent" on page 3 of 6
+
+------
 Course_Notes_Search_Bin_SalesAndCustomers
 
 Adjusting options in the account and settings
@@ -1088,9 +1160,6 @@ Do you want to Automatically apply credits to the next invoice you create for th
 Do you want to Automatically invoice unbilled activity? Enabling this displays notifications in the Activity feed on the Home page.
 
 Introducing the money-in workflow
-
-
-
 
 Create an invoice directly froman estimate to automatically transfer details and link the transactions in your records.
 Converting an estimate into an invoice saves time by filling in the invoice with information from the original estimate. This 

@@ -246,6 +246,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{FAF28F21-FA21-40AB-8A19-E03A04EFF37A}"
 	ProjectSection(SolutionItems) = preProject
 		AccountingEquation.docx = AccountingEquation.docx
+		SalesExpensesWorkflow.pdf = SalesExpensesWorkflow.pdf
 	EndProjectSection
 EndProject
 Global
