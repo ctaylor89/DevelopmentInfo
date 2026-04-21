@@ -1093,9 +1093,138 @@ updating the payment terms.
 When a client creates an invoice, it is auto recorded as income and an entry is entered into the accunts receivable account. When 
 the client receives payment, they close the receivable and record the money as deposited into the bank.
 
+Clients usually issue a sales receipt when customers pay for a product or service at the time of the sale. When a client creates 
+a sales receipt in QuickBooks, it increases income and makes an entry in a bank account because payment is already included in 
+the transaction.
 
-**** Left off at "A more powerful QuickBooks: the Payments Agent" on page 3 of 6
+Note that unlike invoices, when recording a sale via a sales receipt, the sale and payment are recorded at the same time, so 
+there’s no need to receive payment in the same way as with invoices, making the process more efficient.
 
+In QuickBooks Online Advanced, you can import multiple sales receipts using Batch transactions and Import via CSV. This helps 
+you to add multiple sales receipts all at once. For multiple sales receipts, use the Import via CSV option. This lets you 
+automatically add sales receipts at once. 
+
+Receiving payment. When a customer pays an open invoice, the client needs to record the payment and apply it to the invoice. 
+There are a number of ways to access the Receive payment screen for an invoice payment:
+	Find the invoice in the Sales center and select Receive payment
+	Find the customer in the Sales center and select Receive payment next to the relevant invoice
+	From the +Create button, select Receive payment. Note: Could also be the +New Button
+
+The sale will then appear under Sales transactions which is under Sales & Get Paid. Then if you click on details, it will show 
+you where the proceeds were deposited. The default is Undeposited Funds, but can be Checking, Savings, Inventory Asset, Prepaid 
+Expenses, Uncategorized Asset. 
+
+Using the Undeposited Funds account (sometimes called Payments to Deposit) is the best way to keep track of payments until 
+they’re deposited in the bank. Using it consistently is key. Getting clients into the habit of always using the Undeposited 
+Funds account when recording payments saves a lot of headaches later.
+
+Using the Undeposited Funds account is also covered in the QuickBooks Online Certification Level 1: Banking course, because 
+banking is where you see the output of tasks done here.
+--
+Using the Undeposited Funds account process:
+
+1) Record the sale in QuickBooks
+Clients use invoices or sales receipts to record sales transactions in QuickBooks.
+
+2) Collect the payment
+Outside of QuickBooks, your client collects a payment by cash, check, or credit card (not using QuickBooks Payments).
+The client does not deposit the cash or check into the bank immediately, they hold onto it until the weekly trip to the bank, 
+for example.
+
+Or for a credit card payment, there may be a delay of a few days before it clears the bank. (If several payments are run through 
+a credit card processor in a single day, they may be aggregated into a single deposit in the bank account.)
+
+3) Record the payment in QuickBooks
+Record the payment in QuickBooks either via Sales receipt or by Receiving payment for an invoice, and allocate to it the 
+Undeposited Funds account. This temporary holding account tracks payments your client receives from customers that aren’t yet 
+deposited at the bank. Recording these payments in Undeposited Funds is like making a note of money you’ve put in a safe.
+
+Recording that you’ve received payment for an invoice: 
+	Increases (debits) the Undeposited Funds account
+	Decreases (credits) the Accounts Receivable account
+
+Recording that you’ve received payment via a sales receipt:
+	Increases (debits) the Undeposited Funds account
+	Increases (credits) the Sales account
+
+4) Make the deposit at the bank
+Your client deposits the payments at their bank and it’s likely that they'll fill out a deposit slip, stating the total amount 
+deposited.
+
+5) Record the bank deposit in QuickBooks
+When your client deposits the payments at the bank, this should be recorded in QuickBooks.
+Holding payments received in the Undeposited Funds account until they’re deposited lets you record a single Bank deposit in 
+QuickBooks for these multiple payments. This makes it easier to match the deposit to the transaction that clears the bank 
+and comes into QuickBooks via the bank feed.
+
+When the bank deposit is recorded in QuickBooks, it:
+	Increases (debits) the bank account
+	Decreases (credits) the Undeposited Funds account
+
+6) Deposit transaction comes in via bank feed
+When a client’s bank account is connected to QuickBooks, bank transactions come in via the bank feed, ready to match them to 
+existing records in QuickBooks, or to categorize them if there’s no record.
+
+Because the payments have been grouped together and deposited at the bank as a single deposit, the bank feed shows the total 
+deposit amount.
+
+Match bank feed transaction with deposit record
+When the bank feed transaction is matched with the bank deposit recorded in QuickBooks, the register updates accordingly ready 
+for month-end reconciliation.
+--
+Record payments you haven’t deposited at your bank in your Undeposited Funds account. Once you’ve deposited at least two or more 
+payments, you can record them as a single deposit to another account.
+You only need to use the Undeposited Funds account account if:
+* You’re depositing more than one payment at a time at your bank. If not, you can record the payment directly in another account.
+* You haven’t connected your bank and credit card accounts to QuickBooks, so QuickBooks doesn’t have your bank info.
+* If your invoice payments aren’t being processed with QuickBooks Payments. 
+
+QuickBooks takes care of invoice payments processed with QuickBooks Payments for you. No need to put these in Undeposited Funds.
+Best practice is to always use Undeposited Funds.
+--
+When clients use QuickBooks Payments, customer deposits are a breeze—essentially payment and accounting happen at the same time, 
+eliminating manual entries.
+
+Clients can add links to invoices so customers can pay online with PayPal, Venmo, credit card, or ACH bank transfer—just by 
+following the link in the email. Payments can also be processed in person or over the phone. Once a payment is made, everything 
+is entered inside QuickBooks automatically:
+	Payment is recorded in QuickBooks
+	Deposited into the bank account and automatically matched to the deposit when it clears the bank
+	Transaction fees are recorded and properly categorized
+--
+Recording noncustomer deposits
+Let’s look at the final task in this workflow. Clients sometimes receive deposits that aren’t related to customer transactions, 
+such as vendor or tax agency refunds, cash contributions from owners, or proceeds from loans. These need to be recorded 
+accurately so that they’re not confused with sales income, which shows on sales reports.
+
+Because these deposit transactions aren’t income and don’t relate to customers, don’t use sales forms to record them. Use the 
+Bank deposit feature to record and categorize any money coming into the business that isn’t related to sales.
+
+Use the Bank deposits feature when:
+* Your client receives funds from loan proceeds or contributions of cash from owners.
+* Your client receives a refund from a vendor and wants to record it directly against the associated expense account. 
+* Your client receives a refund from a tax agency and needs to record it to reduce the tax liability or expense account.
+* An employee reimburses your client’s company, and your client needs to record the reimbursement against the employee loan 
+  receivable account.
+* Your client doesn’t record income using sales transactions (invoices or sales receipts) and wants to record deposits directly 
+  to income accounts. Generally this isn’t best practice, but there are exceptions—for example, a medical practice that uses 
+  medical billing software to keep track of their accounts receivable to stay compliant with privacy legislation, or an 
+  e-commerce store that doesn’t connect to QuickBooks.
+
+Generally you shouldn’t use Bank deposits to record sales as it doesn’t track individual sales. Doing so will lead to a lack 
+of meaningful information on sales reports; the client won’t be able to send their customers documentation, such as invoices or 
+sales receipts; and the transaction won’t show up in the customer’s activity log.
+
+Every transaction recorded for a customer should involve one of the sales forms. This ensures that customer records and sales 
+data are recorded accurately.
+
+Invoices are used to request payment from customers for products or services provided on credit, and sales receipts are used to 
+record sales and payments received at the time of the transaction.
+
+The Undeposited Funds account is a temporary holding account that tracks payments received from customers that have not been 
+deposited to your client’s bank account. When the payments are deposited at the bank, this should be recorded in QuickBooks.
+
+*End 3 of 6 parts of Sales and Customers
 ------
 Course_Notes_Search_Bin_SalesAndCustomers
 
@@ -3184,6 +3313,16 @@ financial activities.
 
 Owners equity changes on three main things: Revenue, Expenses, Dividends, and Owner’s Draws. When you record revenue, it increases 
 equity. When you record an expense, pay a dividend, or take an owner’s draw, it decreases equity.
+---
+Proceeds from a loan are the funds your business receives when you borrow money from a lender.
+It’s not income, it’s debt. The deposit represents cash coming in in exchange for a liability you now owe back.
+In accounting terms:
+	You increase your bank account (asset ↑)
+	You increase a loan payable account (liability ↑)
+
+When you record the deposit in QuickBooks (or any accounting system), you categorize it to something like:
+Loan Payable, Notes Payable, Line of Credit Payable
+
 
 *** End of Random_Notes_Accounting_Bookkeeping
 ---------------------------------------------------------------
