@@ -1225,6 +1225,173 @@ The Undeposited Funds account is a temporary holding account that tracks payment
 deposited to your client’s bank account. When the payments are deposited at the bank, this should be recorded in QuickBooks.
 
 *End 3 of 6 parts of Sales and Customers
+--
+*Start 4 of 6 parts of Sales and Customers
+
+OCCASIONAL TASKS
+Explore the tasks likely to be done on a monthly basis for sales and customers in Intuit QuickBooks.
+
+There are three key occasional tasks for sales and customers. Get an overview of each one here before diving into the details.
+
+1. Issuing customer statements
+A customer statement is a summary of a customer's account activity over a specific period of time. The customer statement 
+includes details such as invoices, payments, credits, and outstanding balances, allowing customers to review their transactions 
+and current account status. They are a valuable communication tool between a business and their customers, helping customers 
+stay informed about their financial obligations and facilitating timely payments.
+
+2. Issuing credit memos and customer refunds
+Clients may encounter situations where they complete a project sooner than expected, purchase more materials than they used, or 
+perhaps a customer has to return a faulty item. In these cases, the client may need to either refund all or part of a payment to 
+the customer, or issue them with a credit memo to use against a future sale.
+
+3. Using recurring sales transactions
+Recurring transactions makes it easy to set up regular transactions for automatic processing as templates. Recurring transactions 
+can be used even as a reminder to process a transaction. The most common transactions for customers are recurring invoices and 
+recurring sales receipts.
+--
+Issuing customer statements
+Clients who issue invoices may find it helpful to send customer statements on a regular basis—such as monthly or quarterly—to 
+keep their customers informed about their account activity. These statements can serve as gentle reminders about upcoming payment 
+deadlines and help with collections. They also provide a summary of the transaction history of the customer.
+
+There are three types of customer statements in QuickBooks.
+
+1) The Balance Forward statement shows a beginning balance, together with a list of sales transactions (including invoices, 
+payments, and credit memos) for a selected date range, plus a running balance.
+
+The Balance Forward statement is perfect for situations where a client wants to show activity during a specified time period, 
+together with a running balance of the total owed on their account.
+
+2) With the Open Item statement, it’s possible to produce a list of all open unpaid invoices from the last 365 days.
+This statement type is great for clients who want to provide details for the year of all unpaid invoices and open credit 
+memos—and possibly unapplied payments—to their customers.
+
+3) Use the Transaction Statement to show all sales receipts and invoices—and the total amount of payments applied to each 
+invoice—for a specified time period. Clients might use the Transaction Statement when there is a large volume of transactions 
+for a customer so they can see how their payments have been applied.
+--
+*A random note about invoices:
+When creating an invoice, there’s a Message on statement field where you can add memo text that will appear on statements 
+alongside the invoice number. This is a great place to add a note about the invoice, such as "Payment for landscaping services 
+in June." This can help customers understand what the invoice is for when they see it on their statement, which can encourage 
+timely payment and reduce confusion.
+--
+When a client needs to issue a refund to a customer, a client can do so by creating a Credit Memo or a Refund Receipt. A Credit 
+Memo is typically used to document a reduction in the amount owed by a customer or to add a credit to a future invoice. A Refund 
+Receipt is used to process a cash refund. Both options allow clients to effectively manage customer refunds and maintain accurate 
+financial records.
+
+If your client does not use invoices, the client can still issue  Credit Memos to their customers.
+
+Credit Memos are accounting transactions that can be applied to a customer’s invoice as part or full payment.
+Credit Memos do not refund the customer, so they are not a money-out transaction.
+Credit Memos reduce Accounts Receivable, but not Cash.
+
+Use Credit Memos when a client wants to provide a customer with a credit to be applied to an open or future invoice, not when 
+they want to issue an immediate refund.
+
+Think of a refund receipt as a reverse sales receipt. A sales receipt increases revenue and increases cash, a refund receipt 
+decreases revenue and decreases cash. Refund receipts can be used by all clients.
+
+Refund Receipts:
+Are money-out accounting transactions.
+Reduce the specified payment account and cash.
+Don’t affect Accounts Receivable.
+
+Use Refund Receipts when:
+A customer paid an invoice but decides to return the item or has decided that they don't want the service.
+
+Best practice for credit memos
+1) Why use a Credit Memo instead of just editing the transaction?
+When a client needs to issue a refund to a customer, best practice is to create a credit memo first, and then apply it to the
+customer’s next invoice. This way, the credit is applied to the customer’s account and reduces the amount they owe on their 
+next invoice. This is better than issuing a refund receipt because it keeps the credit on the customer’s account, which can be 
+helpful for future transactions. It also keeps the customer’s transaction history more accurate and complete, which can be 
+helpful for reporting and tracking purposes. This is especially true when the original invoice is in a prior period, because 
+making a change would cause the accounts in QuickBooks to become out of balance with the tax return and change previously 
+reported amounts.
+
+2) Why not just charge less on the next invoice?
+Charging less on the next invoice doesn’t give an accurate trail of what’s actually happened. Creating a new transaction in 
+QuickBooks for each exchange between the client and the customer is important. It gives clarity to the timing and sequence of 
+events with a customer. 
+
+Just charging less on the next invoice can also affect the timing and balances of sales tax liabilities and inventory movement 
+in and out of the company.
+
+3) What if a Credit Memo has been issued but the customer wants a refund instead of a credit?
+Void the credit memo and create a refund.
+
+Remember it was mentioned earlier that Products and Services items don’t have to be things that your client specifically sells?
+Credit Memos aren’t just for reimbursing clients, they can be issued at any time. For example, as part of a loyalty reward or 
+referral incentive program—or as a goodwill gesture. 
+
+If a client wants to set up a referral program, they can add a new Service item called "Thank You For Referring Us" that’s mapped 
+to a Discounts Income account. They can then use this new service item when they create the Credit Memo.
+
+When Automatically Apply Credits is configured to be on, QuickBooks automatically applies credits to the oldest open invoices 
+for the same customer, or if there are not any old invoices, apply the credit to the next invoice created for the same customer. 
+Most companies turn on the Automatically Apply Credits setting.
+--
+The final occasional task is about Recurring Transactions. Recurring Transactions can be created in many workflows including 
+sales receipts, invoices, bills, checks, deposits and expenses. In relation to sales and customers, Recurring Transactions are a 
+great way to automatically invoice customers for fixed fee billing for a service contract, such as accounting services and IT 
+services. The contract may be billed each month for 12 months, and so the sales receipts can be set up to process automatically 
+on the 1st of every month.
+
+A Recurring Transaction can be set up to occur on a scheduled or unscheduled basis, or as a reminder to send a transaction. Once 
+the parameters for the scheduled Recurring Transaction have been set up, QuickBooks will automate the process. An existing 
+Recurring Transaction can be used as a template for creating other Recurring Transactions.
+
+Recurring Transactions can be set up using three template types: scheduled, unscheduled, and reminder. You can access them from 
+the General settings gear at the top right of the screen.
+
+Use a Scheduled template to automatically create a Recurring Transaction at a set frequency or on set dates.
+For example, your client could automatically invoice customers for regular services provided at fixed prices, such as weekly 
+gardening services. 
+
+Recurring transactions and QuickBooks Payments
+For clients with QuickBooks Payments enabled, there are a couple of ways Recurring transactions and QuickBooks Payments can be 
+incorporated into a recurring model.
+
+1) Set up recurring sales Transactions
+Recurring invoices and sales receipts can have QuickBooks Payments enabled. Here are a couple of use cases.
+Case 1: With Autopay enabled, customers make payments for recurring invoices automatically. Customers can sign up and enter 
+their payment info through the invoice once, and their payments will process automatically for future recurring invoices.
+
+Case 2: A client creates a recurring scheduled sales receipt for a customer and selects the option that gives the client 
+permission to process the payment. The credit card or ACH info for the customer will already have been entered, so the Sales 
+Receipt serves two purposes:
+	The Sales Receipt charges the customer’s bank or credit card account.
+	The client sends the receipt to the customer automatically.
+
+2) Set up a recurring payment
+A recurring payment can be selected from the +New button for clients that have QuickBooks Payments enabled. Recurring payments 
+automatically charge your customers on a scheduled basis (daily, weekly, monthly, or annually). One-time fees, like initial setup 
+fees, can be added to the first charge. You select which payment methods to accept, including cards or ACH bank transfers. When 
+you create a recurring payment, your customer receives an email from QuickBooks to review the details. They enter their preferred 
+payment information and accept the recurring payment. They’re automatically charged on schedule every period and sent a receipt 
+for the payment by email.
+
+Keep an eye on recurring transactions
+It’s a good idea for your clients to regularly review their recurring transactions to avoid sending automated invoices for 
+canceled or delayed work.
+
+It’s important to note that a customer, vendor, a product or service, and an account can not be made inactive if it is being used 
+on a recurring transaction.
+--
+Info from practice questions
+A credit memo is the reverse of an invoice. An invoice acknowledges that a customer owes your client money, a credit memo 
+acknowledges that a customer has a credit on their account. Credit memos are accounting transactions that can be applied to a 
+customer’s invoice as part or full payment. They reduce accounts receivable, but not cash. They don’t refund the customer, so 
+they’re not a money-out transaction.
+
+A refund receipt is the opposite of a sales Receipt. A sales receipt increases revenue and increases cash, a refund receipt 
+decreases revenue and decreases cash. Sales Receipts are money-out accounting transactions. Sales Receipts reduce the specified 
+payment account and cash. Sales Receipts do not affect accounts receivable.
+
+*End of 4 of 6
+
 ------
 Course_Notes_Search_Bin_SalesAndCustomers
 
