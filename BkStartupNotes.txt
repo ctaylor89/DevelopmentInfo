@@ -886,9 +886,6 @@ A description of the item—this should be a clear explanation, and it can be ch
 The item cost, which is the default cost, can be overridden at the time of the transaction entry.
 The preferred vendor, if they have one, can be changed at the time of purchase.
 --
-****************************************************
-Recorded to here within this section. 04/15
-****************************************************
 Using product and service categories
 Helping your clients understand how products and services work in QuickBooks is a vital part of helping them get the most out 
 of their accounting software. Setting up products and services in a way that best fits their business and encouraging your 
@@ -1037,7 +1034,7 @@ Remember to revisit these settings every so often as your client’s business de
 ****************************************************
 Recorded to here within this section. parts 1 and 2  04/15
 ****************************************************
-
+* Start Recording here for part 3 of Sales and Customers.
 FREQUENT TASKS - Explore the tasks likely to be done daily or weekly for sales and customers.
 
 An invoice is issued to a customer to request payment for products or services provided. It’s a formal record of a sales 
@@ -1079,11 +1076,16 @@ transaction and feeds the transaction data into the sales reports. This can happ
 item codes.
 
 When an estimate is created in QuickBooks, you can track the transaction’s progress. 
-Estimates are nonaccounting transactions (sometimes called nonposting transactions). This means they aren’t recorded in any general ledger accounts, and don't affect account balances. As a result, they won’t appear in financial statements like the profit and loss or balance sheet. They do appear in the details for the customer that they apply to.
-Clients who have created at least one estimate, will see the Estimates tab in the Sales center, which is where you can create, view, and manage customer estimates. Otherwise, begin at the +New button.
+Estimates are nonaccounting transactions (sometimes called nonposting transactions). This means they aren’t recorded in any 
+general ledger accounts, and don't affect account balances. As a result, they won’t appear in financial statements like the 
+profit and loss or balance sheet. They do appear in the details for the customer that they apply to.
 
-Clients can convert the estimate to an invoice. Using estimates in this way as part of the sales workflow saves time and eliminates human error.
-Once it becomes an invoice, QuickBooks automatically marks the estimate as Converted and Closed in the Sales center, even if only partial quantities are added to the invoice.
+Clients who have created at least one estimate, will see the Estimates tab in the Sales center, which is where you can create, 
+view, and manage customer estimates. Otherwise, begin at the +New button.
+
+Clients can convert the estimate to an invoice. Using estimates in this way as part of the sales workflow saves time and 
+eliminates human error. Once it becomes an invoice, QuickBooks automatically marks the estimate as Converted and Closed in the 
+Sales center, even if only partial quantities are added to the invoice.
 
 When filling out an invoice you can upload an existing file such as a PDF, an image of handwritten notes or a text file.
 When filling out an invoice you can select the Intuit Assist icon next to the customer's name. It will display insight into that
@@ -1225,6 +1227,9 @@ The Undeposited Funds account is a temporary holding account that tracks payment
 deposited to your client’s bank account. When the payments are deposited at the bank, this should be recorded in QuickBooks.
 
 *End 3 of 6 parts of Sales and Customers
+****************************************************
+Recorded to here within this section.
+****************************************************
 --
 *Start 4 of 6 parts of Sales and Customers
 
