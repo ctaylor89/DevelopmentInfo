@@ -1081,7 +1081,7 @@ general ledger accounts, and don't affect account balances. As a result, they wo
 profit and loss or balance sheet. They do appear in the details for the customer that they apply to.
 
 Clients who have created at least one estimate, will see the Estimates tab in the Sales center, which is where you can create, 
-view, and manage customer estimates. Otherwise, begin at the +New button.
+view, and manage customer estimates. Otherwise, begin at the +New butto to create the first estimate.
 
 Clients can convert the estimate to an invoice. Using estimates in this way as part of the sales workflow saves time and 
 eliminates human error. Once it becomes an invoice, QuickBooks automatically marks the estimate as Converted and Closed in the 
@@ -1092,8 +1092,8 @@ When filling out an invoice you can select the Intuit Assist icon next to the cu
 customer's activity. When the customer is a late payer, recommended actions are displayed, such as setting up late fees or 
 updating the payment terms.
 
-When a client creates an invoice, it is auto recorded as income and an entry is entered into the accunts receivable account. When 
-the client receives payment, they close the receivable and record the money as deposited into the bank.
+When a client creates an invoice, it is auto recorded as income and an entry is entered into the accounts receivable account. 
+When the client receives payment, they close the receivable and record the money as deposited into the bank.
 
 Clients usually issue a sales receipt when customers pay for a product or service at the time of the sale. When a client creates 
 a sales receipt in QuickBooks, it increases income and makes an entry in a bank account because payment is already included in 
@@ -1102,15 +1102,47 @@ the transaction.
 Note that unlike invoices, when recording a sale via a sales receipt, the sale and payment are recorded at the same time, so 
 there’s no need to receive payment in the same way as with invoices, making the process more efficient.
 
+-------------------------------------
+*notrrc
+In QuickBooks Online, when you use a Sales Receipt, the system records both sides of the transaction automatically, but in 
+different places in the books. Here’s exactly where each part goes:
+
+1. The Sale
+Recorded in an Income (Revenue) account
+Shows up on your Profit & Loss (P&L) report
+This is what increases your revenue
+2. The Payment
+Recorded in a Cash-type account, such as:
+	Bank account (Checking) or Undeposited Funds (if you haven’t grouped deposits yet)
+It then shows up on your Balance Sheet and increase your cash.
+
+A Sales Receipt skips Accounts Receivable entirely, versus an Invoice that expects a later payment → uses A/R.
+Sales Receipt → immediate payment → goes straight to Income and to Cash.
+
+So for a Sales Receipt, QuickBooks is doing two things at once:
+	Crediting Income (the sale)
+	Debiting Cash/Bank (the payment)
+--
+Q: From the Sales Transaction page, under the column status, what does it mean when the status is Converted?
+A: In QuickBooks Online (2025), a “Converted” status on the Sales Transactions page means this:
+	The original transaction has been turned into another transaction type.
+What that looks like in practice
+Most commonly:
+	An Estimate is converted into an Invoice or An Estimate is converted into a Sales Receipt
+What QuickBooks is telling you
+	The original form (usually the Estimate) is no longer just a standalone document. The original form been used to create 
+	a real sale. The financial impact now comes from the new transaction (Invoice or Sales Receipt), not the estimate itself.
+-------------------------------------
 In QuickBooks Online Advanced, you can import multiple sales receipts using Batch transactions and Import via CSV. This helps 
 you to add multiple sales receipts all at once. For multiple sales receipts, use the Import via CSV option. This lets you 
 automatically add sales receipts at once. 
 
 Receiving payment. When a customer pays an open invoice, the client needs to record the payment and apply it to the invoice. 
+
 There are a number of ways to access the Receive payment screen for an invoice payment:
 	Find the invoice in the Sales center and select Receive payment
 	Find the customer in the Sales center and select Receive payment next to the relevant invoice
-	From the +Create button, select Receive payment. Note: Could also be the +New Button
+	From the +Create button, select Receive payment. Note: +Create button could also be the +New Button.
 
 The sale will then appear under Sales transactions which is under Sales & Get Paid. Then if you click on details, it will show 
 you where the proceeds were deposited. The default is Undeposited Funds, but can be Checking, Savings, Inventory Asset, Prepaid 
@@ -1351,7 +1383,10 @@ Recurring Transaction can be used as a template for creating other Recurring Tra
 Recurring Transactions can be set up using three template types: scheduled, unscheduled, and reminder. You can access them from 
 the General settings gear at the top right of the screen.
 
+Note that an unscheduled transaction is simply a transaction that was created manually and is not tied to any recurring schedule.
+
 Use a Scheduled template to automatically create a Recurring Transaction at a set frequency or on set dates.
+
 For example, your client could automatically invoice customers for regular services provided at fixed prices, such as weekly 
 gardening services. 
 
@@ -1404,8 +1439,9 @@ Explore the key reports that bring together data entered in the sales and custom
 advisory opportunities available in this workflow.
 
 The reports associated with sales center data sit in two sections of the Reports center(actually they are located under Standard 
-Reports): "Who owes you" and "Sales and Customers". Who owes you provides information about accounts receivable: who owes your 
-client money through invoices to customers. Sales and customers digs in and looks at revenue generated by customer and by product.
+Reports): The two sections are "Who owes you" and "Sales and Customers". The section "Who owes you" provides information about 
+accounts receivable: this is who owes your client money through invoices to customers. The section "Sales and Customers"" digs 
+in and looks at revenue generated by customer and by product.
 
 The difference between sales reports and income reports
 Sales reports and income reports serve different purposes and provide distinct types of financial information. A sales report 
