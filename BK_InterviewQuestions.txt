@@ -1,0 +1,52 @@
+
+
+------------------------------------------------
+AI_Questions for Bookkeeper Interview
+
+Prompt: 
+Act as an accountant Manager context: Quickbooks 2025 online  
+Output: 25 questions that are typically asked when a bookkeeper is interviewing for a job.
+
+Here are 25 realistic interview questions an accounting manager would ask a bookkeeper for a role using QuickBooks Online (2025). These aren’t fluff—they’re the kinds of questions that quickly expose whether someone actually knows what they’re doing.
+
+Core Bookkeeping & Accounting Knowledge
+2) Walk me through the accounting equation and how it applies to your daily work.
+3) What’s the difference between cash-basis and accrual-basis accounting?
+4) If you debit Accounts Receivable, what’s the corresponding credit and why?
+5) How do you identify and correct an unbalanced journal entry?
+6) What’s the difference between a bill and an expense in QuickBooks Online?
+
+QuickBooks Online (2025) Practical Skills
+8) How do you handle undeposited funds, and what’s the most common mistake people make with them?
+9) Walk me through how you would record a customer payment from start to finish.
+10) How do you clean up a messy QuickBooks file with uncategorized transactions?
+11) What’s your process for reconciling bank and credit card accounts?
+12) Where would you go to find changes made after the closing date?
+
+Accounts Receivable / Payable
+14) How do you handle unapplied customer payments?
+15) What steps do you take when a customer invoice is overdue?
+16) How do you ensure vendor bills are recorded in the correct period?
+17) What’s your process for matching bills to payments?
+
+Reporting & Analysis
+19) Which reports do you review monthly and why?
+20) How do you verify that a Profit & Loss report is accurate?
+21) What would you look for if expenses suddenly increased month-over-month?
+22) How do you explain financial reports to a non-accounting client or manager?
+
+Error Detection & Problem Solving
+24) Tell me about a time you found an error in the books—how did you fix it?
+25) If the bank reconciliation is off by $500, what’s your step-by-step approach?
+26) How do you identify duplicate transactions in QuickBooks?
+
+Process & Efficiency
+28) How do you manage high transaction volume efficiently?
+29) What automation features in QuickBooks Online do you use regularly?
+30) How do you ensure consistency when categorizing transactions?
+
+Professional Judgment & Communication
+32) When would you escalate an issue to an accountant or manager instead of fixing it yourself?
+
+
+If you want, I can flip this around and give you strong sample answers that would actually impress a hiring manager—or even simulate a mock interview and grade your responses.

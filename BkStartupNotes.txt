@@ -5,6 +5,7 @@ Balance_Sheet_Proving
 Bookkeeping_Job_Advice
 Bookkeeping_Job_Research
 Books_Review_Center
+Certification_Course_Banking
 Certification_Course_PeriodEnd
 Certification_Course_SalesAndCustomers
 Certifications_Info_For_Bookkeepers
@@ -487,6 +488,223 @@ For example, these could include:
 	Loan statements
 	Invoicing information from healthcare clients that are required to manage invoicing in a separate system
 	Sales information from e-commerce clients who use separate software to manage their sales and sales tax
+
+--------------------------------------------------------
+Certification_Course_Banking
+
+The Banking exam focuses on these learning goals. By completing this course, you should be able to:
+Demonstrate how to connect bank and credit card accounts to QuickBooks
+Implement bank rules
+Describe how to manage the bank feed 
+Explain how to reconcile accounts
+Recognize some common reconciliation issues and fix them
+Identify relevant reports for the banking workflow
+---
+Note: In QuickBooks Online 2025, the old “App Transactions” feature has effectively been folded into the broader Banking 
+(Transactions) center. There isn’t a one-to-one renamed feature. Instead, QuickBooks redesigned the workflow:
+👉 Connected apps now feed transactions directly into the Transactions (Banking) tab, alongside bank feeds.
+
+If you are used to the old setup:
+	Old: App Transactions = separate place to manage app data
+	New: App data = just another feed inside the Transactions center
+If you don’t see “App transactions,” go to Bank transactions
+
+The old QB setup and the new QB setup are different, but the core functionality of managing transactions from connected apps 
+still exists — it’s just integrated into the main banking workflow now.
+
+Bank Transactions (formerly Banking) is the hub for managing all transactions that come in from connected bank accounts, credit cards,
+and apps. It’s where you review, categorize, and match transactions to keep your books accurate and up to date.
+
+On the Transactions page, the available tabs include: Bank Transactions, Rules, Reconcile. Each tab serves a specific purpose 
+in the banking workflow, from managing incoming transactions to setting up rules for automation and reconciling accounts.
+
+Rules in QuickBooks Online allow you to automate the categorization of transactions that come in through your bank feeds. By 
+setting up rules, you can save time and ensure consistency in how transactions are categorized.
+
+As you manage your bank feeds, you may encounter common reconciliation issues such as:
+	- Duplicate transactions
+	- Missing transactions
+	- Incorrect transaction amounts
+
+As you manage the bank feed, you are deciding how to categorize transactions, which accounts to match them to, and whether to 
+add them as new transactions. This is a critical step in ensuring that the financial data in QuickBooks is accurate and up to 
+date, which is essential for generating reliable financial reports and making informed business decisions.
+---
+Overview of setup tasks
+
+1. Connecting accounts
+By connecting bank and credit card accounts to QuickBooks, you can streamline your accounting process and save valuable time 
+that would otherwise be spent on entering transactions manually. When accounts are connected, transactions come into QuickBooks 
+daily through the bank feed.
+
+2. Creating bank rules
+When transactions come in via the bank feed, you need to categorize them so they are allocated to the appropriate accounts in 
+the chart of accounts. Bank rules speed up this process and increase consistency. You can create rules that automatically 
+categorize transactions for you.
+
+To sign into the bank or credit card account via QuickBooks, start from Bank transactions and select Connect account, if this is 
+the first account to be connected. Otherwise select Link account.
+
+It’s best practice for clients to sign into their account themselves. Note that for some banks, this will need to be with the 
+primary account holder’s user credentials. Some clients will try to give you full access to their bank/credit card account by 
+sharing their passwords with you. You should never do this.
+
+Each bank or credit card account to be connected needs to have an equivalent account in the chart of accounts. If there isn’t 
+one, add the account now.
+
+Once the client has been verified, the account will connect and transactions will be pulled into QuickBooks. In most cases, the 
+opening balance will automatically populate with the total amount of whatever is already in the bank account. For more accurate 
+records, it’s a good idea to find out more about this opening balance—what is it and how did it get there? For example, if it’s 
+a new business and the owner contributed their own money, the opening balance should be recorded as owner’s equity.
+
+Manually upload transactions
+When connecting accounts, your client will be asked to select the date range they want to import transactions from, and each 
+bank has its own rules on how far back data can be imported. If you want to import further back than the bank allows, you can 
+do it manually in bulk by importing a .csv file. This can be done for both newly connected accounts and existing linked accounts.
+
+QuickBooks Checking is a bank account for small businesses, and once your client has applied and been approved, QuickBooks 
+Checking automatically syncs transactions to QuickBooks. This streamlines the process of managing finances by reducing the need 
+for manual entry and reconciliation.
+
+The List settings gear enables you to modify the settings of the Bank transactions list to tailor how the data is displayed. 
+These preferences are saved per client so that you can tailor workflows to their unique needs.
+
+Displaying the Payee is switched on by default. It’s a good idea to keep it this way so that you can check that a payee is 
+assigned to all transactions. When transactions are assigned a payee, they appear in the Vendor list. So if your client asks how 
+much they’ve spent with a particular vendor, you can see this information easily, rather than having to rely on the general 
+ledger. Having a payee assigned is also helpful later for potential 1099 processing. You can view transactions without a vendor 
+in the Books review.
+
+Turning on grouping is a key way to accelerate the workflow for managing the bank feed.
+
+Editable dates are especially useful for clients who write checks. Perhaps a check clears on the 1st of the month, but was 
+written in the previous month. It may be helpful to edit the date and put it to the previous month, so that the transaction is 
+recorded in the actual month it was written, but use caution as editing dates can throw off reconciliation.
+
+Copy bank detail to memo
+Copy bank detail to memo is turned on by default and it’s strongly advised to keep it that way. It means the full information 
+from the bank about the transaction is recorded in QuickBooks. In the Description column, QuickBooks cleans up the bank detail 
+to make it easier to read, and it can be overwritten. By including the bank detail in the memo, you create an audit trail that 
+can be checked by running a general ledger detail report. As you’ll see later, the bank detail is referred to as bank text when 
+setting up rules.
+---
+Creating bank rules
+The second and final setup task for banking is to create bank rules. When transactions are downloaded via the bank feed, if they 
+are not matched to existing transactions in QuickBooks, you need to categorize them so they go into the appropriate accounts. 
+Creating bank rules helps automate this process, including assigning the transaction type, category, payee, and—if the client 
+uses these categorization methods—class, project, and location. This saves a lot of time and ensures consistency of categorization.
+
+Bank Rules have two elements: conditions and actions.
+--
+Conditions:
+Bank Rule conditions define which transactions to look for in the bank feeds, and can include criteria such as a specific bank 
+account, the keyword in the description, or a transaction amount. You can add up to five conditions per rule.
+
+Actions tell QuickBooks what to do with transactions that meet the rule conditions. Examples of these instructions include 
+automatically posting a transaction to the correct account(s) and/or assigning prespecified data such as payee, category, class, 
+location, and/or project.
+
+Be aware that if you make a rule specific to a particular account, if a client then changes their account details, the rule 
+won’t be carried over.
+
+You can specify whether the bank activity must meet Any or All of the specified conditions before QuickBooks applies the rule.
+
+You can choose whether the rule should identify transactions based on a specified Description, Bank text, or Amount.
+
+Bank text (also known as bank detail), is the transaction detail that QuickBooks receives from the bank. Depending on the bank, 
+this may include information such as the store number, city, state, phone number, and date. It might also include 
+hard-to-interpret abbreviations of vendor/customer names. To see these details, expand the transaction in the bank feed.
+
+Description is QuickBooks shortened and cleaned-up interpretation of the bank text.
+It’s often more useful to create a rule with conditions referencing the bank text than the description because a bank text rule 
+will look at the bank detail and the description text, whereas a description rule will only look at the description text.
+--
+Actions:
+By choosing Assign, you can instruct the rule to assign the values Assign or Exclude to the following fields: Payee, Category, 
+Class, Location, and Project. Assign means that when a transaction meets the conditions of the rule, QuickBooks will 
+automatically fill in the specified value for that field. Exclude means that when a transaction meets the conditions of the rule, 
+QuickBooks will ensure that the specified value is not assigned to that field.
+
+When you set up the actions for a bank rule, you can specify how you want QuickBooks to categorize transactions that meet the
+conditions of the rule. You can specify the transaction type (Expense, Transfer, Check, or Credit Card Payment), the category 
+(which is the account in the chart of accounts), the payee, and any other relevant details. These transaction options will be 
+very depending on the conditions you set up for the rule. For example, if you set a condition that looks for transactions with a 
+specific payee, the only transaction type options you will have in the actions are Expense and Check, because it wouldn’t make 
+sense to have a rule that looks for a specific payee and then categorizes the transaction as a transfer or credit card payment.
+
+For money-in transactions, best practice is to integrate third-party apps as much as possible, and this means rules aren’t 
+needed. However, it’s not always possible, and so, when using rules for money-in transactions, the options are:
+Deposit, Credit card payment, Transfer
+
+Selecting the arrow next to Select a category allows you to select the account on the chart of accounts to categorize this 
+transaction.
+
+If the transaction needs to use more than one account, select "+ Add a split" to split the amount of the transaction by 
+percentage or amount. You might want to do this, for example, if a phone bill is made up partly of payment for a new handset, 
+which could go to Equipment, and the rest could go to Services. Another example is if a payment from a customer includes payment 
+for both an invoice and a retainer, you could split the transaction so that the invoice payment is categorized as Accounts 
+Receivable and the retainer is categorized as a liability account such as Unearned Revenue.
+
+
+Setting the payee is optional, but recommended. If the rule applies to money-in transactions, you can use the Payee dropdown to 
+select the customer. For money-out transactions, you can use this dropdown to select a vendor.
+--
+If the rule applies to money-out transactions and you have enabled the setting to Track expenses and items by client (only 
+available on Plus and Advanced plans), a Payee and Customer dropdown will be displayed. Otherwise, they will just have the Payee 
+field. The Payee field denotes whom you paid; the Customer field denotes who it was for. For example, if your client bought 
+supplies for their customer, then the supply store is the payee, and your client’s customer is the customer.
+
+If the client is recording a cost and wants it assigned to a particular project, sub-customer, or customer, they can select them 
+from the Customer dropdown. This allows them to see it on the profit and loss by customer report.
+--
+You can also create a memo that’ll be added to transactions. To do this, select + Assign more and a Replace bank memo field will 
+be displayed. You can specify whether the memo in the rule is to replace the bank memo or if the bank memo should also be kept.
+--
+Consider using Auto-Add with caution
+Finally, you can choose if you want the rule to both categorize transactions and automatically accept them into the client’s 
+QuickBooks account. It’s set to do this by default, but use this feature with caution—and when you are experienced in working 
+with bank rules. To switch it off, toggle the Auto-add slider.
+
+If you chose to use the auto-add feature, consider including a condition regarding the expected dollar amount. That way, if the 
+transaction expense exceeds the typical dollar amount, the rule won’t be applied—and the transaction will show up in the 
+For review tab.
+
+If the auto-add feature is used, there’s no need to review the transactions because the rule will be applied automatically.
+If you do not use auto-add, the rule will be applied, but the transaction will remain in the For review section. If the rule was 
+correct, you or your client can confirm it with a single click to add the transaction to the accounting records. If it was 
+incorrect, you can edit the transaction.
+--
+Check the Rules list
+Once saved, a rule is then added to the Rules list in the Transactions center (Accounting -> Rules in the new version of QB). 
+From the Actions column, you can edit, copy, disable/enable, move, and delete existing rules. The order in which the rules 
+appear is important. When QuickBooks checks transactions from the bank feed, it applies rules in numerical order as listed. Only 
+one rule is applied, so the first rule on the list that applies to the transaction is the one that will apply. Rearrange the 
+rule priority by dragging the rules up and down.
+
+Once saved, a rule is then added to the Rules list in the Transactions center(Accounting -> Rules in the new version of QB). 
+From the Actions column, you can edit, copy, disable/enable, move, and delete existing rules.
+
+The order in which the rules appear is important. When QuickBooks checks transactions from the bank feed, it applies rules in 
+numerical order as listed. Only one rule is applied, so the first rule on the list that applies to the transaction is the one 
+that will apply. Rearrange the rule priority by dragging the rules up and down.
+--
+You can export rules from one client and import them into another.
+
+A rule shouldn’t have been applied if there is a match in QuickBooks. If you find that a rule has been applied when there was a 
+match, this could indicate that the rule is too broad or not specific enough. Review the rule conditions and make adjustments as 
+needed to ensure it only applies in the intended scenarios.
+--
+Connecting bank and credit card accounts decreases the need for manual data entry, which streamlines the accounting process.
+
+Creating bank rules helps ensure consistent categorization of transactions. The more you use them, the more QuickBooks will 
+learn from them, and make more accurate suggestions for all transactions.
+
+Customizing the settings of the Bank transactions list means you can tailor how the data is displayed in a way that helps you 
+better view the details of a transaction to ensure accuracy and efficient processing, and helps your clients get the most from 
+their QuickBooks account.
+--
+
+
 
 
 --------------------------------------------------------
@@ -1322,7 +1540,7 @@ If your client does not use invoices, the client can still issue  Credit Memos t
 
 Credit Memos are accounting transactions that can be applied to a customer’s invoice as part or full payment.
 Credit Memos do not refund the customer, so they are not a money-out transaction.
-Credit Memos reduce Accounts Receivable, but not Cash.
+Credit Memos reduce Accounts Receivable, but does not reduce Cash.
 
 Use Credit Memos when a client wants to provide a customer with a credit to be applied to an open or future invoice, not when 
 they want to issue an immediate refund.
@@ -1540,20 +1758,6 @@ The key light-touch advisory opportunity in the sales and customers workflow is 
 consistently recording their sales transactions in QuickBooks, so that revenue is accurately stated.
 
 *End of part 5 of Sales and Customers
-
-*Start part 6 of Sales and Customers
-
-
-
-
-
-
-
-
-
-
-
-*End of part 6 of Sales and Customers
 ------
 Course_Notes_Search_Bin_SalesAndCustomers
 
@@ -1563,7 +1767,9 @@ Let’s start with the Sales tab on the left, and look at the section covering S
 
 Preferred invoice terms sets the default payment date. Net 30 means payment is due 30 days from the date on the invoice.
 
-Preferred delivery method default determines how sales forms are delivered to newly created customers. The options are to Print later, Send later, or None. Choosing to print or send later means you can batch them and review them altogether. This can help to reduce errors and streamline workflows.
+Preferred delivery method default determines how sales forms are delivered to newly created customers. The options are to Print 
+later, Send later, or None. Choosing to print or send later means you can batch them and review them altogether. This can help 
+to reduce errors and streamline workflows.
 
 You can change the default delivery method for a customer by editing the customer on the customer list. You can also change the delivery method when you create individual invoices or other sales forms.
 
@@ -1589,23 +1795,29 @@ Note that this setting is at the company level, so it can’t be controlled on a
 Products and services section
 Next up, the Products and services section.
 
-Here you can choose to Show Product/Service column on sales forms so you can choose from a list of products and services to include. Turning off this option will also turn off:
+Here you can choose to Show Product/Service column on sales forms so you can choose from a list of products and services to 
+include. Turning off this option will also turn off:
 Show items table on expense and purchase forms
 Use purchase orders
 Track inventory quantity on hand
 You can also choose to Show SKU column. A SKU is a stock keeping unit, also called an item number. It’s unique and has up to 100 alphanumeric characters that you can assign to a product. You can use the SKU to quickly search for or identify an item.
 Enabling price rules means your client can provide discounts for specific products to certain customers for a specified amount of time. This is covered in the QuickBooks Online Certification Level 2.
 
-By enabling Track quantity and price/rate you're adding Quantity and Rate fields to sales forms so you can track this information for products and services.
+By enabling Track quantity and price/rate you're adding Quantity and Rate fields to sales forms so you can track this information 
+for products and services.
 
 Enabling Track inventory quantity on hand is how you turn on inventory tracking for Plus and Advanced plans. QuickBooks always considers the first items a client purchases as the first items they sell. In other words, the costing method for inventory in QuickBooks is First In First Out (FIFO).
 
 Messages Section
-The Messages section is where you can adjust the content of default emails that are sent out with invoices, estimates, credit memos, sales receipts, statements, and refund receipts. You can modify these emails at the time you send them. Note that you can replace these emails for estimates, invoices, and sales receipts by setting up templates when you customize form styles, as you just saw in the previous setup task.
+The Messages section is where you can adjust the content of default emails that are sent out with invoices, estimates, credit 
+memos, sales receipts, statements, and refund receipts. You can modify these emails at the time you send them. Note that you 
+can replace these emails for estimates, invoices, and sales receipts by setting up templates when you customize form styles, as you just saw in the previous setup task.
 Reminders
 QuickBooks can be set up to automatically send reminders to customers when invoices are, or will soon be, overdue. The Reminders section is where you can adjust the content, number, and frequency of reminder emails sent for open invoices. You can see when reminders were sent by going to the Sales center and then All sales. QuickBooks adds Reminded in the Status column for invoices that have been sent a reminder.
 Online delivery
-Online delivery is where you adjust the defaults for how sales forms are sent, such as whether they’re attached as a PDF to the email. Note that you can replace these defaults for estimates, invoices, and sales receipts by setting up templates when you customize form styles, as you just saw in the previous setup task.
+Online delivery is where you adjust the defaults for how sales forms are sent, such as whether they’re attached as a PDF to the 
+email. Note that you can replace these defaults for estimates, invoices, and sales receipts by setting up templates when you 
+customize form styles, as you just saw in the previous setup task.
 Statements
 The final section on the Sales tab relates to the details you can include and adjust on a customer statement, such as the amounts owed and by how many days they’re overdue.
 Automation settings
