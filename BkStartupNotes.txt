@@ -702,11 +702,167 @@ learn from them, and make more accurate suggestions for all transactions.
 Customizing the settings of the Bank transactions list means you can tailor how the data is displayed in a way that helps you 
 better view the details of a transaction to ensure accuracy and efficient processing, and helps your clients get the most from 
 their QuickBooks account.
+---
+FREQUENT TASKS
+
+Managing the bank feed
+
+Managing the bank feed is all about looking at the transactions in the For review tab of the bank feed and ensuring they are 
+accurately recorded. Until this is done, these transactions won’t appear anywhere else in a client’s QuickBooks account.
+
+When transactions come in via the bank feed, QuickBooks analyzes them and suggests matches to existing transactions already 
+entered in a client’s QuickBooks account.
+
+Does a rule apply?
+If there’s no match, QuickBooks runs each transaction through the rules in the Rules list to determine if any apply. Note that 
+QuickBooks will not apply rules if a potential match is found.
+
+What category has been used before for this customer or vendor?
+If the transaction hasn’t already been entered elsewhere—for example, as an expense to a vendor—QuickBooks may suggest 
+categories based on previously used categories for the same customer or vendor. You decide whether or not to accept 
+each suggestion, and record the transaction accordingly.
+
+Trust but verify
+This is the critical part of managing the bank feed: you decide whether or not to accept each suggestion QuickBooks makes. 
+Never simply accept a suggestion without confirming that it’s correct.
+
+Real-time accounting
+Because QuickBooks enables you and your clients to categorize transactions daily, there’s an ongoing clear picture of how 
+they are spending their money throughout the month. This means no waiting until the end of the month—or even the next month—for 
+information. This brings real-time accounting into view.
+
+Overview of frequent tasks
+There are four key tasks that will help you manage the bank feed, starting with the most straightforward and ending with the 
+most complex. 
+
+1. Processing receipts
+When a client uploads a receipt as an expense, QuickBooks extracts the information and creates a transaction to be reviewed. 
+This sits in the Receipts tab rather than the Bank transactions tab of the Transactions center. From here, you can edit the 
+receipt, add it to an account, or match it with an existing transaction.
+
+2. Reviewing rules and pairs
+Next, you move into the Bank transactions tab and start to work through all the items listed under For review. If you have 
+turned off the auto-add feature, you will need to review the transactions that QuickBooks has applied a bank rule to. As rules 
+are generally used for frequent transactions, working through them should be straightforward. Likewise, transactions marked as 
+paired are usually straightforward.
+
+3. Reviewing money-out transactions
+Money-out transactions tend to be very specific and so relatively easy to verify. That’s why matching and categorizing these is 
+up next.
+
+4. Reviewing money-in transactions
+Money-in transactions often relate to customers. You will explore the nuances that are important to understand when dealing with 
+these types of transactions and look at how using the Undeposited Funds account simplifies this part of managing the bank feed.
 --
+Processing receipts
+Let’s take a deeper look at the first task. A receipt uploaded to QuickBooks will show in the Receipts tab, but it’s not recorded 
+anywhere else in a client’s QuickBooks account until it’s been reviewed. It either must be categorized and added as a new 
+transaction, or matched with an existing transaction.
+
+QuickBooks will look for existing transactions already in QuickBooks that match with the uploaded receipt to help prevent duplicate 
+transactions. Note that transactions in the For review tab in the Transactions area are not included in this search.
+
+If no record is found, you can review the receipt and add it as a new transaction. If a record is found, you can review the receipt and the
+transaction to confirm that they match, and if so, you can match the receipt to the transaction. If they don’t match, you can add the
+receipt as a new transaction.
+
+If two or more records are found that match the receipt, you can review the receipt and the transactions to confirm which one it 
+matches with, and if so, you can match the receipt to the transaction. If it doesn’t match with any of the transactions, you can 
+add the receipt as a new transaction.
+--
+Adding receipts after the fact
+Receipts can be uploaded after the fact and matched with existing transactions. They can also be forwarded to an email address 
+that automatically uploads the receipts into QuickBooks. It’s a good idea to go back and do this from the start of the 
+current year.
+
+Storing the receipts in QuickBooks keeps all the records together and tidy, and removes the need for additional files—electronic 
+or paper. Automating the process in this way saves time and reduces manual entry errors, and it means the audit process is 
+simplified and robust.
+--
+Reviewing transactions with rules applied
+Let’s now move onto the second frequent task, and that’s reviewing transactions that have been identified as fitting a rule or 
+paired with another transaction. Rules first…
+
+For transactions in the For review tab, QuickBooks first looks to see if the transaction is already in QuickBooks. If so, it 
+suggests a match. These matches will be labeled—you’ll look at this in detail later. If there’s no match, QuickBooks runs each 
+transaction through the rules in the Rules list to determine if any apply. It only applies one rule per bank transaction, and 
+rules are applied in numerical order as they are listed in the Rules tab. The first rule where the transaction meets the 
+conditions is the one that QuickBooks applies. You can change the order in which rules are applied by dragging them up and down.
+
+Reviewing paired transactions
+If a client moves money between two accounts that are both connected to QuickBooks, QuickBooks identifies both transactions and 
+pairs them up. This bank-to-bank transfer matching feature identifies high-confidence matches across connected accounts—for both 
+bank and credit card accounts. When transactions for the same date and amount are detected, they show as Paired to another 
+transaction. You then decide whether to accept the suggested match or not.
+
+“Paired to another transaction” means that the bank feed item is connected to another bank feed item (usually in a different 
+account).” Pairing is typically a transfer between two connected accounts:
+	One side = money out
+	Other side = money in
+Do nothing or review to confirm it’s actually a transfer.
+
+If paired to a credit card (thereby reducing the credit card balance), QuickBooks suggests recording the transaction as a 
+Pay down credit card transaction.
+--
+“Match found” 👉 QuickBooks is telling you: “I found an existing transaction in your books that likely corresponds to this 
+bank feed item.” What it’s matching against:
+	An already recorded transaction, like:
+		Invoice payment
+		Expense you entered manually
+		Check
+		Transfer already created
+
+If the bank feed item is linked to an existing transaction, no new transaction is created. Instead, the bank feed item is 
+matched to the existing transaction, and the details from the bank feed are added to that transaction.
+If the bank feed item is not linked to an existing transaction, QuickBooks creates a new transaction based on the bank feed item.
+--
+Fast mental shortcut
+Match found = “Already in the books”  Paired = “Other side of the same money”
+Ignoring a Match creates duplicates   Breaking a Pair → turns transfers into fake income/expenses
+--
+Matching in QuickBooks for both money-in and money-out transactions in the bank feed with transactions in QuickBooks.
+
+When you record a transaction in QuickBooks, such as a bill or an expense, you need to match it with the corresponding payment 
+that has cleared the bank. If QuickBooks recognizes that a payment in the bank feed has the same characteristics (such as the 
+amount or payee) as a transaction already entered in QuickBooks, it suggests a match. You need to verify that the match is 
+correct before accepting it.
+
+QuickBooks suggests two types of matches: Exact match and a Linked match. An Exact match means that the bank feed item and the 
+existing transaction in QuickBooks have the same amount, date, and payee. A Linked match means that the bank feed item and the 
+existing transaction in QuickBooks have the same amount and date, but the payee is different or missing.
+When you review a suggested match, you can confirm that it’s correct and accept it, or if it’s not correct, you can reject it 
+and either edit the existing transaction in QuickBooks or add the bank feed item as a new transaction.
+
+Linked Match example:
+A client enters an expense in QuickBooks for $100 with a payee of “Office Supplies.” When the bank feed pulls in a transaction 
+for $100 with a description of “Staples,” QuickBooks may suggest a Linked match because the amount and date match, but the payee 
+is different. You would review the details and decide whether to accept the match or not.
+
+Another example of a Linked match:
+Your client receives a bill for $750. The client pays the bill but does not record the bill payment in QuickBooks. When the bank 
+feed pulls in a transaction for $750 with a description of the vendor, QuickBooks suggests a match with the bill. Accepting the 
+match creates a new bill payment transaction, and matches the bank transaction to the bill payment. The original transaction, 
+the bill, isn’t replaced. Instead it’s linked to the new transaction, the bill payment—and so this is a linked match.
+
+If the bill payment was recorded in QuickBooks and it was that transaction that was matched to the payment in the bank feed, 
+it would be an exact match, because they are both records of the same transaction.
+
+Linked matching also applies to invoices, and it works largely the same as it does for bills (remember, an invoice is the 
+equivalent money-in transaction to a bill).
+
+Sales receipts work a little bit differently. If you create a sales receipt and choose Undeposited Funds or Payments to Deposit 
+as the deposit account, QuickBooks may suggest a match against the sales receipt. Accepting the match creates a new Bank Deposit 
+transaction that’s matched to the bank transaction and linked to the sales receipt, indicating the sales receipt’s funds were 
+deposited.
+
+Matching money-out transactions
+Let’s now look at the money-out transactions in the For review list with suggested matches. Expenses are often more straightforward to process than deposits from customers, because money out is often similar transactions each time.
 
 
 
 
+
+*End Certification_Course_Banking
 --------------------------------------------------------
 Certification_Course_PeriodEnd
 
