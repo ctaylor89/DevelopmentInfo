@@ -645,9 +645,12 @@ which could go to Equipment, and the rest could go to Services. Another example 
 for both an invoice and a retainer, you could split the transaction so that the invoice payment is categorized as Accounts 
 Receivable and the retainer is categorized as a liability account such as Unearned Revenue.
 
-
 Setting the payee is optional, but recommended. If the rule applies to money-in transactions, you can use the Payee dropdown to 
 select the customer. For money-out transactions, you can use this dropdown to select a vendor.
+****************************************************
+Recorded to here within this section. 
+01_QBCertification_Course_Banking
+****************************************************
 --
 If the rule applies to money-out transactions and you have enabled the setting to Track expenses and items by client (only 
 available on Plus and Advanced plans), a Payee and Customer dropdown will be displayed. Otherwise, they will just have the Payee 
@@ -681,13 +684,6 @@ appear is important. When QuickBooks checks transactions from the bank feed, it 
 one rule is applied, so the first rule on the list that applies to the transaction is the one that will apply. Rearrange the 
 rule priority by dragging the rules up and down.
 
-Once saved, a rule is then added to the Rules list in the Transactions center(Accounting -> Rules in the new version of QB). 
-From the Actions column, you can edit, copy, disable/enable, move, and delete existing rules.
-
-The order in which the rules appear is important. When QuickBooks checks transactions from the bank feed, it applies rules in 
-numerical order as listed. Only one rule is applied, so the first rule on the list that applies to the transaction is the one 
-that will apply. Rearrange the rule priority by dragging the rules up and down.
---
 You can export rules from one client and import them into another.
 
 A rule shouldn’t have been applied if there is a match in QuickBooks. If you find that a rule has been applied when there was a 
@@ -781,7 +777,7 @@ simplified and robust.
 --
 Reviewing transactions with rules applied
 Let’s now move onto the second frequent task, and that’s reviewing transactions that have been identified as fitting a rule or 
-paired with another transaction. Rules first…
+paired with another transaction. 
 
 For transactions in the For review tab, QuickBooks first looks to see if the transaction is already in QuickBooks. If so, it 
 suggests a match. These matches will be labeled—you’ll look at this in detail later. If there’s no match, QuickBooks runs each 
@@ -820,7 +816,8 @@ Fast mental shortcut
 Match found = “Already in the books”  Paired = “Other side of the same money”
 Ignoring a Match creates duplicates   Breaking a Pair → turns transfers into fake income/expenses
 --
-Matching in QuickBooks for both money-in and money-out transactions in the bank feed with transactions in QuickBooks.
+Another frequent task is Matching in QuickBooks for both money-in and money-out transactions in the bank feed with transactions 
+in QuickBooks.
 
 When you record a transaction in QuickBooks, such as a bill or an expense, you need to match it with the corresponding payment 
 that has cleared the bank. If QuickBooks recognizes that a payment in the bank feed has the same characteristics (such as the 
@@ -854,9 +851,222 @@ Sales receipts work a little bit differently. If you create a sales receipt and 
 as the deposit account, QuickBooks may suggest a match against the sales receipt. Accepting the match creates a new Bank Deposit 
 transaction that’s matched to the bank transaction and linked to the sales receipt, indicating the sales receipt’s funds were 
 deposited.
+****************************************************
+Recorded to here within this section. 
+02_QBCertification_Course_Banking
+
+* Start 03_QBCertification_Course_Banking here
+****************************************************
 
 Matching money-out transactions
-Let’s now look at the money-out transactions in the For review list with suggested matches. Expenses are often more straightforward to process than deposits from customers, because money out is often similar transactions each time.
+Let’s now look at the money-out transactions in the For Review list with suggested matches. Expenses are often more straight
+forward to process than deposits from customers, because money out is often similar transactions each time.
+
+Categorizing money-out transactions
+Often, there’s no existing record in QuickBooks—and therefore no match for a transaction—when it comes in from the bank feed. 
+You can categorize and record these transactions directly from the For Review list in the Bank transactions tab.
+
+Once this has been done, the transaction moves to the Categorized tab, an accounting transaction is recorded, and the 
+transaction is listed in the categorization history for the same customer or vendor.
+
+Record as transfer or credit card payment
+Along with options for categorizing or matching transactions, you can also record transactions as a transfer to another account 
+or record them as a credit card payment. Selecting Record as transfer allows you to record a transfer between two accounts in 
+your client’s chart of accounts. This is useful for keeping track of funds moving between accounts without affecting income or 
+expenses. Selecting Record as credit card payment allows you to record a payment made towards a credit card account, which helps
+keep track of credit card balances and payments.
+
+Use Record as transfer to move money between different accounts in your client’s chart of accounts. It ensures that the transfer 
+is recorded in both accounts involved, preventing any duplication and keeping records accurate. It transfers the entire amount
+—no splits are allowed. This transfer feature is available on money-out and money-in transactions.
+
+Record as transfer is not used for:
+	Recording income or expense, so there are no fields for customers, vendors, employees, or products and services items
+	Making transfers between a client’s bank account and their vendor’s bank account
+--
+For bills paid through QuickBooks Bill Pay, when the payment clears the bank, it will be automatically matched to the payment in 
+QuickBooks, meaning it won’t appear in the Bank transactions list for manual processing—saving you time. Note, this feature only 
+matches bank withdrawals with transactions processed through QuickBooks Bill Pay, and not all transactions are eligible.
+--
+Using the Undeposited Funds account
+Money-in payments generally relate to sales made to customers, and they often aren’t deposited into your client’s bank account 
+right away. Instead these payments are grouped together and deposited at the bank as a single deposit. This means that individual 
+payments received from customers won’t show up in the bank feed. Instead the total deposit amount will show. It can be confusing, 
+and if handled incorrectly, it could create an accounting issue and a customer service issue, so it’s important to get it right.
+
+Accurately matching money-in transactions in the bank feed to transactions already recorded in QuickBooks is underpinned by 
+using the Undeposited Funds account workflow. Keep in mind that parts of this process are about what happens in real life 
+(outside of QuickBooks) and parts are about what happens inside QuickBooks!
+--
+Categorizing money-in transactions
+Categorize money-in transactions with caution! You should usually only need to do this for money-in that doesn’t involve a 
+customer, such as an IRS reimbursement.
+
+Categorizing for different clients
+1) Clients using the Sales center
+If a client is using the Sales center in QuickBooks and the transaction involves a customer, there should be no need to categorize via the banking area. It should have been done earlier in the workflow when recording the money-in transaction as either payment received for an invoice or as a sales receipt—customers should be selected from the Customer list and sales should be categorized using Items from the Products and services list. 
+
+How to categorize in the bank feed
+However, if this hasn’t happened, you can categorize in the Transactions tab:
+
+From the Type of transaction dropdown, select Sales receipt if a sale was made to a customer—otherwise, select Deposit.
+Sales receipts can then be categorized using the Product/Service dropdown.
+Deposits can be categorized using the Account dropdown to allocate to the appropriate account in the chart of accounts.
+
+2) Clients not using the Sales center
+Sometimes clients won’t use the Sales center in QuickBooks; instead they use a third-party app. 
+
+Examples include medical businesses that have strict customer privacy regulations so require additional functionality when 
+dealing with customer records, and e-commerce businesses that handle all sales via their online shop. 
+These clients may record directly to income, without ever touching the Sales center in QuickBooks.
+
+How to categorize in the bank feed
+It may be appropriate to use a rule to categorize this type of income.
+--
+Some tips for matching money-out and money-in transactions.
+Here are some things to look out for when reviewing and recording transactions:
+
+Look for old checks
+When looking for potential matches, QuickBooks looks at transactions over a 90-day time frame. If a check is very old, QuickBooks 
+won’t necessarily find it. So, when you select Find match, you would need to expand the date range and then you should find the 
+old check. Otherwise if no match is found, it’s safe to assume it is not in QuickBooks, and so it could be recorded as an expense 
+again.
+
+Double-check the account
+Expenses can get entered twice if they go to the wrong account, for example, being allocated to a credit card instead of a debit 
+card. So always do an extra check to be sure that expenses are allocated to the correct account.
+
+Double-check the amount
+Amounts don’t always neatly line up. For example, a bill from the electricity company gets entered into QuickBooks as being $100. 
+But when it comes in via the bank feed, the actual amount taken is $130. The match gets missed and the bill gets entered again.
+
+If not sure where the funds are coming from, ask the client if they have any additional documentation or information about the 
+transaction that could help clarify the discrepancy. This could include receipts, invoices, or notes about the transaction.
+
+Make sure the Undeposited Funds account is being used correctly
+Here’s what can go wrong when the Undeposited Funds account isn’t used…
+A client receives three payments of $50 and records them in QuickBooks, allocating directly to their bank account instead of the 
+Undeposited Funds account. They deposit the three payments in a single deposit at the bank for $150.
+
+When the $150 deposit comes into QuickBooks in the bank feed, you may not connect the three $50 payments, and instead record $150 
+to income. This means that the income is overstated and the customer accounts continue to reflect open invoices.
+--
+When matching transactions between the bank feed and QuickBooks, keep in mind that while dates are a helpful clue, transactions 
+can sometimes take a while to post, so they won’t always necessarily line up. Use your judgment and trust but verify!
+---
+* Start 04_QBCertification_Course_Banking here
+
+OCCASIONAL TASKS
+Explore the tasks likely to be done on a monthly basis for banking in Intuit QuickBooks.
+
+1. Reconcile bank and credit card accounts
+2. Review and categorize bank feed transactions
+3. Ensure all income and expenses are recorded
+4. Review and resolve any discrepancies
+5. Generate and review financial reports
+
+A couple of days after the statement is issued by the bank is a great time to do the reconciliation, because it gives everything 
+time to clear the bank. Compare the list of transactions on the statement with what’s entered in QuickBooks. Connecting accounts 
+to QuickBooks and using the Reconcile feature streamlines the process, and for most clients reconciliation will be a breeze. 
+Others may need a little more work!
+
+When you’re done reconciling, the difference between the amount in the QuickBooks accounts and the bank statements should be 
+$0.00. But let’s be clear—while that $0 difference is definitely a goal, it’s not the only goal. Ensuring that you understand 
+what hasn't cleared the bank and why, and whether you need to take action with those transactions, is also the goal. Put your 
+detective hat on. Investigate all transactions for accuracy. That zero only means that everything is balanced when it’s been 
+investigated and verified.
+
+Overview of occasional tasks
+There are three key tasks to reconciling a bank or credit card account. 
+1. View the Bank or Credit Card account statement
+2. Reconcile the Bank or Credit Card account
+3. Resolve any issues
+--
+Manually uploading statements
+If the client’s bank doesn’t automatically upload bank statements to QuickBooks, you should upload them for recordkeeping 
+purposes at the end of reconciling when prompted, or by selecting the History by account option from the Reconcile screen.
+It’s best practice to do this because it creates a robust ‘paper trail’ for review and audit purposes.
+---
+If an account is riddled with adjustments (as shown on the History by account) then you may want to undo the reconciliation. This 
+allows you to start over so that you can find the discrepancies more easily.
+
+You might also want to undo if the reconciliation was forced, which means it was saved even though the difference wasn’t zero. 
+You can identify a forced reconciliation because QuickBooks will create a Reconciliation Adjustment entry shown in the 
+History by Account column, and the entry is on the Profit and Loss under the Reconciliation Discrepancies account.
+
+You might also want to undo if the reconciliation was forced, which means it was saved even though the difference wasn’t zero. 
+You can identify a forced reconciliation because QuickBooks will create a Reconciliation Adjustment entry shown in the History 
+by Account column, and the entry is on the Profit and Loss under the Reconciliation Discrepancies account.
+
+Only an accountant user (you) can undo a reconciliation. To undo a reconciliation, go to History by account in the Reconcile 
+screen. It’s a good idea to first download the reconciliation as a PDF. You can do this from the Action column—you can also 
+undo from here.
+
+To undo or not to undo? Be very cautious of undoing for a closed period or when taxes have been done. Instead, some accounting 
+pros prefer to make adjustments via a journal entry so that they can provide a more detailed explanation for the adjustment, 
+especially for a clean up. Others allow a reconciliation adjustment to remain, if the amount is immaterial.
+---
+Managing the bank feed frequently and thoughtfully throughout the month makes end-of-month reconciliation much more 
+straightforward. When you carefully match and categorize transactions in the bank feed, fewer issues will need to be fixed during 
+reconciliation.
+---
+You can use the Reconciliation Discrepancy Report as part of correcting beginning balances. That Reconciliation Discrepancy 
+Report report is only available when the beginning balance is incorrect via the "We can help you fix it" link from the 
+discrepancy alert message; it’s not available via the Reports center. 
+---
+The Reconciliation report can be accessed from the Reconcile tab via the Summary link, and it’s accessible via the Reports center.
+
+The Reconciliation summary lists all the reconciliations done for all the bank and credit card accounts in the client’s chart 
+of accounts. The Reconciliation summary also available for other balance sheet accounts that are reconciled. QuickBooks Online 
+Certification Level 2 discusses how this reconciliation process can be performed on nonbank/credit card accounts.
+---
+You can view a Reconciliation report for every reconciliation done for a client. There’s an option to Save as PDF, which is best 
+practice to do for general documentation and if, for example, your firm needs to save workpapers outside of QuickBooks as proof 
+of work done.
+
+The Reconciliation report starts by showing any changes that have happened to the reconciled transactions covered in the report 
+since the reconciliation, if there are any. As a general rule, if there are changees you will likely need to find out more about 
+why these changes have been made. It may be helpful to refer to the Audit Log to dig in. Access it from the General settings 
+gear, at the top right of the screen. It lists any changes, so it’s a good place to start your investigation.
+
+The Summary section of the report shows a summary, first of the bank statement information and then the register details—that is, 
+what is inside QuickBooks.
+
+The Details section of the report lists all the items that have cleared the bank. You can select each item in this list to 
+view them.
+
+The report ends with Additional Information. It shows what hasn’t cleared the bank in the following sections:
+Uncleared checks and payments as of the date of the reconciliation.
+Uncleared checks and payments after the date of the reconciliation.
+Uncleared deposits and other credits as of the date of the reconciliation.
+Uncleared deposits and other credits after the date of the reconciliation.
+
+Those items marked as of the date of the reconciliation are factored into the summary details above and so need to be investigated.
+Those listed after the date of the reconciliation don’t need to be investigated because they will form part of the next 
+reconciliation.
+---
+Once you’ve looked at the Reconciliation report, it can be valuable to go to the Client overview dashboard, accessed via the 
+left-hand menu, and check the Banking activity. It will show a summary of all bank and credit card accounts and their 
+reconciliation status, as well as non-bank accounts that have been selected to list there as well.
+---
+The two key reports are the Reconciliation Discrepancy Report, which appears when you need to fix a beginning balance, and the 
+Reconciliation report, which is generated when a reconciliation is done. Review both to perform checks and balances to see where 
+your client’s business is.
+
+Because it comes at the end of the banking workflow, the Reconciliation report can be a rich source to help you identify issues 
+earlier on in the client’s workflow, as well as providing details about the reconciliation of the bank account to the activity 
+in QuickBooks.
+
+Light-touch advisory opportunities in the banking workflow range from simply walking a client through the setup process, to 
+deeper insights based on how you interpret the data in the Reconciliation report into their day-to-day workflow and processes.
+
+
+
+
+
+
+
+
 
 
 
@@ -3530,6 +3740,9 @@ Outstanding transactions help you identify:
 4. Timing differences
 	Legitimate uncleared items from the end of the month.
 
+
+
+
 *** End Random_Notes_Quickbooks
 --------------------------------------------------------
 Random_Notes_Accounting_Bookkeeping
@@ -4019,6 +4232,32 @@ In accounting terms:
 
 When you record the deposit in QuickBooks (or any accounting system), you categorize it to something like:
 Loan Payable, Notes Payable, Line of Credit Payable
+---
+What does it mean when transaction is cleared?
+The transaction has shown up on your bank or credit card statement and matches what’s in QuickBooks.
+What “cleared” actually represents
+	The bank has processed the transaction
+	It is no longer pending
+	It should now appear in your bank statement
+QuickBooks and the bank agree that the transaction exists.
+
+Cleared vs Reconciled (don’t mix these up)
+Cleared
+	Transaction appears on bank statement
+	Not fully verified yet
+Reconciled
+	You’ve officially matched it during reconciliation
+	Marked with an “R”
+👉 So:
+	Cleared = bank confirmed it
+	Reconciled = you confirmed it
+
+---
+
+
+
+
+
 
 
 *** End of Random_Notes_Accounting_Bookkeeping
