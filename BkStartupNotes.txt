@@ -5,7 +5,8 @@ Balance_Sheet_Proving
 Bookkeeping_Job_Advice
 Bookkeeping_Job_Research
 Books_Review_Center
-Certification_Course_Banking
+Certification_Course_Banking						
+Certification_Course_Expenses and vendors				*End_Certification_Course_Expenses and vendors
 Certification_Course_PeriodEnd
 Certification_Course_SalesAndCustomers
 Certifications_Info_For_Bookkeepers
@@ -414,8 +415,7 @@ Sales & Get Paid -> Payment links
 					Channel payouts
 ---
 Reports & Analytics
-Standard reports -> What you owe -> Accounts receivable aging summary?
-                                 -> Unpaid Bills
+Standard reports -> What you owe -> Unpaid Bills
 								 -> Bills and Applied Payments?
 								 -> 1099 Contractor Balance Summary?
 Management Reports?
@@ -858,12 +858,10 @@ as the deposit account, QuickBooks may suggest a match against the sales receipt
 transaction that’s matched to the bank transaction and linked to the sales receipt, indicating the sales receipt’s funds were 
 deposited.
 ****************************************************
-Recorded to here within this section. 
-02_QBCertification_Course_Banking
-
+Recorded to here within this section. to 02_QBCertification_Course_Banking
+****************************************************
 * Start 03_QBCertification_Course_Banking here
 ****************************************************
-
 Matching money-out transactions
 Let’s now look at the money-out transactions in the For Review list with suggested matches. Expenses are often more straight
 forward to process than deposits from customers, because money out is often similar transactions each time.
@@ -1067,6 +1065,146 @@ Light-touch advisory opportunities in the banking workflow range from simply wal
 deeper insights based on how you interpret the data in the Reconciliation report into their day-to-day workflow and processes.
 
 *End Certification_Course_Banking
+--------------------------------------------------------
+Certification_Course_Expenses and vendors			*End_Certification_Course_Expenses and vendors
+
+Purchase Orders are a request for goods with a promise to pay.
+A vendor is a person or business who sells products or provides services.
+A contractor is a type of vendor, an individual or a business, that provides services that might require a 
+1099 end-of-year tax reporting.
+---
+Overview of setup tasks
+Managing the
+Vendors list
+The Vendors list is the hub for managing vendor details. Regularly updating this list helps to ensure accurate financial 
+records, efficient payment processes, simplified tax reporting, improved vendor relationships, enhanced financial reporting, 
+and overall operational efficiency. This proactive approach supports better financial management and helps in making informed 
+business decisions.
+
+Adjusting
+settings
+Account and settings is the control center for the account preferences and configurations. It’s where you customize QuickBooks 
+to suit your client’s specific business needs and preferences.
+---
+The Vendors list shows the name and contact details of each vendor, along with their current open balance—that is, the amount 
+the client owes each vendor.
+
+On the Venders page you can select Batch actions to email or make multiple vendors inactive at once.
+
+Adding a vendor
+When setting up a new vendor, entering as much information as possible helps utilize the power of QuickBooks.
+
+The Company name appears on all bills and purchase orders created for this vendor. The Vendor display name is the name used to 
+display the vendor in QuickBooks. The Company name and "Vendor display name" can be the same or different, and they can be edited 
+manually if the auto-filled suggestion isn’t appropriate.
+
+Note that the "Vendor display name" must be unique. It can not be the same as another customer or vendor. If a client deals with a 
+business who is both a customer and a vendor—for example, a landscaping company buys products from a store and they provide 
+gardening services to that same store—the display name can be adjusted in one instance with additional punctuation, such as 
+Blue Star and Blue_Star. QuickBooks will always indicate whether it’s a customer or vendor.
+
+As you enter text into the Company name field, a list of QuickBooks Business Network members will be suggested. This lets your 
+clients connect with their customers and vendors. By connecting, they can send invoices to customers through the network, and 
+receive bills from vendors directly in QuickBooks. These bills are ready to review and pay, so they don’t have to be manually 
+created. Also, the contact info for connections will stay up to date if they make changes in their QuickBooks. These automation 
+tools help you streamline workflows, better predict cash flow, and reduce manual entry tasks.
+
+It’s best practice to record the vendor’s email address, as it creates a comprehensive source of truth for managing vendors and 
+streamlining workflows. Having an email address is particularly helpful if you will be issuing the vendor a 1099 form at year 
+end, as QuickBooks can send 1099s electronically. 
+
+By default, what appears in the Name to print on checks field is the vendor display name. To change it, enter the preferred 
+name. For example, the Company name might be the entity name, but the Vendor display name might be used for a division, and the 
+owner could be the First name and Last name. In cases like this, you may want to change the name to print on checks to something 
+other than the vendor display name.
+--
+The address is where payments are mailed. It’s also known as the remit-to address. This address is included on the 1099, when 
+they are issued. It’s best practice to complete these, as it contributes to creating that comprehensive source of truth for 
+managing vendors, streamlining workflows, and increasing accuracy and consistency.
+
+Preview address is a link that takes you to view the address in Google Maps.
+--
+Use the Notes and attachments section to enter notes about vendors, such as products, specifications, or shipping account info. 
+These notes are not shared with the vendor—they are only visible to the client.
+
+Attachments is a useful feature as it offers secure storage of files. It’s good for documents such as W-9s, certificates of 
+insurance, and contracts. By storing W-9 forms in the vendor profiles within QuickBooks, you keep all relevant tax documents 
+organized and easily accessible, which is helpful for tax reporting and compliance purposes.
+--
+Use the Bank payment info section to record the vendor's account details to send payment.
+--
+The Business ID No. / Social Security No. field stores the taxpayer identification number of a vendor. This number is used when 
+creating 1099 forms.
+
+By checking the box next to Track payments for 1099, you mark the vendor as a contractor that should receive a 1099. Checking 
+this box will cause the vender to appear on the Contractors tab of the Expenses center, and when it comes to tax time, the 
+vendor will appear in the QuickBooks 1099 workflow. 
+--
+The Billing rate only appears if the client is using Projects (available for Plus and Advanced plans) and the vendor is paid as 
+a contractor at a daily rate.
+
+Terms indicate when payments should be made. These terms are usually included in the invoices generated by companies and sent to 
+customers, for example, payment is Due upon receipt of invoice, Net 15, and Net 30 (due 15 or 30 days from receipt of invoice).
+
+Use the Account number field to enter your account number with the vendor. This is helpful for a utility payment, for example, 
+because the account number shows up in the memo on the check and the online payment. It is also useful to have this information 
+all in one place. 
+
+Use the Default expense category dropdown to choose which expense account or subaccount that bills and expenses from this vendor 
+will be allocated to by default. This default can be changed for each bill or expense. 
+
+In almost all cases, you should leave the Opening balance field empty. It can be used when you’re adding a vendor with whom the 
+client has already done business—and who has an existing beginning balance. However, in this situation, it’s often better to 
+enter the actual transactions that make up the vendor’s balance rather than using this field. Entering the individual 
+transactions will make it easier to troubleshoot the account later on, if required. The offsetting entry for the opening 
+balance is Opening Balance Equity.
+---
+Understand how the QuickBooks Business Network works
+
+QuickBooks Business Network helps you automate how you find, connect, and exchange invoices and payments with vendors and 
+customers. This helps your business-to-business transactions move faster and more efficiently.
+
+QuickBooks Business Network workflow
+Understand how verified QuickBooks users share financial documents with each other.
+
+Verify Information: Update your business contact info first. Once you receive and accept an invitation, your connections can 
+access this contact information.
+
+Connect: Find the customer or vendor to connect with in the QuickBooks Business Network database, then send them an invitation.
+
+Exchange: After you accept an invitation, you can send invoices straight to a customer’s QuickBooks account or get bills directly 
+from a vendor.
+
+Stay updated: When your connections update their QuickBooks contact info, it updates automatically in the network.
+---
+When a client wants to pay contractors electronically, they can do this via QuickBooks Contractor Payments or QuickBooks Bill Pay.
+
+Payments automatically sync with QuickBooks, so your client’s records are always up to date. Clients can invite contractors to 
+set up a free account so they can complete their W-9s and provide bank deposit details.
+
+Paying via Bill Pay: With all your vendor info in one place, you can pay all your vendors and contractors in one place with Bill 
+Pay. You can see everyone who needs a 1099 at a glance to help you stay compliant. You can issue unlimited 1099s for no 
+additional fee with Bill Pay Premium and Elite plans.
+---
+Adjusting options in the Account and settings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*End_Certification_Course_Expenses and vendors
 --------------------------------------------------------
 Certification_Course_PeriodEnd
 
@@ -3739,6 +3877,40 @@ Recorded to here within this section.
 ****************************************************
 *notrrc is the code for "Not Recorded". Pretty sure that already recorded up to here.
 ---
+Bank rules can be copied, edited, and deleted in QuickBooks Online.
+Edit a bank rule You can open any existing rule and change:
+	Conditions
+	Payee
+	Category/account
+	Class/location
+	Auto‑add setting
+	Split details (if using fixed splits)
+Who can edit: Primary Admin, Company Admin, Accountant user.
+
+QBO allows you to duplicate an existing rule so you can:
+	Reuse the structure
+	Change only the parts you need
+	Create multiple similar rules quickly
+This is especially useful for clients with recurring vendor patterns.
+Standard users and limited-access users cannot manage rules.
+
+The following criteria CAN NOT be specified in a bank rule 'condition':
+	Transaction date, Bank account, Bank text, Transaction amount, Description
+
+Editing Rules: Existing rules can be edited to update conditions, categories, or accounts as your business needs change. 
+
+Bank rules automate categorization of recurring transactions.
+
+Bank rules do not have the ability to automatically split a transaction into multiple categories based on varying amounts or 
+patterns. They can only apply a split if you pre‑define the exact split amounts or percentages inside the rule.
+Meaning:
+They can apply a fixed split you manually set up (Example: always split $100 as $60 to Fuel and $40 to Repairs)
+They cannot analyze a transaction and decide how to split it.
+They cannot split based on changing amounts.
+They cannot split based on multiple conditions or line‑item logic.
+
+
+---
 
 
 *** End Random_Notes_Quickbooks
@@ -4143,6 +4315,23 @@ needs to be contacted for a W-9.
 
 W-9 ready is shown by contractors for whom a tax ID has been entered. You can also check if a paper or PDF copy of the W-9 has 
 been received by selecting the contractor’s name and viewing the Documents tab. 
+
+Requesting a completed W-9
+You usually need to submit a 1099 to the IRS at year end when you pay $600 or more for services from an independent contractor 
+or freelancer.
+
+At the beginning of each year, the IRS requires you to submit 1099s for any independent contractor, freelancer, or vendor not 
+listed as a corporation, who was paid $600 or more for the previous year via check, cash, or ACH.
+
+To prepare the 1099, you need to collect information from the contractor or freelancer via a completed W-9. Collecting this 
+information throughout the year will make 1099 preparation so much smoother.
+
+You should ensure you have their completed W-9 before starting an engagement or issuing any payments. Not doing this could prove 
+troublesome, after beginning the work—you may find yourself renegotiating rates for the work, and you could be required to pay 
+withholding taxes on the money you pay them.
+
+
+
 ---
 Client overview
 Another period-end task that you might want to do is download the Client overview after you have completed the Books review.  
