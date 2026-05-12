@@ -1185,8 +1185,248 @@ set up a free account so they can complete their W-9s and provide bank deposit d
 Paying via Bill Pay: With all your vendor info in one place, you can pay all your vendors and contractors in one place with Bill 
 Pay. You can see everyone who needs a 1099 at a glance to help you stay compliant. You can issue unlimited 1099s for no 
 additional fee with Bill Pay Premium and Elite plans.
+
+In order to pay your team by direct deposit, you can either add Contractor Payments to pay contractors, or add QuickBooks Online 
+Payroll to pay both employees and contractors.
 ---
 Adjusting options in the Account and settings
+
+The Bills and expenses section on the Expenses tab. Show an Items table on the expense and purchase forms. This will add a 
+product/service table on expense and purchase forms (purchase orders, expenses, bills, and vendor credits) and shows up on 
+transactions in the Bank transactions screen, so you can specify which products and services are purchased from vendors. 
+This is essential for clients using inventory, but helpful for other clients too. Turning it off also turns off Use purchase 
+orders, which is available on Plus and Advanced plans.
+
+Track expenses and items by customer adds a customer column on expense and purchase forms, so you can track expenses and 
+items by customer.
+
+Make expenses and items billable adds a billable column on expense and purchase forms, so you can add billable expenses and 
+items on sales forms, and set a percentage markup rate, if applicable.
+
+Default bill payment terms are where you can set the terms(Ex: Net 10, Net 30), rather than having to set it each time a bill 
+is entered.
+
+In the Purchase orders section, for those clients on Plus or Advanced plans, you can turn on Use purchase orders if they want 
+to track their intention to buy something.
+
+In the Messages section of the Expenses tab you can change the Default email message sent with purchase orders and associated 
+settings.
+
+Automation Options
+Another tab to check is the Advanced (or global) settings, specifically the Automation section. Selections made here will affect 
+all transactions, not just those relating to expenses and vendors.
+
+Do you want to Pre-fill forms with previously entered content? This automatically fills various fields of the form, based on the 
+last saved transaction for that customer, vendor, or employee. This can be really helpful if you want all payments to a 
+particular vendor to be categorized consistently, or if the amount you pay is the same each time. However, this setting can be 
+unhelpful if you or your client don’t pay close attention to the content of a form, and overlook adjusting these pre-fills when 
+necessary, so use the Pre-fill forms setting with care!
+
+Do you want to Automatically apply credits? This setting most commonly affects accounts receivable, but it can also affect 
+accounts payable. If there is a prepayment to a vendor (which is a credit to a vendor) and then a bill is entered, the credit 
+(prepayment) would auto apply to the bill and this may not be the desired outcome.
+
+Do you want to Automatically apply bill payments? When you record a bill payment transaction, if this setting is switched on, 
+it automatically applies that payment to the oldest existing bill. If your client doesn’t pay the oldest bills first, it can 
+cause issues in the accounting workflow. It’s common in the construction industry, where bills are paid not based on age, but 
+on completion of jobs.
+
+Also on the Advanced tab is the setting where clients can opt to Allow members to find me in the Business Network.
+
+Unrelated note: Switching off Show Items table on expense and purchase forms also switches off Use purchase orders.
+---
+The vendors list centralizes vendor information
+Consolidating all vendor-related information in one place makes it easy to access contact details, transaction history, payment 
+information, and W-9 and 1099 details, helping your client to efficiently manage their vendor relationships.
+
+Customized Account and settings help tailor to your client’s requirements
+Checking that the Account and settings are customized to your client’s needs will help them get the most from their QuickBooks 
+accounting software. Remember to revisit these settings every so often, as your client’s business develops.
+
+A proactive approach supports decision-making
+This proactive approach to managing vendors in QuickBooks supports better financial management and helps make informed business 
+decisions.
+---
+Frequent tasks
+Get an overview of the workflow and explore the tasks likely to be done daily or weekly for expenses and venders.
+
+Purchase Orders
+A purchase order is a request for specific products or services from a vendor with a promise to pay. They are a good way to help 
+clients keep track of their cash flow by keeping an eye on intended future purchases.
+
+Manually recording expenses
+In QuickBooks, an expense is money a business spends at the time of purchase, such as office supplies bought from a store and 
+paid for immediately. Often these transactions are managed when they come into the Bank transactions screen, but you can also 
+enter them manually.
+
+Recording and paying bills
+In QuickBooks, a bill is money a business owes and will pay at a later date, such as a bill for job supplies that has been 
+received but isn’t due to be paid until month end. It should be recorded in QuickBooks when the bill is received and when 
+it is paid.
+
+A check transaction is used to record a payment for an expense made from a bank account at the moment of purchase. Unlike a 
+"Bill," which you pay later, a check records both the expense and the payment simultaneously.
+
+A "Check" transaction must be assigned to a bank account, whereas a standard "Expense" transaction can be assigned to a credit 
+card or other asset accounts. Because the payment is recorded immediately, it does not increase your Accounts Payable or change 
+the vendor's balance.
+---
+Understanding the money-out workflow
+
+Step 1 of 8
+The route through the workflow depends on whether your client paid their vendor at the same time as they made the purchase 
+or whether they have time to pay.
+
+Step 2 of 8
+Regardless of when your client paid, clients on Plus and Advanced plans can incorporate a purchase order at the start of the 
+workflow. A purchase order is a form that documents a request for specific products or services from a vendor, with a promise 
+to pay.
+
+Step 3 of 8
+If your client paid their vendor at the same time as they made the purchase, then an expense should be used to record the 
+transaction in QuickBooks, either manually or via the bank transaction screen.
+An expense is a cost incurred by a business in the process of generating revenue or maintaining operations.
+If the expense was paid for by check, use the Check transaction to record the transaction, rather than the Expense transaction.
+
+Step 4 of 8
+Record a bill in QuickBooks when the purchase is associated with a date or a period different from the payment date. The cost is 
+recorded as incurred even though no money is changing hands just yet. You can think of a bill as the opposite of an invoice: 
+your client sends invoices to their customers and receives bills from their vendors.
+
+Step 5 of 8
+When your client pays the bill, record this separately in QuickBooks using the Pay bill transaction.
+
+Step 6 of 8
+Whichever route through the workflow has been taken, the associated receipt or bill can be uploaded and added to an existing 
+record in QuickBooks. Alternatively, the receipt or bill can be uploaded first and used to create a new record.
+
+Step 7 of 8
+When the client pays immediately, it affects cash accounts and it supports cash-basis accounting.
+
+Step 8 of 8
+When the client has time to pay, it affects accounts payable accounts and it supports accrual-basis accounting.
+---
+Using purchase orders
+
+A purchase order is a form that documents a request for specific products or services from a vendor with a promise to pay. Your 
+client may choose to use a purchase order to request specific products or services from a vendor, including the quantity and 
+agreed price, without having to pay for the item in question at the time of issue.
+
+In short, a purchase order is a promise to pay for something. It’s a nonaccounting (also known as nonposting) transaction, which 
+means it doesn’t affect any balances in your client’s accounts.
+
+Purchase orders are available to clients on Plus and Advanced plans. Some clients may choose to use them and some won’t.
+-- AI
+How do purchase orders work?
+Your client determines what they need to order and creates the purchase order and sends it to the vendor.
+The vendor fulfills and delivers the order, and provides an invoice to your client.
+Your client makes the payment to the vendor.
+
+After a vendor accepts a purchase order and sends the products, record it as a bill or expense in QuickBooks. You can easily 
+add the purchase order as a line item. This closes the original purchase order, connects it to the bill or expense, and 
+records the accounting accurately.
+--
+Why use purchase orders?
+Using purchase orders:
+1. Makes orders easier to track: Creating purchase orders streamlines order tracking, and when the order arrives, it’s easy to 
+   check whether the correct items and quantities have been sent.
+2. Ensures clear communication: Since purchase orders are highly detailed, they ensure your client and the vendor are in 
+   agreement about what’s expected
+3. Makes life easier for vendors: A purchase order helps vendors generate your client’s order and successfully deliver it to them.
+4. Helps manage cash flow: Purchase orders help provide control over spending and give insight on future expenditures.
+
+On purchase orders, you can enter the specific items you want to buy and the quantity. When your vendor accepts the purchase 
+order and agrees to the given terms, you can quickly add it to the Expense transactions or the Bill transactions in QuickBooks. 
+This keeps all the transactions connected and your accounts balanced.
+
+Exploring purchase orders
+
+A new purchase order is created by selecting the +Create button and then Purchase order from the Vendors section of the panel.
+Once created, the purchase order status is Open. When the client receives the items from the purchase order, its status can be 
+set to Closed from the Purchase Order status dropdown.
+
+As with all expense-related forms, the content of a purchase order can be copied to other transaction forms and a duplicate can 
+be created. Do this by selecting Copy, top right of the form. For purchase orders, copying the details to an expense or bill 
+form can streamline the money-out workflow.
+
+From AI
+In accounting and business workflows, the primary difference between an invoice and a receipt is timing and purpose.
+
+The Core Difference
+An Invoice is a request for payment. It is sent before the money has changed hands to tell the customer how much they owe and 
+when the payment is due. A Receipt is a proof of payment. It is issued after the money has been received to confirm that the 
+transaction is complete.
+
+Manually recording expenses
+When a business spends money at the time of purchase, an expense transaction can be entered into QuickBooks. Expense transactions 
+record cash-basis transactions once they’ve been completed. If the expense was paid for by check, use the Check function instead 
+to record the transaction. This function enables the client to print a paper check or record a handwritten check.
+--
+​​​Adding an expense manually​​​
+There may be times when clients want an expense recorded in their accounts immediately. This is particularly true when larger 
+expenses are incurred or to meet the needs of company reporting requirements.
+
+When clients want an expense recorded in their accounts immediately they will enter the expense manually. Then, when the payment 
+comes in via the bank feed, QuickBooks will recognize the match.
+
+When adding an expense manually in the Expense screen, you can add notes to the Memo field. These notes will then appear in the 
+account register, on printed checks and on reports.
+
+You can add attachments such as a receipt to the expense transaction.
+
+An alternative way is to start by uploading the point of sale receipt using the Intuit AI Autofill upload panel. Or, you can 
+select Snap Photos and use the QR code to take a photo of the receipt and upload it directly to the expense form from a phone 
+or tablet
+
+Once uploaded, Intuit AI will extract the data, autofill the expense form, and add the receipt as an attachment to the 
+transaction.
+
+Switching on Show breakdown in the Autofill panel, adds category details as separate lines. Review and adjust the form as 
+needed. Select Save and close to record the expense.
+--
+Recording product and service items		*Also covered in Level 1: Sales and customers
+It can be helpful to record money-out transactions using items instead of, or as well as, categories. (If you want to use both, 
+you need to split the transaction.) When you create a product or service, you specify the sale and/or purchase account on the 
+item that’s used when a transaction is recorded.
+
+To add items to sales and expense forms, and to switch on the option to allocate transactions to items in the bank feed, go to 
+the company’s account settings from the General settings gear and in the Expenses tab, switch on Show Items table on expense 
+and purchase forms.
+
+Recording money-out transactions in this way enables you to track at a more detailed level than the categories used in the chart 
+of accounts. Consider this example: for a construction industry client, it may be important to track costs not just at the 
+account level, such as an account named job supplies, but also at a more detailed itemized level that would list the job supplies 
+items.
+--
+Enter an expense when you have already paid for a business cost. If you plan to pay for the cost in the future, enter it as a 
+bill instead.
+--
+Recording and paying bills
+In QuickBooks terms, a bill is what a vendor sends a client who owes them money for a purchased product or service. (Keep in mind, 
+clients send invoices to customers and receive bills from vendors.) By recording a bill, the purchase is associated with a date 
+or period that’s different from the payment date. In other words, it’s an accrual-basis transaction, so when a bill is recorded, 
+the cost is recorded as incurred, even though no money is changing hands just yet.
+
+Recording a bill debits an account. Often this is an expense account, which increases expenses on the profit and loss statement. 
+Or recording the bill can debit an asset account, which increases assets on the balance sheet. Recording a bill also credits 
+accounts payable and increases the balance there.
+
+Once a client has paid a bill, the payment should be recorded in QuickBooks. When the bill is paid, money leaves the business. 
+Both accounts payable and the bank balance decrease by the payment amount.
+
+When recording a bill you can use the Intuit AI capability to upload the bill in the Autofill this bill panel. This is the same 
+as what can be done with Point of Sales receipts. Review and adjust what has been auto filled, if needed.
+
+​​Paying a bill​​
+
+QuickBooks Bill Pay
+With QuickBooks Bill Pay, each time clients schedule a payment, they can choose the payment account and payment method. It enables clients to easily send checks or ACH payments to vendors. 
+
+
+For bills paid through QuickBooks Bill Pay, when the payment clears the bank, it will be automatically matched to the payment in QuickBooks, meaning it won’t appear in the Bank transactions list for manual processing—saving time and ensuring accuracy. This feature only matches bank withdrawals with transactions processed through QuickBooks Bill Pay, and not all transactions are eligible.
+
+
+
 
 
 
