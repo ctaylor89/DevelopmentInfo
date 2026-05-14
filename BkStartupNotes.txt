@@ -1081,8 +1081,7 @@ records, efficient payment processes, simplified tax reporting, improved vendor 
 and overall operational efficiency. This proactive approach supports better financial management and helps in making informed 
 business decisions.
 
-Adjusting
-settings
+Adjusting settings
 Account and settings is the control center for the account preferences and configurations. It’s where you customize QuickBooks 
 to suit your client’s specific business needs and preferences.
 ---
@@ -1420,26 +1419,109 @@ as what can be done with Point of Sales receipts. Review and adjust what has bee
 ​​Paying a bill​​
 
 QuickBooks Bill Pay
-With QuickBooks Bill Pay, each time clients schedule a payment, they can choose the payment account and payment method. It enables clients to easily send checks or ACH payments to vendors. 
+With QuickBooks Bill Pay, each time clients schedule a payment, they can choose the payment account and payment method. It 
+enables clients to easily send checks or ACH payments to vendors. 
 
+For bills paid through QuickBooks Bill Pay, when the payment clears the bank, it will be automatically matched to the payment in 
+QuickBooks, meaning it won’t appear in the Bank transactions list for manual processing—saving time and ensuring accuracy. This 
+feature only matches bank withdrawals with transactions processed through QuickBooks Bill Pay, and not all transactions are 
+eligible.
 
-For bills paid through QuickBooks Bill Pay, when the payment clears the bank, it will be automatically matched to the payment in QuickBooks, meaning it won’t appear in the Bank transactions list for manual processing—saving time and ensuring accuracy. This feature only matches bank withdrawals with transactions processed through QuickBooks Bill Pay, and not all transactions are eligible.
+Enter bills in QuickBooks Online
+You can enter bills into QuickBooks Online individually or in batches to track your accounts payable. We let you get bills 
+through the QuickBooks Business Network, upload them from your computer, or add details manually.
+If you’ve already paid for a business expense, enter it as an expense instead of a bill.
 
+How to add and Pay Bills in QBO (Video) https://www.youtube.com/watch?v=CjcTT4H0cKA&t=289s
+1. Enter bills into Quickbooks
 
+2. Pay your bills online with QuickBooks Bill Pay
 
+3. What to do if you pay by check or some other method
 
+4 Match payments from online banking
 
+​​​​​​​Methods of uploading​​​​​​​
+Receipts and bills can be uploaded when completing expense and bill transaction forms. There are several other ways to upload, 
+which don’t require completing a form first—but if there is a completed form, the uploaded file can be matched to it.
 
+Upload via the business feed
+You can upload PDF, JPG, and PNG files via the Autofill panel in the Business Feed and have Intuit AI create the corresponding 
+bill, expense, invoice, or estimate transaction record in QuickBooks. The data in the files uploaded here is analyzed and used 
+to autofill the transaction type that has been selected from the dropdown. You can then make any adjustments and save the form 
+with the uploaded file attached.
 
+Purchase Notification
+When a client connects their MasterCard credit card and phone number to QuickBooks, each time they make a purchase using that 
+card, they’ll get a text message from QuickBooks with a link. They can then snap a photo of the receipt and upload it. The 
+Accounting AI capability matches that receipt to the transaction. It’s ready for review and posting in the Bank transactions 
+screen. Your client can set up the MasterCard connection by selecting Purchase notifications on the Expenses screen.
 
+Single and multiple upload
+You can upload receipts and bills via the Bills screen in the Expenses & Pay Bills app and via the Receipts screen in the 
+Accounting app. To do this, select Add bill, choose Upload multiple bills from the dropdown, and then select Upload from this 
+device. Multiple files can be uploaded simultaneously. 
 
+Intuit AI extracts the data from the uploaded file and prefills multiple draft transactions. These transactions are ready to be 
+reviewed, and either matched to an existing transaction record, or a new expense or bill record can be created.
 
+Uploading via email
+Users with permission can send in receipts.
+They can only send from the email address they use to sign in to QB.
+Each image must be of a single receipt, but attaching multiple images is OK.
 
+Prerequisites
+Before you upload a receipt:
+To upload receipts with the QuickBooks mobile app, install it on your iOS or Android mobile device.
+Remove any sensitive or personal information, like credit card numbers and government identifiers.
+Your receipt must be a PDF, JPEG, JPG, GIF, or PNG image.
+If you have a newer iPhone or iPad, you may need to convert your images from the HEIC format. Apple provides instructions on 
+how to do so.
+Note: This feature is limited for QuickBooks Online Free and QuickBooks Online Lite. 
 
+You can add one receipt at a time using a web browser or the QuickBooks mobile app. Repeat for each receipt you want to add. 
+Each file should include only one receipt.
 
+Example to create a new check in order to pay a bill:
+	Select the +Create button, then select Check
+	In the Check screen, select Ellis Equipment Rental in the Payee field
+	Note that Julie Ellis’s business address automatically populates the Mailing address box
+	In the Bank Account field, select Checking
+	Leave the Payment date as the current date
+	In the Check no. box, enter 86
+	In the box under Category, select Equipment Rental
+	For the description of the expense, enter Digger rental
+	Make the amount $200
+	Next, select Save and close 
+	Head to the Expense transactions screen in the Expenses & Pay Bills app. The new check should appear at the top of the list.
+	Head to the Chart of Accounts and look at the transaction in the Equipment Rental account register.
 
+When your client spends money at the time of purchase, what should be used to record the transaction in QuickBooks?
+	A: An Expense
 
+Which of the following could happen when your client receives a bill and records it in QuickBooks?
+	A: Increases accounts payable balance
+	A: Credits accounts payable
+	A: Debits the expense account
+	A: Increases expenses on the profit and loss
+---
+Recap:
+Enter an expense transaction to record when a business spends money immediately. Enter a bill transaction when a business owes 
+money that will be paid at a later date.
 
+Purchase orders help to provide information for better cash flow reporting, improve vendor relationships, and ensure internal 
+controls.
+
+Uploading receipts and bills can increase accuracy of record keeping for your client and enhance expense verification and 
+compliance.
+
+An invoice is used to request money from a customer.
+A bill is used to record money the business owes to a vendor.
+
+Invoices are used when:
+The customer will pay later (accounts receivable).
+The business needs to track what customers owe.
+The business wants aging reports, statements, and follow‑up reminders.
 
 
 
@@ -2213,6 +2295,16 @@ record sales and payments received at the time of the transaction.
 
 The Undeposited Funds account is a temporary holding account that tracks payments received from customers that have not been 
 deposited to your client’s bank account. When the payments are deposited at the bank, this should be recorded in QuickBooks.
+--
+*notrrc
+You can deposit the money directly into the specific bank account (e.g., "Checking") when recording the Sales Receipt or 
+Receive Payment screen.
+
+The "Golden Rule"
+The goal of QuickBooks is to mirror reality. If your bank statement shows $1,000, your QuickBooks should show $1,000. If that 
+$1,000 is made up of five $200 payments, use Undeposited Funds to group them. If it’s just one payment, skip it and deposit 
+directly to the bank.
+--
 
 *End 3 of 6 parts of Sales and Customers
 ****************************************************
