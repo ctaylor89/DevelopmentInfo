@@ -6,7 +6,7 @@ Bookkeeping_Job_Advice
 Bookkeeping_Job_Research
 Books_Review_Center
 Certification_Course_Banking						
-Certification_Course_Expenses and vendors				*End_Certification_Course_Expenses and vendors
+Certification_Course_Expenses_and_vendors				*End_Certification_Course_Expenses and vendors
 Certification_Course_PeriodEnd
 Certification_Course_SalesAndCustomers
 Certifications_Info_For_Bookkeepers
@@ -1066,7 +1066,7 @@ deeper insights based on how you interpret the data in the Reconciliation report
 
 *End Certification_Course_Banking
 --------------------------------------------------------
-Certification_Course_Expenses and vendors			*End_Certification_Course_Expenses and vendors
+Certification_Course_Expenses_and_vendors			*End_Certification_Course_Expenses_and_vendors
 
 Purchase Orders are a request for goods with a promise to pay.
 A vendor is a person or business who sells products or provides services.
@@ -1210,7 +1210,9 @@ to track their intention to buy something.
 
 In the Messages section of the Expenses tab you can change the Default email message sent with purchase orders and associated 
 settings.
-
+---
+*End of part 1 Certification_Course_Expenses and vendors
+---
 Automation Options
 Another tab to check is the Advanced (or global) settings, specifically the Automation section. Selections made here will affect 
 all transactions, not just those relating to expenses and vendors.
@@ -1522,11 +1524,182 @@ Invoices are used when:
 The customer will pay later (accounts receivable).
 The business needs to track what customers owe.
 The business wants aging reports, statements, and follow‑up reminders.
+---
+Receiving vendor refunds and vendor credits
+
+A vendor may issue your client with a refund credit. Perhaps it could be because your client returned an item, or to 
+settle a dispute. When you record a vendor refund in QuickBooks, it increases the cash balance and decreases the balance of the 
+corresponding expense or liability account.
+
+Open a Bank Deposit form. You can enter the refund in the Bank Deposit form in the Add funds to this deposit area of the form.
+
+When you record a vendor credit in QuickBooks, it is posted as a debit to decrease accounts payable. 
+--
+If your client receives a credit from a vendor, it needs to be recorded in QuickBooks so that it can be applied to an existing 
+open bill or a future purchase from that vendor. 
+
+Vendor credits can be created by selecting the Vendor Credit option from the Create btn or from the Expenses form. 
+
+To apply a vendor credit to a bill payment, select the bill payment on the Bill Payment screen. Then select Mark as paid 
+in the action column.
+
+Enter vendor credits and refunds in QuickBooks Online
+Vendor credits and refunds record money returned to your business by a vendor. You can enter these transactions in QuickBooks 
+Online to ensure your expense records are accurate and your bank balance is correct. 
+
+How you enter the refund depends on how you record your purchases.
+
+Option 1: Record a refund for expenses or checks
+Use this method if you recorded the original purchase as an expense or check (not a bill).
+
+Option 2: Record a vendor credit for bills
+Use this method if you track expenses using bills and plan to apply the credit to future payments.
+
+Option 3: Record a refund for a paid bill
+Use this method if a vendor sends you a refund check for a bill you have already paid.
+
+Record a refund to a credit card
+Use this method if a vendor refunds a purchase directly to your credit card.
+--
+Let’s now look at paying down credit cards. When it comes to how they record payments to clear their credit cards in QuickBooks, 
+clients commonly go off course in two ways.
+
+1) Using the wrong transaction type
+Clients record the credit card statement as a bill and then record the payment as a bill payment.
+This is not recommended because it can lead to discrepancies in account balances, as well as adversely affect cash-basis 
+financial statement reporting.
+
+2) Miscategorizing the payment. Clients don’t use the Pay down credit card feature and instead record it as an expense.
+--
+It’s a good idea for you and your clients to regularly review their recurring transactions to avoid recording regular money-out 
+transactions that are no longer happening. For example, loan repayments when the loan has been paid in full. You can see a list 
+of all Recurring transactions by selecting it from the General Settings gear.
+
+Also note that a customer, vendor, employee, product/service, or account can’t be made inactive if it’s being used on a recurring 
+transaction.
+
+Some Key reports
+The Accounts Payable Aging Summary Report shows the total balance of unpaid bills and unused credits by vendor.
+The accounts payable line on the balance sheet should be the same as the total on the Accounts Payable Aging Summary Report.
+
+The Accounts Payable Aging Detail Report shows the balance of each unpaid bill and unused credit, grouped by days past due.
+The accounts payable line on the balance sheet should be the same as the total on the Accounts Payable Aging Detail Report.
+
+The 1099 Contractor Balance Summary report shows the total amount you owe to each contractor. The 1099 Contractor Balance Detail 
+report lists all the bills that make up the total amount you owe each contractor. It shows the amount owed for bills but not 
+expenses. These two reports are not used for year-end 1099 reporting. 
+
+The Transaction List by Vendor report shows all expense transaction types—checks, expenses, bills, and vendor credits—for a 
+specific period grouped by vendor.
+
+The Expenses by Vendor Summary report shows the total amount spent with each vendor in the period.
+
+The Check Detail Report shows the checks your client has written to all the vendors, and can be set up to show 
+which are uncleared.
+
+Note: Expense reports can report on cash or accrual accounting method. 
+--
+Challenge #1
+Record the vendor credit and then apply the credit to the vendor bill payment. Here are the details:
+	The vendor is Norton Lumber and Building Materials
+	The credit is for 2 pumps at $10 each and was issued today
+	The vendor credit number is 100
+	The bill is for $205
+
+Review
+If you got it right, the bill payment and the vendor credit should be listed on the Expenses screen in the 
+Expenses & Pay Bills app. 
+
+Solution
+Here are the steps to complete the challenge.
+	Select +Create, then Vendor credit
+	Select Norton Lumber and Building Materials from the Vendor dropdown
+	Enter today’s date in the Payment date field
+	Enter the vendor credit number—100—in the Ref no. field
+	Select Item details to open the grid
+	Select Pump from the dropdown under Product/Service
+	Enter 2 for the Qty and $10 for the Rate
+	Select Save and close
+	Next, select the Expenses & Pay Bills app and Expense transactions
+	Scroll down to find the original bill for $205.00 for Norton Lumber and Building Materials
+	Select Mark as paid from the Action column
+	In the Bill Payment that opens, check that all the details are correct, then select Save and close
+
+Challenge #2
+Here are the details of the transaction:
+	The payment was $500
+	The account used was checking
+
+Review
+	You can check if you’ve completed the task correctly by looking to see if the transaction is listed on the Expenses screen in 
+	the Expenses & Pay Bills app.
+
+Solution
+Here are the steps to complete the challenge.
+	Select +Create, then select Pay down credit card 
+	In the Which credit card did you pay? box, select Visa
+	Leave the Payee field blank
+	In the How much did you pay? box, enter $500
+	Enter today’s date for the Date of payment
+	In the What did you use to make this payment? box, select Checking
+	Finally, select Save or Save and close
+
+Challenge #3
+	The landlord is EDD
+	The interval is monthly, on the first of each month starting next month
+	The rate is $500
+	The account is checking
+	Name the recurring transaction EDD Warehouse Space Monthly Rent
+
+Review
+You can check you’ve completed the task correctly by taking a look at the recurring transactions:
+	Select the General settings gear, then select Recurring transactions 
+	The recurring transaction for EDD should appear in the list
+
+Solution
+Here are the steps to complete the challenge.
+	Select the General settings gear top right of the screen
+	Select Recurring transactions
+	Select New
+	Select Expense from the dropdown as the new transaction type, and then select OK
+	On the next screen, enter EDD Warehouse Space Monthly Rent as the Template name
+	As the type, make it Scheduled
+	Leave the Create days in advance box blank
+	Select EDD from the payee list
+	Make the account from which the payment will be made Checking
+	Select Monthly as the interval (the first day of each month is already selected by default as the payment day)
+	Make the Start date the first day of next month
+	Leave the End date on None
+	There’s no need to enter a payment method or reference number 
+	In the Category details section, select Rent or Lease 
+	Make the amount $500
+	Select Save template
+--
+Q: What happens when your client receives a credit from a vendor?
+When a vendor credit is recorded in QuickBooks, it will post as a debit to decrease accounts payable, but it won’t impact the cash balance. It can be applied to an existing open bill or a future purchase from that vendor.
+Answer: When a vendor credit is recorded in QuickBooks, it will post as a debit to decrease accounts payable, but it won’t 
+impact the cash balance. It can be applied to an existing open bill or a future purchase from that vendor.
+
+Q: What is the best way to record a payment made to a credit card to ensure that it’s categorized accurately in QuickBooks?
+It should be recorded as a pay down credit card transaction. This helps to ensure that the payment is allocated to the correct 
+credit card liability account.
+--
+A vendor credit reduces money that your client owes to a vendor. A vendor refund returns money to your client.
+
+By regularly reviewing expense reports, you can monitor spending against budgets, identify overspending, and make necessary 
+adjustments to help clients stay within limits. Expense reports can also be used to track and manage vendor payments, ensuring 
+all bills are accounted for and paid on time.
+--
+Practice_Notes
+When adding an expense, it is recorded in the bank register, vendor register and the affected account register. 
+When I delete an expense, it is deleted from the bank register, vendor register and the affected account register.
+When I void an expense, it is voided (0 amount) in the bank register and in the affected account register.
 
 
 
 
-*End_Certification_Course_Expenses and vendors
+
+*End_Certification_Course_Expenses_and_vendors
 --------------------------------------------------------
 Certification_Course_PeriodEnd
 
