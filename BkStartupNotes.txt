@@ -3553,7 +3553,7 @@ Level 1 - All modules completed, Cert not issued. Good news! We reviewed your ca
 say this issue was resolved.
 ---------------------------------------------------------
 Links_Resources
-Passed a ProAdvisor training course yesterday. A page displayed saying congrats, passed with score of 88%. But the main page shows that it is still in progress. Help!
+
 https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/get-started-adjust-settings-sign-intuit-quickbooks/L6TekQ3zX_US_en_US
 
 Veronica Wasek’s YouTube channel with QuickBooks tutorials and tips for bookkeepers. Retired CPA.
@@ -3595,7 +3595,6 @@ Tutorial Videos
 
 Why Debits and Credits Still Confuse You — Let's Fix That
 https://www.bing.com/videos/riverview/relatedvideo?q=debit+definition&&mid=CA18905539AA873FD896CA18905539AA873FD896&FORM=VAMGZC
-
 
 --------------------------------------------------------
 Management_Reports
