@@ -1,4 +1,5 @@
-﻿Applications_in_Quickbooks
+﻿Accounting_Equations
+Applications_in_Quickbooks
 Articles_To_Read
 Balance_Sheet_Explained
 Balance_Sheet_Proving
@@ -404,6 +405,90 @@ the exact certifications worth getting
 the best niches for someone with your technical background
 
 or a pricing model for your future bookkeeping business
+
+--------------------------------------------------------
+Accounting_Equations
+*notrrc
+---
+The full accounting equation is: Assets = Liabilities + Equity
+
+In accounting, assets represent the economic resources of a business—things it owns or controls that are expected to provide 
+future economic benefit (cash, savings, cost savings, or the ability to generate revenue).
+A liability is a source of assets. When a business takes on a liability, it receives something valuable in exchange.
+Examples:
+Loan payable → gives you cash
+	Liability: Loan Payable
+	Asset created: Cash
+
+Accounts payable → gives you inventory or supplies
+	Liability: Accounts Payable
+
+Asset created: Inventory or Supplies
+	Unearned revenue → gives you cash upfront
+	Liability: Unearned Revenue
+Asset created: Cash
+
+So even though the liability is something you owe, it funds the assets you use to operate.
+Assets come from two places:
+	Creditors → Liabilities
+	Owners → Equity
+
+So liabilities are not “bad” or “negative.” They are one of the two sources of assets.
+Liabilities don’t reduce assets — they explain them.
+If a business has $50,000 in assets, the equation asks:
+	How much came from owners?
+	How much came from creditors?
+
+A liability is never recorded as an asset — but it can produce an asset.
+Liabilities are claims on assets, not assets themselves.
+
+The Core Idea Behind Assets
+Assets represent:
+	Economic resources
+	Controlled by the business
+	Expected to provide future benefit
+---
+Equity is calculated using the basic accounting equation rearranged: Equity = Assets − Liabilities
+Solving for Equity gives you the owner’s (or shareholders’) residual interest in the business — what’s left after all 
+liabilitiess are paid. 
+Debits and Credits
+
+Equity = What’s left for the owner after paying off all liabilities.
+
+If a business has: $100,000 in assets and $40,000 in liabilities
+Then equity is: 100,000 - 40,000 = 60,000
+
+But that $60,000 is not a pile of cash.
+It’s simply the owner’s share of the assets.
+
+Why people get confused: Because equity includes the effect of cash, but it does not contain cash.
+Example:
+If the owner contributes $10,000 cash:
+	Cash ↑ (asset)
+	Owner’s Equity ↑
+
+But the equity account does not hold the cash.
+The cash sits in the Cash asset account.
+
+Equity just records the owner’s claim on that cash.
+--
+Perfect analogy
+Think of a house:
+The house itself = asset
+The mortgage = liability
+Your ownership stake = equity
+
+Your equity is not a pile of money in a drawer.
+It’s simply the portion of the house you own after subtracting the mortgage.
+---
+Debits and Credits
+
+A debit is a left‑side accounting entry that increases assets and expenses, decreases liabilities and equity, and must be 
+balanced by an equal credit in the double‑entry system.
+
+
+
+Ask AI: A QBO Debits/Credits Practice Test
 
 --------------------------------------------------------
 Applications_in_Quickbooks

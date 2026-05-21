@@ -248,6 +248,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		AccountingEquation.docx = AccountingEquation.docx
 		BK_InterviewQuestions.txt = BK_InterviewQuestions.txt
 		SalesExpensesWorkflow.pdf = SalesExpensesWorkflow.pdf
+		QB_TasksPractice.txt = QB_TasksPractice.txt
 		Self_Marketing_BK.txt = Self_Marketing_BK.txt
 	EndProjectSection
 EndProject

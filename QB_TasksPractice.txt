@@ -1,0 +1,25 @@
+
+
+-------------------------------------------------------------------------------------
+QuickBooks Task Practice	For practice and quick lookup
+-------------------------------------------------------------------------------------
+Paying the bill is recorded separately to receiving the bill
+Entering a bill records the liability (A/P). Paying the bill clears that liability.
+These are always two separate transactions in QBO.
+Bills are specifically for delayed payment.
+If the client pays immediately, you use an expense or check, not a bill.
+
+
+-------------------------------------------------------------------------------------
+Use the Transfer feature to move the transaction from the bank account to the credit card account.
+Or
+Use the “Pay down credit card” feature
+Both of these are correct because they do the same thing under the hood — they properly move money from the bank account to the 
+credit card liability account, keeping your books clean and reconcilable.
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
