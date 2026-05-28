@@ -11,7 +11,14 @@ Last Sunday
 Are there any bookkeepers organizations in Ventura County, CA?
 Yes — Ventura County has multiple bookkeeping organizations and firms, ranging from solo practitioners to full‑service accounting companies. 
 ---
-
+Act as someone who is an expert bookkeeper for a construction business. context: I want to learn what bookkeeping tasks would 
+be specific to the contstruction business compared to most other types of business. Ouput: What are the booking tasks that are 
+unique for contractors?
+---
+context: Many career advisors recommend finding a niche by targeting a specific industry when looking for new clients. output: 
+As a bookkeeper just starting out, how can I best prepare myself to interview for an industry that I have never worked in before?
+*Note that this is a good prompt to use even after I get a job in a specific industry, as it can help me prepare for the work 
+I have to do and the questions I may have to answer for clients in that industry.
 -------------------------------------------------------
 Random_Notes
 https://www.facebook.com/search/top?q=cameron%20montgomery%20social%20media%20marketing

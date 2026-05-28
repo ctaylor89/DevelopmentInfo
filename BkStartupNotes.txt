@@ -576,6 +576,9 @@ For example, these could include:
 --------------------------------------------------------
 Clean_Up_Books  https://www.youtube.com/watch?v=moRR3fc61XE
 
+How to Do Bookkeeping Cleanup (And Price Cleanup Work Correctly) *Loves to do cleanup work.
+https://www.youtube.com/watch?v=Dr3vk5Pl2YU
+
 Learn through trial and error. If there is only something like 6 months worth of data and the problems are deep, 
 consider starting over. 
 
@@ -584,12 +587,12 @@ Only clean up for the years that they have not filed taxes yet. (Atleast initial
 If the years where taxes have already been filed are messing up the years that are be reconcilled, consider talking 
 to your client about starting over.
 
-Morgan says that it typically takes about 10 to 30 hours for a cleanup (about a month for her). It jis going to vary based on:
-
-How many years need to be cleaned up.
-Number of accounts. 
-Types of accounts.
-How many transactions per month.
+Morgan says that it typically takes about 10 to 30 hours for a cleanup (about a month for her). 
+It is going to vary based on:
+	How many years need to be cleaned up.
+	Number of accounts. 
+	Types of accounts.
+	How many transactions per month.
 
 Estimated time to clean up:
 Small clients with 1 year of data and 1 bank account: 10-15 hours.
@@ -5314,8 +5317,6 @@ in a timely manner.
 If any of your clients don’t have their bank feeds connected yet, it’s worth a conversation with them about the efficiencies it 
 could bring. You could also see if it’s possible to have a view only login for their bank account, so you can access statements 
 yourself. 
-
-
 --------------------------------------------------------------
 Reporting_in_Quickbooks
 
@@ -5323,8 +5324,36 @@ Profit & Loss (P&L) Report: Shows revenue, expenses, and net income for a specif
 understanding business performance. Profit & Loss is all about performance — how much money came in, how much went out, 
 and what’s left over. It is also referred to as the Income Statement. It’s the most commonly used report for assessing 
 profitability and making decisions. It let you know if the income is sufficient to cover expenses and generate profit.
-
+--------------------------------------------------------------
 Self_Marketing
+
+Position yourself as the Trusted Advisor or the Strategic Partner. Remember that clients want someone who help the business 
+owner understand their financials, not just someone who can do data entry. You want to be the person they turn to for insights,
+not just the person they turn to for categorization.
+
+A Trusted Advisor or the Strategic Partner is someone that partners with the business owner as a sounding board who can help research 
+things, understand what is going on in the industry, and provide insights that help the business owner make better decisions. 
+It’s a much more valuable role than just a bookkeeper who categorizes transactions. It’s also a much more defensible role that 
+allows you to charge higher prices.
+
+Whether you decide to go out on your own or work for a company, decide on your niche and ideal client. This will help you 
+position yourself as an expert in that area and attract the right clients who value your services. For example, you could 
+specialize in working with e-commerce businesses, freelancers, or restaurants. By focusing on a specific niche, you can 
+tailor your marketing efforts and services to meet the unique needs of that industry, which can justify higher pricing.
+
+Technical skills are valuable, so make sure to highlight your proficiency with bookkeeping software, automation tools, and any 
+relevant certifications you have. Also promote your self as a former Software Engineer with a deep understanding of systems, 
+automation, and compliance(government experience). 
+---
+To learn about a targeted niche:
+Research the industry that I am targeting.
+Identify common tasks or any special skills that a bookkeeper would need to do in this industry.
+---
+Consider checking the websites of accounting businesses in Ventura County for available jobs and what industries they specialize in.
+Consider cold calling them.
+---
+Whether you decide to go out on your own or work for a company, you will likely have sales calls and interviews with potential clients. It’s important to be
+prepared for these conversations so you can confidently articulate your value and justify your pricing.
 
 Interview questions for bookkeepers. This is a great resource to prepare for sales calls and interviews with potential 
 clients. It covers common questions about bookkeeping processes, software proficiency, handling challenges, and 
@@ -5592,6 +5621,8 @@ Very small sole proprietors may not see enough value yet.
 --------------------------------------------------------
 Startup_Notes
 
+What Services Should New Bookkeepers Offer First? Https://www.youtube.com/watch?v=eDD9witD6E4
+
 ---
 Dealing with potential clients
 The tone is calm, authoritative, and consultative — exactly what small‑business owners respond to.
@@ -5678,6 +5709,41 @@ AI: If you want, I can next:
 	Help you script responses to common objections
 	Help you structure pricing tiers for this
 	Or role-play a mock sales call scenario with you
+--
+What services should I offer as a bookkeeper when starting out?
+* The bookkeepers who burn out the fastest are the ones who try to do everything. When you’re starting out, it’s better to focus 
+on a core set of services that you can deliver well, rather than trying to be a one-stop shop for every possible bookkeeping need.
+
+AI:
+When starting out as a bookkeeper, you can offer a range of services to meet the needs of small businesses. Here are some common services to consider:
+1. **Basic Bookkeeping**: This includes recording financial transactions, categorizing expenses, and maintaining the general ledger.
+2. **Bank Reconciliation**: Regularly reconciling bank statements with your clients' books to ensure accuracy.
+3. **Accounts Payable and Receivable Management**: Managing invoices, tracking payments, and ensuring timely collections.
+4. **Financial Reporting**: Providing monthly or quarterly financial statements, such as Profit & Loss and Balance Sheets.
+5. **Tax Preparation Support**: Organizing financial records and providing necessary documentation for tax preparation.
+
+The Bookkeeper's Coach
+What services should I offer as a bookkeeper when starting out?
+Monthly balance sheet reconciliation (which includes loans, credit cards, anything point of sale, sales tax).
+Bank feed categorization, financial reporting, maybe more.
+
+*Try to arrange monthly meetings with clients to review their financials and provide insights. This can be a great way to build 
+relationships and demonstrate your value beyond just data entry.* If they do not want to meet, you can still provide a monthly 
+financial report with insights and recommendations. This can help position you as a trusted advisor rather than just a bookkeeper.
+
+What types of businesses/customers should I target as a startup bookkeeper?
+Service based business: consultants, freelancers, photographers, coaches, marketers, creatives, designers, writers, virtual assistants, etc.
+Keep in mind that these types of businesses often have simpler bookkeeping needs and may be more open to working with a startup 
+bookkeeper. Additionally, they may appreciate the personalized attention and flexibility that a smaller bookkeeping service can 
+provide.
+
+AI:
+As a startup bookkeeper, you should target small businesses, freelancers, and entrepreneurs who may not have the resources to 
+hire a full-time accountant. Look for clients in industries such as retail, e-commerce, professional services, and construction, 
+as they often require bookkeeping support but may not have in-house expertise.
+
+
+
 --
 Business_License_Requirements
 
