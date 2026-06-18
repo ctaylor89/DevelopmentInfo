@@ -8,15 +8,16 @@ Bookkeeping_Job_Research
 Books_Review_Center
 Clean_Up_Books
 Certification_Course_Banking						
-Certification_Course_Expenses_and_vendors				*End_Certification_Course_Expenses and vendors
-Certification_Course_PeriodEnd
-Certification_Course_SalesAndCustomers
+Certification_Course_Expenses_and_vendors			*End_Certification_Course_Expenses and vendors
+Certification_Course_PeriodEnd						
+Certification_Course_SalesAndCustomers				*Overview_of_setup_tasks
 Certifications_Info_For_Bookkeepers
 Chart_Of_Accounts
 Courses_And_Training
 Definitions_
 Formulas_And_Concepts
 Help_
+Links_QB_Training
 Links_Resources	
 Management_Reports
 Plans_QB
@@ -2281,7 +2282,7 @@ In the new experience, you will find the the customer list in the Customer Hub.
 The Customers tab also allows you to manage your customer list, including adding new customers, editing existing customers.
 You can view a customers contact details, plus their current open balance.
 ------
-Overview of setup tasks
+Overview_of_setup_tasks
 The setup tasks will get your client up and running using the Sales center. Remember, it’s worth revisiting these tasks for a 
 client once in a while as their business develops and grows. You may need to make some changes so that their QuickBooks 
 accounting software is always best aligned to their business.
@@ -3825,7 +3826,7 @@ https://learnaccountingforfree.com/
 
 Learn the basics of accounting and bookkeeping with this comprehensive online course. It covers everything from the fundamentals 
 of double-entry bookkeeping to financial statements and tax preparation. Perfect for beginners looking to build a strong 
-foundation in accounting. Not free, Course overviewhttps://www.youtube.com/@LAB-JPTC
+foundation in accounting. Not free, Course overview https://www.youtube.com/@LAB-JPTC
 https://learnaccountingbasics.com/
 ---------------------------------------------------------
 Help_
@@ -3845,23 +3846,8 @@ We’re reaching out to you about a recent issue you reported: INV-150467: ProAd
 Level 1 - All modules completed, Cert not issued. Good news! We reviewed your case (15157058860), and we're happy to 
 say this issue was resolved.
 ---------------------------------------------------------
-Links_Resources
+Links_QB_Training
 
-
-Morgan's site  *Has free master class for BK and a start up checklist. *Has some good videos to check out. Should do this.
-https://www.finepoints.biz/
-
-BEGINNER services to offer as a bookkeeper (level 1, 2 and 3 ideas) * Several useful links on this site
-https://www.youtube.com/watch?v=3BPxGm1SIGk
-
-https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/get-started-adjust-settings-sign-intuit-quickbooks/L6TekQ3zX_US_en_US
-
-
-Veronica Wasek’s YouTube channel with QuickBooks tutorials and tips for bookkeepers. Retired CPA.
-How to do a Clean-up (Paid )
-https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbmY5WkU4S0EzYjhnWTRUM2tJTEwybHByWDhKQXxBQ3Jtc0tsaFdkQkVMenVGMTNWTC0zaEdYaEkxM3dFejRYUmxRMzE0UFY1N1JhYkRhbFBMMDBITXBpU21PTDdVZHJzakg4VExSUmJPb0d4U1JTakpYWC16cW9ad0ZCbi1KbktGNEl0dGU3Q0Fpa3JzanZERWpJNA&q=https%3A%2F%2Fcourses.5mbacademy.com%2Fcourses%2Fcomplete-qbo-cleanup-system%3Fref%3Da25de6&v=3BPxGm1SIGk
-
-https://courses.5mbacademy.com/courses/take/the-virtual-bookkeepers-toolbox/texts/64333870-strategies-for-finding-clients
 Gets you to sign in site to access the QBOA training and certification materials.
 1) https://accounts.intuit.com/	*Login
 2) https://proadvisoracademy.app.intuit.com/home	*After login enter this url on a new tab
@@ -3873,9 +3859,11 @@ Sample QuickBooks Online company (the demo file with fake data). *** Open in an 
 https://qbo.intuit.com/redir/testdrive or maybe https://c23.qbo.intuit.com/qbo23/samplecompany/validated?SKU=7&arg=QBOA&companyId=1000
 ***Try a different browser if not displaying as it should.
 
+Craig's Design and Landscaping Services is a sample client on the Plus plan where you can explore and experiment. 
+https://c23.qbo.intuit.com/qbo23/samplecompany/validated?SKU=7&arg=QBOA&companyId=1000
+
 Access to my temp QuickBooks Accountant account for practice and exploration. If already signed in.
 https://qbo.intuit.com/app/postlogin?locale=en-us&iux_intuit_tid=1-698e33bb-3a3fbb4947d3a5e83da0bd42
-QB Tour
 
 Introduction to QuickBooks Online for Beginners, PART I (2025)
 https://www.youtube.com/watch?v=COav3JMA7Po
@@ -3883,22 +3871,69 @@ https://www.youtube.com/watch?v=COav3JMA7Po
 Pro Advisor Glossary
 https://drive.google.com/file/d/1SPt24RBgvJSBesv6cnUDn73_ccDdtnDO/view?pli=1
 
+Explore QuickBooks on the Intuit Platform
+https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/get-started-adjust-settings-sign-intuit-quickbooks/L6TekQ3zX_US_en_US
+
 In the Know. Weekly newsletter from Intuit with tips, updates, and insights for ProAdvisors. It’s a great way to stay current 
 on the platform and industry trends.
 https://www.firmofthefuture.com/quickbooks-proadvisor/in-the-know/
+---------------------------------------------------------
+Links_Resources
+
+Morgan's site  *Has free master class for BK and a start up checklist. *Has some good videos to check out. Should do this.
+https://www.finepoints.biz/
+
+BEGINNER services to offer as a bookkeeper (level 1, 2 and 3 ideas) * Several useful links on this site
+https://www.youtube.com/watch?v=3BPxGm1SIGk
+
+Veronica Wasek’s YouTube channel with QuickBooks tutorials and tips for bookkeepers. Retired CPA.
+How to do a Clean-up (Paid )
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbmY5WkU4S0EzYjhnWTRUM2tJTEwybHByWDhKQXxBQ3Jtc0tsaFdkQkVMenVGMTNWTC0zaEdYaEkxM3dFejRYUmxRMzE0UFY1N1JhYkRhbFBMMDBITXBpU21PTDdVZHJzakg4VExSUmJPb0d4U1JTakpYWC16cW9ad0ZCbi1KbktGNEl0dGU3Q0Fpa3JzanZERWpJNA&q=https%3A%2F%2Fcourses.5mbacademy.com%2Fcourses%2Fcomplete-qbo-cleanup-system%3Fref%3Da25de6&v=3BPxGm1SIGk
+
+Strategies for finding clients.  5MB Academy.
+https://courses.5mbacademy.com/courses/take/the-virtual-bookkeepers-toolbox/texts/64333870-strategies-for-finding-clients
+
+Understanding Debits and Credits in Accounting
+https://www.investopedia.com/terms/d/debit.asp
+
+Chart of Accounts Example. Standard chart of accounts used by Clara CFO group
+financialtechlab.com/coa
+https://www.youtube.com/watch?v=a3oNcgusZjc
 
 Publication 946 (2025), How To Depreciate Property. This is a key resource for understanding how to handle depreciation in 
 bookkeeping and tax preparation.)
 https://www.irs.gov/publications/p946#en_US_2023_publink1000107316
-
-Craig's Design and Landscaping Services is a sample client on the Plus plan where you can explore and experiment. 
-https://c23.qbo.intuit.com/qbo23/samplecompany/validated?SKU=7&arg=QBOA&companyId=1000
-
 ---
-Tutorial Videos
+Bookkeeper Tutorial Videos
 
 Why Debits and Credits Still Confuse You — Let's Fix That
 https://www.bing.com/videos/riverview/relatedvideo?q=debit+definition&&mid=CA18905539AA873FD896CA18905539AA873FD896&FORM=VAMGZC
+
+How to Stand out as a Bookkeeper
+https://www.youtube.com/watch?v=4YPlcmnzmYk
+
+9 Trends Every Bookkeeper Must Know in 2026
+https://www.youtube.com/watch?v=9nJ4ZMJ6c4A
+
+The Bookkeeper's Coach 258 videos
+https://www.youtube.com/channel/UCHb8naB4FOxZ3VcCP9al1yA
+---
+QBO Cleanup: The diagnostic skills every bookkeeper should know [Webinar Recording] Veroica Wasek, CPA
+https://www.youtube.com/watch?v=EpfNTI3IPaY
+
+The Paid Diagnostic Review checklist I use for every QBO cleanup client
+https://www.youtube.com/watch?v=DmaKyaS8Ets
+
+Stop Working for Free With These Easy Bookkeeping Workflows & Apps to control scope creep and get paid for your work! 
+Veronica Wasek, CPA  https://www.youtube.com/watch?v=ThpLgt-RvPE
+---
+Morgan's sites
+I’m Morgan.Check out my most popular posts and videos.
+	What A Bookkeeper *Actually* Does All Day, I would ONLY target these (bookkeeping goldmine) clients if I started over,
+	Warning! Expectations vs. Reality for Bookkeepers, Chart of Accounts: What It is and How to Set it Up,
+	Bookkeeper Startup: Month 1 of starting a bookkeeping business (step-by-step from scratch) and more.
+https://www.finepoints.biz/
+
 
 --------------------------------------------------------
 Management_Reports
@@ -5052,6 +5087,10 @@ Another name for an income statement in accounting is the Profit and Loss Statem
 	Operating Statement
 	Statement of Operations. 
 ---
+Vendor vs. SupplierWhile often used interchangeably, these two terms differ in the business world: Vendors sell ready-made, 
+finished goods or services, often focusing on the end transaction with customers or businesses. Suppliers typically provide the 
+raw materials or parts that manufacturers need to create finished products.
+---
 What Accounts Receivable Means
 Accounts Receivable (A/R) is the money that customers owe your business for goods or services that you already provided but 
 haven’t been paid for yet.
@@ -5137,10 +5176,35 @@ information throughout the year will make 1099 preparation so much smoother.
 You should ensure you have their completed W-9 before starting an engagement or issuing any payments. Not doing this could prove 
 troublesome, after beginning the work—you may find yourself renegotiating rates for the work, and you could be required to pay 
 withholding taxes on the money you pay them.
-
-
-
 ---
+Terminology Difference
+QuickBooks Online (Standard): Uses the term Customers. If you sell physical products, individual services, or digital goods, 
+you will track who owes you money under the Customers list.
+
+QuickBooks Online Accountant: Uses the term Clients. Because this specific version is tailored for bookkeepers, accountants, 
+and accounting firms, QuickBooks rebrands the list to Clients to better match professional service industries.
+
+Regardless of the label, both lists serve as the repository for tracking accounts receivable, processing sales receipts, and 
+sending invoices.
+
+When you set up a customer or client profile in QuickBooks, it acts as a central database for that specific entity. It tracks:
+	Contact Details: Names, billing/shipping addresses, phone numbers, and email addresses.
+	Transaction History: Every invoice, payment, sales receipt, estimates, and credit memo associated with them.
+	Financial Settings: Default payment terms (like Net 30), preferred payment methods, tax status, and default language settings.
+
+A customer is a person who buys goods or services, typically in a single, transactional exchange. A client is an individual or 
+organization that engages a professional or business for ongoing, personalized advice, service, and specialized solutions.
+
+Sub-Customers and Projects
+If your clients or customers have multiple locations, separate jobs, or distinct projects that you need to track independently, 
+QuickBooks allows you to break them down further:
+	Sub-Customers: Excellent for managing different branches or properties under a single parent company. You can choose to 
+	               bill the parent company or bill each sub-customer individually.
+
+	Projects: A specialized tool within QuickBooks that allows you to track income, material costs, labor, and overall 
+	          profitability for a specific, time-bound job assigned to a client.
+---
+
 Client overview
 Another period-end task that you might want to do is download the Client overview after you have completed the Books review.  
 Client overview will show a summary of all bank and credit card accounts and their reconciliation status, as well as nonbank 

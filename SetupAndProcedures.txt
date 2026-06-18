@@ -1,0 +1,61 @@
+
+Client_Setup
+External_Programs
+Procedures_for_Practicing_Tasks
+
+--------------------------------------------------------------------------
+Client_Setup
+
+1. Create a new client folder in Google Drive
+2. Set up a client email address (e.g., clientname@yourdomain.com)
+3. Create a client onboarding checklist
+4. Schedule a kickoff call with the client
+5. Gather necessary documents (e.g., financial statements, tax returns)
+---
+Setup QuickBooks Online Accountant for the client
+
+Setup Chart of Accounts *Do not setup too many accounts, keep it simple to start with and add more as needed.
+
+--------------------------------------------------------------------------
+External_Programs
+
+Google Drive
+Excel
+--------------------------------------------------------------------------
+Procedures_for_Practicing_Tasks
+
+* Practice these tasks regularly to build confidence and efficiency in using QuickBooks Online and supporting software. 
+Consider creating a schedule for practicing different tasks each week to ensure you cover all essential bookkeeping functions.
+
+1. Practice entering a bill in QuickBooks Online
+2. Practice paying a bill in QuickBooks Online
+3. Practice creating an invoice in QuickBooks Online
+4. Practice recording a payment from a customer in QuickBooks Online
+5. Practice reconciling a bank account in QuickBooks Online
+6. Practice generating a Profit & Loss statement in QuickBooks Online
+7. Practice generating a Balance Sheet in QuickBooks Online
+8. Practice generating a Cash Flow statement in QuickBooks Online
+9. Practice using the Transfer feature to move money between accounts in QuickBooks Online
+10. Practice using the “Pay down credit card” feature in QuickBooks Online
+11. Practice using the “Work” tab in QuickBooks Online Accountant to manage client tasks
+12. Practice using Google Drive to organize client documents
+13. Practice using Excel to create a simple financial report or budget for a client
+
+Practice reclassifying transactions in QuickBooks Online to ensure they are categorized correctly. Journal entries can be used 
+for this purpose, but it’s important to understand when and how to use them properly to maintain accurate financial records.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

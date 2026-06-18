@@ -1,3 +1,4 @@
+Viewing_Items_in_QuickBooks
 
 
 -------------------------------------------------------------------------------------
@@ -8,16 +9,20 @@ Entering a bill records the liability (A/P). Paying the bill clears that liabili
 These are always two separate transactions in QBO.
 Bills are specifically for delayed payment.
 If the client pays immediately, you use an expense or check, not a bill.
-
-
--------------------------------------------------------------------------------------
+---
 Use the Transfer feature to move the transaction from the bank account to the credit card account.
 Or
 Use the “Pay down credit card” feature
 Both of these are correct because they do the same thing under the hood — they properly move money from the bank account to the 
 credit card liability account, keeping your books clean and reconcilable.
 -------------------------------------------------------------------------------------
+Viewing_Items_in_QuickBooks
 
+Invoices list: Sales & Get Paid > Invoices
+
+Bills list: Expenses > Bills
+
+bank
 
 -------------------------------------------------------------------------------------
 
