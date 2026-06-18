@@ -11,6 +11,7 @@ Certification_Course_Banking
 Certification_Course_Expenses_and_vendors			*End_Certification_Course_Expenses and vendors
 Certification_Course_PeriodEnd						
 Certification_Course_SalesAndCustomers				*Overview_of_setup_tasks
+Certification_Course_SalesAndCustomers2
 Certifications_Info_For_Bookkeepers
 Chart_Of_Accounts
 Courses_And_Training
@@ -24,6 +25,7 @@ Plans_QB
 Practicing_QB
 Pricing_Model
 Profit_And_Loss_Checking
+QB_Course_Managing your clients
 Random_Notes_Accounting_Bookkeeping		End_Of_Random_Notes_Accounting_Bookkeeping
 Random_Notes_Quickbooks					*The program
 Reporting_in_Quickbooks
@@ -3135,6 +3137,101 @@ process links the two transactions, ensuring your books remain accurate.
 If you request a deposit on an estimate, it becomes available to convert to an invoice once your customer pays the deposit and 
 accepts the estimate.
 --------------------------------------------------------
+Certification_Course_SalesAndCustomers2
+
+Sub‑customers in QuickBooks are simply customer records that sit under a main (parent) customer. They create a hierarchy so you 
+can track work at a more detailed, job‑level layer while still keeping everything tied to the main client.
+
+A sub‑customer is a customer record linked to a parent customer to represent a job, project, location, case, or division within 
+that parent relationship.
+
+When clients have a hierarchy of customers and sub-customers set up, they can get the next level of detail into their 
+profitability and really begin to understand who their most valuable customers are. This information gives clients insight into 
+the factors that most influence profitability.
+
+Sub-customers can represent many things, such as multiple locations of a job, sub-groups within a larger organization, or a 
+growing list of jobs delivered to a customer.
+
+Looking at the hierarchy of sub-customers, each customer is capped at five tiers of hierarchy, so that’s a parent customer and 
+four tiers of sub-customers. However, you can add an unlimited number of customers and sub-customers at each tier of the 
+hierarchy.
+
+Sub-customers cannot have more than one parent: you can assign multiple sub-customers to a parent customer, but you can’t link a 
+sub-customer to more than one parent customer.
+
+If you wanted several customers to have a specific sub-customer, you would have to create that sub-customer under each 
+parent customer.
+
+To create a sub-customer, you can select the option to make a customer a sub-customer when you create or edit a customer. You can
+also create a sub-customer by clicking the drop-down in the Customer field when you create a transaction, and then selecting 
++Add new. This will give you the option to make the new customer a sub-customer and select the parent customer.
+
+When you run sales reports, you can choose to include or exclude sub-customers. If you include sub-customers, you can choose to 
+show them in a hierarchy under their parent customers or show them as separate customers without the hierarchy.
+
+Regardless of whether the Bill Parent Customer option is selected in the Customers Scree, all transactions for the sub-customer 
+will be included in the parent customer’s total. 
+---
+Sub‑Account vs. Sub‑Customer (QuickBooks 2026 Cheat Sheet)
+1. What they are
+Sub‑Account
+	A child account inside the Chart of Accounts.
+	Used to break a main account into more detailed buckets.
+
+Example:
+	Utilities (parent)
+	Gas (sub‑account)
+	Electric (sub‑account)
+
+Sub‑Customer
+	A child customer under a parent customer.
+	Used to track jobs, locations, or projects for a specific client.
+
+Example:
+	Smith Construction (parent)
+	Kitchen Remodel (sub‑customer)
+	Garage Addition (sub‑customer)
+
+2. What they’re used for
+Sub‑Account
+	More detailed financial reporting
+	Organizing accounts into categories
+	Tracking specific types of income/expenses
+	Cleaner P&L and Balance Sheet structure
+
+Sub‑Customer
+	Job‑level tracking
+	Tracking multiple locations or divisions
+	Billing by job or location
+	Customer‑level reporting (A/R, sales, profitability)
+
+3. Where they live in QuickBooks
+Sub‑Account		Chart of Accounts
+Sub‑Customer	Customer List / Sales Center
+
+4. How they affect reporting
+Sub‑Account
+	Affects financial statements  
+	(Profit & Loss, Balance Sheet, General Ledger)
+
+Sub‑Customer
+	Affects customer‑based reports  
+	(Sales by Customer, A/R Aging, Job Profitability)
+
+5. What they roll up into
+Sub‑Account
+	Rolls up into the parent account on financial reports.
+
+Sub‑Customer
+	Rolls up into the parent customer on customer reports.
+
+6. Exam‑style summary
+	Sub‑Accounts organize the Chart of Accounts.
+	Sub‑Customers organize customer activity by job, project, or location.
+
+
+
+--------------------------------------------------------
 Certifications_Info_For_Bookkeepers
 
 Hector Gacia, a former software engineer turned bookkeeper, shares his insights on the most valuable certifications for 
@@ -4514,6 +4611,10 @@ Expense.
 
 End of Profit_And_Loss_Checking
 --------------------------------------------------------
+QB_Course_Managing your clients
+
+
+--------------------------------------------------------
 Random_Notes_Quickbooks
 
 If you are not doing a good job tracking your customers or sub-customers, tracking vendors on your expenses, then your 
@@ -4751,10 +4852,11 @@ They can apply a fixed split you manually set up (Example: always split $100 as 
 They cannot analyze a transaction and decide how to split it.
 They cannot split based on changing amounts.
 They cannot split based on multiple conditions or line‑item logic.
-
-
 ---
-
+Intuit Accountant Suite is Intuit’s new AI‑powered, all‑in‑one platform for accounting firms. It replaces QuickBooks Online 
+Accountant by the end of 2026 and centralizes firm management, client work, collaboration, and automation.
+Intuit Accountant Suite unifies client management, workflow automation, collaboration, service delivery, business planning, and 
+team management into one AI‑native platform powered by Intuit Intelligence. 
 
 *** End Random_Notes_Quickbooks
 --------------------------------------------------------
