@@ -1,4 +1,4 @@
-
+﻿
 Client_Setup
 External_Programs
 Procedures_for_Practicing_Tasks
@@ -27,22 +27,202 @@ Procedures_for_Practicing_Tasks
 * Practice these tasks regularly to build confidence and efficiency in using QuickBooks Online and supporting software. 
 Consider creating a schedule for practicing different tasks each week to ensure you cover all essential bookkeeping functions.
 
-1. Practice entering a bill in QuickBooks Online
-2. Practice paying a bill in QuickBooks Online
-3. Practice creating an invoice in QuickBooks Online
-4. Practice recording a payment from a customer in QuickBooks Online
-5. Practice reconciling a bank account in QuickBooks Online
-6. Practice generating a Profit & Loss statement in QuickBooks Online
-7. Practice generating a Balance Sheet in QuickBooks Online
-8. Practice generating a Cash Flow statement in QuickBooks Online
-9. Practice using the Transfer feature to move money between accounts in QuickBooks Online
-10. Practice using the �Pay down credit card� feature in QuickBooks Online
-11. Practice using the �Work� tab in QuickBooks Online Accountant to manage client tasks
-12. Practice using Google Drive to organize client documents
-13. Practice using Excel to create a simple financial report or budget for a client
+1. Practice entering a bill in QuickBooks Online							Entering_a_bill
+2. Practice paying a bill in QuickBooks Online								Paying_a_bill
+3. Practice creating an invoice in QuickBooks Online						Creating_an_invoice
+4. Practice recording a payment from a customer in QuickBooks Online		Recording_a_payment
+5. Practice reconciling a bank account in QuickBooks Online					Reconciling_a_bank_account
+6. Practice generating a Profit & Loss statement in QuickBooks Online		Generating_a_Profit_and_Loss_statement
+7. Practice generating a Balance Sheet in QuickBooks Online					Generating_a_Balance_Sheet
+8. Practice generating a Cash Flow statement in QuickBooks Online			Generating_a_Cash_Flow_statement
+9. Practice using the Transfer feature to move money between accounts		Using_the_Transfer_feature
+10. Practice using the “Pay down credit card” feature in 					Using_the_Pay_down_credit_card_feature
+11. Practice using the “Work” tab in Accountant to manage client tasks		Using_the_Work_tab
+12. Practice using Google Drive to organize client documents				Using_Google_Drive
+13. Practice using Excel to create a simple financial report or budget for a client  Using_Excel
+14. Create_a_Sub-Customer
+15. Practice reclassifying transactions in QuickBooks Online to ensure they are categorized correctly. Journal entries can be used 
+for this purpose, but it’s important to understand when and how to use them properly to maintain accurate financial records.
+16. Practice creating rules in QuickBooks Online to automate transaction categorization and improve efficiency in bookkeeping tasks.
 
-Practice reclassifying transactions in QuickBooks Online to ensure they are categorized correctly. Journal entries can be used 
-for this purpose, but it�s important to understand when and how to use them properly to maintain accurate financial records.
+--------------------------------------------------------------------------
+Entering_a_bill
+
+In QuickBooks Online (2026), entering a bill is used when you receive an invoice from a vendor that you will pay later. The 
+process records the expense and creates an Accounts Payable (A/P) balance until you pay the bill.
+
+Steps to Enter a Bill in QuickBooks Online
+1. Open the Bill Entry Screen
+	   Select + New (top left).
+	   Under Vendors, select Bill.
+2. Select the Vendor
+In the Vendor field:
+	Choose an existing vendor.
+ Or if the vendor is new:
+	Select + Add new
+	Enter vendor details:
+	Vendor name
+	Email
+	Address
+	Payment terms (for example, Net 30)
+*The due date is calculated based on the payment terms.
+--------------------------------------------------------------------------
+Paying_a_bill
+
+In QuickBooks Online (2026), paying a bill is the process of "recording the payment" you make to a vendor for an outstanding bill. 
+This action reduces your Accounts Payable (A/P) balance and records the expense as paid.
+
+Steps to Pay a Bill in QuickBooks Online
+1. Open the Pay Bill Screen
+	   Select + New (top left).
+	   Under Vendors, select Pay Bills.
+2. Select the Vendor
+In the Vendor field:
+	Choose the vendor you want to pay.
+3. Select the Bill
+In the Bills section:
+	Choose the bill you want to pay.
+4. Enter Payment Details
+In the Payment section:
+	Enter the payment amount.
+	Choose the payment method (e.g., Check, Credit Card).
+	(Optional) Add a memo or note.
+5. Save the Payment
+	Select Save and close to record the payment.
+
+Option 2: Pay the Bill
+	Select + New
+	Choose Pay Bills  
+	Select the bill
+	Choose the bank account
+	Enter payment date
+	Select Save and close
+The payment creates:
+	Debit: Accounts Payable            $300
+	Credit: Checking Account           $300
+*The payable is removed because the vendor has been paid.
+
+Common Bookkeeping Mistake
+	Do not enter a vendor invoice as a Check or Expense if you are paying later.
+
+Correct workflow:
+	Receive invoice → Enter Bill → Pay Bill later
+
+Incorrect:
+	Receive invoice → Enter Expense → Pay later
+
+*The second method skips Accounts Payable and makes vendor balances inaccurate.
+
+--------------------------------------------------------------------------
+How do I enter a deposit into my bank account in QuickBooks Online?
+1. Open the Deposit Screen
+   Select + New (top left).
+   Under Other, select Bank Deposit.
+
+2. Select the Bank Account
+In the Account field:
+   Choose the bank account where the deposit will be made.
+In the Account field:
+   Choose the bank account where the deposit will be made.
+
+3. Enter Deposit Information
+In the Deposit section:
+   Enter the date of the deposit.
+   (Optional) Add a memo or note.
+   In the Add funds to this deposit section:
+      Choose the customer or vendor from the dropdown.
+      Enter the amount of the deposit.
+      (Optional) Add a description.
+
+4. Save the Deposit
+   Select Save and close to record the deposit.
+
+The deposit will increase the balance of the selected bank account and may also affect income accounts, depending on the source of the funds.
+
+Prompt: If I want to record a cash deposit that is made by the owner of the business into the business bank account, how should I categorize it in
+QuickBooks Online?
+A: To record a cash deposit made by the owner into the business bank account, you should categorize it as an 
+"Owner's Contribution" or "Owner's Equity" in QuickBooks Online. This reflects the increase in the business's cash balance while 
+also acknowledging the owner's investment in the business.
+
+Prompt: If I want to record a cash deposit that is made by the owner of the business into the business bank account, what do I put
+into the "Received From" field in QuickBooks Online?
+A: In the "Received From" field, you should enter the owner's name or the name of the business (if it's a sole proprietorship) 
+to accurately reflect the source of the funds being deposited.
+
+How do get the owners name into the "Received From" drop down list for the field in QuickBooks Online?
+A: To get the owner's name into the "Received From" drop-down list, you need to ensure that the owner's name is set up as a 
+customer or vendor in QuickBooks Online. You can do this by following these steps:
+1. Go to the Sales or Expenses menu.
+2. Select Customers or Vendors.
+3. Click on New customer or New vendor.
+4. Enter the owner's name and any other relevant information.
+5. Save the new customer or vendor.
+
+Once the owner's name is set up, it should appear in the "Received From" drop-down list when recording a deposit.
+
+--------------------------------------------------------------------------
+Creating_an_invoice
+
+--------------------------------------------------------------------------
+Recording_a_payment
+
+--------------------------------------------------------------------------
+Reconciling_a_bank_account
+
+--------------------------------------------------------------------------
+Generating_a_Profit_and_Loss_statement
+
+--------------------------------------------------------------------------
+Generating_a_Balance_Sheet
+
+--------------------------------------------------------------------------
+Generating_a_Cash_Flow_statement
+
+--------------------------------------------------------------------------
+Using_the_Transfer_feature
+
+--------------------------------------------------------------------------
+Using_the_Pay_down_credit_card_feature
+
+--------------------------------------------------------------------------
+Using_the_Work_tab
+
+--------------------------------------------------------------------------
+Using_Google_Drive
+
+--------------------------------------------------------------------------
+Using_Excel		Using Excel to create a simple financial report or budget
+
+
+--------------------------------------------------------------------------
+Create_a_Sub-Customer
+1. Open the Customer List
+Select Sales from the left navigation menu.
+Select Customers.
+2. Open the New Customer Screen
+Click New customer (top right).
+Enter the sub-customer information.
+
+Example:
+Customer display name:
+Project A
+
+3. Make It a Sub-Customer
+In the customer setup window:
+Select the checkbox: ☐ Is sub-customer
+
+4. Select the Parent Customer
+After checking Is sub-customer: The Parent customer field appears. Select the existing customer.
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
 
 
 
