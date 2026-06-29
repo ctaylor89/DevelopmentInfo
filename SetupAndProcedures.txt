@@ -1,5 +1,6 @@
 ﻿
 Client_Setup
+Creating_a_Purchase_Order
 External_Programs
 Procedures_for_Practicing_Tasks
 
@@ -27,6 +28,7 @@ Procedures_for_Practicing_Tasks
 * Practice these tasks regularly to build confidence and efficiency in using QuickBooks Online and supporting software. 
 Consider creating a schedule for practicing different tasks each week to ensure you cover all essential bookkeeping functions.
 
+																			Creating_a_Purchase_Order
 1. Practice entering a bill in QuickBooks Online							Entering_a_bill
 2. Practice paying a bill in QuickBooks Online								Paying_a_bill
 3. Practice creating an invoice in QuickBooks Online						Creating_an_invoice
@@ -215,7 +217,24 @@ Select the checkbox: ☐ Is sub-customer
 4. Select the Parent Customer
 After checking Is sub-customer: The Parent customer field appears. Select the existing customer.
 --------------------------------------------------------------------------
+Creating_a_Purchase_Order in QuickBooks Online
+Creating a Purchase Order (PO) in QuickBooks Online is a straightforward way to track items or services you intend to buy from a vendor. Here is how to do it step-by-step:
 
+Step 1: Open the Purchase Order Form
+Click the + New button located at the top of the left navigation menu.
+
+Under the Vendors column, select Purchase Order.
+
+Step 2: Fill Out the Vendor and General Information
+Vendor: Select your vendor from the dropdown menu. If they aren’t in your system yet, you can click Add New.
+
+Mailing Address: This will auto-populate based on the vendor profile, but you can edit it if needed.
+
+Ship To: If you are shipping directly to a customer or a specific location, choose the destination from the dropdown.
+
+Purchase Order Date: Enter the date you are issuing the PO.
+
+Ship Via: Specify the shipping method if applicable (e.g., FedEx, UPS).
 --------------------------------------------------------------------------
 
 --------------------------------------------------------------------------
