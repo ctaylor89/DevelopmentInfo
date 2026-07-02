@@ -246,6 +246,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{FAF28F21-FA21-40AB-8A19-E03A04EFF37A}"
 	ProjectSection(SolutionItems) = preProject
 		AccountingEquation.docx = AccountingEquation.docx
+		BasicBCourse.txt = BasicBCourse.txt
 		BK_AI_Captures.txt = BK_AI_Captures.txt
 		BK_InterviewQuestions.txt = BK_InterviewQuestions.txt
 		QB_TasksPractice.txt = QB_TasksPractice.txt

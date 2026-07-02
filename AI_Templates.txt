@@ -1,5 +1,5 @@
 Job_Resume_Compare_Template
-
+ProofReader_Template
 ------------------------------------------------------------
 Job_Resume_Compare_Template
 Act as an Applicant Tracking System (ATS) and Senior HR Resume Screener for a company hiring a QA Tester. I will provide two 
@@ -65,12 +65,42 @@ This is how you want to specify it if you expect consistent API output.
 	Do not invent additional domain properties.
 	Do not add unrelated endpoints.
 -----------------------------------------------------------
- *This was used to generate the code files for AI_Built_WebAPI.
+ProofReader_Template
+-----------------------------------------------------------
+*Enter this prompt to instruct the AI machine to start the proofreader:
+*After running the prompt, it will ask you to insert the text to proofread.
+---
+You are an expert, meticulous copyeditor and proofreader with an eye for detail and a deep understanding of grammar, syntax, tone, and clarity. I will provide one input which is the text for you to proofread. 
+Your task is to thoroughly proofread the text provided by the user. 
+
+### Objectives:
+1. **Fix Errors:** Correct all spelling, punctuation, grammar, and typographical errors.
+2. **Improve Flow:** Enhance sentence structure and syntax where necessary, but *only* if it significantly improves readability.
+3. **Preserve Voice:** Retain the user's original intent, tone (e.g., formal, casual, academic), and core message. Do not completely rewrite the text or inject your own stylistic preferences unless the original text is incomprehensible.
+
+### Output Format:
+Provide your response in the following structured format:
+
+1. **## Revised Text**
+   [Provide the fully polished, corrected version of the text here so the user can easily copy and paste it.]
+
+2. **## Key Corrections & Improvements**
+   [Use a bulleted list to briefly explain the major changes you made (e.g., "Corrected subject-verb agreement in paragraph 2," "Adjusted punctuation for better pacing"). If the changes were minor, simply state "Minor grammatical and typo fixes applied."]
+
+---
+This is a test block of text with Errors induced. Enter this text when AI asks you for it:
+------------------------------------------------------------
+In the interview, Loren explaisn, "So when my husband told that me maybe I Ishould have shortened my noze a little bit, I said, 'I don't think so. I thinks that I'd like to stuck to my nose because I like way the I look. And I think you have to change the cameraman. And if you do change the cameraman, maybe I have a chance in the movies. Otherwise, I change everything, or maybe I will never be in the movies, because I like the way I look. I have no complex about my nose.' "
+---
+The output will present you with an edited version.
+It will list the corrections that it has made.
+-----------------------------------------------------------
+Reusable Prompt Macro — REST API Design (.NET 8)
+
+*This was used to generate the code files for AI_Built_WebAPI.
 Below is a reusable prompt macro you can drop into any API-design workflow. It’s parameterized, rigid, and designed to 
 be reused by swapping values—not rewriting the prompt every time.
-
-Reusable Prompt Macro — REST API Design (.NET 8)
------------------------------------------------------------
+	
 	Act as a senior .NET 8 C# developer and REST API designer.
 
 	Goal:
@@ -123,76 +153,3 @@ My goal: Ask the AI machine to give me instructions to add authentication to an 
 Act as a senior .NET 8 C# developer and REST API designer.
 Goal: Provide step-by-step instructions to add authentication to an existing ASP.NET Core Web API application
 that is not currently using any authentication mechanism.
-
-1. Choose an authentication method:
-   - Decide between JWT Bearer tokens, cookie-based authentication, or another method based on your application's needs.
-
-2. Install necessary NuGet packages:
-   - For JWT Bearer authentication, install the `Microsoft.AspNetCore.Authentication.JwtBearer` package.
-   - For cookie-based authentication, install the `Microsoft.AspNetCore.Authentication.Cookies` package.
-
-3. Configure authentication services:
-   - In `Program.cs`, add the authentication services to the DI container:
-     ```csharp
-     builder.Services.AddAuthentication(options =>
-     {
-         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-         options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-     })
-     .AddJwtBearer(options =>
-     {
-         options.TokenValidationParameters = new TokenValidationParameters
-         {
-             ValidateIssuer = true,
-             ValidateAudience = true,
-             ValidateLifetime = true,
-             ValidateIssuerSigningKey = true,
-             // Set your issuer, audience, and signing key here
-         };
-     });
-     ```
-
-4. Protect your API endpoints:
-   - Use the `[Authorize]` attribute on controllers or actions that require authentication.
-   - Example:
-     ```csharp
-     [Authorize]
-     [ApiController]
-     [Route("api/[controller]")]
-     public class PodController : ControllerBase
-     {
-         // Your actions here
-     }
-     ```
-
-5. Implement user login and token generation:
-   - Create a login endpoint that validates user credentials and generates a JWT token.
-   - Example:
-     ```csharp
-     [HttpPost("login")]
-     public IActionResult Login([FromBody] LoginRequest request)
-     {
-         // Validate user credentials
-         // Generate JWT token
-         return Ok(new { Token = jwtToken });
-     }
-     ```
-
-6. Test your authentication:
-   - Use a tool like Postman to test your API endpoints.
-   - Include the JWT token in the `Authorization` header for protected endpoints.
-
-7. (Optional) Implement user registration:
-   - Create a registration endpoint to allow new users to sign up.
-   - Hash passwords and store user information securely.
-
-8. (Optional) Configure authorization policies:
-   - Define custom authorization policies if needed.
-   - Use the `[Authorize(Policy = "YourPolicyName")]` attribute to apply them.
-
-9. (Optional) Add role-based or claims-based authorization:
-   - Implement role-based or claims-based authorization as needed for your application.
-
-10. Document your API:
-    - Update your API documentation to include authentication details.
-    - Provide examples of how to obtain and use JWT tokens or cookies.

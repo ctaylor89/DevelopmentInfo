@@ -1,0 +1,187 @@
+To move through buttons, tabs, or flip cards, press Tab. 
+To move backward through buttons, tabs, or flip cards, press Shift+Tab.
+To expand a tab or section, press Enter or Space.
+To move around in on-screen content or menus, use the arrow keys (Up, Down, Left, and Right).
+------------------------------------------------------
+As a bookkeeper, you will be expected to fulfill the following responsibilities.
+
+Recording financial transactions involves systematically documenting financial events in a business's accounting system.
+
+Reconciling bank accounts
+
+Managing accounts receivable and accounts payable entails efficiently tracking and handling the money owed to the business by 
+customers and the money owed by the business to suppliers and creditors. 
+
+Working with tax preparers and assisting with tax compliance includes collaborating with professionals, such as CPAs and tax 
+advisors, to ensure accurate tax reporting and adherence to tax regulations for the business.
+
+Generating financial statements involves preparing core financial documents that summarize a business's financial activities, 
+performance, and position, providing valuable insights for decision-making and financial analysis. 
+---
+Ethics
+Being ethical is also about protecting financial data and keeping things confidential. Employees, family members, even customers 
+will sometimes ask about the financial state of the business. I simply say. “I can’t disclose any financial information.” 
+
+There are four key components of ethics in bookkeeping: honesty, objectivity, professionalism, and confidentiality.
+
+Objectivity
+Never take a job that might pose a conflict of interest (when a person's individual interests raise a question about their ability to act or make decisions or judgments objectively).
+
+•
+Never allow another party to influence your findings.
+
+•
+Never let personal bias get in the way of performing your duties.
+
+Confidentiality
+Never discussing anything with a client outside of the job.•
+Never using inside information of a client for personal gain.
+Do not divulge any information about the business outside of the job."
+
+Being ethical relates to all aspects of your job as a bookkeeper–it should guide your decision-making and underscore your compliance with the law. By putting ethics first, you can establish a strong reputation and build loyalty with your clients.
+
+Your oath as a bookkeeper prohibits you from accommodating the request of any party to disclose confidential information or manipulate financial records.
+---------------------------------------------------------------------------
+What is the purpose of the accounting equation?
+
+The accounting equation is a simple, yet powerful, concept that helps us understand how a business's resources are financed.
+
+The accounting equation is expressed as: Assets = Liabilities + Equity
+
+The accounting equation is the foundation of the balance sheet. A balance sheet is the accounting equation displayed as a financial statement. 
+
+---
+Taking your time to fully understand the accounting equation will help you:
+
+explain why events happen the way they do in the accounting process, 
+communicate the reasons behind financial decisions or discrepancies,
+and, spot errors or inconsistencies in your accounting software.
+
+Assets are the valuable resources a business owns. Cash, accounts receivable, inventory, investments in other businesses, 
+equipment, intellectual property (such as a patent)
+
+Liabilities are the obligations the business owes to others. Liabilities can be loans to support the business, mortgage, payroll,
+sales tax owed to the government, credit cards, or any other debts that need to be repaid. They represent the business's promises to others.
+
+When you look at a balance sheet, you see how the business's assets are financed. Liabilities and equity provide the fuel to acquire those assets. The balance sheet shows the relationship between what the business owns, what it owes, and how much the owners have invested.
+---
+Which items represent equity in the accounting equation? A: Investments made by the owners and retained earnings.
+Equity represents the residual interest in the business's assets after deducting liabilities. It includes the owner's investments and accumulated profits or losses.
+Equity = Assets - Liabilities
+---
+Revenue represents the income your client earns through their business operations. It's their gross proceeds from sales, whether that's products, services, rentals, or anything else that bring money into the business.
+
+Expenses represent the costs of doing business, such as labor costs like salaries and employee benefits, operating costs like utilities, rent and insurance, and other essential expenses like taxes and advertising, or anything else that keeps their business moving.
+
+Revenue and expenses come together on the income statement, a document that summarizes a client's financial performance through the calculation of revenue minus expenses.
+
+This calculation helps you determine your client's net income or net loss for specified time periods.
+
+Note: In accounting you will often find negative values noted by being shown in parenthesis, for example: ($6,000). 
+---
+Debits and credits 
+
+Debits and credits are the choreography of your client's financial performance. Understanding their movements helps you keep track of your client's assets, expenses, liabilities, owner's equity, and revenue.
+
+Debits
+Debits represent an increase in assets or expenses, or a decrease in liabilities, owner’s equity, or revenue.
+
+Credits
+Credits represent a decrease in assets, or expenses, or an increase in liabilities, owner's equity, or revenue.
+
+The cardinal rule of bookkeeping: debits and credits need to be equal. It's like a balancing act where the numbers on both sides of the stage should always match up.
+---
+Debit					Credit
+---------------------------------------
+Assets		Increase	Decrease
+Liabilities	Decrease	Increase
+Equity		Decrease	Increase
+Revenue		Decrease	Increase
+Expenses	Increase	Decrease
+
+---
+When recording the purchase of office supplies purchased on account, which side of the ledger should the accounts payable be 
+recorded on?  A:Credit. Accounts payable is a liability, and when you purchase office supplies on account, it increases your
+liabilities. Therefore, you would record the increase in accounts payable on the credit side of the ledger.
+
+When recording the payment of salaries to employees, which side of the salary expense ledger should the transaction be recorded?
+A:Debit. Salary expense is an expense account, and when you pay salaries to employees, it increases your expenses. Therefore, 
+you would record the increase in salary expense on the debit side of the ledger.
+-------------------------------------------------------------------------
+Accounting principles play an important role in maintaining financial integrity and ensuring accurate reporting in business. 
+Accounting principles also provide a standardized framework that guides financial information recording, analysis, and 
+communication. 
+
+Let's explore the first four accounting principles to see how they will guide the integrity of your bookkeeping practices.
+
+The Economic Entity assumption is crucial for accurate financial reporting, as it ensures that the business's financial 
+statements reflect only its activities and not those of its owners or other businesses.
+
+Reliability is a fundamental principle in accounting that emphasizes the importance of recording financial transactions 
+based on verifiable and objective evidence. The Reliability principle ensures that the information you record in backedyour 
+client's financial documents is verifiable and backed by proper documentation. If your client can't provide an invoice, receipt, 
+or bank statement to support a transaction, it is not a reliable transaction and can't be recorded.
+---
+The Full Disclosure principle is a fundamental accounting principle that emphasizes the importance of providing all relevant 
+information in financial statements. This principle ensures that stakeholders, such as investors, creditors, and regulators, have 
+access to complete and transparent information about a company's financial position, performance, and any potential risks or 
+uncertainties.
+
+For example, if a worker files a worker's compensation claim, it's essential to include that information in the notes of the 
+financial statements.
+---
+The Conservatism principle is a fundamental accounting principle that emphasizes the importance of exercising caution and 
+prudence when making financial decisions and reporting financial information. It encourages accountants to recognize potential 
+losses or liabilities as soon as they are reasonably foreseeable, while being more conservative in recognizing potential gains 
+or assets.
+
+The Conservatism Assumption directs bookkeepers to exercise caution and choose options that show potential losses while 
+excluding potential gains in uncertain situations.
+---
+Let's explore four more accounting principles that will help you maintain integrity and accuracy as a bookkeeper.
+
+The Materiality principle states: An accountant does not have to follow every accounting rule perfectly for items that are so 
+small or insignificant that they would not affect a reasonable person's understanding of the financial statements.
+
+In other words: Accountants focus their time and effort on information that could influence decisions.
+A transaction is considered material if leaving it out, recording it incorrectly, or presenting it differently could change 
+how someone views the company’s financial position or performance. Materiality allows accountants to use professional judgment.
+
+Materiality does not mean "ignore small transactions."
+It means: Record and present information in a way that is accurate enough that financial statement users are not misled.
+
+Use caution when applying this principle. Determining materiality can be highly subjective. When in doubt, seek advice from 
+colleagues or an accountant who can provide valuable insights.
+---
+The Consistency principle is another key accounting principle that emphasizes the importance of using the same accounting 
+methods and practices over time. This principle ensures that financial statements are comparable across periods, allowing 
+stakeholders to identify trends and make informed decisions.
+
+Once a business adopts a specific accounting method for recording certain items, it commits to entering all similar items in the 
+same way in the future. This principle applies to line items on all financial statements and reports. The Consistency principle 
+also helps to build trust and credibility with stakeholders, as it demonstrates a commitment to transparency and reliability in 
+financial reporting.
+---
+The Monetary Unit assumption is a fundamental accounting principle that assumes that the currency used in financial reporting 
+remains stable over time. This principle allows accountants to record and report financial transactions in a consistent and 
+meaningful manner, facilitating accurate comparisons and analysis of financial information across different periods.
+
+It states that you use one currency throughout all of your accounting activities. In the United States, that currency is the 
+US dollar. If your client purchased a piece of land and the value has increased over time, you don't need to adjust the recorded 
+value based on the current market price. Just stick to the price paid at the time of purchase. 
+---
+The Going Concern principle is a fundamental accounting principle that assumes a business will continue to operate indefinitely, 
+unless there is evidence to the contrary. This principle is essential for financial reporting, as it allows accountants to prepare 
+financial statements under the assumption that the business will remain in operation for the foreseeable future. This assumption 
+affects the valuation of assets and liabilities, as well as the recognition of revenues and expenses.
+
+If and when a business is in danger of failing and is no longer considered a Going Concern, it's essential to report the issues 
+it is facing, such as ongoing losses, credit denials, or lawsuits. Transparency is critical in these situations.
+-------------------------------------------------------------------------
+Accounting Cycles are the processes that businesses use to record and process financial transactions. The accounting cycle is a 
+series of steps that businesses follow to ensure accurate and complete financial reporting.
+
+Simply put, the accounting cycle is the journey from the beginning of a transaction to its inclusion in the financial statements.
+
+
+

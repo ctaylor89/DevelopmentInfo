@@ -4217,10 +4217,9 @@ so don't sell them to anyone else," even if they haven't left the building yet. 
 customize services, the Sales Order acts as the green light for your production team to start building the order. 
 
 Quick Summary 
-TableFeatureSales Order (SO)Purchase Order (PO)Who creates it? 
-You (the Seller) You (the Buyer) 
-Who is it for? 
-Sent to your Customer	Sent to your Vendor / Supplier
+Feature				Sales Order (SO)			Purchase Order (PO)
+Who creates it?		You (the Seller)			You (the Buyer) 
+Who is it for?      Sent to your Customer		Sent to your Vendor / Supplier
 
 Impact on Inventory
 Reserves or allocates your inventory

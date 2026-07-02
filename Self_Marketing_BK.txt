@@ -658,8 +658,8 @@ since I would have used it up. It could be a good way to get some experience wit
 One person noted "Expect to get fired in about 3 to months". Pays approx. $25 per hour. Breaks will be scheduled.
 ---
 Prompts
-context: I live in California and I am considering changing careers and starting my own bookkeeping business. Output: List some 
-good ways to get started in this type of business. Also tell me how strong the demand is for bookkeepers.
+context: I live in California and I am considering changing careers and starting my own bookkeeping business. 
+Output: List some good ways to get started in this type of business. Also tell me how strong the demand is for bookkeepers.
 Starting a bookkeeping business in California is a realistic and accessible path, and demand remains steady despite long‑term 
 automation trends. California bookkeepers typically earn $50,000–$81,000 depending on experience, and U.S. employers still post 
 tens of thousands of openings each year due to turnover and small‑business needs. 
@@ -669,38 +669,26 @@ Getting Started With a Bookkeeping Business in California
 Strengthen fundamentals: double‑entry accounting, reconciliations, payroll basics, financial statements.
 
 Learn the major software platforms:
-
-QuickBooks Online (dominant among small businesses)
-
-Xero, FreshBooks, Wave
+	QuickBooks Online (dominant among small businesses)
+	Xero, FreshBooks, Wave
 
 Consider earning certifications:
-
-QuickBooks ProAdvisor
-
-AIPB Certified Bookkeeper (CB)
-
-NACPB certifications  
-These credentials help you stand out when starting from scratch.
+	QuickBooks ProAdvisor
+	AIPB Certified Bookkeeper (CB)
+	NACPB certifications  
+	These credentials help you stand out when starting from scratch.
 
 2. Choose Your Business Structure
 Most solo bookkeepers begin as:
-
-Sole proprietors (simple, low cost)
-
-LLCs (added liability protection; popular for financial services)
-
-Register with the California Secretary of State if forming an LLC.
-
-Obtain an EIN (free from IRS) and set up a business bank account.
+	Sole proprietors (simple, low cost)
+	LLCs (added liability protection; popular for financial services)
+	Register with the California Secretary of State if forming an LLC.
+	Obtain an EIN (free from IRS) and set up a business bank account.
 
 3. Set Up Your Tech Stack
 Cloud bookkeeping software (QBO or Xero)
-
 Secure document‑sharing (Google Workspace, Microsoft 365, Dropbox)
-
 Practice management tools (Canopy, Jetpack Workflow, TaxDome)
-
 Time‑tracking and invoicing tools (Harvest, Toggl, FreshBooks)
 
 4. Define Your Niche
@@ -963,7 +951,7 @@ Collect payment before filing anything unless they are a long term client. No ex
 --
 Keep it local as much as possible and choose clients wisely (its ok to be super picky if you can afford it).
 ---
-If you learned bookkeeping from a bank-feed-first perspective, you might not have built the deeper understanding of Ihow 
+If you learned bookkeeping from a bank-feed-first perspective, you might not have built the deeper understanding of how 
 transactions actually flow. And that makes accrual concepts like undeposited funds or combined payments feel way harder 
 than they need to.
 ---
@@ -986,8 +974,7 @@ If I were to do it, realize that if they fired me or I quit, it would not go on 
 since I would have used it up. It could be a good way to get some experience with bookkeeping and Quickbooks, if even for a few months.
 One person noted "Expect to get fired in about 3 to months". Pays approx. $25 per hour. Breaks will be scheduled.
 ---
-QuickBooks Online is legitimately harder to learn than QuickBooks Desktop for both seasoned bookkeepers and novices
-
+QuickBooks Online is legitimately harder to learn than QuickBooks Desktop for both seasoned bookkeepers and novices.
 --------------------------------------------------------
 Study_Plan
 
@@ -1041,9 +1028,7 @@ build skill, confidence, and certification momentum.
 - Fri: Trial balance → financial statements  
 - Sat: Practice exercises  
 - Sun: Review  
-
 ---
-
 ## **Week 4 — Real‑World Application**
 **Goals**
 - Reconcile accounts  
@@ -1058,9 +1043,7 @@ build skill, confidence, and certification momentum.
 - Fri: Month‑end close checklist  
 - Sat: Practice with messy sample data  
 - Sun: Review  
-
 ---
-
 # **Phase 2 — AIPB Certified Bookkeeper Prep**
 
 ## **Week 5 — Adjusting Entries**
@@ -1075,9 +1058,7 @@ build skill, confidence, and certification momentum.
 - Fri: Practice problems  
 - Sat: Mini‑quiz  
 - Sun: Review  
-
 ---
-
 ## **Week 6 — Payroll Fundamentals**
 **Goals**
 - Understand payroll cycles, taxes, journal entries  
@@ -1090,9 +1071,7 @@ build skill, confidence, and certification momentum.
 - Fri: Payroll reconciliation  
 - Sat: Practice set  
 - Sun: Review  
-
 ---
-
 ## **Week 7 — Error Correction & Internal Controls**
 **Goals**
 - Learn fraud prevention  
@@ -1106,10 +1085,8 @@ build skill, confidence, and certification momentum.
 - Thu: Audit trails  
 - Fri: Practice scenarios  
 - Sat: Mini‑quiz  
-- Sun: Review  
-
+- Sun: Review 
 ---
-
 ## **Week 8 — AIPB Practice Exams + Reinforcement**
 **Goals**
 - Solidify knowledge  
@@ -1121,9 +1098,7 @@ build skill, confidence, and certification momentum.
 - Fri: Build your month‑end close template  
 - Sat: Light practice  
 - Sun: Rest  
-
 ---
-
 # **Phase 3 — Optional Certification + Business Launch**
 
 ## **Week 9 — Optional Certification (NACPB or Xero)**
@@ -1135,9 +1110,7 @@ build skill, confidence, and certification momentum.
 - Fri: Practice exam  
 - Sat: Certification exam  
 - Sun: Review  
-
 ---
-
 ## **Week 10 — Workflow & Automation Setup**
 **Goals**
 - Build your standardized processes  
@@ -1151,9 +1124,7 @@ build skill, confidence, and certification momentum.
 - Fri: Bank rules + recurring entries  
 - Sat: Test automations  
 - Sun: Review  
-
 ---
-
 ## **Week 11 — Business Infrastructure**
 **Goals**
 - Set up your bookkeeping business  
@@ -1166,9 +1137,7 @@ build skill, confidence, and certification momentum.
 - Fri: Pricing model  
 - Sat: Website/landing page  
 - Sun: Review  
-
 ---
-
 ## **Week 12 — Portfolio + First Clients**
 **Goals**
 - Build credibility  
@@ -1182,9 +1151,7 @@ build skill, confidence, and certification momentum.
 - Fri: Reach out to 3–5 local businesses  
 - Sat: LinkedIn networking  
 - Sun: Review + plan next steps  
-
 ---
-
 # If you want, I can also build:
 - a **daily** version of this calendar  
 - a **checklist version** you can print  
