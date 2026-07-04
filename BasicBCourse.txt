@@ -1,7 +1,3 @@
-To move through buttons, tabs, or flip cards, press Tab. 
-To move backward through buttons, tabs, or flip cards, press Shift+Tab.
-To expand a tab or section, press Enter or Space.
-To move around in on-screen content or menus, use the arrow keys (Up, Down, Left, and Right).
 ------------------------------------------------------
 As a bookkeeper, you will be expected to fulfill the following responsibilities.
 
@@ -25,57 +21,61 @@ will sometimes ask about the financial state of the business. I simply say. “I c
 There are four key components of ethics in bookkeeping: honesty, objectivity, professionalism, and confidentiality.
 
 Objectivity
-Never take a job that might pose a conflict of interest (when a person's individual interests raise a question about their ability to act or make decisions or judgments objectively).
+Never take a job that might pose a conflict of interest (when a person's individual interests raise a question about their 
+ability to act or make decisions or judgments objectively).
 
-•
 Never allow another party to influence your findings.
-
-•
 Never let personal bias get in the way of performing your duties.
 
 Confidentiality
-Never discussing anything with a client outside of the job.•
+Never discussing anything with a client outside of the job.
 Never using inside information of a client for personal gain.
-Do not divulge any information about the business outside of the job."
+Do not divulge any information about the business outside of the job.
 
-Being ethical relates to all aspects of your job as a bookkeeper–it should guide your decision-making and underscore your compliance with the law. By putting ethics first, you can establish a strong reputation and build loyalty with your clients.
+Being ethical relates to all aspects of your job as a bookkeeper–it should guide your decision-making and underscore your 
+compliance with the law. By putting ethics first, you can establish a strong reputation and build loyalty with your clients.
 
-Your oath as a bookkeeper prohibits you from accommodating the request of any party to disclose confidential information or manipulate financial records.
+Your oath as a bookkeeper prohibits you from accommodating the request of any party to disclose confidential information or 
+manipulate financial records.
 ---------------------------------------------------------------------------
 What is the purpose of the accounting equation?
 
 The accounting equation is a simple, yet powerful, concept that helps us understand how a business's resources are financed.
-
 The accounting equation is expressed as: Assets = Liabilities + Equity
-
-The accounting equation is the foundation of the balance sheet. A balance sheet is the accounting equation displayed as a financial statement. 
-
+The accounting equation is the foundation of the balance sheet. A balance sheet is the accounting equation displayed as a 
+financial statement. 
 ---
 Taking your time to fully understand the accounting equation will help you:
-
-explain why events happen the way they do in the accounting process, 
-communicate the reasons behind financial decisions or discrepancies,
-and, spot errors or inconsistencies in your accounting software.
+	explain why events happen the way they do in the accounting process, 
+	communicate the reasons behind financial decisions or discrepancies,
+	and, spot errors or inconsistencies in your accounting software.
 
 Assets are the valuable resources a business owns. Cash, accounts receivable, inventory, investments in other businesses, 
 equipment, intellectual property (such as a patent)
 
 Liabilities are the obligations the business owes to others. Liabilities can be loans to support the business, mortgage, payroll,
-sales tax owed to the government, credit cards, or any other debts that need to be repaid. They represent the business's promises to others.
+sales tax owed to the government, credit cards, or any other debts that need to be repaid. They represent the business's 
+promises to others.
 
-When you look at a balance sheet, you see how the business's assets are financed. Liabilities and equity provide the fuel to acquire those assets. The balance sheet shows the relationship between what the business owns, what it owes, and how much the owners have invested.
+When you look at a balance sheet, you see how the business's assets are financed. Liabilities and equity provide the fuel to 
+acquire those assets. The balance sheet shows the relationship between what the business owns, what it owes, and how much the 
+owners have invested.
 ---
-Which items represent equity in the accounting equation? A: Investments made by the owners and retained earnings.
-Equity represents the residual interest in the business's assets after deducting liabilities. It includes the owner's investments and accumulated profits or losses.
 Equity = Assets - Liabilities
+Which items represent equity in the accounting equation? 
+A: Investments made by the owners and retained earnings. Equity represents the residual interest in the business's assets after 
+deducting liabilities. It includes the owner's investments and accumulated profits or losses.	
 ---
-Revenue represents the income your client earns through their business operations. It's their gross proceeds from sales, whether that's products, services, rentals, or anything else that bring money into the business.
+Revenue represents the income your client earns through their business operations. It's their gross proceeds from sales, whether 
+that's products, services, rentals, or anything else that bring money into the business.
 
-Expenses represent the costs of doing business, such as labor costs like salaries and employee benefits, operating costs like utilities, rent and insurance, and other essential expenses like taxes and advertising, or anything else that keeps their business moving.
+Expenses represent the costs of doing business, such as labor costs like salaries and employee benefits, operating costs like 
+utilities, rent and insurance, and other essential expenses like taxes and advertising, or anything else that keeps their 
+business moving.
 
-Revenue and expenses come together on the income statement, a document that summarizes a client's financial performance through the calculation of revenue minus expenses.
-
-This calculation helps you determine your client's net income or net loss for specified time periods.
+Revenue and expenses come together on the income statement, a document that summarizes a client's financial performance through 
+the calculation of revenue minus expenses. This calculation helps you determine your client's net income or net loss for 
+specified time periods.
 
 Note: In accounting you will often find negative values noted by being shown in parenthesis, for example: ($6,000). 
 ---
@@ -182,6 +182,184 @@ Accounting Cycles are the processes that businesses use to record and process fi
 series of steps that businesses follow to ensure accurate and complete financial reporting.
 
 Simply put, the accounting cycle is the journey from the beginning of a transaction to its inclusion in the financial statements.
+The accounting cycle is a process that includes six steps.
+---
+I am a bookkeeper. My job is to help clients stay informed about their business by providing accurate and current financial 
+information. Today, I'd like to talk to you about the accounting cycle.
 
+The accounting cycle is a process that includes six steps that help ensure everything is done properly. It starts when a 
+business makes a transaction and continues until the financial statements are produced at the end of an accounting period.
+
+By following these steps, I can generate accurate financial statements and close the books with confidence.
+
+Analyz transactions and gathering supporting documents
+1) In the first step, I collect and analyze events to see if they are transactions that impact the business. Transactions can be 
+things like business purchases, paying off debts, or earning revenue from sales. Then I gather the source documents that back 
+up those transactions. 
+
+2) The next step is to record and post all the important information about each transaction. I do this by recording journal entries.
+In double-entry accounting, every transaction is recorded as both a debit and a credit in two or more subledger accounts.
+
+Once these journal entries are written and approved, I transfer them as summary entries, or “post” them to the general ledger, 
+or GL. The general ledger is like a master record that summarizes all the financial transactions of the business. It contains 
+all accounts and financial records necessary to prepare the financial statements. 
+
+3) Then, it’s time for me to prepare the unadjusted trial balance. This happens at the end of each period. The recorded transactions 
+are combined into a trial balance. This is the “unadjusted trial balance" as it is prepared before making any adjusting entries. 
+The unadjusted trial balance provides an initial overview of financial information and helps me catch any mistakes made earlier 
+in the accounting cycle. The unadjusted trial balance is considered accurate if the total debit account balances equal total 
+credit account balances.
+
+4) Next, I prepare adjusting entries to make sure the financial statements are accurate. Usually, it's the job of a CPA or accountant 
+to let me know which adjusting entries I need to make.
+
+Adjusting entries are like fine-tuning the financial statements to accurately reflect how the business is doing. They help 
+ensure that the information included in the statements shows an accurate picture by making sure that revenue and expenses match 
+up within the right accounting periods.
+
+5) After making the adjusting entries, it’s time for me to prepare the adjusted trial balance. This is a list of the final balances 
+in all accounts. It shows that all the changes and corrections have been accurately recorded and the accounts are in balance. 
+In other words, everything has been properly updated and the financial records are accurate.
+
+An Adjusted Trial Balance is a trial balance after all adjusting journal entries have been entered, but before the financial 
+statements are finalized. It is one of the last steps in the accounting cycle.
+
+As a bookkeeper, you typically prepare an adjusted trial balance after completing month-end or year-end adjustments, such as:
+Depreciation, Accrued expenses, Accrued revenue, Prepaid expense adjustments, Unearned revenue adjustments, 
+Inventory adjustments (if applicable).
+
+QuickBooks Online does not include a report specifically named "Adjusted Trial Balance." Instead, once all adjusting entries 
+have been posted, the standard Trial Balance report becomes your adjusted trial balance because it reflects the updated balances.
+
+6) Finally, I use the adjusted trial balance to prepare the financial statements. There are four main types of financial statements:
+	The income statement, the balance sheet, the statement of equity and the statement of cash flows
+
+Financial statements are used to analyze the business’s performance, understand its cash flow, and evaluate its overall financial
+health. By following these steps, I make sure I accurately record transactions, fix mistakes, and balance the books.
+---
+6 steps of the accounting cycle
+
+Step 1: Analyzing transactions and gathering supporting documents
+When I first meet with a client, I use a checklist to guide our discussion about their business finances. We cover important 
+questions like what are the different types of income generated by the products or services they sell. Additionally, what are 
+the expenses that they pay on a regular basis. I also want to know how many checking accounts, credit card accounts, and loans 
+they have. It may seem simple, but sometimes people forget to provide information on all their accounts or provide all of the 
+bank statements. That's why I make sure to go through my checklist and verify all of the bank and credit card statements. I want 
+to make sure I catch any easy-to-miss accounts, like reserve or savings accounts, that are also under the business.
+
+As a bookkeeper, I help my clients understand their finances. When I find mistakes in their books, I take on a teaching role. 
+Since my clients aren't accounting experts, I approach these moments with care. I gently guide them to identify any overlooked 
+information, ensuring accurate records without making them feel overwhelmed. Building trust is an essential part of the process.
+
+Step 2: Recording and posting transactions
+Next, Mariah records transactions for the bakery. Thanks to the point-of-sale system, online banking, and dedicated accounting 
+software, most of the transactions are automatically recorded in real-time, which is ideal. However, there are some transactions 
+that need to be manually entered into the system. 
+
+Mariah ensures the transactions are correctly categorized and assigned to the right accounts. Her accounting software 
+automatically reorganizes the journal entries, grouping them based on the different accounts, and Mariah posts the summary 
+entries to the general ledger. She then reconciles all transactions against source documents, such as bank statements. 
+
+I compare the activity in the journals and ledgers against the source documents to make sure everything was recorded right
+
+General ledger contains a record of each financial transaction that takes place during the life of an operating business. It 
+contains all accounts needed to prepare financial statements. 
+
+Step 3: Preparing the unadjusted trial balance
+Mariah uses a tool called the unadjusted trial balance to verify that credits and debits are balanced. At this stage, it is an 
+unadjusted trial balance, since no adjusting entries have been made yet. This serves as the initial draft of financial 
+information for the bakery. This allows Mariah to check for any errors or omissions in the previous steps of the accounting cycle. 
+
+Unadjusted trial balance - A form or statement that lists the titles and balances of all ledger accounts at a given date before 
+adjusting entries are made.  
+
+The adjusted trial balance is an important step in the accounting cycle, happening right before you prepare the financial 
+reports. At first, I start with an unadjusted trial balance, which summarizes all my work and lists the account balances at the 
+end of the period. Then, an accountant or CPA steps in and makes adjustments to this trial balance. 
+These adjustments could be things like depreciation, which don't involve actual cash transactions and can be done yearly, 
+quarterly, or monthly. 
+
+The adjusted trial balance combines the unadjusted one with these adjustments to ensure that the financial statements accurately 
+reflect all the necessary information. Even if I'm not directly involved in making adjustments as a bookkeeper, it's important to 
+understand the purpose and significance of the adjusted trial balance. It acts as the final checkpoint before creating those 
+all-important financial reports.
+
+Adjusted trial balance - A listing of the ending balances in all accounts after adjusting entries have been prepared. 
+
+Step 4: Preparing adjusting entries
+Adjusting entries
+Creating new entries to record depreciation and accrual adjustments; these are provided to bookkeepers by a CPA or accountant.
+
+Step 5: Preparing the adjusted trial balance
+With the adjusting entries complete, Mariah prepares the bakery's adjusted trial balance and completes a final review for 
+accuracy. This provides a summary of the ending balances in the accounts. 
+
+Adjusted trial balance - A listing of the ending balances in all accounts after adjusting entries have been prepared. 
+
+Step 6: Preparing financial statements
+four main financial statements: 
+
+Income statement - showing the business revenues and expenses for a specific period (also known as the profit and loss statement or P&L)
+Balance sheet - presenting a snapshot of the business assets, liabilities, and equity at a particular moment 
+Statement of equity - tracking the changes in the business equity, starting from the opening balance to the ending balance for the period 
+Statement of cash flow - providing information about the sources and uses of cash by the business, offering insights into cash 
+inflows and outflows.
+-------------------------------------------------------------
+The accounting cycle
+
+If you ask, "how often do you like to look at your budget—monthly, quarterly?" They might say, "oh, we want to see it monthly 
+and yearly." That's when you say, "awesome, let's configure your accounts to match that." 
+
+The crucial questions to ask are:
+
+What time periods do you normally look at?
+What information do you need to obtain on a regular basis?
+Would it be helpful to see the information month-to-month or quarter-to-quarter?
+
+Periodicity is a fundamental accounting principle that emphasizes the importance of dividing a business's financial activities 
+into specific time periods for reporting purposes. This principle allows businesses to provide timely and relevant financial 
+information to stakeholders, enabling them to make informed decisions based on the company's performance during those periods.
+
+Revenue Recongition is a fundamental accounting principle that determines when revenue should be recognized and recorded in the 
+financial statements. It ensures that revenue is reported in the appropriate accounting period, reflecting the actual economic 
+activity of the business. According to the revenue recognition principle, a business should recognize its revenue only when a 
+good or service has been provided to the customer. If a customer paid in advance, but the good or service has not been provided 
+yet, then the revenue should not be recognized.
+
+A business recognizes its revenues when the goods or services are provided to the customer, regardless of when the payment is 
+received. The key idea is that revenue gets recognized when the work is finished and delivered, not when the payment arrives. 
+But on the flip side, if the work isn't complete and the money arrives early, that is money owed rather than revenue until the 
+work is finished or the goods are delivered. 
+
+Matching principle is a fundamental accounting principle that requires expenses to be recognized and recorded in the same 
+accounting period as the revenues they help generate. This ensures that the financial statements accurately reflect the 
+company's profitability during a specific period. So you would recognize the expense of the materials used to make a product in 
+the same period as the revenue from selling that product even it was paid for in the next accounting period.
+
+---------------------------------------------------------------
+Advantages and limitations of dedicated software
+
+Accounting software handles proper crediting and debiting based on the transaction type, making sure that all credits and debits 
+are balanced.
+
+Advantages:
+1. Automation: Reduces manual data entry and the risk of human error.
+2. Real-time reporting: Provides up-to-date financial information.
+3. Compliance: Helps ensure adherence to accounting standards and regulations.
+
+Disadvantages:
+1. Cost: Dedicated software can be expensive to purchase and maintain.
+2. Complexity: Some software may have a steep learning curve or require specialized training.
+3. Integration: Difficulty in integrating with existing systems or data sources.
+
+Whenever you enter a transaction, accounting software quickly updates all the relevant accounts at once. That means you don't 
+have to manually calculate balances or transfer data between different accounts, which is a real time saver!
+
+Accounting software won't stop you from accidentally categorizing transactions the wrong way or typing in the wrong amounts.
+
+No matter how advanced the software is, it can't replace the expertise and knowledge of a skilled bookkeeper who understands how 
+to organize accounts, how different transactions affect the books, and how to help clients understand complex financial statements.
+
+Remember: To earn the trust and satisfaction of your clients, it's important to follow the accounting cycle process.
 
 
