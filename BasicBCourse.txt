@@ -237,7 +237,7 @@ have been posted, the standard Trial Balance report becomes your adjusted trial 
 Financial statements are used to analyze the business’s performance, understand its cash flow, and evaluate its overall financial
 health. By following these steps, I make sure I accurately record transactions, fix mistakes, and balance the books.
 ---
-6 steps of the accounting cycle
+6 steps of the accounting cycle (a personal experience)
 
 Step 1: Analyzing transactions and gathering supporting documents
 When I first meet with a client, I use a checklist to guide our discussion about their business finances. We cover important 
@@ -335,7 +335,6 @@ Matching principle is a fundamental accounting principle that requires expenses 
 accounting period as the revenues they help generate. This ensures that the financial statements accurately reflect the 
 company's profitability during a specific period. So you would recognize the expense of the materials used to make a product in 
 the same period as the revenue from selling that product even it was paid for in the next accounting period.
-
 ---------------------------------------------------------------
 Advantages and limitations of dedicated software
 

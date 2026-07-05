@@ -4266,6 +4266,37 @@ Many professional bookkeepers review Open Purchase Orders weekly because:
 As your bookkeeping business grows, reviewing open purchase orders as part of your month-end closing checklist is a good habit 
 that helps keep your clients' records accurate.
 ---
+Revenue Recognition is a fundamental accounting principle that determines when revenue should be recognized and recorded in the 
+financial statements. Revenue Recognition ensures that revenue is reported in the appropriate accounting period, reflecting the 
+actual economic activity of the business. According to the revenue recognition principle, a business should recognize its revenue 
+only when a good or service has been provided to the customer. If a customer paid in advance, but the good or service has not 
+been provided yet, then the revenue should not be recognized.
+
+In this scenario, deferred revenue (also commonly called unearned revenue) is absolutely classified as a liability on your 
+balance sheet.
+
+Here is a quick breakdown of why this is the case and how the accounting cycle treats it:
+1. Why it's a Liability
+When a customer pays you upfront for a service you haven't performed yet, your business has received cash, but you haven't 
+earned that money yet under the revenue recognition principle. Instead, you now owe the customer a debt—not a debt paid in cash, 
+but a debt paid in service. 
+
+2. The Journal Entries (The "How-To")
+To picture how this flows through your books, it looks like this:
+	When you receive the upfront payment:
+		Debit: Cash (Your assets increase)
+		Credit: Deferred Revenue (Your liabilities increase)
+
+Once you complete the service:
+	Debit: Deferred Revenue (Your liability is reduced or cleared out)
+	Credit: Service Revenue (Your revenue increases on the income statement because it is now officially earned)
+
+Matching principle is a fundamental accounting principle that requires expenses to be recognized and recorded in the same 
+accounting period as the revenues they help generate. This ensures that the financial statements accurately reflect the 
+company's profitability during a specific period. So you would recognize the expense of the materials used to make a product in 
+the same period as the revenue from selling that product even it was paid for in the next accounting period.
+
+
 
 
 *** End Random_Notes_Quickbooks
