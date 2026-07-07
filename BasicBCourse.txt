@@ -1,4 +1,4 @@
-------------------------------------------------------
+Ôªø------------------------------------------------------
 As a bookkeeper, you will be expected to fulfill the following responsibilities.
 
 Recording financial transactions involves systematically documenting financial events in a business's accounting system.
@@ -16,7 +16,7 @@ performance, and position, providing valuable insights for decision-making and f
 ---
 Ethics
 Being ethical is also about protecting financial data and keeping things confidential. Employees, family members, even customers 
-will sometimes ask about the financial state of the business. I simply say. ìI canít disclose any financial information.î 
+will sometimes ask about the financial state of the business. I simply say. ‚ÄúI can‚Äôt disclose any financial information.‚Äù 
 
 There are four key components of ethics in bookkeeping: honesty, objectivity, professionalism, and confidentiality.
 
@@ -32,7 +32,7 @@ Never discussing anything with a client outside of the job.
 Never using inside information of a client for personal gain.
 Do not divulge any information about the business outside of the job.
 
-Being ethical relates to all aspects of your job as a bookkeeperñit should guide your decision-making and underscore your 
+Being ethical relates to all aspects of your job as a bookkeeper‚Äìit should guide your decision-making and underscore your 
 compliance with the law. By putting ethics first, you can establish a strong reputation and build loyalty with your clients.
 
 Your oath as a bookkeeper prohibits you from accommodating the request of any party to disclose confidential information or 
@@ -64,7 +64,7 @@ owners have invested.
 Equity = Assets - Liabilities
 Which items represent equity in the accounting equation? 
 A: Investments made by the owners and retained earnings. Equity represents the residual interest in the business's assets after 
-deducting liabilities. It includes the owner's investments and accumulated profits or losses.	
+deducting liabilities. Equity includes the owner's investments and accumulated profits or losses.
 ---
 Revenue represents the income your client earns through their business operations. It's their gross proceeds from sales, whether 
 that's products, services, rentals, or anything else that bring money into the business.
@@ -73,18 +73,18 @@ Expenses represent the costs of doing business, such as labor costs like salarie
 utilities, rent and insurance, and other essential expenses like taxes and advertising, or anything else that keeps their 
 business moving.
 
-Revenue and expenses come together on the income statement, a document that summarizes a client's financial performance through 
-the calculation of revenue minus expenses. This calculation helps you determine your client's net income or net loss for 
-specified time periods.
+Revenue and expenses come together on the income statement(P&L), a document that summarizes a client's financial  performance 
+through the calculation of revenue minus expenses. This calculation helps you determine your client's net income or net loss 
+for specified time periods.
 
 Note: In accounting you will often find negative values noted by being shown in parenthesis, for example: ($6,000). 
 ---
 Debits and credits 
-
-Debits and credits are the choreography of your client's financial performance. Understanding their movements helps you keep track of your client's assets, expenses, liabilities, owner's equity, and revenue.
+Debits and credits are the choreography of your client's financial performance. Understanding their movements helps you keep 
+track of your client's assets, expenses, liabilities, owner's equity, and revenue.
 
 Debits
-Debits represent an increase in assets or expenses, or a decrease in liabilities, ownerís equity, or revenue.
+Debits represent an increase in assets or expenses, or a decrease in liabilities, owner‚Äôs equity, or revenue.
 
 Credits
 Credits represent a decrease in assets, or expenses, or an increase in liabilities, owner's equity, or revenue.
@@ -99,6 +99,10 @@ Equity		Decrease	Increase
 Revenue		Decrease	Increase
 Expenses	Increase	Decrease
 
+Journal Entry example: Record any necessary adjusting entries.
+	Account						Debit			Credit
+	Depreciation Expense		$250	
+	Accumulated Depreciation					$250
 ---
 When recording the purchase of office supplies purchased on account, which side of the ledger should the accounts payable be 
 recorded on?  A:Credit. Accounts payable is a liability, and when you purchase office supplies on account, it increases your
@@ -107,6 +111,10 @@ liabilities. Therefore, you would record the increase in accounts payable on the
 When recording the payment of salaries to employees, which side of the salary expense ledger should the transaction be recorded?
 A:Debit. Salary expense is an expense account, and when you pay salaries to employees, it increases your expenses. Therefore, 
 you would record the increase in salary expense on the debit side of the ledger.
+---
+The process of reorganizing journal entries and grouping them by account is called posting. Posting is the process of 
+transferring information from the general journal to the general ledger. Instead of viewing transactions in chronological order,
+posting organizes them by individual account. So after posting, the transactions are grouped into ledger accounts.
 -------------------------------------------------------------------------
 Accounting principles play an important role in maintaining financial integrity and ensuring accurate reporting in business. 
 Accounting principles also provide a standardized framework that guides financial information recording, analysis, and 
@@ -114,15 +122,15 @@ communication.
 
 Let's explore the first four accounting principles to see how they will guide the integrity of your bookkeeping practices.
 
-The Economic Entity assumption is crucial for accurate financial reporting, as it ensures that the business's financial 
+1) The Economic Entity assumption is crucial for accurate financial reporting, as it ensures that the business's financial 
 statements reflect only its activities and not those of its owners or other businesses.
 
-Reliability is a fundamental principle in accounting that emphasizes the importance of recording financial transactions 
-based on verifiable and objective evidence. The Reliability principle ensures that the information you record in backedyour 
+2) Reliability is a fundamental principle in accounting that emphasizes the importance of recording financial transactions 
+based on verifiable and objective evidence. The Reliability principle ensures that the information you record in backing your 
 client's financial documents is verifiable and backed by proper documentation. If your client can't provide an invoice, receipt, 
 or bank statement to support a transaction, it is not a reliable transaction and can't be recorded.
 ---
-The Full Disclosure principle is a fundamental accounting principle that emphasizes the importance of providing all relevant 
+3) The Full Disclosure principle is a fundamental accounting principle that emphasizes the importance of providing all relevant 
 information in financial statements. This principle ensures that stakeholders, such as investors, creditors, and regulators, have 
 access to complete and transparent information about a company's financial position, performance, and any potential risks or 
 uncertainties.
@@ -130,7 +138,7 @@ uncertainties.
 For example, if a worker files a worker's compensation claim, it's essential to include that information in the notes of the 
 financial statements.
 ---
-The Conservatism principle is a fundamental accounting principle that emphasizes the importance of exercising caution and 
+4) The Conservatism principle is a fundamental accounting principle that emphasizes the importance of exercising caution and 
 prudence when making financial decisions and reporting financial information. It encourages accountants to recognize potential 
 losses or liabilities as soon as they are reasonably foreseeable, while being more conservative in recognizing potential gains 
 or assets.
@@ -140,12 +148,12 @@ excluding potential gains in uncertain situations.
 ---
 Let's explore four more accounting principles that will help you maintain integrity and accuracy as a bookkeeper.
 
-The Materiality principle states: An accountant does not have to follow every accounting rule perfectly for items that are so 
+1) The Materiality principle states: An accountant does not have to follow every accounting rule perfectly for items that are so 
 small or insignificant that they would not affect a reasonable person's understanding of the financial statements.
 
 In other words: Accountants focus their time and effort on information that could influence decisions.
 A transaction is considered material if leaving it out, recording it incorrectly, or presenting it differently could change 
-how someone views the companyís financial position or performance. Materiality allows accountants to use professional judgment.
+how someone views the company‚Äôs financial position or performance. Materiality allows accountants to use professional judgment.
 
 Materiality does not mean "ignore small transactions."
 It means: Record and present information in a way that is accurate enough that financial statement users are not misled.
@@ -153,7 +161,7 @@ It means: Record and present information in a way that is accurate enough that f
 Use caution when applying this principle. Determining materiality can be highly subjective. When in doubt, seek advice from 
 colleagues or an accountant who can provide valuable insights.
 ---
-The Consistency principle is another key accounting principle that emphasizes the importance of using the same accounting 
+2) The Consistency principle is another key accounting principle that emphasizes the importance of using the same accounting 
 methods and practices over time. This principle ensures that financial statements are comparable across periods, allowing 
 stakeholders to identify trends and make informed decisions.
 
@@ -162,15 +170,15 @@ same way in the future. This principle applies to line items on all financial st
 also helps to build trust and credibility with stakeholders, as it demonstrates a commitment to transparency and reliability in 
 financial reporting.
 ---
-The Monetary Unit assumption is a fundamental accounting principle that assumes that the currency used in financial reporting 
+3) The Monetary Unit assumption is a fundamental accounting principle that assumes that the currency used in financial reporting 
 remains stable over time. This principle allows accountants to record and report financial transactions in a consistent and 
 meaningful manner, facilitating accurate comparisons and analysis of financial information across different periods.
 
-It states that you use one currency throughout all of your accounting activities. In the United States, that currency is the 
-US dollar. If your client purchased a piece of land and the value has increased over time, you don't need to adjust the recorded 
-value based on the current market price. Just stick to the price paid at the time of purchase. 
+It states that you use one currency throughout all of your accounting activities. If your client purchased a piece of land and 
+the value has increased over time, you don't need to adjust the recorded value based on the current market price. Just stick to 
+the price paid at the time of purchase. 
 ---
-The Going Concern principle is a fundamental accounting principle that assumes a business will continue to operate indefinitely, 
+4) The Going Concern principle is a fundamental accounting principle that assumes a business will continue to operate indefinitely, 
 unless there is evidence to the contrary. This principle is essential for financial reporting, as it allows accountants to prepare 
 financial statements under the assumption that the business will remain in operation for the foreseeable future. This assumption 
 affects the valuation of assets and liabilities, as well as the recognition of revenues and expenses.
@@ -200,12 +208,12 @@ up those transactions.
 2) The next step is to record and post all the important information about each transaction. I do this by recording journal entries.
 In double-entry accounting, every transaction is recorded as both a debit and a credit in two or more subledger accounts.
 
-Once these journal entries are written and approved, I transfer them as summary entries, or ìpostî them to the general ledger, 
+Once these journal entries are written and approved, I transfer them as summary entries, or ‚Äúpost‚Äù them to the general ledger, 
 or GL. The general ledger is like a master record that summarizes all the financial transactions of the business. It contains 
 all accounts and financial records necessary to prepare the financial statements. 
 
-3) Then, itís time for me to prepare the unadjusted trial balance. This happens at the end of each period. The recorded transactions 
-are combined into a trial balance. This is the ìunadjusted trial balance" as it is prepared before making any adjusting entries. 
+3) Then, it‚Äôs time for me to prepare the unadjusted trial balance. This happens at the end of each period. The recorded transactions 
+are combined into a trial balance. This is the ‚Äúunadjusted trial balance" as it is prepared before making any adjusting entries. 
 The unadjusted trial balance provides an initial overview of financial information and helps me catch any mistakes made earlier 
 in the accounting cycle. The unadjusted trial balance is considered accurate if the total debit account balances equal total 
 credit account balances.
@@ -217,7 +225,7 @@ Adjusting entries are like fine-tuning the financial statements to accurately re
 ensure that the information included in the statements shows an accurate picture by making sure that revenue and expenses match 
 up within the right accounting periods.
 
-5) After making the adjusting entries, itís time for me to prepare the adjusted trial balance. This is a list of the final balances 
+5) After making the adjusting entries, it‚Äôs time for me to prepare the adjusted trial balance. This is a list of the final balances 
 in all accounts. It shows that all the changes and corrections have been accurately recorded and the accounts are in balance. 
 In other words, everything has been properly updated and the financial records are accurate.
 
@@ -234,7 +242,7 @@ have been posted, the standard Trial Balance report becomes your adjusted trial 
 6) Finally, I use the adjusted trial balance to prepare the financial statements. There are four main types of financial statements:
 	The income statement, the balance sheet, the statement of equity and the statement of cash flows
 
-Financial statements are used to analyze the businessís performance, understand its cash flow, and evaluate its overall financial
+Financial statements are used to analyze the business‚Äôs performance, understand its cash flow, and evaluate its overall financial
 health. By following these steps, I make sure I accurately record transactions, fix mistakes, and balance the books.
 ---
 6 steps of the accounting cycle (a personal experience)
@@ -279,11 +287,6 @@ end of the period. Then, an accountant or CPA steps in and makes adjustments to 
 These adjustments could be things like depreciation, which don't involve actual cash transactions and can be done yearly, 
 quarterly, or monthly. 
 
-The adjusted trial balance combines the unadjusted one with these adjustments to ensure that the financial statements accurately 
-reflect all the necessary information. Even if I'm not directly involved in making adjustments as a bookkeeper, it's important to 
-understand the purpose and significance of the adjusted trial balance. It acts as the final checkpoint before creating those 
-all-important financial reports.
-
 Adjusted trial balance - A listing of the ending balances in all accounts after adjusting entries have been prepared. 
 
 Step 4: Preparing adjusting entries
@@ -296,6 +299,11 @@ accuracy. This provides a summary of the ending balances in the accounts.
 
 Adjusted trial balance - A listing of the ending balances in all accounts after adjusting entries have been prepared. 
 
+The adjusted trial balance combines the unadjusted one with these adjustments to ensure that the financial statements accurately 
+reflect all the necessary information. Even if I'm not directly involved in making adjustments as a bookkeeper, it's important to 
+understand the purpose and significance of the adjusted trial balance. It acts as the final checkpoint before creating those 
+all-important financial reports.
+
 Step 6: Preparing financial statements
 four main financial statements: 
 
@@ -307,7 +315,7 @@ inflows and outflows.
 -------------------------------------------------------------
 The accounting cycle
 
-If you ask, "how often do you like to look at your budgetómonthly, quarterly?" They might say, "oh, we want to see it monthly 
+If you ask, "how often do you like to look at your budget‚Äîmonthly, quarterly?" They might say, "oh, we want to see it monthly 
 and yearly." That's when you say, "awesome, let's configure your accounts to match that." 
 
 The crucial questions to ask are:
@@ -360,5 +368,101 @@ No matter how advanced the software is, it can't replace the expertise and knowl
 to organize accounts, how different transactions affect the books, and how to help clients understand complex financial statements.
 
 Remember: To earn the trust and satisfaction of your clients, it's important to follow the accounting cycle process.
+
+-----------------------------------------------------------------
+Step 1 - Collect and analyze transactions
+
+Chart of accounts and general ledger. How are these different than a transaction journal?
+
+The chart of accounts lists all of the accounts and sub-accounts used to categorize transactions.
+
+A transaction journal, or "journal", is used to list the details of an individual event, like an expense or revenue transaction. 
+The transaction journal, lists transactions in chronological order and provides a detailed record of all transactions.
+Listing a transaction in the journal makes it easier to see than searching through the general ledger.
+
+The general ledger groups transactions by account type and shows the balances for each account. The general ledger is used to 
+prepare financial statements and other financial reports.
+
+The transaction journal, general ledger, and chart of accounts all show a business's financial information in a different way, 
+but they all are connected and impacted by each transaction.
+---
+Step 2 - Record and post transactions
+
+When the owner contributes assets:
+	Assets increase ‚Üí Debit
+	Equity increases ‚Üí Credit
+The accounting equation remains balanced.
+
+A Debit is an entry on the left side of an account, and a Credit is an entry on the right side of an account. Debits and credits 
+must always balance each other out in a transaction.
+
+A debit is an increase in assets or expenses, or a decrease in liabilities, owner's equity, or revenue. 
+A credit is a decrease in assets or expenses, or an increase in liabilities, owner's equity, or revenue.
+---
+Reconciliation involves comparing entries in the ledger/journal to available documentation, such as receipts and invoices. 
+By performing this process, you can verify that all transactions have been recorded correctly, in the right places, and with the 
+accurate amounts. 
+
+Revenue is neither an asset nor equity. It is its own type of account: an income (or revenue) account.
+However, revenue increases equity because it increases the owner's investment in the business.
+---
+Cash-basis accounting is a method where revenues and expenses are recognized based on actual receipt or payment, rather than the 
+completion of work or delivery of goods. This means transactions are recorded in real-time as they occur. 
+Here are some key points about cash basis accounting:
+‚Ä¢ Does not have accounts payable or accounts receivable
+‚Ä¢ Everything is recorded when it happens
+‚Ä¢ Cannot be used if you offer credit or have inventory
+
+Because of it's simplicity, cash-basis accounting is a favorite of small businesses. However, because you aren't tracking future 
+transactions, it doesn't always give a full picture of income and expenses; it's more of a snapshot of the business activity. 
+
+When using cash-basis accounting, you may not have a clear understanding of your business's financial health, especially if you 
+have outstanding invoices or bills that haven't been paid yet.
+
+When using cash-basis accounting, you only have to pay taxes on the money you have received. This can be a big advantage for 
+small businesses that are just starting out and may not have a lot of cash flow.
+---
+Accrual accounting is the method that is required by GAAP (Generally Accepted Accounting Principles). This means that businesses 
+that use accrual accounting are more likely to be compliant with accounting regulations. 
+
+Modified cash-basis accounting is a hybrid approach that combines elements of both cash-basis and accrual accounting.
+
+Modified cash-basis accounting is a practical and widely used accounting method among small businesses. This approach combines 
+the best of cash-basis and accrual accounting to help businesses stay on top of their finances.
+
+Modified cash-basis accounting recognizes revenue when payment is received but expenses when they are incurred. By incorporating 
+some elements of accrual accounting, modified cash-basis accounting allows businesses to have a more comprehensive view of their 
+financial standind.
+
+In modified cash-basis accounting, we introduce two important accounts: accounts payable and accounts receivable.
+If a business has prepaid expense accounts, this method may not be suitable.
+
+It recognizes revenue when payment is received but expenses when incurred.
+---
+Each accounting method offers distinct advantages and considerations that align with different business types, sizes, and goals. 
+Whether it's the simplicity of cash basis accounting, the accuracy of accrual accounting, or the flexibility of modified cash 
+basis accounting, each approach serves a purpose. By carefully assessing the nature of the business, its transactions, and its 
+financial reporting needs, you can help businesses choose the accounting method that best aligns with the business objectives. 
+
+The accrual method is appropriate for a retail store client because the store that has an inventory, which cannot be properly 
+accounted for with the other methods.
+
+The modified cash-basis accounting method is appropriate for business needs to track invoices. Modified cash-basis will allow 
+a small business to keep the books simple, but still take advantage of tracking accounts receivable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
