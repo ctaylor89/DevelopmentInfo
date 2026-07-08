@@ -449,6 +449,107 @@ accounted for with the other methods.
 
 The modified cash-basis accounting method is appropriate for business needs to track invoices. Modified cash-basis will allow 
 a small business to keep the books simple, but still take advantage of tracking accounts receivable.
+---
+Step 4: Prepare adjusted entries
+
+At the end of the accounting period, bookkeepers go through the process of making adjusting entries. This involves analyzing the 
+unadjusted trial balance and performing necessary updates by recording adjusting entries. These entries, which include deferrals, 
+accruals, and tax adjustments, expenses incurred but not recorded, can impact net income, the balance sheet, and owner's equity.
+
+1. Review all accounts for necessary adjustments.
+2. Make journal entries to record adjustments.
+3. Update the general ledger.
+4. Prepare an adjusted trial balance.
+
+To ensure accurate financial records, you will record adjusting entries in both the journal and the ledger.
+
+To ensure that financial statements reflect all revenues earned and expenses incurred during the accounting period, adjusting 
+entries are made on the last day of an accounting period. Adjusting entries are necessary to include business transactions 
+that are not yet recorded in the accounting records.
+
+The entries made include capturing transactions that have not yet been recorded on the books that belong in the accounting 
+period, such as expenses incurred but not yet paid or recorded, revenue that was received in advance of delivering goods or 
+services, and adjusting for prepayments of expenses, such as insurance premiums.
+
+Tax adjustments are also commonly made once per year as part of adjusting entries. The process of making adjusting entries, 
+also known as adjusting journal entries, involves analyzing the current account balance, determining the desired balance for the 
+accounting period’s end, and recording the adjusting entry.
+
+Usually, an accountant or Certified Public Accountant will handle the preparation of adjustments. As a bookkeeper, your role will 
+be to implement the recommended adjustments by recording the adjusting journal entries.
+
+Types of adjustments
+
+When using accrual accounting, adjusting entries help you apply the matching principle, which means you match expenses with 
+revenues in the period when they occur, not when cash is exchanged. Adjusting entries play a key role in aligning expenses to 
+revenues within the accounting period in accrual accounting.
+
+Record revenues when they are earned, regardless of when the business receives the money. 
+Record expenses when they are incurred, regardless of when the business pays them.
+
+Adjusting entries reflect the actual exchange of money and modify real-time entries to match revenue and expenses in the period 
+they occur. They include various types of entries. Deferrals remove transactions that should be assigned to a different time 
+period. For example, if a business buys a new lawn mower but hasn't used it yet, none of its value should be attributed to the 
+revenue earned in the current period.
+
+Similarly, if a client pays in advance for a job that hasn't been completed, the revenue should be adjusted to match the actual 
+completion of the job. Overall, deferrals ensure that revenues and expenses are properly matched to the relevant time period.
+
+
+Accruals, on the other hand, are the opposite of deferrals. Accruals are transactions that include future payments or expenses. 
+Accruals recognize revenues and expenses when they are incurred, regardless of when cash is exchanged. This means that if a 
+business provides a service in one accounting period but doesn't receive payment until the next period, the revenue is still 
+recognized in the period the service was provided.
+
+If the expected life of the vehicle is 5 years, $10,000 would be recognized as an expense each year the vehicle is used until 
+the full value of the vehicle has been expensed. This gradual recognition of expenses reduces the immediate impact on net profit, 
+as only a portion of the cost is recorded as an expense in each period.
+
+Depreciation is a form of tax adjustment that a evenly spreads out the cost of an asset over its expected lifespan.
+---
+A gift card sale is a great example of deferred (unearned) revenue. When a customer buys a gift card, the business has not yet 
+earned the revenue because it still owes the customer goods or services in the future.
+Step 1: Customer purchases a $500 gift card
+Suppose the customer pays with cash.
+
+Journal entry:
+Account		Debit							Credit
+Cash		$500	
+Gift Card Liability (Unearned Revenue)		$500
+
+Why? Debit Cash $500 because the business received cash. Cash is an asset, and assets increase with debits.
+Credit Gift Card Liability $500 because the business now owes the customer $500 worth of products or services. Liabilities 
+increase with credits.
+
+Customer redeems the entire $500 gift card
+
+When the customer uses the gift card to purchase merchandise, the business has now earned the revenue.
+Journal entry:
+Account					Debit				Credit
+Gift Card Liability		$500	
+Sales Revenue								$500
+
+Why? Debit Gift Card Liability $500 to reduce the amount the business owes.
+     Credit Sales Revenue $500 because the business has now earned the revenue.
+---
+Your client provided a service to a customer and they have yet to pay. The accounting period is ending today. Which type of 
+journal entry will need to be made?  A: An accrual journal entry. Since the service has been provided but payment has not yet 
+been received, the revenue needs to be recognized in the current accounting period. This will involve debiting Accounts 
+Receivable and crediting Service Revenue to reflect the earned revenue and the amount owed by the customer.
+
+A customer paid in advance for a service. The work has not yet been started and the accounting period has come to an end. Which 
+type of journal entry will need to be made? A: A deferral journal entry. Since the customer has paid in advance for a service 
+that has not yet been provided, the revenue cannot be recognized in the current accounting period. This will involve debiting 
+Cash and crediting Unearned Revenue to reflect the cash received and the liability owed to the customer for future services.
+
+What is the depreciation of a vehicle entered in the journal entries?  A: Depreciation is typically recorded as a journal entry 
+at the end of each accounting period to allocate the cost of the vehicle over its useful life. The journal entry would involve 
+debiting Depreciation Expense and crediting Accumulated Depreciation.
+Note: The practice answer is "A Tax Adjustment journal entry". Depreciation is a common tax adjustment.
+
+Adjustments should always be marked so that it is clear which accounts were affected by the transaction and by how much.
+---
+
 
 
 

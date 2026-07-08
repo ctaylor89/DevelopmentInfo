@@ -4977,7 +4977,32 @@ Why it's not a regular asset: A normal asset has a debit balance and represents 
 A contra-asset is the exact opposite—it carries a credit balance and exists solely to sit directly underneath a specific asset 
 (like Vehicles or Equipment) to reduce its reported value.
 
+Is revenue considered an asset or equity?
+Revenue is neither an asset nor equity. It is its own type of account: an income (or revenue) account.
+However, revenue increases equity, which is why the distinction can be confusing.
 
+Example: When a business earns $1,000 by providing a service and the customer pays immediately:
+The journal entry is:
+	Account			Debit		Credit
+	Cash			$1,000	
+	Service Revenue				$1,000
+
+At the end of the accounting period, revenue and expense accounts are closed into the owner's equity (or retained earnings 
+for a corporation).
+In QuickBooks Online, revenue accounts appear on the Profit and Loss report, while equity accounts appear on the Balance Sheet.
+
+Here's how the account types relate:
+
+	Account Type		Purpose														Normal Balance
+	Assets				Resources the business owns (Cash, Inventory, Equipment)	Debit
+	Liabilities			Amounts the business owes									Credit
+	Equity				Owner's residual interest in the business					Credit
+	Revenue (Income)	Money earned from selling goods or services					Credit
+	Expenses			Costs of operating the business								Debit
+
+Revenue is not an asset and not equity. It is an income account with a normal credit balance. Although it is reported separately 
+on the Profit and Loss statement during the accounting period, it increases equity through net income when the books are closed.
+---
 *** End_Of_Random_Notes_Accounting_Bookkeeping
 ---------------------------------------------------------------
 Think_ahead
