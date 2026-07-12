@@ -549,6 +549,120 @@ Note: The practice answer is "A Tax Adjustment journal entry". Depreciation is a
 
 Adjustments should always be marked so that it is clear which accounts were affected by the transaction and by how much.
 ---
+Step 6 - Prepare financial statements
+
+The income (P&L) statement provides a snapshot of a business's financial performance during a specific time period. It includes the 
+total revenue, which is all of the income generated from sales of goods and services provided. It accounts for the total cost 
+of goods sold, which represents the total expenses directly associated with producing the goods or services that generated the 
+revenue. It calculates the gross profit, which is the result of total revenue minus cost of goods sold. 
+
+The income statement(P&L) also includes any other business expenses incurred during the reporting period, such as rent, salaries, and 
+advertising costs. 
+
+By subtracting the total expenses–including taxes–from the revenue, the income statement reveals the resulting net profit or 
+loss for the business.
+
+The income statement is a crucial tool for stakeholders, including management, investors, and creditors, as it provides insights 
+into the company's profitability and operational efficiency. By analyzing the income statement, stakeholders can make informed 
+decisions about resource allocation, investment opportunities, and overall business strategy.
+
+Gross Profit minus Operating Expenses equals Net Income.
+Gross Profit minus Operating Expenses minus Taxes equals Net Income.
+
+Total revenue is the same as total income. Total expenses are the same as total costs. Net income is the same as net profit 
+or net earnings.
+
+Total revenue is the total amount of money earned by a business from its primary operations, such as sales of goods or services. 
+It represents the top line of the income statement and serves as a key indicator of the company's ability to generate income 
+from its core activities.
+
+Total revenue is the total amount of money received from customers.
+Total Expenses = Operating Expenses + Taxes
+
+Gross Profit = Total Revenue - Cost of Goods Sold (COGS)
+Net Income = Gross Profit - Total Expenses
+
+The balance sheet is important because it shows what the business owns (assets), owes (liabilities), and the value to its 
+owners (equity) at a specific time.
+
+Equity = total Assets - total Liabilities + Owner's contributions + net income
+
+Assets: 46684.08
+Liabilities: 19909.05
+
+Total Equity = Total Assets - Total Liabilities
+Equity: 26775.03 = net income
+---
+The statement of equity is the same information as the equity portion of the balance sheet. It shows the changes in the owner's 
+equity over a specific period of time. The statement of equity includes the beginning balance of equity, any additional 
+contributions made by the owner, net income or loss for the period, and any distributions or withdrawals made by the owner. 
+The ending balance of equity is then calculated by adding the beginning 
+
+Retained Earnings + Owner's Contributions + Net Income - Owner's Draws = Ending Equity Balance
+
+From the statement of equity, also shown on the balance sheet, this is accumulated net income from previous years minus any 
+dividends paid to shareholders.
+
+The statement of equity evaluates business profitability by analyzing changes in retained earnings, which represent accumulated 
+profits over time. However, it may not provide enough information for external users to assess the business's financial 
+performance and position. 
+---
+statement of cash flows = Balance sheet + income statement
+
+The purpose of the statement of cash flows is to provide information about the cash inflows and outflows of a business during a 
+specific period. It helps stakeholders understand how the business generates and uses cash, which is crucial for assessing 
+the company's liquidity, solvency, and overall financial health. The statement of cash flows is divided into three main sections: 
+Operating activities, investing activities, and financing activities. Each section provides insights into different aspects of the 
+business's cash flow, allowing stakeholders to evaluate its ability to meet short-term obligations, invest in growth 
+opportunities, and manage its overall cash position.
+--
+In the statement of cash flows, is the purpose of this statement to show how much cash moves in both directions, or is the 
+purpose of the statement to show the resulting balance after all cash movements?
+
+A: The true purpose of the Statement of Cash Flows is to show how much cash moves in both directions—meaning it tracks the 
+actual inflows (sources) and outflows (uses) of cash over a specific period of time. While it does show the resulting final 
+balance at the very bottom, that ending balance isn't the primary focus. In fact, you can already find the exact resulting cash 
+balance just by looking at the "Cash and Cash Equivalents" line on the Balance Sheet.
+
+Instead, the Statement of Cash Flows breaks down how you arrived at that balance by organizing the movements into three 
+distinct directions:
+	Operating Activities: Cash generated or spent from day-to-day core business operations (e.g., cash collected from customers, 
+	                      cash paid for bills/inventory).
+
+	Investing Activities: Cash spent or received from long-term assets (e.g., buying equipment, selling property).
+	Financing Activities: Cash moving between the business and its owners or creditors (e.g., taking out a loan, owner draws, 
+	                      or paying back principal).
+
+In short: The Balance Sheet shows the resulting balance, while the Statement of Cash Flows tells the story of the movement that 
+happened to get there.
+--
+A sole proprietor owns 100% of the business.
+Key Point for Bookkeeping
+When you see Owner's Equity in accounting, the title depends on the business structure:
+	Sole Proprietorship: Owner's Capital
+	Partnership: Partner's Capital
+	LLC: Member's Equity
+	Corporation: Common Stock, Additional Paid-in Capital, and Retained Earnings (representing shareholders' equity)
+So, a business owner is only considered a shareholder if the business is organized as a corporation and ownership is represented 
+by shares of stock. Otherwise, the owner is referred to by a different title, such as proprietor, partner, or member.
+---
+On a standard multi-step Income(P&L) Statement, the formula breaks down to:
+	Gross Profit = Total Revenue - Cost of Goods Sold (COGS)
+	Net Income = Gross Profit - Total Expenses (Operating Expenses, Taxes, Interest, etc.)
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

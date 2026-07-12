@@ -1,0 +1,68 @@
+If I write a check for $200 to pay down a loan and enter the transaction into the journal, what would the journal entry be?
+
+When you write a check to pay down a loan, you are reducing both what you owe (a liability) and your cash balance (an asset).
+Assuming this payment is going strictly toward the principal balance of the loan, the standard journal entry would be:
+The Journal Entry
+	Debit: Loan Payable (Liability account) — $200
+	Credit: Checking Account / Cash (Asset account) — $200
+
+Why this works (The Accounting Logic):
+Debiting the Loan Payable account decreases your liabilities. Since liabilities naturally have a credit balance, a debit lowers 
+the total amount you owe to the lender.
+
+Crediting the Checking account decreases your assets. Since assets naturally have a debit balance, a credit reflects money 
+moving out of your bank account.
+
+Note on Interest: If that $200 check also includes an interest fee (for example, $180 goes to principal and $20 goes to interest),
+you would split the debit side like this:
+	Debit Loan Payable: $180
+	Debit Interest Expense: $20
+	Credit Checking Account: $200
+
+--------------------------------------------------------------------------------
+The owner of a landscaping business, purchased $500 worth of sprinklers for his inventory. He charged the expense to the company credit card.
+
+How will this recent sprinkler purchase affect my ability to buy additional supplies?
+1) Record the purchase in the journal entry.
+Credit Accounts Payable Credit Card: $500
+Debit Inventory: $500
+
+2) Based on the statement of cash flows, there is $17,040.43 available in the cash accounts.
+--------------------------------------------------------------------------------
+You bought a car for the business for $20,000. You gave a $5,000 down payment and took a loan for the remaining $15,000.
+Here is how it would look as a journal entry:
+	Debit: Vehicle (Asset account) — $20,000
+	Credit: Cash (Asset account) — $5,000
+	Credit: Loan Payable (Liability account) — $15,000
+
+*Not sure this explanation is correct
+A: $20,000 car (asset) = $15,000 worth of the car owned by the bank (liability) + $5,000 worth of the car owned by you (equity).
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+

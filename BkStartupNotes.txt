@@ -3123,6 +3123,15 @@ If you're organizing parts of the business, use classes.
 --------------------------------------------------------
 Definitions_
 
+---
+An Accrued Expense (also known as an accrued liability) is an expense that a business has incurred during an accounting period 
+but has not yet paid for or received an invoice for by the end of that period. n accrued expense creates a temporary liability 
+on your financial statements.
+
+On the Income Statement an Accrued Expense is recorded as an Expense, which correctly reduces your net income for that period.
+On the Balance Sheet an Accrued Expense is recorded as a Current Liability (usually under "Accrued Expenses" or 
+"Accounts Payable"), showing that the business owes this money in the short term.
+
 Retained earnings are the cumulative net earnings or profits a company keeps after paying dividends to shareholders. 
 Dividends are the last financial obligations paid by a company during a period. “Retained” refers to the fact that 
 those earnings were kept by the company.
@@ -5003,6 +5012,82 @@ Here's how the account types relate:
 Revenue is not an asset and not equity. It is an income account with a normal credit balance. Although it is reported separately 
 on the Profit and Loss statement during the accounting period, it increases equity through net income when the books are closed.
 ---
+Invoices represent money coming in from your customers.
+Bills represent money going out to your vendors.
+---	
+Retained Earnings represent the cumulative amount of net income a business has earned since its very first day of operation, 
+minus any dividends or owner's draws that have been paid out to the owners or shareholders. Essentially, it is the profit that a 
+company decides to retain (keep) in the business to reinvest in future growth, pay down debt, or build a financial cushion, 
+rather than distributing it to the owners. Key Characteristics: Location on the Financials: It is found in the Equity section at 
+the bottom of the Balance Sheet. 
+
+The Link Between Reports: Retained Earnings acts as the direct bridge between the Income Statement and the Balance Sheet. At the 
+end of every fiscal year, your net income (or net loss) gets "closed out" and added to your Retained Earnings balance. 
+Accumulation Over Time: Unlike an Income Statement which resets to zero at the beginning of every new year, Retained Earnings is 
+a running total that accumulates year after year. 
+
+The Formula: Ending Retained Earnings = Beginning Retained Earnings + Net Income (or - Net Loss) - Dividends/Draws
+At the end of every fiscal year, your net income (or net loss) gets "closed out" and added to your Retained Earnings balance.
+
+Unlike an Income Statement which resets to zero at the beginning of every new year, Retained Earnings is a running total that 
+accumulates year after year.
+
+-----
+Tracking financial performance beginning
+
+As a bookkeeper, recording assets, sales transactions, inventory, and depreciation is integral to helping the 
+business owner succeed. 
+
+One of the overarching themes of the accounting cycle is that in every step, we must balance the accounting equation.
+
+Assets can be broken down into two types: current assets and fixed assets.
+Current assets are vital for a business's day-to-day operations. They help a business meet its short-term financial obligations.
+
+Assets: Money market account balances, stocks, and bonds are all types of investments. Some investments may be categorized as 
+noncurrent, but most investments are current assets. Investments in this category are also defined as marketable securities.
+
+Assets: Notes receivable refer to amounts that are owed to the business that will be paid within 12 months.
+
+Assets to remember: Cash, Accounts Receivable, Inventory, Prepaid Expenses, Equipment, Vehicles, Buildings, Land.
+Liabilities to remember: Accounts Payable, Credit Cards Payable, Loans Payable, Accrued Expenses.
+Equity to remember: Common Stock, Retained Earnings.
+
+Assets such as Cash and cash equivalents include high-quality investments that can be easily accessed within 90 days, 
+such as certificates of deposit(CD's). 
+
+Assets specifically can be found on the balance sheet or in the chart of accounts.
+Assets have a normal debit balance, meaning we expect to find the balance of that account on the debit side of the t-account. 
+
+Depreciation decreases the value of an asset over time, and is recorded as a debit to Depreciation Expense and a credit 
+to Accumulated Depreciation.
+
+Bookkeepers need to:
+1 Find and/or list assets in the business records
+2 Accurately record any transaction that impacts the assets of a business
+3 Find assets on financial statements
+4 Check all financial records for accuracy
+
+Fixed assets, also known as long-term assets, are assets that a business acquires for productive use in its operations and are 
+not intended for sale. Unlike current assets, which are expected to be converted into cash within a year, fixed assets are 
+expected to be used by the business for an extended period, typically beyond a year.
+
+There are two main types of fixed assets:
+1. Property, plant, and equipment (PP&E)
+2. Intangible assets
+
+Property, Plant, and Equipment (PP&E)
+A business’s long-term assets that are expected to generate economic benefits and contribute to revenue for many years. 
+Investment in PP&E is also called a capital investment. 
+
+Note that real estate (land) is also an asset category, but land does not depreciate in value.
+
+Intangible assets have no physical manifestation, such as copyrights, patents, and intellectual property. They are intellectual 
+property that holds future value. This can include assets like a business's domain name, patents, and trademarks.
+
+Examples of intangible assets include:
+	Patents, Copyrights, Trademarks, Domain names, software licenses and PP&E.
+
+
 *** End_Of_Random_Notes_Accounting_Bookkeeping
 ---------------------------------------------------------------
 Think_ahead

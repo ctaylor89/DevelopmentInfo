@@ -253,6 +253,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		SalesExpensesWorkflow.pdf = SalesExpensesWorkflow.pdf
 		Self_Marketing_BK.txt = Self_Marketing_BK.txt
 		SetupAndProcedures.txt = SetupAndProcedures.txt
+		TransactionRecordings.txt = TransactionRecordings.txt
 	EndProjectSection
 EndProject
 Global
