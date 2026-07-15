@@ -61,9 +61,11 @@ Assets come from two places:
 
 So liabilities are not “bad” or “negative.” They are one of the two sources of assets.
 Liabilities don’t reduce assets — they explain them.
-If a business has $50,000 in assets, the equation asks:
+If a business has $50,000 in assets, the accounting equation asks:
 	How much came from owners?
 	How much came from creditors?
+* A creditor in accounting is an entity (which can be a person, organization, or government body) that is owed money because 
+it has provided goods, services, or loans to another entity
 
 A liability is never recorded as an asset — but it can produce an asset.
 Liabilities are claims on assets, not assets themselves.
@@ -5086,6 +5088,25 @@ property that holds future value. This can include assets like a business's doma
 
 Examples of intangible assets include:
 	Patents, Copyrights, Trademarks, Domain names, software licenses and PP&E.
+---
+1. Expense (Income Statement)
+An expense represents the cost of operations that your business consumes or uses up during a specific period to generate revenue.
+
+Examples: Rent, utilities, office supplies, advertising, and salaries.
+
+Impact: Expenses are reported on the Income Statement and directly reduce your Net Income, which lowers your overall Equity.
+
+2. Liability (Balance Sheet)
+A liability is an obligation or debt that your business owes to an outside party that must be paid back in the future.
+
+Examples: A bank loan, a credit card balance, or Accounts Payable (unpaid vendor bills).
+
+Impact: Liabilities are reported on the Balance Sheet and represent a claim against your business assets.
+
+How They Connect:
+An expense can create a liability if you don't pay for it immediately.
+
+
 
 
 *** End_Of_Random_Notes_Accounting_Bookkeeping

@@ -24,6 +24,47 @@ context: Many career advisors recommend finding a niche by targeting a specific 
 As a bookkeeper just starting out, how can I best prepare myself to interview for an industry that I have never worked in before?
 *Note that this is a good prompt to use even after I get a job in a specific industry, as it can help me prepare for the work 
 I have to do and the questions I may have to answer for clients in that industry.
+---
+
+
+
+
+act as a resume writer and career coach. 
+context: I want to create a resume for a bookkeeper position. 
+I am pivoting from a career in software engineering to a career in bookkeeping.
+
+
+output: What are the key skills, qualifications, and experiences that should be highlighted in the resume for a bookkeeper role?
+---
+
+1. **Attention to Detail**: Emphasize your ability to maintain accurate financial records and catch discrepancies.
+
+2. **Technical Skills**: Highlight your proficiency with accounting software (e.g., QuickBooks, Xero) and Microsoft Excel.
+
+3. **Understanding of Accounting Principles**: Showcase your knowledge of basic accounting concepts, such as the accounting equation, debits and credits, and financial statements.
+
+4. **Organizational Skills**: Illustrate your ability to manage multiple tasks, prioritize effectively, and meet deadlines.
+
+5. **Communication Skills**: Stress your capability to explain financial information clearly to clients and collaborate with team members.
+
+6. **Problem-Solving Skills**: Provide examples of how you've identified and resolved financial issues in the past.
+
+7. **Relevant Experience**: Include any internships, volunteer work, or part-time jobs related to bookkeeping or finance.
+
+8. **Certifications**: Mention any relevant certifications, such as Certified Bookkeeper (CB) or QuickBooks certification.
+
+9. **Adaptability**: Highlight your willingness to learn and adapt to new accounting practices or software.
+
+10. **Client Management**: If applicable, discuss your experience in managing client relationships and understanding their unique financial needs.
+
+By focusing on these key areas, you can create a compelling resume that demonstrates your readiness for a bookkeeper position, even with a background in software engineering.
+
+
+
+
+
+
+
 -------------------------------------------------------
 Random_Notes
 
@@ -195,6 +236,7 @@ position yourself as an expert in that area and attract the right clients who va
 specialize in working with e-commerce businesses, freelancers, or restaurants. By focusing on a specific niche, you can 
 tailor your marketing efforts and services to meet the unique needs of that industry, which can justify higher pricing.
 
+***
 Technical skills are valuable, so make sure to highlight your proficiency with bookkeeping software, automation tools, and any 
 relevant certifications you have. Also promote your self as a former Software Engineer with a deep understanding of systems, 
 automation, and compliance(government experience). 

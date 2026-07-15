@@ -650,28 +650,113 @@ On a standard multi-step Income(P&L) Statement, the formula breaks down to:
 	Gross Profit = Total Revenue - Cost of Goods Sold (COGS)
 	Net Income = Gross Profit - Total Expenses (Operating Expenses, Taxes, Interest, etc.)
 ---
+A business can acquire equipment or space by purchasing the needed items or by leasing them. 
 
+In a lease agreement:
+The lessor is the party who owns the asset and is renting it out.
+The lessee is the party paying the rent to use the asset.
 
+There are two types of equipment leases: in both cases, an asset is being rented, but the main difference lies in the transfer 
+of ownership.
 
+1. Operating Lease: This is a short-term lease where the lessee uses the asset but does not gain ownership. The lessor retains 
+   ownership and is responsible for maintenance and risks associated with the asset.
 
+2. Capital Lease (or Finance Lease): This is a long-term lease where the lessee has the option to purchase the asset at the end 
+   of the lease term. The lessee effectively assumes some of the risks and rewards of ownership, and the asset is recorded on 
+   the lessee's balance sheet.
 
+Operating leases are treated as rental expenses. The lessee records the lease payments as an expense on their income statement, 
+and the asset is not recorded on the balance sheet. The lease payments are typically made on a regular basis (e.g., monthly) and 
+are considered operating expenses.
 
+Capital leases, on the other hand, are treated as a purchase of the asset. The lessee records the asset on their balance sheet 
+and depreciates it over its useful life. The lease payments are split into interest and principal components, similar to a loan.
+---
+Normal (or natural) account balance
+A normal balance is the expectation that a particular type of account will have either a debit or a credit balance based on its classification within the chart of accounts. 
 
+- Asset accounts typically have a debit normal balance.
+- Liability accounts typically have a credit normal balance.
+- Equity accounts typically have a credit normal balance.
+- Revenue accounts typically have a credit normal balance.
+- Expense accounts typically have a debit normal balance.
+---
+Side of the 'T'
+Left					Right
+Debit					Credit
+Assets and Expenses		Liabilities, Equity and Revenue(increases Equity)
 
+Where a $100 utility bill is received but will be paid next month, here is the exact debit and credit breakdown for the adjusting 
+journal entry:
+Account										Debit			Credit
+Utility Expense								$100
+(Income Statement/Equity)
+Accounts Payable (Balance Sheet/Liability)					$100
 
+Q: A business accrues $400 in one accounting period. If only $150 is paid before the current period ends, how are theses expenses 
+recorded at the end of the accounting period?
 
+A: The business would record the total accrued expense of $400 in the current accounting period, even though only $150 has been 
+   paid. The "adjusting journal entry" would be:
+Account											Debit			Credit
+Accrued Expenses (Income Statement/Equity)		$400
+Cash (Balance Sheet/Asset)						$150
+Accounts Payable (Balance Sheet/Liability)						$250
 
+The Liability is Cleared: The debit to Accrued Expenses Payable wipes out the $250 debt from your Balance Sheet because Accounts 
+Payable is a liability account. The $150 cash payment reduces your Cash account, which is an asset account. The $400 expense is 
+recorded on the Income Statement, which reduces your net income and ultimately your equity.
+---
+What is a fixed-intangible asset? A fixed-intangible asset is a long-term, non-physical asset that provides value to a business 
+over an extended period. These assets are not tangible, meaning they cannot be touched or seen, but they have significant value 
+and can contribute to the company's revenue generation. Examples of fixed-intangible assets include patents, trademarks, 
+copyrights, brand recognition, and goodwill.
 
+What is a current asset? A current asset is a short-term asset that is expected to be converted into cash, sold, or used up 
+within one year or within the business's operating cycle, whichever is longer. Current assets are essential for a company's 
+liquidity and day-to-day operations. Examples of current assets include cash, accounts receivable, inventory, and short-term 
+investments.
+---
+Starting Recording Sales Transactions
+When a business makes a sale, it can be recorded in different ways depending on the nature of the transaction. Here are some
+ common scenarios for recording sales transactions:
+ 1. Cash Sale: When a customer pays for goods or services in cash at the time of the sale, the transaction is recorded as follows:
+   - Debit: Cash (Asset account) – increases cash on hand
+   - Credit: Sales Revenue (Revenue account) – recognizes the income earned from the sale
+ 
+ 2. Credit Sale: When a customer purchases goods or services on credit, the transaction is recorded as follows: 
+   - Debit: Accounts Receivable (Asset account) – increases the amount owed by the customer   
+   - Credit: Sales Revenue (Revenue account) – recognizes the income earned from the sale
 
+Cash sales are transactions where the customer pays for goods or services immediately with cash, check, or a credit or debit card.
 
+In a cash sale, the business receives payment at the time of the transaction, and there is no need to track accounts receivable. 
 
+How frequently you post has an impact. For instance, your posting frequency impacts the types of financial reports you can run. 
+There might be a negative domino effect to posting infrequently.
+Keep in mind, you'll want to provide a level of detail that helps the business owner make the best financial decisions. 
 
+Bookkeepers usually check the reports from POS against what is on the income(P&L) statement for: 
+	•Sales
+	•Sales tax
+	•Returns, etc.
+This verifies that the POS is bringing all data in correctly.
+---
+Invoicing (also known as credit sales) allows customers to defer the payment of goods or services.
 
+Most small businesses use modified cash accounting, meaning they don't count the money in the books until they receive the money. 
+Instead, they can run an accounts receivable report to see who owes them money and how much. The collected accounts receivable 
+in the future will increase their cash flow. 
 
+Accounts receivable is important for businesses because it is considered an asset in their financial records. It can quickly be 
+converted to cash, and is a valuable indicator of a business' overall financial health. The business can even use ccounts 
+receivable as collateral to borrow money if they need to meet their short-term expenses.
 
-
-
-
+Is Sales considered an asset? No, sales is not considered an asset. Sales is a revenue account that represents the income 
+generated from the sale of goods or services. While sales contribute to a company's overall financial health, they do not 
+appear on the balance sheet as assets. Instead, sales are recorded on the income statement, where they are matched against 
+expenses to determine the company's profitability.
 
 
 

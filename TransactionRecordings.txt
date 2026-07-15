@@ -38,14 +38,23 @@ Here is how it would look as a journal entry:
 *Not sure this explanation is correct
 A: $20,000 car (asset) = $15,000 worth of the car owned by the bank (liability) + $5,000 worth of the car owned by you (equity).
 --------------------------------------------------------------------------------
+Transaction journal
+Now that she knows which account to utilize, Margaret proceeds to entering the oven purchase in the transaction journal. 
+Name					Account Name	Debit			Credit
+Kitchen supply store	PP&E			$3,000.00		--
+Credit union			Cash/Bank		--				$3,000.00
 
-
+Because the transaction involved both debiting PP&E and crediting the bank account, both of which affected the left side of the 
+accounting equation, assets, the total assets are unchanged. The accounting equation remains in balance even though the ratio 
+of short-term to long-term assets changes. 
 --------------------------------------------------------------------------------
-
-
+A business made a sale of one of their rare trading cards for $8,000. What actions should you take to record the sale?
+Debit the cash account $8,000
+Credit the sales (revenue) account $8,000	
 --------------------------------------------------------------------------------
-
-
+Send an invoice for $335.19 and record the transaction before receiving the payment.
+Debit Accounts Receivable $335.19
+Credit Sales (Revenue) $335.19
 --------------------------------------------------------------------------------
 
 
