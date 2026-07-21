@@ -950,8 +950,36 @@ Cost of Goods Sold (COGS) represents the total expense incurred in manufacturing
 resale, raw materials, parts, labor costs, supplies, overhead costs, and shipping or freight expenses. COGS refers to direct 
 expenses associated with producing or purchasing the goods that a business sells during a specific period. 
 
-By subtracting COGS from total revenue, a company calculates its gross profit. 
+By subtracting COGS from total revenue, a company calculates its gross profit.
 
+---
+Is COGS calculated at the time the related products are sold?  Yes, under accrual accounting, Cost of Goods Sold (COGS) is 
+recognized at the exact time the related products are sold. 
+
+This follows the matching principle in accounting, which dictates that expenses must be matched and reported in the same 
+accounting period as the revenue they helped generate.
+
+How the Process Works:
+1) Before the Sale (Asset):
+When inventory is bought or manufactured, its cost sits on the Balance Sheet as an asset (Inventory). At this point, it is not 
+an expense.
+
+2) At the Time of Sale (Expense):
+When a customer purchases the inventory, two things happen simultaneously:
+	A) Revenue is recognized for the sale price.
+	B) COGS is recognized for the cost of that inventory, moving the item's cost off the Balance Sheet (crediting Inventory) and 
+	onto the Income Statement (debiting COGS).
+---
+Real-Time vs. Periodic Tracking
+Perpetual Inventory System: COGS is calculated and updated instantly with every transaction (this is how software like QuickBooks 
+automatically handles sales).
+
+Periodic Inventory System: COGS is calculated at the end of an accounting period using the formula:
+	Beginning Inventory + Purchases - Ending Inventory = COGS
+
+Even in a periodic system, the goal is still to reflect the cost of only the goods that were actually sold during that specific 
+timeframe.
+---
 The cost of acquiring merchandise items is an important part of COGS.
 
 Shipping or freight costs play a role in COGS. These expenses cover the transportation of the finished goods from the 
@@ -994,7 +1022,69 @@ At year-end:
 	The $15,000 profit is added to Owner's Capital.
 
 Revenue and expense accounts only measure activity for one accounting period (such as a month or a year).
+At end of the accounting period, the balances in these accounts are transferred to the Owner's Capital account (or Retained
+Earnings for a corporation). This process is called closing the books.
+
+At the end of the period, total expenses (including COGS) are subtracted from total revenue to calculate Net Income (or Net Loss).
 ---
+Adjust COGS and inventory to reflect the cost of $800 of inventory used to produce products that are sold.
+	Account Name		Debit		Credit	
+	Cost of Goods Sold	$800						* COGS is an expense account, so it increases when inventory is sold.
+	Inventory						$800			* Inventory is an asset account, so it is reduced when inventory is sold.
+
+Cost of Goods Sold (COGS) is neither an asset nor equity, it is an expense account.
+Here is how it fits into the basic accounting framework:
+
+Accounting Breakdown
+Expense Account (Income Statement): COGS represents the direct cost of producing or purchasing the goods that a business sells 
+during a given period. Because COGS is an expense, it appears on the Income Statement and is subtracted directly from Revenue 
+to calculate Gross Profit.
+
+Relationship to Assets: When inventory is purchased, it is recorded as an Asset (Inventory) on the Balance Sheet. When that 
+inventory is sold, its cost is moved out of the asset account and recorded as an Expense (COGS) on the Income(P&L) Statement.
+
+Relationship to Equity: Expenses reduce net income, which ultimately reduces Owner's or Retained Equity on the Balance Sheet. 
+However, COGS itself is categorized as an expense, not an equity account.
+---
+Inventory valuation refers to the process of assigning a cost to the inventory items listed on the balance sheet. 
+
+The inventory valuation method chosen by a business directly affects how the value of inventory is calculated and the amount 
+debited to COGS when inventory is sold. The inventory valuation method also impacts the financial statements, including the 
+balance sheet and income statement, as well as tax calculations and cash flow management.
+
+In accounting, there's a method called FIFO that helps businesses keep track of their inventory. FIFO means that the first 
+things purchased are the first things sold. They are sold at the cost of the oldest inventory, which is recorded as COGS on the 
+income statement. The remaining inventory is valued at the cost of the most recent purchases, which is recorded as an asset on 
+the balance sheet.
+
+Another method is LIFO, which means that the last things purchased are the first things sold. They are sold at the cost of the 
+most recent inventory, which is recorded as COGS on the income statement. The remaining inventory is valued at the cost of the 
+oldest purchases, which is recorded as an asset on the balance sheet.
+
+The average cost method is another way businesses determine the value of their inventory. They calculate the average cost by 
+adding up the prices of all the things they bought and dividing it by the total number of items. Many small businesses like 
+using this method because it's simple and easy to calculate.
+
+As a bookkeeper, it's important to ensure consistency when applying the chosen inventory valuation method.
+
+If a client decides to change costing methods of their inventory, that is not a quick change. There are forms that you or your 
+client will have to file with the government to alert of that change, because their tax calculations may adjust.
+
+
+
+******** Left off at the beginning of Tracking inventory is important
+
+
+
+
+
+
+
+
+
+
+
+
 
 Suppose you perform a service and receive $500 in cash.
 		Journal Entry
@@ -1011,7 +1101,11 @@ Suppose you perform a service and receive $500 in cash.
 
 
 
-
+1. **Assets**: Resources owned by the business (e.g., cash, inventory, equipment).
+2. **Liabilities**: Obligations owed to external parties (e.g., loans, accounts payable).
+3. **Equity**: Owner's claim on the assets after liabilities are deducted (e.g., owner's capital, retained earnings).
+4. **Revenues**: Income generated from normal business operations (e.g., sales revenue, service income).
+5. **Expenses**: Costs incurred to generate revenues (e.g., rent, utilities, COGS).
 
 
 
