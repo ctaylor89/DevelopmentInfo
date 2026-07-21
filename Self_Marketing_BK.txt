@@ -25,15 +25,27 @@ As a bookkeeper just starting out, how can I best prepare myself to interview fo
 *Note that this is a good prompt to use even after I get a job in a specific industry, as it can help me prepare for the work 
 I have to do and the questions I may have to answer for clients in that industry.
 ---
-
-
-
-
 act as a resume writer and career coach. 
 context: I want to create a resume for a bookkeeper position. 
 I am pivoting from a career in software engineering to a career in bookkeeping.
+---
+act as a resume writer and career coach. 
+
+context: I want to create a resume for a bookkeeper position. 
+I am pivoting from a career in software engineering to a career in bookkeeping.  
+
+output: create a bookkeeping resume, using the job history in my Software developer resume, that I will input. 
+I want the resume that you are creating to show key skills, qualifications, and experiences that would be useful 
+to a person hiring me. 
+
+Output format: 
+1) For each job listed, put the key skills, qualifications, and experiences in each job position listed.
+2) Merge the key skills, qualifications, and experiences with the existing job description for each job listed.
+3) Remove any text that mentions common software tools that are not relevant to bookkeeping.
+4) Add any bookkeeping skills, qualifications, and experiences that may be relevant to the job position listed.
 
 
+---
 output: What are the key skills, qualifications, and experiences that should be highlighted in the resume for a bookkeeper role?
 ---
 

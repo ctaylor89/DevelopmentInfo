@@ -730,7 +730,6 @@ When a business makes a sale, it can be recorded in different ways depending on 
    - Credit: Sales Revenue (Revenue account) – recognizes the income earned from the sale
 
 Cash sales are transactions where the customer pays for goods or services immediately with cash, check, or a credit or debit card.
-
 In a cash sale, the business receives payment at the time of the transaction, and there is no need to track accounts receivable. 
 
 How frequently you post has an impact. For instance, your posting frequency impacts the types of financial reports you can run. 
@@ -753,10 +752,271 @@ Accounts receivable is important for businesses because it is considered an asse
 converted to cash, and is a valuable indicator of a business' overall financial health. The business can even use ccounts 
 receivable as collateral to borrow money if they need to meet their short-term expenses.
 
+Recording invoices (credit sales transactions)
+When an invoice is recorded, the bookkeeper:
+	Debits accounts receivable
+	Credits sales or income account
+
+When an invoice is paid, the bookkeeper:
+Credits accounts receivable
+Debits the bank account
+
 Is Sales considered an asset? No, sales is not considered an asset. Sales is a revenue account that represents the income 
 generated from the sale of goods or services. While sales contribute to a company's overall financial health, they do not 
 appear on the balance sheet as assets. Instead, sales are recorded on the income statement, where they are matched against 
 expenses to determine the company's profitability.
+
+* If you are transferring from one asset account to another, you would use the transfer feature in QuickBooks Online. This 
+  ensures that the transaction is recorded accurately and maintains the integrity of your financial records.
+  
+* If you are transferring from one asset account to another, you are debiting one asset account and crediting another asset 
+  account on the left side of the T-account. This keeps the accounting equation balanced and accurately reflects the movement 
+  of funds between the two accounts.
+
+A transaction may affect accounts on only one side of the equation, or on both sides of the equation, but the amounts a business 
+records must keep the accounting equation in balance.
+
+* When Sales are credited, it increases the revenue account, which in turn increases the owner's equity. This is because revenue 
+  contributes to the overall profitability of the business, and as profits increase, so does the owner's equity in the business.
+---
+Starting section: Recording other notes and uncollectible accounts
+
+As a bookkeeper, you'll need to know how and when to deploy promissory notes, how to calculate interest, and how and when to 
+enter notes receivable, notes payable, doubtful accounts, uncollectible accounts, and bad debt write-offs into a transaction 
+journal. 
+
+A promissory note is a signed document containing a written promise to pay a stated sum to a specified person or the bearer at 
+a specified date or on demand. 
+
+Notes receivable are written promises from customers to pay a specific amount of money at a future date. They are considered 
+assets because they represent money that is owed to the business.
+
+Notes payable are written promises to pay a specific amount of money to a creditor at a future date. They are considered 
+liabilities because they represent money that the business owes to others.
+
+Doubtful accounts are accounts receivable that are not expected to be collected. They are considered a contra asset account 
+because they reduce the total amount of accounts receivable that is expected to be collected.
+
+Uncollectible accounts are accounts receivable that have been deemed uncollectible and are written off as bad debt. They are 
+also considered a contra asset account and reduce the total amount of accounts receivable.
+
+Inter-company loans are loans made between different entities within the same parent company. They are considered liabilities 
+for the borrowing entity and assets for the lending entity. Inter-company loans are typically used to manage cash flow and 
+financing needs.
+
+Converting overdue payments into a promissory note is a common practice for businesses to formalize the repayment terms and 
+protect their interests. When a customer or vendor is overdue on a payment and agrees to a payment plan with interest. A 
+promissory note serves as the legal, binding document of the agreement.
+
+What’s included in a promissory note? 
+
+AI Response:
+1. The principal amount: This is the amount of money that is being borrowed or loaned.
+2. The interest rate: This is the rate at which interest will accrue on the principal amount.
+3. The repayment terms: This includes the schedule for repayment, such as the frequency of payments and the due date for the final payment.
+4. The parties involved: This includes the names and contact information of the borrower and lender.
+5. Signatures: Both parties must sign the promissory note to make it legally binding.
+6. Date: The date the promissory note is created and signed.
+7. Any additional terms or conditions: This may include late fees, prepayment penalties, or other relevant clauses.
+8. Governing law: The promissory note may specify which jurisdiction's laws will govern the agreement.
+9. Collateral: If the promissory note is secured, it may include a description of the collateral being used to secure the loan.
+10. Default provisions: The promissory note may outline what happens in the event of default, such as acceleration of the debt or legal remedies available to the lender.
+11. Dispute resolution: The promissory note may include provisions for resolving disputes between the parties, such as mediation or arbitration.
+12. Notices: The promissory note may specify how notices should be given between the parties, such as by mail or email.
+13. Waivers: The promissory note may include any waivers of rights or claims by either party, such as waiving the right to a jury trial.
+14. Assignment: The promissory note may specify whether the rights and obligations under the note can be assigned to another party.
+15. Prepayment: The promissory note may specify whether the borrower can prepay the loan without penalty and how any prepayments will be applied to the principal and interest.
+16. Acceleration clause: The promissory note may include an acceleration clause, which allows the lender to demand immediate repayment of the entire loan balance if the borrower defaults on any of the terms of the note.
+17. Security interest: If the promissory note is secured, it may include a security interest in specific assets of the borrower, which gives the lender the right to seize those assets in the event of default.
+18. Governing law and jurisdiction: The promissory note may specify which state's laws will govern the agreement and which courts will have jurisdiction over any disputes that arise.
+19. Entire agreement: The promissory note may include a clause stating that the note represents the entire agreement between the parties and supersedes any prior agreements or understandings.
+20. Amendments: The promissory note may specify how any amendments or modifications to the agreement must be made, such as in writing and signed by both parties.
+21. Severability: The promissory note may include a severability clause, which states that if any provision of the note is found to be invalid or unenforceable, the remaining provisions will still be valid and enforceable.
+22. Counterparts: The promissory note may specify that it can be executed in multiple counterparts, meaning that each party can sign a separate copy of the note, and all copies together will constitute one agreement.
+
+Intuit response for What’s included in a promissory note? :
+	Name and address of borrower and lender
+	Maturity date
+	Sum borrowed
+	Payment schedule
+	Interest rate and how interest is calculated
+	Prepayments process
+	Overdue payment interest charged
+	Default
+	Waivers, amendments, and governing law 
+
+A promissory note is a simple contract for repayment of money. When a promissory note is issued, you'll track it using notes 
+receivable or notes payable accounts. Notes receivable are considered assets, while notes payable are considered liabilities.
+
+Notes payable and notes receivable are formal written agreements and usually incorporate interest payments.
+Notes receivable and notes payable are methods used in accrual basis accounting to track promissory notes in a business's books 
+until they are paid.
+
+Principal x Interest Rate x Time = Interest
+
+
+Example: $10,000 borrowed at 10% annual interest rate compounded monthly.
+$10,000 x 10% x 31/365(number of days in the month/days in the year) = $84.93
+
+Notes:
+1) Time can be adjusted into days or months to more accurately calculate the interest amount.
+2) Keep in mind there are different methods to calculating compound interest. We are focusing on just one here.
+---
+Because some payments are marked as bad debt, we have accounts uncollectible and a process for recognizing money that will not 
+be paid back.
+
+The collection process:
+Accounts Receivable -> Accounts Receivable Aging Report -> Doubtful Accounts -> Accounts Uncollectible -> Bad Debt Write-Offs
+
+A doubtful account is a dollar amount to cover unpaid invoices or debt. Businesses deduct this from their receivables
+Doubtful accounts are considered a contra asset account because they reduce the total amount of accounts receivable that is 
+reported on the balance sheet.
+Doubtful accounts are recorded on the Debit side of the T-account.
+
+Note: Many small businesses do not use Doubtful account or Accounts uncollectible. They often leave the amount in Accounts 
+receivable and run aging reports regularly.
+
+You have the options to write off or write down unpaid invoices or create a credit memo. If there’s sales tax involved, then 
+you should definitely use the credit memo approach because then you won’t have to remit that sales tax amount to the various 
+government bodies, since you’re not actually getting that from the customer.
+
+If the business decides to write it off an unpaid invoice that was not paid remember, if it’s an old invoice, don’t go in and 
+void it. Because that means you are actually changing transactions from a prior period (which is really bad). That’s why it’s 
+best to record it as bad debt.
+
+You should continually review open invoices with your client, giving them options: to wait for payment, to follow up with the 
+customer, to convert the overdue payments to a note and charge interest but spread the payments out over a longer period of time, 
+or to mark it down as bad debt. There's a point where a doubtful account turns into uncollectible receivables.
+
+If your client wants to write off bad debt, you need to reduce income by, first, showing the bad debt expense and, second, 
+writing off the expense in accounts receivable so the invoice doesn't show as open any longer.
+
+Remember how this translates into transaction journal entries?
+1) You debit bad debt expense
+2) You credit accounts receivable (or doubtful or uncollectible accounts, if you already moved it) 
+
+Bad debt is recorded as an expense on the income statement and reduces a business's profit.
+
+When writing off bad debt, there are two main methods at your disposal: direct write-off and allowance method.
+Direct Write-off is the most straightforward method and is used by small businesses.
+Pros:
+	Simple
+	Takes care of uncollectable accounts in a single journal entry
+	Easier for business owners with no accounting background
+Cons:
+	Does not follow the matching principle
+	Could make a business seem more profitable than it actually is
+
+Allowance Method is rarely used by small businesses. It is more complex and requires estimating uncollectible accounts in advance.
+Pros:
+	Businesses analyze invoices and estimate the amount for bad debt expense
+	Follows the matching principle
+	Provides a more accurate picture of a business's financial health
+Cons:
+	More complex and time-consuming
+	Requires regular review and adjustment of estimates
+
+When paying back a loan, what side of the T-account is the interest expense recorded on? 
+A: The interest expense is recorded on the debit side of the T-account. This is because interest expense is an expense account, 
+and expenses increase with debits. When a business pays interest on a loan, it records the interest expense as a debit to reflect 
+the cost incurred for borrowing funds.
+
+-----
+Tracking merdhandise inventory
+
+Inventory includes the stock of raw materials, work-in-progress(not ready for sale), finished goods, and merchandise that a 
+business holds. It's an essential asset for revenue generation and profitability.
+
+Apart from finished goods, the store might also keep a stock of components and spare parts to service and repair computers.
+
+To ensure safe transportation of products, the store maintains an inventory of packaging materials like boxes, bubble wrap, 
+packing peanuts, and shipping labels. Note that these items are essential for efficient order fulfillment and customer 
+satisfaction, but they are not part of inventory. They are packing supplies and an expense on the business books.
+
+Demo units are considered inventory since they are held for potential sales, even though they are not sold in their current state. 
+They are typically kept in a separate inventory account and tracked for their potential resale value.
+
+Merchandise is the category that refers to finished goods that a business purchases from a supplier for the purpose of future 
+resale. These items are typically ready for sale and are held in inventory until sold to customers.
+
+Finished goods category would be the fully assembled and packaged products that are ready for sale to customers.
+---
+Sample journal entry for purchasing inventory:
+Accounts		Debit			Credit
+Raw materials	$1,000.00
+Cash							$1,000.00
+---
+Cost of Goods Sold (COGS) represents the total expense incurred in manufacturing the goods a business sells such as items for 
+resale, raw materials, parts, labor costs, supplies, overhead costs, and shipping or freight expenses. COGS refers to direct 
+expenses associated with producing or purchasing the goods that a business sells during a specific period. 
+
+By subtracting COGS from total revenue, a company calculates its gross profit. 
+
+The cost of acquiring merchandise items is an important part of COGS.
+
+Shipping or freight costs play a role in COGS. These expenses cover the transportation of the finished goods from the 
+manufacturing facility to the customer's location.
+
+Handling and storage costs are also included in COGS. These costs are associated with managing inventory, including warehousing 
+expenses and labor costs for handling products.
+
+Indirect costs are NOT included in the calculation of COGS. Expenses like rent, utilities, marketing, or advertising costs are 
+separate from the cost of goods sold and are accounted for in different financial categories.
+
+As a bookkeeper, understanding the components of COGS helps you accurately track the expenses associated with manufacturing and 
+selling goods. This knowledge allows you to calculate the profitability of each item sold and identify areas where costs can be 
+optimized.
+
+Inventory is an Asset
+Inventory is something a business owns and expects to sell in the future. On the balance sheet, it appears under Current Assets.
+---
+Revenue increases equity, although it is not itself an equity account on the chart of accounts.
+This is an important distinction in accounting.
+When a business earns revenue, it increases the company's net income. At the end of the accounting period, net income is closed
+into the owner's capital account (for a sole proprietorship) or retained earnings (for a corporation), which are equity accounts.
+
+The phrase "closed into the owner's capital account" means that the balance in the Revenue and Expense accounts is transferred 
+into the Owner's Capital (or Retained Earnings for a corporation) at the end of the accounting period.
+
+The purpose is to:
+Reset all temporary accounts (Revenue, Expenses, Owner's Draw) back to zero for the next accounting period.
+Update the Owner's Capital account to reflect the business's profit or loss.
+Why is this necessary?
+
+For example: Suppose your bookkeeping business earned:
+	Service Revenue: $50,000
+	Expenses: $35,000
+Your net income is: $50,000 − $35,000 = $15,000		* If applicable, you would also subtract any taxes owed to the government.
+													* If applicable, you would also subtract owner's draw.
+At year-end:
+	Service Revenue is reset to $0.
+	All Expense accounts are reset to $0.
+	The $15,000 profit is added to Owner's Capital.
+
+Revenue and expense accounts only measure activity for one accounting period (such as a month or a year).
+---
+
+Suppose you perform a service and receive $500 in cash.
+		Journal Entry
+						Debit		Credit
+	Cash				$500
+	Service Revenue					$500
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

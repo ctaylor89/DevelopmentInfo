@@ -4307,6 +4307,23 @@ accounting period as the revenues they help generate. This ensures that the fina
 company's profitability during a specific period. So you would recognize the expense of the materials used to make a product in 
 the same period as the revenue from selling that product even it was paid for in the next accounting period.
 
+Accounts receivable is an asset.
+Inventory is an asset.
+
+Is sales considered an asset? No, sales is not considered an asset. Sales is a revenue account that represents the income 
+generated from the sale of goods or services. While sales contribute to a company's overall financial health, they do not 
+appear on the balance sheet as assets. Instead, sales are recorded on the income statement, where they are matched against 
+expenses to determine the company's profitability.
+
+What side of the T-account is sales recorded on? Sales is recorded on the credit side of the T-account. When a business makes a 
+sale, it increases its revenue, which is represented by a credit entry in the sales account. This reflects the increase in the 
+company's income from the sale of goods or services.
+
+
+
+
+
+
 
 
 
