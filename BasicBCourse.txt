@@ -1070,28 +1070,108 @@ As a bookkeeper, it's important to ensure consistency when applying the chosen i
 If a client decides to change costing methods of their inventory, that is not a quick change. There are forms that you or your 
 client will have to file with the government to alert of that change, because their tax calculations may adjust.
 
-
+What is the purpose of conducting regular inventory counts in a business?
+A: To identify discrepancies and prevent inventory shrinkage.
 
 ******** Left off at the beginning of Tracking inventory is important
 
+By using the correct inventory tracking method that fits the business's needs and resources, you can control inventory properly, 
+ensure accurate finances, and make the best use of resources. It is essential for you to accurately track inventory so 
+businesses can determine the value of their assets and make informed decisions.
 
+Bookkeepers use two main methods to track inventory: perpetual and periodic systems.
 
+Let's start with the perpetual inventory system. With a perpetual system, the inventory account is continuously updated as 
+products are bought and sold. This real-time view of inventory gives you immediate insights into stock levels, enabling 
+efficient inventory management. In the perpetual system, each sale is recorded by debiting the asset and crediting the cost of 
+goods sold. This ensures accurate valuation of inventory and immediate expense recognition.
 
+In the periodic system, the inventory account is updated at specific intervals, typically at the end of an accounting period. 
+During this period, the cost of goods sold is determined by calculating the difference between the initial inventory, purchases 
+made, and the remaining inventory. While the periodic system is simpler to set up and suitable for smaller businesses, it lacks 
+real-time inventory visibility.
 
+Remember
+Choosing the right way to value inventory depends on things like how the industry works, what the business wants to achieve, and 
+the tax rules. Regardless of the method chosen, it's important to use it consistently for trustworthy financial statements and 
+to compare different time periods easily.
 
+At the end of each quarter, someone will physically count the inventory, determine its value, and then make a journal entry to 
+adjust its recorded value. A simple mistake in inventory calculations can impact your balance sheet and income statement. If 
+there are errors in the inventory amount, adjustments must be made to correct them.
 
+Inventory errors typically occur because:
+Something got miscalculated, a vendor does not send the correct amount of inventory, the owner counted wrong, the owner had 
+the wrong value.
 
+Bookkeepers play a role in comparing the actual inventory count with the recorded value and making adjustments through journal 
+entries when needed.
 
+Regular inventory counts and reviewing financial statements help bookkeepers quickly catch any differences. By comparing the 
+balance sheet's inventory value with the actual count, you can find and fix errors before they cause significant issues in the 
+financial statements.
 
+Having accurate inventory records is important for meeting regulatory requirements and providing reliable financial information 
+to stakeholders.
 
+If a business overestimates the value of its inventory, it will make the assets on the balance sheet seem higher than they 
+really are. This can affect the calculation of net income on the income statement because higher inventory amounts can lead to 
+lower costs of goods sold and higher profits.
 
+Most of the time, you will catch an error when there is an inventory count. Other times you will catch the error when you review 
+the financial statements. Compare the balance sheet inventory figure (as of a particular date, month-end, quarter-end, 
+or year-end) to the exact date of an inventory count. If the total on the inventory count does not match the balance sheet, then 
+you know there is an error.
 
+As a bookkeeper, you must correct any errors to accurately reflect the inventory asset and cost of goods sold (COGS). By making 
+journal entries and adjusting the inventory asset and COGS accounts, bookkeepers fix the inaccuracies and align the financial 
+records with the actual inventory values.
+
+For example, during a regular inventory check, you find that the recorded quantity of a specific product in the inventory system 
+is higher than the physical count. Upon investigation, you discover that an incorrect entry was made, causing an overstatement 
+of inventory. To correct this mistake, you add a journal entry to decrease the inventory asset and increase the cost of goods 
+sold (COGS) by the appropriate amount. In the updated financial reports, you include an explanation of the adjustment made, 
+ensuring transparency and accuracy in the financial records.
+ 
+For example, during a review of the year-end financial statements, you discover a significant inventory error that was overlooked
+in regular inventory counts. You find that an incorrect data entry led to the misclassification of certain inventory items, 
+resulting in an incorrect valuation. To fix the error, you add journal entries to adjust the inventory asset and cost of goods 
+sold (COGS) accounts accordingly. In the updated financial reports, you include a disclosure, explaining the nature of the error 
+and the steps taken to fix it. This ensures compliance with accounting standards and provides transparency to stakeholders.
+---
 Suppose you perform a service and receive $500 in cash.
-		Journal Entry
-						Debit		Credit
-	Cash				$500
-	Service Revenue					$500
+Journal Entry
+					Debit		Credit
+Cash				$500
+Service Revenue					$500
+---
+Effects of purchasing and selling inventory
 
+When a company purchases $500 in inventory from suppliers on credit, it affects the accounting equation in the following manner:
+	ASSETS     =	    LIABILITIES     +			EQUITY
+	$500 (Inventory)	$500 (Accounts payable)		No change
+
+When a company sells $758 of their inventory to customers for $1500, the following changes occur:
+	ASSETS     =		LIABILITIES     +			EQUITY
+	+$1500 (Cash)		No change					+$742
+	-$758 (Inventory)
+
+COGS raw material to finished goods
+$500 of finished goods is sold and generates $1,050 in sales (finished goods). The goods are paid for with cash. 
+	ASSETS     =		LIABILITIES     +			EQUITY
+	+$1,050 (Cash)		No change					+$550 
+	- $500 (COGS)
+---
+Cost of Goods Sold (COGS) is a standard account type in the Chart of Accounts.Key Details About COGS:Account Type: It is 
+classified as a Cost of Goods Sold (or Expense) account type.Financial Statement Location: It appears directly on the Income 
+Statement (Profit and Loss statement).
+
+Role in Net Income: COGS is subtracted directly from Total Revenue to calculate Gross Profit: Gross Profit = Revenue - COGS
+Normal Balance: Like other expense accounts, its normal balance is a Debit (increasing with debits and decreasing with credits).
+---
+If ending inventory is overstated:
+Assets are overstated, Equity is overstated, Liabilities remain unaffected
+---
 
 
 

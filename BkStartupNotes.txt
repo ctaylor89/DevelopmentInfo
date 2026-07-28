@@ -4311,13 +4311,25 @@ Accounts receivable is an asset.
 Inventory is an asset.
 
 Is sales considered an asset? No, sales is not considered an asset. Sales is a revenue account that represents the income 
-generated from the sale of goods or services. While sales contribute to a company's overall financial health, they do not 
+generated from the sale of goods or services. While sales contribute to a company's overall financial health, Sales do not 
 appear on the balance sheet as assets. Instead, sales are recorded on the income statement, where they are matched against 
 expenses to determine the company's profitability.
 
 What side of the T-account is sales recorded on? Sales is recorded on the credit side of the T-account. When a business makes a 
 sale, it increases its revenue, which is represented by a credit entry in the sales account. This reflects the increase in the 
 company's income from the sale of goods or services.
+
+Cost of Goods Sold (COGS) is an Expense account (specifically, a direct cost expense account).
+
+Key Details:
+Normal Balance: Debit (increasing COGS requires a debit entry).
+Financial Statement: It appears on the Income Statement, directly subtracted from Gross Revenue to calculate Gross Profit.
+Purpose: It tracks the direct costs attributable to the production or purchase of the goods sold by a business during a 
+specific period.
+
+Assets = Liabilities + Equity
+The accounting equation represents the fundamental equation in accounting that demonstrates the relationship between a business's 
+resources (assets), its debts or obligations (liabilities), and the ownership interest in the business (equity).
 
 
 
