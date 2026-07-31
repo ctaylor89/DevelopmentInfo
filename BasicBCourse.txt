@@ -1,4 +1,7 @@
-﻿------------------------------------------------------
+﻿
+Start recording part 2 on line 314
+
+------------------------------------------------------
 As a bookkeeper, you will be expected to fulfill the following responsibilities.
 
 Recording financial transactions involves systematically documenting financial events in a business's accounting system.
@@ -89,7 +92,8 @@ Debits represent an increase in assets or expenses, or a decrease in liabilities
 Credits
 Credits represent a decrease in assets, or expenses, or an increase in liabilities, owner's equity, or revenue.
 
-The cardinal rule of bookkeeping: debits and credits need to be equal. It's like a balancing act where the numbers on both sides of the stage should always match up.
+The cardinal rule of bookkeeping: debits and credits need to be equal. It's like a balancing act where the numbers 
+on both sides of the stage should always match up.
 ---
 Debit					Credit
 ---------------------------------------
@@ -1172,6 +1176,144 @@ Normal Balance: Like other expense accounts, its normal balance is a Debit (incr
 If ending inventory is overstated:
 Assets are overstated, Equity is overstated, Liabilities remain unaffected
 ---
+Depreciation is a way to track how the value of an asset decreases over time. This decrease in value is reported on income 
+statements using specific principles.
+
+When a business purchases an asset, like a piece of equipment or a vehicle, we don't record the entire expense all at once. 
+Depreciation is the process of dividing the cost of a long-term asset over the period of time we expect a business to use the 
+asset. Tracking depreciation is a way to keep track of how much of an asset's value is used up each period. Depreciation will 
+affect the accounting equation because as we decrease the asset's value over time, the equity will also decrease to reflect the 
+item's current value. 
+
+Property, plant, and equipment, also known as PP&E, are long-term assets: things that a business owns and uses for a long time, 
+like buildings or machinery.
+
+Investment in PP&E is also called a capital investment. Investment analysts and accountants use the PP&E of a business to 
+determine if it is on sound financial footing and utilizing funds in the most efficient and effective manner. A business 
+investing in PP&E is a good sign for investors as a fixed asset is a sizable investment in a business's future. Purchases of PP&E 
+signal that management has faith in the long-term outlook and profitability of its business. 
+
+When the business buys new PP&E, it's a good sign that they are confident about the future of the business.
+
+When you check a balance sheet, you'll find a line for PP&E in the assets section. This line shows the total value of the 
+business's long-term asset. The chart of accounts has different accounts for each type of PP&E, so everything is nicely 
+organized between the balance sheet and the chart of accounts.
+
+Annually, you will record the same amount you decreased the asset value by as a depreciation expense on the income statement. 
+This way, the business can spread the expense of the item over time in the books.
+
+By using depreciation as a method to spread out the expense of the laptop over time, a business can benefit from using their 
+brand new laptop right away, but they can spread out the effect its purchase has on their profit over its useful life.
+
+Depreciation process
+When businesses acquire assets like buildings or equipment, they determine their initial value based on the actual purchase cost 
+and any expenses incurred to get them ready for use. If a business buys a building for a retail store, they consider the 
+purchase price, transaction fees, and any improvements made to prepare the building for the business. All these expenses being 
+recorded in the income statement at once would cause the business to show a large drop in their profit. 
+
+The total amount of depreciation recorded over time is called accumulated depreciation. Accumulated depreciation is recorded 
+as a contra asset account, which means it is an account that reduces the overall value of the assets on the balance sheet. 
+Accumulated depreciation is shown as a negative number because it offsets the original value.
+
+Calculating depreciation
+The amount of depreciation that can be taken over each accounting period is determined by tax laws.
+Spreading the expense of purchasing high-value assets over time helps spread out tax obligations over time as well. 
+
+If the business purchased a forklift, each year the forklift's value on the books will decrease a little bit. The value of the 
+forklift after decreasing its value each year is called the book value, and it will keep going down until it reaches zero.
+
+Depreciation Schedule	Item description and useful life
+Year	Depreciation expense	Accumulated depreciation	Book value
+Purchase	Forklift—6 years								$12,000.00
+Year 1		$2,000.00			$2,000.00					$10,000.00
+Year 2		$2,000.00			$4,000.00					$8,000.00
+Year 3		$2,000.00			$6,000.00					$6,000.00
+...
+Year 6		$2,000.00			$12,000.00					$0.00
+
+Book value = Initial value - Accumulated depreciation
+
+Depreciation methods
+
+There are different approaches, including straight-line depreciation, accelerated depreciation, and units of production. Each 
+method determines how much depreciation expense is recorded during each accounting period, taking into account factors such as 
+time, usage, and production levels. 
+
+With straight-line depreciation, the same amount of depreciation expense is recorded each accounting period during an asset's 
+service life. Most depreciation is calculated using straight-line depreciation.
+---
+With accelerated depreciation, the asset is depreciated at a higher rate at the beginning of its service life based on usage.
+The business could use the double-declining balance method, which is an accelerated depreciation method that allows for larger 
+deductions in the early years of the asset's life.
+---
+The units of production method of depreciation considers how much the asset is used each year. It is calculated by dividing the 
+total units produced or the actual usage of the asset by the estimated service life. 
+
+For example, for a vehicle with an expected service life of 150,000 miles, the business would calculate the depreciation based 
+on the number of miles the vehicle is expected to be driven each year. If the business anticipates driving the vehicle 25,000 
+miles per year, the depreciation expense would be calculated based on this usage. As the vehicle is used and accumulates miles, 
+the depreciation expense would increase proportionally until it reaches the total depreciation value at the end of its service 
+life. 
+
+The formula used in the units of production method to calculate depreciation is: (Total units produced / estimated service life)
+---
+Accumulated depreciation is the total amount of depreciation expense that has been allocated for an asset since the asset was 
+put into use.
+---
+The lifecycle of an asset involves various stages, starting from its acquisition to its eventual disposition.
+
+* In accounting and the asset lifecycle, disposition (or asset disposal) refers to the final stage when a business retires, sells, 
+trades in, or otherwise gets rid of an asset so it is removed from the company's active use and accounting records.
+
+During the acquisition phase, a business purchases or acquires an asset.
+
+Depreciation is the process by which the cost of the asset is allocated over its useful life. 
+
+Ongoing use and maintenance
+Throughout the useful life of an asset, bookkeepers monitor and record any ongoing costs associated with its use and maintenance. 
+
+Disposition
+At the end of an asset's useful life, the business may decide to remove, sell, or dispose of the Asset.
+---
+When a business acquires an asset, such as a truck, it's important for a bookkeeper to accurately record and track its value over 
+time. This process is called acquisition.
+
+Asset account and accumulated depreciation account
+To begin, when an asset is acquired, a bookkeeper creates an asset account to represent its initial value. This account keeps 
+track of the cost of the asset. Additionally, an accumulated depreciation sub-account is established. Accumulated depreciation 
+represents the total amount of depreciation expense that has been allocated for the asset since it was put into use.
+
+Calculating accumulated depreciation
+Accumulated depreciation increases each year offsetting the value of the asset. 
+
+Contra asset account
+An Accumulated Depreciation account is a specific type of contra asset account. A contra asset account is set up to offset the 
+balance of another account on the balance sheet. In the case of accumulated depreciation, the Accumulated Depreciation account
+reduces the overall value of the asset.
+
+Unlike regular asset accounts, the natural balance of accumulated depreciation is either zero or a credit (negative) balance.
+Example: ($6,000).
+
+When depreciating an asset, you need to credit the accumulated depreciation account in the journal entry. 
+---
+Suppose the delivery truck has an original cost of $50,000 and an estimated useful life of 5 years.
+The calculation for annual depreciation expense would be:
+	Depreciation expense = (original cost - salvage value) / useful life
+	Depreciation expense = ($50,000 - $0) / 5 = $10,000 per year
+
+Here's an example of a journal entry for the depreciation expense of the truck:
+	Account						Debit		Credit
+	Depreciation expense		$10,000						* Depreciation expense has a debit balance.
+	Accumulated depreciation				$10,000
+
+On the balance sheet the Accumulated depreciation will be a negative balance.
+
+
+
+
+
+
+
 
 
 
