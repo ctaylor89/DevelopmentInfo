@@ -7,7 +7,8 @@ Prompt:
 Act as an accountant Manager context: Quickbooks 2025 online  
 Output: 25 questions that are typically asked when a bookkeeper is interviewing for a job.
 
-Here are 25 realistic interview questions an accounting manager would ask a bookkeeper for a role using QuickBooks Online (2025). These aren’t fluff—they’re the kinds of questions that quickly expose whether someone actually knows what they’re doing.
+Here are 25 realistic interview questions an accounting manager would ask a bookkeeper for a role using QuickBooks Online (2025). 
+These aren’t fluff—they’re the kinds of questions that quickly expose whether someone actually knows what they’re doing.
 
 Core Bookkeeping & Accounting Knowledge
 2) Walk me through the accounting equation and how it applies to your daily work.
@@ -48,5 +49,7 @@ Process & Efficiency
 Professional Judgment & Communication
 32) When would you escalate an issue to an accountant or manager instead of fixing it yourself?
 
-
-If you want, I can flip this around and give you strong sample answers that would actually impress a hiring manager—or even simulate a mock interview and grade your responses.
+****************************
+If you want, I can flip this around and give you strong sample answers that would actually impress a 
+hiring manager—or even simulate a mock interview and grade your responses.
+****************************
