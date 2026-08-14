@@ -1,0 +1,44 @@
+﻿How_to_do_certain_operations_in_excel
+
+* Ask AI to generate some random data based on a provided csv template. Output a csv file that can be loaded into Excel. 
+Look for youtube videos and practice each lesson. Have fun!
+
+----------------------------------------------------------------
+What I'd Learn First
+Since you're transitioning into bookkeeping, do not try to learn every Excel feature.
+Focus on this sequence:
+Priority	Excel Feature
+⭐⭐⭐⭐⭐	Sorting & Filtering
+⭐⭐⭐⭐⭐	SUM
+⭐⭐⭐⭐⭐	Tables
+⭐⭐⭐⭐⭐	Cell References
+⭐⭐⭐⭐⭐	SUMIF / SUMIFS
+⭐⭐⭐⭐⭐	XLOOKUP
+⭐⭐⭐⭐⭐	PivotTables
+⭐⭐⭐⭐	IF
+⭐⭐⭐⭐	Conditional Formatting
+⭐⭐⭐⭐	Data Validation
+⭐⭐⭐⭐	Remove Duplicates
+⭐⭐⭐	Freeze Panes
+⭐⭐⭐	Charts
+
+If you become comfortable with Tables + SUMIFS + XLOOKUP + PivotTables + basic IF statements, you'll have a very solid 
+Excel foundation for a typical bookkeeping position.
+
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+How_to_do_certain_operations_in_excel

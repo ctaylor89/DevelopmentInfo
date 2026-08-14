@@ -4330,6 +4330,54 @@ specific period.
 Assets = Liabilities + Equity
 The accounting equation represents the fundamental equation in accounting that demonstrates the relationship between a business's 
 resources (assets), its debts or obligations (liabilities), and the ownership interest in the business (equity).
+---
+Yes. A company can—and normally will—have multiple liability accounts in its Chart of Accounts.
+For example, a $5,000 loan would typically be recorded as:
+	Account			Debit		Credit
+	Cash			$5,000	
+	Loan Payable				$5,000
+
+For example, a company's Chart of Accounts might contain:
+	Accounts Payable — money owed to vendors
+	Credit Card Payable — credit-card balances
+	Loan Payable — money borrowed from a bank or lender
+	Sales Tax Payable — sales taxes collected but not yet remitted
+	Payroll Tax Payable — payroll taxes owed
+	Interest Payable — interest incurred but not yet paid
+
+* All of these are liability accounts, but they track different obligations.
+
+You would generally create the $5,000 loan as its own liability account, such as:
+	Liabilities → Long-Term Liabilities → Loan Payable
+if the loan is due more than one year from now.
+
+If it is due within one year, it would generally be classified as a current liability.
+
+When talking about cash for a company, it would be the company's Cash or Bank account, not "his" cash account. The accounting entry is:
+	Debit Cash			$5,000
+	Credit Loan Payable $5,000
+---
+Notes Payable = amounts the company owes under formal written debt agreements.
+Notes Payable vs. Accounts Payable This distinction is important:
+Account				What it represents
+Accounts Payable	Amounts owed to vendors for goods or services purchased on credit
+Notes Payable		Amounts owed under a formal written debt agreement, such as a bank loan
+
+One important QuickBooks point:
+If you're setting up the $5,000 loan you mentioned earlier, Notes Payable can be the liability account you use to record that loan.
+
+If the loan is a long-term loan, you might have:
+	Liabilities
+	→ Long-Term Liabilities
+	→ Notes Payable
+
+Then the original transaction is:
+	Debit Cash				$5,000
+	Credit Notes Payable	$5,000
+
+As the company makes loan payments, the payment is split between principal (reduces Notes Payable) and interest expense 
+(records the cost of borrowing).
+
 
 
 
@@ -5134,6 +5182,125 @@ Impact: Liabilities are reported on the Balance Sheet and represent a claim agai
 
 How They Connect:
 An expense can create a liability if you don't pay for it immediately.
+---
+In bookkeeping, a deferral is an accounting entry used when cash is received or paid before the related revenue or expense 
+should be recognized.
+
+The key idea is:
+	Cash happens first; accounting recognition happens later.
+
+There are two main types of deferrals:
+1. Deferred expense is a prepaid expense
+	The company pays for something before it uses it.
+	Example: A company pays $1,200 for 12 months of insurance.
+   When it pays:
+	Account				Debit		Credit
+	Prepaid Insurance	$1,200	
+	Cash							$1,200
+At this point, you don't record the $1,200 as an expense because the insurance hasn't been used yet. 
+	You record an asset, which is Prepaid Insurance.
+	Each month, $100 becomes an expense:
+		Account				Debit	Credit
+		Insurance Expense	$100	
+		Prepaid Insurance			$100
+	That's a deferral of the expense.
+
+2. Deferred revenue is unearned revenue
+
+The company receives money before it has earned the revenue.
+
+Example: A customer pays your company $3,000 in advance for three months of services.
+When the money is received:
+	Account				Debit	Credit
+	Cash				$3,000	
+	Unearned Revenue			$3,000
+
+You don't immediately record $3,000 of revenue because the company hasn't performed the services yet. Unearned Revenue is a 
+liability because the company still owes the customer the services.
+
+After completing one month of service:
+	Account				Debit	Credit
+	Unearned Revenue	$1,000	
+	Service Revenue				$1,000
+
+That's a deferral of revenue.
+The easiest way to remember it.
+
+Type	Cash happens	Accounting recognition happens later	Initial account
+Deferred expense	You pay first	Expense recorded later	Asset
+Deferred revenue	You receive money first	Revenue recorded later	Liability
+
+So, when you see “deferral” in a journal-entry question, think:
+“The cash transaction has already happened, but the revenue or expense belongs to a future accounting period.”
+
+This is closely related to accruals, but they work in the opposite direction: with an accrual, the revenue or expense is 
+recognized before the cash transaction occurs.
+---
+Invoice vs. Bill
+Invoice: A business sends an invoice to its customer to request payment for goods or services it provided.
+Bill:	 A business receives a bill from a vendor because the business owes the vendor money
+So, from the business's perspective: You send invoices. You receive bills.
+---
+The way you’d code vendor bills in QuickBooks Online or any standard chart of accounts:
+You categorize a bill based on what you purchased — not who sent it, not how you paid, and not the invoice format.
+
+What type of account do I catagorzie a bill to?
+Here is the way you code vendor bills in QuickBooks Online or any standard chart of accounts.
+The core rule is you categorize a bill based on what you purchased — not who sent it, not how you paid, and not the invoice format.
+
+Think: What did the business receive in exchange for money?
+
+The 7 major account types used for bills
+Below is the practical cheat sheet you can use for any vendor bill:
+
+1. Expense accounts (most common) are used when the bill is for normal business operations.
+Examples:
+	Utilities
+	Office Supplies
+	Repairs & Maintenance
+	Software Subscriptions
+	Advertising & Marketing
+	Professional Services (legal, accounting, consulting)
+
+2. Cost of Goods Sold (COGS) is used when the bill directly relates to producing what you sell.
+Examples:
+	Raw materials
+	Inventory purchases
+	Packaging
+	Direct labor (contractors tied to production)
+
+3. Asset accounts
+Used when the bill creates long‑term value.
+Examples:
+	Computers, equipment, furniture (Fixed Assets)
+	Prepaid expenses (insurance, rent paid ahead)
+	Inventory (if using periodic inventory)
+
+4. Liability accounts
+Used when the bill represents something owed beyond normal AP(Accounts Payable).
+Examples:
+	Sales tax payable
+	Payroll liabilities
+	Customer deposits (unearned revenue)
+
+5. Equity accounts which is rare for bills, is used only if the owner pays personally and you record it as an owner contribution.
+
+6. Other Current Assets are used for things like employee advances or deposits.
+
+7. Other Expenses is used for unusual or non‑operational costs.
+How to decide in under 10 seconds
+Use this decision flow:
+	What did you buy?								Correct category
+	Normal business operating cost						Expense
+	Something used to produce what you sell				COGS
+	Something that lasts > 1 year						Asset
+	Something paid ahead of time						Prepaid Asset
+	Something you owe (tax, payroll, deposits)			Liability
+---
+
+
+
+
 
 
 

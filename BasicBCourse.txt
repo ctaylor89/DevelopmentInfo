@@ -1,5 +1,5 @@
 ﻿
-Start recording part 2 on line 314
+**** Start recording part 3 here ********
 
 ------------------------------------------------------
 As a bookkeeper, you will be expected to fulfill the following responsibilities.
@@ -377,7 +377,6 @@ Remember: To earn the trust and satisfaction of your clients, it's important to 
 Step 1 - Collect and analyze transactions
 
 Chart of accounts and general ledger. How are these different than a transaction journal?
-
 The chart of accounts lists all of the accounts and sub-accounts used to categorize transactions.
 
 A transaction journal, or "journal", is used to list the details of an individual event, like an expense or revenue transaction. 
@@ -456,9 +455,10 @@ a small business to keep the books simple, but still take advantage of tracking 
 ---
 Step 4: Prepare adjusted entries
 
-At the end of the accounting period, bookkeepers go through the process of making adjusting entries. This involves analyzing the 
-unadjusted trial balance and performing necessary updates by recording adjusting entries. These entries, which include deferrals, 
-accruals, and tax adjustments, expenses incurred but not recorded, can impact net income, the balance sheet, and owner's equity.
+Bookkeepers go through the process of making adjusting entries. This involves analyzing the 
+unadjusted trial balance and performing necessary updates by recording adjusting entries. These entries, include deferrals, 
+accruals, tax adjustments, expenses incurred but not recorded. These journal entries can impact net income, the balance sheet, 
+and the owner's equity.
 
 1. Review all accounts for necessary adjustments.
 2. Make journal entries to record adjustments.
@@ -482,7 +482,10 @@ accounting period’s end, and recording the adjusting entry.
 Usually, an accountant or Certified Public Accountant will handle the preparation of adjustments. As a bookkeeper, your role will 
 be to implement the recommended adjustments by recording the adjusting journal entries.
 
-Types of adjustments
+*****************************************
+**** Start recording part 3 here ********
+*****************************************
+Types of adjustments made to the journal and the ledger.
 
 When using accrual accounting, adjusting entries help you apply the matching principle, which means you match expenses with 
 revenues in the period when they occur, not when cash is exchanged. Adjusting entries play a key role in aligning expenses to 
@@ -1286,8 +1289,8 @@ At purchase:
 	Cash						$50,000
 ********************
 Asset account and accumulated depreciation account
-To begin, when an asset is acquired, a bookkeeper creates an asset account to represent its initial value. This account keeps 
-track of the cost of the asset. An asset account represents the initial value of an asset.
+To begin, when an asset is acquired, a bookkeeper creates an asset account to represent its initial value. This account records 
+the original cost of the asset. An asset account represents the initial value of an asset.
 
 Additionally, an accumulated depreciation sub-account is created as a child of the asset account that is being depreciated. 
 Accumulated depreciation represents the total amount of depreciation expense that has been allocated for the asset since it was 
@@ -1333,11 +1336,12 @@ Think of the three related accounts this way:
 	Accumulated Depreciation – Truck	Fixed Asset (Contra Asset)		Balance Sheet
 	Depreciation Expense				Expense							Profit & Loss
 
-Its purpose of a Accumulated Depreciation is to reduce the carrying (book) value of a fixed asset without changing the asset's 
-original cost.
+The purpose of an Accumulated Depreciation account is to reduce the carrying (book) value of a fixed asset without changing 
+the asset's original cost.
 
 Remember that Accumulated Depreciation is a contra asset account, as it works in the opposite direction of other asset accounts 
-and carries a credit balance. This account helps reduce the balance of the corresponding asset account on the balance sheet.
+and carries a credit balance. The Accumulated Depreciation account helps reduce the balance of the corresponding asset account 
+on the balance sheet.
 
 Depreciation expense is recorded as a debit entry in the accounting records, representing the portion of an asset's cost that 
 is recognized as an expense over its useful life.
@@ -1345,7 +1349,7 @@ is recognized as an expense over its useful life.
 On the income statement, depreciation expense is classified as an operating expense. It is deducted from the company's revenue 
 to arrive at the net income.
 
- Left off at 
+*** Left off at 
  Disposition
 When an asset reaches the end of its service life, it's either sold, removed, or
 
