@@ -1346,12 +1346,40 @@ on the balance sheet.
 Depreciation expense is recorded as a debit entry in the accounting records, representing the portion of an asset's cost that 
 is recognized as an expense over its useful life.
 ---
-On the income statement, depreciation expense is classified as an operating expense. It is deducted from the company's revenue 
-to arrive at the net income.
+On the income statement, depreciation expense is classified as an operating expense. The depreciation expense is deducted from 
+the company's revenue to arrive at the net income.
+---
+Disposition
+When an asset reaches the end of its service life, it's either sold, removed, or disposed of by the business.
 
-*** Left off at 
- Disposition
-When an asset reaches the end of its service life, it's either sold, removed, or
+At the end of the asset's service life, the net effect of the balance sheet accounts related to the asset should be zero. 
+This means that the asset account and its corresponding accumulated depreciation sub-account should zero each other out. 
+
+Zero out the asset account
+Balance sheet accounts:
+Asset account				$12,000
+Accumulated depreciation	-$12,000
+
+In some cases, there may be a gain or loss on an asset disposal. When an asset with no salvage value is sold at the end of its 
+service life, the bookkeeper first records a journal entry to zero out the asset accounts as noted previously in Zeroing 
+out the accounts. 
+
+After the entry to zero out the asset account is made, a second entry will need to be made to Other income to record any gain, 
+or to the appropriate expense account if there is any loss, upon the disposal of the asset.
+
+Journal entry with gain: 
+Debit:	Cash account 
+Credit: Other income	(reduce)
+
+Journal entry with loss:
+Debit:  Expense account
+Credit: Cash account	(reduce)
+
+In summary, when an asset is disposed of, bookkeepers ensure that the asset account and accumulated depreciation account zero 
+out. They may record any gain as other income and any loss as other expense. Additionally, the salvage value of an asset 
+represents the amount the business expects to receive when selling or disposing of the asset at the end of its useful life.
+---
+Impact of common property, plant, and equipment (PP&E) entries
 
 
 
