@@ -4734,20 +4734,32 @@ Vendor vs. Supplier. While often used interchangeably, these two terms differ in
 finished goods or services, often focusing on the end transaction with customers or businesses. Suppliers typically provide the 
 raw materials or parts that manufacturers need to create finished products.
 ---
+An invoice is a document that a business sends to a customer to request payment for goods or services that have already 
+been provided.
+---
 What Accounts Receivable Means
 Accounts Receivable (A/R) is the money that customers owe your business for goods or services that you already provided but 
 haven’t been paid for yet.
 
 It’s an asset on your balance sheet because it represents future cash inflows. When you create an invoice in QuickBooks, it 
 automatically increases your accounts receivable balance. When the customer pays, it decreases accounts receivable and increases 
-cash. Managing accounts receivable is crucial for maintaining healthy cash flow. It is recorded as an asset on the balance sheet 
-because the business expects to receive that money.
+cash. Managing accounts receivable is crucial for maintaining healthy cash flow. Accounts receivable is recorded as an asset on 
+the balance sheet because the business expects to receive that money.
+
+When you create an invoice in QuickBooks, it automatically increases your accounts receivable balance.
+	QuickBooks automatically records:
+		Debit Accounts Receivable: $500
+		Credit Service Revenue:    $500		* Remember that Revenue is a tracker for cash-in tracking for the period.
+	Later, when the customer pays the invoice, QuickBooks records:
+		Credit Account Receivable: $500
+		Debit Cash/Bank Account:   $500
 
 You want to make sure you’re invoicing promptly, following up on overdue payments, and keeping track of who owes you what.
 If you send a client an invoice for $2,000, Accounts Receivable increases $2,000 and the invoice appears on the A/R Aging Report. 
 When the client pays the invoice, Cash increases $2,000 and Accounts Receivable decreases $2,000.
 ---
 Equity in accounting represents the owners’ residual interest in a business after all liabilities have been deducted from assets.
+Equity = Assets - Liabilities
 ---
 An asset in accounting is a resource owned or controlled by a business that is expected to provide future economic benefits.
 
@@ -4755,7 +4767,7 @@ Assets are valuable because they can generate revenue or be converted into cash.
 worth. Lenders may also factor in a company’s assets when issuing loans.
 
 Assets can be physical items, such as machinery, or intangible things, such as intellectual property. Assets are reported on a 
-company’s balance sheet. A business cannot operate effectively or sustain itself without assets; they are critical to producing 
+company’s balance sheet. A business cannot operate effectively or sustain itself without assets; assets are critical to producing 
 and marketing goods or services, which is essential for generating revenue and profit.
 
 Assets are important to informed decision-making. Knowing which assets a business has and their condition can drive choices 
@@ -4772,6 +4784,7 @@ password prompt you selected.
 Year-end adjustments
 Once your accounts are reviewed and reconciled, you can set the closing date in your settings.
 
+Retained Earnings
 When a new fiscal year begins, QuickBooks Online automatically transfers the net income from the previous year into the Retained 
 Earnings account on the Balance Sheet. This account reflects the total of your company's income and expenses from all previous 
 years. Note: The Retained Earnings account is not the same as the retained earnings line item shown on the Balance Sheet.
@@ -5056,17 +5069,17 @@ Here is the correct breakdown:
 1. Depreciation Expense is an Expense (not a liability)
 What it is: It is an income statement account.
 Why it's not a liability: A liability is an obligation or money you owe to someone else. Depreciation Expense doesn't represent 
-money owed; instead, it represents the portion of an asset's value that was "used up" or expired during that specific accounting 
-period.
+money owed; instead, a Depreciation Expense represents the portion of an asset's value that was "used up" or expired during 
+that specific accounting period.
 
 2. Accumulated Depreciation is a Contra-Asset (not a regular asset)
-What it is: It is a balance sheet account, specifically classified as a contra-asset.
+Accumulated Depreciation is a balance sheet account, specifically classified as a contra-asset.
 Why it's not a regular asset: A normal asset has a debit balance and represents something of value the company owns. 
 A contra-asset is the exact opposite—it carries a credit balance and exists solely to sit directly underneath a specific asset 
 (like Vehicles or Equipment) to reduce its reported value.
 
 Is revenue considered an asset or equity?
-Revenue is neither an asset nor equity. It is its own type of account: an income (or revenue) account.
+Revenue is neither an asset nor equity. Revenue is its own type of account: an income (or revenue) account.
 However, revenue increases equity, which is why the distinction can be confusing.
 
 Example: When a business earns $1,000 by providing a service and the customer pays immediately:
@@ -5081,7 +5094,7 @@ In QuickBooks Online, revenue accounts appear on the Profit and Loss report, whi
 
 Here's how the account types relate:
 
-	Account Type		Purpose														Normal Balance
+	*Account Type		*Purpose													*Normal Balance
 	Assets				Resources the business owns (Cash, Inventory, Equipment)	Debit
 	Liabilities			Amounts the business owes									Credit
 	Equity				Owner's residual interest in the business					Credit
@@ -5091,26 +5104,24 @@ Here's how the account types relate:
 Revenue is not an asset and not equity. It is an income account with a normal credit balance. Although it is reported separately 
 on the Profit and Loss statement during the accounting period, it increases equity through net income when the books are closed.
 ---
-Invoices represent money coming in from your customers.
+Invoices represent money coming in from your customers after goods and services have been provided.
 Bills represent money going out to your vendors.
 ---	
 Retained Earnings represent the cumulative amount of net income a business has earned since its very first day of operation, 
 minus any dividends or owner's draws that have been paid out to the owners or shareholders. Essentially, it is the profit that a 
 company decides to retain (keep) in the business to reinvest in future growth, pay down debt, or build a financial cushion, 
-rather than distributing it to the owners. Key Characteristics: Location on the Financials: It is found in the Equity section at 
-the bottom of the Balance Sheet. 
+rather than distributing it to the owners. 
+
+Location on the Financials: Retained Earnings is found in the Equity section at the bottom of the Balance Sheet. 
 
 The Link Between Reports: Retained Earnings acts as the direct bridge between the Income Statement and the Balance Sheet. At the 
 end of every fiscal year, your net income (or net loss) gets "closed out" and added to your Retained Earnings balance. 
+
 Accumulation Over Time: Unlike an Income Statement which resets to zero at the beginning of every new year, Retained Earnings is 
 a running total that accumulates year after year. 
 
-The Formula: Ending Retained Earnings = Beginning Retained Earnings + Net Income (or - Net Loss) - Dividends/Draws
+The Formula: Ending Retained Earnings = Beginning Retained Earnings + Net Income (or - Net Loss) - Dividends or Draws
 At the end of every fiscal year, your net income (or net loss) gets "closed out" and added to your Retained Earnings balance.
-
-Unlike an Income Statement which resets to zero at the beginning of every new year, Retained Earnings is a running total that 
-accumulates year after year.
-
 -----
 Tracking financial performance beginning
 

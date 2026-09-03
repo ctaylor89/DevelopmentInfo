@@ -3,6 +3,7 @@ Developer’s_Prompting_Handbook
 Few-shot_examples
 Practice_Templates
 Random_Notes
+Syntax_
 Temperature_
 
 ----------------------------------------
@@ -323,11 +324,13 @@ B. Unit tests Act as a unit test writer. Generate {framework} tests for {method}
 C. Architecture comparison Act as a systems architect. Compare {option A} vs {option B} for {workload}. Score each against scalability, cost, operational complexity, and developer productivity. Recommend one and give migration steps.
 ________________________________________
 Final notes (be direct)
-If you want consistent, reliable output, invest 3–5 minutes in writing a good prompt. Do not assume the model knows your constraints. Use verification (tests / checks) as part of the prompt. Keep templates in your repo and reuse them — treat prompts as first-class development artifacts.
+If you want consistent, reliable output, invest 3–5 minutes in writing a good prompt. Do not assume the model knows your 
+constraints. Use verification (tests / checks) as part of the prompt. Keep templates in your repo and reuse them. Treat prompts 
+as first-class development artifacts.
 If you want, I can:
-•	Generate a printable PDF of this handbook.
-•	Create a .llm/prompts.md file formatted for your team (with placeholders filled for your stack).
-•	Produce a set of ready-to-use prompts tailored to a specific repo if you paste an example file.
+    •	Generate a printable PDF of this handbook.
+    •	Create a .llm/prompts.md file formatted for your team (with placeholders filled for your stack).
+    •	Produce a set of ready-to-use prompts tailored to a specific repo if you paste an example file.
 Tell me which and I’ll create it.
 ----------------------------------------
 Random_Notes
@@ -335,6 +338,8 @@ Random_Notes
 So when I asked “how automated do you want it,” I meant:
 Do you want a prompt that builds your API step-by-step,
 or a prompt that builds it all on its own with you doing nothing after giving requirements?
+---
+Syntax_
 
 
 
@@ -343,12 +348,20 @@ or a prompt that builds it all on its own with you doing nothing after giving re
 ----------------------------------------
 Temperature_
 
+*Important Note: If you are using the ChatGPT website or app, there is not a publicly documented fixed default temperature value that 
+you can rely on.
+
+In other words, the honest answer is:
+
+ChatGPT does not expose a specific default temperature such as 0.7 or 1.0 to the user.
+
 # Temperature & creativity — deep dive and practical guide
 
-Short answer: **temperature** controls how random/creative the model’s token choices are. Low = safe, deterministic outputs; high = varied, unexpected, creative outputs. But there’s more: temperature interacts with other sampling knobs and with the task itself. Below is a thorough, no-nonsense guide so you can pick the right setting and avoid the usual mistakes.
-
+Short answer: **temperature** controls how random/creative the model’s token choices are. 
+Low = safe, deterministic outputs; high = varied, unexpected, creative outputs. But there’s more: temperature interacts with 
+other sampling knobs and with the task itself. Below is a thorough, no-nonsense guide so you can pick the right setting and 
+avoid the usual mistakes.
 ---
-
 ## What temperature actually does (technical intuition, non-mathy)
 
 * The model assigns probabilities to possible next tokens.
@@ -357,9 +370,7 @@ Short answer: **temperature** controls how random/creative the model’s token c
   * **Low temperature (→0)** sharpens the distribution: the highest-probability tokens become much more likely → responses are repetitive, predictable, and stable.
   * **High temperature (>0.7)** flattens the distribution: less-probable tokens get more chance → output is more diverse, inventive, and occasionally bizarre.
 * **Temperature does not** change the model’s knowledge — it only changes which plausible continuations get chosen.
-
 ---
-
 ## Practical ranges and when to use them
 
 * **0.0–0.2 — Deterministic**
@@ -372,9 +383,7 @@ Short answer: **temperature** controls how random/creative the model’s token c
   Use for: high-level brainstorming, product naming, example scenarios, persona-based content. Expect more unusual ideas and occasional nonsense.
 * **>1.2 — Wild**
   Rarely useful for engineering tasks. Use only when you explicitly want highly varied, chaotic output.
-
 ---
-
 ## Interaction with other sampling settings (common knobs)
 
 * **top_p (nucleus sampling)**: instead of temperature-only, you can restrict sampling to the smallest set of tokens whose cumulative probability ≥ top_p. Use together with temperature — top_p limits the tail while temperature controls randomness within that subset.
@@ -383,9 +392,7 @@ Short answer: **temperature** controls how random/creative the model’s token c
 * **repetition_penalty / frequency_penalty**: reduce repeated phrasing when exploring higher temperatures.
 * **max_tokens** and **stop sequences**: high temperature + large max_tokens can produce long, meandering answers — use stop sequences or shorter max length to keep things focused.
 * **deterministic decoding (greedy / beam search)**: beam search is useful for structured generation and can reduce randomness while exploring multiple likely outputs; combine low temperature with beam search when you need the single “best” completion.
-
 ---
-
 ## Concrete examples (prompt + recommended temp)
 
 * **Generate NUnit unit tests (must be correct)**
@@ -398,9 +405,7 @@ Short answer: **temperature** controls how random/creative the model’s token c
   `temperature=0.8–1.0` — creative and diverse outputs.
 * **Write a speculative future tech blog post**
   `temperature=0.9–1.2` — creative voice, but expect to fact-check.
-
 ---
-
 ## How to pick temperature quickly (troubleshooting checklist)
 
 1. Is the output executed as code or tests? → set temperature ≤ 0.2.
@@ -408,9 +413,7 @@ Short answer: **temperature** controls how random/creative the model’s token c
 3. Do you want several different ideas to pick from? → set temperature mid-high and request N variations.
 4. Do you see hallucinations or nonsense? → lower temperature and/or add constraints & verification steps.
 5. Want repeatable runs for CI or automation? → use temperature = 0.0 (and pin seeds if available).
-
 ---
-
 ## Prompting patterns that reduce dependence on temperature
 
 * Request multiple candidates explicitly**: “Give me 6 distinct options.” This often produces diversity without 
@@ -418,18 +421,14 @@ Short answer: **temperature** controls how random/creative the model’s token c
 * Few-shot examples: provide 2–3 examples of the style you want — reduces need for high temperature.
 * Constrain format: ask for JSON, tables, or fenced code blocks. When structure is required, the model behaves more predictably 
   even with slightly higher temperature.
-
 ---
-
 ## Pitfalls & gotchas
 
 * **Higher temperature ↔ more hallucinations.** If fact accuracy matters, lower the temperature and ask for citations or verification steps.
 * **Assuming temperature fixes style issues.** Tone, verbosity, and register are still steered best by explicit instructions in the prompt. Temperature affects token choice, not instruction-following.
 * **Inconsistent results in pipelines.** When prompts feed into automated systems (CI, codegen), keep temperature low or deterministic to avoid flaky behavior.
 * **Over-reliance on one knob.** Use temperature *with* top_p, repetition penalties, and explicit format constraints for best results.
-
 ---
-
 ## Quick reference table
 
 | Task type                             | Temperature |
@@ -439,18 +438,14 @@ Short answer: **temperature** controls how random/creative the model’s token c
 | API design / Docs                     |   0.2 – 0.5 |
 | Naming / Small brainstorming          |   0.5 – 0.8 |
 | Wide brainstorming / Creative writing |   0.8 – 1.2 |
-
 ---
-
 ## Example prompt snippets (explicitly including temperature in workflow)
 
 * For code:
   `Act as a senior C# engineer. Refactor this method. Output only the refactored method in a fenced code block. (Run with temperature=0.0.)`
 * For brainstorming:
   `Generate 10 alternative endpoint names and one-sentence justification each. (Run with temperature=0.8, top_p=0.9.)`
-
 ---
-
 ## Final rule of thumb
 
 Set **temperature to the lowest value that still yields adequate variety for your task** — start low and increase only if you 
@@ -476,7 +471,6 @@ developer-focused examples you can copy.
 * Style and format control. The model mimics structure (JSON, tests, code style), not just semantics.
 * Low cost, high impact. A few short examples often yield bigger improvements than long specification paragraphs.
 ---
-
 ## How many examples and why
 
 * 1–4 examples is the sweet spot for most tasks:
@@ -485,7 +479,6 @@ developer-focused examples you can copy.
   * 4 gives good coverage without burning tokens or confusing the model.
 * More than ~5 examples increases token usage and can create conflicting patterns; use only for complex transformations.
 ---
-
 ## Crafting high-quality examples (step-by-step)
 
 1. Pick concise, representative examples. Use samples that cover the most important variety: one typical case, one edge case, 
@@ -511,7 +504,6 @@ Why you should use fenced code with AI
 3. It makes copy/paste safe.
 4. It increases accuracy when asking the model to modify or refactor code.
 ---
-
 ## What to demonstrate in examples
 
 * Format: (JSON, code block, table, bullet list) — mandatory.
@@ -520,7 +512,6 @@ Why you should use fenced code with AI
 * Constraints: implicitly (e.g., “do not change function signature” — show an example that obeys it).
 * Verification — include expected assertions or unit test expectations if relevant.
 ---
-
 ## Combining few-shot with other levers
 
 * With temperature: Use lower temperature for code even with few-shot. Few-shot reduces need for high temperature.
@@ -530,7 +521,6 @@ Why you should use fenced code with AI
     (1) list assumptions, 
     (2) produce the result — this pairs well with few-shot to reduce hallucination.
 ---
-
 ## Pitfalls and how to avoid them
 
 * Overfitting to examples: Examples that are too idiosyncratic can cause the model to over-specialize. Use representative, not 
@@ -540,7 +530,6 @@ Why you should use fenced code with AI
 * Conflicting styles: Keep examples internally consistent.
 * Hidden rules: Don’t rely on too many implied rules in examples; pair examples with a short explicit rule list for clarity.
 ---
-
 ## Practical templates (insert examples into these)
 
 **Template A — Code refactor (few-shot + instruct)**

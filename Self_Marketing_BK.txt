@@ -126,8 +126,8 @@ business can meet its current financial obligations.
 W2__Jobs_Info
 
 Some business owners don't want to manage an individual contractor at all; they want to buy a "service." They hire through 
-tech-enabled, fully outsourced bookkeeping platforms that employ their own internal staff, such as Bench, Pilot, or 
-AccountingDepartment.com.
+tech-enabled, fully outsourced bookkeeping platforms that employ their own internal staff, 
+such as Bench, Pilot, or AccountingDepartment.com.
 -------------------------------------------------------
 Starting_Out_And_Career_Paths
 
@@ -145,14 +145,20 @@ Independent Solopreneurs (1099/Freelance): ~7% to 10% While the freelance and vi
 Why Most Bookkeepers Start Working for Someone Else
 For individuals entering the field, starting as an employee is the standard path for several foundational reasons:
 
-The Experience Catch-22: Most independent clients look to outsource their books to someone who can work autonomously without supervision. Starting at a firm or company allows an entry-level bookkeeper to learn standard operating procedures, master software workflows, and handle complex scenarios under the guidance of a senior bookkeeper or CPA.
+The Experience Catch-22: Most independent clients look to outsource their books to someone who can work autonomously without 
+supervision. Starting at a firm or company allows an entry-level bookkeeper to learn standard operating procedures, master 
+software workflows, and handle complex scenarios under the guidance of a senior bookkeeper or CPA.
 
-Liability and Error Oversight: In an employment setting, a company's management or accounting team reviews the clerk's work, providing a safety net for mistakes. Solopreneurs carry the sole responsibility (and professional liability insurance) for any errors made on a client's live financial records.
+Liability and Error Oversight: In an employment setting, a company's management or accounting team reviews the clerk's work, 
+providing a safety net for mistakes. Solopreneurs carry the sole responsibility (and professional liability insurance) for 
+any errors made on a client's live financial records.
 
-Business Development Overhead: Starting as a solopreneur requires a completely separate skillset beyond balancing accounts—namely marketing, sales, contract negotiation, and client onboarding.
+Business Development Overhead: Starting as a solopreneur requires a completely separate skillset beyond balancing accounts—namely 
+marketing, sales, contract negotiation, and client onboarding.
 
 The Transition Model
-Because of these dynamics, the typical trajectory isn't usually an either/or choice made on day one. Instead, many professionals use a hybrid transition model:
+Because of these dynamics, the typical trajectory isn't usually an either/or choice made on day one. Instead, many professionals 
+use a hybrid transition model:
 
 They secure a foundational role or contract gig to build up their technical confidence and portfolio.
 
@@ -163,7 +169,9 @@ They gradually build a freelance client base on the side before transitioning to
 Are you evaluating these two paths for your own career layout, or are you looking for structural details on how to set up an independent practice?
 
 I am evaluating the the two paths for my career layout
-Evaluating these two paths is a major milestone, and each comes with a completely different lifestyle, risk profile, and daily routine. Since you already have a solid foundation in high-level management and oversight, choosing a direction depends on how you want to build your day-to-day operations.
+Evaluating these two paths is a major milestone, and each comes with a completely different lifestyle, risk profile, and 
+daily routine. Since you already have a solid foundation in high-level management and oversight, choosing a direction depends 
+on how you want to build your day-to-day operations.
 
 Here is a side-by-side breakdown to help you weigh the structural trade-offs of both options:
 
@@ -257,8 +265,8 @@ To learn about a targeted niche:
 Research the industry that I am targeting.
 Identify common tasks or any special skills that a bookkeeper would need to do in this industry.
 ---
-Consider checking the websites of accounting businesses in Ventura County for available jobs and what industries they specialize in.
-Consider cold calling them.
+Consider checking the websites of accounting businesses in Ventura County for available jobs and what industries they 
+specialize in. Consider cold calling them.
 ---
 Whether you decide to go out on your own or work for a company, you will likely have sales calls and interviews with potential 
 clients. It’s important to be prepared for these conversations so you can confidently articulate your value and justify 

@@ -1,7 +1,15 @@
-﻿How_to_do_certain_operations_in_excel
+﻿Hot_Keys
+How_to_do_certain_operations_in_excel
+Operations_In_Excel
+Operations_In_Excel_Commonly_Used
+Tutorial_Links
+
+
 
 * Ask AI to generate some random data based on a provided csv template. Output a csv file that can be loaded into Excel. 
 Look for youtube videos and practice each lesson. Have fun!
+
+* Get data sets from Kaggle: https://www.kaggle.com/datasets
 
 ----------------------------------------------------------------
 What I'd Learn First
@@ -26,16 +34,66 @@ If you become comfortable with Tables + SUMIFS + XLOOKUP + PivotTables + basic I
 Excel foundation for a typical bookkeeping position.
 
 ----------------------------------------------------------------
+Hot_Keys
+
+Format Cells: Ctrl + 1
+Toggle Filter: Ctrl + Shift + L
+Add a Total Row to a Table: Ctrl + Shift + T	*specifically an Excel Table feature
+----------------------------------------------------------------
+Tutorial_Links
+
+How to Become a Data Analyst in 2026 (starting from 0)
+https://www.youtube.com/watch?v=AxA384om0lQ
+
+Master Data Analysis on Excel in Just 10 Minutes
+https://www.youtube.com/watch?v=_g5roKHj95o
+----------------------------------------------------------------
+Operations_In_Excel
+
+Insert a table:  Insert -> Table icon
+Convert back to normal range: Click in table -> Table Tools -> Design Tab -> Convert to Range
+---
+Move a column: 
+Method 1 — Cut and Insert (recommended)
+Use Ctrl + X → Insert Cut Cells.
+Less likely that you'll accidentally overwrite data than dragging and dropping a column.
+This is often easier if you're moving a column a long distance:
+
+
+
 
 
 ----------------------------------------------------------------
+Operations_In_Excel_Commonly_Used
 
-
+Move columns: Click on column header -> Drag to new location
+Align all columns: Select all columns -> Home Tab -> Alignment group -> Align Left / Center / Right
+Size all columns: Select all columns -> Home Tab -> Cells group -> Format -> AutoFit Column Width
+Sort data by a column: Select a cell in the column you want to sort by -> Data Tab -> Sort A-Z or Sort Z-A
+Filter a column:
+	Click anywhere inside your data.
+	Go to the Data tab.
+	Click Filter.		
+	Excel will add a drop-down arrow to each column heading.
+	Click the drop-down arrow for the column you want to filter.
+	Uncheck Select All.
+	Check the value(s) you want to see.
 ----------------------------------------------------------------
+Practice_Exercises
 
-
-----------------------------------------------------------------
-
+Select a range of data and practice the following operations:
+1. Insert a table
+2. Move columns
+3. Align all columns
+4. Size all columns
+5. Hide a column -Unhide a column
+6. Hide a row - Unhide a row
+7. Sort data by a column
+8. Filter data by a column
+9. Use SUM function to calculate total of a column
+10. Use SUMIF function to calculate total based on a condition
+11. Use XLOOKUP to find a value in a table
+12
 
 ----------------------------------------------------------------
 
