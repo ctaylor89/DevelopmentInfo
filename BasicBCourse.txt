@@ -1169,9 +1169,9 @@ $500 of finished goods is sold and generates $1,050 in sales (finished goods). T
 	+$1,050 (Cash)		No change					+$550 
 	- $500 (COGS)
 ---
-Cost of Goods Sold (COGS) is a standard account type in the Chart of Accounts.Key Details About COGS:Account Type: It is 
-classified as a Cost of Goods Sold (or Expense) account type.Financial Statement Location: It appears directly on the Income 
-Statement (Profit and Loss statement).
+Cost of Goods Sold (COGS) is a standard account type in the Chart of Accounts.
+COGS is classified as a Cost of Goods Sold (or Expense) account type.
+COGS appears directly on the Income Statement (Profit and Loss statement).
 
 Role in Net Income: COGS is subtracted directly from Total Revenue to calculate Gross Profit: Gross Profit = Revenue - COGS
 Normal Balance: Like other expense accounts, its normal balance is a Debit (increasing with debits and decreasing with credits).
@@ -1192,10 +1192,10 @@ Property, plant, and equipment, also known as PP&E, are long-term assets: things
 like buildings or machinery.
 
 Investment in PP&E is also called a capital investment. Investment analysts and accountants use the PP&E of a business to 
-determine if it is on sound financial footing and utilizing funds in the most efficient and effective manner. A business 
-investing in PP&E is a good sign for investors as a fixed asset is a sizable investment in a business's future. Purchases of PP&E 
-signal that management has faith in the long-term outlook and profitability of its business. 
+determine if the business is on sound financial footing and utilizing funds in the most efficient and effective manner. A 
+business investing in PP&E is a good sign for investors as a fixed asset is a sizable investment in a business's future. 
 
+Purchases of PP&E signal that management has faith in the long-term outlook and profitability of its business. 
 When the business buys new PP&E, it's a good sign that they are confident about the future of the business.
 
 When you check a balance sheet, you'll find a line for PP&E in the assets section. This line shows the total value of the 
@@ -1236,7 +1236,26 @@ Year 3		$2,000.00			$6,000.00					$6,000.00
 Year 6		$2,000.00			$12,000.00					$0.00
 
 Book value = Initial value - Accumulated depreciation
+---
+If a forklift is purchased for $12,000 and has a straight line annual depreciation of $2000 over 6 years, the correct journal 
+entry to record the annual depreciation expense is:
+	Account									Debit			Credit
+	Depreciation expense					$2,000	
+	Accumulated depreciation (forklift)						$2,000
 
+Why?
+1. Depreciation Expense → Debit
+Expenses have a normal debit balance. Recording the $2,000 expense increases expenses, which reduces net income and ultimately 
+reduces equity.
+
+2. Accumulated Depreciation → Credit
+Accumulated Depreciation is a contra-asset account, and contra-asset accounts have a normal credit balance. The $2,000 credit 
+increases accumulated depreciation, reducing the forklift's carrying value.
+
+Easy way to remember:
+	Depreciation Expense = Debit
+	Accumulated Depreciation = Credit
+---
 Depreciation methods
 
 There are different approaches, including straight-line depreciation, accelerated depreciation, and units of production. Each 
@@ -1348,6 +1367,25 @@ is recognized as an expense over its useful life.
 ---
 On the income statement, depreciation expense is classified as an operating expense. The depreciation expense is deducted from 
 the company's revenue to arrive at the net income.
+---
+Depreciation Expense is associated with the Equity side of the accounting equation:
+Here's why:
+Assets: Depreciation Expense is not an asset. The related asset's value is reduced over time through accumulated depreciation.
+Liabilities: Depreciation Expense is not a liability.
+Equity: Depreciation Expense reduces net income, which ultimately reduces retained earnings and therefore reduces equity.
+
+Suppose your business records $1,000 in depreciation expense.
+
+The journal entry is:
+
+Account						Debit			Credit
+Depreciation Expense		$1,000							*Asset account that has a debit balance.
+Accumulated Depreciation					$1,000			*Contra asset account that has a credit balance.
+
+The debit to Depreciation Expense increases expenses, reducing net income and ultimately equity. 
+The credit to Accumulated Depreciation reduces the net book value of assets.
+
+Remember: Expenses normally have a debit balance and reduce equity, while revenues increase equity.
 ---
 Disposition
 When an asset reaches the end of its service life, it's either sold, removed, or disposed of by the business.

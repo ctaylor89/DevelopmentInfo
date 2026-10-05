@@ -1,3 +1,4 @@
+AI_Articles
 Coding Assistance tools
 Github_Copilot_VisualStudio
 Prompt_
@@ -33,9 +34,16 @@ Divi AI	- HTML/JS Generator, Divi Cloud Integration
 Tabnine VS extension - Code Completions, User Style Adaptation, Code Refactoring Assistance
 + more in this article
 ----------------------------------------
+AI_Articles
+
+Article about how to prove your AI skills on a resume. It is a good read for anyone looking to showcase their AI experience and 
+skills in their resume.
+https://www.dice.com/career-advice/from-syntax-writer-to-intent-director-proving-your-ai-skills-on-a-resume?utm_source=iterable&utm_medium=email&utm_content=09102026&utm_id=19782623&utm_campaign=2026_dice_b2c_dice-weekly-newsletter&%243p=e_iterable&_branch_match_id=1572280470637331145&_branch_referrer=H4sIAAAAAAAAAzWP3W7CMAyFn6bcmUI6sTEJoWkTrxGlqQGr%2BZOTkvVmzz63AskX9ufjY%2FteSsqfbTuQxa1JaesojG2Xzo1669IJNRVk0zvcCIhMNwrG6Ynd6b5MNt1Xoy4Stdbt6mGjl9IaRmQww0OY1FeOHvIcivmFyosnlAgUCoYCAzHaEhkSxweFG8xxklmCPJJzGWIAA4x58th0l6l4nUUgvt3P67pGHRbucaDJC0dvyD2hjesaobvjfqd26vBs0CBsf3z%2FUAfVvcTGJ0O3IJ1FqZefdK%2FsmkBFHN0MAWt2WGT35o%2Fxisxyte451ox8%2Br7Ls%2FgPewZHwlkBAAA%3D
+---
 How I use AI for coding in C#
 https://www.linkedin.com/pulse/how-i-use-ai-coding-c-daniel-nagy-eh9jc/
-	Prompt engineering
+---
+Prompt engineering
 You probaly heard this term before. It basically means the process of structuring text for text-based Generative AI models in 
 order to make them more efficient and accurate. I spent a night experimenting and made a prompt that is good enough to generate 
 code by itself with only a little guidence. 

@@ -249,6 +249,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		BasicBCourse.txt = BasicBCourse.txt
 		BK_AI_Captures.txt = BK_AI_Captures.txt
 		BK_InterviewQuestions.txt = BK_InterviewQuestions.txt
+		ChatComments.txt = ChatComments.txt
 		QB_TasksPractice.txt = QB_TasksPractice.txt
 		SalesExpensesWorkflow.pdf = SalesExpensesWorkflow.pdf
 		Self_Marketing_BK.txt = Self_Marketing_BK.txt

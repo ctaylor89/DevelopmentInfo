@@ -1,4 +1,5 @@
-﻿Hot_Keys
+﻿Functions_
+Hot_Keys
 How_to_do_certain_operations_in_excel
 Operations_In_Excel
 Operations_In_Excel_Commonly_Used
@@ -50,7 +51,7 @@ https://www.youtube.com/watch?v=_g5roKHj95o
 ----------------------------------------------------------------
 Operations_In_Excel
 
-Insert a table:  Insert -> Table icon
+Insert a table:  Insert -> Table icon or Cntrl-T
 Convert back to normal range: Click in table -> Table Tools -> Design Tab -> Convert to Range
 ---
 Move a column: 
@@ -58,11 +59,6 @@ Method 1 — Cut and Insert (recommended)
 Use Ctrl + X → Insert Cut Cells.
 Less likely that you'll accidentally overwrite data than dragging and dropping a column.
 This is often easier if you're moving a column a long distance:
-
-
-
-
-
 ----------------------------------------------------------------
 Operations_In_Excel_Commonly_Used
 
@@ -93,9 +89,19 @@ Select a range of data and practice the following operations:
 9. Use SUM function to calculate total of a column
 10. Use SUMIF function to calculate total based on a condition
 11. Use XLOOKUP to find a value in a table
-12
-
+12.
 ----------------------------------------------------------------
+Functions_
+
+Excel Shortcut to Insert a Function: Shift + F3
+
+1) SUMIF(range, criteria, [sum_range])
+	range → The cells used to check for the condition.
+	criteria → The rule Excel uses (e.g., "Apples", ">100", "North").
+	sum_range → The cells being summed if the condition is met.
+				*If omitted, Excel sums the range itself 
+
+Examples:  =SUMIF(C2:C13,"BL7",B2:B13)
 
 
 ----------------------------------------------------------------
