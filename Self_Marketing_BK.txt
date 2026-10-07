@@ -11,10 +11,9 @@ AI_Prompts
 ---
 Pull a list of networking groups, business associations, or bookkeeper meetups in Ventura County
 ---
-Are there any bookkeeps organizations in Ventura County, CA?
-Last Sunday
 Are there any bookkeepers organizations in Ventura County, CA?
-Yes — Ventura County has multiple bookkeeping organizations and firms, ranging from solo practitioners to full‑service accounting companies. 
+Yes — Ventura County has multiple bookkeeping organizations and firms, ranging from solo practitioners to full‑service accounting 
+companies. 
 ---
 Act as someone who is an expert bookkeeper for a construction business. context: I want to learn what bookkeeping tasks would 
 be specific to the contstruction business compared to most other types of business. Ouput: What are the booking tasks that are 
@@ -28,11 +27,6 @@ I have to do and the questions I may have to answer for clients in that industry
 act as a resume writer and career coach. 
 context: I want to create a resume for a bookkeeper position. 
 I am pivoting from a career in software engineering to a career in bookkeeping.
----
-act as a resume writer and career coach. 
-
-context: I want to create a resume for a bookkeeper position. 
-I am pivoting from a career in software engineering to a career in bookkeeping.  
 
 output: create a bookkeeping resume, using the job history in my Software developer resume, that I will input. 
 I want the resume that you are creating to show key skills, qualifications, and experiences that would be useful 
@@ -43,21 +37,22 @@ Output format:
 2) Merge the key skills, qualifications, and experiences with the existing job description for each job listed.
 3) Remove any text that mentions common software tools that are not relevant to bookkeeping.
 4) Add any bookkeeping skills, qualifications, and experiences that may be relevant to the job position listed.
-
-
 ---
 output: What are the key skills, qualifications, and experiences that should be highlighted in the resume for a bookkeeper role?
----
+
+AI response:
 
 1. **Attention to Detail**: Emphasize your ability to maintain accurate financial records and catch discrepancies.
 
 2. **Technical Skills**: Highlight your proficiency with accounting software (e.g., QuickBooks, Xero) and Microsoft Excel.
 
-3. **Understanding of Accounting Principles**: Showcase your knowledge of basic accounting concepts, such as the accounting equation, debits and credits, and financial statements.
+3. **Understanding of Accounting Principles**: Showcase your knowledge of basic accounting concepts, such as the accounting 
+   equation, debits and credits, and financial statements.
 
 4. **Organizational Skills**: Illustrate your ability to manage multiple tasks, prioritize effectively, and meet deadlines.
 
-5. **Communication Skills**: Stress your capability to explain financial information clearly to clients and collaborate with team members.
+5. **Communication Skills**: Stress your capability to explain financial information clearly to clients and collaborate with 
+   team members.
 
 6. **Problem-Solving Skills**: Provide examples of how you've identified and resolved financial issues in the past.
 
@@ -67,16 +62,11 @@ output: What are the key skills, qualifications, and experiences that should be 
 
 9. **Adaptability**: Highlight your willingness to learn and adapt to new accounting practices or software.
 
-10. **Client Management**: If applicable, discuss your experience in managing client relationships and understanding their unique financial needs.
+10. **Client Management**: If applicable, discuss your experience in managing client relationships and understanding their 
+    unique financial needs.
 
-By focusing on these key areas, you can create a compelling resume that demonstrates your readiness for a bookkeeper position, even with a background in software engineering.
-
-
-
-
-
-
-
+By focusing on these key areas, you can create a compelling resume that demonstrates your readiness for a bookkeeper position, 
+even with a background in software engineering.
 -------------------------------------------------------
 Random_Notes
 
@@ -88,7 +78,6 @@ DM is direct messaging  52:00 approx
 
 Comments:
 I've quadrupled my company's revenues via cold-calling. Doing the thing which people don't do brings amazing responses.
-
 Just last month landed a $25k client via cold calling.
 
 To create a Facebook page for my bookkeeping business, is it better to create a new Facebook account or just build on to 
@@ -96,12 +85,11 @@ my existing personal Facebook page?  See 58:00 approx
 
 ---
 When calling people in the same city...
-
 "Hello, my name is John Thornton, owner of BookkeeperSA near 1604 and Bandera Hwy.
-
-My company services the San Antonio construction community by making sure their books are ready for the 2027 tax season, identify upcoming cash flow crunches, and tracking project costs and profitability through our bookkeeping and accounting services.
-
-The purpose of my call is to ask you, one business-owner to another, if you have any problems or concerns along these lines, and, if so, to schedule a longer discussion in the next week.
+My company services the San Antonio construction community by making sure their books are ready for the 2027 tax season, 
+identify upcoming cash flow crunches, and tracking project costs and profitability through our bookkeeping and accounting 
+services. The purpose of my call is to ask you, one business-owner to another, if you have any problems or concerns along 
+these lines, and, if so, to schedule a longer discussion in the next week.
 … does that sound fair?"
 ---
 Level 1 service: Categorize transactions, reconcile bank accounts, and generate basic financial reports.
@@ -110,8 +98,7 @@ Level 1 service: Categorize transactions, reconcile bank accounts, and generate 
 I help by recording sales, assets, inventory, and depreciation which provides timely and accurate information about your 
 business's financial performance, resources and obligations.
 
-A: This information is helps you make informed pricing, marketing, operations, and financial management decisions.
-
+A: This information helps you make informed pricing, marketing, operations, and financial management decisions.
 “Great so how does that happen? What do you do? and What do I do?” 
 
 A: “Well, I work with you to ensure that there are accurate records of the business assets. And I also track financial 
@@ -120,14 +107,12 @@ transactions that affect your assets.
 As a bookkeeper, you play a vital role in helping business owners track and understand their financial performance, including 
 assets, sales transactions, inventory, and depreciation. Your ability to keep a close eye on these factors ensures that the 
 business can meet its current financial obligations.
----
-
 -------------------------------------------------------
 W2__Jobs_Info
 
 Some business owners don't want to manage an individual contractor at all; they want to buy a "service." They hire through 
-tech-enabled, fully outsourced bookkeeping platforms that employ their own internal staff, 
-such as Bench, Pilot, or AccountingDepartment.com.
+tech-enabled, fully outsourced bookkeeping platforms that employ their own internal staff, such as Bench, Pilot, or 
+AccountingDepartment.com.
 -------------------------------------------------------
 Starting_Out_And_Career_Paths
 

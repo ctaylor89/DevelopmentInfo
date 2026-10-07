@@ -147,8 +147,8 @@ expenses, payments, and adjustments. Data entry errors flow directly into report
 ---
 Account Reconciliations – Reconciling GL, AR, AP, and sub-ledgers
 Account reconciliations involve comparing internal account balances to external records or supporting schedules. This can 
-include bank accounts, credit cards, loans, and clearing accounts. Reconciliations verify accuracy and ensure balances are 
-complete and supported.
+include bank accounts, credit cards, loans, and clearing accounts (ACH transfers). Reconciliations verify accuracy and ensure 
+balances are complete and supported.
 
 * A transaction is cleared when:
 	The bank or credit card has processed it.
@@ -176,28 +176,12 @@ Fixed assets are long-term purchases such as equipment, vehicles, and furniture.
 ---
 Clean-Up / Catch-Up Bookkeeping – Fixing messy or outdated books
 Clean-up or catch-up bookkeeping involves correcting errors or bringing books up to date after a period of neglect. This may include reclassifying transactions, reconciling accounts, and fixing prior reporting issues. These projects restore financial accuracy and reliability.
-
-* If you want to optimize for hiring platforms
-Temp / contract roles lean heavily on: reconciliations, clean-up, month-end close, A/P, A/R
-Remote roles often emphasize: QuickBooks, reconciliations, invoicing, payroll support.
-
-Note: Payroll support means assisting with payroll-related tasks without being the person legally responsible for running payroll 
-or filing payroll taxes. In remote bookkeeping roles, the bookkeeper typically supports a payroll service (like ADP, Gusto, 
-Paychex, or QuickBooks Payroll) rather than replacing it. The work is operational and review-focused, not compliance-heavy.
-
-Concretely, payroll support usually includes collecting and validating payroll inputs (hours worked, PTO, bonuses, commissions), reviewing payroll reports for accuracy before or after payroll runs, and posting payroll journal entries to the general ledger so wages, taxes, and benefits hit the correct accounts and periods. It also often involves reconciling payroll clearing accounts, tracking employer taxes and benefit expenses, and answering basic payroll-related questions from management (not employees).
-Payroll support does not usually include in remote bookkeeping roles: filing payroll tax returns, making tax payments, handling garnishments, or resolving IRS/state notices. Those functions typically stay with the payroll provider or an accountant. When a job posting says “payroll support,” it’s signaling “hands-on bookkeeping around payroll” rather than “you own payroll compliance.”
-
-* Higher-paying gigs include: month-end close, financial statements, sales tax, audit support
-
-If you want, I can tailor this list for resume keywords, LinkedIn searches, or Upwork/FlexJobs listings — different 
-platforms reward different wording.
 ****************************************
 Financial Reporting
 Fixed Assets
 Clean-Up / Catch-Up Bookkeeping
 ----------------------------------------------------------------------------
-Interview_Questions
+Interview_Questions  *See answers below
 1) Core Bookkeeping & Accounting Knowledge
 2) Walk me through the accounting equation and how it applies to your daily work.
 3) What’s the difference between cash-basis and accrual-basis accounting?
@@ -231,6 +215,39 @@ Interview_Questions
 31) Professional Judgment & Communication
 32) When would you escalate an issue to an accountant or manager instead of fixing it yourself?
 
+Answers:
+1) Core Bookkeeping & Accounting Knowledge
+2) Walk me through the accounting equation and how it applies to your daily work.
+3) What’s the difference between cash-basis and accrual-basis accounting?
+4) If you debit Accounts Receivable, what’s the corresponding credit and why?
+5) How do you identify and correct an unbalanced journal entry?
+6) What’s the difference between a bill and an expense in QuickBooks Online?
+7) QuickBooks Online (2025) Practical Skills
+8) How do you handle undeposited funds, and what’s the most common mistake people make with them?
+9) Walk me through how you would record a customer payment from start to finish.
+10) How do you clean up a messy QuickBooks file with uncategorized transactions?
+11) What’s your process for reconciling bank and credit card accounts?
+12) Where would you go to find changes made after the closing date?
+13) Accounts Receivable / Payable
+14) How do you handle unapplied customer payments?
+15) What steps do you take when a customer invoice is overdue?
+16) How do you ensure vendor bills are recorded in the correct period?
+17) What’s your process for matching bills to payments?
+18) Reporting & Analysis
+19) Which reports do you review monthly and why?
+20) How do you verify that a Profit & Loss report is accurate?
+21) What would you look for if expenses suddenly increased month-over-month?
+22) How do you explain financial reports to a non-accounting client or manager?
+23) Error Detection & Problem Solving
+24) Tell me about a time you found an error in the books—how did you fix it?
+25) If the bank reconciliation is off by $500, what’s your step-by-step approach?
+26) How do you identify duplicate transactions in QuickBooks?
+27) Process & Efficiency
+28) How do you manage high transaction volume efficiently?
+29) What automation features in QuickBooks Online do you use regularly?
+30) How do you ensure consistency when categorizing transactions?
+31) Professional Judgment & Communication
+32) When would you escalate an issue to an accountant or manager instead of fixing it yourself?
 
 ----------------------------------------------------------------------------
 Random_Notes

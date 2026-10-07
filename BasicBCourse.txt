@@ -1235,7 +1235,8 @@ Year 3		$2,000.00			$6,000.00					$6,000.00
 ...
 Year 6		$2,000.00			$12,000.00					$0.00
 
-Book value = Initial value - Accumulated depreciation
+Book value = Initial value - Accumulated depreciation 
+In normal bookkeeping discussions: Book Value ≈ Net Book Value
 ---
 If a forklift is purchased for $12,000 and has a straight line annual depreciation of $2000 over 6 years, the correct journal 
 entry to record the annual depreciation expense is:
@@ -1345,7 +1346,7 @@ Here's an example of a journal entry for the depreciation expense of the truck:
 On the balance sheet the Accumulated depreciation will be a negative balance.
 
 The Depreciation Expense appears on the Profit & Loss statement.
-Accumulated Depreciation – Truck appears on the Balance Sheet as a contra asset under the Truck asset.
+"Accumulated Depreciation – Truck" appears on the Balance Sheet as a contra asset under the Truck asset.
 
 The Depreciation Expense account is located in the Expense section of the Chart of Accounts because it is an operating expense 
 that appears on the Profit and Loss (Income Statement).
@@ -1377,9 +1378,8 @@ Equity: Depreciation Expense reduces net income, which ultimately reduces retain
 Suppose your business records $1,000 in depreciation expense.
 
 The journal entry is:
-
 Account						Debit			Credit
-Depreciation Expense		$1,000							*Asset account that has a debit balance.
+Depreciation Expense		$1,000							*Expense account that has a debit balance.
 Accumulated Depreciation					$1,000			*Contra asset account that has a credit balance.
 
 The debit to Depreciation Expense increases expenses, reducing net income and ultimately equity. 
@@ -1402,12 +1402,13 @@ In some cases, there may be a gain or loss on an asset disposal. When an asset w
 service life, the bookkeeper first records a journal entry to zero out the asset accounts as noted previously in Zeroing 
 out the accounts. 
 
-After the entry to zero out the asset account is made, a second entry will need to be made to Other income to record any gain, 
+After the entry to zero out the asset account is made, a second entry will need to be made to "Other Income" to record any gain, 
 or to the appropriate expense account if there is any loss, upon the disposal of the asset.
 
-Journal entry with gain: 
+Journal entry with gain:  * reduce
 Debit:	Cash account 
-Credit: Other income	(reduce)
+Credit: Other income	(reduce revenue from the salvage gain)
+* An income account (also called a revenue account) records money a business earns from providing goods or services.
 
 Journal entry with loss:
 Debit:  Expense account
