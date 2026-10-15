@@ -1,6 +1,6 @@
-﻿
-**** Start recording part 3 here ********
-
+﻿**** Start recording part 3 here ********
+**** Start recording part 4 here ********
+**** Start recording part 5 here ********
 ------------------------------------------------------
 As a bookkeeper, you will be expected to fulfill the following responsibilities.
 
@@ -503,7 +503,7 @@ Similarly, if a client pays in advance for a job that hasn't been completed, the
 completion of the job. Overall, deferrals ensure that revenues and expenses are properly matched to the relevant time period.
 
 
-Accruals, on the other hand, are the opposite of deferrals. Accruals are transactions that include future payments or expenses. 
+Accruals, on the other hand, are the opposite of deferrals. Accruals are transactions that require future payments or expenses. 
 Accruals recognize revenues and expenses when they are incurred, regardless of when cash is exchanged. This means that if a 
 business provides a service in one accounting period but doesn't receive payment until the next period, the revenue is still 
 recognized in the period the service was provided.
@@ -558,13 +558,13 @@ Adjustments should always be marked so that it is clear which accounts were affe
 ---
 Step 6 - Prepare financial statements
 
-The income (P&L) statement provides a snapshot of a business's financial performance during a specific time period. It includes the 
-total revenue, which is all of the income generated from sales of goods and services provided. It accounts for the total cost 
-of goods sold, which represents the total expenses directly associated with producing the goods or services that generated the 
-revenue. It calculates the gross profit, which is the result of total revenue minus cost of goods sold. 
+The Income Statement (P&L) provides a snapshot of a business's financial performance during a specific time period. It includes 
+the total revenue, which is all of the income generated from sales of goods and services provided. It accounts for the total 
+cost of goods sold, which represents the total expenses directly associated with producing the goods or services that generated 
+the revenue. It calculates the gross profit, which is the result of total revenue minus cost of goods sold. 
 
-The income statement(P&L) also includes any other business expenses incurred during the reporting period, such as rent, salaries, and 
-advertising costs. 
+The Income Statement (P&L) also includes any other business expenses incurred during the reporting period, such as rent, salaries, 
+and advertising costs. 
 
 By subtracting the total expenses–including taxes–from the revenue, the income statement reveals the resulting net profit or 
 loss for the business.
@@ -619,8 +619,8 @@ statement of cash flows = Balance sheet + income statement
 The purpose of the statement of cash flows is to provide information about the cash inflows and outflows of a business during a 
 specific period. It helps stakeholders understand how the business generates and uses cash, which is crucial for assessing 
 the company's liquidity, solvency, and overall financial health. The statement of cash flows is divided into three main sections: 
-Operating activities, investing activities, and financing activities. Each section provides insights into different aspects of the 
-business's cash flow, allowing stakeholders to evaluate its ability to meet short-term obligations, invest in growth 
+Operating activities, investing activities, and financing activities. Each section provides insights into different aspects of 
+the business's cash flow, allowing stakeholders to evaluate its ability to meet short-term obligations, invest in growth 
 opportunities, and manage its overall cash position.
 --
 In the statement of cash flows, is the purpose of this statement to show how much cash moves in both directions, or is the 
@@ -640,8 +640,8 @@ distinct directions:
 	Financing Activities: Cash moving between the business and its owners or creditors (e.g., taking out a loan, owner draws, 
 	                      or paying back principal).
 
-In short: The Balance Sheet shows the resulting balance, while the Statement of Cash Flows tells the story of the movement that 
-happened to get there.
+In short: The Balance Sheet shows the resulting balance, while the Statement of Cash Flows tells the story of the cash movement 
+that happened to get there.
 --
 A sole proprietor owns 100% of the business.
 Key Point for Bookkeeping
@@ -681,7 +681,8 @@ Capital leases, on the other hand, are treated as a purchase of the asset. The l
 and depreciates it over its useful life. The lease payments are split into interest and principal components, similar to a loan.
 ---
 Normal (or natural) account balance
-A normal balance is the expectation that a particular type of account will have either a debit or a credit balance based on its classification within the chart of accounts. 
+A normal balance is the expectation that a particular type of account will have either a debit or a credit balance based on its 
+classification within the chart of accounts. 
 
 - Asset accounts typically have a debit normal balance.
 - Liability accounts typically have a credit normal balance.
@@ -708,7 +709,7 @@ A: The business would record the total accrued expense of $400 in the current ac
    paid. The "adjusting journal entry" would be:
 Account											Debit			Credit
 Accrued Expenses (Income Statement/Equity)		$400
-Cash (Balance Sheet/Asset)						$150
+Cash (Balance Sheet/Asset)										$150
 Accounts Payable (Balance Sheet/Liability)						$250
 
 The Liability is Cleared: The debit to Accrued Expenses Payable wipes out the $250 debt from your Balance Sheet because Accounts 
@@ -725,6 +726,8 @@ within one year or within the business's operating cycle, whichever is longer. C
 liquidity and day-to-day operations. Examples of current assets include cash, accounts receivable, inventory, and short-term 
 investments.
 ---
+**** Start recording part 4 here ********
+
 Starting Recording Sales Transactions
 When a business makes a sale, it can be recorded in different ways depending on the nature of the transaction. Here are some
  common scenarios for recording sales transactions:
@@ -738,6 +741,12 @@ When a business makes a sale, it can be recorded in different ways depending on 
 
 Cash sales are transactions where the customer pays for goods or services immediately with cash, check, or a credit or debit card.
 In a cash sale, the business receives payment at the time of the transaction, and there is no need to track accounts receivable. 
+
+As a bookkeeping professional, to “post” means to record a financial transaction in the accounting system’s accounts so that it 
+becomes part of the company’s official accounting records.
+
+For example, when you enter a customer's payment into QuickBooks Online, posting that transaction updates the appropriate 
+accounts in the general ledger.
 
 How frequently you post has an impact. For instance, your posting frequency impacts the types of financial reports you can run. 
 There might be a negative domino effect to posting infrequently.
@@ -756,7 +765,7 @@ Instead, they can run an accounts receivable report to see who owes them money a
 in the future will increase their cash flow. 
 
 Accounts receivable is important for businesses because it is considered an asset in their financial records. It can quickly be 
-converted to cash, and is a valuable indicator of a business' overall financial health. The business can even use ccounts 
+converted to cash, and is a valuable indicator of a business' overall financial health. The business can even use accounts 
 receivable as collateral to borrow money if they need to meet their short-term expenses.
 
 Recording invoices (credit sales transactions)
@@ -773,7 +782,7 @@ generated from the sale of goods or services. While sales contribute to a compan
 appear on the balance sheet as assets. Instead, sales are recorded on the income statement, where they are matched against 
 expenses to determine the company's profitability.
 
-* If you are transferring from one asset account to another, you would use the transfer feature in QuickBooks Online. This 
+* If you are transferring from one asset account to another, you would use the Transfer feature in QuickBooks Online. This 
   ensures that the transaction is recorded accurately and maintains the integrity of your financial records.
   
 * If you are transferring from one asset account to another, you are debiting one asset account and crediting another asset 
@@ -861,8 +870,7 @@ until they are paid.
 
 Principal x Interest Rate x Time = Interest
 
-
-Example: $10,000 borrowed at 10% annual interest rate compounded monthly.
+Example: $10,000 borrowed at 10% annual interest rate compounded monthly. 
 $10,000 x 10% x 31/365(number of days in the month/days in the year) = $84.93
 
 Notes:
@@ -875,7 +883,7 @@ be paid back.
 The collection process:
 Accounts Receivable -> Accounts Receivable Aging Report -> Doubtful Accounts -> Accounts Uncollectible -> Bad Debt Write-Offs
 
-A doubtful account is a dollar amount to cover unpaid invoices or debt. Businesses deduct this from their receivables
+A doubtful account is an amount to cover unpaid invoices or debt. Businesses deduct this from their receivables.
 Doubtful accounts are considered a contra asset account because they reduce the total amount of accounts receivable that is 
 reported on the balance sheet.
 Doubtful accounts are recorded on the Debit side of the T-account.
@@ -895,8 +903,8 @@ You should continually review open invoices with your client, giving them option
 customer, to convert the overdue payments to a note and charge interest but spread the payments out over a longer period of time, 
 or to mark it down as bad debt. There's a point where a doubtful account turns into uncollectible receivables.
 
-If your client wants to write off bad debt, you need to reduce income by, first, showing the bad debt expense and, second, 
-writing off the expense in accounts receivable so the invoice doesn't show as open any longer.
+If your client wants to write off bad debt, you need to reduce income by showing the bad debt expense and writing off the 
+expense in accounts receivable so the invoice doesn't show as open any longer.
 
 Remember how this translates into transaction journal entries?
 1) You debit bad debt expense
@@ -929,7 +937,9 @@ and expenses increase with debits. When a business pays interest on a loan, it r
 the cost incurred for borrowing funds.
 
 -----
-Tracking merdhandise inventory
+**** Start recording part 5 here ********
+
+Tracking merchandise inventory
 
 Inventory includes the stock of raw materials, work-in-progress(not ready for sale), finished goods, and merchandise that a 
 business holds. It's an essential asset for revenue generation and profitability.
@@ -958,7 +968,6 @@ resale, raw materials, parts, labor costs, supplies, overhead costs, and shippin
 expenses associated with producing or purchasing the goods that a business sells during a specific period. 
 
 By subtracting COGS from total revenue, a company calculates its gross profit.
-
 ---
 Is COGS calculated at the time the related products are sold?  Yes, under accrual accounting, Cost of Goods Sold (COGS) is 
 recognized at the exact time the related products are sold. 

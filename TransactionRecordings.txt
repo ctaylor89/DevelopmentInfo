@@ -20,7 +20,8 @@ you would split the debit side like this:
 	Credit Checking Account: $200
 
 --------------------------------------------------------------------------------
-The owner of a landscaping business, purchased $500 worth of sprinklers for his inventory. He charged the expense to the company credit card.
+The owner of a landscaping business, purchased $500 worth of sprinklers for his inventory. He charged the expense to the company 
+credit card.
 
 How will this recent sprinkler purchase affect my ability to buy additional supplies?
 1) Record the purchase in the journal entry.

@@ -215,7 +215,7 @@ Interview_Questions  *See answers below
 31) Professional Judgment & Communication
 32) When would you escalate an issue to an accountant or manager instead of fixing it yourself?
 
-Answers:
+Questions with Answers:
 1) Core Bookkeeping & Accounting Knowledge
 2) Walk me through the accounting equation and how it applies to your daily work.
 3) What’s the difference between cash-basis and accrual-basis accounting?

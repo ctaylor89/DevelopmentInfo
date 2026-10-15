@@ -1,6 +1,7 @@
 AI_Prompts
 Bookkeeping_Job_Research
 Bookkeeping_Job_Advice
+LinkedIn_Networking_Discussions
 Random_Notes
 Starting_Out_And_Career_Paths
 Self_Marketing
@@ -67,6 +68,17 @@ AI response:
 
 By focusing on these key areas, you can create a compelling resume that demonstrates your readiness for a bookkeeper position, 
 even with a background in software engineering.
+-------------------------------------------------------
+LinkedIn_Networking_Discussions
+
+For the last several months I have been learning about bookkeeping using QuickBooks. I understand that Bank reconciliation is 
+an important part of keeping accurate financial records. I enjoy doing reconciliations and tracking down discrepancies. It 
+feels very rewarding when I am able to resolve the issue that is keeping the account out of balance. What are some common 
+discrepancies you encounter when reconciling a client's bank or credit card account?
+
+
+
+---
 -------------------------------------------------------
 Random_Notes
 
