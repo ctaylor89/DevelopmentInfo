@@ -1,6 +1,7 @@
 ﻿**** Start recording part 3 here ********
 **** Start recording part 4 here ********
 **** Start recording part 5 here ********
+**** Start recording part 6 here ********
 ------------------------------------------------------
 As a bookkeeper, you will be expected to fulfill the following responsibilities.
 
@@ -1051,15 +1052,17 @@ Adjust COGS and inventory to reflect the cost of $800 of inventory used to produ
 Cost of Goods Sold (COGS) is neither an asset nor equity, it is an expense account.
 Here is how it fits into the basic accounting framework:
 
+**** Start recording part 6 here ********
+
 Accounting Breakdown
 Expense Account (Income Statement): COGS represents the direct cost of producing or purchasing the goods that a business sells 
 during a given period. Because COGS is an expense, it appears on the Income Statement and is subtracted directly from Revenue 
 to calculate Gross Profit.
 
-Relationship to Assets: When inventory is purchased, it is recorded as an Asset (Inventory) on the Balance Sheet. When that 
+Expenses Relationship to Assets: When inventory is purchased, it is recorded as an Asset (Inventory) on the Balance Sheet. When that 
 inventory is sold, its cost is moved out of the asset account and recorded as an Expense (COGS) on the Income(P&L) Statement.
 
-Relationship to Equity: Expenses reduce net income, which ultimately reduces Owner's or Retained Equity on the Balance Sheet. 
+Expenses Relationship to Equity: Expenses reduce net income, which ultimately reduces Owner's or Retained Equity on the Balance Sheet. 
 However, COGS itself is categorized as an expense, not an equity account.
 ---
 Inventory valuation refers to the process of assigning a cost to the inventory items listed on the balance sheet. 
@@ -1088,8 +1091,6 @@ client will have to file with the government to alert of that change, because th
 
 What is the purpose of conducting regular inventory counts in a business?
 A: To identify discrepancies and prevent inventory shrinkage.
-
-******** Left off at the beginning of Tracking inventory is important
 
 By using the correct inventory tracking method that fits the business's needs and resources, you can control inventory properly, 
 ensure accurate finances, and make the best use of resources. It is essential for you to accurately track inventory so 
@@ -1129,11 +1130,14 @@ financial statements.
 
 Having accurate inventory records is important for meeting regulatory requirements and providing reliable financial information 
 to stakeholders.
-
+---
 If a business overestimates the value of its inventory, it will make the assets on the balance sheet seem higher than they 
 really are. This can affect the calculation of net income on the income statement because higher inventory amounts can lead to 
-lower costs of goods sold and higher profits.
+understated costs of goods sold resulting in overstated profits.
 
+Notice that ending inventory is subtracted. Therefore, if ending inventory is overstated, COGS will be understated.
+	COGS = Beginning Inventory + Purchases - Ending Inventory
+---
 Most of the time, you will catch an error when there is an inventory count. Other times you will catch the error when you review 
 the financial statements. Compare the balance sheet inventory figure (as of a particular date, month-end, quarter-end, 
 or year-end) to the exact date of an inventory count. If the total on the inventory count does not match the balance sheet, then 
@@ -1395,6 +1399,10 @@ The debit to Depreciation Expense increases expenses, reducing net income and ul
 The credit to Accumulated Depreciation reduces the net book value of assets.
 
 Remember: Expenses normally have a debit balance and reduce equity, while revenues increase equity.
+---
+A liability is a financial obligation or debt that a business owes to another party. It represents money the business must pay 
+in the future.
+An expense is a cost incurred by a business while operating and generating revenue.
 ---
 Disposition
 When an asset reaches the end of its service life, it's either sold, removed, or disposed of by the business.

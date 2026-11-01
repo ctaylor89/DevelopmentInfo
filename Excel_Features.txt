@@ -95,13 +95,20 @@ Functions_
 
 Excel Shortcut to Insert a Function: Shift + F3
 
-1) SUMIF(range, criteria, [sum_range])
-	range → The cells used to check for the condition.
-	criteria → The rule Excel uses (e.g., "Apples", ">100", "North").
-	sum_range → The cells being summed if the condition is met.
+1) SUMIF(Criteria range, Criteria, [sum_range])
+	Criteria range → The cells used to check for the condition.
+	Criteria → The rule Excel uses (e.g., "Apples", ">100", "North").
+	Sum range → The cells being summed if the condition is met.
 				*If omitted, Excel sums the range itself 
 
 Examples:  =SUMIF(C2:C13,"BL7",B2:B13)
+---
+=SUMIFS(sum_range, criteria_range1, criteria1, criteria_range2, criteria2)
+*Note: sum_range is the range of cells to be summed based on the criteria.
+*Criteria range is the range of cells to search for the criteria.
+*Criteria is what is being searched for in the sum_range.
+
+
 
 
 ----------------------------------------------------------------
