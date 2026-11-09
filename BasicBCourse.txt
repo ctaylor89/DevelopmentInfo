@@ -865,7 +865,8 @@ Intuit response for What’s included in a promissory note? :
 A promissory note is a simple contract for repayment of money. When a promissory note is issued, you'll track it using notes 
 receivable or notes payable accounts. Notes receivable are considered assets, while notes payable are considered liabilities.
 
-Notes payable and notes receivable are formal written agreements and usually incorporate interest payments.
+Notes payable and notes receivable are formal written agr
+eements and usually incorporate interest payments.
 Notes receivable and notes payable are methods used in accrual basis accounting to track promissory notes in a business's books 
 until they are paid.
 
@@ -883,30 +884,43 @@ be paid back.
 
 The collection process:
 Accounts Receivable -> Accounts Receivable Aging Report -> Doubtful Accounts -> Accounts Uncollectible -> Bad Debt Write-Offs
-
-A doubtful account is an amount to cover unpaid invoices or debt. Businesses deduct this from their receivables.
+---
+A doubtful account is an amount to cover unpaid invoices or debt. Businesses deduct this amount from their receivables.
 Doubtful accounts are considered a contra asset account because they reduce the total amount of accounts receivable that is 
-reported on the balance sheet.
-Doubtful accounts are recorded on the Debit side of the T-account.
+reported on the balance sheet. Doubtful accounts are recorded on the Debit side of the T-account.
+An account named "Allowance for Doubtful Accounts" is a contra-asset account.
+
+Suppose a business has $10,000 in Accounts Receivable and estimates that $500 will be uncollectible.
+The journal entry would be:
+	Account								Debit	Credit
+	Bad Debt Expense					$500	
+	Allowance for Doubtful Accounts				$500
+
+The Balance Sheet would show:
+	Account									Amount
+	Accounts Receivable						$10,000
+	Less: Allowance for Doubtful Accounts	($500)
+	Net Accounts Receivable					$9,500
 
 Note: Many small businesses do not use Doubtful account or Accounts uncollectible. They often leave the amount in Accounts 
 receivable and run aging reports regularly.
-
+---
 You have the options to write off or write down unpaid invoices or create a credit memo. If there’s sales tax involved, then 
-you should definitely use the credit memo approach because then you won’t have to remit that sales tax amount to the various 
-government bodies, since you’re not actually getting that from the customer.
+you should definitely use the credit memo approach. If the business uses a credit memo to reverse the unpaid sale, it may also 
+reverse the associated sales tax. The credit memo can provide the accounting documentation needed to adjust the sales tax 
+liability, subject to applicable tax rules in your jurisdiction. 
 
-If the business decides to write it off an unpaid invoice that was not paid remember, if it’s an old invoice, don’t go in and 
-void it. Because that means you are actually changing transactions from a prior period (which is really bad). That’s why it’s 
-best to record it as bad debt.
+If the business decides to write it off an unpaid invoice that was not paid remember that if it is an old invoice, do not go in 
+and void it. Because if you do, you are actually changing transactions from a prior period (which is really bad). It is best to 
+record it as bad debt.
 
 You should continually review open invoices with your client, giving them options: to wait for payment, to follow up with the 
 customer, to convert the overdue payments to a note and charge interest but spread the payments out over a longer period of time, 
 or to mark it down as bad debt. There's a point where a doubtful account turns into uncollectible receivables.
 
 If your client wants to write off bad debt, you need to reduce income by showing the bad debt expense and writing off the 
-expense in accounts receivable so the invoice doesn't show as open any longer.
-
+expense in accounts receivable so the invoice doesn't show as open any longer. Bad Debt Expense is an expense account.
+	
 Remember how this translates into transaction journal entries?
 1) You debit bad debt expense
 2) You credit accounts receivable (or doubtful or uncollectible accounts, if you already moved it) 
@@ -914,6 +928,7 @@ Remember how this translates into transaction journal entries?
 Bad debt is recorded as an expense on the income statement and reduces a business's profit.
 
 When writing off bad debt, there are two main methods at your disposal: direct write-off and allowance method.
+
 Direct Write-off is the most straightforward method and is used by small businesses.
 Pros:
 	Simple
@@ -921,17 +936,43 @@ Pros:
 	Easier for business owners with no accounting background
 Cons:
 	Does not follow the matching principle
-	Could make a business seem more profitable than it actually is
+	Could make a business seem more profitable in a period than it actually is.
 
-Allowance Method is rarely used by small businesses. It is more complex and requires estimating uncollectible accounts in advance.
+* The direct write-off method records bad debt expense only when the business determines that a specific customer 
+invoice is uncollectible.
+
+The Allowance Method is rarely used by small businesses. It is more complex and requires estimating uncollectible accounts in 
+advance.
 Pros:
-	Businesses analyze invoices and estimate the amount for bad debt expense
-	Follows the matching principle
-	Provides a more accurate picture of a business's financial health
+	Businesses analyze invoices and estimate the amount for bad debt expense.
+	Follows the matching principle.
+	Provides a more accurate picture of a business's financial health.
 Cons:
-	More complex and time-consuming
-	Requires regular review and adjustment of estimates
+	More complex and time-consuming.
+	Requires regular review and adjustment of estimates.
 
+The allowance method takes a different approach to the direct write-off method. Instead of waiting until a specific customer 
+fails to pay, the business estimates how much of its Accounts Receivable will eventually be uncollectible. It records an 
+estimated bad debt expense before identifying exactly which customers won't pay.
+
+The most important concept to remember: The Allowance Method follows the matching principle of accounting.
+
+Remember these journal-entry patterns:
+Direct Write-Off
+- Debit: Bad Debt Expense
+- Credit: Accounts Receivable
+
+Allowance Method — Initial Estimate
+- Debit: Bad Debt Expense
+- Credit: Allowance for Doubtful Accounts
+
+Allowance Method — Actual Write-Off
+- Debit: Allowance for Doubtful Accounts
+- Credit: Accounts Receivable
+
+* Concentrate on understanding the Allowance Method, particularly the role of Allowance for Doubtful Accounts as a contra-asset. 
+This is an important concept when learning Accounts Receivable, adjusting entries, and month-end financial reporting.
+---
 When paying back a loan, what side of the T-account is the interest expense recorded on? 
 A: The interest expense is recorded on the debit side of the T-account. This is because interest expense is an expense account, 
 and expenses increase with debits. When a business pays interest on a loan, it records the interest expense as a debit to reflect 
